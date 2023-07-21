@@ -1,0 +1,151 @@
+psychiatry = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/psychiatry.dds"
+	category = society
+	
+	modifier = {
+		country_influence_mult = 0.1
+		state_bureaucracy_population_base_cost_factor_mult = -0.05
+        country_infamy_decay_mult = 0.03
+	}
+	
+	unlocking_technologies = {
+		empiricism
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+nationalism = {
+	# Unlocks the Immigration Controls Law in Migration
+	# New leaders may spawn with the Ethno-Nationalist Ideology
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/nationalism.dds"
+	category = society
+	
+	modifier = {
+		country_authority_mult = 0.1
+        country_infamy_generation_mult = -0.03
+	}
+	
+	unlocking_technologies = {
+		mass_communication
+		international_relations
+	}
+	
+	ai_weight = {
+		value = 2 # Important in general
+		
+		# Extra-important for major unifications
+		if = {
+			limit = { 
+				OR = {
+					country_has_primary_culture = cu:north_german
+					country_has_primary_culture = cu:south_german
+					country_has_primary_culture = cu:north_italian
+					country_has_primary_culture = cu:south_italian
+				}				
+			}
+			add = 2
+		}			
+	}
+}
+
+pan-nationalism = {
+	# Permits for the formation of a number of pan-nationalist countries
+	# Permits the Unify Germany and Unify Italy Diplomatic Plays
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/pan_nationalism.dds"
+	category = society
+	
+	modifier = {
+		country_authority_mult = 0.1
+        country_infamy_generation_mult = -0.03
+	}
+	
+	unlocking_technologies = {
+		nationalism
+	}
+	
+	ai_weight = {
+		value = 2 # Important in general
+		
+		# Extra-important for major unifications
+		if = {
+			limit = { 
+				OR = {
+					country_has_primary_culture = cu:north_german
+					country_has_primary_culture = cu:south_german
+					country_has_primary_culture = cu:north_italian
+					country_has_primary_culture = cu:south_italian
+				}				
+			}
+			add = 2
+		}	
+	}
+}
+
+philosophical_pragmatism = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/philosophical_pragmatism.dds"
+	category = society
+	
+	modifier = {
+		country_influence_mult = 0.1
+		state_bureaucracy_population_base_cost_factor_mult = -0.05
+        country_infamy_decay_mult = 0.03
+	}
+	
+	unlocking_technologies = {
+		psychiatry
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+psychoanalysis = {
+	# #todo#! Does nothing at the moment
+	# Should provide additional methods for dealing with negative psychological character traits
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/psychoanalysis.dds"
+	category = society
+	
+	modifier = {
+		country_influence_mult = 0.1
+		state_bureaucracy_population_base_cost_factor_mult = -0.05
+        country_infamy_decay_mult = 0.03
+	}
+	
+	unlocking_technologies = {
+		philosophical_pragmatism
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+behaviorism = {
+	# #todo#! Does nothing at the moment
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/behaviorism.dds"
+	category = society
+	
+	modifier = {
+		country_influence_mult = 0.1
+		state_bureaucracy_population_base_cost_factor_mult = -0.05
+        country_infamy_decay_mult = 0.03
+	}
+	
+	unlocking_technologies = {
+		psychoanalysis
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
