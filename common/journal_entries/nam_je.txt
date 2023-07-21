@@ -1,0 +1,22 @@
+﻿je_nam = {
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	is_shown_when_inactive = {
+		is_player = no
+		NOT = { has_variable = nam_var }
+	}
+
+	possible = {
+		is_player = no
+		has_law = law_type:law_multicultural
+	}
+
+	timeout = 1
+
+	on_timeout = {
+		trigger_event = {
+			id = nam.1
+		}
+		set_variable = { name = nam_var }
+	}
+}
