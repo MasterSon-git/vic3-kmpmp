@@ -1,0 +1,7 @@
+﻿l_english:
+ pm_canals_mint:0 "Toll Tariffes only"
+ pm_canals_eletric:0 "Eletric Canal"
+ pm_canals_oil:0 "Petro Canal"
+ 
+ pmg_ownership_capital_building_canal:0 "Government Ownership"
+ pm_government_run_building_canals:0 "Bureaucrats Ownership"

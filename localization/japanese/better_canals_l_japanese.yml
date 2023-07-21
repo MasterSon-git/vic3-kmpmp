@@ -1,0 +1,7 @@
+﻿l_japanese:
+ pm_canals_mint:0 "通行料を徴収"      # Toll Tariffes only
+ pm_canals_eletric:0 "電動式運河"    # Eletric Canal
+ pm_canals_oil:0 "内燃式運河"        # Petro Canal
+ 
+ pmg_ownership_capital_building_canal:0 "国営"    # Government Ownership
+ pm_government_run_building_canals:0 "官営"       # Bureaucrats Ownership
