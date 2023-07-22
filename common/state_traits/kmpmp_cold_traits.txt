@@ -1,0 +1,31 @@
+#
+# north_america_traits
+#
+state_trait_northern_canadian_terrain = {
+	icon = "gfx/interface/icons/state_trait_icons/cold_climate.dds"
+	
+	modifier = {
+		building_group_bg_agriculture_throughput_mult = -0.2
+		#state_construction_mult = -0.2
+		#state_infrastructure_mult = -0.2
+        state_building_construction_sector_max_level_add = -3
+        building_construction_sector_throughput_mult = -0.1
+        building_railway_throughput_mult = -0.1
+	}
+}
+
+#
+# far_east_asia_traits
+#
+state_trait_siberian_terrain = {
+    icon = "gfx/interface/icons/state_trait_icons/cold_climate.dds"
+	
+	modifier = {
+		building_group_bg_agriculture_throughput_mult = -0.2
+		#state_construction_mult = -0.2
+		#state_infrastructure_mult = -0.2
+        state_building_construction_sector_max_level_add = -3
+        building_construction_sector_throughput_mult = -0.1
+        building_railway_throughput_mult = -0.1
+	}
+}

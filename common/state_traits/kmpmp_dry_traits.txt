@@ -1,0 +1,108 @@
+#
+# north_america_traits
+#
+state_trait_the_great_basin_desert = {
+	icon = "gfx/interface/icons/state_trait_icons/dry_climate.dds"
+	
+	modifier = {
+		building_group_bg_agriculture_throughput_mult = -0.25
+		#state_construction_mult = -0.25
+		#state_infrastructure_mult = -0.25
+        state_building_construction_sector_max_level_add = -3
+        building_construction_sector_throughput_mult = -0.1
+        building_railway_throughput_mult = -0.1
+	}
+}
+
+#
+# south_america_traits
+#
+state_trait_atacama_desert = {
+	icon = "gfx/interface/icons/state_trait_icons/dry_climate.dds"
+
+	modifier = {
+		building_sulfur_mine_throughput_mult = 0.15
+		#state_construction_mult = -0.1
+		#state_infrastructure_mult = -0.1
+        state_building_construction_sector_max_level_add = -3
+        building_construction_sector_throughput_mult = -0.1
+        building_railway_throughput_mult = -0.1
+	}
+}
+
+#
+# africa_traits
+#
+state_trait_sahara_desert = {
+	icon = "gfx/interface/icons/state_trait_icons/dry_climate.dds"
+	 
+	modifier = {
+        building_group_bg_agriculture_throughput_mult = -0.2
+		#state_construction_mult = -0.25
+		#state_infrastructure_mult = -0.25
+        state_building_construction_sector_max_level_add = -3
+        building_construction_sector_throughput_mult = -0.1
+        building_railway_throughput_mult = -0.1
+    }
+}
+
+#
+# near_east_traits
+#
+state_trait_arabian_desert = {
+	icon = "gfx/interface/icons/state_trait_icons/dry_climate.dds"
+		   
+	modifier = {
+        building_group_bg_agriculture_throughput_mult = -0.2
+		#state_construction_mult = -0.25
+		#state_infrastructure_mult = -0.25
+        state_building_construction_sector_max_level_add = -3
+        building_construction_sector_throughput_mult = -0.1
+        building_railway_throughput_mult = -0.1
+    }
+}
+
+#
+# far_east_asia_traits
+#
+state_trait_gobi_desert = {
+	icon = "gfx/interface/icons/state_trait_icons/dry_climate.dds"
+	  
+	modifier = {
+        building_group_bg_agriculture_throughput_mult = -0.2
+		#state_construction_mult = -0.25
+		#state_infrastructure_mult = -0.25
+        state_building_construction_sector_max_level_add = -3
+        building_construction_sector_throughput_mult = -0.1
+        building_railway_throughput_mult = -0.1
+    }
+}
+
+state_trait_taklamakan_desert = {
+	icon = "gfx/interface/icons/state_trait_icons/dry_climate.dds"
+	
+	modifier = {
+        building_group_bg_agriculture_throughput_mult = -0.2
+		#state_construction_mult = -0.25
+		#state_infrastructure_mult = -0.25
+        state_building_construction_sector_max_level_add = -3
+        building_construction_sector_throughput_mult = -0.1
+        building_railway_throughput_mult = -0.1
+    }
+}
+
+#
+# oceania_traits
+#
+state_trait_australian_desert = {
+    icon = "gfx/interface/icons/state_trait_icons/dry_climate.dds"
+		   
+	modifier = {
+        building_group_bg_agriculture_throughput_mult = -0.2
+		#state_construction_mult = -0.25
+		#state_infrastructure_mult = -0.25
+        state_building_construction_sector_max_level_add = -3
+        building_construction_sector_throughput_mult = -0.1
+        building_railway_throughput_mult = -0.1
+    }
+}

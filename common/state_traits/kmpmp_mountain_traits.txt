@@ -1,0 +1,242 @@
+#
+# british_isles_traits
+#
+state_trait_scottish_highlands = {
+	icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
+	
+	modifier = {
+		#state_infrastructure_mult = -0.1
+		#state_construction_mult = -0.1
+        state_building_construction_sector_max_level_add = -5
+        building_construction_sector_throughput_mult = -0.15
+        building_railway_throughput_mult = -0.1
+	}
+}
+
+#
+# north_america_traits
+#
+state_trait_cascades = {
+	icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
+	
+	modifier = {
+		#state_construction_mult = -0.1
+		#state_infrastructure_mult = -0.1
+        state_building_construction_sector_max_level_add = -5
+        building_construction_sector_throughput_mult = -0.15
+        building_railway_throughput_mult = -0.1
+	}
+}
+
+state_trait_sierra_nevada = {
+	icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
+	
+	modifier = {
+		#state_infrastructure_mult = -0.1
+        state_building_construction_sector_max_level_add = -5
+        building_construction_sector_throughput_mult = -0.15
+        building_railway_throughput_mult = -0.1
+	}
+}
+
+state_trait_rocky_mountains = {
+	icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
+	
+	modifier = {
+		#state_construction_mult = -0.2
+		#state_infrastructure_mult = -0.2
+        state_building_construction_sector_max_level_add = -5
+        building_construction_sector_throughput_mult = -0.15
+        building_railway_throughput_mult = -0.1
+	}
+}
+
+state_trait_appalachian_mountains = {
+	icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
+	
+	modifier = {
+		building_coal_mine_throughput_mult = 0.1
+		#state_construction_mult = -0.1
+		#state_infrastructure_mult = -0.1
+        state_building_construction_sector_max_level_add = -5
+        building_construction_sector_throughput_mult = -0.15
+        building_railway_throughput_mult = -0.1
+	}
+}
+
+state_trait_sierra_madre_occidental = {
+	icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
+	
+	modifier = {
+		#state_construction_mult = -0.1
+		#state_infrastructure_mult = -0.10
+        state_building_construction_sector_max_level_add = -5
+        building_construction_sector_throughput_mult = -0.15
+        building_railway_throughput_mult = -0.1
+	}
+}
+
+state_trait_sierra_madre_oriental = {
+	icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
+	
+	modifier = {
+		#state_construction_mult = -0.1
+		#state_infrastructure_mult = -0.1
+        state_building_construction_sector_max_level_add = -5
+        building_construction_sector_throughput_mult = -0.15
+        building_railway_throughput_mult = -0.1
+	}
+}
+
+state_trait_central_american_cordilleras = {
+	icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
+	
+	modifier = {
+		#state_construction_mult = -0.1
+		#state_infrastructure_mult = -0.1
+        state_building_construction_sector_max_level_add = -5
+        building_construction_sector_throughput_mult = -0.15
+        building_railway_throughput_mult = -0.1
+	}
+}
+
+state_trait_wasatch_range = {
+	icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
+	
+	modifier = {
+		#state_infrastructure_mult = -0.10
+        state_building_construction_sector_max_level_add = -5
+        building_construction_sector_throughput_mult = -0.15
+        building_railway_throughput_mult = -0.1
+	}
+}
+
+#
+# south_america_traits
+#
+state_trait_andes = {
+	icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
+	
+	modifier = {
+		#state_construction_mult = -0.2
+		#state_infrastructure_mult = -0.2
+        state_building_construction_sector_max_level_add = -5
+        building_construction_sector_throughput_mult = -0.15
+        building_railway_throughput_mult = -0.1
+	}
+}
+
+#
+# western_europe_traits
+#
+state_trait_alps_mountains = {
+    icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
+		
+	modifier = {
+		#state_construction_mult = -0.15
+		#state_infrastructure_mult = -0.15
+        state_building_construction_sector_max_level_add = -5
+        building_construction_sector_throughput_mult = -0.15
+        building_railway_throughput_mult = -0.1
+	}
+}
+
+state_trait_pyrenees_mountains = {
+	icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
+	
+	modifier = {
+		#state_construction_mult = -0.15
+		#state_infrastructure_mult = -0.15
+        state_building_construction_sector_max_level_add = -5
+        building_construction_sector_throughput_mult = -0.15
+        building_railway_throughput_mult = -0.1
+	}
+}
+
+#
+# eastern_europe_traits
+#
+state_trait_ural_mountains = {
+	icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
+	
+	modifier = {
+		building_iron_mine_throughput_mult = 0.2
+		#state_construction_mult = -0.15
+		#state_infrastructure_mult = -0.15
+        state_building_construction_sector_max_level_add = -5
+        building_construction_sector_throughput_mult = -0.15
+        building_railway_throughput_mult = -0.1
+	}
+}
+
+state_trait_caucasus_mountains = {
+	icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
+	
+	modifier = {
+		#state_construction_mult = -0.2
+		#state_infrastructure_mult = -0.2
+        state_building_construction_sector_max_level_add = -5
+        building_construction_sector_throughput_mult = -0.15
+        building_railway_throughput_mult = -0.1
+	}
+}
+
+#
+# africa_traits
+#
+state_trait_atlas_mountains = {
+	icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
+
+	modifier = {
+		#state_construction_mult = -0.15
+		#state_infrastructure_mult = -0.15
+        state_building_construction_sector_max_level_add = -5
+        building_construction_sector_throughput_mult = -0.15
+        building_railway_throughput_mult = -0.1
+	}
+}
+
+#
+# near_east_traits
+#
+state_trait_zagros_mountains = {
+	icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
+
+	modifier = {
+		#state_construction_mult = -0.2
+		#state_infrastructure_mult = -0.2
+        state_building_construction_sector_max_level_add = -5
+        building_construction_sector_throughput_mult = -0.15
+        building_railway_throughput_mult = -0.1
+	}
+}
+
+#
+# india_traits
+#
+state_trait_himalayas_mountains = {
+	icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
+	
+	modifier = {
+		#state_construction_mult = -0.25
+		#state_infrastructure_mult = -0.25
+        state_building_construction_sector_max_level_add = -5
+        building_construction_sector_throughput_mult = -0.15
+        building_railway_throughput_mult = -0.1
+	}
+}
+
+#
+# oceania_traits
+#
+state_trait_great_dividing_range = {
+	icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
+	
+	modifier = {
+		#state_construction_mult = -0.15
+		#state_infrastructure_mult = -0.15
+        state_building_construction_sector_max_level_add = -5
+        building_construction_sector_throughput_mult = -0.15
+        building_railway_throughput_mult = -0.1
+	}
+}
