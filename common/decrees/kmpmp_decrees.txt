@@ -1,0 +1,379 @@
+decree_road_maintenance = {
+	texture = "gfx/interface/icons/decree/decree_road_maintenance.dds"
+	modifier = {
+		state_infrastructure_from_population_add = 1
+		state_infrastructure_from_population_max_add = 20
+		state_construction_mult = 0.10
+        building_construction_sector_throughput_mult = 0.1
+	}
+	unlocking_technologies = { 
+		centralization
+	}
+	cost = 100
+
+	ai_weight = {
+		value = 25		
+		
+		if = {
+			limit = { 
+				OR = {
+					relative_infrastructure < 1 
+					AND = {
+						has_decree = decree_road_maintenance
+						relative_infrastructure < 1.25
+					}
+				}
+			
+			}
+			add = 100
+		}
+
+		if = {
+			limit = { 
+				OR = {
+					relative_infrastructure < 0.5
+					AND = {
+						has_decree = decree_road_maintenance
+						relative_infrastructure < 0.75
+					}
+				}
+			
+			}
+			add = 100
+		}
+
+		if = {
+			limit = { 
+				OR = {
+					relative_infrastructure < 0.25 
+					AND = {
+						has_decree = decree_road_maintenance
+						relative_infrastructure < 0.5
+					}
+				}
+			
+			}
+			add = 100
+		}		
+		
+		if = {
+			limit = { 
+				OR = {
+					relative_infrastructure >= 1.25
+					AND = {
+						has_decree = decree_road_maintenance
+						relative_infrastructure >= 1.5
+					}
+				}
+			
+			}
+			multiply = 0
+		}			
+	}
+}
+
+decree_promote_social_mobility = {
+	texture = "gfx/interface/icons/decree/decree_promote_social_mobility.dds"
+	modifier = {
+		state_education_access_add = 0.25
+		state_pop_qualifications_mult = 0.25
+        building_university_throughput_mult = 0.1
+        building_arts_academy_throughput_mult = 0.1
+	}
+	cost = 100
+	
+	ai_weight = {
+		value = 0
+
+		if = {
+			limit = { 
+				literacy_rate < 0.25
+			}
+			add = 75
+		}		
+		if = {
+			limit = { 
+				literacy_rate < 0.5
+			}
+			add = 75
+		}
+		if = {
+			limit = { 
+				literacy_rate < 0.75
+			}
+			add = 50
+		}		
+		if = {
+			limit = {
+				scope:country = {
+					OR = {
+						has_strategy = ai_strategy_reactionary_agenda
+						has_strategy = ai_strategy_conservative_agenda
+						has_strategy = ai_strategy_maintain_mandate_of_heaven
+					}
+				}
+			}
+			multiply = 0.5
+		}
+		if = {
+			limit = {
+				scope:country = {
+					OR = {
+						has_strategy = ai_strategy_progressive_agenda
+						has_strategy = ai_strategy_egalitarian_agenda
+					}
+				}
+			}
+			multiply = 1.5
+		}			
+	}
+}
+
+decree_promote_national_values = {
+	texture = "gfx/interface/icons/decree/decree_promote_national_values.dds"
+	unlocking_technologies = {
+		centralization
+	}
+	valid = {
+		OR = {
+			has_assimilating_pops = yes
+			has_converting_pops = yes
+		}	
+	}
+	modifier = {
+		state_assimilation_mult = 1.25 #1
+		state_conversion_mult = 1.25 #1
+        state_loyalists_from_sol_change_mult = 0.25
+	}
+	cost = 100
+	
+	ai_weight = {
+		value = 0
+		if = {
+			limit = {
+				scope:country = {
+					OR = {
+						has_strategy = ai_strategy_reactionary_agenda
+						has_strategy = ai_strategy_maintain_mandate_of_heaven
+					}
+				}
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				scope:country = {
+					has_strategy = ai_strategy_nationalist_agenda
+				}
+			}
+			add = 200
+		}		
+		if = {
+			limit = {
+				state_population < 100000
+			}
+			multiply = 0
+		}
+		if = {
+			limit = {
+				state_population < 300000
+			}
+			multiply = 0.5
+		}	
+		if = {
+			limit = {
+				scope:country = {
+					OR = {
+						has_strategy = ai_strategy_reactionary_agenda
+						has_strategy = ai_strategy_conservative_agenda
+						has_strategy = ai_strategy_maintain_mandate_of_heaven
+					}
+				}
+			}
+			multiply = 0.5
+		}
+		if = {
+			limit = {
+				scope:country = {
+					OR = {
+						has_strategy = ai_strategy_progressive_agenda
+						has_strategy = ai_strategy_egalitarian_agenda
+					}
+				}
+			}
+			multiply = 1.5
+		}		
+	}
+}
+
+decree_encourage_manufacturing_industry = {
+	texture = "gfx/interface/icons/decree/decree_encourage_manufacturing_industry.dds"
+	unlocking_technologies = {
+		manufacturies
+	}	
+	valid = {
+		NOR = { 
+			has_decree = decree_encourage_agricultural_industry
+			has_decree = decree_encourage_resource_industry
+		}
+	}
+	modifier = {
+		building_group_bg_manufacturing_throughput_mult = 0.25 #0.2
+		#building_group_bg_service_throughput_mult = 0.2
+        state_construction_mult = 0.05
+	}
+	cost = 100
+	
+	ai_weight = {
+		value = 0
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_group = bg_manufacturing
+				}
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_group = bg_manufacturing
+					count >= 3
+				}				
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_group = bg_manufacturing
+					count >= 5
+				}			
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				scope:country = {
+					has_strategy = ai_strategy_industrial_expansion
+				}
+			}
+			multiply = 1.5
+		}		
+	}
+}
+
+decree_greener_grass_campaign = {
+	texture = "gfx/interface/icons/decree/decree_greener_grass_campaign.dds"
+	valid = {
+		NOR = {
+			is_isolated_from_market = yes
+			has_decree = kmpmp_decree_emmigration_edict
+		}
+	}
+	modifier = {
+		state_migration_pull_mult = 0.5
+	}
+	unlocking_technologies = { 
+		romanticism
+	}
+	cost = 100
+
+	ai_weight = {
+		value = 0
+		if = {
+			limit = { 
+				any_scope_building = {
+					is_subsistence_building = yes
+					occupancy < 0.75
+				}
+			}
+			add = 50
+		}
+		if = {
+			limit = { 
+				any_scope_building = {
+					is_subsistence_building = yes
+					occupancy < 0.5
+				}
+			}
+			add = 50
+		}
+		if = {
+			limit = { 
+				any_scope_building = {
+					is_subsistence_building = yes
+					occupancy < 0.25
+				}
+			}
+			add = 50
+		}		
+		if = {
+			limit = { 
+				is_incorporated = no
+				scope:country = { NOT = { has_law = law_type:law_colonial_resettlement } } # Already gives a hefty migration bonus
+			}
+			multiply = 2.0
+		}		
+		if = {
+			limit = { 
+				state_unemployment_rate >= 0.1 
+			}
+			multiply = 0
+		}
+	}
+}
+
+decree_enlistment_efforts = {
+	texture = "gfx/interface/icons/decree/decree_enlistment_efforts.dds"
+	modifier = {
+		state_conscription_rate_add = 0.05
+		building_training_rate_mult = 0.4 #0.25
+        building_barracks_throughput_mult = 0.15
+        building_naval_base_throughput_mult = 0.15
+	}
+	unlocking_technologies = {
+		mandatory_service
+	}
+	cost = 100
+	
+	ai_weight = {
+		value = 0	
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_barracks
+					count >= 25
+				}				
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_barracks
+					count >= 50
+				}			
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_naval_base
+					count >= 25
+				}
+			}
+			add = 50
+		}
+		if = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_naval_base
+					count >= 50
+				}			
+			}
+			add = 50
+		}		
+	}
+}
