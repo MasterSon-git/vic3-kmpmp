@@ -1,4 +1,4 @@
-kmpmp_decree_emmigration_edict = {
+﻿kmpmp_decree_emmigration_edict = {
 	texture = "gfx/interface/icons/decree/decree_emmigration_edict.dds"
 	valid = {
 		NOR = {

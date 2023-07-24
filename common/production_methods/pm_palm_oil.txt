@@ -1,4 +1,4 @@
-pm_palm_oil = {
+﻿pm_palm_oil = {
 	texture = "gfx/interface/icons/production_method_icons/millet_palm_oil.dds"
 	
 	building_modifiers = {

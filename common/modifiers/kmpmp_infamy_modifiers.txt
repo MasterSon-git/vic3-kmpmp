@@ -1,4 +1,4 @@
-# Infamy modifiers, applied from current infamy level
+﻿# Infamy modifiers, applied from current infamy level
 infamy_reputable = {
     country_authority_mult = 0.1
     country_influence_add = 100

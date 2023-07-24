@@ -1,4 +1,4 @@
-psychiatry = {
+﻿psychiatry = {
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/psychiatry.dds"
 	category = society
