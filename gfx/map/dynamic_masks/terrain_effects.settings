@@ -1,0 +1,5 @@
+shaderfile = "gfx/FX/dynamic_mask.shader"
+effectname = "CreateDynamicMask"
+noise_texture = "gfx/map/dynamic_masks/common_noise.dds"
+mask_size = { 1024 512 }
+mask_channels = 2

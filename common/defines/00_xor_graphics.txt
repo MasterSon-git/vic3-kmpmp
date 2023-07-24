@@ -1,0 +1,123 @@
+﻿NMapMode = {
+
+	### CLOSE DISTANCE FADE ###
+	# Used for borders and impassable terrain
+	DISTANCE_FADE_START = 150.0f #100.0f								# Height at which to start fading out when zooming in
+	DISTANCE_FADE_END = 10.0f #30.0f									# Height at which to be fully faded out
+
+}
+
+NGraphics = {
+	# Gradient Borders
+	PROVINCE_BORDER_FADE_NEAR = 20 #200
+	#PROVINCE_BORDER_FADE_FAR = 2000
+	STATE_BORDER_FADE_NEAR = 20 #200
+	#STATE_BORDER_FADE_FAR = 2000
+	#IMPASSABLE_BORDER_FADE_NEAR = 500
+	#IMPASSABLE_BORDER_FADE_FAR = 600
+	DRAW_SHADOWS_CUTOFF = 20 #400
+	#DRAW_SHADOWS_FADE_LENGTH = 50
+
+	# Tweaks the papermap shoreline stripes
+#	SHORELINE_MASK_BLUR = 2.5		# Recommended Range [1.0 - 10.0]			| The terrain/sea mask, blurrier mask can make the lines extend more
+#	SHORELINE_EXTENT_STR = 10.0		# Recommended Range [0.0 - 10.0]			| Simple strength of the lines
+#	SHORELINE_ALPHA = 0.3			# Recommended Range [0.0 - 5.0]				| Simple alpha tweaking
+#	SHORELINE_UV_SCALE = 50			# Recommended Range [10 - 100] (integer)	| Larger UV scale gives tighter lines
+
+	# Fog camera modifiers
+#	FOG_CLOSE_OFFSET = 10	# Fog center offset at close zoom level
+#	FOG_FAR_OFFSET = 260	# Fog center offset	at far zoom level
+#	FOG_WIDTH_SCALE = 1.6	# Fog width scaling
+
+	# Map markers
+#	MAP_MARKER_MERGE_PROVINCES = 800.0
+#	MAP_MARKER_MERGE_STATES = 1600.0
+#	MAP_MARKER_MERGE_PROVINCES_STRATEGIC_REGION = 1600.0
+	MAP_MARKER_FULL_UPDATE_FREQUENCY = 2.0 #1.0					#Do the heavy parts of the map markers only every X seconds
+
+#	FRONT_MARKER_ADVANTAGE_HIGH = 60
+#	FRONT_MARKER_ADVANTAGE_LOW = 25
+
+	# Flat map specific
+#	FLAT_MAP_HEIGHT = 3.92
+#	FLAT_MAP_FADE_SPEED = 5.0		# How fast to fade to/from flat map state
+	
+	FLAT_MAP_ZOOM_STEP = 0 #10			# At which zoom step to fade to flat map
+
+	# Map layers
+#	DYNAMIC_MAP_OBJECT_MASK_THRESHOLD_SHOW = 0.1					# When dynamic objects are being shown/hidden they use the material mask. This value determines the point at which the mask will make the objects to show/hide.
+#	DYNAMIC_MAP_OBJECT_MASK_THRESHOLD_HIDE = 0.05
+#	DYNAMIC_TERRAIN_ROAD_WIDTH = 2.5								# Controls how wide roads are considered to be when clearing map objects
+	DYNAMIC_TERRAIN_LAZY_UPDATE_PROVINCES_PER_FRAME = 8 #16			# Max number of provinces that may be updated per frame.
+    DYNAMIC_TERRAIN_LAZY_UPDATE_MAX_TIME_PER_FRAME = 0.001 #0.002          # Max time per frame to spend on dynamic terrain updates in seconds.
+#	COLLECT_VISIBLE_PROVINCE_DATA = yes
+#	VISIBLE_PROVINCE_DATA_FOV_FACTOR = .8							# Tweak this to cover an area larger or smaller than the area actually visible on screen
+#	VISIBLE_PROVINCE_DATA_CAMERA_HEIGHT_FACTOR = 0.5				# Decreasing this value increases the weights of the provinces that are at the center of the screen
+#	VISIBLE_PROVINCE_DATA_MAX_PROVINCE_SIZE = 50000
+#	VISIBLE_PROVINCE_DATA_USE_SQRT_SIZE = no
+#	VISIBLE_PROVINCE_DATA_DEBUG = no								# Highlight provinces by their visibility and show terrain weights on the right side of the screen
+#	VISIBLE_PROVINCE_DATA_TERRAIN_COLORED_HIGHLIGTS = no			# Use terrain colors for visibility highlights
+#	VISIBLE_PROVINCE_DATA_SCALE_TERRAIN_COLOR_WITH_WEIGHT = no		# Try to show both terrain color and visibility weight in debug highlight
+#	VISIBLE_PROVINCE_DATA_RIVER_WEIGHT_FACTOR = 1.0					# Tweak this to scale river weights
+	VISIBLE_PROVINCE_DATA_UPDATE_FREQUENCY = 5.0 #2.0					# Update the visible province data only every X seconds
+
+	# Route Spline fix
+#	ROUTE_GENERATION_NAV_MESH_DENSITY = 0.375						# Controls the density of vertexes in the navmesh used to generate the road system
+
+	# Segment Border
+#	FRONT_SEGMENTS_POOL_SIZE = 1024									# Amount of border segments that is supported by border system
+
+	NAVAL_BATTLE_POSITION_RANDOM_TRIES = 2 #10							# Amount of tries we rerandomize naval battle positions (between 0 and 100)
+
+#	BORDER_GRAPHICS_SHIFT_DISTANCE = 5.0							# Distance from center to the compatant entities
+
+	# Scaled Distance Roughness
+#	DISTANCE_ROUGHNESS_POSITION = 1.8		# Position to start blend
+#	DISTANCE_ROUGHNESS_BLEND = 80.0			# Blend range
+#	DISTANCE_ROUGHNESS_SCALE = 0.5			# Roughness multiplier scale
+#	DAYS_AFTER_BATTLE_TO_SHOW_ENTITY = 7	# For how long to show battle entities after the battle
+}
+
+NCamera = {
+#    FOV	= 55 	# Field-of-View
+#    ZNEAR = 1
+#    ZFAR = 50000
+
+#	EDGE_SCROLLING_PIXELS = 10 # how many pixels from window edge that will trigger edge scrolling
+
+#    SCROLL_SPEED = 0.045 	# higher values = faster camera. NOTE that this is tweakables from settings as well
+#    ZOOM_RATE = 0.2 		# Zoom when right-mouse down
+#	#						0	1	2	3		4		5		6		7		8		9		10		11		12		13		14		15
+#	ZOOM_STEPS 			= { 24	32	40	50		75		100		200		300		400		600		800		1000	1200	1500	2500	4500	}
+#	ZOOM_STEPS_TILT 	= { 35	40	45	48.5	50		52.5	55 		60		65		70		75		80		80		85		85		85		}
+#	ZOOM_STEPS_MIN_TILT = { 35	35	35	35		35		38		40		40		45		50		50		50		50		50		50		50		}
+#	ZOOM_STEPS_MAX_TILT = { 89	89	89	89		89		89		89		89		89		89		89		89		89		89		89		89		}
+
+	#						0	1	2	3		4		5		6		7		8		9		10		11		12		13		14		15
+	ZOOM_STEPS 			= { 75	80	85	90		95		100		200		300		400		600		800		1000	1200	1500	2500	4500	}
+	ZOOM_STEPS_TILT 	= { 40	44	46	48		50		52.5	55 		60		65		70		75		80		80		85		85		85		}
+#	ZOOM_STEPS_MIN_TILT = { 35	35	35	35		35		38		40		40		45		50		50		50		50		50		50		50		}
+#	ZOOM_STEPS_MAX_TILT = { 89	89	89	89		89		89		89		89		89		89		89		89		89		89		89		89		}
+
+	MAX_PAN_TO_ZOOM_STEP = 8 #7							# The camera will lower to this height (but only if above it) when panning to characters/provinces etc.
+}
+
+NCities = {
+	RESIDENTIAL_CHANGE_DELAY = 10.0 #5.0			# Time between updating the residential buildings of a city ( + 0-1 second for some random variance )
+
+	CITY_VFX_ZOOM_CUTOFF = 25 #250				# zoom at which we hide all city VFXes
+	CITY_PARTICLES_ZOOM_CUTOFF = 20 #200		# zoom at which we hide all city particle effects (for example chimney smoke)
+}
+
+NRoutes = {
+	ROUTE_ENTITIES_CUTOFF = 25 #250				# zoom at which we hide all route entities
+}
+
+NProvinceHighlight = {
+	TEXTURE_WIDTH = 1024 #2048
+	TEXTURE_HEIGHT = 512 #1024
+	# Province highlights use poisson disc sampling to create a gradient
+	# Poisson disc allows for a wider sample are with fewer samples
+	#KERNEL_SCALE = 6	# Size of the sample area, in world space
+	SAMPLE_COUNT = 8 #16	# How many samples to use (max 16)
+}

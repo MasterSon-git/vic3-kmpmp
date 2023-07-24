@@ -1,0 +1,10 @@
+﻿NLenses = {
+#	MAP_MARKER_ZOOM_THRESHHOLD_NEAR = 200
+#	MAP_MARKER_ZOOM_THRESHHOLD_FAR = 900
+	# Temporary, in case of adding more zoom levels add to the defines above and make them generic [PRCAL-9941]
+	MAP_MARKER_ZOOM_CITIES_ALL_THRESHHOLD = 50 #70
+	MAP_MARKER_ZOOM_CITIES_REGION_CAPITALS_THRESHHOLD = 100 #250
+	MAP_MARKER_ZOOM_CITIES_STATE_CAPITALS_THRESHHOLD = 200 #500
+#	MAP_MARKER_HEIGHT_OFFSET = 1.6 		# Move Map Markers "up" in 3D space
+#	LINE_HEIGHT_OFFSET = 0.0 			# Potentially move the Lines up the same amount, right now they go to exactly to the ground
+}
