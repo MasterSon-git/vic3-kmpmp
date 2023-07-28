@@ -1,4 +1,4 @@
-country_military_tech_cost_mult = {
+﻿country_military_tech_cost_mult = {
 	good = no
 	percent = yes
 	num_decimals = 0
