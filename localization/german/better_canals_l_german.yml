@@ -1,0 +1,7 @@
+﻿l_german:
+ pm_canals_mint:0 "Nur Mauttarife"
+ pm_canals_eletric:0 "Elektrik-Kanal"
+ pm_canals_oil:0 "Petro-Kanal"
+ 
+ pmg_ownership_capital_building_canal:0 "Staatseigentum"
+ pm_government_run_building_canals:0 "Bürokraten Eigentum"

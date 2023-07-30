@@ -12,6 +12,6 @@ defend2_tooltip:1 "#header $defend$#!\nIs targeting [SCOPE.GetRootScope.GetFront
 
 
  stand_by:1 "Staff Exercises"
- stand_by_gerund:0 "Preforming Staff Exercises"
+ stand_by_gerund:0 "Performing Staff Exercises"
  stand_by_desc:4 "#header Stand By#!\nOrder [Character.GetFullName] to leave the [concept_front] and move back to the [Character.GetHomeHQ.GetName|v].\n\nTheir [Concept('concept_battalion', '$concept_battalions$')] will still be able to participate in defensive [Concept('concept_battle', '$concept_battles$')], but without the benefit of their General. While at the [concept_hq] the troops will not take any [concept_attrition]. The General will use the idle time to train themselves, gaining traits at half the rate of being in battle. [ConcatIfNeitherEmpty( '\n\n', Character.GetDaysToTravelHomeHQFormatted )]"
   
