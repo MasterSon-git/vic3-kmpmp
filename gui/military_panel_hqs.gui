@@ -912,7 +912,7 @@ types MilitaryPanelHQs {
 							
 							button = {
 								visible = "[NotEqualTo_int32( GetDataModelSize( ProductionMethodGroup.AccessBuildingProductionMethods( Building.Self ) ), '(int32)1' )]"
-								using = expand_button_bg_no_fade
+								using = expand_button_bg_dropdown
 								size = { 100% 100% }
 								onclick = "[RightClickMenuManager.ToggleSwitchProductionMethodMenu(Building.AccessSelf, ProductionMethodGroup.AccessSelf, PdxGuiWidget.AccessSelf)]"
 							}
@@ -954,58 +954,62 @@ types MilitaryPanelHQs {
 				}
 				
 				### Expand units widget
-				widget = {
-					position = { 0 110 }
-					size = { 100% 40 }
+				### GGGG - Moved down below
+			}
+		}
 
-					# Holds "onclick_" blocks
-					section_header_button = {
-						parentanchor = left|vcenter
-						size = { 100% 100% }
-					}
-	
-					flowcontainer = {
-						margin = { 10 0 }
-						parentanchor = right|vcenter
-						spacing = 10
-						
-						### Attrition level
-						block "units_attrition" {
-							textbox = {
-								parentanchor = vcenter
-								visible = "[Or(Character.IsMobilized, NotEqualTo_CFixedPoint(Character.GetAttritionRaw,'(CFixedPoint)0'))]"
-								text = "MILITARY_PANEL_TROOP_ATTRITION_LEVEL"
-								tooltip = "[Character.GetAttritionDesc]"
-								autoresize = yes
-								align = nobaseline
-							}
-						}
+		### Expand units widget # GGGG - Moved out from above container
+		widget = {
+			# position = { 0 0 } # GGGG
+			parentanchor = hcenter # GGGG
+			size = { 100% 40 }
 
-						### Num units with the commander / unit capacity in the building
-						block "units_amount" {
-							textbox = {
-								visible = "[Character.IsMobilized]"
-								parentanchor = vcenter
-								text = "MILITARY_PANEL_UNITS_FROM_BUILDING_FORMAT"
-								tooltip = "MILITARY_PANEL_UNITS_FROM_BUILDING_TOOLTIP"
-								autoresize = yes
-								align = nobaseline
-							}
-							textbox = {
-								visible = "[Not(Character.IsMobilized)]"
-								parentanchor = vcenter
-								text = "MILITARY_PANEL_UNITS_FROM_BUILDING_FORMAT_UNMOBILIZED"
-								tooltip = "MILITARY_PANEL_UNITS_FROM_BUILDING_TOOLTIP"
-								autoresize = yes
-								align = nobaseline
-							}
-						}
-	
-						### Morale bar
-						block "units_morale" {
-							# Block for morale bar
-						}
+			# Holds "onclick_" blocks
+			section_header_button = {
+				parentanchor = left|vcenter
+				size = { 100% 100% }
+			}
+
+			flowcontainer = {
+				margin = { 10 0 }
+				parentanchor = right|vcenter
+				spacing = 10
+				
+				### Attrition level
+				block "units_attrition" {
+					textbox = {
+						parentanchor = vcenter
+						visible = "[Or(Character.IsMobilized, NotEqualTo_CFixedPoint(Character.GetAttritionRaw,'(CFixedPoint)0'))]"
+						text = "MILITARY_PANEL_TROOP_ATTRITION_LEVEL"
+						tooltip = "[Character.GetAttritionDesc]"
+						autoresize = yes
+						align = nobaseline
 					}
+				}
+
+				### Num units with the commander / unit capacity in the building
+				block "units_amount" {
+					textbox = {
+						visible = "[Character.IsMobilized]"
+						parentanchor = vcenter
+						text = "MILITARY_PANEL_UNITS_FROM_BUILDING_FORMAT"
+						tooltip = "MILITARY_PANEL_UNITS_FROM_BUILDING_TOOLTIP"
+						autoresize = yes
+						align = nobaseline
+					}
+					textbox = {
+						visible = "[Not(Character.IsMobilized)]"
+						parentanchor = vcenter
+						text = "MILITARY_PANEL_UNITS_FROM_BUILDING_FORMAT_UNMOBILIZED"
+						tooltip = "MILITARY_PANEL_UNITS_FROM_BUILDING_TOOLTIP"
+						autoresize = yes
+						align = nobaseline
+					}
+				}
+
+				### Morale bar
+				block "units_morale" {
+					# Block for morale bar
 				}
 			}
 		}
