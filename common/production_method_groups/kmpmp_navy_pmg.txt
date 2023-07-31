@@ -1,0 +1,41 @@
+﻿pmg_kmpmp_navy_armor {
+    texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+    ai_selection = most_productive
+
+    production_methods = {
+        pm_kmpmp_man_o_wars_armor_none
+        pm_kmpmp_ironclads_armor_basic
+        pm_kmpmp_ironclads_armor_improved
+        pm_kmpmp_ironclads_armor_advanced
+        pm_kmpmp_monitors_armor_basic
+        pm_kmpmp_monitors_armor_improved
+        pm_kmpmp_monitors_armor_advanced
+        pm_kmpmp_dreadnoughts_armor_basic
+        pm_kmpmp_dreadnoughts_armor_improved
+        pm_kmpmp_dreadnoughts_armor_advanced
+        pm_kmpmp_battleships_armor_basic
+        pm_kmpmp_battleships_armor_improved
+        pm_kmpmp_battleships_armor_advanced
+    }
+}
+
+pmg_kmpmp_navy_batteries {
+    texture = "gfx/interface/icons/generic_icons/mixed_icon_military.dds"
+    ai_selection = most_productive
+
+    production_methods = {
+        pm_kmpmp_man_o_wars_batteries_none
+        pm_kmpmp_ironclads_batteries_basic
+        pm_kmpmp_ironclads_batteries_improved
+        pm_kmpmp_ironclads_batteries_advanced
+        pm_kmpmp_monitors_batteries_basic
+        pm_kmpmp_monitors_batteries_improved
+        pm_kmpmp_monitors_batteries_advanced
+        pm_kmpmp_dreadnoughts_batteries_basic
+        pm_kmpmp_dreadnoughts_batteries_improved
+        pm_kmpmp_dreadnoughts_batteries_advanced
+        pm_kmpmp_battleships_batteries_basic
+        pm_kmpmp_battleships_batteries_improved
+        pm_kmpmp_battleships_batteries_advanced
+    }
+}

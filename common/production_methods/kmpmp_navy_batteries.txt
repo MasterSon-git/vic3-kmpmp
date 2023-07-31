@@ -1,0 +1,324 @@
+﻿pm_kmpmp_man_o_wars_batteries_none {
+    texture = "gfx/interface/icons/production_method_icons/kmpmp_man_o_wars_batteries_none.dds"
+    is_default = yes
+
+    unlocking_production_methods = {
+        pm_man_o_wars
+    }
+}
+
+pm_kmpmp_ironclads_batteries_basic = {
+    texture = "gfx/interface/icons/production_method_icons/kmpmp_ironclads_batteries_basic.dds"
+    is_default = yes
+
+    unlocking_technologies = {
+        ironclad_tech
+    }
+    
+    unlocking_production_methods = {
+        pm_ironclads
+    }
+
+    building_modifiers = {
+        workforce_scaled = {
+            building_input_artillery_add  = 1
+        }
+
+        throughput_scaled = {
+            unit_offense_add = 10
+        }
+    }
+
+    timed_modifiers = {
+        pm_offense_defense_readjustment
+    }
+}
+
+pm_kmpmp_ironclads_batteries_improved = {
+    texture = "gfx/interface/icons/production_method_icons/kmpmp_ironclads_batteries_improved.dds"
+
+    unlocking_technologies = {
+        ironclad_tech
+    }
+    
+    unlocking_production_methods = {
+        pm_ironclads
+    }
+
+    building_modifiers = {
+        workforce_scaled = {
+            building_input_artillery_add  = 1.5
+        }
+
+        throughput_scaled = {
+            unit_offense_add = 15
+        }
+    }
+
+    timed_modifiers = {
+        pm_offense_defense_readjustment
+    }
+}
+
+pm_kmpmp_ironclads_batteries_advanced = {
+    texture = "gfx/interface/icons/production_method_icons/kmpmp_ironclads_batteries_advanced.dds"
+
+    unlocking_technologies = {
+        ironclad_tech
+    }
+    
+    unlocking_production_methods = {
+        pm_ironclads
+    }
+
+    building_modifiers = {
+        workforce_scaled = {
+            building_input_artillery_add  = 2
+        }
+
+        throughput_scaled = {
+            unit_offense_add = 20
+        }
+    }
+
+    timed_modifiers = {
+        pm_offense_defense_readjustment
+    }
+}
+
+pm_kmpmp_monitors_batteries_basic = {
+    texture = "gfx/interface/icons/production_method_icons/kmpmp_monitors_batteries_basic.dds"
+    is_default = yes
+
+    unlocking_technologies = {
+        monitor_tech
+    }
+
+    unlocking_production_methods = {
+        pm_monitors
+    }
+
+    building_modifiers = {
+        workforce_scaled = {
+            building_input_artillery_add  = 2.5
+        }
+
+        throughput_scaled = {
+            unit_offense_add = 25
+        }
+    }
+
+    timed_modifiers = {
+        pm_offense_defense_readjustment
+    }
+}
+
+pm_kmpmp_monitors_batteries_improved = {
+    texture = "gfx/interface/icons/production_method_icons/kmpmp_monitors_batteries_improved.dds"
+
+    unlocking_technologies = {
+        monitor_tech
+    }
+
+    unlocking_production_methods = {
+        pm_monitors
+    }
+
+    building_modifiers = {
+        workforce_scaled = {
+            building_input_artillery_add  = 3
+        }
+
+        throughput_scaled = {
+            unit_offense_add = 30
+        }
+    }
+
+    timed_modifiers = {
+        pm_offense_defense_readjustment
+    }
+}
+
+pm_kmpmp_monitors_batteries_advanced = {
+    texture = "gfx/interface/icons/production_method_icons/kmpmp_monitors_batteries_advanced.dds"
+
+    unlocking_technologies = {
+        monitor_tech
+    }
+
+    unlocking_production_methods = {
+        pm_monitors
+    }
+
+    building_modifiers = {
+        workforce_scaled = {
+            building_input_artillery_add  = 3.5
+        }
+
+        throughput_scaled = {
+            unit_offense_add = 35
+        }
+    }
+
+    timed_modifiers = {
+        pm_offense_defense_readjustment
+    }
+}
+
+pm_kmpmp_dreadnoughts_batteries_basic = {
+    texture = "gfx/interface/icons/production_method_icons/kmpmp_dreadnoughts_batteries_basic.dds"
+    is_default = yes
+
+    unlocking_technologies = {
+        dreadnought
+    }
+
+    unlocking_production_methods = {
+        pm_dreadnoughts
+    }
+
+    building_modifiers = {
+        workforce_scaled = {
+            building_input_artillery_add  = 4
+        }
+
+        throughput_scaled = {
+            unit_offense_add = 40
+        }
+    }
+
+    timed_modifiers = {
+        pm_offense_defense_readjustment
+    }
+}
+
+pm_kmpmp_dreadnoughts_batteries_improved = {
+    texture = "gfx/interface/icons/production_method_icons/kmpmp_dreadnoughts_batteries_improved.dds"
+
+    unlocking_technologies = {
+        dreadnought
+    }
+
+    unlocking_production_methods = {
+        pm_dreadnoughts
+    }
+
+    building_modifiers = {
+        workforce_scaled = {
+            building_input_artillery_add  = 4.5
+        }
+
+        throughput_scaled = {
+            unit_offense_add = 50
+        }
+    }
+
+    timed_modifiers = {
+        pm_offense_defense_readjustment
+    }
+}
+
+pm_kmpmp_dreadnoughts_batteries_advanced = {
+    texture = "gfx/interface/icons/production_method_icons/kmpmp_dreadnoughts_batteries_advanced.dds"
+
+    unlocking_technologies = {
+        dreadnought
+    }
+
+    unlocking_production_methods = {
+        pm_dreadnoughts
+    }
+
+    building_modifiers = {
+        workforce_scaled = {
+            building_input_artillery_add  = 5
+        }
+
+        throughput_scaled = {
+            unit_offense_add = 60
+        }
+    }
+
+    timed_modifiers = {
+        pm_offense_defense_readjustment
+    }
+}
+
+pm_kmpmp_battleships_batteries_basic = {
+    texture = "gfx/interface/icons/production_method_icons/kmpmp_battleships_batteries_basic.dds"
+    is_default = yes
+
+    unlocking_technologies = {
+        battleship_tech
+    }
+
+    unlocking_production_methods = {
+        pm_battleships
+    }
+
+    building_modifiers = {
+        workforce_scaled = {
+            building_input_artillery_add  = 5.5
+        }
+
+        throughput_scaled = {
+            unit_offense_add = 70
+        }
+    }
+
+    timed_modifiers = {
+        pm_offense_defense_readjustment
+    }
+}
+
+pm_kmpmp_battleships_batteries_improved = {
+    texture = "gfx/interface/icons/production_method_icons/kmpmp_battleships_batteries_improved.dds"
+
+    unlocking_technologies = {
+        battleship_tech
+    }
+
+    unlocking_production_methods = {
+        pm_battleships
+    }
+
+    building_modifiers = {
+        workforce_scaled = {
+            building_input_artillery_add  = 6
+        }
+
+        throughput_scaled = {
+            unit_offense_add = 80
+        }
+    }
+
+    timed_modifiers = {
+        pm_offense_defense_readjustment
+    }
+}
+
+pm_kmpmp_battleships_batteries_advanced = {
+    texture = "gfx/interface/icons/production_method_icons/kmpmp_battleships_batteries_advanced.dds"
+
+    unlocking_technologies = {
+        battleship_tech
+    }
+
+    unlocking_production_methods = {
+        pm_battleships
+    }
+
+    building_modifiers = {
+        workforce_scaled = {
+            building_input_artillery_add  = 6.5
+        }
+
+        throughput_scaled = {
+            unit_offense_add = 90
+        }
+    }
+
+    timed_modifiers = {
+        pm_offense_defense_readjustment
+    }
+}
