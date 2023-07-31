@@ -112,7 +112,6 @@ pm_GGGG_full_dress_consc = {
 
 pm_GGGG_full_elite_dress = {
     texture = "gfx/interface/icons/production_method_icons/GGGG_shako_elite.dds"
-    is_default = false
     
     unlocking_technologies = {
         line_infantry
@@ -264,7 +263,6 @@ pm_GGGG_modern_uniform_consc = {
 
 pm_GGGG_modern_elite_uniform = {
     texture    = "gfx/interface/icons/production_method_icons/GGGG_brodie_elite.dds"
-    is_default = false
     
     unlocking_technologies = {
         trench_works

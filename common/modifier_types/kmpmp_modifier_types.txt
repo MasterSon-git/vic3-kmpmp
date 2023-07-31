@@ -1,4 +1,14 @@
-﻿country_military_tech_cost_mult = {
+﻿building_input_coffee_add = {
+	good = no
+	percent = no
+}
+
+building_input_tea_add = {
+	good = no
+	percent = no
+}
+
+country_military_tech_cost_mult = {
 	good = no
 	percent = yes
 	num_decimals = 0
