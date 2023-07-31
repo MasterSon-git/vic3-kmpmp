@@ -17,9 +17,9 @@ pm_assembly_lines_building_furniture_manufacturies = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			building_input_tools_add = 5
+			#building_input_tools_add = 5
 			building_input_oil_add = 5
-			building_input_electricity_add = 5
+			building_input_electricity_add = 10 #5
 		}
 
 		level_scaled = {
@@ -64,9 +64,9 @@ pm_assembly_lines_building_motor_industry = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			building_input_tools_add = 5
+			#building_input_tools_add = 5
 			building_input_oil_add = 5
-			building_input_electricity_add = 5
+			building_input_electricity_add = 10 #5
 		}
 
 		level_scaled = {
