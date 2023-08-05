@@ -90,7 +90,7 @@ pm_radio_order_transmission = {
 }
 
 pm_balanced_war_order = {
-	texture = "gfx/interface/icons/battle_conditions/battle_condition_lost.dds"
+	texture = "gfx/interface/icons/production_method_icons/qwf_war_order_balanced.dds"
 }
 pm_not_attack_complex_terrain_war_order = {
 	texture = "gfx/interface/icons/battle_conditions/battle_condition_mud.dds"

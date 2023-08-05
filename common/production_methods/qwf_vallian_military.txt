@@ -1,10 +1,10 @@
-﻿pm_no_artillery = {
-	texture = "gfx/interface/icons/production_method_icons/no_artillery.dds"
+﻿# pm_no_artillery = {
+# 	texture = "gfx/interface/icons/production_method_icons/no_artillery.dds"
 
-	timed_modifiers = {
-		pm_offense_defense_readjustment
-	}
-}
+# 	timed_modifiers = {
+# 		pm_offense_defense_readjustment
+# 	}
+# }
 
 pm_cannon_artillery = {
 	texture = "gfx/interface/icons/production_method_icons/cannon_artillery.dds"

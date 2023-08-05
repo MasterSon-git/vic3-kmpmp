@@ -45,8 +45,6 @@ building_panama_canal = {
 
 	production_method_groups = {
 		pmg_canal
-		pm_canals_mint
-		pm_canals_eletric
-		pm_canals_oil
+		pmg_ownership_capital_building_canal
 	}
 }

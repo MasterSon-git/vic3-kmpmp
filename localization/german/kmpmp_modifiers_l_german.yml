@@ -1,0 +1,5 @@
+﻿l_german:
+ modifier_building_input_coffee_add:0 "@coffee! Kaffee-Zufuhr pro Stufe"
+ modifier_building_input_coffee_add_desc:0 "Die Menge an @coffee! Kaffee, die das Gebäude verbraucht."
+ modifier_building_input_tea_add:0 "@tea! Tee-Zufuhr pro Stufe"
+ modifier_building_input_tea_add_desc:0 "Die Menge an @tea! Tee, die das Gebäude verbraucht."
