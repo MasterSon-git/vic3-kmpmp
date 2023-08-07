@@ -9,7 +9,7 @@
  pmg_kmpmp_navy_armor:0 "Navy $kmpmp_navy_armor$"
  pmg_kmpmp_navy_batteries:0 "Navy $kmpmp_navy_batteries$"
 
- pm_kmpmp_man_o_wars_armor_none:0 "$kmpmp_navy_machinery_none$ $kmpmp_navy_armor$"
+ pm_kmpmp_armor_none:0 "$kmpmp_navy_machinery_none$ $kmpmp_navy_armor$"
  pm_kmpmp_ironclads_armor_basic:0 "$kmpmp_navy_machinery_basic$ $kmpmp_navy_armor$"
  pm_kmpmp_ironclads_armor_improved:0 "$kmpmp_navy_machinery_improved$ $kmpmp_navy_armor$"
  pm_kmpmp_ironclads_armor_advanced:0 "$kmpmp_navy_machinery_advanced$ $kmpmp_navy_armor$"
@@ -23,7 +23,7 @@
  pm_kmpmp_battleships_armor_improved:0 "$kmpmp_navy_machinery_improved$ $kmpmp_navy_armor$"
  pm_kmpmp_battleships_armor_advanced:0 "$kmpmp_navy_machinery_advanced$ $kmpmp_navy_armor$"
 
- pm_kmpmp_man_o_wars_batteries_none:0 "$kmpmp_navy_machinery_none$ $kmpmp_navy_batteries$"
+ pm_kmpmp_batteries_none:0 "$kmpmp_navy_machinery_none$ $kmpmp_navy_batteries$"
  pm_kmpmp_ironclads_batteries_basic:0 "$kmpmp_navy_machinery_basic$ $kmpmp_navy_batteries$"
  pm_kmpmp_ironclads_batteries_improved:0 "$kmpmp_navy_machinery_improved$ $kmpmp_navy_batteries$"
  pm_kmpmp_ironclads_batteries_advanced:0 "$kmpmp_navy_machinery_advanced$ $kmpmp_navy_batteries$"

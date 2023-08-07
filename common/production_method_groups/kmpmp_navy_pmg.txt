@@ -3,7 +3,7 @@
     ai_selection = most_productive
 
     production_methods = {
-        pm_kmpmp_man_o_wars_armor_none
+        pm_kmpmp_armor_none
         pm_kmpmp_ironclads_armor_basic
         pm_kmpmp_ironclads_armor_improved
         pm_kmpmp_ironclads_armor_advanced
@@ -24,7 +24,7 @@ pmg_kmpmp_navy_batteries {
     ai_selection = most_productive
 
     production_methods = {
-        pm_kmpmp_man_o_wars_batteries_none
+        pm_kmpmp_batteries_none
         pm_kmpmp_ironclads_batteries_basic
         pm_kmpmp_ironclads_batteries_improved
         pm_kmpmp_ironclads_batteries_advanced

@@ -1,10 +1,6 @@
-﻿pm_kmpmp_man_o_wars_batteries_none {
-    texture = "gfx/interface/icons/production_method_icons/kmpmp_man_o_wars_batteries_none.dds"
+﻿pm_kmpmp_batteries_none {
+    texture = "gfx/interface/icons/production_method_icons/no_artillery.dds"
     is_default = yes
-
-    unlocking_production_methods = {
-        pm_man_o_wars
-    }
 }
 
 pm_kmpmp_ironclads_batteries_basic = {
