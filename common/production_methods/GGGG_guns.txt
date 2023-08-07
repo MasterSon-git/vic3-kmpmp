@@ -43,7 +43,8 @@ pm_GGGG_flintlocks = {
     
     building_modifiers = {
         workforce_scaled = {
-            building_input_small_arms_add = 1
+            building_input_small_arms_add = 0.5
+            building_input_ammunition_add = 0.5
         }
 
         throughput_scaled = {
