@@ -5,7 +5,7 @@
 
 pm_kmpmp_ironclads_armor_basic = {
     texture = "gfx/interface/icons/production_method_icons/kmpmp_ironclads_armor_basic.dds"
-    is_default = yes
+    #is_default = yes
 
     unlocking_technologies = {
         ironclad_tech
@@ -84,7 +84,7 @@ pm_kmpmp_ironclads_armor_advanced = {
 
 pm_kmpmp_monitors_armor_basic = {
     texture = "gfx/interface/icons/production_method_icons/kmpmp_monitors_armor_basic.dds"
-    is_default = yes
+    #is_default = yes
 
     unlocking_technologies = {
         monitor_tech
@@ -163,7 +163,7 @@ pm_kmpmp_monitors_armor_advanced = {
 
 pm_kmpmp_dreadnoughts_armor_basic = {
     texture = "gfx/interface/icons/production_method_icons/kmpmp_dreadnoughts_armor_basic.dds"
-    is_default = yes
+    #is_default = yes
 
     unlocking_technologies = {
         dreadnought
@@ -242,7 +242,7 @@ pm_kmpmp_dreadnoughts_armor_advanced = {
 
 pm_kmpmp_battleships_armor_basic = {
     texture = "gfx/interface/icons/production_method_icons/kmpmp_battleships_armor_basic.dds"
-    is_default = yes
+    #is_default = yes
 
     unlocking_technologies = {
         battleship_tech
