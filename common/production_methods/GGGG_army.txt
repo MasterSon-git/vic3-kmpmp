@@ -36,6 +36,7 @@ pm_line_infantry = {
     building_modifiers = {
         workforce_scaled = {
             # building_input_small_arms_add = 1 # GGGG
+            building_input_small_arms_add = 1
         }
 
         level_scaled = {
@@ -72,6 +73,7 @@ pm_skirmish_infantry = {
         workforce_scaled = {
             # building_input_ammunition_add = 1 # GGGG
             # building_input_small_arms_add = 1 # GGGG
+            building_input_small_arms_add = 1
         }
 
         level_scaled = {
@@ -108,6 +110,8 @@ pm_trench_infantry = {
         workforce_scaled = {
             # building_input_ammunition_add = 2 # GGGG
             # building_input_small_arms_add = 1 # GGGG
+            building_input_ammunition_add = 1 #2 # kmpmp
+            building_input_small_arms_add = 1
         }
 
         level_scaled = {
@@ -147,6 +151,8 @@ pm_squad_infantry = {
         workforce_scaled = {
             # building_input_ammunition_add = 2 # GGGG
             # building_input_small_arms_add = 1 # GGGG
+            building_input_ammunition_add = 1.5 #2 # kmpmp
+            building_input_small_arms_add = 1
             building_input_radios_add = 1
         }
 
@@ -187,7 +193,9 @@ pm_mechanized_infantry = {
     building_modifiers = {
         workforce_scaled = {
             # building_input_small_arms_add = 1   # GGGG
-            building_input_ammunition_add = 1 # 3 # GGGG
+            #building_input_ammunition_add = 1 # 3 # GGGG
+            building_input_ammunition_add = 2 #3 # kmpmp
+            building_input_small_arms_add = 1
             building_input_tanks_add = 1
             building_input_oil_add = 1
             building_input_radios_add = 1
@@ -254,6 +262,7 @@ pm_line_infantry_conscription = {
     building_modifiers = {
         workforce_scaled = {
             # building_input_small_arms_add = 1 # GGGG
+            building_input_small_arms_add = 1
         }
 
         level_scaled = {
@@ -288,6 +297,7 @@ pm_skirmish_infantry_conscription = {
         workforce_scaled = {
             # building_input_ammunition_add = 1 # GGGG
             # building_input_small_arms_add = 1 # GGGG
+            building_input_small_arms_add = 1
         }
 
         level_scaled = {
@@ -322,6 +332,8 @@ pm_trench_infantry_conscription = {
         workforce_scaled = {
             # building_input_ammunition_add = 2 # GGGG
             # building_input_small_arms_add = 1 # GGGG
+            building_input_ammunition_add = 1 #2 # kmpmp
+            building_input_small_arms_add = 1
         }
 
         level_scaled = {
@@ -358,6 +370,8 @@ pm_squad_infantry_conscription = {
         workforce_scaled = {
             # building_input_ammunition_add = 2 # GGGG
             # building_input_small_arms_add = 1 # GGGG
+            building_input_ammunition_add = 1.5 #2 # kmpmp
+            building_input_small_arms_add = 1
             building_input_radios_add = 1
         }
 
@@ -393,7 +407,9 @@ pm_mechanized_infantry_conscription = {
     building_modifiers = {
         workforce_scaled = {
             # building_input_small_arms_add = 1   # GGGG
-            building_input_ammunition_add = 1 # 3 # GGGG
+            # building_input_ammunition_add = 1 # 3 # GGGG
+            building_input_ammunition_add = 2 #3 # kmpmp
+            building_input_small_arms_add = 1
             building_input_tanks_add = 1
             building_input_oil_add = 1
             building_input_radios_add = 1
