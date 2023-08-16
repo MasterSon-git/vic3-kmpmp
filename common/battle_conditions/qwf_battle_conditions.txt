@@ -163,7 +163,9 @@ battle_condition_cut_off_supply_line = {
 			}
 			multiply = {
 				value = 1
-				add = modifier:country_logistics_battle_condition_cut_off_supply_line_mult
+				scope:character.owner = {
+					add = modifier:country_logistics_battle_condition_cut_off_supply_line_mult
+				}
 			}
 		}
 	}
