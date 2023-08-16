@@ -1,4 +1,7 @@
 ﻿l_german:
+ building_military_command_center:0 "Militärisches Kommandozentrum"
+ building_military_command_center_lens_option:0 "$building_military_command_center$ ausbauen"
+
  kmpmp_navy_armor:0 "Panzerung"
  kmpmp_navy_batteries:0 "Kanonen"
  kmpmp_navy_machinery_none:0 "Keine"
@@ -6,8 +9,18 @@
  kmpmp_navy_machinery_improved:0 "Verbesserte"
  kmpmp_navy_machinery_advanced:0 "Fortgeschrittene"
 
+ pmg_kmpmp_military_command_center_organisation:0 "Organisation"
+ pmg_kmpmp_military_command_center_communication:0 "Kommunikation"
  pmg_kmpmp_navy_armor:0 "Schiffspanzerung"
  pmg_kmpmp_navy_batteries:0 "Schiffsbatterien"
+
+ pm_kmpmp_military_command_center_organisation_planning_office:0 "Planungsbüro"
+ pm_kmpmp_military_command_center_organisation_command_post:0 "Kommandoposten"
+ pm_kmpmp_military_command_center_organisation_field_hq:0 "Field HQ"
+
+ pm_kmpmp_military_command_center_communication_none:0 "Grundlegend"
+ pm_kmpmp_military_command_center_communication_telegraph:0 "Fernschreiber"
+ pm_kmpmp_military_command_center_communication_telephone:0 "Telefon Netzwerke"
 
  pm_kmpmp_armor_none:0 "$kmpmp_navy_machinery_none$ $kmpmp_navy_armor$"
  pm_kmpmp_ironclads_armor_basic:0 "$kmpmp_navy_machinery_basic$ $kmpmp_navy_armor$"

@@ -1,4 +1,10 @@
-﻿building_input_coffee_add = {
+﻿state_building_military_command_center_max_level_add = {
+	good = yes
+	percent = no
+	num_decimals = 0
+}
+
+building_input_coffee_add = {
 	good = no
 	percent = no
 }

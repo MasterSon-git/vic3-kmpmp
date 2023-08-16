@@ -1,4 +1,7 @@
 ﻿l_english:
+ building_military_command_center:0 "Military Command Center"
+ building_military_command_center_lens_option:0 "Extend $building_military_command_center$"
+
  kmpmp_navy_armor:0 "Armor"
  kmpmp_navy_batteries:0 "Batteries"
  kmpmp_navy_machinery_none:0 "No"
@@ -6,8 +9,18 @@
  kmpmp_navy_machinery_improved:0 "Improved"
  kmpmp_navy_machinery_advanced:0 "Advanced"
 
+ pmg_kmpmp_military_command_center_organisation:0 "Organisation"
+ pmg_kmpmp_military_command_center_communication:0 "Communication"
  pmg_kmpmp_navy_armor:0 "Navy $kmpmp_navy_armor$"
  pmg_kmpmp_navy_batteries:0 "Navy $kmpmp_navy_batteries$"
+
+ pm_kmpmp_military_command_center_organisation_planning_office:0 "Planning Office"
+ pm_kmpmp_military_command_center_organisation_command_post:0 "Command Post"
+ pm_kmpmp_military_command_center_organisation_field_hq:0 "Field HQ"
+
+ pm_kmpmp_military_command_center_communication_none:0 "Basic"
+ pm_kmpmp_military_command_center_communication_telegraph:0 "Telegraph"
+ pm_kmpmp_military_command_center_communication_telephone:0 "Telephone Networks"
 
  pm_kmpmp_armor_none:0 "$kmpmp_navy_machinery_none$ $kmpmp_navy_armor$"
  pm_kmpmp_ironclads_armor_basic:0 "$kmpmp_navy_machinery_basic$ $kmpmp_navy_armor$"

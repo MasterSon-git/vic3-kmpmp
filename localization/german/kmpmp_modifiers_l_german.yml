@@ -3,3 +3,6 @@
  modifier_building_input_coffee_add_desc:0 "Die Menge an @coffee! Kaffee, die das Gebäude verbraucht."
  modifier_building_input_tea_add:0 "@tea! Tee-Zufuhr pro Stufe"
  modifier_building_input_tea_add_desc:0 "Die Menge an @tea! Tee, die das Gebäude verbraucht."
+
+ modifier_state_building_military_command_center_max_level_add:0 "$building_military_command_center$ Höchststufe"
+ modifier_state_building_military_command_center_max_level_add_desc:0 "Ein Bonus oder Malus auf die Höchststufe von $building_military_command_center$ Gebäuden."

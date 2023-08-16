@@ -1,0 +1,21 @@
+﻿building_military_command_center = {
+	building_group = bg_kmpmp_military_command_center
+	texture = "gfx/interface/icons/building_icons/building_command_center.dds"
+	has_max_level = yes
+	city_type = none
+	downsizeable = yes
+	levels_per_mesh = 5
+	
+	unlocking_technologies = {
+		logistics
+	}
+
+	production_method_groups = {
+		pmg_kmpmp_military_command_center_organisation
+        pmg_kmpmp_military_command_center_communication
+	}
+	
+	ai_value = 500
+
+	required_construction = construction_cost_high
+}

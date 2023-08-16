@@ -1,0 +1,5 @@
+﻿bg_kmpmp_military_command_center = {
+	parent_group = bg_qwf_military
+    economy_of_scale = no
+    infrastructure_usage_per_level = 2
+}

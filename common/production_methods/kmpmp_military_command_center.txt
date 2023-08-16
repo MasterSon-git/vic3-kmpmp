@@ -1,0 +1,119 @@
+﻿pm_kmpmp_military_command_center_organisation_planning_office = {
+    texture = "gfx/interface/icons/production_method_icons/kmpmp_planning_office.dds"
+    is_default = yes
+
+    building_modifiers = {
+        level_scaled = {
+			building_employment_clerks_add = 1000
+			building_employment_soldiers_add = 1000
+		}
+
+        workforce_scaled = {
+            building_input_paper_add = 3
+        }
+    }
+
+    state_modifiers = {
+        level_scaled = {
+            unit_army_defense_mult = 0.01
+            unit_army_offense_mult = 0.01
+        }
+    }
+}
+
+pm_kmpmp_military_command_center_organisation_command_post = {
+    texture = "gfx/interface/icons/production_method_icons/kmpmp_command_post.dds"
+
+    unlocking_technologies = {
+        electric_telegraph
+    }
+
+    building_modifiers = {
+        level_scaled = {
+			building_employment_clerks_add = 1000
+			building_employment_soldiers_add = 750
+            building_employment_officers_add = 250
+		}
+
+        workforce_scaled = {
+            building_input_paper_add = 6
+        }
+    }
+
+    state_modifiers = {
+        level_scaled = {
+            unit_army_defense_mult = 0.02
+            unit_army_offense_mult = 0.02
+        }
+    }
+}
+
+pm_kmpmp_military_command_center_organisation_field_hq = {
+    texture = "gfx/interface/icons/production_method_icons/kmpmp_field_hq.dds"
+
+    unlocking_technologies = {
+        military_statistics
+    }
+
+    building_modifiers = {
+        level_scaled = {
+			building_employment_clerks_add = 1000
+			building_employment_soldiers_add = 500
+            building_employment_officers_add = 500
+		}
+
+        workforce_scaled = {
+            building_input_paper_add = 10
+        }
+    }
+
+    state_modifiers = {
+        level_scaled = {
+            unit_army_defense_mult = 0.03
+            unit_army_offense_mult = 0.03
+        }
+    }
+}
+
+pm_kmpmp_military_command_center_communication_none = {
+    texture = "gfx/interface/icons/production_method_icons/unused/no_telephones.dds"
+    is_default = yes
+}
+
+pm_kmpmp_military_command_center_communication_telegraph = {
+    texture = "gfx/interface/icons/production_method_icons/kmpmp_electrical_telegraph.dds"
+
+    unlocking_technologies = {
+        electric_telegraph
+    }
+
+    building_modifiers = {
+        level_scaled = {
+			building_employment_clerks_add = -500
+		}
+
+        workforce_scaled = {
+            building_input_electricity_add = 5
+        }
+    }
+}
+
+pm_kmpmp_military_command_center_communication_telephone = {
+    texture = "gfx/interface/icons/production_method_icons/kmpmp_telephones.dds"
+
+    unlocking_technologies = {
+        telephone
+    }
+
+    building_modifiers = {
+        level_scaled = {
+			building_employment_clerks_add = -750
+            building_employment_soldiers_add = -250
+		}
+
+        workforce_scaled = {
+            building_input_electricity_add = 5
+            building_input_telephones_add = 3
+        }
+    }
+}
