@@ -1,0 +1,3 @@
+﻿# State multiplier
+modifier_incoming_naval_invasion = {
+}

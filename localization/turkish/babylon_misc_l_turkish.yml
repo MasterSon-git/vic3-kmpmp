@@ -1,0 +1,10 @@
+﻿l_turkish:
+ BABYLON_NAVAL_INVASION_RIGHT_CLICK_MENU_TOOLTIP: "[Character.GetFullName]'i amfibi çıkarma yapması için gönderin[ConcatIfNeitherEmpty('\n$TOOLTIP_DELIMITER$\n', GetDesc( MapInteractions.AccessMapInteractionCharacter.GetNavalInvasionCommand( Character.Self, State.Self ) ) )] [ConcatIfNeitherEmpty('\n', State.GetCustom('naval_invasion_state_tooltip'))]"
+ BABYLON_NAVAL_INVASION_STATE_TOOLTIP: "@red_cross! [State.GetStateRegion.GetStrategicRegion.GetName] içinde [State.GetOwner.GetName] tarafından sahip olunan eyaletler zaten bir donanma tarafından işgal ediliyor"
+ 
+    # Game Rules
+    rule_NSN_allow_navalinvasion:0             "NSN | Çoklu Deniz İstilasını Etkinleştir"
+    setting_NSN_allow_navalinvasion_yes:0      "Yes"
+    setting_NSN_allow_navalinvasion_yes_desc:0 "Aynı karargaha çoklu deniz istilası yapmaya #p İzin Ver#!"
+    setting_NSN_allow_navalinvasion_no:0       "No"
+    setting_NSN_allow_navalinvasion_no_desc:0  "Aynı karargaha çoklu deniz istilası yapmaya #n İzin Vermez#!"
