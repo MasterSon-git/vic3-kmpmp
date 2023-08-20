@@ -22,6 +22,7 @@ pm_kmpmp_ironclads_armor_basic = {
 
         throughput_scaled = {
             unit_defense_add = 10
+            unit_offense_add = 10
         }
     }
 
@@ -48,6 +49,7 @@ pm_kmpmp_ironclads_armor_improved = {
 
         throughput_scaled = {
             unit_defense_add = 15
+            unit_offense_add = 15
         }
     }
 
@@ -74,6 +76,7 @@ pm_kmpmp_ironclads_armor_advanced = {
 
         throughput_scaled = {
             unit_defense_add = 20
+            unit_offense_add = 20
         }
     }
 
@@ -101,6 +104,7 @@ pm_kmpmp_monitors_armor_basic = {
 
         throughput_scaled = {
             unit_defense_add = 25
+            unit_offense_add = 25
         }
     }
 
@@ -127,6 +131,7 @@ pm_kmpmp_monitors_armor_improved = {
 
         throughput_scaled = {
             unit_defense_add = 30
+            unit_offense_add = 30
         }
     }
 
@@ -153,6 +158,7 @@ pm_kmpmp_monitors_armor_advanced = {
 
         throughput_scaled = {
             unit_defense_add = 35
+            unit_offense_add = 35
         }
     }
 
@@ -180,6 +186,7 @@ pm_kmpmp_dreadnoughts_armor_basic = {
 
         throughput_scaled = {
             unit_defense_add = 40
+            unit_offense_add = 40
         }
     }
 
@@ -206,6 +213,7 @@ pm_kmpmp_dreadnoughts_armor_improved = {
 
         throughput_scaled = {
             unit_defense_add = 50
+            unit_offense_add = 50
         }
     }
 
@@ -232,6 +240,7 @@ pm_kmpmp_dreadnoughts_armor_advanced = {
 
         throughput_scaled = {
             unit_defense_add = 60
+            unit_offense_add = 60
         }
     }
 
@@ -259,6 +268,7 @@ pm_kmpmp_battleships_armor_basic = {
 
         throughput_scaled = {
             unit_defense_add = 70
+            unit_offense_add = 70
         }
     }
 
@@ -285,6 +295,7 @@ pm_kmpmp_battleships_armor_improved = {
 
         throughput_scaled = {
             unit_defense_add = 80
+            unit_offense_add = 80
         }
     }
 
@@ -311,6 +322,7 @@ pm_kmpmp_battleships_armor_advanced = {
 
         throughput_scaled = {
             unit_defense_add = 90
+            unit_offense_add = 90
         }
     }
 
