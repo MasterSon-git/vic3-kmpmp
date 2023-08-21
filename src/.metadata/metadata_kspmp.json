@@ -1,0 +1,13 @@
+{
+  "name" : "Karesak Extended Mod Pack",
+  "id" : "",
+  "version" : "",
+  "supported_game_version" : "",
+  "short_description" : "Extended Mod Pack from Karesak community",
+  "tags" : [],
+  "thumbnail" : "thumbnail.png",
+  "relationships" : [],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true
+  }
+}
