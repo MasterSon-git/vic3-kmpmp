@@ -1,0 +1,171 @@
+﻿namespace = kmpmp_ev_japan_buff
+
+# The path of Westernization
+kmpmp_ev_japan_buff.1 = {
+    type = country_event
+    placement = root
+    title = kmpmp_ev_japan_buff.1.t
+    desc = kmpmp_ev_japan_buff.1.d
+    flavor = kmpmp_ev_japan_buff.1.f
+
+    duration = 3
+
+    icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+    gui_window = event_window_1char_tabloid
+
+    left_icon = scope:shogunate_ig_leader
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+    trigger = { # triggered from history\global
+    }
+
+    immediate = {
+        ig:ig_landowners = {
+            leader = {
+                save_scope_as = shogunate_ig_leader
+            }
+        }
+    }
+
+    option = { # play with japan buffs
+        name = kmpmp_ev_japan_buff.1.a
+        
+        trigger = { # only allow buffs for players
+            is_player = yes
+        }
+        set_variable = kmpmp_enable_japan_buffs
+
+        add_modifier = {
+            name = kmpmp_japan_buff_start
+            months = long_modifier_time # 10 years
+        }
+
+        scope:shogunate_ig_leader = {
+            set_ideology = ideology:ideology_jingoist_leader #ideology:ideology_traditionalist
+        }
+
+        # add japan claims korea
+        s:STATE_BUSAN = {
+            add_claim = ROOT
+        }
+        s:STATE_YANGHO = {
+            add_claim = ROOT
+        }
+        s:STATE_SEOUL = {
+            add_claim = ROOT
+        }
+        s:STATE_PYONGYANG = {
+            add_claim = ROOT
+        }
+        s:STATE_SARIWON = {
+            add_claim = ROOT
+        }
+
+        # add japan claims qing
+        s:STATE_SHENGJING = {
+            add_claim = ROOT
+        }
+        s:STATE_FORMOSA = {
+            add_claim = ROOT
+        }
+    }
+
+    option = { # don't play with japan buffs
+        name = CANCEL
+        default_option = yes
+    }
+}
+
+# Empire of the rising Sun
+kmpmp_ev_japan_buff.2 = {
+    type = country_event
+    placement = root
+    title = kmpmp_ev_japan_buff.2.t
+    desc = kmpmp_ev_japan_buff.2.d
+    flavor = kmpmp_ev_japan_buff.2.f
+
+    duration = 3
+
+    icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+    gui_window = event_window_1char_tabloid
+
+    left_icon = scope:meiji_ruler
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+    trigger = { # triggered by meiji.2
+        has_variable = kmpmp_enable_japan_buffs
+    }
+
+    immediate = {
+        add_modifier = {
+            name = kmpmp_japan_buff_meiji_complete
+            months = 182 # 15 years
+        }
+
+        ruler = {
+            save_scope_as = meiji_ruler
+        }
+    }
+
+    option = { # claims on Siam/Java
+        name = kmpmp_ev_japan_buff.2.a
+        default_option = yes
+
+        # Siam
+        s:STATE_NAKHON_RATCHASIMA = {
+            add_claim = ROOT
+        }
+        s:STATE_LAOS = {
+            add_claim = ROOT
+        }
+        s:STATE_TENASSERIM = {
+            add_claim = ROOT
+        }
+
+        # Java
+        s:STATE_WEST_JAVA = {
+            add_claim = ROOT
+        }
+        s:STATE_CENTRAL_JAVA = {
+            add_claim = ROOT
+        }
+        s:STATE_EAST_JAVA = {
+            add_claim = ROOT
+        }
+    }
+
+    option = { # claims on Borneo/DaiNam
+        name = kmpmp_ev_japan_buff.2.b
+
+        # Borneo
+        s:STATE_WEST_BORNEO = {
+            add_claim = ROOT
+        }
+		s:STATE_EAST_BORNEO = {
+            add_claim = ROOT
+        }
+		s:STATE_NORTH_BORNEO = {
+            add_claim = ROOT
+        }
+
+        # Dai Nam
+        s:STATE_TONKIN = {
+            add_claim = ROOT
+        }
+        s:STATE_ANNAM = {
+            add_claim = ROOT
+        }
+        s:STATE_MEKONG = {
+            add_claim = ROOT
+        }
+        s:STATE_CAMBODIA = {
+            add_claim = ROOT
+        }
+    }
+}

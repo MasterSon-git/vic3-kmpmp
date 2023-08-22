@@ -49,3 +49,17 @@
  pm_kmpmp_battleships_batteries_basic:0 "$kmpmp_navy_machinery_basic$ $kmpmp_navy_batteries$"
  pm_kmpmp_battleships_batteries_improved:0 "$kmpmp_navy_machinery_improved$ $kmpmp_navy_batteries$"
  pm_kmpmp_battleships_batteries_advanced:0 "$kmpmp_navy_machinery_advanced$ $kmpmp_navy_batteries$"
+
+ kmpmp_japan_buff_start:0 "Der Weg zum Westen"
+ kmpmp_japan_buff_meiji_complete:0 "Reich der aufgehenden Sonne"
+
+ kmpmp_ev_japan_buff.1.t:0 "$kmpmp_japan_buff_start$"
+ kmpmp_ev_japan_buff.1.d:0 "Japan buffs aktivieren"
+ kmpmp_ev_japan_buff.1.f:0 "Fügt buffs und Meiji Reform Ereignisse für ein konkurrenzfähiges Japan hinzu."
+ kmpmp_ev_japan_buff.1.a:0 "Auf gehts!"
+
+ kmpmp_ev_japan_buff.2.t:0 "$kmpmp_japan_buff_meiji_complete$"
+ kmpmp_ev_japan_buff.2.d:0 "Für die Ehre"
+ kmpmp_ev_japan_buff.2.f:0 "Aufgrund historischer Recherchen haben wir herausgefunden, dass wir einige vergessene Ansprüche haben ..."
+ kmpmp_ev_japan_buff.2.a:0 "Auf nach Siam und Java!"
+ kmpmp_ev_japan_buff.2.b:0 "Lasst uns Borneo und Dai Nam nehmen..."

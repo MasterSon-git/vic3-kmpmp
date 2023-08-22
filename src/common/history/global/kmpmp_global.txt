@@ -1,0 +1,9 @@
+﻿GLOBAL = {
+    c:JAP = {
+        trigger_event = {
+            id = kmpmp_ev_japan_buff.1
+            days = 7
+            popup = yes
+        }
+    }
+}
