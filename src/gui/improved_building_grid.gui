@@ -21,7 +21,7 @@ types building_item_types
 				
 					textbox = {
 						block "text" {
-							text = ""
+							raw_text = ""
 						}
 						autoresize = yes
 						align = left|nobaseline
@@ -33,7 +33,7 @@ types building_item_types
 						tooltip = "[Building.GetEmploymentTooltip]"
 						align = left|nobaseline
 						autoresize = yes
-						text = "[Building.GetExpansionLevelDesc]"
+						raw_text = "[Building.GetExpansionLevelDesc]"
 						using = fontsize_xl
 						parentanchor = vcenter
 					}
@@ -41,7 +41,7 @@ types building_item_types
 		
 				textbox = {
 					visible = "[And(And(Building.IsSelfFunded, Building.IsActive), Not(Building.IsSubsistenceBuilding))]"
-					text = "#v @money![Building.GetAverageAnnualEarningsPerEmployeeFormatted|1+]#!"
+					raw_text = "[Building.GetAverageAnnualEarningsPerEmployeeFormatted|1+]"
 					autoresize = yes
 					align = right|nobaseline
 					parentanchor = right|vcenter
@@ -65,7 +65,7 @@ types building_item_types
 						textbox = {
 							tooltip = "ANNUAL_WAGE_TOOLTIP"
 							visible = "[And(PopListItem.GetPopType.HasSubsistenceIncome,GreaterThan_int64(Building.GetMaxPopSize(PopListItem.GetPopType),'(int64)0'))]"
-							raw_text = "@money![PopListItem.GetAverageAnnualWage|v1]"
+							raw_text = "[PopListItem.GetAverageAnnualWage|v1]"
 							autoresize = yes
 							align = right|nobaseline
 						}
@@ -145,7 +145,7 @@ types building_item_types
 								parentanchor = vcenter|left
 								visible = "[Building.IsActive]"
 								textbox = {
-									text = "@money![Building.GetTaxationRevenue|+=d]#!"
+									raw_text = "[Building.GetTaxationRevenue|+=d]"
 									align = left|nobaseline
 									autoresize = yes
 									widgetanchor = vcenter|left
@@ -161,7 +161,7 @@ types building_item_types
 								parentanchor = vcenter|left
 								visible = "[Building.IsActive]"
 								textbox = {
-									text = "@money![Subtract_CFixedPoint(Building.GetTaxationRevenue, Building.GetGovernmentExpenses)|+=d]#!"
+									raw_text = "[Subtract_CFixedPoint(Building.GetTaxationRevenue, Building.GetGovernmentExpenses)|+=d]"
 									align = left|nobaseline
 									autoresize = yes
 									widgetanchor = vcenter|left
@@ -177,7 +177,7 @@ types building_item_types
 								parentanchor = vcenter|left
 								visible = "[Building.IsActive]"
 								textbox = {
-									text = "@money![Subtract_CFixedPoint(Building.GetTaxationRevenue, Building.GetSubsidies)|+=d]#!"
+									raw_text = "[Subtract_CFixedPoint(Building.GetTaxationRevenue, Building.GetSubsidies)|+=d]"
 									align = left|nobaseline
 									autoresize = yes
 									widgetanchor = vcenter|left
@@ -210,7 +210,7 @@ types building_item_types
 								visible = "[Not(LessThan_CFixedPoint(Building.GetEmploymentPercentage, GetDefine('NGUI', 'BUILDING_CONSIDERED_FULLY_EMPLOYED')))]"
 								parentanchor = vcenter|hcenter
 								textbox = {
-									text = "[Building.GetNoOfEmployed|1*]"
+									raw_text = "[Building.GetNoOfEmployed|1*]"
 									margin_bottom = 5
 									margin_top = 5
 									align = center|nobaseline
@@ -222,7 +222,7 @@ types building_item_types
 								parentanchor = vcenter|hcenter
 								visible = "[LessThan_CFixedPoint(Building.GetEmploymentPercentage, GetDefine('NGUI', 'BUILDING_CONSIDERED_FULLY_EMPLOYED'))]"
 								textbox = {
-									text = "[Building.GetNoOfEmployed|1*]"
+									raw_text = "[Building.GetNoOfEmployed|1*]"
 									margin_bottom = 5
 									margin_top = 5
 									align = hcenter|nobaseline
@@ -233,7 +233,7 @@ types building_item_types
 								}
 							
 								textbox = {
-									text = " / [Building.GetEmployeeCap|1*]"
+									raw_text = " / [Building.GetEmployeeCap|1*]"
 									align = hcenter|nobaseline
 									autoresize = yes
 									parentanchor = vcenter
@@ -282,7 +282,7 @@ types building_item_types
 
 					textbox = {
 						resizeparent = yes
-						text = "[Building.GetNameNoFormatting]"
+						raw_text = "[Building.GetNameNoFormatting]"
 						autoresize = yes
 						minimumsize = { 135 35 }
 						maximumsize = { 135 35 }
@@ -426,7 +426,7 @@ types building_item_types
 
 							textbox = {
 								visible = "[And(Building.IsSelfFunded, Building.IsActive)]"
-								text = "#v @money![Building.GetAverageAnnualEarningsPerEmployeeFormatted|+]#!"
+								raw_text = "[Building.GetAverageAnnualEarningsPerEmployeeFormatted|+]"
 								align = right|nobaseline
 								autoresize = yes
 								minimumsize = { 23 27 }
@@ -446,7 +446,7 @@ types building_item_types
 							textbox = {
 							layoutpolicy_horizontal = expanding
 							alpha = "[TransparentIfFalse(Building.IsActive)]"
-							text = "@money!#v [Building.GetBalance|0+=]#!"
+							raw_text = "[Building.GetBalance|0+=]"
 							tooltip = "[Building.GetBalanceDesc]"
 							align = right|nobaseline
 							autoresize = yes
@@ -514,7 +514,7 @@ types building_item_types
 							margin_right = 6
 							margin_left = 6
 							align = left|nobaseline
-							text = "[Building.GetExpansionLevelDesc]"
+							raw_text = "[Building.GetExpansionLevelDesc]"
 						}
 					}
 
@@ -539,7 +539,7 @@ types building_item_types
 							alwaystransparent = no
 
 							textbox = {
-								text = "#bold [Building.GetConstructionRemainingWeeksDesc]#!"
+								raw_text = "[Building.GetConstructionRemainingWeeksDesc]"
 								size = { 53 20 }
 								align = center|nobaseline
 								elide = right
@@ -641,7 +641,7 @@ types building_item_types
 							parentanchor = vcenter|hcenter
 							visible = "[Building.IsActive]"
 							textbox = {
-								text = "@money![Building.GetTaxationRevenue|+=d]#!"
+								raw_text = "[Building.GetTaxationRevenue|+=d]"
 								align = hcenter|nobaseline
 								autoresize = yes
 								parentanchor = vcenter|hcenter
@@ -658,7 +658,7 @@ types building_item_types
 							parentanchor = vcenter|hcenter
 							visible = "[Building.IsActive]"
 							textbox = {
-								text = "@money![Subtract_CFixedPoint(Building.GetTaxationRevenue, Building.GetGovernmentExpenses)|+=d]#!"
+								raw_text = "[Subtract_CFixedPoint(Building.GetTaxationRevenue, Building.GetGovernmentExpenses)|+=d]"
 								align = hcenter|nobaseline
 								autoresize = yes
 								parentanchor = vcenter|hcenter
@@ -675,7 +675,7 @@ types building_item_types
 							parentanchor = vcenter|hcenter
 							visible = "[Building.IsActive]"
 							textbox = {
-								text = "@money![Subtract_CFixedPoint(Building.GetTaxationRevenue, Building.GetSubsidies)|+=d]#!"
+								raw_text = "[Subtract_CFixedPoint(Building.GetTaxationRevenue, Building.GetSubsidies)|+=d]"
 								align = hcenter|nobaseline
 								autoresize = yes
 								parentanchor = vcenter|hcenter
@@ -708,7 +708,7 @@ types building_item_types
 							visible = "[Not(LessThan_CFixedPoint(Building.GetEmploymentPercentage, GetDefine('NGUI', 'BUILDING_CONSIDERED_FULLY_EMPLOYED')))]"
 							parentanchor = vcenter|hcenter
 							textbox = {
-								text = "[Building.GetNoOfEmployed|1*]"
+								raw_text = "[Building.GetNoOfEmployed|1*]"
 								margin_bottom = 5
 								margin_top = 5
 								align = center|nobaseline
@@ -720,7 +720,7 @@ types building_item_types
 							parentanchor = vcenter|hcenter
 							visible = "[LessThan_CFixedPoint(Building.GetEmploymentPercentage, GetDefine('NGUI', 'BUILDING_CONSIDERED_FULLY_EMPLOYED'))]"
 							textbox = {
-								text = "[Building.GetNoOfEmployed|1*]"
+								raw_text = "[Building.GetNoOfEmployed|1*]"
 								margin_bottom = 5
 								margin_top = 5
 								align = hcenter|nobaseline
@@ -731,7 +731,7 @@ types building_item_types
 							}
 							
 							textbox = {
-								text = " / [Building.GetEmployeeCap|1*]"
+								raw_text = " / [Building.GetEmployeeCap|1*]"
 								align = hcenter|nobaseline
 								autoresize = yes
 								parentanchor = vcenter

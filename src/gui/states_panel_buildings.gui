@@ -28,7 +28,7 @@ types state_panel_types {
 				visible = "[GreaterThan_int64(State.GetNumUnemployedWorkingAdults, '(int64)0')]"
 
 				textbox = {
-					text = "UNEMPLOYED_TITLE"
+					raw_text = "UNEMPLOYED_TITLE"
 					autoresize = yes
 					align = nobaseline
 					elide = right
@@ -36,7 +36,7 @@ types state_panel_types {
 				}
 
 				textbox = {
-					raw_text = "#variable [State.GetNumUnemployedWorkingAdults|D]#!"
+					raw_text = "[State.GetNumUnemployedWorkingAdults|D]"
 					autoresize = yes
 					align = nobaseline
 				}
@@ -55,7 +55,7 @@ types state_panel_types {
 				}
 
 				textbox = {
-					text = "[State.GetNumSubsistenceWorkingAdults|Dv]"
+					raw_text = "[State.GetNumSubsistenceWorkingAdults|Dv]"
 					autoresize = yes
 					align = right|nobaseline
 				}
@@ -136,7 +136,7 @@ types state_panel_types {
 						parentanchor = left|top
 						align = left|nobaseline
 						elide = right
-						raw_text = "#tooltip:[State.GetTooltipTag],STATE_INFRASTRUCTURE_DESC [Subtract_CFixedPoint(State.GetInfrastructure, State.GetInfrastructureUsage)|0+=*]#!#!"
+						raw_text = "#tooltip:[State.GetTooltipTag],STATE_INFRASTRUCTURE_DESC [Subtract_CFixedPoint(State.GetInfrastructure, State.GetInfrastructureUsage)|0+=*]#!"
 						fontsize = 20
 						size = { 60 30 }
 					}
@@ -176,7 +176,7 @@ types state_panel_types {
 						parentanchor = left|top
 						align = left|nobaseline
 						elide = right
-						raw_text = "#tooltip:[State.GetTooltipTag],STATE_TAX_CAPACITY_DESC [Subtract_CFixedPoint(State.CalcTaxCapacity, State.CalcTaxCapacityUsage)|0+=*]#!#!"
+						raw_text = "#tooltip:[State.GetTooltipTag],STATE_TAX_CAPACITY_DESC [Subtract_CFixedPoint(State.CalcTaxCapacity, State.CalcTaxCapacityUsage)|0+=*]#!"
 						fontsize = 20
 						size = { 60 30 }
 					}
@@ -194,13 +194,13 @@ types state_panel_types {
 		default_header_2texts = {
 			visible = no
 			blockoverride "text1" {
-				text = "BUILDINGS"
+				raw_text = "BUILDINGS"
 			}
 		}
 
 		default_header = {
 			blockoverride "text" {
-				text = "URBAN_PART_OF_STATE"
+				raw_text = "URBAN_PART_OF_STATE"
 			}
 			
 			# grid/list toggle
@@ -249,7 +249,7 @@ types state_panel_types {
 					FancyTooltip_Building = {}
 				}
 				blockoverride "text" {
-					text = "TOTAL_URBAN_CENTERS"
+					raw_text = "TOTAL_URBAN_CENTERS"
 				}					
 			}
 			
@@ -289,7 +289,7 @@ types state_panel_types {
 
 					textbox = {
 						using = fontsize_mega
-						raw_text = "#BOLD [StatesPanel.AccessState.GetNumConstructableUrbanBuildings|+]#!"
+						raw_text = "[StatesPanel.AccessState.GetNumConstructableUrbanBuildings|+]"
 						parentanchor = right
 						align = hcenter|nobaseline
 						autoresize = yes
@@ -333,7 +333,7 @@ types state_panel_types {
 
 				textbox = {
 					using = fontsize_large
-					raw_text = "#BOLD [StatesPanel.AccessState.GetNumConstructableUrbanBuildings|+]#!"
+					raw_text = "[StatesPanel.AccessState.GetNumConstructableUrbanBuildings|+]"
 					parentanchor = right
 					align = hcenter|nobaseline
 					autoresize = yes
@@ -350,7 +350,7 @@ types state_panel_types {
 		default_header = {
 			visible = "[Not(IsDataModelEmpty( State.AccessCappedRuralBuildings ))]"
 			blockoverride "text" {
-				text = "RESOURCE"
+				raw_text = "RESOURCE"
 			}
 		}
 		
@@ -394,7 +394,7 @@ types state_panel_types {
 		### AGRICULTURE
 		default_header = {
 			blockoverride "text" {
-				text = "AGRICULTURE"
+				raw_text = "AGRICULTURE"
 			}
 		}
 
@@ -415,7 +415,7 @@ types state_panel_types {
 				#tooltip = "LAND_TEXT_TOOLTIP"
 				datacontext = "[StatesPanel.AccessSubsistenceBuilding]"
 				blockoverride "text" {
-					text = "UNUSED_ARABLE"
+					raw_text = "UNUSED_ARABLE"
 				}					
 			}
 
@@ -456,7 +456,7 @@ types state_panel_types {
 		### DEVELOPMENT
 		default_header = {
 			blockoverride "text" {
-				text = "INFRA_PART_OF_STATE"
+				raw_text = "INFRA_PART_OF_STATE"
 			}
 		}
 
@@ -555,7 +555,7 @@ types state_buildings
 					layoutstretchfactor_horizontal = 10
 					layoutpolicy_horizontal = expanding
 					alpha = "[TransparentIfFalse(Building.IsActive)]"
-					text = "[Building.GetNameNoFormatting]"
+					raw_text = "[Building.GetNameNoFormatting]"
 					elide = right
 					fontsize_min = 14
 					align = nobaseline
@@ -628,7 +628,7 @@ types state_buildings
 						textbox = {
 							layoutpolicy_horizontal = expanding
 							visible = "[Building.IsActive]"
-							text = "[Building.GetExpansionLevelDesc]"
+							raw_text = "[Building.GetExpansionLevelDesc]"
 							using = tooltip_above
 							fontsize_min = 10
 							elide = right
@@ -639,7 +639,7 @@ types state_buildings
 							layoutpolicy_horizontal = expanding
 							visible = "[Not(Building.IsActive)]"
 							alpha = 0.5
-							text = "[Building.GetExpansionLevelDesc]"
+							raw_text = "[Building.GetExpansionLevelDesc]"
 							using = tooltip_above
 							fontsize_min = 10
 							elide = right
@@ -649,7 +649,7 @@ types state_buildings
 						textbox = {
 							layoutpolicy_horizontal = expanding
 							alpha = "[TransparentIfFalse(Building.IsActive)]"
-							raw_text = "#v @money![Building.GetAverageAnnualEarningsPerEmployeeFormatted|1+]#!"
+							raw_text = "[Building.GetAverageAnnualEarningsPerEmployeeFormatted|1+]"
 							tooltip = "TOOLTIP_BUILDING_PRODUCTIVITY"
 							tooltipwidget = {
 								GraphTooltip_Productivity = {}
@@ -685,7 +685,7 @@ types state_buildings
 						
 						textbox = {
 							datacontext = "[Building]"
-							raw_text = "#N @money!#bold -[Building.GetSubsidies|D]#!"
+							raw_text = " -[Building.GetSubsidies|D]"
 							tooltip = "[Building.GetSubsidiesDesc]"
 							autoresize = yes
 							position = { 0 0 }

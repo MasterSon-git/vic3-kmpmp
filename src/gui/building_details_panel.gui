@@ -17,12 +17,12 @@ types building_panels
 
 		blockoverride "window_header_name"
 		{
-			text = "[Building.GetName]"
+			raw_text = "[Building.GetName]"
 		}
 
 		blockoverride "window_header_name_line_two"
 		{
-			text = "BUILDING_DETAILS_LINE_TWO"
+			raw_text = "BUILDING_DETAILS_LINE_TWO"
 		}
 
 		blockoverride "goto_button" {
@@ -39,7 +39,7 @@ types building_panels
 			tab_buttons = {
 				# Overview
 				blockoverride "first_button" {
-					text = "BUILDING_DETAILS_PANEL_INFORMATION_TAB"
+					raw_text = "BUILDING_DETAILS_PANEL_INFORMATION_TAB"
 				}
 				blockoverride "first_button_tooltip" {
 					tooltip = "BUILDING_DETAILS_PANEL_INFORMATION_TAB"
@@ -54,7 +54,7 @@ types building_panels
 					visible = "[Not( InformationPanel.IsTabSelected('default') )]"
 				}
 				blockoverride "first_button_selected" {
-					text = "BUILDING_DETAILS_PANEL_INFORMATION_TAB_SELECTED"
+					raw_text = "BUILDING_DETAILS_PANEL_INFORMATION_TAB_SELECTED"
 				}
 				blockoverride "first_button_name" {
 					name = "tutorial_highlight_information_tab"
@@ -62,7 +62,7 @@ types building_panels
 
 				# Workforce
 				blockoverride "second_button" {
-					text = "WORKFORCE"
+					raw_text = "WORKFORCE"
 				}
 				blockoverride "second_button_tooltip" {
 					tooltip = "WORKFORCE"
@@ -77,7 +77,7 @@ types building_panels
 					visible = "[Not( InformationPanel.IsTabSelected('workforce') )]"
 				}
 				blockoverride "second_button_selected" {
-					text = "WORKFORCE"
+					raw_text = "WORKFORCE"
 				}
 				blockoverride "second_button_name" {
 					name = "tutorial_highlight_workforce_tab"
@@ -85,7 +85,7 @@ types building_panels
 
 				# Modifiers
 				blockoverride "third_button" {
-					text = "BUILDING_DETAILS_PANEL_MODIFIERS_TAB"
+					raw_text = "BUILDING_DETAILS_PANEL_MODIFIERS_TAB"
 				}
 				blockoverride "third_button_tooltip" {
 					tooltip = "BUILDING_DETAILS_PANEL_MODIFIERS_TAB"
@@ -100,7 +100,7 @@ types building_panels
 					visible = "[Not( InformationPanel.IsTabSelected('modifiers') )]"
 				}
 				blockoverride "third_button_selected" {
-					text = "BUILDING_DETAILS_PANEL_MODIFIERS_TAB_SELECTED"
+					raw_text = "BUILDING_DETAILS_PANEL_MODIFIERS_TAB_SELECTED"
 				}
 			}
 		}
@@ -217,7 +217,7 @@ types building_panels
 
 						textbox = {
 							name = text
-							text = "[Building.GetConstructionRemainingWeeksDesc]"
+							raw_text = "[Building.GetConstructionRemainingWeeksDesc]"
 							parentanchor = center
 							autoresize = yes
 							align = hcenter|nobaseline
@@ -273,7 +273,7 @@ types building_panels
 
 							textbox = {
 								name = "tutorial_higlight_expansion_level"
-								text = "[Building.GetExpansionLevelDesc]"
+								raw_text = "[Building.GetExpansionLevelDesc]"
 								align = hcenter|nobaseline
 								using = fontsize_large
 								size = { 88 35 }
@@ -307,7 +307,7 @@ types building_panels
 					}
 
 					textbox = {
-						text = "CANCEL_AUTO_EXPAND"
+						raw_text = "CANCEL_AUTO_EXPAND"
 						visible = "[Building.IsAutoExpanding]"
 						tooltip = [Building.GetAutoExpandTooltip]
 						size = { 100% 100% }
@@ -316,7 +316,7 @@ types building_panels
 					}
 
 					textbox = {
-						text = "AUTO_EXPAND"
+						raw_text = "AUTO_EXPAND"
 						visible = "[Not(Building.IsAutoExpanding)]"
 						tooltip = [Building.GetAutoExpandTooltip]
 						size = { 100% 100% }
@@ -348,7 +348,7 @@ types building_panels
 						}
 
 						textbox = {
-							text = "[concept_productivity]"
+							raw_text = "[concept_productivity]"
 							align = left|nobaseline
 							autoresize = yes
 							maximumsize = { 290 -1 }
@@ -361,7 +361,7 @@ types building_panels
 							textbox = {
 								name = "tutorial_highlight_productivity_value"
 								using = productivity_tooltip_with_graph
-								raw_text = "@money![Building.GetAverageAnnualEarningsPerEmployeeFormatted|+]"
+								raw_text = "[Building.GetAverageAnnualEarningsPerEmployeeFormatted|+]"
 								align = hcenter|nobaseline
 								autoresize = yes
 								maximumsize = { 120 -1 }
@@ -386,7 +386,7 @@ types building_panels
 								direction = vertical
 								textbox = {
 									using = building_profitability_tooltip_with_graph
-									text = "BUILDING_RANK"
+									raw_text = "BUILDING_RANK"
 									align = left|nobaseline
 									autoresize = yes
 									maximumsize = { 195 -1 }
@@ -395,7 +395,7 @@ types building_panels
 
 								textbox = {
 									using = building_world_profitability_tooltip_with_graph
-									text = "BUILDING_RANK_WORLD"
+									raw_text = "BUILDING_RANK_WORLD"
 									align = left|nobaseline
 									autoresize = yes
 									maximumsize = { 195 -1 }
@@ -405,7 +405,7 @@ types building_panels
 						}
 
 						textbox = {
-							text = "BUILDING_AVERAGE_WAGE"
+							raw_text = "BUILDING_AVERAGE_WAGE"
 							tooltip = TOOLTIP_BUILDING_AVERAGE_WAGE
 							visible = "[Building.IsActive]"
 
@@ -421,21 +421,21 @@ types building_panels
 						hbox = {
 							spacing = 5
 							textbox = {
-								text = "BUILDING_STATUS"
+								raw_text = "BUILDING_STATUS"
 								align = left|nobaseline
 								autoresize = yes
 								elide = right
 							}
 							textbox = {
 								visible = "[Building.IsActive]"
-								text = "BUILDING_ACTIVE"
+								raw_text = "BUILDING_ACTIVE"
 								align = nobaseline
 								layoutpolicy_horizontal = expanding
 								size = { 0 25 }
 							}
 							textbox = {
 								visible = "[Not(Building.IsActive)]"
-								text = "BUILDING_INACTIVE"
+								raw_text = "BUILDING_INACTIVE"
 								align = left|nobaseline
 								layoutpolicy_horizontal = expanding
 								size = { 0 25 }
@@ -465,7 +465,7 @@ types building_panels
 						flowcontainer = {
 							parentanchor = vcenter
 							textbox = {
-								text = EMPLOYMENT_BAR
+								raw_text = EMPLOYMENT_BAR
 								margin_left = 10
 								margin_bottom = 5
 								margin_top = 5
@@ -477,7 +477,7 @@ types building_panels
 
 							textbox = {
 								visible = "[LessThan_int64(Building.GetNoOfEmployed, Building.GetEmployeeCap)]"
-								raw_text = "/ #maximum [Building.GetEmployeeCap|1*]#!"
+								raw_text = "/ [Building.GetEmployeeCap|1*]"
 								margin_left = 7
 								align = hcenter|nobaseline
 								autoresize = yes
@@ -587,7 +587,7 @@ types building_panels
 						flowcontainer = {
 							parentanchor = vcenter
 							textbox = {
-								text = BUILDING_CASH_RESERVES
+								raw_text = BUILDING_CASH_RESERVES
 								margin_left = 10
 								align = hcenter|nobaseline
 								autoresize = yes
@@ -595,7 +595,7 @@ types building_panels
 							}
 
 							textbox = {
-								raw_text = " / #maximum [Building.GetMaxCashReserves|k]#!"
+								raw_text = " / [Building.GetMaxCashReserves|k]"
 								visible = "[LessThan_CFixedPoint(Building.GetCurrentCashReserves, Building.GetMaxCashReserves)]"
 								align = hcenter|nobaseline
 								autoresize = yes
@@ -640,14 +640,14 @@ types building_panels
 						tooltip = "BUILDING_MOBILIZED_BATTALIONS_TOOLTIP"
 						hbox = {
 							textbox = {
-								text = "BUILDING_BATTALIONS_MOBILIZED"
+								raw_text = "BUILDING_BATTALIONS_MOBILIZED"
 								align = left|nobaseline
 								layoutpolicy_horizontal = expanding
 								size = { 0 25 }
 								elide = right
 							}
 							textbox = {
-								raw_text = "@battalions! #v [Building.GetNumberOfFullyMobilizedBattalions]#! / [Building.GetNumberOfCombatUnits] (#v [Building.GetMobilizationRatio|%]#!)"
+								raw_text = "[Building.GetNumberOfFullyMobilizedBattalions] / [Building.GetNumberOfCombatUnits] ( [Building.GetMobilizationRatio|%])"
 								align = nobaseline
 								autoresize = yes
 							}
@@ -671,7 +671,7 @@ types building_panels
 
 							textbox = {
 								resizeparent = yes
-								text = "[Building.GetState.GetMarket.GetName]"
+								raw_text = "[Building.GetState.GetMarket.GetName]"
 								align = center|nobaseline
 								autoresize = yes
 								maximumsize = { 250 -1 }
@@ -689,7 +689,7 @@ types building_panels
 		### SUBSISTENCE INFO
 		textbox = {
 			using = default_list_position
-			text = "SUBSISTENCE_CONCEPT_CLEAN"
+			raw_text = "SUBSISTENCE_CONCEPT_CLEAN"
 			visible = "[Building.IsSubsistenceBuilding]"
 			autoresize = yes
 			multiline = yes
@@ -701,7 +701,7 @@ types building_panels
 		### URBAN INFO
 		textbox = {
 			using = default_list_position
-			text = "URBAN_CENTER_EXPLANATION"
+			raw_text = "URBAN_CENTER_EXPLANATION"
 			visible = "[Building.IsUrbanCenter]"
 			autoresize = yes
 			multiline = yes
@@ -722,7 +722,7 @@ types building_panels
 
 			default_header_2texts = {
 				blockoverride "text1" {
-					text = "PRODUCTION_METHODS"
+					raw_text = "PRODUCTION_METHODS"
 				}
 			}
 
@@ -776,7 +776,7 @@ types building_panels
 								}
 
 								textbox = {
-									raw_text = "#P #bold [ProductionMethodGroup.GetNumAvailableOptions(Building.AccessSelf)]#!#!"
+									raw_text = "[ProductionMethodGroup.GetNumAvailableOptions(Building.AccessSelf)]"
 									parentanchor = top|right
 									position = { -7 2 }
 									autoresize = yes
@@ -817,7 +817,7 @@ types building_panels
 					}
 
 					textbox = {
-						raw_text = "#N #bold -[Building.GetSubsidies|D]#!"
+						raw_text = " -[Building.GetSubsidies|D]"
 						autoresize = yes
 						parentanchor = hcenter|bottom
 						margin_bottom = 8
@@ -863,7 +863,7 @@ types building_panels
 
 			default_header_2texts = {
 				blockoverride "text1" {
-					text = "COMBAT_UNITS_BUILDING_HEADER"
+					raw_text = "COMBAT_UNITS_BUILDING_HEADER"
 				}
 			}
 
@@ -896,7 +896,7 @@ types building_panels
 					textbox = {
 						#position = { 2 15 }
 						position = { 2 2 }
-						text = "PRODUCTION_METHODS"
+						raw_text = "PRODUCTION_METHODS"
 						autoresize = yes
 						maximumsize = { 200 -1 }
 						align = left|nobaseline
@@ -945,7 +945,7 @@ types building_panels
 
 								### nr available
 								textbox = {
-									raw_text = "#P #bold [ProductionMethodGroup.GetNumAvailableOptions(Building.AccessSelf)]#!#!"
+									raw_text = "[ProductionMethodGroup.GetNumAvailableOptions(Building.AccessSelf)]"
 									parentanchor = top|right
 									position = { -5 0 }
 									autoresize = yes
@@ -992,7 +992,7 @@ types building_panels
 
 			default_header_2texts = {
 				blockoverride "text1" {
-					text = "TRADE_ROUTES"
+					raw_text = "TRADE_ROUTES"
 				}
 			}
 
@@ -1028,7 +1028,7 @@ types building_panels
 
 			default_header_2texts = {
 				blockoverride "text1" {
-					text = "PROCESS"
+					raw_text = "PROCESS"
 				}
 				blockoverride "right" {
 					flowcontainer = {
@@ -1037,7 +1037,7 @@ types building_panels
 						spacing = 10
 
 						textbox = {
-							text = "PROCESS_BALANCE"
+							raw_text = "PROCESS_BALANCE"
 							autoresize = yes
 							multiline = yes
 							maximumsize = { 200 -1 }
@@ -1047,7 +1047,7 @@ types building_panels
 
 						textbox = {
 							name = "tutorial_highlight_weekly_balance_building"
-							raw_text = "@money!#v [Building.GetBalance|D+=]#!"
+							raw_text = "[Building.GetBalance|D+=]"
 							tooltip = "[Building.GetBalanceDesc]"
 							autoresize = yes
 							multiline = yes
@@ -1074,7 +1074,7 @@ types building_panels
 					align =  nobaseline
 					using = empty_state_text_properties
 					visible = "[Not(Building.IsActive)]"
-					text = "BUILDING_INACTIVE_CONSUMPTION_EMPTY_STATE"
+					raw_text = "BUILDING_INACTIVE_CONSUMPTION_EMPTY_STATE"
 					multiline = yes
 					max_width = 250
 					min_width = 250
@@ -1137,7 +1137,7 @@ types building_panels
 								}
 
 								textbox = {
-									raw_text = "#bold [FixedPointToInt(Building.GetConsumption(Goods.Self))|D]#!"
+									raw_text = "[FixedPointToInt(Building.GetConsumption(Goods.Self))|D]"
 									visible = "[Not(Building.HasInputShortage(Goods.Self))]"
 									position = { 55 0 }
 									autoresize = yes
@@ -1148,7 +1148,7 @@ types building_panels
 								}
 
 								textbox = {
-									raw_text = "#bold #n [FixedPointToInt(Building.GetConsumption(Goods.Self))|D]#!#!"
+									raw_text = "[FixedPointToInt(Building.GetConsumption(Goods.Self))|D]"
 									visible = "[Building.HasInputShortage(Goods.Self)]"
 									position = { 55 0 }
 									autoresize = yes
@@ -1159,7 +1159,7 @@ types building_panels
 								}
 
 								textbox = {
-									raw_text = "#BOLD @money![FixedPointToInt(Building.GetConsumptionValue(Goods.Self))|1*]#! ([Goods.GetCompareIconAgainstBasePriceNoFormatting( Goods.GetStatePrice )])"
+									raw_text = "[FixedPointToInt(Building.GetConsumptionValue(Goods.Self))|1*] ([Goods.GetCompareIconAgainstBasePriceNoFormatting( Goods.GetStatePrice )])"
 									position = { -10 0 }
 									autoresize = yes
 									align = right|nobaseline
@@ -1178,10 +1178,10 @@ types building_panels
 							visible = "[GreaterThan_CFixedPoint(Building.GetLastWagesExpenses, '(CFixedPoint)0')]"
 						}
 						blockoverride "text" {
-							text = "WAGES"
+							raw_text = "WAGES"
 						}
 						blockoverride "text_right" {
-							raw_text = "#variable @money![Building.GetLastWagesExpenses|K]#!"
+							raw_text = "[Building.GetLastWagesExpenses|K]"
 							tooltip = "[Building.GetLastWagesExpensesDesc]"
 						}
 					}
@@ -1192,11 +1192,11 @@ types building_panels
 							visible = "[Or( Building.HasSlaves, GreaterThan_CFixedPoint(Building.GetLastSlaveUpkeep, '(CFixedPoint)0') )]"
 						}
 						blockoverride "text" {
-							text = "SLAVE_UPKEEP"
+							raw_text = "SLAVE_UPKEEP"
 							tooltip = "[Building.GetLastSlaveUpkeepDesc]"
 						}
 						blockoverride "text_right" {
-							raw_text = "#variable @money![Building.GetLastSlaveUpkeep|K]#!"
+							raw_text = "[Building.GetLastSlaveUpkeep|K]"
 							tooltip = "[Building.GetLastSlaveUpkeepDesc]"
 						}
 					}
@@ -1207,10 +1207,10 @@ types building_panels
 							visible = "[GreaterThan_CFixedPoint(Building.GetTariffsPaid, '(CFixedPoint)0')]"
 						}
 						blockoverride "text" {
-							text = "[concept_tariffs]"
+							raw_text = "[concept_tariffs]"
 						}
 						blockoverride "text_right" {
-							raw_text = "#variable @money![Building.GetTariffsPaid|K]#!"
+							raw_text = "[Building.GetTariffsPaid|K]"
 						}
 					}
 
@@ -1221,7 +1221,7 @@ types building_panels
 						}
 						blockoverride "text" {
 							tooltip = BUILDING_INFRA_USAGE_TOOLTIP
-							text = "BUILDING_INFRA_USAGE"
+							raw_text = "BUILDING_INFRA_USAGE"
 						}
 					}
 				}
@@ -1289,7 +1289,7 @@ types building_panels
 								}
 
 								textbox = {
-									raw_text = "#bold [FixedPointToInt(Building.GetProduction(Goods.Self))|D]#!"
+									raw_text = "[FixedPointToInt(Building.GetProduction(Goods.Self))|D]"
 									visible = "[Not(GreaterThan_CFixedPoint(Building.GetInputShortagePenalty, '(CFixedPoint)0'))]"
 									position = { 55 0 }
 									parentanchor = left|vcenter
@@ -1299,7 +1299,7 @@ types building_panels
 								}
 
 								textbox = {
-									raw_text = "#bold #n [FixedPointToInt(Building.GetProduction(Goods.Self))|D]#!#!"
+									raw_text = "[FixedPointToInt(Building.GetProduction(Goods.Self))|D]"
 									visible = "[GreaterThan_CFixedPoint(Building.GetInputShortagePenalty, '(CFixedPoint)0')]"
 									position = { 55 0 }
 									parentanchor = left|vcenter
@@ -1309,7 +1309,7 @@ types building_panels
 								}
 
 								textbox = {
-									raw_text = "#BOLD @money![FixedPointToInt(Building.GetProductionValue(Goods.Self))|*1]#! ([Goods.GetCompareIconAgainstBasePriceNoFormatting( Goods.GetStatePrice ) ])"
+									raw_text = "[FixedPointToInt(Building.GetProductionValue(Goods.Self))|*1] ([Goods.GetCompareIconAgainstBasePriceNoFormatting( Goods.GetStatePrice ) ])"
 									position = { -10 0 }
 									autoresize = yes
 									align = right|nobaseline
@@ -1327,7 +1327,7 @@ types building_panels
 							visible = "[Building.IsMilitaryBuilding]"
 						}
 						blockoverride "text" {
-							text = "[Building.GetCombatUnitProduction]"
+							raw_text = "[Building.GetCombatUnitProduction]"
 							tooltip = "MILITARY_UNITS_PRODUCTION"
 						}
 					}
@@ -1367,7 +1367,7 @@ types building_panels
 								}
 
 								textbox = {
-									text = "[ModifierEntry.GetFormattedValue] [ModifierEntry.GetName]"
+									raw_text = "[ModifierEntry.GetFormattedValue] [ModifierEntry.GetName]"
 									tooltip = "BUILDING_DETAILS_PRODUCED_MODIFIER_TOOLTIP"
 									autoresize = yes
 									multiline = yes
@@ -1385,10 +1385,10 @@ types building_panels
 							visible = "[Building.HasTradeRouteRevenue]"
 						}
 						blockoverride "text" {
-							text = "[concept_trade_revenue]"
+							raw_text = "[concept_trade_revenue]"
 						}
 						blockoverride "text_right" {
-							raw_text = "#variable @money![Building.GetTradeRouteRevenue|K]#!"
+							raw_text = "[Building.GetTradeRouteRevenue|K]"
 						}
 					}
 
@@ -1398,7 +1398,7 @@ types building_panels
 						}
 						blockoverride "text" {
 							tooltip = BUILDING_URBANIZATION_TOOLTIP
-							raw_text = "#variable [Building.CalcUrbanizationProvided|+=]#! [concept_urbanization]"
+							raw_text = "[Building.CalcUrbanizationProvided|+=] [concept_urbanization]"
 						}
 					}
 				}
@@ -1418,7 +1418,7 @@ types building_panels
 			textbox = {
 				margin_left = 10
 				visible = "[Not( StringIsEmpty( Building.GetInputMultDesc ))]"
-				text = "INPUT_MULT"
+				raw_text = "INPUT_MULT"
 				tooltip = "INPUT_MULT_TOOLTIP"
 				autoresize = yes
 				default_format = "#title"
@@ -1431,7 +1431,7 @@ types building_panels
 			textbox = {
 				margin_right = 10
 				visible = "[Not(And( StringIsEmpty(Building.GetThroughputDesc), EqualTo_CFixedPoint(Building.GetThroughputBonusCurrent, Building.GetThroughputBonusTarget) ))]"
-				text = "THROUGHPUT"
+				raw_text = "THROUGHPUT"
 				tooltip = "THROUGHPUT_TOOLTIP"
 				autoresize = yes
 				default_format = "#title"
@@ -1444,7 +1444,7 @@ types building_panels
 		### VACANCIES
 		default_header_2texts = {
 			blockoverride "text1" {
-				text = "VACANCIES"
+				raw_text = "VACANCIES"
 			}
 		}
 		empty_state = {
@@ -1452,7 +1452,7 @@ types building_panels
 				visible = "[And(Not(NotEqualTo_int64( Building.GetNoOfEmployed, Building.GetEmployeeCap )), Building.IsActive)]"
 			}
 			blockoverride "text" {
-				text = "NO_VACANCIES"
+				raw_text = "NO_VACANCIES"
 			}
 		}
 
@@ -1495,7 +1495,7 @@ types building_panels
 								}
 							}
 							textbox = {
-								raw_text = "#bold [PopListItem.GetWorkingAdultsPopSize|K]#! / #maximum [Building.GetMaxPopSize(PopListItem.GetPopType)|K]#!"
+								raw_text = "[PopListItem.GetWorkingAdultsPopSize|K] / [Building.GetMaxPopSize(PopListItem.GetPopType)|K]"
 								autoresize = yes
 								align = left|nobaseline
 								parentanchor = vcenter

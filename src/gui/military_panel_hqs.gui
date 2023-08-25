@@ -54,7 +54,7 @@ types MilitaryPanelHQs {
 				textbox = {
 					layoutpolicy_horizontal = expanding
 					layoutpolicy_vertical = expanding
-					text = "MILITARY_PANEL_HQ_AVAILABLE"
+					raw_text = "MILITARY_PANEL_HQ_AVAILABLE"
 					align = left|nobaseline
 					elide = right
 					margin_left = 5
@@ -63,7 +63,7 @@ types MilitaryPanelHQs {
 				textbox = {
 					layoutpolicy_horizontal = expanding
 					layoutpolicy_vertical = expanding
-					text = "[Hq.GetName]"
+					raw_text = "[Hq.GetName]"
 					align = right|nobaseline
 					elide = left
 					margin_right = 28
@@ -107,12 +107,12 @@ types MilitaryPanelHQs {
 					size = { 510 40 }
 							
 					blockoverride "left_text" {
-						text = "GARRISONED_CONCEPT"
+						raw_text = "GARRISONED_CONCEPT"
 					}
 
 					textbox = {
 						parentanchor = right|vcenter
-						text = "MILITARY_PANEL_HQ_UNITS_IN_RESERVE_FORMAT"
+						raw_text = "MILITARY_PANEL_HQ_UNITS_IN_RESERVE_FORMAT"
 						autoresize = yes
 						align = nobaseline
 					}
@@ -162,7 +162,7 @@ types MilitaryPanelHQs {
 							blockoverride "units_amount" {
 								textbox = {
 									parentanchor = vcenter
-									text = "MILITARY_PANEL_BUILDING_UNITS_IN_RESERVE_FORMAT"
+									raw_text = "MILITARY_PANEL_BUILDING_UNITS_IN_RESERVE_FORMAT"
 									tooltip = "MILITARY_PANEL_BUILDING_UNITS_IN_RESERVE_TOOLTIP"
 									autoresize = yes
 									align = nobaseline
@@ -206,7 +206,7 @@ types MilitaryPanelHQs {
 				textbox = {
 					layoutpolicy_horizontal = expanding
 					layoutpolicy_vertical = expanding
-					text = "PANEL_MILITARY_IN_RESERVE"
+					raw_text = "PANEL_MILITARY_IN_RESERVE"
 					align = left|nobaseline
 					elide = right
 					margin_left = 10
@@ -215,7 +215,7 @@ types MilitaryPanelHQs {
 				textbox = {
 					layoutpolicy_horizontal = expanding
 					layoutpolicy_vertical = expanding
-					text = "[Hq.GetName]"
+					raw_text = "[Hq.GetName]"
 					align = right|nobaseline
 					elide = left
 					margin_right = 28
@@ -249,12 +249,12 @@ types MilitaryPanelHQs {
 				size = { 95% 38 }
 
 				blockoverride "left_text" {
-					text = "GARRISONED"
+					raw_text = "GARRISONED"
 				}
 
 				textbox = {
 					parentanchor = right|vcenter
-					text = "BUILDING_PANEL_RESERVE_UNITS"
+					raw_text = "BUILDING_PANEL_RESERVE_UNITS"
 					autoresize = yes
 					align = nobaseline
 				}
@@ -331,7 +331,7 @@ types MilitaryPanelHQs {
 			size = { 100% 25 }
 			fontsize_min = 12
 			elide = right
-			text = "[GetUnitStrengthHeader( Character.GetNumCombatUnits, Character.GetMaxNumCombatUnits, Character.GetCombatUnitsTypeIcon )]"
+			raw_text = "[GetUnitStrengthHeader( Character.GetNumCombatUnits, Character.GetMaxNumCombatUnits, Character.GetCombatUnitsTypeIcon )]"
 			tooltip = "MILITARY_PANEL_COMMAND_LIMIT_BREAKDOWN_TOOLTIP"
 			
 			background = {
@@ -412,7 +412,7 @@ types MilitaryPanelHQs {
 						layoutpolicy_horizontal = expanding
 						size = { 0 14 }
 						using = fontsize_small
-						text = "[Character.GetDaysToCompleteTravelRaw|v] [SelectLocalization( GreaterThan_int32( Character.GetDaysToCompleteTravelRaw, '(int32)1' ), 'GENERAL_TRAVEL_DAYS', 'GENERAL_TRAVEL_DAY' )]"
+						raw_text = "[Character.GetDaysToCompleteTravelRaw|v] [SelectLocalization( GreaterThan_int32( Character.GetDaysToCompleteTravelRaw, '(int32)1' ), 'GENERAL_TRAVEL_DAYS', 'GENERAL_TRAVEL_DAY' )]"
 						tooltip = "[Character.GetTravelFormatted]"
 						align = hcenter|nobaseline
 						fontsize_min = 10
@@ -424,7 +424,7 @@ types MilitaryPanelHQs {
 				textbox = {
 					layoutpolicy_horizontal = expanding
 					size = { 0 16 }
-					text = "[GetUnitStrengthHeaderNoIcon( Character.GetNumCombatUnits, Character.GetMaxNumCombatUnits )]"
+					raw_text = "[GetUnitStrengthHeaderNoIcon( Character.GetNumCombatUnits, Character.GetMaxNumCombatUnits )]"
 					align = nobaseline
 					tooltip = "MILITARY_PANEL_COMMAND_LIMIT_BREAKDOWN_TOOLTIP"
 					fontsize_min = 12
@@ -477,11 +477,11 @@ types MilitaryPanelHQs {
 
 				blockoverride "text1"
 				{
-					text = "MILITARY_PANEL_HQ_HEADER_FORMAT"
+					raw_text = "MILITARY_PANEL_HQ_HEADER_FORMAT"
 				}
 				blockoverride "text2"
 				{
-					text = "MILITARY_PANEL_HQ_UNITS_FORMAT"
+					raw_text = "MILITARY_PANEL_HQ_UNITS_FORMAT"
 					tooltip = "MILITARY_PANEL_HQ_UNITS_TOOLTIP"
 				}
 			}
@@ -512,12 +512,12 @@ types MilitaryPanelHQs {
 					size = { @panel_width 40 }
 							
 					blockoverride "left_text" {
-						text = "GARRISONED"
+						raw_text = "GARRISONED"
 					}
 
 					textbox = {
 						parentanchor = right|vcenter
-						text = "MILITARY_PANEL_HQ_UNITS_IN_RESERVE_FORMAT"
+						raw_text = "MILITARY_PANEL_HQ_UNITS_IN_RESERVE_FORMAT"
 						autoresize = yes
 						align = nobaseline
 					}
@@ -567,7 +567,7 @@ types MilitaryPanelHQs {
 							blockoverride "units_amount" {
 								textbox = {
 									parentanchor = vcenter
-									text = "MILITARY_PANEL_BUILDING_UNITS_IN_RESERVE_FORMAT"
+									raw_text = "MILITARY_PANEL_BUILDING_UNITS_IN_RESERVE_FORMAT"
 									tooltip = "MILITARY_PANEL_BUILDING_UNITS_IN_RESERVE_TOOLTIP"
 									autoresize = yes
 									align = nobaseline
@@ -599,12 +599,12 @@ types MilitaryPanelHQs {
 					size = { @panel_width 40 }
 							
 					blockoverride "left_text" {
-						text = "MILITARY_PANEL_NOT_GARRISONED"
+						raw_text = "MILITARY_PANEL_NOT_GARRISONED"
 					}
 
 					textbox = {
 						parentanchor = right|vcenter
-						text = "MILITARY_PANEL_NOT_GARRISONED_UNITS_FORMAT"
+						raw_text = "MILITARY_PANEL_NOT_GARRISONED_UNITS_FORMAT"
 						autoresize = yes
 						align = nobaseline
 					}
@@ -659,7 +659,7 @@ types MilitaryPanelHQs {
 							align = nobaseline
 							fontsize_min = 12
 							autoresize = yes
-							text = "MILITARY_PANEL_HQ_STATE_NAME_FORMAT"
+							raw_text = "MILITARY_PANEL_HQ_STATE_NAME_FORMAT"
 						}
 						
 						textbox = {
@@ -668,7 +668,7 @@ types MilitaryPanelHQs {
 							align = nobaseline
 							fontsize_min = 12
 							autoresize = yes
-							text = "MILITARY_PANEL_HQ_STATE_BATTALIONS_FORMAT"
+							raw_text = "MILITARY_PANEL_HQ_STATE_BATTALIONS_FORMAT"
 						}
 					}
 				}
@@ -729,7 +729,7 @@ types MilitaryPanelHQs {
 					parentanchor = vcenter
 					multiline = yes
 					autoresize = yes
-					text = "[Character.GetFullName]"
+					raw_text = "[Character.GetFullName]"
 					align = left|nobaseline
 					elide = right
 					margin_left = 5
@@ -748,7 +748,7 @@ types MilitaryPanelHQs {
 					multiline = yes
 					autoresize = yes
 					margin = { 0 3 }
-					text = "MILITARY_PANEL_COMMANDER_STATUS_FORMAT"
+					raw_text = "MILITARY_PANEL_COMMANDER_STATUS_FORMAT"
 					elide = right
 					margin_right = 5
 				}
@@ -880,7 +880,7 @@ types MilitaryPanelHQs {
 						fontsize_min = 12
 						size = { 100% 100% }
 						elide = right
-						text = "MILITARY_PANEL_BUILDING_TROOP_NAME"
+						raw_text = "MILITARY_PANEL_BUILDING_TROOP_NAME"
 					}
 	
 					button_icon_goto = {
@@ -934,7 +934,7 @@ types MilitaryPanelHQs {
 		
 							### nr available
 							textbox = {
-								raw_text = "#P #bold [ProductionMethodGroup.GetNumAvailableOptions(Building.AccessSelf)]#!#!"
+								raw_text = "[ProductionMethodGroup.GetNumAvailableOptions(Building.AccessSelf)]"
 								parentanchor = top|right
 								position = { -5 0 }
 								autoresize = yes
@@ -980,7 +980,7 @@ types MilitaryPanelHQs {
 					textbox = {
 						parentanchor = vcenter
 						visible = "[Or(Character.IsMobilized, NotEqualTo_CFixedPoint(Character.GetAttritionRaw,'(CFixedPoint)0'))]"
-						text = "MILITARY_PANEL_TROOP_ATTRITION_LEVEL"
+						raw_text = "MILITARY_PANEL_TROOP_ATTRITION_LEVEL"
 						tooltip = "[Character.GetAttritionDesc]"
 						autoresize = yes
 						align = nobaseline
@@ -992,7 +992,7 @@ types MilitaryPanelHQs {
 					textbox = {
 						visible = "[Character.IsMobilized]"
 						parentanchor = vcenter
-						text = "MILITARY_PANEL_UNITS_FROM_BUILDING_FORMAT"
+						raw_text = "MILITARY_PANEL_UNITS_FROM_BUILDING_FORMAT"
 						tooltip = "MILITARY_PANEL_UNITS_FROM_BUILDING_TOOLTIP"
 						autoresize = yes
 						align = nobaseline
@@ -1000,7 +1000,7 @@ types MilitaryPanelHQs {
 					textbox = {
 						visible = "[Not(Character.IsMobilized)]"
 						parentanchor = vcenter
-						text = "MILITARY_PANEL_UNITS_FROM_BUILDING_FORMAT_UNMOBILIZED"
+						raw_text = "MILITARY_PANEL_UNITS_FROM_BUILDING_FORMAT_UNMOBILIZED"
 						tooltip = "MILITARY_PANEL_UNITS_FROM_BUILDING_TOOLTIP"
 						autoresize = yes
 						align = nobaseline

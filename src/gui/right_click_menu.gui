@@ -244,7 +244,7 @@ right_click_menu = {
 	datacontext = "[GetMetaPlayer.GetPlayedOrObservedCountry]"
 
 	blockoverride "title_text" {
-		text = "BUILDING_RIGHT_CLICK_MENU_TITLE"
+		raw_text = "BUILDING_RIGHT_CLICK_MENU_TITLE"
 	}
 	blockoverride "items" {
 		right_click_menu_item = {
@@ -254,7 +254,7 @@ right_click_menu = {
 			}
 			
 			blockoverride = "text" {
-				text = "BUILDING_RIGHT_CLICK_MENU_EXPAND"
+				raw_text = "BUILDING_RIGHT_CLICK_MENU_EXPAND"
 			}
 
 			blockoverride "margin" {
@@ -286,7 +286,7 @@ right_click_menu = {
 			}
 			
 			blockoverride = "text" {
-				text = "BUILDING_RIGHT_CLICK_MENU_AUTOEXPAND_ON"
+				raw_text = "BUILDING_RIGHT_CLICK_MENU_AUTOEXPAND_ON"
 			}
 		}
 
@@ -307,7 +307,7 @@ right_click_menu = {
 			}
 			
 			blockoverride = "text" {
-				text = "BUILDING_RIGHT_CLICK_MENU_AUTOEXPAND_OFF"
+				raw_text = "BUILDING_RIGHT_CLICK_MENU_AUTOEXPAND_OFF"
 			}
 		}
 
@@ -326,7 +326,7 @@ right_click_menu = {
 			}
 			
 			blockoverride = "text" {
-				text = "OPEN_EXPANSION_LENS"
+				raw_text = "OPEN_EXPANSION_LENS"
 			}
 		}
 
@@ -346,7 +346,7 @@ right_click_menu = {
 			}
 			
 			blockoverride = "text" {
-				text = "BUILDING_RIGHT_CLICK_MENU_CANCEL_CONSTRUCTION"
+				raw_text = "BUILDING_RIGHT_CLICK_MENU_CANCEL_CONSTRUCTION"
 			}
 		}
 
@@ -368,7 +368,7 @@ right_click_menu = {
 			}
 			
 			blockoverride = "text" {
-				text = "BUILDING_RIGHT_CLICK_MENU_DOWNSIZE"
+				raw_text = "BUILDING_RIGHT_CLICK_MENU_DOWNSIZE"
 			}
 		}
 
@@ -389,7 +389,7 @@ right_click_menu = {
 			}
 			
 			blockoverride = "text" {
-				text = "BUILDING_RIGHT_CLICK_MENU_DOWNSIZE"
+				raw_text = "BUILDING_RIGHT_CLICK_MENU_DOWNSIZE"
 			}
 		}
 
@@ -410,7 +410,7 @@ right_click_menu = {
 			}
 			
 			blockoverride = "text" {
-				text = "BUILDING_RIGHT_CLICK_MENU_SUBSIDIZE_ON"
+				raw_text = "BUILDING_RIGHT_CLICK_MENU_SUBSIDIZE_ON"
 			}
 		}
 
@@ -431,7 +431,7 @@ right_click_menu = {
 			}
 			
 			blockoverride = "text" {
-				text = "BUILDING_RIGHT_CLICK_MENU_SUBSIDIZE_OFF"
+				raw_text = "BUILDING_RIGHT_CLICK_MENU_SUBSIDIZE_OFF"
 			}
 		}
 
@@ -452,7 +452,7 @@ right_click_menu = {
 			}
 			
 			blockoverride = "text" {
-				text = "RESET_PM_BUILDING"
+				raw_text = "RESET_PM_BUILDING"
 			}
 		}
 		right_click_menu_item = {
@@ -471,7 +471,7 @@ right_click_menu = {
 			}
 			
 			blockoverride = "text" {
-				text = "RESET_PM_BUILDING_TYPE"
+				raw_text = "RESET_PM_BUILDING_TYPE"
 			}
 		}	
 	}
@@ -482,7 +482,7 @@ right_click_menu = {
 	datacontext = "[GetMetaPlayer.GetPlayedOrObservedCountry]"
 
 	blockoverride "title_text" {
-		text = "[BuildingType.GetName]"
+		raw_text = "[BuildingType.GetName]"
 	}
 	blockoverride "items" {
 		right_click_menu_item = {
@@ -500,7 +500,7 @@ right_click_menu = {
 			}
 			
 			blockoverride = "text" {
-				text = "OPEN_EXPANSION_LENS"
+				raw_text = "OPEN_EXPANSION_LENS"
 			}
 		}
 
@@ -521,7 +521,7 @@ right_click_menu = {
 			}
 			
 			blockoverride = "text" {
-				text = "RESET_PM_BUILDING_TYPE"
+				raw_text = "RESET_PM_BUILDING_TYPE"
 			}
 		}	
 	}
@@ -531,7 +531,7 @@ right_click_menu = {
 	name = "ig_right_click_menu"
 
 	blockoverride "title_text" {
-		text = "IG_RIGHT_CLICK_MENU_TITLE"
+		raw_text = "IG_RIGHT_CLICK_MENU_TITLE"
 	}
 
 	blockoverride "items" {
@@ -546,7 +546,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride = "text" {
-				text = "IG_RIGHT_CLICK_MENU_SUPPRESS"
+				raw_text = "IG_RIGHT_CLICK_MENU_SUPPRESS"
 			}
 		}
 		
@@ -561,7 +561,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride = "text" {
-				text = "IG_RIGHT_CLICK_MENU_SUPPRESS_NOT"
+				raw_text = "IG_RIGHT_CLICK_MENU_SUPPRESS_NOT"
 			}
 		}
 		
@@ -576,7 +576,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride = "text" {
-				text = "IG_RIGHT_CLICK_MENU_PROMOTE"
+				raw_text = "IG_RIGHT_CLICK_MENU_PROMOTE"
 			}
 		}
 		
@@ -591,7 +591,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride = "text" {
-				text = "IG_RIGHT_CLICK_MENU_PROMOTE_NOT"
+				raw_text = "IG_RIGHT_CLICK_MENU_PROMOTE_NOT"
 			}
 		}
 
@@ -605,7 +605,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride = "text" {
-				text = "IG_RIGHT_CLICK_MENU_PIN_IN_OUTLINER"
+				raw_text = "IG_RIGHT_CLICK_MENU_PIN_IN_OUTLINER"
 			}
 		}
 	}
@@ -615,7 +615,7 @@ right_click_menu = {
 	name = "decree_right_click_menu"
 
 	blockoverride "title_text" {
-		text = "DECREE_RIGHT_CLICK_MENU_TITLE"
+		raw_text = "DECREE_RIGHT_CLICK_MENU_TITLE"
 	}
 
 	blockoverride "items" {
@@ -629,7 +629,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride = "text" {
-				text = "DECREE_RIGHT_CLICK_MENU_REMOVE"
+				raw_text = "DECREE_RIGHT_CLICK_MENU_REMOVE"
 			}
 		}
 	}
@@ -639,7 +639,7 @@ right_click_menu = {
 	name = "character_right_click_menu"
 
 	blockoverride "title_text" {
-		text = "CHARACTER_RIGHT_CLICK_MENU_TITLE"
+		raw_text = "CHARACTER_RIGHT_CLICK_MENU_TITLE"
 	}
 
 	blockoverride "items" {
@@ -653,7 +653,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 
 			blockoverride = "text" {
-				text = "CHARACTER_RIGHT_CLICK_MENU_INFORMATION"
+				raw_text = "CHARACTER_RIGHT_CLICK_MENU_INFORMATION"
 			}
 
 			blockoverride "size" {
@@ -669,7 +669,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride = "text" {
-				text = "CHARACTER_RIGHT_CLICK_MENU_PIN_IN_OUTLINER"
+				raw_text = "CHARACTER_RIGHT_CLICK_MENU_PIN_IN_OUTLINER"
 			}
 
 			blockoverride "size" {
@@ -686,7 +686,7 @@ right_click_menu = {
 				margin_left = 5
 				autoresize = yes
 				align = left|nobaseline
-				text = "CHARACTER_INTERACTIONS_HEADER"
+				raw_text = "CHARACTER_INTERACTIONS_HEADER"
 			}
 
 			right_click_menu_item = {	# PROMOTE COMMANDER
@@ -698,7 +698,7 @@ right_click_menu = {
 				blockoverride "icon" {}
 
 				blockoverride = "text" {
-					text = "CHARACTER_RIGHT_CLICK_MENU_PROMOTE_COMMANDER"
+					raw_text = "CHARACTER_RIGHT_CLICK_MENU_PROMOTE_COMMANDER"
 				}
 
 				blockoverride "size" {
@@ -723,7 +723,7 @@ right_click_menu = {
 						}
 
 						blockoverride "text" {
-							text = "[CharacterInteraction.GetName]"
+							raw_text = "[CharacterInteraction.GetName]"
 						}
 
 						blockoverride "size" {
@@ -744,7 +744,7 @@ right_click_menu = {
 				margin_left = 5
 				autoresize = yes
 				align = left|nobaseline
-				text = "COMMANDER_PANEL_CURRENT_ORDER"
+				raw_text = "COMMANDER_PANEL_CURRENT_ORDER"
 			}
 
 			right_click_menu_item = {	# MOBILIZE
@@ -758,7 +758,7 @@ right_click_menu = {
 				blockoverride "icon" {}
 				
 				blockoverride = "text" {
-					text = "MOBILIZE_GENERAL"
+					raw_text = "MOBILIZE_GENERAL"
 				}
 
 				blockoverride "size" {
@@ -780,7 +780,7 @@ right_click_menu = {
 				}
 				
 				blockoverride = "text" {
-					text = "COMMANDER_PANEL_ORDER_TOGGLE_DEFEND"
+					raw_text = "COMMANDER_PANEL_ORDER_TOGGLE_DEFEND"
 				}
 
 				blockoverride "size" {
@@ -802,7 +802,7 @@ right_click_menu = {
 				}
 				
 				blockoverride = "text" {
-					text = "COMMANDER_PANEL_ORDER_TOGGLE_ADVANCE"
+					raw_text = "COMMANDER_PANEL_ORDER_TOGGLE_ADVANCE"
 				}
 
 				blockoverride "size" {
@@ -828,7 +828,7 @@ right_click_menu = {
 							}
 							
 							blockoverride = "text" {
-								text = "[CommanderOrderType.GetName]"
+								raw_text = "[CommanderOrderType.GetName]"
 							}
 
 							blockoverride "size" {
@@ -849,7 +849,7 @@ right_click_menu = {
 							}
 							
 							blockoverride = "text" {
-								text = "[CommanderOrderType.GetName]"
+								raw_text = "[CommanderOrderType.GetName]"
 							}
 
 							blockoverride "size" {
@@ -870,7 +870,7 @@ right_click_menu = {
 				margin_left = 5
 				autoresize = yes
 				align = left|nobaseline
-				text = "CHARACTER_HISTORICAL_HEADER"
+				raw_text = "CHARACTER_HISTORICAL_HEADER"
 			}
 
 			right_click_menu_item = {	# OPEN HISTORICAL CHARACTER URL
@@ -884,7 +884,7 @@ right_click_menu = {
 				}
 
 				blockoverride = "text" {
-					text = "CHARACTER_HISTORICAL_OPEN_URL"
+					raw_text = "CHARACTER_HISTORICAL_OPEN_URL"
 				}
 
 				blockoverride "size" {
@@ -899,7 +899,7 @@ right_click_menu = {
 	name = "naval_invasion_right_click_menu"
 
 	blockoverride "title_text" {
-		text = "NAVAL_INVASION_RIGHT_CLICK_MENU_TITLE"
+		raw_text = "NAVAL_INVASION_RIGHT_CLICK_MENU_TITLE"
 	}
 
 	blockoverride "items" {
@@ -944,7 +944,7 @@ right_click_menu = {
 	name = "state_right_click_menu"
 
 	blockoverride "title_text" {
-		text = "STATE_RIGHT_CLICK_MENU_TITLE"
+		raw_text = "STATE_RIGHT_CLICK_MENU_TITLE"
 	}
 
 	blockoverride "header_text" {} #no header for state menu, handle in items instead
@@ -962,7 +962,7 @@ right_click_menu = {
 			textbox = {
 				autoresize = yes
 				align = left|nobaseline
-				text = "STATE_RIGHT_CLICK_MENU_COUNTRY_TITLE"
+				raw_text = "STATE_RIGHT_CLICK_MENU_COUNTRY_TITLE"
 			}
 		}
 
@@ -976,7 +976,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride = "text" {
-				text = "STATE_RIGHT_CLICK_MENU_COUNTRY_INFORMATION"
+				raw_text = "STATE_RIGHT_CLICK_MENU_COUNTRY_INFORMATION"
 			}	
 		}
 
@@ -989,7 +989,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride = "text" {
-				text = "ZOOM_TO_CAPITAL_STATE"
+				raw_text = "ZOOM_TO_CAPITAL_STATE"
 			}	
 		}
 
@@ -1002,7 +1002,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride = "text" {
-				text = "STATE_RIGHT_CLICK_MENU_PIN_IN_OUTLINER"
+				raw_text = "STATE_RIGHT_CLICK_MENU_PIN_IN_OUTLINER"
 			}		
 		}
 
@@ -1015,7 +1015,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride = "text" {
-				text = "STATE_RIGHT_CLICK_MENU_DIPLOMACY"
+				raw_text = "STATE_RIGHT_CLICK_MENU_DIPLOMACY"
 			}	
 		}
 
@@ -1048,7 +1048,7 @@ right_click_menu = {
 					}
 					
 					blockoverride = "text" {
-						text = "[DiplomaticAction.GetFullName]"
+						raw_text = "[DiplomaticAction.GetFullName]"
 					}
 				}
 			}
@@ -1074,13 +1074,13 @@ right_click_menu = {
 					}
 
 					blockoverride "text" {
-						text = "[DiplomaticPlayType.GetName]"
+						raw_text = "[DiplomaticPlayType.GetName]"
 					}
 				}
 			}
 		}
 		textbox = {
-			text = "STATE_RIGHT_CLICK_MENU_STATE_TITLE"
+			raw_text = "STATE_RIGHT_CLICK_MENU_STATE_TITLE"
 			autoresize = yes
 			align = left|nobaseline
 			margin_top = 15
@@ -1099,7 +1099,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 
 			blockoverride "text" {
-				text = "STATE_RIGHT_CLICK_MENU_INCORPORATE"
+				raw_text = "STATE_RIGHT_CLICK_MENU_INCORPORATE"
 			}
 		}
 		
@@ -1113,7 +1113,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 
 			blockoverride = "text" {
-				text = "STATE_RIGHT_CLICK_MENU_CANCEL_INCORPORATION"
+				raw_text = "STATE_RIGHT_CLICK_MENU_CANCEL_INCORPORATION"
 			}
 		}
 		
@@ -1129,7 +1129,7 @@ right_click_menu = {
 					}
 					
 					blockoverride "text" {
-						text = "DECREE_REMOVE"
+						raw_text = "DECREE_REMOVE"
 					}
 
 					blockoverride "texture" {
@@ -1157,7 +1157,7 @@ right_click_menu = {
 					}
 
 					blockoverride "text" {
-						text = "[DecreeType.GetName]"
+						raw_text = "[DecreeType.GetName]"
 					}
 
 					blockoverride "texture" {
@@ -1180,7 +1180,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 
 			blockoverride "text" {
-				text = "ACTIVATE_CONSCRIPTION_CENTER"
+				raw_text = "ACTIVATE_CONSCRIPTION_CENTER"
 			}
 		}
 
@@ -1200,7 +1200,7 @@ right_click_menu = {
 			}
 
             blockoverride "text" {
-                text = "DESIGNATE_STRATEGIC_OBJECTIVE_RIGHT_CLICK_ADD"
+                raw_text = "DESIGNATE_STRATEGIC_OBJECTIVE_RIGHT_CLICK_ADD"
             }
         }
 
@@ -1220,7 +1220,7 @@ right_click_menu = {
 			}
 
             blockoverride "text" {
-                text = "DESIGNATE_STRATEGIC_OBJECTIVE_RIGHT_CLICK_REMOVE"
+                raw_text = "DESIGNATE_STRATEGIC_OBJECTIVE_RIGHT_CLICK_REMOVE"
             }
         }
 		
@@ -1235,7 +1235,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride "text" {
-				text = "STATE_RIGHT_CLICK_MENU_COLONIZE"
+				raw_text = "STATE_RIGHT_CLICK_MENU_COLONIZE"
 			}	
 		}
 
@@ -1259,7 +1259,7 @@ right_click_menu = {
 					}
 					
 					blockoverride "text" {
-						text = "[DiplomaticPlayType.GetName]"
+						raw_text = "[DiplomaticPlayType.GetName]"
 					}
 				}
 			}
@@ -1273,7 +1273,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride "text" {
-				text = "ZOOM_TO_STATE"
+				raw_text = "ZOOM_TO_STATE"
 			}	
 		}
 
@@ -1289,12 +1289,12 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride "text" {
-				text = "COUNTRY_RIGHT_CLICK_MENU_OBSERVE"
+				raw_text = "COUNTRY_RIGHT_CLICK_MENU_OBSERVE"
 			}
 		}
 		
 		textbox = {
-			text = "STATE_RIGHT_CLICK_MENU_STRATEGIC_REGION_TITLE"
+			raw_text = "STATE_RIGHT_CLICK_MENU_STRATEGIC_REGION_TITLE"
 			autoresize = yes
 			align = left|nobaseline
 			margin_top = 15
@@ -1315,7 +1315,7 @@ right_click_menu = {
 			}
 			
 			blockoverride "text" {
-				text = "[SelectLocalization( GetPlayer.HasDeclaredInterest( State.GetStateRegion.GetStrategicRegion ), 'STATE_RIGHT_CLICK_MENU_REVOKE_INTEREST', 'STATE_RIGHT_CLICK_MENU_DECLARE_INTEREST' )]" 
+				raw_text = "[SelectLocalization( GetPlayer.HasDeclaredInterest( State.GetStateRegion.GetStrategicRegion ), 'STATE_RIGHT_CLICK_MENU_REVOKE_INTEREST', 'STATE_RIGHT_CLICK_MENU_DECLARE_INTEREST' )]" 
 			}	
 		}
 	}
@@ -1325,7 +1325,7 @@ right_click_menu = {
 	name = "country_right_click_menu"
 
 	blockoverride "title_text" {
-		text = "STATE_RIGHT_CLICK_MENU_TITLE"
+		raw_text = "STATE_RIGHT_CLICK_MENU_TITLE"
 	}
 
 	blockoverride "header_text" {} #no header for state menu, handle in items instead
@@ -1343,7 +1343,7 @@ right_click_menu = {
 			textbox = {
 				autoresize = yes
 				align = left|nobaseline
-				text = "STATE_RIGHT_CLICK_MENU_COUNTRY_TITLE"
+				raw_text = "STATE_RIGHT_CLICK_MENU_COUNTRY_TITLE"
 			}
 		}
 
@@ -1357,7 +1357,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride "text" {
-				text = "STATE_RIGHT_CLICK_MENU_COUNTRY_INFORMATION"
+				raw_text = "STATE_RIGHT_CLICK_MENU_COUNTRY_INFORMATION"
 			}
 		}
 
@@ -1370,7 +1370,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride "text" {
-				text = "STATE_RIGHT_CLICK_MENU_DIPLOMACY"
+				raw_text = "STATE_RIGHT_CLICK_MENU_DIPLOMACY"
 			}
 		}
 
@@ -1383,7 +1383,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride "text" {
-				text = "ZOOM_TO_CAPITAL_STATE"
+				raw_text = "ZOOM_TO_CAPITAL_STATE"
 			}		
 		}
 
@@ -1416,7 +1416,7 @@ right_click_menu = {
 					}
 					
 					blockoverride "text" {
-						text = "[DiplomaticAction.GetFullName]"
+						raw_text = "[DiplomaticAction.GetFullName]"
 					}
 				}
 			}
@@ -1435,7 +1435,7 @@ right_click_menu = {
 					blockoverride "icon" {}
 					
 					blockoverride "text" {
-						text = "[DiplomaticPlayType.GetName]"
+						raw_text = "[DiplomaticPlayType.GetName]"
 					}
 				}
 			}
@@ -1452,7 +1452,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride "text" {
-				text = "COUNTRY_RIGHT_CLICK_MENU_OBSERVE"
+				raw_text = "COUNTRY_RIGHT_CLICK_MENU_OBSERVE"
 			}
 		}
 	}
@@ -1462,7 +1462,7 @@ right_click_menu = {
 	name = "market_right_click_menu"
 
 	blockoverride "title_text" {
-		text = "MARKET_RIGHT_CLICK_MENU_TITLE"
+		raw_text = "MARKET_RIGHT_CLICK_MENU_TITLE"
 	}
 
 	blockoverride "items" {
@@ -1475,7 +1475,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride "text" {
-				text = "ZOOM_TO_MARKET_CAPITAL"
+				raw_text = "ZOOM_TO_MARKET_CAPITAL"
 			}	
 		}
 
@@ -1488,7 +1488,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride "text" {
-				text = "MARKET_RIGHT_CLICK_MENU_PIN_IN_OUTLINER"
+				raw_text = "MARKET_RIGHT_CLICK_MENU_PIN_IN_OUTLINER"
 			}		
 		}
 	}
@@ -1498,7 +1498,7 @@ right_click_menu = {
 	name = "goods_right_click_menu"
 	
 	blockoverride "title_text" {
-		text = "GOODS_RIGHT_CLICK_MENU_TITLE"
+		raw_text = "GOODS_RIGHT_CLICK_MENU_TITLE"
 	}
 
 	blockoverride "items" {
@@ -1513,7 +1513,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride "text" {
-				text = "TAX_GOODS"
+				raw_text = "TAX_GOODS"
 			}	
 		}	
 
@@ -1528,7 +1528,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride "text" {
-				text = "UNTAX_GOODS"
+				raw_text = "UNTAX_GOODS"
 			}		
 		}		
 	
@@ -1543,7 +1543,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride "text" {
-				text = "SET_GOODS_TARIFF_NO_PRIORITY"
+				raw_text = "SET_GOODS_TARIFF_NO_PRIORITY"
 			}	
 		}
 		
@@ -1558,7 +1558,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride "text" {
-				text = "SET_GOODS_TARIFF_IMPORT_PRIORITY"
+				raw_text = "SET_GOODS_TARIFF_IMPORT_PRIORITY"
 			}	
 		}
 
@@ -1573,7 +1573,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride "text" {
-				text = "SET_GOODS_TARIFF_EXPORT_PRIORITY"
+				raw_text = "SET_GOODS_TARIFF_EXPORT_PRIORITY"
 			}	
 		}	
 
@@ -1585,7 +1585,7 @@ right_click_menu = {
 	name = "goods_in_market_right_click_menu"
 	
 	blockoverride "title_text" {
-		text = "GOODS_IN_MARKET_RIGHT_CLICK_MENU_TITLE"
+		raw_text = "GOODS_IN_MARKET_RIGHT_CLICK_MENU_TITLE"
 	}
 
 	blockoverride "items" {
@@ -1599,7 +1599,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride "text" {
-				text = "ESTABLISH_IMPORT_ROUTE"
+				raw_text = "ESTABLISH_IMPORT_ROUTE"
 			}	
 		}
 		
@@ -1613,7 +1613,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride "text" {
-				text = "ESTABLISH_EXPORT_ROUTE"
+				raw_text = "ESTABLISH_EXPORT_ROUTE"
 			}	
 		}
 
@@ -1627,7 +1627,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride = "text" {
-				text = "GOODS_RIGHT_CLICK_MENU_PIN_IN_OUTLINER"
+				raw_text = "GOODS_RIGHT_CLICK_MENU_PIN_IN_OUTLINER"
 			}		
 		}
 
@@ -1642,7 +1642,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride "text" {
-				text = "SET_GOODS_TARIFF_NO_PRIORITY"
+				raw_text = "SET_GOODS_TARIFF_NO_PRIORITY"
 			}		
 		}
 		
@@ -1657,7 +1657,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride "text" {
-				text = "SET_GOODS_TARIFF_IMPORT_PRIORITY"
+				raw_text = "SET_GOODS_TARIFF_IMPORT_PRIORITY"
 			}			
 		}
 
@@ -1672,12 +1672,12 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride "text" {
-				text = "SET_GOODS_TARIFF_EXPORT_PRIORITY"
+				raw_text = "SET_GOODS_TARIFF_EXPORT_PRIORITY"
 			}	
 		}	
 
 		textbox = {
-			text = "GOODS_IN_COUNTRY"
+			raw_text = "GOODS_IN_COUNTRY"
 			autoresize = yes
 			align = left|nobaseline
 			margin_top = 15
@@ -1698,7 +1698,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride "text" {
-				text = "TAX_GOODS"
+				raw_text = "TAX_GOODS"
 			}				
 		}	
 
@@ -1713,7 +1713,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride "text" {
-				text = "UNTAX_GOODS"
+				raw_text = "UNTAX_GOODS"
 			}	
 		}
 
@@ -1725,7 +1725,7 @@ right_click_menu = {
 	name = "trade_route_right_click_menu"
 	
 	blockoverride "title_text" {
-		text = "[TradeRoute.GetName]"
+		raw_text = "[TradeRoute.GetName]"
 	}
 
 	blockoverride "items" {
@@ -1738,7 +1738,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride "text" {
-				text = "TRADE_ROUTE_CANCEL"
+				raw_text = "TRADE_ROUTE_CANCEL"
 			}		
 		}		
 	
@@ -1753,7 +1753,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride "text" {
-				text = "SET_GOODS_TARIFF_NO_PRIORITY"
+				raw_text = "SET_GOODS_TARIFF_NO_PRIORITY"
 			}		
 		}
 		
@@ -1768,7 +1768,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride "text" {
-				text = "SET_GOODS_TARIFF_IMPORT_PRIORITY"
+				raw_text = "SET_GOODS_TARIFF_IMPORT_PRIORITY"
 			}		
 		}
 
@@ -1783,7 +1783,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride "text" {
-				text = "SET_GOODS_TARIFF_EXPORT_PRIORITY"
+				raw_text = "SET_GOODS_TARIFF_EXPORT_PRIORITY"
 			}		
 		}
 
@@ -1795,7 +1795,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride "text" {
-				text = "TRADE_ROUTE_OPEN_EXPORTING_MARKET"
+				raw_text = "TRADE_ROUTE_OPEN_EXPORTING_MARKET"
 			}
 		}
 
@@ -1807,7 +1807,7 @@ right_click_menu = {
 			blockoverride "icon" {}
 			
 			blockoverride "text" {
-				text = "TRADE_ROUTE_OPEN_IMPORTING_MARKET"
+				raw_text = "TRADE_ROUTE_OPEN_IMPORTING_MARKET"
 			}	
 		}					
 	}
@@ -1818,7 +1818,7 @@ types right_click_menu {
 		direction = vertical 
 
 		textbox = {
-			text = "PRODUCED_IN"
+			raw_text = "PRODUCED_IN"
 			autoresize = yes
 			align = left|nobaseline
 			margin_top = 15
@@ -1853,14 +1853,14 @@ types right_click_menu {
 					}
 					
 					blockoverride "text" {
-						text = "EXPAND_BUILDING_TYPE"
+						raw_text = "EXPAND_BUILDING_TYPE"
 					}
 				}
 			}
 		}
 
 		textbox = {
-			text = "CONSUMED_IN"
+			raw_text = "CONSUMED_IN"
 			autoresize = yes
 			align = left|nobaseline
 			margin_top = 15
@@ -1895,7 +1895,7 @@ types right_click_menu {
 					}
 					
 					blockoverride "text" {
-						text = "EXPAND_BUILDING_TYPE"
+						raw_text = "EXPAND_BUILDING_TYPE"
 					}	
 				}
 			}
