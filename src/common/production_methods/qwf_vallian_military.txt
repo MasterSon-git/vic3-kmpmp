@@ -35,7 +35,7 @@ pm_cannon_artillery = {
 		}
 	}
 	timed_modifiers = {
-		pm_offense_defense_readjustment
+		pm_offense_defense_readjustment_minor
 	}
 }
 
@@ -68,7 +68,7 @@ pm_mobile_artillery = {
 		}
 	}
 	timed_modifiers = {
-		pm_offense_defense_readjustment
+		pm_offense_defense_readjustment_minor
 	}
 }
 
@@ -106,7 +106,7 @@ pm_shrapnel_artillery = {
 		}
 	}
 	timed_modifiers = {
-		pm_offense_defense_readjustment
+		pm_offense_defense_readjustment_minor
 	}
 }
 
@@ -144,6 +144,6 @@ pm_siege_artillery = {
 		}
 	}
 	timed_modifiers = {
-		pm_offense_defense_readjustment
+		pm_offense_defense_readjustment_minor
 	}
 }
