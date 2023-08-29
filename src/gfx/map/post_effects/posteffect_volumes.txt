@@ -58,23 +58,8 @@ posteffect_values = {
 ### Height volumes ###
 # Step Papermap, >800					# Papermap
 posteffect_values = {
-	name = zoom_volume_paper_map
+	name = zoom_volume_papermap
 	inherit = default
-	
-	# Settings
-	fog_begin = 50 #100
-	fog_end = 4500
-#	value_scale = 0.92
-#	fog_max = 0							# Disable fog
-}
-
-
-### Area volumes ###
-
-# Paper Map
-posteffect_values = {
-	inherit = default
-	name = papermap_volume
 	
 	# Settings
 	saturation_scale = 1.0
@@ -83,37 +68,26 @@ posteffect_values = {
 	levels_max = hsv{ 0.0 0.0 1.0 } 	# Color values adjusment
 	colorbalance = { 1.0 1.0 1.0 }	# Color balance
 
-#	fog_color = { 0.545 0.705 0.85 }
-#	fog_max = 2.0
+	fog_max = 0.0
+	#fog_begin = 50 #100
+	#fog_end = 4500
 }
 
 
-
-	# Paper Map
-	posteffect_volume = {
-		name = "Paper Map"
-		
-		posteffect_values_day = zoom_volume_paper_map #papermap_volume
-		posteffect_values_night = zoom_volume_paper_map #papermap_volume
-
-		position = { 4000.0 3000.0 2000.0 }
-		size = { 10000.0 4600.0 10000.0 }
-		fade_distance = 12.0
-	}
+### Area volumes ###
 
 
 	## Height volume locations ##
 	#
-
 	# "height" is when the values start to apply
 	# "fade_distance" is the blending distance until fully applied
 	# ie. actual height is height + fade_distance
 
 	posteffect_height_volume = {
-		name = "zoom_volume_paper_map"
+		name = "zoom_volume_papermap"
 		
-		posteffect_values_day = zoom_volume_paper_map
-		posteffect_values_night = zoom_volume_paper_map #default
+		posteffect_values_day = zoom_volume_papermap
+		posteffect_values_night = zoom_volume_papermap
 		
 		height = 50 #700			# Should be equal to the "camera zoom" when you want the volume to have half effect if you "fade distance" is above 0
 		fade_distance = 50 #200 	# The lenght of the "camera zoom" value before the volume takes half effect

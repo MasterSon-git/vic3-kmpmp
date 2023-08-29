@@ -30,7 +30,7 @@ object={
 	clamp_to_water_level=no
 	render_under_water=no
 	generated_content=no
-	layer="environmental_effects"
+	layer="day_effects"
 	entity="env_god_rays"
 	count=0
 }

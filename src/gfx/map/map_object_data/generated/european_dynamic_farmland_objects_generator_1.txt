@@ -22,7 +22,7 @@ object={
 	render_under_water=no
 	generated_content=yes
 	layer="farms_dynamic"
-	pdxmesh="european_province_subfarm_01_mesh"
+	pdxmesh="european_farm_farmhouse_01_mesh"
 	count=0
 }
 object={
@@ -31,7 +31,7 @@ object={
 	render_under_water=no
 	generated_content=yes
 	layer="farms_dynamic"
-	pdxmesh="european_province_subfarm_02_mesh"
+	pdxmesh="european_farm_farmhouse_02_mesh"
 	count=0
 }
 object={

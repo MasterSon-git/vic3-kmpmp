@@ -298,7 +298,7 @@ types topbar_components
 						name = "innovation"
 						minimumsize = { 90 28 }
 						maximumsize = { 90 28 }
-						spacing = 2
+						#spacing = 2
 						tooltip = "SULIUS_RESEARCH"
 						using = tooltip_below
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('tech_tree', 'production|military|society')]"

@@ -118,8 +118,8 @@ state_trait_andes = {
 	icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
 	
 	modifier = {
-		#state_construction_mult = -0.2
-		#state_infrastructure_mult = -0.2
+		#state_construction_mult = -0.1
+		#state_infrastructure_mult = -0.1
         state_building_construction_sector_max_level_add = -5
         building_construction_sector_throughput_mult = -0.15
         building_railway_throughput_mult = -0.1
