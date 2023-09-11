@@ -66,7 +66,7 @@ types topbar_components
 				}
 				textbox = {
 					parentanchor = vcenter
-					raw_text = "[Country.GetGDP|1*]"
+					raw_text = "#variable [Country.GetGDP|1*]#!"
 					autoresize = yes
 					align = left|nobaseline
 				}
@@ -89,7 +89,7 @@ types topbar_components
 				}
 				textbox = {
 					parentanchor = vcenter
-					raw_text = "[Country.GetIncorporatedLiteracyRate|%1]"
+					raw_text = "#variable [Country.GetIncorporatedLiteracyRate|%1]#!"
 					autoresize = yes
 					align = left|nobaseline
 				}
@@ -106,7 +106,7 @@ types topbar_components
 			
 				textbox = {
 					parentanchor = vcenter
-					text = "[LabelingHelper.GetIconForStandardOfLivingCFixedPoint(Country.GetAverageSoLByPopulation)|v]"
+					raw_text = "[LabelingHelper.GetIconForStandardOfLivingCFixedPoint(Country.GetAverageSoLByPopulation)|v]"
 					autoresize = yes
 					align = left|nobaseline
 					fontsize = 21 #hack to get the same size on the text icon as the rest in the top bar
@@ -114,7 +114,7 @@ types topbar_components
 
 				textbox = {
 					parentanchor = vcenter
-					text = "[Country.GetFormattedStandardOfLivingAll|v]"
+					raw_text = "[Country.GetFormattedStandardOfLivingAll|v]"
 					autoresize = yes
 					align = left|nobaseline
 					margin_left = 3
@@ -137,7 +137,7 @@ types topbar_components
 				}
 				textbox = {
 					parentanchor = vcenter
-					raw_text = "[Country.GetTotalPopulation|D]"
+					raw_text = "#variable [Country.GetTotalPopulation|D]#!"
 					autoresize = yes
 					align = left|nobaseline
 				}
@@ -160,7 +160,7 @@ types topbar_components
 				}
 				textbox = {
 					parentanchor = vcenter
-					raw_text = "[Country.GetNumRadicals|D]"
+					raw_text = "#variable [Country.GetNumRadicals|D]#!"
 					autoresize = yes
 					align = left|nobaseline
 				}
@@ -183,7 +183,7 @@ types topbar_components
 				}
 				textbox = {
 					parentanchor = vcenter
-					raw_text = "[Country.GetNumLoyalists|D]"
+					raw_text = "#variable [Country.GetNumLoyalists|D]#!"
 					autoresize = yes
 					align = left|nobaseline
 				}
