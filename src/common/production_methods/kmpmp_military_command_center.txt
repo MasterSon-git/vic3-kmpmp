@@ -14,7 +14,7 @@
     }
 
     state_modifiers = {
-        level_scaled = {
+        workforce_scaled = {
             unit_army_defense_mult = 0.01
             unit_army_offense_mult = 0.01
         }
@@ -41,7 +41,7 @@ pm_kmpmp_military_command_center_organisation_command_post = {
     }
 
     state_modifiers = {
-        level_scaled = {
+        workforce_scaled = {
             unit_army_defense_mult = 0.02
             unit_army_offense_mult = 0.02
         }
@@ -68,7 +68,7 @@ pm_kmpmp_military_command_center_organisation_field_hq = {
     }
 
     state_modifiers = {
-        level_scaled = {
+        workforce_scaled = {
             unit_army_defense_mult = 0.03
             unit_army_offense_mult = 0.03
         }
