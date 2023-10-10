@@ -63,3 +63,7 @@
  kmpmp_ev_japan_buff.2.f:0 "Aufgrund historischer Recherchen haben wir herausgefunden, dass wir einige vergessene Ansprüche haben ..."
  kmpmp_ev_japan_buff.2.a:0 "Auf nach Siam und Java!"
  kmpmp_ev_japan_buff.2.b:0 "Lasst uns Borneo und Dai Nam nehmen..."
+
+ kmpmp_fix_japan_buff_meiji_complete_not_triggered_decision:0 "Bitte gib mir die Japan buffs!!!"
+ kmpmp_fix_japan_buff_meiji_complete_not_triggered_decision_desc:0 "Some stupid dev didn't implement the event trigger like he should..."
+ kmpmp_fix_japan_buff_meiji_complete_not_triggered_decision_tooltip:0 "Löst das Ereignis zum hinzufügen der Japan buffs für das abschliessen der Meiji Restauration aus."

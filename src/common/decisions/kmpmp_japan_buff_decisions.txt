@@ -1,0 +1,30 @@
+﻿kmpmp_fix_japan_buff_meiji_complete_not_triggered_decision = {
+    is_shown = {
+        has_variable = kmpmp_enable_japan_buffs
+        has_global_variable = meiji_restoration_complete
+        OR = {
+            has_modifier = japan_military_reward
+            has_modifier = japan_diplomatic_reward
+            has_modifier = japan_production_reward
+        }
+        NOT = {
+            has_modifier = kmpmp_japan_buff_meiji_complete
+        }
+	}
+
+	possible = {
+		always = yes
+	}
+	
+	when_taken = {
+		trigger_event = {
+            id = kmpmp_ev_japan_buff.2
+            days = 0
+            popup = yes
+        }
+	}
+
+	ai_chance = {
+		base = 0	
+	}
+}
