@@ -1,0 +1,36 @@
+﻿# Root = Diplomatic Play
+# scope:actor = Initiator country
+# scope:target = Target country
+on_war_end = {
+    on_actions = {
+        buff_nation_effect_for_unification
+    }
+}
+
+buff_nation_effect_for_unification = {
+    effect = {
+        if = {
+            limit = { 
+                is_diplomatic_play_type = dp_unify_italy
+                scope:actor.owner = c:ITA
+            }
+            scope:actor.owner = {
+                add_modifier = {
+                    name = kmpmp_buff_medium_nation
+                }
+            }
+        }
+
+        if = {
+            limit = { 
+                is_diplomatic_play_type = dp_unify_scandinavia
+                scope:actor.owner = c:SCA
+            }
+            scope:actor.owner = {
+                add_modifier = {
+                    name = kmpmp_buff_medium_nation
+                }
+            }
+        }
+    }
+}

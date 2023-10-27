@@ -1,0 +1,40 @@
+﻿GLOBAL = {
+    every_country = {
+        limit = {
+            OR = {
+                c:SAR = this    # sardinien piemont
+                c:SIC = this    # two sicilies
+                c:TUR = this    # ottomans
+                c:BEL = this    # belgium
+                c:NET = this    # netherlands
+                c:SWE = this    # sweden
+                c:JAP = this    # japan
+                c:BRZ = this    # brazil
+                c:MEX = this    # mexico
+                c:PER = this    # persia
+                c:EGY = this    # egypt
+                c:POR = this    # portugal
+                c:ARG = this    # argentina
+                c:SIA = this    # siam
+                c:WAL = this    # wallachia
+                c:HBC = this    # hudson bay company
+                c:SOK = this    # sokoto
+                c:PEU = this    # peru
+            }
+        }
+        add_modifier = {
+            name = kmpmp_buff_small_nation
+        }
+    }
+
+    every_country = {
+        limit = {
+            OR = {
+                c:SPA = this    # spain
+            }
+        }
+        add_modifier = {
+            name = kmpmp_buff_medium_nation
+        }
+    }
+}

@@ -6,3 +6,8 @@
 
  modifier_state_building_military_command_center_max_level_add:0 "$building_military_command_center$ Max Level"
  modifier_state_building_military_command_center_max_level_add_desc:0 "A bonus or penalty to the maximum level of $building_military_command_center$ buildings."
+
+ modifier_kmpmp_buff_small_nation:0 "Small Nation buff"
+ modifier_kmpmp_buff_small_nation_desc:0 "A bonus to support small nations."
+ modifier_kmpmp_buff_medium_nation:0 "Medium Nation buff"
+ modifier_kmpmp_buff_medium_nation_desc:0 "A bonus to support medium nations."

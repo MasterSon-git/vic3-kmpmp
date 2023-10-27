@@ -6,3 +6,8 @@
 
  modifier_state_building_military_command_center_max_level_add:0 "$building_military_command_center$ Höchststufe"
  modifier_state_building_military_command_center_max_level_add_desc:0 "Ein Bonus oder Malus auf die Höchststufe von $building_military_command_center$ Gebäuden."
+
+ modifier_kmpmp_buff_small_nation:0 "Kleine Nation buff"
+ modifier_kmpmp_buff_small_nation_desc:0 "Ein Bonus um kleine Nationen zu unterstützen."
+ modifier_kmpmp_buff_medium_nation:0 "Mittlere Nation buff"
+ modifier_kmpmp_buff_medium_nation_desc:0 "Ein Bonus um mittlere Nationen zu unterstützen."
