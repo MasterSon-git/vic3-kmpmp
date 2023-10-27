@@ -67,3 +67,6 @@
  kmpmp_fix_japan_buff_meiji_complete_not_triggered_decision:0 "Bitte gib mir die Japan buffs!!!"
  kmpmp_fix_japan_buff_meiji_complete_not_triggered_decision_desc:0 "Some stupid dev didn't implement the event trigger like he should..."
  kmpmp_fix_japan_buff_meiji_complete_not_triggered_decision_tooltip:0 "Löst das Ereignis zum hinzufügen der Japan buffs für das abschliessen der Meiji Restauration aus."
+
+ kmpmp_buff_small_nation:0 "Kleine Nation buff"
+ kmpmp_buff_medium_nation:0 "Mittlere Nation buff"
