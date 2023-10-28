@@ -6,3 +6,6 @@
 
  modifier_state_building_military_command_center_max_level_add:0 "$building_military_command_center$ Höchststufe"
  modifier_state_building_military_command_center_max_level_add_desc:0 "Ein Bonus oder Malus auf die Höchststufe von $building_military_command_center$ Gebäuden."
+
+ modifier_state_unincorporated_education_access_add:0 "Bildungszugang in [Concept('concept_unincorporated_state','$concept_unincorporated_states$')]"
+ modifier_state_unincorporated_education_access_add_desc:0 "Ein Bonus oder Abzug auf den Bildungszugang von Pops in [Concept('concept_unincorporated_state','$concept_unincorporated_states$')]."

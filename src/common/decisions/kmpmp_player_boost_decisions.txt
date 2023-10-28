@@ -1,0 +1,248 @@
+﻿kmpmp_player_boost_art_of_deal_decision = {
+    is_shown = {
+        NOT = {
+            has_variable = kmpmp_player_boost_recently_adjusted
+        }
+    }
+
+    possible = {
+        always = yes
+    }
+
+    when_taken = {
+        set_variable = {
+            name = kmpmp_player_boost_recently_adjusted
+            value = yes
+            days = 7300 # 20 years
+        }
+        remove_player_boost_modifiers = yes
+        add_modifier = {
+            name = kmpmp_player_boost_art_of_deal
+        }
+    }
+
+    ai_chance = {
+        base = 0	
+    }
+}
+
+kmpmp_player_boost_imperialism_oversee_empire_decision = {
+    is_shown = {
+        NOT = {
+            has_variable = kmpmp_player_boost_recently_adjusted
+        }
+    }
+
+    possible = {
+        always = yes
+    }
+
+    when_taken = {
+        set_variable = {
+            name = kmpmp_player_boost_recently_adjusted
+            value = yes
+            days = 7300 # 20 years
+        }
+        remove_player_boost_modifiers = yes
+        add_modifier = {
+            name = kmpmp_player_boost_imperialism_oversee_empire
+        }
+    }
+
+    ai_chance = {
+        base = 0	
+    }
+}
+
+kmpmp_player_boost_military_industrial_complex_decision = {
+    is_shown = {
+        NOT = {
+            has_variable = kmpmp_player_boost_recently_adjusted
+        }
+    }
+
+    possible = {
+        exists = ig:ig_armed_forces
+        ig:ig_armed_forces = {
+            ig_clout >= 0.1
+            ig_approval > 0
+        }
+        exists = ig:ig_industrialists
+        ig:ig_industrialists = {
+            ig_clout >= 0.1
+            ig_approval > 0
+        }
+    }
+
+    when_taken = {
+        set_variable = {
+            name = kmpmp_player_boost_recently_adjusted
+            value = yes
+            days = 7300 # 20 years
+        }
+        remove_player_boost_modifiers = yes
+        add_modifier = {
+            name = kmpmp_player_boost_military_industrial_complex
+        }
+    }
+
+    ai_chance = {
+        base = 0	
+    }
+}
+
+kmpmp_player_boost_state_capitalism_decision = {
+    is_shown = {
+        NOT = {
+            has_variable = kmpmp_player_boost_recently_adjusted
+        }
+    }
+
+    possible = {
+        always = yes
+    }
+
+    when_taken = {
+        set_variable = {
+            name = kmpmp_player_boost_recently_adjusted
+            value = yes
+            days = 7300 # 20 years
+        }
+        remove_player_boost_modifiers = yes
+        add_modifier = {
+            name = kmpmp_player_boost_state_capitalism
+        }
+    }
+
+    ai_chance = {
+        base = 0	
+    }
+}
+
+kmpmp_player_boost_social_welfare_state_decision = {
+    is_shown = {
+        NOT = {
+            has_variable = kmpmp_player_boost_recently_adjusted
+        }
+    }
+
+    possible = {
+        exists = ig:ig_intelligentsia
+        ig:ig_intelligentsia = {
+            ig_clout >= 0.1
+            ig_approval > 0
+        }
+    }
+
+    when_taken = {
+        set_variable = {
+            name = kmpmp_player_boost_recently_adjusted
+            value = yes
+            days = 7300 # 20 years
+        }
+        remove_player_boost_modifiers = yes
+        add_modifier = {
+            name = kmpmp_player_boost_social_welfare_state
+        }
+    }
+
+    ai_chance = {
+        base = 0	
+    }
+}
+
+kmpmp_player_boost_corporative_socialism_decision = {
+    is_shown = {
+        NOT = {
+            has_variable = kmpmp_player_boost_recently_adjusted
+        }
+    }
+
+    possible = {
+        exists = ig:ig_trade_unions
+        ig:ig_trade_unions = {
+            ig_clout >= 0.1
+            ig_approval >= 5
+        }
+    }
+
+    when_taken = {
+        set_variable = {
+            name = kmpmp_player_boost_recently_adjusted
+            value = yes
+            days = 7300 # 20 years
+        }
+        remove_player_boost_modifiers = yes
+        add_modifier = {
+            name = kmpmp_player_boost_corporative_socialism
+        }
+    }
+
+    ai_chance = {
+        base = 0	
+    }
+}
+
+kmpmp_player_boost_military_police_state_decision = {
+    is_shown = {
+        NOT = {
+            has_variable = kmpmp_player_boost_recently_adjusted
+        }
+    }
+
+    possible = {
+        exists = ig:ig_armed_forces
+        ig:ig_armed_forces = {
+            ig_clout >= 0.25
+            ig_approval >= 10
+        }
+    }
+
+    when_taken = {
+        set_variable = {
+            name = kmpmp_player_boost_recently_adjusted
+            value = yes
+            days = 7300 # 20 years
+        }
+        remove_player_boost_modifiers = yes
+        add_modifier = {
+            name = kmpmp_player_boost_military_police_state
+        }
+    }
+
+    ai_chance = {
+        base = 0	
+    }
+}
+
+kmpmp_player_boost_tycoon_capitalism_decision = {
+    is_shown = {
+        NOT = {
+            has_variable = kmpmp_player_boost_recently_adjusted
+        }
+    }
+
+    possible = {
+        exists = ig:ig_industrialists
+        ig:ig_industrialists = {
+            ig_clout >= 0.05
+            ig_approval > 0
+        }
+    }
+
+    when_taken = {
+        set_variable = {
+            name = kmpmp_player_boost_recently_adjusted
+            value = yes
+            days = 7300 # 20 years
+        }
+        remove_player_boost_modifiers = yes
+        add_modifier = {
+            name = kmpmp_player_boost_tycoon_capitalism
+        }
+    }
+
+    ai_chance = {
+        base = 0	
+    }
+}

@@ -70,3 +70,45 @@
 
  kmpmp_buff_small_nation:0 "Small Nation buff"
  kmpmp_buff_medium_nation:0 "Medium Nation buff"
+
+ kmpmp_player_boost_art_of_deal:0 "The Art of the Deal"
+ kmpmp_player_boost_imperialism_oversee_empire:0 "Imperialism & Oversee Empire"
+ kmpmp_player_boost_imperialism_oversee_empire_state_unincorporated_education_access:0 "Imperialism & Oversee Empire"
+ kmpmp_player_boost_military_industrial_complex:0 "Military-Industrial Complex"
+ kmpmp_player_boost_state_capitalism:0 "State Capitalism"
+ kmpmp_player_boost_social_welfare_state:0 "Social & Welfare State"
+ kmpmp_player_boost_corporative_socialism:0 "Corporative Socialism"
+ kmpmp_player_boost_military_police_state:0 "Military Police State"
+ kmpmp_player_boost_tycoon_capitalism:0 "Tycoon Capitalism"
+
+ kmpmp_player_boost_art_of_deal_decision:0 "$kmpmp_player_boost_art_of_deal$"
+ kmpmp_player_boost_art_of_deal_decision_desc:0 ""
+ kmpmp_player_boost_art_of_deal_decision_tooltip:0 ""
+
+ kmpmp_player_boost_imperialism_oversee_empire_decision:0 "$kmpmp_player_boost_imperialism_oversee_empire$"
+ kmpmp_player_boost_imperialism_oversee_empire_decision_desc:0 ""
+ kmpmp_player_boost_imperialism_oversee_empire_decision_tooltip:0 ""
+
+ kmpmp_player_boost_military_industrial_complex_decision:0 "$kmpmp_player_boost_military_industrial_complex$"
+ kmpmp_player_boost_military_industrial_complex_decision_desc:0 ""
+ kmpmp_player_boost_military_industrial_complex_decision_tooltip:0 ""
+
+ kmpmp_player_boost_state_capitalism_decision:0 "$kmpmp_player_boost_state_capitalism$"
+ kmpmp_player_boost_state_capitalism_decision_desc:0 ""
+ kmpmp_player_boost_state_capitalism_decision_tooltip:0 ""
+
+ kmpmp_player_boost_social_welfare_state_decision:0 "$kmpmp_player_boost_social_welfare_state$"
+ kmpmp_player_boost_social_welfare_state_decision_desc:0 ""
+ kmpmp_player_boost_social_welfare_state_decision_tooltip:0 ""
+
+ kmpmp_player_boost_corporative_socialism_decision:0 "$kmpmp_player_boost_corporative_socialism$"
+ kmpmp_player_boost_corporative_socialism_decision_desc:0 ""
+ kmpmp_player_boost_corporative_socialism_decision_tooltip:0 ""
+
+ kmpmp_player_boost_military_police_state_decision:0 "$kmpmp_player_boost_military_police_state$"
+ kmpmp_player_boost_military_police_state_decision_desc:0 ""
+ kmpmp_player_boost_military_police_state_decision_tooltip:0 ""
+ 
+ kmpmp_player_boost_tycoon_capitalism_decision:0 "$kmpmp_player_boost_tycoon_capitalism$"
+ kmpmp_player_boost_tycoon_capitalism_decision_desc:0 ""
+ kmpmp_player_boost_tycoon_capitalism_decision_tooltip:0 ""

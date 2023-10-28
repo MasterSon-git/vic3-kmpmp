@@ -1,4 +1,10 @@
-﻿# Root = Diplomatic Play
+﻿on_monthly_pulse_country = {
+    on_actions = {
+        player_boost_effect_state_unincorporated_education_access
+    }
+}
+
+# Root = Diplomatic Play
 # scope:actor = Initiator country
 # scope:target = Target country
 on_war_end = {
@@ -29,6 +35,25 @@ buff_nation_effect_for_unification = {
             scope:actor.owner = {
                 add_modifier = {
                     name = kmpmp_buff_medium_nation
+                }
+            }
+        }
+    }
+}
+
+player_boost_effect_state_unincorporated_education_access = {
+    effect = {
+        if = {
+            limit = {
+                has_modifier = kmpmp_player_boost_imperialism_oversee_empire
+            }
+            every_scope_state = {
+                limit = {
+                    is_incorporated = no
+                }
+                add_modifier = {
+                    name = kmpmp_player_boost_imperialism_oversee_empire_state_unincorporated_education_access
+                    days = 30
                 }
             }
         }

@@ -1,0 +1,50 @@
+﻿remove_player_boost_modifiers = {
+    if = {
+        limit = {
+            has_modifier = kmpmp_player_boost_art_of_deal
+        }
+        remove_modifier = kmpmp_player_boost_art_of_deal
+    }
+    if = {
+        limit = {
+            has_modifier = kmpmp_player_boost_imperialism_oversee_empire
+        }
+        remove_modifier = kmpmp_player_boost_imperialism_oversee_empire
+    }
+    if = {
+        limit = {
+            has_modifier = kmpmp_player_boost_military_industrial_complex
+        }
+        remove_modifier = kmpmp_player_boost_military_industrial_complex
+    }
+    if = {
+        limit = {
+            has_modifier = kmpmp_player_boost_state_capitalism
+        }
+        remove_modifier = kmpmp_player_boost_state_capitalism
+    }
+    if = {
+        limit = {
+            has_modifier = kmpmp_player_boost_social_welfare_state
+        }
+        remove_modifier = kmpmp_player_boost_social_welfare_state
+    }
+    if = {
+        limit = {
+            has_modifier = kmpmp_player_boost_corporative_socialism
+        }
+        remove_modifier = kmpmp_player_boost_corporative_socialism
+    }
+    if = {
+        limit = {
+            has_modifier = kmpmp_player_boost_military_police_state
+        }
+        remove_modifier = kmpmp_player_boost_military_police_state
+    }
+    if = {
+        limit = {
+            has_modifier = kmpmp_player_boost_military_police_state
+        }
+        remove_modifier = kmpmp_player_boost_military_police_state
+    }
+}
