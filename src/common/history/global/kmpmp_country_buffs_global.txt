@@ -19,7 +19,8 @@
                 c:WAL = this    # wallachia
                 c:HBC = this    # hudson bay company
                 c:SOK = this    # sokoto
-                c:PEU = this    # peru
+                #c:PEU = this    # peru
+                c:BOL = this    # bolivia
             }
         }
         add_modifier = {
