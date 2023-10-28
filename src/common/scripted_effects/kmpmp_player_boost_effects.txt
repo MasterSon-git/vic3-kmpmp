@@ -25,6 +25,12 @@
     }
     if = {
         limit = {
+            has_modifier = kmpmp_player_boost_autarky
+        }
+        remove_modifier = kmpmp_player_boost_autarky
+    }
+    if = {
+        limit = {
             has_modifier = kmpmp_player_boost_social_welfare_state
         }
         remove_modifier = kmpmp_player_boost_social_welfare_state

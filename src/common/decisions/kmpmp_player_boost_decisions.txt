@@ -1,19 +1,18 @@
 ﻿kmpmp_player_boost_art_of_deal_decision = {
     is_shown = {
-        NOT = {
-            has_variable = kmpmp_player_boost_recently_adjusted
-        }
-    }
-
-    possible = {
         always = yes
     }
 
+    possible = {
+        NOT = {
+            has_modifier = kmpmp_player_boost_adjustment
+        }
+    }
+
     when_taken = {
-        set_variable = {
-            name = kmpmp_player_boost_recently_adjusted
-            value = yes
-            days = 7300 # 20 years
+        add_modifier = {
+            name = kmpmp_player_boost_adjustment
+            days = 5475 # 15 years
         }
         remove_player_boost_modifiers = yes
         add_modifier = {
@@ -28,20 +27,19 @@
 
 kmpmp_player_boost_imperialism_oversee_empire_decision = {
     is_shown = {
-        NOT = {
-            has_variable = kmpmp_player_boost_recently_adjusted
-        }
-    }
-
-    possible = {
         always = yes
     }
 
+    possible = {
+        NOT = {
+            has_modifier = kmpmp_player_boost_adjustment
+        }
+    }
+
     when_taken = {
-        set_variable = {
-            name = kmpmp_player_boost_recently_adjusted
-            value = yes
-            days = 7300 # 20 years
+        add_modifier = {
+            name = kmpmp_player_boost_adjustment
+            days = 5475 # 15 years
         }
         remove_player_boost_modifiers = yes
         add_modifier = {
@@ -56,12 +54,13 @@ kmpmp_player_boost_imperialism_oversee_empire_decision = {
 
 kmpmp_player_boost_military_industrial_complex_decision = {
     is_shown = {
-        NOT = {
-            has_variable = kmpmp_player_boost_recently_adjusted
-        }
+        always = yes
     }
 
     possible = {
+        NOT = {
+            has_modifier = kmpmp_player_boost_adjustment
+        }
         exists = ig:ig_armed_forces
         ig:ig_armed_forces = {
             ig_clout >= 0.1
@@ -75,10 +74,9 @@ kmpmp_player_boost_military_industrial_complex_decision = {
     }
 
     when_taken = {
-        set_variable = {
-            name = kmpmp_player_boost_recently_adjusted
-            value = yes
-            days = 7300 # 20 years
+        add_modifier = {
+            name = kmpmp_player_boost_adjustment
+            days = 5475 # 15 years
         }
         remove_player_boost_modifiers = yes
         add_modifier = {
@@ -93,20 +91,19 @@ kmpmp_player_boost_military_industrial_complex_decision = {
 
 kmpmp_player_boost_state_capitalism_decision = {
     is_shown = {
-        NOT = {
-            has_variable = kmpmp_player_boost_recently_adjusted
-        }
-    }
-
-    possible = {
         always = yes
     }
 
+    possible = {
+        NOT = {
+            has_modifier = kmpmp_player_boost_adjustment
+        }
+    }
+
     when_taken = {
-        set_variable = {
-            name = kmpmp_player_boost_recently_adjusted
-            value = yes
-            days = 7300 # 20 years
+        add_modifier = {
+            name = kmpmp_player_boost_adjustment
+            days = 5475 # 15 years
         }
         remove_player_boost_modifiers = yes
         add_modifier = {
@@ -119,14 +116,42 @@ kmpmp_player_boost_state_capitalism_decision = {
     }
 }
 
-kmpmp_player_boost_social_welfare_state_decision = {
+kmpmp_player_boost_autarky_decision = {
     is_shown = {
-        NOT = {
-            has_variable = kmpmp_player_boost_recently_adjusted
-        }
+        always = yes
     }
 
     possible = {
+        NOT = {
+            has_modifier = kmpmp_player_boost_adjustment
+        }
+    }
+
+    when_taken = {
+        add_modifier = {
+            name = kmpmp_player_boost_adjustment
+            days = 5475 # 15 years
+        }
+        remove_player_boost_modifiers = yes
+        add_modifier = {
+            name = kmpmp_player_boost_autarky
+        }
+    }
+
+    ai_chance = {
+        base = 0	
+    }
+}
+
+kmpmp_player_boost_social_welfare_state_decision = {
+    is_shown = {
+        always = yes
+    }
+
+    possible = {
+        NOT = {
+            has_modifier = kmpmp_player_boost_adjustment
+        }
         exists = ig:ig_intelligentsia
         ig:ig_intelligentsia = {
             ig_clout >= 0.1
@@ -135,10 +160,9 @@ kmpmp_player_boost_social_welfare_state_decision = {
     }
 
     when_taken = {
-        set_variable = {
-            name = kmpmp_player_boost_recently_adjusted
-            value = yes
-            days = 7300 # 20 years
+        add_modifier = {
+            name = kmpmp_player_boost_adjustment
+            days = 5475 # 15 years
         }
         remove_player_boost_modifiers = yes
         add_modifier = {
@@ -153,12 +177,13 @@ kmpmp_player_boost_social_welfare_state_decision = {
 
 kmpmp_player_boost_corporative_socialism_decision = {
     is_shown = {
-        NOT = {
-            has_variable = kmpmp_player_boost_recently_adjusted
-        }
+        always = yes
     }
 
     possible = {
+        NOT = {
+            has_modifier = kmpmp_player_boost_adjustment
+        }
         exists = ig:ig_trade_unions
         ig:ig_trade_unions = {
             ig_clout >= 0.1
@@ -167,10 +192,9 @@ kmpmp_player_boost_corporative_socialism_decision = {
     }
 
     when_taken = {
-        set_variable = {
-            name = kmpmp_player_boost_recently_adjusted
-            value = yes
-            days = 7300 # 20 years
+        add_modifier = {
+            name = kmpmp_player_boost_adjustment
+            days = 5475 # 15 years
         }
         remove_player_boost_modifiers = yes
         add_modifier = {
@@ -185,12 +209,13 @@ kmpmp_player_boost_corporative_socialism_decision = {
 
 kmpmp_player_boost_military_police_state_decision = {
     is_shown = {
-        NOT = {
-            has_variable = kmpmp_player_boost_recently_adjusted
-        }
+        always = yes
     }
 
     possible = {
+        NOT = {
+            has_modifier = kmpmp_player_boost_adjustment
+        }
         exists = ig:ig_armed_forces
         ig:ig_armed_forces = {
             ig_clout >= 0.25
@@ -199,10 +224,9 @@ kmpmp_player_boost_military_police_state_decision = {
     }
 
     when_taken = {
-        set_variable = {
-            name = kmpmp_player_boost_recently_adjusted
-            value = yes
-            days = 7300 # 20 years
+        add_modifier = {
+            name = kmpmp_player_boost_adjustment
+            days = 5475 # 15 years
         }
         remove_player_boost_modifiers = yes
         add_modifier = {
@@ -217,12 +241,13 @@ kmpmp_player_boost_military_police_state_decision = {
 
 kmpmp_player_boost_tycoon_capitalism_decision = {
     is_shown = {
-        NOT = {
-            has_variable = kmpmp_player_boost_recently_adjusted
-        }
+        always = yes
     }
 
     possible = {
+        NOT = {
+            has_modifier = kmpmp_player_boost_adjustment
+        }
         exists = ig:ig_industrialists
         ig:ig_industrialists = {
             ig_clout >= 0.05
@@ -231,10 +256,9 @@ kmpmp_player_boost_tycoon_capitalism_decision = {
     }
 
     when_taken = {
-        set_variable = {
-            name = kmpmp_player_boost_recently_adjusted
-            value = yes
-            days = 7300 # 20 years
+        add_modifier = {
+            name = kmpmp_player_boost_adjustment
+            days = 5475 # 15 years
         }
         remove_player_boost_modifiers = yes
         add_modifier = {
