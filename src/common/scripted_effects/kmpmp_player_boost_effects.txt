@@ -49,8 +49,8 @@
     }
     if = {
         limit = {
-            has_modifier = kmpmp_player_boost_military_police_state
+            has_modifier = kmpmp_player_boost_tycoon_capitalism
         }
-        remove_modifier = kmpmp_player_boost_military_police_state
+        remove_modifier = kmpmp_player_boost_tycoon_capitalism
     }
 }
