@@ -39,13 +39,13 @@
         add_modifier = {
             name = kmpmp_character_schooling_heir_ig_in_progress
             years = 10
-            months = 1
+            #months = 1
         }
         owner = {
             add_modifier = {
                 name = kmpmp_character_schooling_heir_ig_expenses
                 years = 10
-                months = 1
+                #months = 1
             }
             
             add_journal_entry = {

@@ -33,6 +33,13 @@ kmpmp_ev_character_schooling.1 = { # schooling heir ig
             }
             weight = { # i'm too stupid to get this mtth block to work adding ig_clout
                 base = 1
+                modifier = { trigger = { ig_clout > 0.1 } add = 0.05 }
+                modifier = { trigger = { ig_clout > 0.15 } add = 0.05 }
+                modifier = { trigger = { ig_clout > 0.2 } add = 0.05 }
+                modifier = { trigger = { ig_clout > 0.25 } add = 0.05 }
+                modifier = { trigger = { ig_clout > 0.3 } add = 0.05 }
+                modifier = { trigger = { ig_clout > 0.35 } add = 0.05 }
+                modifier = { trigger = { ig_clout > 0.4 } add = 0.05 }
             }
             save_scope_as = schooling_heir_ig_target_a
         }
@@ -46,6 +53,13 @@ kmpmp_ev_character_schooling.1 = { # schooling heir ig
             }
             weight = {
                 base = 1
+                modifier = { trigger = { ig_clout > 0.1 } add = 0.05 }
+                modifier = { trigger = { ig_clout > 0.15 } add = 0.05 }
+                modifier = { trigger = { ig_clout > 0.2 } add = 0.05 }
+                modifier = { trigger = { ig_clout > 0.25 } add = 0.05 }
+                modifier = { trigger = { ig_clout > 0.3 } add = 0.05 }
+                modifier = { trigger = { ig_clout > 0.35 } add = 0.05 }
+                modifier = { trigger = { ig_clout > 0.4 } add = 0.05 }
             }
             save_scope_as = schooling_heir_ig_target_b
         }
@@ -60,6 +74,13 @@ kmpmp_ev_character_schooling.1 = { # schooling heir ig
             }
             weight = {
                 base = 1
+                modifier = { trigger = { ig_clout > 0.1 } add = 0.05 }
+                modifier = { trigger = { ig_clout > 0.15 } add = 0.05 }
+                modifier = { trigger = { ig_clout > 0.2 } add = 0.05 }
+                modifier = { trigger = { ig_clout > 0.25 } add = 0.05 }
+                modifier = { trigger = { ig_clout > 0.3 } add = 0.05 }
+                modifier = { trigger = { ig_clout > 0.35 } add = 0.05 }
+                modifier = { trigger = { ig_clout > 0.4 } add = 0.05 }
             }
             save_scope_as = schooling_heir_ig_target_c
         }
