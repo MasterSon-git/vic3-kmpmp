@@ -1,41 +1,55 @@
 ﻿on_monthly_pulse_country = {
     on_actions = {
-        player_boost_effect_state_unincorporated_education_access
-    }
-}
-
-# Root = Diplomatic Play
-# scope:actor = Initiator country
-# scope:target = Target country
-on_war_end = {
-    on_actions = {
         buff_nation_effect_for_unification
+        player_boost_effect_state_unincorporated_education_access
     }
 }
 
 buff_nation_effect_for_unification = {
     effect = {
         if = {
-            limit = { 
-                is_diplomatic_play_type = dp_unify_italy
-                scope:actor.owner = c:ITA
+            limit = {
+                exists = c:ITA
+                owner = c:ITA
             }
-            scope:actor.owner = {
+            if = {
+                limit = {
+                    NOT = {
+                        has_modifier = kmpmp_buff_medium_nation
+                    }
+                }
                 add_modifier = {
                     name = kmpmp_buff_medium_nation
                 }
+            }
+            if = {
+                limit = {
+                    has_modifier = kmpmp_buff_small_nation
+                }
+                remove_modifier = kmpmp_buff_small_nation
             }
         }
 
         if = {
-            limit = { 
-                is_diplomatic_play_type = dp_unify_scandinavia
-                scope:actor.owner = c:SCA
+            limit = {
+                exists = c:SCA
+                owner = c:SCA
             }
-            scope:actor.owner = {
+            if = {
+                limit = {
+                    NOT = {
+                        has_modifier = kmpmp_buff_medium_nation
+                    }
+                }
                 add_modifier = {
                     name = kmpmp_buff_medium_nation
                 }
+            }
+            if = {
+                limit = {
+                    has_modifier = kmpmp_buff_small_nation
+                }
+                remove_modifier = kmpmp_buff_small_nation
             }
         }
     }
