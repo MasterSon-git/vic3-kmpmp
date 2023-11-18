@@ -1,0 +1,77 @@
+﻿kmpmp_schooling_heir_ig = {
+    icon = "gfx/interface/character_panel/schooling.dds"
+    clicksound = "event:/SFX/UI/Military/commander_promote"
+
+    potential = {
+        is_heir = yes
+        owner = scope:actor
+        NOT = {
+            has_modifier = kmpmp_character_schooling_heir_ig_in_progress
+            # or use variable
+        }
+        owner ?= {
+            NOT = {
+                is_subject = yes
+                is_subject_type = subject_type_personal_union
+            }
+        }
+    }
+
+    possible = {
+        age <= 8
+        owner = {
+            any_interest_group = {
+                NOT = {
+                    THIS = ROOT.interest_group
+                }
+                ig_clout >= 0.05
+            }
+        }
+    }
+
+    effect = {
+        interest_group = {
+            add_modifier = {
+                name = kmpmp_character_schooling_heir_ig_approval_negative
+                years = 2
+            }
+        }
+        add_modifier = {
+            name = kmpmp_character_schooling_heir_ig_in_progress
+            years = 10
+            months = 1
+        }
+        owner = {
+            add_modifier = {
+                name = kmpmp_character_schooling_heir_ig_expenses
+                years = 10
+                months = 1
+            }
+            
+            add_journal_entry = {
+                type = kmpmp_je_character_schooling_heir_ig
+            }
+		}
+    }
+
+    ai_chance = {
+        value = 0
+    }
+}
+
+# test_kill_char = {
+#     icon = "gfx/interface/character_panel/schooling.dds"
+#     clicksound = "event:/SFX/UI/Military/commander_promote"
+
+#     potential = {
+#         owner = scope:actor
+#     }
+
+#     effect = {
+#         kill_character = yes
+#     }
+
+#     ai_chance = {
+#         value = 0
+#     }
+# }

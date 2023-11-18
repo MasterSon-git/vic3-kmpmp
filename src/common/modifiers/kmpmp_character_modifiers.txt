@@ -1,0 +1,19 @@
+﻿kmpmp_character_schooling_heir_ig_approval_negative = {
+    icon = "gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds"
+    interest_group_approval_add = -2
+}
+
+kmpmp_character_schooling_heir_ig_approval_positive = {
+    icon = "gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds"
+    interest_group_approval_add = 1
+}
+
+kmpmp_character_schooling_heir_ig_in_progress = {
+    icon = "gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds"
+}
+
+kmpmp_character_schooling_heir_ig_expenses = {
+    icon = "gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds"
+    #country_expenses_add = 1
+    state_tax_waste_add = 0.02
+}

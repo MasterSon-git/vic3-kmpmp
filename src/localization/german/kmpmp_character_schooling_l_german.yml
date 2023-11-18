@@ -1,0 +1,21 @@
+﻿l_german:
+ kmpmp_schooling_heir_ig:0 "$concept_interest_group$ ändern"
+ kmpmp_schooling_heir_ig_info:0 "Beginnt die Ausbildung des Erben um die [Concept('concept_interest_group', '$concept_interest_group$')] zu ändern"
+
+ kmpmp_je_character_schooling_heir_ig:0 "Ausbildung des Erben"
+ kmpmp_je_character_schooling_heir_ig_reason:0 "Da wir mit der Gesinnung unseres Erben nicht zufrieden sind, setzen wir alles daran, diese zu ändern"
+
+ kmpmp_ev_character_schooling.1.t:0 "Ausbildung des Erben"
+ kmpmp_ev_character_schooling.1.d:0 "Lasst uns eine andere $concept_interest_group$ auswählen"
+ kmpmp_ev_character_schooling.1.f:0 "Mehrere $concept_interest_groups$ haben sich als würdig erwiesen, lassen Sie uns eine auswählen"
+ kmpmp_ev_character_schooling.1.a:0 "Es könnte weise sein die [SCOPE.gsInterestGroup('schooling_heir_ig_target_a').GetName] zu wählen"
+ kmpmp_ev_character_schooling.1.b:0 "Wir haben gute Erfahrungen mit den [SCOPE.gsInterestGroup('schooling_heir_ig_target_b').GetName] gemacht"
+ kmpmp_ev_character_schooling.1.c:0 "Die [SCOPE.gsInterestGroup('schooling_heir_ig_target_c').GetName] könnten es Wert sein"
+
+ kmpmp_character_schooling_heir_ig_completed:0 "[SCOPE.sCharacter('schooling_heir').GetFullName] wird seine [Concept('concept_interest_group', '$concept_interest_group$')] ändern"
+ kmpmp_character_schooling_heir_ig_completed_trigger:0 "[SCOPE.sCharacter('schooling_heir').GetFullName] hat die Ausbildung abgeschlossen"
+
+ kmpmp_character_schooling_heir_ig_approval_negative:0 "$concept_interest_group$ des Erben geändert"
+ kmpmp_character_schooling_heir_ig_approval_positive:0 "$concept_interest_group$ des Erben geändert"
+ kmpmp_character_schooling_heir_ig_in_progress:0 "Ausbildung im Gange"
+ kmpmp_character_schooling_heir_ig_expenses:0 "Ausbildungskosten"

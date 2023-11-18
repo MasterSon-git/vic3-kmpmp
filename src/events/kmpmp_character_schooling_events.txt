@@ -1,0 +1,141 @@
+﻿namespace = kmpmp_ev_character_schooling
+
+kmpmp_ev_character_schooling.1 = { # schooling heir ig
+    type = country_event
+    placement = root
+    title = kmpmp_ev_character_schooling.1.t
+    desc = kmpmp_ev_character_schooling.1.d
+    flavor = kmpmp_ev_character_schooling.1.f
+
+    icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
+
+    gui_window = event_window_1char_tabloid
+
+    left_icon = scope:schooling_heir
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+    trigger = { # triggered from je kmpmp_je_character_schooling_heir_ig
+    }
+
+    immediate = {
+        heir = {
+            save_scope_as = schooling_heir
+        }
+
+        random_interest_group = {
+            limit = {
+                NOT = {
+                    THIS = scope:schooling_heir.interest_group
+                }
+                ig_clout >= 0.05
+            }
+            weight = { # i'm too stupid to get this mtth block to work adding ig_clout
+                base = 1
+            }
+            save_scope_as = schooling_heir_ig_target_a
+        }
+        random_interest_group = {
+            limit = {
+                NOT = {
+                    THIS = scope:schooling_heir.interest_group
+                    THIS = scope:schooling_heir_ig_target_a
+                }
+                ig_clout >= 0.05
+            }
+            weight = {
+                base = 1
+            }
+            save_scope_as = schooling_heir_ig_target_b
+        }
+        random_interest_group = {
+            limit = {
+                NOT = {
+                    THIS = scope:schooling_heir.interest_group
+                    THIS = scope:schooling_heir_ig_target_a
+                    THIS = scope:schooling_heir_ig_target_b
+                }
+                ig_clout >= 0.05
+            }
+            weight = {
+                base = 1
+            }
+            save_scope_as = schooling_heir_ig_target_c
+        }
+    }
+
+    option = { # 1
+        name = kmpmp_ev_character_schooling.1.a
+        default_option = yes
+        
+        trigger = {
+            exists = scope:schooling_heir_ig_target_a
+        }
+
+        set_variable = {
+            name = schooling_heir_ig_target
+            value = scope:schooling_heir_ig_target_a
+        }
+
+        scope:schooling_heir_ig_target_a = {
+            add_modifier = {
+                name = kmpmp_character_schooling_heir_ig_approval_positive
+                years = 2
+            }
+        }
+
+        if = { limit = { exists = scope:schooling_heir_ig_target_a } clear_saved_scope = schooling_heir_ig_target_a }
+        if = { limit = { exists = scope:schooling_heir_ig_target_b } clear_saved_scope = schooling_heir_ig_target_b }
+        if = { limit = { exists = scope:schooling_heir_ig_target_c } clear_saved_scope = schooling_heir_ig_target_c }
+    }
+
+    option = { # 2
+        name = kmpmp_ev_character_schooling.1.b
+
+        trigger = {
+            exists = scope:schooling_heir_ig_target_b
+        }
+
+        set_variable = {
+            name = schooling_heir_ig_target
+            value = scope:schooling_heir_ig_target_b
+        }
+
+        scope:schooling_heir_ig_target_b = {
+            add_modifier = {
+                name = kmpmp_character_schooling_heir_ig_approval_positive
+                years = 2
+            }
+        }
+
+        if = { limit = { exists = scope:schooling_heir_ig_target_a } clear_saved_scope = schooling_heir_ig_target_a }
+        if = { limit = { exists = scope:schooling_heir_ig_target_b } clear_saved_scope = schooling_heir_ig_target_b }
+        if = { limit = { exists = scope:schooling_heir_ig_target_c } clear_saved_scope = schooling_heir_ig_target_c }
+    }
+
+    option = { # 3
+        name = kmpmp_ev_character_schooling.1.c
+        
+        trigger = {
+            exists = scope:schooling_heir_ig_target_c
+        }
+
+        set_variable = {
+            name = schooling_heir_ig_target
+            value = scope:schooling_heir_ig_target_c
+        }
+
+        scope:schooling_heir_ig_target_c = {
+            add_modifier = {
+                name = kmpmp_character_schooling_heir_ig_approval_positive
+                years = 2
+            }
+        }
+
+        if = { limit = { exists = scope:schooling_heir_ig_target_a } clear_saved_scope = schooling_heir_ig_target_a }
+        if = { limit = { exists = scope:schooling_heir_ig_target_b } clear_saved_scope = schooling_heir_ig_target_b }
+        if = { limit = { exists = scope:schooling_heir_ig_target_c } clear_saved_scope = schooling_heir_ig_target_c }
+    }
+
+}

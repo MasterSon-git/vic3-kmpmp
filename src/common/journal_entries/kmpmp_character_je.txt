@@ -1,0 +1,309 @@
+﻿kmpmp_je_character_schooling_heir_ig = {
+    icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
+
+    is_shown_when_inactive = {
+        NOT = {
+            is_subject = yes
+            is_subject_type = subject_type_personal_union
+        }
+		exists = heir
+		heir = {
+            has_modifier = kmpmp_character_schooling_heir_ig_in_progress
+        }
+	}
+
+    immediate = {
+        if = {
+            limit = {
+                NOT = {
+                    exists = scope:schooling_heir
+                }
+            }
+            heir = {
+                save_scope_as = schooling_heir
+            }
+
+            trigger_event = { 
+                id = kmpmp_ev_character_schooling.1
+                popup = yes 
+            }
+        }
+    }
+
+    complete = {
+        #scope:journal_entry = { is_goal_complete = yes }
+        custom_tooltip = { # use custom tooltip - has_modifier localization fails in character scope
+            text = kmpmp_character_schooling_heir_ig_completed_trigger
+            scope:schooling_heir = {
+                NOT = {
+                    has_modifier = kmpmp_character_schooling_heir_ig_in_progress
+                }
+            }
+        }
+    }
+
+    on_complete = {
+        custom_tooltip = {
+            text = kmpmp_character_schooling_heir_ig_completed
+            # maybe scope change is no longer needed since we'd assure that je is not shown in personal_union
+            scope:schooling_heir.owner = { # needed for countries with personal union - je might complete in context of the other country
+                if = {
+                    limit = {
+                        scope:schooling_heir = {
+                            is_female = yes
+                        }
+                    }
+                    set_variable = {
+                        name = schooling_heir_is_female
+                        value = yes
+                    }
+                }
+                else = {
+                    set_variable = {
+                        name = schooling_heir_is_female
+                        value = no
+                    }
+                }
+
+                if = {
+                    limit = {
+                        scope:schooling_heir = {
+                            is_ruler = yes
+                        }
+                    }
+                    set_variable = {
+                        name = schooling_heir_is_ruler
+                        value = yes
+                    }
+                }
+                else = {
+                    set_variable = {
+                        name = schooling_heir_is_ruler
+                        value = no
+                    }
+                }
+
+                if = {
+                    limit = {
+                        scope:schooling_heir = {
+                            is_heir = yes
+                        }
+                    }
+                    set_variable = {
+                        name = schooling_heir_is_heir
+                        value = yes
+                    }
+                }
+                else = {
+                    set_variable = {
+                        name = schooling_heir_is_heir
+                        value = no
+                    }
+                }
+
+                if = {
+                    limit = {
+                        scope:schooling_heir = {
+                            is_historical = yes
+                        }
+                    }
+                    set_variable = {
+                        name = schooling_heir_is_historical
+                        value = yes
+                    }
+                }
+                else = {
+                    set_variable = {
+                        name = schooling_heir_is_historical
+                        value = no
+                    }
+                }
+
+                scope:schooling_heir = {
+                    place_character_in_void = 1
+                    #save_scope_as = pre_schooling_character
+                }
+
+                create_character = {
+                    # seems impossible to set name which is not a simple string
+                    # name = kmpmp_character_pre_schooling_name
+                    # first_name = kmpmp_character_pre_schooling_first_name
+                    # last_name = kmpmp_character_pre_schooling_last_name
+                    culture = scope:schooling_heir.culture
+                    religion = scope:schooling_heir.religion
+                    female = var:schooling_heir_is_female
+                    noble = yes # think to use always yes, because it's a heir of a monarch
+                    ruler = var:schooling_heir_is_ruler
+                    heir = var:schooling_heir_is_heir
+                    historical = var:schooling_heir_is_historical
+                    age = scope:schooling_heir.age
+                    ideology = scope:schooling_heir.ideology
+                    interest_group = var:schooling_heir_ig_target
+                    #template = base template to generate the character from
+                    #on_created = effect
+                    #save_scope_as = scope name
+                    #save_scope_as = schooled_char
+                    trait_generation = { }
+                    hq = scope:schooling_heir.owner.capital.land_hq # this should be correct
+                }
+                
+                hidden_effect = {
+                    if = {
+                        limit = {
+                            exists = var:schooling_heir_is_heir
+                        }
+
+                        if = {
+                            limit = {
+                                var:schooling_heir_is_heir = yes
+                            }
+                            heir = {
+                                save_scope_as = schooled_char
+                            }
+                        }
+                        else = { # if schooled heir is ruler in the mean time
+                            ruler = {
+                                save_scope_as = schooled_char
+                            }
+                        }
+
+                        # condition
+                        if = { limit = { scope:schooling_heir = { has_trait = alcoholic } } scope:schooled_char = { add_trait = alcoholic } }
+                        if = { limit = { scope:schooling_heir = { has_trait = opium_addiction } } scope:schooled_char = { add_trait = opium_addiction } }
+                        if = { limit = { scope:schooling_heir = { has_trait = cocaine_addiction } } scope:schooled_char = { add_trait = cocaine_addiction } }
+                        if = { limit = { scope:schooling_heir = { has_trait = cancer } } scope:schooled_char = { add_trait = cancer } }
+                        if = { limit = { scope:schooling_heir = { has_trait = grifter } } scope:schooled_char = { add_trait = grifter } }
+                        if = { limit = { scope:schooling_heir = { has_trait = scarred } } scope:schooled_char = { add_trait = scarred } }
+                        if = { limit = { scope:schooling_heir = { has_trait = senile } } scope:schooled_char = { add_trait = senile } }
+                        if = { limit = { scope:schooling_heir = { has_trait = syphilis } } scope:schooled_char = { add_trait = syphilis } }
+                        if = { limit = { scope:schooling_heir = { has_trait = shellshocked } } scope:schooled_char = { add_trait = shellshocked } }
+                        if = { limit = { scope:schooling_heir = { has_trait = wounded } } scope:schooled_char = { add_trait = wounded } }
+                        if = { limit = { scope:schooling_heir = { has_trait = psychological_affliction } } scope:schooled_char = { add_trait = psychological_affliction } }
+                        if = { limit = { scope:schooling_heir = { has_trait = expensive_tastes } } scope:schooled_char = { add_trait = expensive_tastes } }
+                        if = { limit = { scope:schooling_heir = { has_trait = kidney_stones } } scope:schooled_char = { add_trait = kidney_stones } }
+                        if = { limit = { scope:schooling_heir = { has_trait = beetle_ear } } scope:schooled_char = { add_trait = beetle_ear } }
+                        if = { limit = { scope:schooling_heir = { has_trait = war_criminal } } scope:schooled_char = { add_trait = war_criminal } }
+                        if = { limit = { scope:schooling_heir = { has_trait = sickly } } scope:schooled_char = { add_trait = sickly } }
+
+                        # personality
+                        if = { limit = { scope:schooling_heir = { has_trait = trait_child } } scope:schooled_char = { add_trait = trait_child } }
+                        if = { limit = { scope:schooling_heir = { has_trait = direct } } scope:schooled_char = { add_trait = direct } }
+                        if = { limit = { scope:schooling_heir = { has_trait = persistent } } scope:schooled_char = { add_trait = persistent } }
+                        if = { limit = { scope:schooling_heir = { has_trait = cautious } } scope:schooled_char = { add_trait = cautious } }
+                        if = { limit = { scope:schooling_heir = { has_trait = arrogant } } scope:schooled_char = { add_trait = arrogant } }
+                        if = { limit = { scope:schooling_heir = { has_trait = bigoted } } scope:schooled_char = { add_trait = bigoted } }
+                        if = { limit = { scope:schooling_heir = { has_trait = reckless } } scope:schooled_char = { add_trait = reckless } }
+                        if = { limit = { scope:schooling_heir = { has_trait = tactful } } scope:schooled_char = { add_trait = tactful } }
+                        if = { limit = { scope:schooling_heir = { has_trait = ambitious } } scope:schooled_char = { add_trait = ambitious } }
+                        if = { limit = { scope:schooling_heir = { has_trait = imperious } } scope:schooled_char = { add_trait = imperious } }
+                        if = { limit = { scope:schooling_heir = { has_trait = wrathful } } scope:schooled_char = { add_trait = wrathful } }
+                        if = { limit = { scope:schooling_heir = { has_trait = reserved } } scope:schooled_char = { add_trait = reserved } }
+                        if = { limit = { scope:schooling_heir = { has_trait = cruel } } scope:schooled_char = { add_trait = cruel } }
+                        if = { limit = { scope:schooling_heir = { has_trait = meticulous } } scope:schooled_char = { add_trait = meticulous } }
+                        if = { limit = { scope:schooling_heir = { has_trait = charismatic } } scope:schooled_char = { add_trait = charismatic } }
+                        if = { limit = { scope:schooling_heir = { has_trait = romantic } } scope:schooled_char = { add_trait = romantic } }
+                        if = { limit = { scope:schooling_heir = { has_trait = brave } } scope:schooled_char = { add_trait = brave } }
+                        if = { limit = { scope:schooling_heir = { has_trait = innovative } } scope:schooled_char = { add_trait = innovative } }
+                        if = { limit = { scope:schooling_heir = { has_trait = hedonist } } scope:schooled_char = { add_trait = hedonist } }
+                        if = { limit = { scope:schooling_heir = { has_trait = pious } } scope:schooled_char = { add_trait = pious } }
+                        if = { limit = { scope:schooling_heir = { has_trait = imposing } } scope:schooled_char = { add_trait = imposing } }
+                        if = { limit = { scope:schooling_heir = { has_trait = honorable } } scope:schooled_char = { add_trait = honorable } }
+
+                        # skill
+                        if = { limit = { scope:schooling_heir = { has_trait = resupply_commander } } scope:schooled_char = { add_trait = resupply_commander } }
+                        if = { limit = { scope:schooling_heir = { has_trait = pillager } } scope:schooled_char = { add_trait = pillager } }
+                        if = { limit = { scope:schooling_heir = { has_trait = surveyor } } scope:schooled_char = { add_trait = surveyor } }
+                        if = { limit = { scope:schooling_heir = { has_trait = forest_commander } } scope:schooled_char = { add_trait = forest_commander } }
+                        if = { limit = { scope:schooling_heir = { has_trait = plains_commander } } scope:schooled_char = { add_trait = plains_commander } }
+                        if = { limit = { scope:schooling_heir = { has_trait = mountain_commander } } scope:schooled_char = { add_trait = mountain_commander } }
+                        if = { limit = { scope:schooling_heir = { has_trait = basic_artillery_commander } } scope:schooled_char = { add_trait = basic_artillery_commander } }
+                        if = { limit = { scope:schooling_heir = { has_trait = experienced_artillery_commander } } scope:schooled_char = { add_trait = experienced_artillery_commander } }
+                        if = { limit = { scope:schooling_heir = { has_trait = expert_artillery_commander } } scope:schooled_char = { add_trait = expert_artillery_commander } }
+                        if = { limit = { scope:schooling_heir = { has_trait = stalwart_defender } } scope:schooled_char = { add_trait = stalwart_defender } }
+                        if = { limit = { scope:schooling_heir = { has_trait = trench_rat } } scope:schooled_char = { add_trait = trench_rat } }
+                        if = { limit = { scope:schooling_heir = { has_trait = defense_in_depth_specialist } } scope:schooled_char = { add_trait = defense_in_depth_specialist } }
+                        if = { limit = { scope:schooling_heir = { has_trait = basic_offensive_planner } } scope:schooled_char = { add_trait = basic_offensive_planner } }
+                        if = { limit = { scope:schooling_heir = { has_trait = experienced_offensive_planner } } scope:schooled_char = { add_trait = experienced_offensive_planner } }
+                        if = { limit = { scope:schooling_heir = { has_trait = expert_offensive_planner } } scope:schooled_char = { add_trait = expert_offensive_planner } }
+                        if = { limit = { scope:schooling_heir = { has_trait = basic_defensive_strategist } } scope:schooled_char = { add_trait = basic_defensive_strategist } }
+                        if = { limit = { scope:schooling_heir = { has_trait = experienced_defensive_strategist } } scope:schooled_char = { add_trait = experienced_defensive_strategist } }
+                        if = { limit = { scope:schooling_heir = { has_trait = expert_defensive_strategist } } scope:schooled_char = { add_trait = expert_defensive_strategist } }
+                        if = { limit = { scope:schooling_heir = { has_trait = basic_naval_commander } } scope:schooled_char = { add_trait = basic_naval_commander } }
+                        if = { limit = { scope:schooling_heir = { has_trait = experienced_naval_commander } } scope:schooled_char = { add_trait = experienced_naval_commander } }
+                        if = { limit = { scope:schooling_heir = { has_trait = expert_naval_commander } } scope:schooled_char = { add_trait = expert_naval_commander } }
+                        if = { limit = { scope:schooling_heir = { has_trait = convoy_raider_commander } } scope:schooled_char = { add_trait = convoy_raider_commander } }
+                        if = { limit = { scope:schooling_heir = { has_trait = experienced_convoy_raider } } scope:schooled_char = { add_trait = experienced_convoy_raider } }
+                        if = { limit = { scope:schooling_heir = { has_trait = expert_convoy_raider } } scope:schooled_char = { add_trait = expert_convoy_raider } }
+                        if = { limit = { scope:schooling_heir = { has_trait = traditionalist_commander } } scope:schooled_char = { add_trait = traditionalist_commander } }
+                        if = { limit = { scope:schooling_heir = { has_trait = popular_commander } } scope:schooled_char = { add_trait = popular_commander } }
+                        if = { limit = { scope:schooling_heir = { has_trait = celebrity_commander } } scope:schooled_char = { add_trait = celebrity_commander } }
+                        if = { limit = { scope:schooling_heir = { has_trait = dockyard_master } } scope:schooled_char = { add_trait = dockyard_master } }
+                        if = { limit = { scope:schooling_heir = { has_trait = basic_diplomat } } scope:schooled_char = { add_trait = basic_diplomat } }
+                        if = { limit = { scope:schooling_heir = { has_trait = experienced_diplomat } } scope:schooled_char = { add_trait = experienced_diplomat } }
+                        if = { limit = { scope:schooling_heir = { has_trait = masterful_diplomat } } scope:schooled_char = { add_trait = masterful_diplomat } }
+                        if = { limit = { scope:schooling_heir = { has_trait = basic_colonial_administrator } } scope:schooled_char = { add_trait = basic_colonial_administrator } }
+                        if = { limit = { scope:schooling_heir = { has_trait = experienced_colonial_administrator } } scope:schooled_char = { add_trait = experienced_colonial_administrator } }
+                        if = { limit = { scope:schooling_heir = { has_trait = expert_colonial_administrator } } scope:schooled_char = { add_trait = expert_colonial_administrator } }
+                        if = { limit = { scope:schooling_heir = { has_trait = basic_political_operator } } scope:schooled_char = { add_trait = basic_political_operator } }
+                        if = { limit = { scope:schooling_heir = { has_trait = experienced_political_operator } } scope:schooled_char = { add_trait = experienced_political_operator } }
+                        if = { limit = { scope:schooling_heir = { has_trait = expert_political_operator } } scope:schooled_char = { add_trait = expert_political_operator } }
+                        if = { limit = { scope:schooling_heir = { has_trait = inspirational_orator } } scope:schooled_char = { add_trait = inspirational_orator } }
+                        if = { limit = { scope:schooling_heir = { has_trait = demagogue } } scope:schooled_char = { add_trait = demagogue } }
+                        if = { limit = { scope:schooling_heir = { has_trait = firebrand } } scope:schooled_char = { add_trait = firebrand } }
+                        if = { limit = { scope:schooling_heir = { has_trait = explorer } } scope:schooled_char = { add_trait = explorer } }
+                        if = { limit = { scope:schooling_heir = { has_trait = bandit } } scope:schooled_char = { add_trait = bandit } }
+                        if = { limit = { scope:schooling_heir = { has_trait = erudite } } scope:schooled_char = { add_trait = erudite } }
+                        if = { limit = { scope:schooling_heir = { has_trait = literary } } scope:schooled_char = { add_trait = literary } }
+                        if = { limit = { scope:schooling_heir = { has_trait = engineer } } scope:schooled_char = { add_trait = engineer } }
+                        if = { limit = { scope:schooling_heir = { has_trait = master_bureaucrat } } scope:schooled_char = { add_trait = master_bureaucrat } }
+                    }            
+                }
+
+                remove_variable = schooling_heir_ig_target
+                remove_variable = schooling_heir_is_female
+                remove_variable = schooling_heir_is_ruler
+                remove_variable = schooling_heir_is_heir
+                remove_variable = schooling_heir_is_historical
+                clear_saved_scope = schooling_heir
+            }
+        }
+    }
+
+    # optional invalidation trigger, should not notify player when it triggers, just clean up and silently disappear due to journal entry no longer being valid; if left blank, cannot be invalidated
+	invalid = {
+        NOR = {
+            exists = scope:schooling_heir
+            scope:schooling_heir = {
+                is_character_alive = yes
+            }
+        }
+	}
+
+	# effect which is executed when 'invalid' trigger becomes true
+	on_invalid = {
+        remove_modifier = kmpmp_character_schooling_heir_ig_expenses
+        remove_variable = schooling_heir_ig_target
+        clear_saved_scope = schooling_heir
+	}
+
+    # a script value computing the goal completion metric
+	# current_value = {
+	# 	value = game_date
+	# }
+
+	# # when the journal entry is activated current_value and goal_add_value are evaluated and added together to determine the goal value
+	# goal_add_value = {
+	# 	value = scope:schooling_heir.modifier:kmpmp_character_schooling_heir_ig_in_progress.end_date
+    #     subtract = game_date
+	# }
+
+	weight = 10
+	transferable = no
+	can_revolution_inherit = no
+
+	# is_progressing = {
+	# 	always = yes
+	# }
+
+	# progressbar = yes
+}
