@@ -1,0 +1,28 @@
+﻿pm_electric_trains = {
+	texture = "gfx/interface/icons/production_method_icons/trains_electric.dds"
+	
+	unlocking_technologies = {
+		electric_railway
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_engines_add = 5 # 300
+			goods_input_electricity_add = 10 # 300
+			goods_output_transportation_add = 35 # 1050
+		}
+		level_scaled = {
+			building_employment_laborers_add = 2000
+			building_employment_machinists_add = 2000
+			building_employment_clerks_add = 750
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_infrastructure_add = 30
+		}
+	}
+
+	#required_input_goods = electricity
+}
