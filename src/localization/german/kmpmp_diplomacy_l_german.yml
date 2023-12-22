@@ -1,0 +1,2 @@
+﻿l_german:
+ DIPLO_ACTION_RELATIONS_COLD_OR_GREATER_NOT: "$DIPLO_ACTION_RELATIONS$ sind weniger als $relations_cold$"

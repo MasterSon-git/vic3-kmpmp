@@ -79,9 +79,9 @@ kmpmp_player_boost_state_capitalism = {
     # -10% investment pool contribution eff of capitalists
     state_capitalists_investment_pool_efficiency_mult = -0.1
     # +5% manufacturing throughput
-    building_group_bg_manufacturing_throughput_mult = 0.05
+    building_group_bg_manufacturing_throughput_add = 0.05
     # +10% building sector throughput
-    building_construction_sector_throughput_mult = 0.1
+    building_construction_sector_throughput_add = 0.1
     # -10% edict costs
     country_decree_cost_mult = -0.1
 }
@@ -90,21 +90,21 @@ kmpmp_player_boost_autarky = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 
     # +10% Mines / Fishing / Whaling / Oil / Rubber throughput
-    building_group_bg_mining_throughput_mult = 0.1
-    building_group_bg_fishing_throughput_mult = 0.1
-    building_group_bg_whaling_throughput_mult = 0.1
-    building_group_bg_oil_extraction_throughput_mult = 0.1
-    building_group_bg_rubber_throughput_mult = 0.1
+    building_group_bg_mining_throughput_add = 0.1
+    building_group_bg_fishing_throughput_add = 0.1
+    building_group_bg_whaling_throughput_add = 0.1
+    building_group_bg_oil_extraction_throughput_add = 0.1
+    building_group_bg_rubber_throughput_add = 0.1
     # +10% agriulture throughtput
-    building_group_bg_agriculture_throughput_mult = 0.1
+    building_group_bg_agriculture_throughput_add = 0.1
     # +15% Army Def
     unit_army_defense_mult = 0.15
     # -10% plantation throughput
-    building_group_bg_plantations_throughput_mult = -0.1
+    building_group_bg_plantations_throughput_add = -0.1
     # -10% traderoute competetivness
     country_trade_route_competitiveness_mult = -0.1
     # +10% uni throughput
-    building_university_throughput_mult = 0.1
+    building_university_throughput_add = 0.1
     # +50 Authority
     country_authority_add = 50
 }
@@ -123,7 +123,7 @@ kmpmp_player_boost_social_welfare_state = {
     # +0.5% education access per wealth
     state_education_access_wealth_add = 0.005
     # +15% uni throughput
-    building_university_throughput_mult = 0.15
+    building_university_throughput_add = 0.15
     # +5% accepted pop growth
     state_accepted_birth_rate_mult = 0.05
     # +15% Dependents income

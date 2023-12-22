@@ -106,7 +106,7 @@ types topbar_components
 			
 				textbox = {
 					parentanchor = vcenter
-					raw_text = "[LabelingHelper.GetIconForStandardOfLivingCFixedPoint(Country.GetAverageSoLByPopulation)|v]"
+					text = "[LabelingHelper.GetIconForStandardOfLivingCFixedPoint(Country.GetAverageSoLByPopulation)|v]"
 					autoresize = yes
 					align = left|nobaseline
 					fontsize = 21 #hack to get the same size on the text icon as the rest in the top bar
@@ -114,7 +114,7 @@ types topbar_components
 
 				textbox = {
 					parentanchor = vcenter
-					raw_text = "[Country.GetFormattedStandardOfLivingAll|v]"
+					text = "[Country.GetFormattedStandardOfLivingAll|v]"
 					autoresize = yes
 					align = left|nobaseline
 					margin_left = 3
@@ -224,7 +224,7 @@ types topbar_components
 	
 						textbox = {
 							parentanchor = vcenter
-							raw_text = "[Country.GetPrestige|1v]"
+							text = "[Country.GetPrestige|1v]"
 							alpha = "[TransparentIfZero_int32(Country.GetPrestige)]"
 							autoresize = yes
 							align = left|nobaseline
@@ -254,7 +254,7 @@ types topbar_components
 
 					textbox = {
 						parentanchor = vcenter
-						raw_text = "[Country.GetInfamy|1v]"
+						text = "[Country.GetInfamy|1v]"
 						alpha = "[TransparentIfZero_int32(Country.GetInfamy)]"
 						autoresize = yes
 						align = left|nobaseline
@@ -268,6 +268,7 @@ types topbar_components
 						name = "legitimacy"
 						minimumsize = { 90 28 }
 						maximumsize = { 90 28 }
+						spacing = 2
 						datacontext = "[Country.GetGovernmentLegitimacyLevel]"
 						tooltip = "SULIUS_LEGITIMACY_LEVEL_ACTIVE_TOOLTIP"
 						using = tooltip_below
@@ -298,7 +299,7 @@ types topbar_components
 						name = "innovation"
 						minimumsize = { 90 28 }
 						maximumsize = { 90 28 }
-						#spacing = 2
+						spacing = 2
 						tooltip = "SULIUS_RESEARCH"
 						using = tooltip_below
 						onclick = "[InformationPanelBar.OpenPanelCycleTabs('tech_tree', 'production|military|society')]"
@@ -312,7 +313,7 @@ types topbar_components
 
 						textbox = {
 							parentanchor = vcenter
-							raw_text = "[Country.GetWeeklyInnovation|1v]"
+							text = "[Country.GetWeeklyInnovation|1v]"
 							alpha = "[TransparentIfZero_int32(Country.GetWeeklyInnovation)]"
 							autoresize = yes
 							align = left|nobaseline
@@ -345,7 +346,7 @@ types topbar_components
 	
 						textbox = {
 							parentanchor = vcenter
-							raw_text = "#variable [Country.GetWarships|0]"
+							raw_text = "#variable [Country.GetWarships|0]#!"
 							alpha = "[TransparentIfZero_int32(Country.GetWarships)]"
 							autoresize = yes
 							align = left|nobaseline
@@ -377,7 +378,7 @@ types topbar_components
 
 						textbox = {
 							parentanchor = vcenter
-							raw_text = "[Country.GetBattalions|v]+[Country.CalcConscriptableBattalions|v]"
+							text = "[Country.GetBattalions|v]+[Country.CalcConscriptableBattalions|v]"
 							alpha = "[TransparentIfZero_int32(Country.GetBattalions)]"
 							autoresize = yes
 							align = left|nobaseline
@@ -522,7 +523,7 @@ types topbar_components
 									textbox = {
 										position = { 35 -3 }
 										name = capital_value
-										raw_text = "[GetPlayer.GetPowerDelta('bureaucracy')|D=+]"
+										raw_text = "#bold [GetPlayer.GetPowerDelta('bureaucracy')|D=+]#!"
 										align = center|nobaseline
 										using = fontsize_large
 										autoresize = yes
@@ -564,7 +565,7 @@ types topbar_components
 									textbox = {
 										position = { 35 -3 }
 										name = capital_value
-										raw_text = "[GetPlayer.GetPowerDelta('authority')|=+D]"
+										raw_text = "#bold [GetPlayer.GetPowerDelta('authority')|=+D]#!"
 										align = left|nobaseline
 										using = fontsize_large
 										autoresize = yes
@@ -606,7 +607,7 @@ types topbar_components
 									textbox = {
 										position = { 35 -3 }
 										name = capital_value
-										raw_text = "[GetPlayer.GetPowerDelta('influence')|=+D]"
+										raw_text = "#bold [GetPlayer.GetPowerDelta('influence')|=+D]#!"
 										align = left|nobaseline
 										using = fontsize_large
 										autoresize = yes
@@ -655,7 +656,7 @@ types topbar_components
 									textbox = {
 										position = { 35 -3 }
 										name = capital_value
-										raw_text = "[GetPlayer.GetNumAvailableConvoys|=+D]"
+										raw_text = "#bold [GetPlayer.GetNumAvailableConvoys|=+D]#!"
 										align = left|nobaseline
 										using = fontsize_large
 										autoresize = yes
@@ -702,7 +703,7 @@ types topbar_components
 									textbox = {
 										position = { 35 -3 }
 										name = capital_value
-										raw_text = "[AccessPlayer.PredictWeeklyBalanceWithEconomyHealthHint]"
+										text = "[AccessPlayer.PredictWeeklyBalanceWithEconomyHealthHint]"
 										align = left|nobaseline
 										using = fontsize_large
 										autoresize = yes

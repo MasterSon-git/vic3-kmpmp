@@ -38,7 +38,7 @@ NGraphics = {
 #	FRONT_MARKER_ADVANTAGE_HIGH = 60
 #	FRONT_MARKER_ADVANTAGE_LOW = 25
 
-	# Flat map specific
+	# Flatmap specific
 #	FLAT_MAP_HEIGHT = 3.92
 #	FLAT_MAP_FADE_SPEED = 5.0		# How fast to fade to/from flat map state
 	
@@ -49,17 +49,7 @@ NGraphics = {
 #	DYNAMIC_MAP_OBJECT_MASK_THRESHOLD_HIDE = 0.05
 #	DYNAMIC_TERRAIN_ROAD_WIDTH = 2.5								# Controls how wide roads are considered to be when clearing map objects
 	DYNAMIC_TERRAIN_LAZY_UPDATE_PROVINCES_PER_FRAME = 8 #16			# Max number of provinces that may be updated per frame.
-    DYNAMIC_TERRAIN_LAZY_UPDATE_MAX_TIME_PER_FRAME = 0.001 #0.002          # Max time per frame to spend on dynamic terrain updates in seconds.
-#	COLLECT_VISIBLE_PROVINCE_DATA = yes
-#	VISIBLE_PROVINCE_DATA_FOV_FACTOR = .8							# Tweak this to cover an area larger or smaller than the area actually visible on screen
-#	VISIBLE_PROVINCE_DATA_CAMERA_HEIGHT_FACTOR = 0.5				# Decreasing this value increases the weights of the provinces that are at the center of the screen
-#	VISIBLE_PROVINCE_DATA_MAX_PROVINCE_SIZE = 50000
-#	VISIBLE_PROVINCE_DATA_USE_SQRT_SIZE = no
-#	VISIBLE_PROVINCE_DATA_DEBUG = no								# Highlight provinces by their visibility and show terrain weights on the right side of the screen
-#	VISIBLE_PROVINCE_DATA_TERRAIN_COLORED_HIGHLIGTS = no			# Use terrain colors for visibility highlights
-#	VISIBLE_PROVINCE_DATA_SCALE_TERRAIN_COLOR_WITH_WEIGHT = no		# Try to show both terrain color and visibility weight in debug highlight
-#	VISIBLE_PROVINCE_DATA_RIVER_WEIGHT_FACTOR = 1.0					# Tweak this to scale river weights
-	VISIBLE_PROVINCE_DATA_UPDATE_FREQUENCY = 5.0 #2.0					# Update the visible province data only every X seconds
+	DYNAMIC_TERRAIN_LAZY_UPDATE_MAX_TIME_PER_FRAME = 0.001 #0.002          # Max time per frame to spend on dynamic terrain updates in seconds.
 
 	# Route Spline fix
 #	ROUTE_GENERATION_NAV_MESH_DENSITY = 0.375						# Controls the density of vertexes in the navmesh used to generate the road system

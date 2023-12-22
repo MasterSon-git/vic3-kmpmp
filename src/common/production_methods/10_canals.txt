@@ -15,11 +15,11 @@
 	building_modifiers = {
 		throughput_scaled = {
 			#input goods
-			building_input_tools_add = 50
-			building_input_coal_add = 100
-			building_input_wood_add = 100
-			building_output_services_add = 300
-			building_output_transportation_add = 300
+			goods_input_tools_add = 50
+			goods_input_coal_add = 100
+			goods_input_wood_add = 100
+			goods_output_services_add = 300
+			goods_output_transportation_add = 300
 		}
 
 		level_scaled = {
@@ -43,10 +43,10 @@ pm_canals_mint = {
 	building_modifiers = {
 		throughput_scaled = {
 			#input goods
-			building_input_tools_add = 25
-			building_input_coal_add = 50
-			building_input_wood_add = 50
-			building_input_paper_add = 50
+			goods_input_tools_add = 25
+			goods_input_coal_add = 50
+			goods_input_wood_add = 50
+			goods_input_paper_add = 50
 		}
 
 		level_scaled = {
@@ -74,11 +74,11 @@ pm_canals_eletric = {
 	building_modifiers = {
 		throughput_scaled = {
 			#input goods
-			building_input_tools_add = 50
-			building_input_engines_add = 50
-			building_input_electricity_add = 200
-			building_output_services_add = 350
-			building_output_transportation_add = 500
+			goods_input_tools_add = 50
+			goods_input_engines_add = 50
+			goods_input_electricity_add = 200
+			goods_output_services_add = 350
+			goods_output_transportation_add = 500
 		}
 
 		level_scaled = {
@@ -106,11 +106,11 @@ pm_canals_oil = {
 	building_modifiers = {
 		throughput_scaled = {
 			#input goods
-			building_input_tools_add = 50
-			building_input_engines_add = 50
-			building_input_oil_add = 300
-			building_output_services_add = 500
-			building_output_transportation_add = 600
+			goods_input_tools_add = 50
+			goods_input_engines_add = 50
+			goods_input_oil_add = 300
+			goods_output_services_add = 500
+			goods_output_transportation_add = 600
 		}
 
 		level_scaled = {

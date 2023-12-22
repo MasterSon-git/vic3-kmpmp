@@ -78,7 +78,7 @@ krakatoa.1 = { #krakatoa erupts and you're the owner
 			}
 		}
 		scope:krakatoa_state.state_region = {
-			add_devastation = 30
+			add_devastation = 30 #80
 		}
 		add_modifier = {
 			name = krakatoa_cost_modifier
@@ -99,7 +99,7 @@ krakatoa.1 = { #krakatoa erupts and you're the owner
 			}
 		}
 		scope:krakatoa_state.state_region = {
-			add_devastation = 40
+			add_devastation = 40 #100
 		}
 		capital = {
 			add_radicals_in_state = { #public outrage

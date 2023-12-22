@@ -3,8 +3,8 @@
 	
 	building_modifiers = {
 		workforce_scaled = {
-			building_output_grain_add = -15
-			building_output_oil_add = 10
+			goods_output_grain_add = -15
+			goods_output_oil_add = 10
 		}
 	}
 }

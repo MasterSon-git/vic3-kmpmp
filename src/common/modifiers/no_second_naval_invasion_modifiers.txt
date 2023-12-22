@@ -1,4 +1,0 @@
-﻿# State multiplier
-modifier_incoming_naval_invasion = {
-    icon = gfx/interface/icons/timed_modifier_icons/modifier_incoming_naval_invasion.dds
-}
