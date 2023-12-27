@@ -1,0 +1,15 @@
+﻿l_german:
+ 
+ pm_electric_passenger_carriages:0 "Elektrische Personenwagen"
+ 
+ pmg_gauges_building_railway:0 "Eisenbahnsystemstandard"
+ pm_narrow_gauge_railway:0 "Schmalspurbahn"
+ pm_standard_gauge_railway:0 "Normalspurbahny"
+ pm_broad_gauge_railway:0 "Breitspur-Eisenbahn"
+ pm_electrified_railway:0 "Elektrifizierte Eisenbahn"
+ 
+ pmg_automation_building_railway:0 "Facility Automation"
+ pm_auto_disabled_building_railway:0 "Handgekurbelter Kran"
+ pm_watertube_boiler_building_railway:0 "Wasserrohrkesser"
+ pm_rotary_valve_engine_building_railway:0 "Drehventilmoto"
+ pm_steam_donkey_building_railway:0 "Pferdekopfpumpen"

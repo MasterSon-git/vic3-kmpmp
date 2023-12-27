@@ -173,3 +173,108 @@ behaviorism = {
 		value = 1
 	}
 }
+#mapi changes
+identification_documents = {
+	# Unlocks Identification Documents PM in Government Administrations
+	# Unlocks Closed Borders Law in Migration
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/identification_documents.dds"
+	category = society
+
+	modifier = {
+		state_tax_capacity_add = 25
+		country_institution_home_affairs_max_investment_add = 1
+		state_market_access_price_impact = 0.05
+	}
+	
+	unlocking_technologies = {
+		central_archives
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+corporatism = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/corporatism.dds"
+	category = society
+
+	on_researched = {
+		if = {
+			limit = {
+				NOT = { has_variable = corporatism_researched }
+			}
+			set_variable = corporatism_researched
+			ig:ig_devout = {
+				remove_ideology = ideology_pious
+				add_ideology = ideology_corporatist
+			}
+		}
+	}
+	
+	modifier = {
+		state_radicals_from_sol_change_accepted_culture_mult = -0.10
+		state_market_access_price_impact = 0.05
+	}
+	
+	unlocking_technologies = {
+		labor_movement
+		nationalism
+	}
+	
+	ai_weight = {
+		value = 1
+		
+		if = {
+			limit = { 
+				has_strategy = ai_strategy_egalitarian_agenda
+			}
+			add = -0.5
+		}	
+		if = {
+			limit = { 
+				OR = {
+					has_strategy = ai_strategy_conservative_agenda
+					has_strategy = ai_strategy_reactionary_agenda
+				}			
+			}
+			add = 1.5
+		}
+	}
+}
+macroeconomics = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/macroeconomics.dds"
+	category = society
+	
+	modifier = {
+		country_max_companies_add = 1
+	}
+	
+	unlocking_technologies = {
+		international_exchange_standards
+		corporate_management
+	}
+	
+	ai_weight = {
+		value = 3 # very important tech
+	}
+}
+zeppelins = {
+	# #todo#! Does nothing at the moment
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/zeppelins.dds"
+	category = society
+	
+	modifier = {
+	}
+	
+	unlocking_technologies = {
+		steel_frame_buildings
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
