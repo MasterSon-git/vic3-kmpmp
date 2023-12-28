@@ -86,7 +86,7 @@ pm_electric_trains = {
 		}
 	}
 	
-	required_input_goods = electricity
+	#required_input_goods = electricity
 }
 
 pm_diesel_trains = {
@@ -118,7 +118,7 @@ pm_diesel_trains = {
 		}
 	}
 	
-	required_input_goods = oil
+	#required_input_goods = oil
 }
 
 pm_no_passenger_trains = {
