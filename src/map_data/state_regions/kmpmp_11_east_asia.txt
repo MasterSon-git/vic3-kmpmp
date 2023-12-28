@@ -1,0 +1,43 @@
+﻿STATE_TOHOKU = {
+    id = 529
+    subsistence_building = "building_subsistence_rice_paddies"
+    provinces = { "x15EED4" "x19C715" "x1BAF33" "x3190C0" "x322F47" "x3CA2FC" "x4C5533" "x637FEB" "x701040" "x81A720" "xA26E5F" "xAC762F" "xB011C0" "xB090C0" "xBC2AFE" "xBED026" "xE0D080" "xE22202" "xF01040" "xF29D08" }
+    city = "xB090C0"
+    port = "xE0D080"
+    farm = "x1BAF33"
+    mine = "xF01040"
+    wood = "x3190C0"
+    arable_land = 80
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_silk_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_vineyard_plantations" }
+    capped_resources = {
+        bg_coal_mining = 20 #kmpmp
+        bg_iron_mining = 60
+        bg_lead_mining = 45
+        bg_logging = 15
+        bg_whaling = 6
+        bg_fishing = 15
+    }
+    naval_exit_id = 3059
+}
+
+STATE_SHIKOKU = {
+    id = 535
+    subsistence_building = "building_subsistence_rice_paddies"
+    provinces = { "x5D5512" "x7C9BEB" "x90D040" "xEFD040" "xF05040" }
+    traits = { "state_trait_seto_inland_sea" }
+    city = "x7C9BEB"
+    port = "xEFD040"
+    farm = "xEFD040"
+    mine = "xF05040"
+    wood = "x5D5512"
+    arable_land = 40
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_silk_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" }
+    capped_resources = {
+        bg_coal_mining = 20 #kmpmp
+        bg_iron_mining = 24
+        bg_sulfur_mining = 32
+        bg_logging = 11
+        bg_fishing = 9
+    }
+    naval_exit_id = 3059
+}
