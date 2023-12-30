@@ -1,4 +1,4 @@
-building_Naval_Base_Department = {
+﻿building_Naval_Base_Department = {
 	building_group = bg_kmpmp_navy
 	texture = "gfx/interface/icons/building_icons/naval_base.dds"
 	has_max_level = yes
@@ -20,7 +20,7 @@ building_Naval_Base_Department = {
 		}
 	}
 	ai_value = 1
-	ai_subsidies_weight = 10
+	#ai_subsidies_weight = 10
 
 	required_construction = construction_cost_medium
 }

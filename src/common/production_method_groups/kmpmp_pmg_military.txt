@@ -1,4 +1,4 @@
-pmg_military_staff_system = {								        
+﻿pmg_military_staff_system = {								        
 	production_methods = {
 		pm_kmpmp_staff
 		pm_kmpmp_extra_staff
@@ -6,5 +6,5 @@ pmg_military_staff_system = {
 	}
 	is_hidden_when_unavailable = no
 	ai_selection = most_productive
-	texture = "gfx\interface\icons\generic_icons\mixed_icon_base.dds"	# Different types of PM Groups should have different icons for when the Building panel has mixed configuration
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"	# Different types of PM Groups should have different icons for when the Building panel has mixed configuration
 }

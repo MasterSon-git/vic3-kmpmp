@@ -1,4 +1,4 @@
-bg_kmpmp_military = {
+﻿bg_kmpmp_military = {
 	category = development
 
 	always_possible = yes

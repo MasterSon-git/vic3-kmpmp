@@ -1,4 +1,4 @@
-pm_kmpmp_staff = {
+﻿pm_kmpmp_staff = {
 	texture = "gfx/interface/icons/production_method_icons/no_specialists.dds"
 	building_modifiers = {
 		workforce_scaled = {
@@ -18,7 +18,7 @@ pm_kmpmp_staff = {
 		}
 	}
 	unlocking_technologies = {
-		admirality
+		admiralty
 	}
 }
 pm_kmpmp_extra_staff = {
