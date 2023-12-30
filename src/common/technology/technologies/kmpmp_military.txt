@@ -1,4 +1,4 @@
-######QWF
+﻿######QWF
 ### ERA 3
 
 military_statistics = {
