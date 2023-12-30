@@ -19,3 +19,8 @@ country_society_tech_research_speed_mult = {
 	percent = yes
 	num_decimals = 0
 }
+state_building_Naval_Base_Department_max_level_add = {
+	good = yes
+	percent = no
+	num_decimals = 0
+}

@@ -1,0 +1,15 @@
+bg_kmpmp_military = {
+	category = development
+
+	always_possible = yes
+	
+	is_government_funded = yes
+	
+	lens = military
+	
+	urbanization = 2
+}
+
+bg_kmpmp_navy = {
+	parent_group = bg_kmpmp_military
+}

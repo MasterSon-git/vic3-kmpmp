@@ -1,0 +1,72 @@
+pm_kmpmp_staff = {
+	texture = "gfx/interface/icons/production_method_icons/no_specialists.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_wood_add = 2
+			goods_input_fabric_add = 1
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 875
+			building_employment_officers_add = 125
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+				unit_navy_offense_mult = 0.04
+				unit_navy_defense_mult = 0.04
+			
+		}
+	}
+	unlocking_technologies = {
+		admirality
+	}
+}
+pm_kmpmp_extra_staff = {
+	texture = "gfx/interface/icons/production_method_icons/cavalry.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_ammunition_add = 7.5
+			goods_input_artillery_add = 7.5
+			goods_input_steel_add = 3
+			goods_input_coal_add =1.5
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 850
+			building_employment_officers_add = 150
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			unit_navy_offense_mult = 0.06
+			unit_navy_defense_mult = 0.06
+		}
+	}
+	unlocking_technologies = {
+		ironclad_tech
+	}
+}
+pm_kmpmp_elite_staff = {
+	texture = "gfx/interface/icons/production_method_icons/squad_infantry.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_ammunition_add = 20
+			goods_input_artillery_add = 10
+			goods_input_steel_add = 10
+			goods_input_coal_add = 5
+			goods_input_radios_add = 10
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 825
+			building_employment_officers_add = 175
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			unit_navy_offense_mult = 0.1
+			unit_navy_defense_mult = 0.1
+		}
+	}
+	unlocking_technologies = {
+		sea_lane_strategies
+	}
+}
