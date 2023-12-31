@@ -1,0 +1,6 @@
+﻿vtm_country_is_recognized_trigger = {
+	OR = {
+		is_country_type = recognized
+		is_country_type = colonial
+	}
+}

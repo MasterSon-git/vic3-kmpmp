@@ -1,0 +1,13 @@
+﻿l_german:
+ ## USA
+#  ai_strategy_manifest_destiny:0 "Manifest Destiny"
+#  ai_strategy_manifest_destiny_desc:0 "The [COUNTRY.GetName] want to claim their destiny and ascend to rule North America."
+ ## JAPAN
+ ai_strategy_anti_shogunate_agenda:0 "Sonno Joi"
+ ai_strategy_anti_shogunate_agenda_desc:0 "#i "Sonno Joi - Verehrt den Kaiser, vertreibt die Barbaren!“#!\n\nNachdem die Demütigung, die die Westler [COUNTRY.GetName] zugefügt haben und die Schwäche des Bakufu für alle sichtbar gemacht wurde, haben sich nationalistische Kräfte unter einem einzigen Banner mit dem Ziel vereint das Tokugawa-Shogunat zu beenden und den Kaiser wieder an die Macht zu bringen."
+ ## Yemen
+ ai_strategy_unify_yemen:0 "Yemen vereinigen"
+ ai_strategy_unify_yemen_desc:0 "[COUNTRY.GetName] möchte die Yemenitischen Stämme unter seinem Banner vereinigen."
+ ## Arabia
+ ai_strategy_unify_arabia:0 "Arabien vereinigen"
+ ai_strategy_unify_arabia_desc:0 "[COUNTRY.GetName] möchte die Arabischen Menschen unter seinem Banner vereinigen."
