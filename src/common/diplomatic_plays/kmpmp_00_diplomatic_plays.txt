@@ -1,0 +1,35 @@
+﻿dp_annex_subject = {
+	war_goal = annex_country
+	
+	texture = "gfx/interface/icons/war_goals/annex_country.dds"
+	
+	possible = {
+		NOT = { is_country_type = decentralized }
+		aggressive_diplomatic_plays_permitted = yes
+		scope:target_country = {
+			NOT = { is_country_type = decentralized }
+			is_direct_subject_of = root
+			OR = {
+				has_diplomatic_pact = { who = root type = protectorate }
+				has_diplomatic_pact = { who = root type = dominion }
+				has_diplomatic_pact = { who = root type = puppet }
+				has_diplomatic_pact = { who = root type = vassal }
+			}
+		}
+		NAND = {
+			has_journal_entry = je_peru_bolivia
+			scope:target_country = {
+				OR = {
+					country_has_primary_culture = cu:quechua
+					country_has_primary_culture = cu:south_andean
+				}
+			}
+		}			
+	}
+	
+	on_weekly_pulse = {}
+	
+	on_war_begins = {}
+
+	on_war_end = {}
+}
