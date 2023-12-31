@@ -1,0 +1,98 @@
+﻿#battle_condition_panicked_retreat = {
+#	icon = "gfx/interface/icons/battle_conditions/battle_condition_panicked_retreat.dds"
+#
+#	modifier = {
+#		unit_morale_loss_mult = 0.5
+#		unit_recovery_rate_add = -0.5
+#	}
+#	
+#	instant_switch = {
+#		NOR = { 
+#			has_battle_condition = battle_condition_controlled_retreat 
+#			opposite_battle_side = {
+#				has_battle_condition = battle_condition_panicked_retreat
+#			}
+#		}
+#		current_manpower < {
+#			value = starting_manpower
+#			if = {
+#				limit = {
+#					scope:character ?= { experience_level > 5 }
+#				}
+#				multiply = 0.1
+#			}
+#			else_if = {
+#				limit = {
+#					scope:character ?= { experience_level > 4 }
+#				}
+#				multiply = 0.2
+#			}
+#			else = {
+#				multiply = 0.3
+#			}
+#		}
+#	}
+#	
+#	weight = {
+#		value = 1
+#		multiply = {
+#			value = 1
+#			scope:character = {
+#				add = modifier:character_battle_condition_panicked_retreat_mult
+#			}
+#			min = 0
+#		}
+#	}
+#
+#battle_condition_controlled_retreat = {
+#	icon = "gfx/interface/icons/battle_conditions/battle_condition_controlled_retreat.dds"
+#
+#	modifier = {
+#		unit_morale_loss_mult = 2
+#		unit_recovery_rate_add = 0.25
+#	}
+#	
+#	instant_switch = {
+#		NOR = {
+#			has_battle_condition = battle_condition_panicked_retreat 
+#			opposite_battle_side = {
+#				OR = {
+#					has_battle_condition = battle_condition_panicked_retreat
+#					has_battle_condition = battle_condition_controlled_retreat
+#				}
+#			}
+#		}
+#		AND {
+#			OR = {
+#				scope:character ?= { 
+#					experience_level > 5
+#				}
+#				scope:character ?= {
+#					commander_military_formation = {
+#						has_mobilization_option = mobilization_option:mobilization_option_drill
+#					}
+#				}
+#
+#			}
+#		}			
+#		current_manpower < {
+#			value = starting_manpower
+#			multiply = 0.2
+#		}
+#	}
+#	
+#	weight = {
+#		add = 1
+#		scope:character ?= {
+#			add = experience_level
+#			divide = 3
+#		}
+#		multiply = {
+#			value = 1
+#			scope:character = {
+#				add = modifier:character_battle_condition_controlled_retreat_mult
+#			}
+#			min = 0
+#		}
+#	}
+#}

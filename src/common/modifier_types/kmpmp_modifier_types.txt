@@ -19,3 +19,12 @@ country_society_tech_research_speed_mult = {
 	percent = yes
 	num_decimals = 0
 }
+###Needed for Drill mob option
+##character_battle_condition_controlled_retreat_mult = {
+#	good = yes
+#	percent = yes
+#}
+#character_battle_condition_panicked_retreat_mult = {
+#	good = no
+#	percent = yes
+#}
