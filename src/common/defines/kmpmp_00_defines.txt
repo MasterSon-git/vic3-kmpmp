@@ -1,3 +1,8 @@
-﻿NWar = {
+﻿NDiplomacy = {
+	WAR_GOAL_INFAMY_CONQUER_STATE = 4.0 #5.0
+	WAR_GOAL_INFAMY_MAKE_PROTECTORATE = 1.5 #2.0
+}
+
+NWar = {
 	WAR_EXHAUSTION_KIA_FACTOR =  1.65 #kmpmp #5.0 # Scaled by casualties compared to total manpower
 }
