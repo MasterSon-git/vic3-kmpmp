@@ -6,3 +6,7 @@
 NWar = {
 	WAR_EXHAUSTION_KIA_FACTOR =  1.65 #kmpmp #5.0 # Scaled by casualties compared to total manpower
 }
+NMilitary {
+	MANPOWER_LOST_DUE_TO_ATTRITION_PER_WEEK_MIN = 0.024 	# The minimum percentage of manpower a unit can lose each week due to attrition
+	MANPOWER_LOST_DUE_TO_ATTRITION_PER_WEEK_MAX = 0.72 	# The maximum percentage of manpower a unit can lose each week due to attrition
+}
