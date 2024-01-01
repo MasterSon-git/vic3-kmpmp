@@ -86,3 +86,4 @@
  mobilization_option_military_playbooks_desc:0 "Militär Anweisungen"
 kmpmp_debuff_massive_empire:0 "Riesiges Reich"
  kmpmp_debuff_massive_empire_desc:0 "Ein riesiges Reich indem es schwierig ist den Überblick zu behalten."
+ TRIGGER_MILITARY_FORMATION_NUM_UNITS_GREATER_OR_EQUAL: "Anzahl der einheiten ind der armee ist grösser oder gleich $TARGET_VALUE|0v$"
