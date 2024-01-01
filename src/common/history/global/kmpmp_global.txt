@@ -6,4 +6,34 @@
             popup = yes
         }
     }
+    c:AUS = {
+        add_modifier = {
+            name = kmpmp_debuff_massive_empire
+        }
+    }
+    c:FRA = {
+        add_modifier = {
+            name = kmpmp_debuff_massive_empire
+        }
+    }
+    c:GBR = {
+        add_modifier = {
+            name = kmpmp_debuff_massive_empire
+        }
+    }
+    c:RUS = {
+        add_modifier = {
+            name = kmpmp_debuff_massive_empire
+        }
+    }
+    c:USA = {
+        add_modifier = {
+            name = kmpmp_debuff_massive_empire
+        }
+    }
+    c:PRU = {
+        add_modifier = {
+            name = kmpmp_debuff_massive_empire
+        }
+    }
 }

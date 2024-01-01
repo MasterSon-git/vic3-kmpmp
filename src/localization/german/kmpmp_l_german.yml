@@ -84,3 +84,5 @@
  mobilization_option_mass_assault_desc:0 "Massenangriff"
  mobilization_option_military_playbooks:0 "Militär Anweisungen"
  mobilization_option_military_playbooks_desc:0 "Militär Anweisungen"
+kmpmp_debuff_massive_empire:0 "Riesiges Reich"
+ kmpmp_debuff_massive_empire_desc:0 "Ein riesiges Reich indem es schwierig ist den Überblick zu behalten."
