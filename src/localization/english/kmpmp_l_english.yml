@@ -86,3 +86,4 @@
  mobilization_option_military_playbooks_desc:0 "Military Playbook"
  kmpmp_debuff_massive_empire:0 "Massive Emprire"
  kmpmp_debuff_massive_empire_desc:0 "A massive empire is har to keep track off."
+ TRIGGER_MILITARY_FORMATION_NUM_UNITS_GREATER_OR_EQUAL: "Number of military units in formation is greater or equal than $TARGET_VALUE|0v$"

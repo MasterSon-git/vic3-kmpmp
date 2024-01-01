@@ -9,4 +9,6 @@ NWar = {
 NMilitary {
 	MANPOWER_LOST_DUE_TO_ATTRITION_PER_WEEK_MIN = 0.024 	# The minimum percentage of manpower a unit can lose each week due to attrition
 	MANPOWER_LOST_DUE_TO_ATTRITION_PER_WEEK_MAX = 0.72 	# The maximum percentage of manpower a unit can lose each week due to attrition
+	CONVOY_RAIDING_COOLDOWN_DAYS_MIN = 20
+	CONVOY_RAIDING_DEFENSE_MULT = 0.25	
 }
