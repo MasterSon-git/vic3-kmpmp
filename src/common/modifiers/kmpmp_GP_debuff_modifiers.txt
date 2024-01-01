@@ -1,4 +1,4 @@
-kmpmp_debuff_massive_empire = {
+﻿kmpmp_debuff_massive_empire = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
 	country_military_goods_cost_mult = 0.05
 	unit_offense_mult = -0.05

@@ -1,4 +1,4 @@
-mobilization_option_truck_transport = {
+﻿mobilization_option_truck_transport = {
 	texture = "gfx/interface/icons/mobilization_options/truck_transport.dds"
 	
 	possible = {

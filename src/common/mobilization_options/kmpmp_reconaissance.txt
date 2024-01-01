@@ -1,4 +1,4 @@
-mobilization_option_motorized_recon = {
+﻿mobilization_option_motorized_recon = {
 	texture = "gfx/interface/icons/mobilization_options/motorized_reconaissance.dds"
 
 	possible = {

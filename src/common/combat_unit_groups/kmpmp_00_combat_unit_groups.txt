@@ -1,4 +1,4 @@
-combat_unit_group_cavalry = {
+﻿combat_unit_group_cavalry = {
     type = army
     manpower_max = 1000
     default_group = yes
