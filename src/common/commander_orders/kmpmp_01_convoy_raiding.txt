@@ -6,14 +6,12 @@
 	is_basic_order_type = yes
 
     possible = {
-    	AND = {
-    		error_check = {
-				severity = invalid
-				has_role = admiral
-			}
-        	commander_military_formation = {
-				num_units >= 20
-    		}	
+    	error_check = {
+			severity = invalid
+			has_role = admiral
+		}
+        commander_military_formation = {
+			num_units >= 20
     	}	
     }
    
