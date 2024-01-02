@@ -1,0 +1,172 @@
+﻿BUILDINGS = {
+    s:STATE_SILESIA = {
+        region_state:PRU = {
+            create_building = {
+                building = "building_government_administration"
+                level = 2
+                reserves = 1
+                activate_production_methods = { "pm_vertical_filing_cabinets" }
+            }
+        }
+    }
+    s:STATE_BOHEMIA = {
+        region_state:AUS = {
+            create_building = {
+                building = "building_government_administration"
+                level = 15 #10
+                reserves = 1
+                activate_production_methods = { "pm_horizontal_drawer_cabinets" }
+            }
+        }
+    }
+    s:STATE_LANGUEDOC = {
+        region_state:FRA = {
+            create_building = {
+                building = "building_government_administration"
+                level = 3
+                reserves = 1
+                activate_production_methods = { "pm_vertical_filing_cabinets" }
+            }
+        }
+    }
+    s:STATE_MIDLANDS = {
+        region_state:GBR = {
+            create_building = {
+                building = "building_government_administration"
+                level = 7 #5
+                reserves = 1
+                activate_production_methods = { "pm_vertical_filing_cabinets" }
+            }
+        }
+    }
+    s:STATE_PIEDMONT = {
+        region_state:SAR = {
+            create_building = {
+                building = "building_government_administration"
+                level = 6 #5
+                reserves = 1
+                activate_production_methods = { "pm_horizontal_drawer_cabinets" }
+            }
+        }
+    }
+    s:STATE_CAMPANIA = {
+        region_state:SIC = {
+            create_building = {
+                building = "building_government_administration"
+                level = 8 #6
+                reserves = 1
+                activate_production_methods = { "pm_horizontal_drawer_cabinets" }
+            }
+        }
+    }
+    s:STATE_ANKARA = {
+        region_state:TUR = {
+            create_building = {
+                building = "building_government_administration"
+                level = 6 #3
+                reserves = 1
+                activate_production_methods = { "pm_horizontal_drawer_cabinets" }
+            }
+        }
+    }
+    s:STATE_KONYA = {
+        region_state:TUR = {
+            create_building = {
+                building = "building_government_administration"
+                level = 1
+                reserves = 1
+                activate_production_methods = { "pm_horizontal_drawer_cabinets" }
+            }
+        }
+    }
+    s:STATE_JALISCO = {
+        region_state:MEX = {
+            create_building = {
+                building = "building_government_administration"
+                level = 6 #4
+                reserves = 1
+                activate_production_methods = { "pm_simple_organization" }
+            }
+        }
+    }
+    s:STATE_LA_PAZ = {
+        region_state:BOL = {
+            create_building = {
+                building = "building_government_administration"
+                level = 4 #2
+                reserves = 1
+                activate_production_methods = { "pm_simple_organization" }
+            }
+        }
+    }
+    s:STATE_LOWER_EGYPT = {
+        region_state:EGY = {
+            create_building = {
+                building = "building_government_administration"
+                level = 10 #7
+                reserves = 1
+                activate_production_methods = { "pm_horizontal_drawer_cabinets" }
+            }
+        }
+    }
+    s:STATE_TABRIZ = {
+        region_state:PER = {
+            create_building = {
+                building = "building_government_administration"
+                level = 6 #3
+                reserves = 1
+                activate_production_methods = { "pm_simple_organization" }
+            }
+        }
+    }
+    s:STATE_BANGKOK = {
+        region_state:SIA = {
+            create_building = {
+                building = "building_government_administration"
+                level = 5 #2
+                reserves = 1
+                activate_production_methods = { "pm_simple_organization" }
+            }
+        }
+    }
+    s:STATE_KANSAI = {
+        region_state:JAP = {
+            create_building = {
+                building = "building_government_administration"
+                level = 6 #3
+                reserves = 1
+                activate_production_methods = { "pm_horizontal_drawer_cabinets" }
+            }
+        }
+    }
+    s:STATE_VALENCIA = {
+        region_state:SPA = {
+            create_building = {
+                building = "building_government_administration"
+                level = 7 #5
+                reserves = 1
+                activate_production_methods = { "pm_horizontal_drawer_cabinets" }
+            }
+        }
+    }
+    s:STATE_ALENTEJO = {
+        region_state:POR = {
+            create_building = {
+                building = "building_government_administration"
+                level = 1
+                reserves = 1
+                activate_production_methods = { "pm_horizontal_drawer_cabinets" }
+            }
+        }
+    }
+    s:STATE_HOLLAND = {
+        region_state:NET = {
+            create_building = {
+                building = "building_government_administration"
+                level = 4 #3
+                reserves = 1
+                activate_production_methods = { "pm_horizontal_drawer_cabinets" }
+            }
+        }
+    }
+}
