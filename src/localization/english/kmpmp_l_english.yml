@@ -70,7 +70,8 @@
  kmpmp_player_boost_tycoon_capitalism_decision:0 "$kmpmp_player_boost_tycoon_capitalism$"
  kmpmp_player_boost_tycoon_capitalism_decision_desc:0 "$kmpmp_player_boost_description$"
  kmpmp_player_boost_tycoon_capitalism_decision_tooltip:0 ""
-  kmpmp_mo_utility_gear:0 "Utility Gear"
+
+ kmpmp_mo_utility_gear:0 "Utility Gear"
  kmpmp_mo_utility_gear_desc:0 "Utility Gear" 
  kmpmp_mog_doctrines:0 "Doctrines"
  kmpmp_mog_doctrines_desc:0 "Doctrines"
@@ -84,9 +85,10 @@
  mobilization_option_mass_assault_desc:0 "Mass assault"
  mobilization_option_military_playbooks:0 "Military Playbook"
  mobilization_option_military_playbooks_desc:0 "Military Playbook"
+
  kmpmp_debuff_massive_empire:0 "Massive Emprire"
  kmpmp_debuff_massive_empire_desc:0 "A massive empire is har to keep track off."
- TRIGGER_MILITARY_FORMATION_NUM_UNITS_GREATER_OR_EQUAL: "Number of military units in formation is greater or equal than $TARGET_VALUE|0v$"
+ 
  kmpmp_emser_depeche:0 "Emser Depeche"
  kmpmp_emser_depeche_desc:0 "Attack on France"
  kmpmp_turn_your_eye_on_the_south:0 "Turn your eye on the south"

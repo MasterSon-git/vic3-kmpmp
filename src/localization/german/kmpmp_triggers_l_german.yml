@@ -1,0 +1,2 @@
+﻿l_german:
+ TRIGGER_MILITARY_FORMATION_NUM_UNITS_GREATER_OR_EQUAL: "Anzahl der Einheiten in der Armee ist grösser oder gleich $TARGET_VALUE|0v$"

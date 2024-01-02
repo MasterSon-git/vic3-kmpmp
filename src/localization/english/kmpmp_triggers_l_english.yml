@@ -1,0 +1,2 @@
+﻿l_english:
+ TRIGGER_MILITARY_FORMATION_NUM_UNITS_GREATER_OR_EQUAL: "Number of military units in formation is greater or equal than $TARGET_VALUE|0v$"

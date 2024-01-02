@@ -1,4 +1,4 @@
-SCA = {
+﻿SCA = {
 	use_culture_states = yes
 	
 	is_major_formation = yes
@@ -34,7 +34,7 @@ SCA = {
 					owns_entire_state_region = STATE_ALAND
 					owns_entire_state_region = STATE_OSTROBOTHNIA
 				}
-				c:FIN = {
+				c:FIN ?= {
 					is_direct_subject_of = c:SWE
 				}
 			}
