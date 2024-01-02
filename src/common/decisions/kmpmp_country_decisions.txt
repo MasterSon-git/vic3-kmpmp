@@ -1,0 +1,90 @@
+﻿
+kmpmp_emser_depeche = {
+	is_shown = {
+		OR = {
+			c:NGF ?= owner
+			c:PRU ?= owner
+		}
+		NOT = {exists = c:GER}
+		NOT = {has_variable = took_decision_emser_depeche}
+	}
+
+	possible = {
+		exists = c:NGF
+		c:NGF ?= this
+		has_technology_researched = nationalism
+		year <= 1871
+		has_war_with = c:FRA
+	}
+	when_taken = {
+		add_loyalists = {
+ 			value = 0.08
+ 			culture = cu:north_german
+		}
+		add_modifier = {
+			name = kmpmp_retake_whats_rightfully_german
+			years = 5
+		}
+		set_variable = took_decision_emser_depeche
+	}
+}
+kmpmp_turn_your_eye_on_the_south = {
+	is_shown = {
+		NOT = {has_variable = took_decision_turn_eye_on_the_south}
+		OR = {
+			c:NGF ?= owner
+			c:PRU ?= owner
+		}
+		NOT = {exists = c:GER}
+		NOT = { is_unification_candidate = GER}
+	}
+	possible = {
+		any_scope_state = {
+   			state_region = s:STATE_ALSACE_LORRAINE
+		}
+		c:NGF ?= this
+	}
+	when_taken = {
+		set_variable = took_decision_turn_eye_on_the_south
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_FRANCONIA }
+			}
+			s:STATE_FRANCONIA = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_BAVARIA }
+			}
+			s:STATE_BAVARIA = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_WURTTEMBERG }
+			}
+			s:STATE_WURTTEMBERG = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_BADEN }
+			}
+			s:STATE_BADEN = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_RHINELAND }
+			}
+			s:STATE_RHINELAND = {
+				add_claim = ROOT
+			}
+		}
+	}
+}
