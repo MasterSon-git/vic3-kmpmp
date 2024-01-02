@@ -121,25 +121,7 @@ kmpmp_austrian_hungarian_agreement = {
 			name = kmpmp_austrian_the_great_reform
 			years = 5
 			is_decaying = yes
-		}
-
-		if = {
-			limit = {
-				exists = ig:ig_landowners
-				ig:ig_landowners = { is_powerful = yes }	
-			}
-			add_modifier = {
-				name = kmpmp_austrian_the_great_reform_aristocrats_investment_buff
-				multiplier = 0.3
-			}
-		}
-		else = {
-			add_modifier = {
-				name = kmpmp_austrian_the_great_reform_aristocrats_investment_buff
-				multiplier = 0.15
-			}
-		}
-		
+		}		
 	}
 }
 

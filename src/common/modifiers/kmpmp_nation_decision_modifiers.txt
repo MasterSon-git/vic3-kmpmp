@@ -68,8 +68,3 @@ kmpmp_austrian_the_great_reform = {
 	country_authority_mult = -0.2
 	country_bureaucracy_mult = -0.1
 }
-
-kmpmp_austrian_the_great_reform_aristocrats_investment_buff = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	state_aristocrats_investment_pool_efficiency_mult = 1 # scaled by add_modifier multiplier
-}
