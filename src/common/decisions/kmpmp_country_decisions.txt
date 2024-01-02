@@ -36,6 +36,7 @@ kmpmp_turn_your_eye_on_the_south = {
 			c:PRU ?= owner
 		}
 		NOT = {exists = c:GER}
+		NOT = { is_unification_candidate = GER}
 	}
 	possible = {
 		any_scope_state = {
