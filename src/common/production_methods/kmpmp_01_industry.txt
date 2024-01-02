@@ -322,8 +322,8 @@ pm_radios = {
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_electricity_add = 50
-			goods_output_telephones_add = -20
-			goods_output_radios_add = 40
+			goods_output_telephones_add = -30 #-20
+			goods_output_radios_add = 50 #40
 		}
 		
 		level_scaled = {
@@ -386,4 +386,83 @@ pm_assembly_lines_building_munition_plants = {
 	}
 
 	#required_input_goods = electricity
+}
+
+pm_cannery_meat = {
+	texture = "gfx/interface/icons/production_method_icons/canneries.dds"
+	
+	unlocking_technologies = {
+		canneries
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_grain_add = -20		# x20 = -400
+			goods_input_meat_add = 25		# x20 =  600
+			goods_input_iron_add = 10		# x40 =  400
+			
+			# output goods
+			goods_output_groceries_add = 30	# x30 =  900
+		}
+
+		level_scaled = {
+			# profit = 300 (20.8)
+			building_employment_machinists_add = 500	# x1.5 = 750 laborer wages
+		}
+	}
+}
+
+pm_rayon = {
+	texture = "gfx/interface/icons/production_method_icons/rayon.dds"
+
+	unlocking_technologies = {
+		art_silk
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_wood_add = 20 #40
+
+			# output goods
+			goods_output_dye_add = -30 #-40
+			goods_output_silk_add = 40
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = -1000
+			building_employment_machinists_add = 500
+			building_employment_engineers_add = 500
+		}
+	}
+}
+
+pm_bolt_action_rifles = {
+	texture = "gfx/interface/icons/production_method_icons/bolt_action_rifles.dds"
+	
+	unlocking_technologies = {
+		bolt_action_rifles
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_steel_add = 20
+			goods_input_hardwood_add = 10
+			goods_input_tools_add = 20
+			goods_input_oil_add = 5 #10
+			
+			# output goods
+			goods_output_small_arms_add = 95 #100
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = 3000
+			building_employment_machinists_add = 1250
+			building_employment_engineers_add = 750
+		}
+	}
 }
