@@ -145,7 +145,7 @@
                     #save_scope_as = scope name
                     #save_scope_as = schooled_char
                     trait_generation = { }
-                    hq = scope:schooling_heir.owner.capital.land_hq # this should be correct
+                    #hq = scope:schooling_heir.owner.capital.land_hq # this should be correct - no longer supported in 1.5
                 }
                 
                 hidden_effect = {
