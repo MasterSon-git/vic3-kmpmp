@@ -1,0 +1,24 @@
+﻿namespace = kmpmp_ev_mexico_buff
+
+# defend the homeland
+kmpmp_ev_mexico_buff.1 = {
+    type = country_event
+	hidden = yes
+	
+	trigger = {
+        # Fired by history\global
+	}
+
+    immediate = {
+        if = {
+            limit = {
+                is_player = yes
+            }
+            add_modifier = {
+                name = kmpmp_mexico_defend_the_homeland
+                years = 20
+                is_decaying = yes
+            }
+        }
+    }
+}

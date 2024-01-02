@@ -923,6 +923,13 @@ italian_unification.10 = {
 		root = {
 			save_scope_as = italian_unifier_candidate
 		}
+
+		#kmpmp
+		add_modifier = {
+			name = kmpmp_italy_risorgimento_buff
+			years = 20
+			is_decaying = yes
+		}
 	}
 
 	option = {
