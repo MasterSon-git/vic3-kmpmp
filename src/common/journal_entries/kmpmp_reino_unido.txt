@@ -1,0 +1,56 @@
+﻿je_reino_unido_por = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	group = je_group_historical_content
+	possible = {
+	}
+
+	complete = {
+		c:BRZ = {
+			is_direct_subject_of = c:POR 
+			OR = {
+				is_subject_type = subject_type_puppet
+				is_subject_type = subject_type_dominion
+			}
+		}
+		has_technology_researched = nationalism
+		has_technology_researched = egalitarianism
+
+	}
+
+	on_complete = {
+		annex = c:BRZ
+		add_modifier = {
+			name = kmpmp_reino_unido
+		}
+		add_primary_culture = cu:brazilian
+		add_primary_culture = cu:afro_brazilian
+		add_primary_culture = cu:paulista
+	}
+}
+je_reino_unido_brz = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	group = je_group_historical_content
+	possible = {
+	}
+
+	complete = {
+		c:POR = {
+			is_direct_subject_of = c:BRZ
+			OR = {
+				is_subject_type = subject_type_puppet
+				is_subject_type = subject_type_dominion
+			}
+		}
+		has_technology_researched = nationalism
+		has_technology_researched = egalitarianism
+
+	}
+
+	on_complete = {
+		annex = c:POR
+		add_modifier = {
+			name =kmpmp_reino_unido
+		}
+		add_primary_culture = cu:portuguese
+	}
+}

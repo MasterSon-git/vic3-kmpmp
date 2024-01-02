@@ -10,6 +10,9 @@
         add_modifier = {
             name = kmpmp_debuff_massive_empire
         }
+        add_journal_entry = {
+            type = je_empire_of_the_three_crowns
+        }
     }
     c:FRA = {
         add_modifier = {
@@ -34,6 +37,16 @@
     c:PRU = {
         add_modifier = {
             name = kmpmp_debuff_massive_empire
+        }
+    }
+    c:POR = {
+        add_journal_entry = {
+            type = je_reino_unido_por
+        }
+    }
+    c:BRZ = {
+        add_journal_entry = {
+            type = je_reino_unido_brz
         }
     }
 }

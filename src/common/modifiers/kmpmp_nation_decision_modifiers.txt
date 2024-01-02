@@ -1,0 +1,64 @@
+kmpmp_retake_whats_rightfully_german = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_military_goods_cost_mult = -0.1
+	unit_offense_mult = 0.15
+	unit_defense_mult = 0.15
+	unit_kill_rate_add = 0.1
+	unit_morale_damage_mult = 0.1
+	building_training_rate_mult = 0.15
+} 
+kmpmp_lion_of_the_north = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	unit_offense_mult = 0.05
+	unit_defense_mult = 0.05
+	unit_recovery_rate_add = 0.1
+	country_military_goods_cost_mult = -0.05
+	state_birth_rate_mult = 0.05
+	state_conscription_rate_mult = 0.02
+	building_group_bg_manufacturing_tax_mult = 0.05
+}
+kmpmp_risorgimento = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	unit_offense_mult = 0.05
+	unit_defense_mult = 0.05
+	country_tech_spread_mult = 0.05
+	state_birth_rate_mult = 0.02
+	state_construction_mult = 0.05
+	state_conscription_rate_mult = 0.01
+}
+kmpmp_kingdom_of_the_three_crowns = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_birth_rate_mult = 0.02
+	country_authority_mult = 0.05
+	state_construction_mult = 0.05
+}
+
+
+kmpmp_reino_unido = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_accepted_birth_rate_mult = 0.07
+	unit_offense_mult = 0.1
+	unit_defense_mult = 0.1
+	building_group_bg_plantations_throughput_add = 0.1
+	building_group_bg_logging_throughput_add = 0.1
+	building_university_throughput_add = 0.15
+	country_decree_cost_mult = -0.1
+}
+kmpmp_united_iberia = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	unit_offense_mult = 0.05
+	unit_defense_mult = 0.05
+	country_tech_spread_mult = 0.05
+	state_tax_capacity_add = 0.05
+	state_birth_rate_mult = 0.03
+	building_training_rate_mult = 0.05
+}
+kmpmp_united_netherlands = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_accepted_birth_rate_mult = 0.05
+	unit_offense_mult = 0.15
+	unit_defense_mult = 0.15
+	building_university_throughput_add = 0.1
+	building_group_bg_manufacturing_throughput_add = 0.1
+	state_loyalists_from_sol_change_mult = 0.1
+}

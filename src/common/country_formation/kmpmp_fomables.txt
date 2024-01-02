@@ -1,0 +1,26 @@
+IBE = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.9
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+}
+UNL = {
+	states = {
+		STATE_HOLLAND
+		STATE_FLANDERS
+		STATE_WALLONIA
+		STATE_FRIESLAND
+		STATE_GELRE
+	}
+
+	required_states_fraction = 1
+	possible = {
+		has_technology_researched = nationalism
+	}	
+	ai_will_do = { always = yes }
+}
