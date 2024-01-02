@@ -62,3 +62,9 @@ kmpmp_united_netherlands = {
 	building_group_bg_manufacturing_throughput_add = 0.1
 	state_loyalists_from_sol_change_mult = 0.1
 }
+
+kmpmp_austrian_the_great_reform = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	country_authority_mult = -0.2
+	country_bureaucracy_mult = -0.1
+}

@@ -1,0 +1,10 @@
+﻿ig_trait_wiener_walzer = {
+	icon = "gfx/interface/icons/ig_trait_icons/noblesse_oblige.dds"
+	min_approval = loyal
+	
+	modifier = {
+		country_prestige_mult = 0.15
+		#kmpmp
+		state_aristocrats_investment_pool_efficiency_mult = 0.15
+	}
+}

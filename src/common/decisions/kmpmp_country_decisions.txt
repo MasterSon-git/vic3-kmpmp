@@ -1,12 +1,11 @@
-﻿
-kmpmp_emser_depeche = {
+﻿kmpmp_emser_depeche = {
 	is_shown = {
 		OR = {
 			c:NGF ?= owner
 			c:PRU ?= owner
 		}
-		NOT = {exists = c:GER}
-		NOT = {has_variable = took_decision_emser_depeche}
+		NOT = { exists = c:GER }
+		NOT = { has_variable = took_decision_emser_depeche }
 	}
 
 	possible = {
@@ -28,14 +27,15 @@ kmpmp_emser_depeche = {
 		set_variable = took_decision_emser_depeche
 	}
 }
+
 kmpmp_turn_your_eye_on_the_south = {
 	is_shown = {
-		NOT = {has_variable = took_decision_turn_eye_on_the_south}
+		NOT = { has_variable = took_decision_turn_eye_on_the_south }
 		OR = {
 			c:NGF ?= owner
 			c:PRU ?= owner
 		}
-		NOT = {exists = c:GER}
+		NOT = { exists = c:GER }
 		NOT = { is_unification_candidate = GER}
 	}
 	possible = {
@@ -86,5 +86,90 @@ kmpmp_turn_your_eye_on_the_south = {
 				add_claim = ROOT
 			}
 		}
+	}
+}
+
+kmpmp_austrian_hungarian_agreement = {
+	is_shown = {
+		NOT = { 
+			has_variable = took_decision_austrian_hungarian_agreement
+		}
+		c:AUS ?= owner
+		year >= 1845
+		NOT = {
+			country_has_primary_culture = cu:hungarian
+		}
+	}
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+
+	when_taken = {
+		set_variable = took_decision_austrian_hungarian_agreement
+
+		if = {
+			limit = {
+				NOT = {
+					has_law = law_type:law_racial_segregation
+				}
+			}
+			activate_law = law_type:law_racial_segregation
+		}
+
+		add_modifier = {
+			name = kmpmp_austrian_the_great_reform
+			years = 5
+			is_decaying = yes
+		}		
+	}
+}
+
+kmpmp_mexico_integrate_the_mesoamericans = {
+	is_shown = {
+		NOT = { 
+			has_variable = took_decision_mexico_integrate_the_mesoamericans
+		}
+		c:MEX ?= owner
+	}
+
+	possible = {
+		has_technology_researched = pan-nationalism
+	}
+
+	when_taken = {
+		set_variable = took_decision_mexico_integrate_the_mesoamericans
+
+		add_modifier = {
+			name = kmpmp_mexico_integrate_mesoamericans_positive
+			years = 5
+		}
+
+		add_modifier = {
+			name = kmpmp_mexico_integrate_mesoamericans_negative
+			years = 20
+			is_decaying = yes
+		}
+		
+		add_radicals = {
+			value = 0.05
+		}
+
+		add_loyalists = {
+			value = 0.05
+			culture = cu:mayan
+		}
+
+		add_loyalists = {
+			value = 0.05
+			culture = cu:nahua
+		}
+
+		add_loyalists = {
+			value = 0.05
+			culture = cu:tarascan
+		}
+
+		add_primary_culture = cu:mayan
 	}
 }

@@ -106,3 +106,33 @@
  kmpmp_reino_unido:0 "Reino unido"
  kmpmp_united_iberia:0 "United Iberia"
  kmpmp_united_netherlands:0 "United Netherlands"
+
+ kmpmp_austrian_hungarian_agreement:0 "The Austro-Hungarian Agreement"
+ kmpmp_austrian_hungarian_agreement_desc:0 "$kmpmp_austrian_hungarian_agreement$"
+ kmpmp_austrian_hungarian_agreement_tooltip:0 ""
+
+ kmpmp_austrian_the_great_reform:0 "The great reform"
+
+ kmpmp_mexico_integrate_the_mesoamericans:0 "Integrate the Mesoamericans"
+ kmpmp_mexico_integrate_the_mesoamericans_desc:0 "$kmpmp_mexico_integrate_the_mesoamericans$"
+ kmpmp_mexico_integrate_the_mesoamericans_tooltip:0 ""
+
+ kmpmp_mexico_defend_the_homeland:0 "Defend the homeland"
+ kmpmp_mexico_integrate_mesoamericans_positive:0 "$kmpmp_mexico_integrate_the_mesoamericans$"
+ kmpmp_mexico_integrate_mesoamericans_negative:0 "$kmpmp_mexico_integrate_the_mesoamericans$"
+
+ kmpmp_italy_risorgimento_buff:0 "Italy Risorgimento Buff"
+
+ kmpmp_sick_man_of_europe_buff_1:0 "$sick_man_of_europe$ Buff"
+ kmpmp_sick_man_of_europe_buff_2:0 "$kmpmp_sick_man_of_europe_buff_1$"
+ kmpmp_sick_man_of_europe_restored_fame:0 "Restored Fame"
+ kmpmp_ottoman_path_to_westernization:0 "Path to Westernization"
+ kmpmp_ottoman_leader_of_islam:0 "Leader of Islam"
+ kmpmp_ottoman_reform_goes_on:0 "The reform goes on"
+
+ sick_man.4.t:0 "$sick_man.2.t$"
+ sick_man.4.desc:0 "$sick_man.2.desc$"
+ sick_man.4.f:0 "$sick_man.2.f$"
+ sick_man.4.a:0 "$kmpmp_ottoman_path_to_westernization$"
+ sick_man.4.b:0 "$kmpmp_ottoman_leader_of_islam$"
+ sick_man.4.c:0 "$kmpmp_ottoman_reform_goes_on$"
