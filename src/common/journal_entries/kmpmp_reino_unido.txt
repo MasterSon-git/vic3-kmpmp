@@ -18,6 +18,7 @@
 	}
 
 	on_complete = {
+		set_variable = reino_unido_won
 		annex = c:BRZ
 		add_modifier = {
 			name = kmpmp_reino_unido
@@ -25,6 +26,10 @@
 		add_primary_culture = cu:brazilian
 		add_primary_culture = cu:afro_brazilian
 		add_primary_culture = cu:paulista
+	}
+
+	fail = {
+		has_global_variable = has_formed_ibe
 	}
 }
 je_reino_unido_brz = {
@@ -34,7 +39,8 @@ je_reino_unido_brz = {
 	}
 
 	complete = {
-		c:POR = {
+		exists = c:POR
+		c:POR ?= {
 			is_direct_subject_of = c:BRZ
 			OR = {
 				is_subject_type = subject_type_puppet
@@ -47,6 +53,7 @@ je_reino_unido_brz = {
 	}
 
 	on_complete = {
+		set_variable = reino_unido_won
 		annex = c:POR
 		add_modifier = {
 			name =kmpmp_reino_unido

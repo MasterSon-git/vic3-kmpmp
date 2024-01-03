@@ -182,18 +182,25 @@ kmpmp_reino_unido_force_opponent_protectorate = {
 		}
 		NOR = {
 			c:POR ?= {
-				is_direct_subject_of = c:BRZ
 				is_diplomatic_play_enemy_of = c:BRZ
 			}
 			c:BRZ ?= {
-				is_direct_subject_of = c:POR
 				is_diplomatic_play_enemy_of = c:POR
+			}
+		}
+		NOR = {
+			c:POR ?= {
+				is_direct_subject_of = c:BRZ
+			}
+			c:BRZ ?= {
+				is_direct_subject_of = c:POR
 			}
 		}
 	}
 
 	possible = {
 		aggressive_diplomatic_plays_permitted = yes
+		is_at_war = no
 	}
 
 	when_taken = {
