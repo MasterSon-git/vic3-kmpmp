@@ -67,3 +67,12 @@ unincorporated_state = {
 	building_group_bg_military_throughput_add = -0.1		
 	state_market_access_price_impact = -0.05 #-0.1
 }
+
+# Excess AUT reduces enactment time by -25% at 2x production to usage
+legislative_efficiency = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_law_enactment_time_mult = -0.25
+	#kmpmp
+	building_training_rate_mult = 0.35
+	country_military_goods_cost_mult = -0.1
+}
