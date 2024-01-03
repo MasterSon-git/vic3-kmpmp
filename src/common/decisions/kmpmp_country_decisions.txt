@@ -176,6 +176,8 @@ kmpmp_mexico_integrate_the_mesoamericans = {
 
 kmpmp_reino_unido_force_opponent_protectorate = {
 	is_shown = {
+		exists = c:BRZ
+		exists = c:POR
 		OR = {
 			has_journal_entry = je_reino_unido_por
 			has_journal_entry = je_reino_unido_brz
