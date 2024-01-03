@@ -325,58 +325,6 @@ decree_greener_grass_campaign = {
 	}
 }
 
-decree_enlistment_efforts = {
-	texture = "gfx/interface/icons/decree/decree_enlistment_efforts.dds"
-	modifier = {
-		state_conscription_rate_add = 0.05
-        building_barracks_throughput_add = -0.35
-        building_naval_base_throughput_add = -0.35
-	}
-	unlocking_technologies = {
-		mandatory_service
-	}
-	cost = 100
-	
-	ai_weight = {
-		value = 0	
-		if = {
-			limit = {
-				any_scope_building = {
-					is_building_type = building_barracks
-					count >= 25
-				}				
-			}
-			add = 50
-		}
-		if = {
-			limit = {
-				any_scope_building = {
-					is_building_type = building_barracks
-					count >= 50
-				}			
-			}
-			add = 50
-		}
-		if = {
-			limit = {
-				any_scope_building = {
-					is_building_type = building_naval_base
-					count >= 25
-				}
-			}
-			add = 50
-		}
-		if = {
-			limit = {
-				any_scope_building = {
-					is_building_type = building_naval_base
-					count >= 50
-				}			
-			}
-			add = 50
-		}		
-	}
-}
 decree_emergency_relief = {
 	texture = "gfx/interface/icons/decree/decree_emergency_relief.dds"
 	unlocking_technologies = {
