@@ -2341,8 +2341,7 @@ company_fiat = {
 		military_formation_movement_speed_mult = 0.1
 		unit_army_offense_mult = 0.05
 		unit_army_defense_mult = 0.05
-		unit_combat_unit_type_heavy_tank_offense_mult = 0.05
-		unit_combat_unit_type_heavy_tank_defense_mult = 0.05
+		unit_combat_unit_type_light_tanks_offense_mult = 0.05
 	}
 
 	ai_weight = {
