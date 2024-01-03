@@ -183,10 +183,11 @@ kmpmp_reino_unido_force_opponent_protectorate = {
 		NOR = {
 			c:POR ?= {
 				is_direct_subject_of = c:BRZ
-				any_diplomatic_play
+				is_diplomatic_play_enemy_of = c:BRZ
 			}
 			c:BRZ ?= {
 				is_direct_subject_of = c:POR
+				is_diplomatic_play_enemy_of = c:POR
 			}
 		}
 	}
