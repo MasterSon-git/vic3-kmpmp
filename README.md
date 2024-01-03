@@ -7,3 +7,5 @@ Thanks to everyone, supporting development of this mod:
   - Lead mod engineer, sampling of 3rd party mods and custom extensions are based on his contributions
 - Yuki
   - Gui bugfixing and testing
+- Tziplays
+  - Was here
