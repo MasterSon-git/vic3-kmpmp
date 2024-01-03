@@ -28,3 +28,9 @@ country_society_tech_research_speed_mult = {
 #	good = no
 #	percent = yes
 #}
+
+unit_combat_unit_type_light_tanks_offense_mult = {
+	good = yes
+	percent = yes
+	num_decimals = 0
+}

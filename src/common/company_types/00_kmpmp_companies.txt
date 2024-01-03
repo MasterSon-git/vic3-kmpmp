@@ -1,4 +1,4 @@
-# Koninklijke Nederlandse Petroleum Maatschappij
+﻿# Koninklijke Nederlandse Petroleum Maatschappij
 company_nederlandse_petroleum = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/maatschappij.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
@@ -2341,8 +2341,7 @@ company_fiat = {
 		military_formation_movement_speed_mult = 0.1
 		unit_army_offense_mult = 0.05
 		unit_army_defense_mult = 0.05
-		unit_combat_unit_type_heavy_tank_offense_mult = 0.05
-		unit_combat_unit_type_heavy_tank_defense_mult = 0.05
+		unit_combat_unit_type_light_tanks_offense_mult = 0.05
 	}
 
 	ai_weight = {
