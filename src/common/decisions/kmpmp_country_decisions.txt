@@ -173,3 +173,58 @@ kmpmp_mexico_integrate_the_mesoamericans = {
 		add_primary_culture = cu:mayan
 	}
 }
+
+kmpmp_reino_unido_force_opponent_protectorate = {
+	is_shown = {
+		exists = c:BRZ
+		exists = c:POR
+		OR = {
+			has_journal_entry = je_reino_unido_por
+			has_journal_entry = je_reino_unido_brz
+		}
+		NOR = {
+			c:POR ?= {
+				is_diplomatic_play_enemy_of = c:BRZ
+			}
+			c:BRZ ?= {
+				is_diplomatic_play_enemy_of = c:POR
+			}
+		}
+		NOR = {
+			c:POR ?= {
+				is_direct_subject_of = c:BRZ
+			}
+			c:BRZ ?= {
+				is_direct_subject_of = c:POR
+			}
+		}
+	}
+
+	possible = {
+		aggressive_diplomatic_plays_permitted = yes
+		is_at_war = no
+	}
+
+	when_taken = {
+		if = {
+			limit = {
+				c:BRZ ?= ROOT
+			}
+			create_diplomatic_play = {
+				#name = 
+				type = dp_make_protectorate
+				target_country = c:POR
+			}
+		}
+		else_if = {
+			limit = {
+				c:POR ?= ROOT
+			}
+			create_diplomatic_play = {
+				#name = 
+				type = dp_make_protectorate
+				target_country = c:BRZ
+			}
+		}
+	}
+}

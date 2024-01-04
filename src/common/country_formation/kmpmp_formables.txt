@@ -7,6 +7,9 @@
 
 	possible = {
 		has_technology_researched = nationalism
+		NOT = {
+			has_variable = reino_unido_won
+		}
 	}
 }
 UNL = {

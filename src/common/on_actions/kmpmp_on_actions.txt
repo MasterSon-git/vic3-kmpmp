@@ -1,5 +1,6 @@
 ﻿on_monthly_pulse_country = {
     on_actions = {
+        buff_nation_effect_for_formables
         buff_nation_effect_for_unification
         player_boost_effect_state_unincorporated_education_access
     }
@@ -60,6 +61,49 @@ buff_nation_effect_for_unification = {
                     has_modifier = kmpmp_buff_small_nation
                 }
                 remove_modifier = kmpmp_buff_small_nation
+            }
+        }
+    }
+}
+
+buff_nation_effect_for_formables = {
+    effect = {
+        if = {
+            limit = {
+                exists = c:IBE
+                owner = c:IBE
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        has_modifier = kmpmp_buff_medium_nation
+                    }
+                }
+                add_modifier = {
+                    name = kmpmp_buff_medium_nation
+                }
+            }
+            if = {
+                limit = {
+                    has_modifier = kmpmp_buff_small_nation
+                }
+                remove_modifier = kmpmp_buff_small_nation
+            }
+        }
+        if = {
+            limit = {
+                exists = c:UNL
+                owner = c:UNL
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        has_modifier = kmpmp_buff_small_nation
+                    }
+                }
+                add_modifier = {
+                    name = kmpmp_buff_small_nation
+                }
             }
         }
     }
