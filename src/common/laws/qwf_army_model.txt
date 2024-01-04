@@ -94,8 +94,8 @@ law_professional_army = {
 		interest_group_ig_armed_forces_pol_str_mult = 0.25
 		country_institution_qwf_conscription_max_investment_add = 3													 
 		state_building_barracks_max_level_add = 100
-		state_building_conscription_center_max_level_add = 50
-		unit_experience_gain_mult = 0.25
+		state_building_conscription_center_max_level_add = 65
+		unit_experience_gain_mult = 0.35
 	}
 	
 	possible_political_movements = {
@@ -179,8 +179,11 @@ law_national_militia = {
 		state_conscription_rate_add = 0.05
 		interest_group_ig_armed_forces_pol_str_mult = -0.25
 		country_institution_qwf_conscription_max_investment_add = 3
-		state_building_barracks_max_level_add = 5
+		state_building_barracks_max_level_add = 35
 		state_building_conscription_center_max_level_add = 100
+		building_training_rate_mult = 0.35
+		country_military_goods_cost_mult = -0.05
+		unit_experience_gain_mult = 0.05
 	}
 	
 	possible_political_movements = {
@@ -257,10 +260,11 @@ law_mass_conscription = {
 	modifier = {
 		unit_morale_loss_mult = 0.05
 		state_conscription_rate_add = 0.04 #0.03
-		building_training_rate_mult = 1
+		building_training_rate_mult = 0.85
 		country_institution_qwf_conscription_max_investment_add = 3
 		state_building_barracks_max_level_add = 100
 		state_building_conscription_center_max_level_add = 100
+		unit_experience_gain_mult = -0.1
 	}
 	
 	on_enact = {
