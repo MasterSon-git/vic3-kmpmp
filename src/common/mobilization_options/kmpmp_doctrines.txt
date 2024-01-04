@@ -1,0 +1,134 @@
+﻿#mobilization_option_drill = {
+#
+#	possible = {
+#		market ?= {
+#			mg:tools ?= {
+#				market_goods_sell_orders > 0
+#			}
+#		}
+#	}
+#	
+#	unlocking_technologies = {
+#		napoleonic_warfare
+#	}
+#	upkeep_modifier = {
+#		goods_input_tools_add = 1
+#	}
+#	unit_modifier = {
+#		character_battle_condition_controlled_retreat_mult = 0.75
+#		character_battle_condition_panicked_retreat_mult = -0.75
+#	}
+#	ai_weight = {
+#		value = 1
+#	}
+#
+#    group = kmpmp_mog_doctrines
+#}
+
+mobilization_option_school_of_defence = {
+
+	possible = {
+		market ?= {
+			mg:paper ?= {
+				market_goods_sell_orders > 0
+			}
+		}
+	}
+	
+	unlocking_technologies = {
+		napoleonic_warfare
+	}
+	upkeep_modifier = {
+		goods_input_paper_add = 1
+	}
+	unit_modifier = {
+		character_battle_condition_dug_in_mult = 1
+		character_battle_condition_aggressive_maneuver_mult = -1 
+	}
+	ai_weight = {
+		value = 1
+	}
+
+    group = kmpmp_mog_doctrines
+}
+
+mobilization_option_grand_battleplan = {
+
+	possible = {
+		market ?= {
+			mg:paper ?= {
+				market_goods_sell_orders > 0
+			}
+		}
+	}
+	
+	unlocking_technologies = {
+		napoleonic_warfare
+	}
+	upkeep_modifier = {
+		goods_input_paper_add = 1
+	}
+	unit_modifier = {
+		character_battle_condition_careful_maneuver_mult = 1
+		character_battle_condition_blunder_mult = -1
+	}
+	ai_weight = {
+		value = 1
+	}
+
+    group = kmpmp_mog_doctrines
+}
+
+mobilization_option_superior_firepower = {
+
+	possible = {
+		market ?= {
+			mg:ammunition ?= {
+				market_goods_sell_orders > 0
+			}
+		}
+	}
+	
+	unlocking_technologies = {
+		napoleonic_warfare
+	}
+	upkeep_modifier = {
+		goods_input_ammunition_add =  0.5
+	}
+	unit_modifier = {
+		character_battle_condition_surprise_maneuver_mult = -1
+		character_battle_condition_charted_terrain_mult = 1
+	}
+	ai_weight = {
+		value = 1
+	}
+
+    group = kmpmp_mog_doctrines
+}
+
+mobilization_option_mass_assault = {
+
+	possible = {
+		market ?= {
+			mg:paper ?= {
+				market_goods_sell_orders > 0
+			}
+		}
+	}
+	
+	unlocking_technologies = {
+		napoleonic_warfare
+	}
+	upkeep_modifier = {
+		goods_input_paper_add = 1
+	}
+	unit_modifier = {
+		character_battle_condition_aggressive_maneuver_mult = 1
+		character_battle_condition_exhausted_mult = -1
+	}
+	ai_weight = {
+		value = 1
+	}
+
+    group = kmpmp_mog_doctrines
+}

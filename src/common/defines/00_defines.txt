@@ -1,3 +1,0 @@
-﻿NWar = {
-	WAR_EXHAUSTION_KIA_FACTOR =  1.65 #kmpmp #5.0 # Scaled by casualties compared to total manpower
-}

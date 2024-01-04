@@ -1,7 +1,18 @@
 ﻿on_monthly_pulse_country = {
     on_actions = {
+        buff_nation_effect_for_formables
         buff_nation_effect_for_unification
         player_boost_effect_state_unincorporated_education_access
+    }
+}
+
+# Fires when a diplomatic play is started
+# root = The diplomatic play that has been started
+# scope:initiator = Initiator of the play
+# scope:target = Target of the play
+on_diplomatic_play_started = {
+    on_actions = {
+        kmpmp_add_infamy_annex
     }
 }
 
@@ -55,6 +66,49 @@ buff_nation_effect_for_unification = {
     }
 }
 
+buff_nation_effect_for_formables = {
+    effect = {
+        if = {
+            limit = {
+                exists = c:IBE
+                owner = c:IBE
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        has_modifier = kmpmp_buff_medium_nation
+                    }
+                }
+                add_modifier = {
+                    name = kmpmp_buff_medium_nation
+                }
+            }
+            if = {
+                limit = {
+                    has_modifier = kmpmp_buff_small_nation
+                }
+                remove_modifier = kmpmp_buff_small_nation
+            }
+        }
+        if = {
+            limit = {
+                exists = c:UNL
+                owner = c:UNL
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        has_modifier = kmpmp_buff_small_nation
+                    }
+                }
+                add_modifier = {
+                    name = kmpmp_buff_small_nation
+                }
+            }
+        }
+    }
+}
+
 player_boost_effect_state_unincorporated_education_access = {
     effect = {
         if = {
@@ -68,6 +122,144 @@ player_boost_effect_state_unincorporated_education_access = {
                 add_modifier = {
                     name = kmpmp_player_boost_imperialism_oversee_empire_state_unincorporated_education_access
                     days = 30
+                }
+            }
+        }
+    }
+}
+
+kmpmp_add_infamy_annex = {
+    effect = {
+        if = {
+            limit = { 
+                is_diplomatic_play_type = dp_annex_subject 
+            }
+            scope:initiator = {
+                change_infamy = {
+                    value = define:NDiplomacy|WAR_GOAL_INFAMY_REDUCE_AUTONOMY
+                    multiply = {
+                        value = 1
+                        scope:target = {
+                            every_scope_state = {
+                                add = {
+                                    value = state_population
+                                    divide = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_FACTOR
+                                    multiply = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER
+                                    max = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_PER_STATE
+                                }
+                            }
+                        }
+                        max = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_TOTAL
+                        min = 1
+                    }
+
+                    multiply = {
+                        value = 1
+                        #add = "scope:initiator.country_rank.infamy_target_scaling"
+                        scope:initiator = {
+                            if = {
+                                limit = {
+                                    country_rank = rank_value:great_power
+                                }
+                                add = 0.2
+                            }
+                            else_if = {
+                                limit = {
+                                    country_rank = rank_value:major_power
+                                }
+                                add = 0.1
+                            }
+                            else_if = {
+                                limit = {
+                                    country_rank = rank_value:insignificant_power
+                                }
+                                add = -0.1
+                            }
+                            else_if = {
+                                limit = {
+                                    country_rank = rank_value:unrecognized_major_power
+                                }
+                                add = 0.5
+                            }
+                            else_if = {
+                                limit = {
+                                    country_rank = rank_value:unrecognized_regional_power
+                                }
+                                add = 0.4
+                            }
+                            else_if = {
+                                limit = {
+                                    country_rank = rank_value:unrecognized_power
+                                }
+                                add = 0.3
+                            }
+                        }
+
+                        #add = "scope:target.country_rank.infamy_aggressor_scaling"
+                        scope:target = {
+                            if = {
+                                limit = {
+                                    country_rank = rank_value:great_power
+                                }
+                                add = 0.2
+                            }
+                            else_if = {
+                                limit = {
+                                    country_rank = rank_value:major_power
+                                }
+                                add = 0.1
+                            }
+                            else_if = {
+                                limit = {
+                                    country_rank = rank_value:insignificant_power
+                                }
+                                add = -0.1
+                            }
+                            else_if = {
+                                limit = {
+                                    country_rank = rank_value:unrecognized_major_power
+                                }
+                                add = -0.3
+                            }
+                            else_if = {
+                                limit = {
+                                    country_rank = rank_value:unrecognized_regional_power
+                                }
+                                add = -0.4
+                            }
+                            else_if = {
+                                limit = {
+                                    country_rank = rank_value:unrecognized_power
+                                }
+                                add = -0.5
+                            }
+                        }
+                    }
+
+                    multiply = define:NDiplomacy|WAR_GOAL_INFAMY_OWN_SUBJECT_MULT
+
+                    if = {
+                        limit = {
+                            scope:initiator = {
+                                has_diplomatic_pact = {
+                                    who = scope:target
+                                    type = protectorate 
+                                }
+                            }
+                        }
+                        multiply = 4
+                    }
+                    if = {
+                        limit = {
+                            scope:initiator = {
+                                has_diplomatic_pact = {
+                                    who = scope:target
+                                    type = dominion 
+                                }
+                            }
+                        }
+                        multiply = 2
+                    }
                 }
             }
         }

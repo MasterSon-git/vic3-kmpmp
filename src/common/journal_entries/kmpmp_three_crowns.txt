@@ -1,0 +1,60 @@
+﻿je_empire_of_the_three_crowns = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	group = je_group_historical_content
+	possible = {
+	}
+
+	complete = {
+		has_technology_researched = pan-nationalism
+		owns_entire_state_region = STATE_CROATIA
+		owns_entire_state_region = STATE_SLOVENIA
+		owns_entire_state_region = STATE_BOSNIA
+		owns_entire_state_region = STATE_NORTHERN_SERBIA
+		owns_entire_state_region = STATE_WALLACHIA
+		owns_entire_state_region = STATE_MOLDAVIA
+		owns_entire_state_region = STATE_DOBRUDJA
+	}
+
+	on_complete = {
+		add_primary_culture = cu:serb
+		add_primary_culture = cu:bosniak
+		add_primary_culture = cu:croat
+		add_primary_culture = cu:romanian
+		add_modifier = {
+			name = kmpmp_kingdom_of_the_three_crowns
+		}
+		add_loyalists = {
+			value = 0.2
+			culture = cu:serb
+		}
+		add_loyalists = {
+			value = 0.2
+			culture = cu:bosniak
+		}
+		add_loyalists = {
+			value = 0.2
+			culture = cu:croat
+		}
+		add_loyalists = {
+			value = 0.2
+			culture = cu:romanian
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_SOUTHERN_SERBIA}
+			}
+			s:STATE_SOUTHERN_SERBIA = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_MONTENEGRO }
+			}
+			s:STATE_MONTENEGRO = {
+				add_claim = ROOT
+			}
+		}
+
+	}
+}

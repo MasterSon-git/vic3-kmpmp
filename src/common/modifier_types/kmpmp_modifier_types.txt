@@ -24,3 +24,18 @@ state_building_Naval_Base_Department_max_level_add = {
 	percent = no
 	num_decimals = 0
 }
+###Needed for Drill mob option
+##character_battle_condition_controlled_retreat_mult = {
+#	good = yes
+#	percent = yes
+#}
+#character_battle_condition_panicked_retreat_mult = {
+#	good = no
+#	percent = yes
+#}
+
+unit_combat_unit_type_light_tanks_offense_mult = {
+	good = yes
+	percent = yes
+	num_decimals = 0
+}

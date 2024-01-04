@@ -1,0 +1,6 @@
+﻿kmpmp_italy_risorgimento_buff = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+
+    # 10% Army Def for 20 years (auch für Sardien-P) decaying
+    unit_army_defense_mult = 0.1
+}

@@ -1,0 +1,178 @@
+﻿
+
+
+GGGG_mo_wine = {
+	texture = "gfx/interface/icons/production_method_icons/GGGG_wine.dds"
+
+	possible = {
+		market ?= {
+			mg:wine ?= {
+				market_goods_sell_orders > 0
+			}
+		}
+	}
+	upkeep_modifier = {
+		goods_input_wine_add = 0.5
+	}
+	unit_modifier = {
+		unit_morale_recovery_mult = 0.1
+		unit_morale_damage_mult = 0.05
+		unit_recovery_rate_add = 0.05
+	}
+	ai_weight = {
+		value = 1
+	}
+
+	group = supplements
+}
+mobilization_option_chocolate = {
+	texture = "gfx/interface/icons/mobilization_options/chocolate.dds"
+
+	possible = {
+		market ?= {
+			mg:sugar ?= {
+				market_goods_sell_orders > 0
+			}
+		}
+	}
+
+	on_deactivate_while_mobilized = {
+		custom_tooltip = {
+			text = mobilization_option_it_hurts_morale_when_you_remove_supplies_while_in_combat_tt
+			every_combat_unit = {
+				add_morale = {
+					value = morale
+					multiply = -0.5
+				}
+			}
+		}
+	}
+
+	upkeep_modifier = {
+		goods_input_sugar_add = 1
+	}
+	unit_modifier = {
+		unit_morale_recovery_mult = 0.1
+		unit_morale_damage_mult = 0.05
+		unit_recovery_rate_add = 0.05
+	}
+	ai_weight = {
+		value = 1
+	}
+
+	group = supplements
+}
+
+mobilization_option_tobacco = {
+	texture = "gfx/interface/icons/mobilization_options/tobacco.dds"
+
+	possible = {
+		market ?= {
+			mg:tobacco ?= {
+				market_goods_sell_orders > 0
+			}
+		}
+	}
+	
+	on_deactivate_while_mobilized = {
+		custom_tooltip = {
+			text = mobilization_option_it_hurts_morale_when_you_remove_supplies_while_in_combat_tt
+			every_combat_unit = {
+				add_morale = {
+					value = morale
+					multiply = -0.5
+				}
+			}
+		}
+	}
+	
+	upkeep_modifier = {
+		goods_input_tobacco_add = 0.5
+	}
+	unit_modifier = {
+		unit_morale_recovery_mult = 0.1
+		unit_morale_damage_mult = 0.05
+		unit_morale_loss_mult = -0.05
+	}
+	ai_weight = {
+		value = 1
+	}
+
+	group = supplements
+}
+
+mobilization_option_liquor = {
+	texture = "gfx/interface/icons/mobilization_options/liquor.dds"
+
+	possible = {
+		market ?= {
+			mg:liquor ?= {
+				market_goods_sell_orders > 0
+			}
+		}
+	}
+	
+	on_deactivate_while_mobilized = {
+		custom_tooltip = {
+			text = mobilization_option_it_hurts_morale_when_you_remove_supplies_while_in_combat_tt
+			every_combat_unit = {
+				add_morale = {
+					value = morale
+					multiply = -0.5
+				}
+			}
+		}
+	}
+	
+	upkeep_modifier = {
+		goods_input_liquor_add = 1
+	}
+	unit_modifier = {
+		unit_morale_recovery_mult = 0.1
+		unit_morale_damage_mult = 0.05
+		unit_recovery_rate_add = 0.05
+	}
+	ai_weight = {
+		value = 1
+	}
+
+	group = supplements
+}
+
+mobilization_option_opium = {
+	texture = "gfx/interface/icons/mobilization_options/opium.dds"
+
+	possible = {
+		market ?= {
+			mg:opium ?= {
+				market_goods_sell_orders > 0
+			}
+		}
+	}
+	
+	on_deactivate_while_mobilized = {
+		custom_tooltip = {
+			text = mobilization_option_it_hurts_morale_when_you_remove_supplies_while_in_combat_tt
+			every_combat_unit = {
+				add_morale = {
+					value = morale
+					multiply = -0.5
+				}
+			}
+		}
+	}
+	
+	upkeep_modifier = {
+		goods_input_opium_add = 0.5
+	}
+	unit_modifier = {
+		unit_morale_recovery_mult = 0.1
+		unit_morale_damage_mult = 0.05
+		unit_recovery_rate_add = 0.05
+	}
+	ai_weight = {
+		value = 1
+	}
+
+	group = supplements
+}

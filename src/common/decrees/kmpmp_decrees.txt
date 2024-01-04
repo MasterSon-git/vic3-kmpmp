@@ -325,56 +325,39 @@ decree_greener_grass_campaign = {
 	}
 }
 
-decree_enlistment_efforts = {
-	texture = "gfx/interface/icons/decree/decree_enlistment_efforts.dds"
-	modifier = {
-		state_conscription_rate_add = 0.05
-		building_training_rate_mult = 0.4 #0.25
-        building_barracks_throughput_add = 0.15
-        building_naval_base_throughput_add = 0.15
-	}
+decree_emergency_relief = {
+	texture = "gfx/interface/icons/decree/decree_emergency_relief.dds"
 	unlocking_technologies = {
-		mandatory_service
+		centralization
 	}
-	cost = 100
+	modifier = {
+		state_welfare_payments_add = 0.5
+		state_radicals_from_sol_change_mult = -0.35
+		state_peasants_education_access_add = 0.1
+		state_bureaucracy_population_base_cost_factor_mult = 0.15
+
+	}
+	cost = 75
 	
 	ai_weight = {
-		value = 0	
+		value = 0
+		
 		if = {
-			limit = {
-				any_scope_building = {
-					is_building_type = building_barracks
-					count >= 25
-				}				
+			limit = { 
+				average_sol < average_expected_sol
 			}
-			add = 50
+			add = 100
 		}
 		if = {
 			limit = {
-				any_scope_building = {
-					is_building_type = building_barracks
-					count >= 50
-				}			
-			}
-			add = 50
-		}
-		if = {
-			limit = {
-				any_scope_building = {
-					is_building_type = building_naval_base
-					count >= 25
+				scope:country = {
+					OR = {
+						has_strategy = ai_strategy_nationalist_agenda
+						has_strategy = ai_strategy_reactionary_agenda
+					}
 				}
 			}
-			add = 50
-		}
-		if = {
-			limit = {
-				any_scope_building = {
-					is_building_type = building_naval_base
-					count >= 50
-				}			
-			}
-			add = 50
-		}		
+			multiply = 0.5
+		}	
 	}
 }

@@ -1,0 +1,131 @@
+﻿# ALWAYS CHECK BEFORE UPLOADING
+# URGENT
+prussia_form_ngf = {
+	is_shown = {
+		# NOT = {
+		# 	has_game_rule = disallow_ngf_unification
+		# }
+		# is_ai = yes
+		OR = {
+			AND = {
+				exists = c:SGF
+				exists = c:PRU
+				THIS = c:PRU
+				NOT = { exists = c:NGF }
+				NOT = { exists = c:GER }
+			}
+			AND = {
+			exists = c:PRU
+			THIS = c:PRU
+			has_global_variable = aggressive_austria_var
+			}
+		}
+		# NOT = {
+		# 	any_country = {
+		# 		country_has_primary_culture = cu:north_german
+		# 		is_ai = no
+		# 	}
+		# }
+		
+		country_has_primary_culture = cu:north_german
+		country_rank >= rank_value:great_power
+		# has_dlc_feature = voice_of_the_people_content
+		# exists = c:FRA
+		# c:FRA = ROOT
+		# NOT = { has_global_variable = fra_annexed_savoy }
+		# is_subject = no
+		# NOT = { owns_entire_state_region = STATE_SAVOY }
+		# any_country = {
+		# 	NOT = { THIS = ROOT }
+		# 	any_scope_state = {
+		# 		state_region = s:STATE_SAVOY
+		# 		is_split_state = no
+		# 		is_capital = no
+		# 	}
+		# 	is_player = no
+		# }
+	}
+
+	possible = {
+		any_country = {
+			filter = {
+				country_has_primary_culture = cu:north_german
+				OR = {
+					has_diplomatic_pact = {
+						who = c:PRU
+						type = customs_union
+					}
+					is_subject_of = c:PRU
+				}
+
+			}
+			percent >= 0.90
+		}
+		is_at_war = no
+		# has_technology_researched = nationalism
+		# any_country = {
+		# 	custom_tooltip = {
+		# 		text = at_peace_nocontext_tt
+		# 		is_at_war = no
+		# 	}
+		# 	any_scope_state = {
+		# 		state_region = s:STATE_SAVOY
+		# 		is_split_state = no
+		# 		is_capital = no
+		# 	}
+		# 	custom_tooltip = {
+		# 		text = relations_amicable_nocontext_tt
+		# 		relations:root >= relations_threshold:amicable
+		# 	}
+		# 	is_revolutionary = no
+		# 	OR = {
+		# 		is_subject = no
+		# 		is_subject_of = ROOT
+		# 	}
+		# 	trigger_if = {
+		# 		limit = {
+		# 			is_subject = no
+		# 		}
+		# 		owes_obligation_to = ROOT
+		# 	}
+		# }
+	}
+
+	when_taken = {
+		every_country = {
+			limit = {
+				is_ai = yes
+				country_rank < rank_value:great_power	
+				NOT = {
+					THIS = c:PRU
+				}
+				AND = {
+					root = { country_has_primary_culture = cu:north_german }
+					country_has_primary_culture = cu:north_german
+				}		
+				OR = {
+					has_diplomatic_pact = {
+						who = c:PRU
+						type = customs_union
+					}
+					is_subject_of = c:PRU
+					AND = {
+						relations:root > relations_threshold:neutral
+						is_subject = no
+					}
+				}			
+			}
+			root = { 
+				annex = prev 
+			}
+		}
+		root = {
+			change_tag = NGF
+		}		
+		remove_global_variable = aggressive_austria_var
+	}
+
+	ai_chance = {
+		base = 10
+	}
+}
