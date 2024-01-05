@@ -113,14 +113,14 @@ player_boost_effect_state_unincorporated_education_access = {
     effect = {
         if = {
             limit = {
-                has_modifier = kmpmp_player_boost_imperialism_oversee_empire
+                has_modifier = kmpmp_player_boost_imperialism_oversea_empire
             }
             every_scope_state = {
                 limit = {
                     is_incorporated = no
                 }
                 add_modifier = {
-                    name = kmpmp_player_boost_imperialism_oversee_empire_state_unincorporated_education_access
+                    name = kmpmp_player_boost_imperialism_oversea_empire_state_unincorporated_education_access
                     days = 30
                 }
             }

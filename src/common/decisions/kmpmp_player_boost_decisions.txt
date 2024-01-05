@@ -25,7 +25,7 @@
     }
 }
 
-kmpmp_player_boost_imperialism_oversee_empire_decision = {
+kmpmp_player_boost_imperialism_oversea_empire_decision = {
     is_shown = {
         always = yes
     }
@@ -43,7 +43,7 @@ kmpmp_player_boost_imperialism_oversee_empire_decision = {
         }
         remove_player_boost_modifiers = yes
         add_modifier = {
-            name = kmpmp_player_boost_imperialism_oversee_empire
+            name = kmpmp_player_boost_imperialism_oversea_empire
         }
     }
 
