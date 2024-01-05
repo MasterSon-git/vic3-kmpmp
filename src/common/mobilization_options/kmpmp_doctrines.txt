@@ -26,7 +26,7 @@
 #}
 
 mobilization_option_school_of_defence = {
-
+	texture = "gfx/interface/icons/military_icons/mobilization_option_school_of_defence.dds"
 	possible = {
 		market ?= {
 			mg:paper ?= {
@@ -53,7 +53,7 @@ mobilization_option_school_of_defence = {
 }
 
 mobilization_option_grand_battleplan = {
-
+	texture = "gfx/interface/icons/military_icons/mobilization_option_grand_battleplan.dds"
 	possible = {
 		market ?= {
 			mg:paper ?= {
@@ -80,7 +80,7 @@ mobilization_option_grand_battleplan = {
 }
 
 mobilization_option_superior_firepower = {
-
+	texture = "gfx/interface/icons/military_icons/mobilization_option_superior_firepower.dds"
 	possible = {
 		market ?= {
 			mg:ammunition ?= {
@@ -107,7 +107,7 @@ mobilization_option_superior_firepower = {
 }
 
 mobilization_option_mass_assault = {
-
+	texture = "gfx/interface/icons/military_icons/mobilization_option_mass_assault.dds"
 	possible = {
 		market ?= {
 			mg:paper ?= {
