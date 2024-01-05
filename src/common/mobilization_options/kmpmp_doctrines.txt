@@ -96,7 +96,7 @@ mobilization_option_superior_firepower = {
 		goods_input_ammunition_add =  0.5
 	}
 	unit_modifier = {
-		character_battle_condition_surprise_maneuver_mult = 1
+		character_battle_condition_surprise_maneuver_mult = -1
 		character_battle_condition_charted_terrain_mult = 1
 	}
 	ai_weight = {
