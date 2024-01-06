@@ -356,22 +356,25 @@ corporatism = {
 	}
 }
 
-macroeconomics = {
-	era = era_5
-	texture = "gfx/interface/icons/invention_icons/macroeconomics.dds"
+central_planning = {
+	# Unlocks Command Economy - Economic System Law
+	# Unlocks Vertical Filing Cabinets PM in Government Administrations
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/central_planning.dds"
 	category = society
 	
 	modifier = {
+		state_tax_capacity_add = 25
+		# kmpmp
 		country_max_companies_add = 1
 	}
 	
 	unlocking_technologies = {
-		international_exchange_standards
-		corporate_management
+		identification_documents
 	}
 	
 	ai_weight = {
-		value = 3 # very important tech
+		value = 1.5 # Important in general
 	}
 }
 
@@ -390,6 +393,25 @@ zeppelins = {
 	
 	ai_weight = {
 		value = 1
+	}
+}
+
+macroeconomics = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/macroeconomics.dds"
+	category = society
+	
+	modifier = {
+		#country_max_companies_add = 1
+	}
+	
+	unlocking_technologies = {
+		international_exchange_standards
+		corporate_management
+	}
+	
+	ai_weight = {
+		value = 3 # very important tech
 	}
 }
 
