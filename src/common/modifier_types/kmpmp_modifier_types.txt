@@ -8,6 +8,11 @@ goods_input_tea_add = {
 	percent = no
 }
 
+building_input_ironclads_mult = {
+    good    = no
+    percent = yes
+}
+
 country_military_tech_research_speed_mult = {
 	good = yes
 	percent = yes
