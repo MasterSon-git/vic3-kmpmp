@@ -118,13 +118,25 @@ kmpmp_ev_japan_buff.2 = {
         default_option = yes
 
         # Siam
-        s:STATE_NAKHON_RATCHASIMA = {
+        s:STATE_CAMBODIA = {
+            add_claim = ROOT
+        }
+        s:STATE_TENASSERIM = {
+            add_claim = ROOT
+        }
+        s:STATE_MALAYA = {
+            add_claim = ROOT
+        }
+        s:STATE_BANGKOK = {
             add_claim = ROOT
         }
         s:STATE_LAOS = {
             add_claim = ROOT
         }
-        s:STATE_TENASSERIM = {
+        s:STATE_NAKHON_RATCHASIMA = {
+            add_claim = ROOT
+        }
+        s:STATE_CHIANG_MAI  = {
             add_claim = ROOT
         }
 
