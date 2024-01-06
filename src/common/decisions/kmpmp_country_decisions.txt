@@ -1,11 +1,14 @@
 ﻿kmpmp_emser_depeche = {
 	is_shown = {
+		NOT = { has_variable = took_decision_emser_depeche }
 		OR = {
 			c:NGF ?= owner
 			c:PRU ?= owner
 		}
 		NOT = { exists = c:GER }
-		NOT = { has_variable = took_decision_emser_depeche }
+		NOT = {
+			owns_entire_state_region = STATE_ALSACE_LORRAINE
+		}
 	}
 
 	possible = {

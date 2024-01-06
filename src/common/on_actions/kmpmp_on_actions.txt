@@ -16,6 +16,15 @@ on_diplomatic_play_started = {
     }
 }
 
+# Root = Diplomatic Play
+# scope:actor = Initiator country
+# scope:target = Target country
+on_war_end = {
+    on_actions = {
+        kmpmp_remove_war_modifiers
+    }
+}
+
 buff_nation_effect_for_unification = {
     effect = {
         if = {
@@ -261,6 +270,32 @@ kmpmp_add_infamy_annex = {
                         multiply = 2
                     }
                 }
+            }
+        }
+    }
+}
+
+kmpmp_remove_war_modifiers = {
+    effect = {
+        if = {
+            limit = {
+                OR = {
+                    scope:actor = {
+                        has_modifier = kmpmp_retake_whats_rightfully_german
+                        save_temporary_scope_as = country_with_modifier_kmpmp_retake_whats_rightfully_german
+                    }
+                    scope:target = {
+                        has_modifier = kmpmp_retake_whats_rightfully_german
+                        save_temporary_scope_as = country_with_modifier_kmpmp_retake_whats_rightfully_german
+                    }
+                }
+                OR = {
+                    c:FRA ?= scope:actor
+                    c:FRA ?= scope:target
+                }
+            }
+            scope:country_with_modifier_kmpmp_retake_whats_rightfully_german = {
+                remove_modifier = kmpmp_retake_whats_rightfully_german
             }
         }
     }
