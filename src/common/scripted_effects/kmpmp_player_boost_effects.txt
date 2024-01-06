@@ -7,9 +7,9 @@
     }
     if = {
         limit = {
-            has_modifier = kmpmp_player_boost_imperialism_oversee_empire
+            has_modifier = kmpmp_player_boost_imperialism_oversea_empire
         }
-        remove_modifier = kmpmp_player_boost_imperialism_oversee_empire
+        remove_modifier = kmpmp_player_boost_imperialism_oversea_empire
     }
     if = {
         limit = {

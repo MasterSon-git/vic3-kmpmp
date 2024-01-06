@@ -17,9 +17,15 @@ kmpmp_player_boost_art_of_deal = {
     country_tech_spread_mult = 0.2
     # +15% Authority (neu)
     country_authority_mult = 0.15
+    # +3k Flat Minting
+    country_minting_add = 3000
+    # +10% Arty Input
+    building_input_artillery_mult = 0.1
+    # +10% iron clads input
+    building_input_ironclads_mult = 0.1
 }
 
-kmpmp_player_boost_imperialism_oversee_empire = {
+kmpmp_player_boost_imperialism_oversea_empire = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 
     # +20% Navy att / Def
@@ -38,10 +44,12 @@ kmpmp_player_boost_imperialism_oversee_empire = {
     state_unincorporated_education_access_add = 0.1
     # -20% radicals from conquest
     country_radicals_from_conquest_mult = -0.2
+    # add +7.5% constrution sektor TP
+    building_construction_sector_throughput_add = 0.075
 }
 
 # just a fake modifier
-kmpmp_player_boost_imperialism_oversee_empire_state_unincorporated_education_access = {
+kmpmp_player_boost_imperialism_oversea_empire_state_unincorporated_education_access = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 
     state_education_access_add = 0.1 # modifier is added in on_actions
@@ -67,6 +75,10 @@ kmpmp_player_boost_military_industrial_complex = {
     unit_defense_mult = 0.1
     # -5% costs for military goods
     country_military_goods_cost_mult = -0.05
+    # add +10% gov wages
+    country_government_wages_mult = 0.1
+    # add -10% social tech spread
+    country_society_tech_spread_mult = -0.1
 }
 
 kmpmp_player_boost_state_capitalism = {
@@ -105,8 +117,10 @@ kmpmp_player_boost_autarky = {
     country_trade_route_competitiveness_mult = -0.1
     # +10% uni throughput
     building_university_throughput_add = 0.1
-    # +50 Authority
-    country_authority_add = 50
+    # +100 Authority
+    country_authority_add = 100
+    # add +2.5% state construction eff
+    state_construction_mult = 0.025
 }
 
 kmpmp_player_boost_social_welfare_state = {
@@ -130,8 +144,10 @@ kmpmp_player_boost_social_welfare_state = {
     state_dependent_wage_mult = 0.15
     # +10% loyalists from SOL increase
     state_loyalists_from_sol_change_mult = 0.1
-    # +10% goverment wages
-    country_government_wages_mult = 0.1
+    # +15% goverment wages
+    country_government_wages_mult = 0.15
+    # add -50 Authority
+    country_authority_add = -50
 }
 
 kmpmp_player_boost_corporative_socialism = {

@@ -4,6 +4,9 @@
  modifier_goods_input_tea_add:0 "@tea! Tea input per level"
  modifier_goods_input_tea_add_desc:0 "The amount of @tea! Tea consumed by buildings"
 
+ modifier_building_input_ironclads_mult:0 "@ironclads! $ironclads$ $concept_input_mult$"
+ modifier_building_input_ironclads_mult_desc:0 "$concept_input_mult$"
+
  modifier_state_building_military_command_center_max_level_add:0 "$building_military_command_center$ Max Level"
  modifier_state_building_military_command_center_max_level_add_desc:0 "A bonus or penalty to the maximum level of $building_military_command_center$ buildings."
 

@@ -23,8 +23,8 @@
  kmpmp_player_boost_adjustment:0 "$kmpmp_player_boost_description$ Anpassung"
 
  kmpmp_player_boost_art_of_deal:0 "Die Kunst des Deals"
- kmpmp_player_boost_imperialism_oversee_empire:0 "Imperialistischer Überwachungsstaat"
- kmpmp_player_boost_imperialism_oversee_empire_state_unincorporated_education_access:0 "Imperialistischer Überwachungsstaat"
+ kmpmp_player_boost_imperialism_oversea_empire:0 "Imperialistisches Übersee Imperium"
+ kmpmp_player_boost_imperialism_oversea_empire_state_unincorporated_education_access:0 "$kmpmp_player_boost_imperialism_oversea_empire$"
  kmpmp_player_boost_military_industrial_complex:0 "Miltärisch Industrieller Komplex"
  kmpmp_player_boost_state_capitalism:0 "Staatskapitalismus"
  kmpmp_player_boost_autarky:0 "Wirtschaftliche Unabhängigkeit"
@@ -39,9 +39,9 @@
  kmpmp_player_boost_art_of_deal_decision_desc:0 "$kmpmp_player_boost_description$"
  kmpmp_player_boost_art_of_deal_decision_tooltip:0 ""
 
- kmpmp_player_boost_imperialism_oversee_empire_decision:0 "$kmpmp_player_boost_imperialism_oversee_empire$"
- kmpmp_player_boost_imperialism_oversee_empire_decision_desc:0 "$kmpmp_player_boost_description$"
- kmpmp_player_boost_imperialism_oversee_empire_decision_tooltip:0 ""
+ kmpmp_player_boost_imperialism_oversea_empire_decision:0 "$kmpmp_player_boost_imperialism_oversea_empire$"
+ kmpmp_player_boost_imperialism_oversea_empire_decision_desc:0 "$kmpmp_player_boost_description$"
+ kmpmp_player_boost_imperialism_oversea_empire_decision_tooltip:0 ""
 
  kmpmp_player_boost_military_industrial_complex_decision:0 "$kmpmp_player_boost_military_industrial_complex$"
  kmpmp_player_boost_military_industrial_complex_decision_desc:0 "$kmpmp_player_boost_description$"
