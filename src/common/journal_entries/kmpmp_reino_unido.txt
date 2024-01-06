@@ -1,63 +1,333 @@
-﻿je_reino_unido_por = {
+﻿je_reino_unido = {
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 	group = je_group_historical_content
-	possible = {
+	transferable = no
+
+	possible = { # added through decision
+	}
+
+	immediate = {
+		add_journal_entry = {
+			type = je_reino_unido_protectorate
+		}
 	}
 
 	complete = {
-		c:BRZ = {
-			is_direct_subject_of = c:POR 
-			OR = {
-				is_subject_type = subject_type_puppet
-				is_subject_type = subject_type_dominion
+		trigger_if = { # BRZ view
+			limit = {
+				c:BRZ ?= ROOT
 			}
+			OR = {
+				AND = {
+					c:POR ?= {
+						is_direct_subject_of = c:BRZ
+						OR = {
+							is_subject_type = subject_type_puppet
+							is_subject_type = subject_type_dominion
+						}
+					}
+				}
+				AND = { # fall back for BRZ if IBE was formed
+					NOT = {
+						exists = c:POR
+					}
+					NOT = {
+						c:IBE ?= { # BRZ not subject of IBE
+							ROOT = {
+								is_direct_subject_of = c:IBE
+							}
+							# any_subject_or_below = {
+							# 	c:BRZ ?= THIS
+							# }
+						}
+					}
+					custom_tooltip = { # just to show the player this is possible if Iberia was formed - checks are above
+						has_global_variable = has_formed_ibe
+						text = je_reino_unido_fail_trigger_desc
+					}
+					custom_tooltip = {
+						has_global_variable = je_reino_unido_protectorate_completed
+						text = je_reino_unido_protectorate_completed_trigger_desc
+					}
+				}
+			}
+		}
+		trigger_else_if = { # POR view
+			limit = {
+				c:POR ?= ROOT
+			}
+			c:BRZ ?= {
+				is_direct_subject_of = c:POR 
+				OR = {
+					is_subject_type = subject_type_puppet
+					is_subject_type = subject_type_dominion
+				}
+			}
+		}
+		trigger_else = {
+			always = no
 		}
 		has_technology_researched = nationalism
 		has_technology_researched = egalitarianism
-
 	}
 
 	on_complete = {
 		set_variable = reino_unido_won
-		annex = c:BRZ
-		add_modifier = {
-			name = kmpmp_reino_unido
+		if = {
+			limit = { # BRZ view
+				c:BRZ ?= ROOT
+			}
+			add_modifier = {
+				name = kmpmp_reino_unido
+			}
+			if = { # IBE not formed
+				limit = {
+					exists = c:POR
+				}
+				annex = c:POR
+				add_primary_culture = cu:portuguese
+			}
 		}
-		add_primary_culture = cu:brazilian
-		add_primary_culture = cu:afro_brazilian
-		add_primary_culture = cu:paulista
+		else_if = {
+			limit = { # POR view
+				c:POR ?= ROOT
+			}
+			annex = c:BRZ
+			add_modifier = {
+				name = kmpmp_reino_unido
+			}
+			add_primary_culture = cu:brazilian
+			add_primary_culture = cu:afro_brazilian
+			add_primary_culture = cu:paulista
+		}
 	}
 
 	fail = {
-		has_global_variable = has_formed_ibe
+		trigger_if = { # fail for POR if IBE was formed
+			limit = {
+				OR = {
+					c:POR ?= ROOT
+					c:IBE ?= ROOT
+				}
+			}
+			custom_tooltip = {
+				has_global_variable = has_formed_ibe
+				text = je_reino_unido_fail_trigger_desc
+			}
+		}
+		trigger_else = {
+			always = no
+		}
+	}
+
+	on_monthly_pulse = { # check if we need to add je_reino_unido_protectorate
+		effect = {
+			if = {
+				limit = {
+					has_global_variable = je_reino_unido_protectorate_completed
+					has_journal_entry = je_reino_unido
+					NOT = {
+						has_journal_entry = je_reino_unido_protectorate
+					}
+				}
+				if = {
+					limit = { # BRZ view
+						c:BRZ ?= ROOT
+						NOT = {
+							c:POR ?= {
+								is_direct_subject_of = c:BRZ
+							}
+						}
+					}
+					remove_global_variable = je_reino_unido_protectorate_completed
+					add_journal_entry = {
+						type = je_reino_unido_protectorate
+					}
+				}
+				else_if = {
+					limit = { # POR view
+						c:POR ?= ROOT
+						NOT = {
+							c:BRZ ?= {
+								is_direct_subject_of = c:POR
+							}
+						}
+					}
+					remove_global_variable = je_reino_unido_protectorate_completed
+					add_journal_entry = {
+						type = je_reino_unido_protectorate
+					}
+				}
+			}
+		}
 	}
 }
-je_reino_unido_brz = {
+
+je_reino_unido_protectorate = {
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 	group = je_group_historical_content
-	possible = {
+	transferable = no
+
+	possible = { # added through main je je_reino_unido
 	}
 
 	complete = {
-		exists = c:POR
-		c:POR ?= {
-			is_direct_subject_of = c:BRZ
-			OR = {
-				is_subject_type = subject_type_puppet
-				is_subject_type = subject_type_dominion
+		trigger_if = { # BRZ view
+			limit = {
+				c:BRZ ?= ROOT
 			}
+			NOR = {
+				c:POR ?= {
+					ROOT = {
+						is_direct_subject_of = c:POR
+					}
+					# any_subject_or_below = {
+					# 	c:BRZ ?= THIS
+					# }
+				}
+				c:IBE ?= {
+					ROOT = {
+						is_direct_subject_of = c:IBE
+					}
+					# any_subject_or_below = {
+					# 	c:BRZ ?= THIS
+					# }
+				}
+			}
+			owns_entire_state_region = STATE_BEIRA
+			owns_entire_state_region = STATE_ESTREMADURA
+			owns_entire_state_region = STATE_ALENTEJO
 		}
-		has_technology_researched = nationalism
-		has_technology_researched = egalitarianism
-
+		trigger_else_if = { # POR view
+			limit = {
+				c:POR ?= ROOT
+			}
+			NOT = {
+				is_direct_subject_of = c:BRZ
+			}
+			owns_entire_state_region = STATE_MINAS_GERAIS
+			owns_entire_state_region = STATE_RIO_DE_JANEIRO
+			owns_entire_state_region = STATE_BAHIA
+		}
+		trigger_else = {
+			always = no
+		}
 	}
 
 	on_complete = {
-		set_variable = reino_unido_won
-		annex = c:POR
-		add_modifier = {
-			name =kmpmp_reino_unido
+		if = {
+			limit = { # BRZ view
+				c:BRZ ?= ROOT
+				exists = c:POR
+			}
+			set_global_variable = je_reino_unido_protectorate_completed
+			c:BRZ ?= {
+				create_diplomatic_pact = {
+					country = c:POR
+					type = protectorate
+				}
+			}
 		}
-		add_primary_culture = cu:portuguese
+		else_if = {
+			limit = { # POR view
+				c:POR ?= ROOT
+			}
+			set_global_variable = je_reino_unido_protectorate_completed
+			c:POR ?= {
+				create_diplomatic_pact = {
+					country = c:BRZ
+					type = protectorate
+				}
+			}
+		}
+	}
+
+	invalid = {
+		hidden_trigger = {
+			has_global_variable = je_reino_unido_protectorate_completed
+		}
+	}
+
+	fail = {
+		trigger_if = { # fail for POR if IBE was formed
+			limit = {
+				OR = {
+					c:POR ?= ROOT
+					c:IBE ?= ROOT
+				}
+			}
+			custom_tooltip = {
+				has_global_variable = has_formed_ibe
+				text = je_reino_unido_fail_trigger_desc
+			}
+		}
+		trigger_else = {
+			always = no
+		}
 	}
 }
+
+# je_reino_unido_por = {
+# 	icon = "gfx/interface/icons/event_icons/event_map.dds"
+# 	group = je_group_historical_content
+# 	possible = {
+# 	}
+
+# 	complete = {
+# 		c:BRZ = {
+# 			is_direct_subject_of = c:POR 
+# 			OR = {
+# 				is_subject_type = subject_type_puppet
+# 				is_subject_type = subject_type_dominion
+# 			}
+# 		}
+# 		has_technology_researched = nationalism
+# 		has_technology_researched = egalitarianism
+
+# 	}
+
+# 	on_complete = {
+# 		set_variable = reino_unido_won
+# 		annex = c:BRZ
+# 		add_modifier = {
+# 			name = kmpmp_reino_unido
+# 		}
+# 		add_primary_culture = cu:brazilian
+# 		add_primary_culture = cu:afro_brazilian
+# 		add_primary_culture = cu:paulista
+# 	}
+
+# 	fail = {
+# 		has_global_variable = has_formed_ibe
+# 	}
+# }
+
+# je_reino_unido_brz = {
+# 	icon = "gfx/interface/icons/event_icons/event_map.dds"
+# 	group = je_group_historical_content
+# 	possible = {
+# 	}
+
+# 	complete = {
+# 		exists = c:POR
+# 		c:POR ?= {
+# 			is_direct_subject_of = c:BRZ
+# 			OR = {
+# 				is_subject_type = subject_type_puppet
+# 				is_subject_type = subject_type_dominion
+# 			}
+# 		}
+# 		has_technology_researched = nationalism
+# 		has_technology_researched = egalitarianism
+
+# 	}
+
+# 	on_complete = {
+# 		set_variable = reino_unido_won
+# 		annex = c:POR
+# 		add_modifier = {
+# 			name =kmpmp_reino_unido
+# 		}
+# 		add_primary_culture = cu:portuguese
+# 	}
+# }

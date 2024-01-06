@@ -174,57 +174,61 @@ kmpmp_mexico_integrate_the_mesoamericans = {
 	}
 }
 
-kmpmp_reino_unido_force_opponent_protectorate = {
+kmpmp_reino_unido_begin = {
 	is_shown = {
+		NOT = {
+			has_global_variable = kmpmp_reino_unido_started
+		}
 		exists = c:BRZ
 		exists = c:POR
 		OR = {
-			has_journal_entry = je_reino_unido_por
-			has_journal_entry = je_reino_unido_brz
-		}
-		NOR = {
-			c:POR ?= {
-				is_diplomatic_play_enemy_of = c:BRZ
-			}
-			c:BRZ ?= {
-				is_diplomatic_play_enemy_of = c:POR
-			}
-		}
-		NOR = {
-			c:POR ?= {
-				is_direct_subject_of = c:BRZ
-			}
-			c:BRZ ?= {
-				is_direct_subject_of = c:POR
-			}
+			c:BRZ ?= ROOT
+			c:POR ?= ROOT
 		}
 	}
 
 	possible = {
-		aggressive_diplomatic_plays_permitted = yes
-		is_at_war = no
+		exists = c:BRZ
+		exists = c:POR
 	}
 
 	when_taken = {
-		if = {
-			limit = {
-				c:BRZ ?= ROOT
-			}
-			create_diplomatic_play = {
-				#name = 
-				type = dp_make_protectorate
-				target_country = c:POR
+		set_global_variable = kmpmp_reino_unido_started
+		c:BRZ = {
+			add_journal_entry = {
+				type = je_reino_unido
 			}
 		}
-		else_if = {
-			limit = {
-				c:POR ?= ROOT
+		c:POR = {
+			add_journal_entry = {
+				type = je_reino_unido
 			}
-			create_diplomatic_play = {
-				#name = 
-				type = dp_make_protectorate
-				target_country = c:BRZ
-			}
+		}
+
+		# claims for BRZ in POR
+		s:STATE_BEIRA = {
+			add_claim = c:BRZ
+		}
+		s:STATE_ESTREMADURA = {
+			add_claim = c:BRZ
+		}
+		s:STATE_ALENTEJO = {
+			add_claim = c:BRZ
+		}
+
+		# claims for POR in BRZ
+		s:STATE_MINAS_GERAIS = {
+			add_claim = c:POR
+		}
+		s:STATE_RIO_DE_JANEIRO = {
+			add_claim = c:POR
+		}
+		s:STATE_BAHIA = {
+			add_claim = c:POR
 		}
 	}
+
+	ai_chance = {
+        base = 0	
+    }
 }
