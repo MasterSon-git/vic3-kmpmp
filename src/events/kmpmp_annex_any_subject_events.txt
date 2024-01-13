@@ -1,0 +1,36 @@
+﻿namespace = kmpmp_ev_annex_any_subject
+
+kmpmp_ev_annex_any_subject.1 = {
+    type = country_event
+    placement = ROOT
+
+    title = kmpmp_ev_annex_any_subject.1.t
+    desc = kmpmp_ev_annex_any_subject.1.d
+    flavor = kmpmp_ev_annex_any_subject.1.f
+
+    event_image = {
+        video = "unspecific_signed_contract"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+    duration = 3
+
+    trigger = { # added by diplomatic action kmpmp_annex_any_subject
+    }
+
+    immediate = {
+        create_diplomatic_play = {
+            name = kmpmp_dp_annex_any_subject
+            type = dp_annex_subject #dp_annex_war
+            target_country = scope:target_country
+        }
+    }
+
+    option = {
+        name = kmpmp_ev_annex_any_subject.1.a
+        default_option = yes
+    }
+}

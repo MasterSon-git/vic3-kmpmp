@@ -1,0 +1,170 @@
+﻿kmpmp_annex_any_subject = {
+    is_hostile = yes
+    show_effect_in_tooltip = yes
+
+    potential = { # copy from dp_annex_subject
+        NOT = { is_country_type = decentralized }
+        aggressive_diplomatic_plays_permitted = yes
+        scope:target_country = {
+            NOT = { is_country_type = decentralized }
+            is_direct_subject_of = root
+            OR = {
+                has_diplomatic_pact = { who = root type = protectorate }
+                has_diplomatic_pact = { who = root type = dominion }
+                # if subject is puppet or vassal use standard diplomatic play
+                #has_diplomatic_pact = { who = root type = puppet }
+                #has_diplomatic_pact = { who = root type = vassal }
+            }
+        }
+        NAND = {
+            has_journal_entry = je_peru_bolivia
+            scope:target_country = {
+                OR = {
+                    country_has_primary_culture = cu:quechua
+                    country_has_primary_culture = cu:south_andean
+                }
+            }
+        }
+    }
+
+    possible = { # copy from dp_annex_subject
+        NAND = {
+            has_truce_with = scope:target_country
+            is_diplomatic_play_enemy_of = scope:target_country
+        }
+    }
+
+    accept_effect = {
+        # add diplo play for annexation
+        # create_diplomatic_play crashes the game here, so execute this using an event
+        custom_tooltip = {
+            text = kmpmp_annex_any_subject_trigger_event_description
+            trigger_event = {
+                id = kmpmp_ev_annex_any_subject.1
+                popup = yes
+            }
+        }
+
+        # add penalty infamy
+        change_infamy = {
+            value = define:NDiplomacy|WAR_GOAL_INFAMY_REDUCE_AUTONOMY
+            multiply = {
+                value = 1
+                scope:target_country = {
+                    every_scope_state = {
+                        add = {
+                            value = state_population
+                            divide = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_FACTOR
+                            multiply = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER
+                            max = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_PER_STATE
+                        }
+                    }
+                }
+                max = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_TOTAL
+                min = 1
+            }
+
+            multiply = {
+                value = 1
+                #add = "scope:initiator.country_rank.infamy_target_scaling"
+                if = {
+                    limit = {
+                        country_rank = rank_value:great_power
+                    }
+                    add = 0.2
+                }
+                else_if = {
+                    limit = {
+                        country_rank = rank_value:major_power
+                    }
+                    add = 0.1
+                }
+                else_if = {
+                    limit = {
+                        country_rank = rank_value:insignificant_power
+                    }
+                    add = -0.1
+                }
+                else_if = {
+                    limit = {
+                        country_rank = rank_value:unrecognized_major_power
+                    }
+                    add = 0.5
+                }
+                else_if = {
+                    limit = {
+                        country_rank = rank_value:unrecognized_regional_power
+                    }
+                    add = 0.4
+                }
+                else_if = {
+                    limit = {
+                        country_rank = rank_value:unrecognized_power
+                    }
+                    add = 0.3
+                }
+
+                #add = "scope:target.country_rank.infamy_aggressor_scaling"
+                scope:target_country = {
+                    if = {
+                        limit = {
+                            country_rank = rank_value:great_power
+                        }
+                        add = 0.2
+                    }
+                    else_if = {
+                        limit = {
+                            country_rank = rank_value:major_power
+                        }
+                        add = 0.1
+                    }
+                    else_if = {
+                        limit = {
+                            country_rank = rank_value:insignificant_power
+                        }
+                        add = -0.1
+                    }
+                    else_if = {
+                        limit = {
+                            country_rank = rank_value:unrecognized_major_power
+                        }
+                        add = -0.3
+                    }
+                    else_if = {
+                        limit = {
+                            country_rank = rank_value:unrecognized_regional_power
+                        }
+                        add = -0.4
+                    }
+                    else_if = {
+                        limit = {
+                            country_rank = rank_value:unrecognized_power
+                        }
+                        add = -0.5
+                    }
+                }
+            }
+
+            multiply = define:NDiplomacy|WAR_GOAL_INFAMY_OWN_SUBJECT_MULT
+
+            if = {
+                limit = {
+                    has_diplomatic_pact = {
+                        who = scope:target_country
+                        type = protectorate 
+                    }
+                }
+                multiply = 4
+            }
+            if = {
+                limit = {
+                    has_diplomatic_pact = {
+                        who = scope:target_country
+                        type = dominion 
+                    }
+                }
+                multiply = 2
+            }
+        }
+    }
+}
