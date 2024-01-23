@@ -1,0 +1,11 @@
+state_mortality_wealth_mult = {
+	good = no
+	percent = yes
+	num_decimals = 2 #1
+}
+
+state_pollution_reduction_health_mult = {
+	good = no
+	percent = yes
+	num_decimals = 1 #0
+}
