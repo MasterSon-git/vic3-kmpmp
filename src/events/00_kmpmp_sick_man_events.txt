@@ -274,6 +274,10 @@ sick_man.4 = {
 	}
 
 	immediate = {
+		set_variable = sick_man_complete
+		remove_modifier = outmoded_bureaucracy
+		remove_modifier = cizye_tax
+		
 		if = {
 			limit = {
 				has_modifier = kmpmp_sick_man_of_europe_buff_1

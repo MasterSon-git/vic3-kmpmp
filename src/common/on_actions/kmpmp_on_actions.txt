@@ -4,6 +4,8 @@
         # buff_nation_effect_for_formables
         # buff_nation_effect_for_unification
         player_boost_effect_state_unincorporated_education_access
+
+        kmpmp_fix_sick_man_of_europe
     }
 }
 
@@ -13,6 +15,23 @@
 on_war_end = {
     on_actions = {
         kmpmp_remove_war_modifiers
+    }
+}
+
+kmpmp_fix_sick_man_of_europe = {
+    effect = {
+        if = {
+            limit = {
+                c:TUR ?= this
+                has_modifier = kmpmp_sick_man_of_europe_restored_fame
+                NOT = {
+                    has_variable = sick_man_complete
+                }
+            }
+            set_variable = sick_man_complete
+            remove_modifier = outmoded_bureaucracy
+            remove_modifier = cizye_tax
+        }
     }
 }
 
