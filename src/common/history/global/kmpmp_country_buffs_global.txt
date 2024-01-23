@@ -28,6 +28,7 @@
         }
     }
 
+    # medium nation
     every_country = {
         limit = {
             OR = {
@@ -36,6 +37,23 @@
         }
         add_modifier = {
             name = kmpmp_buff_medium_nation
+        }
+    }
+
+    # debuff gp
+    every_country = {
+        limit = {
+            OR = {
+                c:AUS = this    # austria
+                c:FRA = this    # france
+                c:GBR = this    # great britain
+                c:RUS = this    # russia
+                c:USA = this    # usa
+                c:PRU = this    # prussia
+            }
+        }
+        add_modifier = {
+            name = kmpmp_debuff_massive_empire
         }
     }
 }
