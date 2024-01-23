@@ -1,7 +1,8 @@
 ﻿on_monthly_pulse_country = {
     on_actions = {
-        buff_nation_effect_for_formables
-        buff_nation_effect_for_unification
+        kmpmp_update_nation_buffs_action
+        # buff_nation_effect_for_formables
+        # buff_nation_effect_for_unification
         player_boost_effect_state_unincorporated_education_access
     }
 }
@@ -12,6 +13,12 @@
 on_war_end = {
     on_actions = {
         kmpmp_remove_war_modifiers
+    }
+}
+
+kmpmp_update_nation_buffs_action = {
+    effect = {
+        kmpmp_update_nation_buffs = yes
     }
 }
 

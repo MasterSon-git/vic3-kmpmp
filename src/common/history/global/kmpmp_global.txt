@@ -7,36 +7,8 @@
         }
     }
     c:AUS = {
-        add_modifier = {
-            name = kmpmp_debuff_massive_empire
-        }
         add_journal_entry = {
             type = je_empire_of_the_three_crowns
-        }
-    }
-    c:FRA = {
-        add_modifier = {
-            name = kmpmp_debuff_massive_empire
-        }
-    }
-    c:GBR = {
-        add_modifier = {
-            name = kmpmp_debuff_massive_empire
-        }
-    }
-    c:RUS = {
-        add_modifier = {
-            name = kmpmp_debuff_massive_empire
-        }
-    }
-    c:USA = {
-        add_modifier = {
-            name = kmpmp_debuff_massive_empire
-        }
-    }
-    c:PRU = {
-        add_modifier = {
-            name = kmpmp_debuff_massive_empire
         }
     }
     c:SIC = {
