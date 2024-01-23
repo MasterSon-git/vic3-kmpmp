@@ -1,0 +1,33 @@
+﻿AUS = { # Austria
+    dynamic_country_name = {
+        name = dyn_c_austria-hungary
+        adjective = dyn_c_austria-hungary_adj
+        
+        is_main_tag_only = yes
+        priority = 0
+        
+        trigger = {
+            exists = scope:actor
+            scope:actor = { country_has_primary_culture = cu:hungarian }
+        }
+    }
+
+    dynamic_country_name = {
+        name = dyn_c_three-crowns
+        adjective = dyn_c_three-crowns_adj
+        
+        is_main_tag_only = yes
+        priority = 10
+        
+        trigger = {
+            exists = scope:actor
+            scope:actor = {
+                country_has_primary_culture = cu:hungarian
+                country_has_primary_culture = cu:serb
+                country_has_primary_culture = cu:bosniak
+                country_has_primary_culture = cu:croat
+                country_has_primary_culture = cu:romanian
+            }
+        }
+    }
+}

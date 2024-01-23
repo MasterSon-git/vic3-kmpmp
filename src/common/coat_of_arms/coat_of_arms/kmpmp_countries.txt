@@ -1,0 +1,30 @@
+﻿@third = @[1/3]
+@sixth = @[1/6]
+
+AUS_three-crowns = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = "white"
+		color2 = "red"
+	}
+
+	colored_emblem = {
+		texture = "ce_tricolor_vertical.dds"
+		color1 = "green"
+		color2 = "blue"
+		instance = { scale = { 1.0 @third } position = { 0.5 @[1.0-sixth] } }
+	}
+
+	sub = {
+		parent = "sub_AUS_tc_crown"
+		instance = { scale = { @third @third } offset = { 0.0 0.08 } }
+	}
+
+	sub = {
+		parent = "sub_AUS_tc_flag"
+		instance = { scale = { 0.5 0.5 } offset = { @[0.0-sixth] @sixth } }
+	}
+}
