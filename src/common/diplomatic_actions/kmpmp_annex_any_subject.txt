@@ -167,4 +167,10 @@
             }
         }
     }
+
+    ai = {
+        will_propose = { 
+            always = no
+        }
+    }
 }
