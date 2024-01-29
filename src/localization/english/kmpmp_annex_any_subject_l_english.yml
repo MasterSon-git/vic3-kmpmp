@@ -4,7 +4,7 @@
  kmpmp_annex_any_subject_action_name:0 "$kmpmp_annex_any_subject$"
  kmpmp_annex_any_subject_action_notification_name:0 "$kmpmp_annex_any_subject$"
  kmpmp_annex_any_subject_action_notification_desc:0 "$kmpmp_annex_any_subject_desc$"
- kmpmp_annex_any_subject_trigger_event_description:0 "Triggers the Event #v $kmpmp_ev_annex_any_subject.1.t$#!\nadds additionally [concept_infamy] for annexation"
+ kmpmp_annex_any_subject_trigger_event_description:0 "Triggers the Event #v $kmpmp_ev_annex_any_subject.1.t$#!\nAdds additionally [concept_infamy] for annexation"
 
  kmpmp_ev_annex_any_subject.1.t:0 "Forced Annexation"
  kmpmp_ev_annex_any_subject.1.d:0 "Faster integration"

@@ -25,12 +25,12 @@
                 }
             }
         }
+        is_diplomatic_play_committed_participant = no
     }
 
-    possible = { # copy from dp_annex_subject
-        NAND = {
+    possible = {
+        NOT = {
             has_truce_with = scope:target_country
-            is_diplomatic_play_enemy_of = scope:target_country
         }
     }
 
@@ -165,6 +165,12 @@
                 }
                 multiply = 2
             }
+        }
+    }
+
+    ai = {
+        will_propose = { 
+            always = no
         }
     }
 }
