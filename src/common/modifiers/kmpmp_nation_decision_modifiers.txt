@@ -49,7 +49,7 @@ kmpmp_united_iberia = {
 	unit_offense_mult = 0.05
 	unit_defense_mult = 0.05
 	country_tech_spread_mult = 0.05
-	state_tax_capacity_add = 0.05
+	state_tax_capacity_mult = 0.05
 	state_birth_rate_mult = 0.03
 	building_training_rate_mult = 0.05
 }
