@@ -1,4 +1,4 @@
-## COPY-PASTED FOR NOW
+# COPY-PASTED FOR NOW
 @panel_width_minus_10 = 530			# used to be 450
 @panel_width = 540  				# used to be 460
 @panel_width_half = 270				# used to be 230
@@ -441,11 +441,7 @@ types map_list_panel_types {
 							flowcontainer = {
 								onmousehierarchyenter = "[SetCanOpenRightClickContextMenu( Not(MapListPanelManager.HasCurrentInteraction) )]"
 								onmousehierarchyleave = "[SetCanOpenRightClickContextMenu( '(bool)yes' )]"
-<<<<<<< Updated upstream
-								parentanchor = hcenter|right
-=======
 								parentanchor = hcenter
->>>>>>> Stashed changes
 								direction = vertical
 								datamodel = "[MapListPanel.AccessValidOptions]"
 
@@ -1561,11 +1557,7 @@ types map_list_panel_types {
 
 		blockoverride "headers" {
 			sort_button = {
-<<<<<<< Updated upstream
-				size = { 415 30 }
-=======
 				size = { 375 30 }
->>>>>>> Stashed changes
 				align = center|nobaseline
 				text = "DECREE_LIST_PANEL_STATE_HEADER"
 				tooltip = "DECREE_LIST_PANEL_STATE_HEADER_TOOLTIP"
@@ -1580,8 +1572,6 @@ types map_list_panel_types {
 				tooltip = "DECREE_LIST_PANEL_COST_HEADER_TOOLTIP"
 				onclick = "[MapListPanel.Sort('cost')]"
 			}
-<<<<<<< Updated upstream
-=======
 			sort_button = {
 				visible = yes
 				enabled = no
@@ -1591,7 +1581,6 @@ types map_list_panel_types {
 				tooltip = "concept_population"
 				onclick = "[MapListPanel.Sort('population')]"
 			}
->>>>>>> Stashed changes
 
 			sort_button = {
 				size = { 55 20 }
@@ -1614,21 +1603,13 @@ types map_list_panel_types {
 					}
 
 					blockoverride "name_button_size" {
-<<<<<<< Updated upstream
-						size = { 415 40 }
-=======
 						size = { 375 40 }
->>>>>>> Stashed changes
 					}
 
 					blockoverride "name_button_properties" {
 
 						datacontext = "[MapListOption.GetDecreeData.GetState]"
-<<<<<<< Updated upstream
-
-=======
 						datacontext = "[MapListOption.GetStateData.GetState]"
->>>>>>> Stashed changes
 						onmousehierarchyenter = "[AccessHighlightManager.HighlightState(State.Self)]"
 						onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
 
@@ -1642,12 +1623,8 @@ types map_list_panel_types {
 						textbox = {
 							visible = "[Not(And(State.IsUnincorporated, Not(State.IsIncorporating)))]"
 							margin = { 10 0 }
-<<<<<<< Updated upstream
-							size = { 410 25 }
-=======
 							size = { 370 25 }
 							#size = { 410 25 }
->>>>>>> Stashed changes
 							align = left|nobaseline
 							text = "[State.GetNameNoFormatting]"
 							parentanchor = vcenter
@@ -1658,12 +1635,8 @@ types map_list_panel_types {
 						textbox = {
 							visible = "[And(State.IsUnincorporated, Not(State.IsIncorporating))]"
 							margin = { 10 0 }
-<<<<<<< Updated upstream
-							size = { 390 25 }
-=======
 							size = { 350 25 }
 							#size = { 390 25 }
->>>>>>> Stashed changes
 							align = left|nobaseline
 							text = "[State.GetNameNoFormatting]"
 							parentanchor = vcenter
@@ -1680,10 +1653,7 @@ types map_list_panel_types {
 						}
 					}
 
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
 					blockoverride "values" {
 						textbox = {
 							parentanchor = vcenter
@@ -1695,8 +1665,6 @@ types map_list_panel_types {
 							elide = right
 							fontsize_min = 12
 						}
-<<<<<<< Updated upstream
-=======
 					
 						textbox = {
 							datacontext = "[MapListOption.GetStateData.GetState]"
@@ -1708,7 +1676,6 @@ types map_list_panel_types {
 							text = "[MapListOption.GetDecreeData.GetState.GetPopulationSize|Kv]"
 							tooltip = "TOOLTIP_STATE_POPULATION"
 						}
->>>>>>> Stashed changes
 					}
 				}
 			}
