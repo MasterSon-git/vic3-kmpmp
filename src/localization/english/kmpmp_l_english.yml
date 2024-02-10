@@ -129,6 +129,9 @@
  kmpmp_integrate_mesoamericans_positive:0 "$kmpmp_integrate_the_mesoamericans$"
  kmpmp_integrate_mesoamericans_negative:0 "$kmpmp_integrate_the_mesoamericans$"
 
+ kmpmp_mexico_integrate_the_mesoamericans:0 "Integrate the Mesoamericans"
+ kmpmp_mexico_integrate_the_mesoamericans_desc:0 "$kmpmp_integrate_the_mesoamericans$"
+ kmpmp_mexico_integrate_the_mesoamericans_tooltip:0 ""
  kmpmp_mexico_defend_the_homeland:0 "Defend the homeland"
 
  kmpmp_italy_risorgimento_buff:0 "Italy Risorgimento Buff"
