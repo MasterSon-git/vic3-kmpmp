@@ -137,19 +137,19 @@ kmpmp_mexico_integrate_the_mesoamericans = {
 	}
 
 	possible = {
-		has_technology_researched = pan-nationalism
+		has_technology_researched = nationalism
 	}
 
 	when_taken = {
 		set_variable = took_decision_mexico_integrate_the_mesoamericans
 
 		add_modifier = {
-			name = kmpmp_mexico_integrate_mesoamericans_positive
+			name = kmpmp_integrate_mesoamericans_positive
 			years = 5
 		}
 
 		add_modifier = {
-			name = kmpmp_mexico_integrate_mesoamericans_negative
+			name = kmpmp_integrate_mesoamericans_negative
 			years = 20
 			is_decaying = yes
 		}
@@ -174,6 +174,61 @@ kmpmp_mexico_integrate_the_mesoamericans = {
 		}
 
 		add_primary_culture = cu:mayan
+	}
+}
+
+kmpmp_integrate_the_mesoamericans = {
+	is_shown = {
+		NOT = { 
+			has_variable = took_decision_integrate_the_mesoamericans
+		}
+		OR = {
+			c:BOL ?= owner
+			c:FND ?= owner
+			c:PEU ?= owner
+		}
+	}
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+
+	when_taken = {
+		set_variable = took_decision_integrate_the_mesoamericans
+
+		add_modifier = {
+			name = kmpmp_integrate_mesoamericans_positive
+			years = 5
+		}
+
+		add_modifier = {
+			name = kmpmp_integrate_mesoamericans_negative
+			years = 20
+			is_decaying = yes
+		}
+		
+		add_radicals = {
+			value = 0.05
+			culture = cu:south_andean
+		}
+
+		add_loyalists = {
+			value = 0.05
+			culture = cu:amazonian
+		}
+
+		add_loyalists = {
+			value = 0.05
+			culture = cu:quechua
+		}
+
+		add_loyalists = {
+			value = 0.05
+			culture = cu:aimara
+		}
+
+		add_primary_culture = cu:amazonian
+		add_primary_culture = cu:quechua
 	}
 }
 
