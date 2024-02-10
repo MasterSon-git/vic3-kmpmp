@@ -104,7 +104,7 @@
  kmpmp_reino_unido_begin:0 "$kmpmp_reino_unido$ beginnen"
  kmpmp_reino_unido_begin_desc:0 "Startet die Vereinigung '$kmpmp_reino_unido$' zwischen $BRZ$ und $POR$"
  je_reino_unido:0 "$kmpmp_reino_unido$"
- je_reino_unido_reason:0 "Unify the crowns"
+ je_reino_unido_reason:0 "Die Kronen vereinigen"
  je_reino_unido_fail_trigger_desc:0 "$IBE$ [concept_country] wurde gegründet"
  je_reino_unido_protectorate:0 "Macht sie zu unserem Protektorat"
  je_reino_unido_protectorate_reason:0 "Protektorats Status erzwingen"
@@ -123,13 +123,13 @@
 
  kmpmp_austrian_the_great_reform:0 "Die große Reform"
 
- kmpmp_mexico_integrate_the_mesoamericans:0 "Integrieren der Mesoamerikaner"
- kmpmp_mexico_integrate_the_mesoamericans_desc:0 "$kmpmp_mexico_integrate_the_mesoamericans$"
- kmpmp_mexico_integrate_the_mesoamericans_tooltip:0 ""
+ kmpmp_integrate_the_mesoamericans:0 "Integrieren der Mesoamerikaner"
+ kmpmp_integrate_the_mesoamericans_desc:0 "$kmpmp_integrate_the_mesoamericans$"
+ kmpmp_integrate_the_mesoamericans_tooltip:0 ""
+ kmpmp_integrate_mesoamericans_positive:0 "$kmpmp_integrate_the_mesoamericans$"
+ kmpmp_integrate_mesoamericans_negative:0 "$kmpmp_integrate_the_mesoamericans$"
 
  kmpmp_mexico_defend_the_homeland:0 "Verteidigt das Vaterland"
- kmpmp_mexico_integrate_mesoamericans_positive:0 "$kmpmp_mexico_integrate_the_mesoamericans$"
- kmpmp_mexico_integrate_mesoamericans_negative:0 "$kmpmp_mexico_integrate_the_mesoamericans$"
 
  kmpmp_italy_risorgimento_buff:0 "Italien Risorgimento Buff"
 
