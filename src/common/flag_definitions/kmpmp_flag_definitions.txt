@@ -54,8 +54,7 @@
 		subject_canton = AUS_three-crowns
 		priority = 200
 		trigger = { 
-			scope:actor = { 
-				country_has_primary_culture = cu:hungarian 
+			scope:actor = {
 				country_has_primary_culture = cu:hungarian
 				country_has_primary_culture = cu:serb
 				country_has_primary_culture = cu:bosniak

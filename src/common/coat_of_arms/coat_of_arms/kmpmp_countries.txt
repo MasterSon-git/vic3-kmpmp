@@ -18,13 +18,35 @@ AUS_three-crowns = {
 		instance = { scale = { 1.0 @third } position = { 0.5 @[1.0-sixth] } }
 	}
 
+	colored_emblem = {
+		texture = "ce_shield_tc_austria.dds"
+		color1 = "red"
+		color2 = "yellow"
+		instance ={ scale { 0.5 0.5 } position = { @sixth 0.5 } }
+	}
+
+	colored_emblem = {
+		texture = "ce_shield_tc_hungaria.dds"
+		color1 = "red"
+		color2 = "yellow"
+		color3 = "green"
+		instance ={ scale { 0.5 0.5 } position = { 0.5 0.5 } }
+	}
+
+	colored_emblem = {
+		texture = "ce_shield_tc_croatia.dds"
+		color1 = "red"
+		color2 = "yellow"
+		instance ={ scale { 0.5 0.5 } position = { @[1.0-sixth] 0.5 } }
+	}
+
 	sub = {
 		parent = "sub_AUS_tc_crown"
 		instance = { scale = { @third @third } offset = { 0.0 0.08 } }
 	}
 
-	sub = {
-		parent = "sub_AUS_tc_flag"
-		instance = { scale = { 0.5 0.5 } offset = { @[0.0-sixth] @sixth } }
-	}
+	# sub = {
+	# 	parent = "sub_AUS_tc_flag"
+	# 	instance = { scale = { @[0.025 + third] @[0.025 + third] } offset = { -1.0 @third } }
+	# }
 }
