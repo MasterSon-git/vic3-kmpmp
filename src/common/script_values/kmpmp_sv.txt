@@ -1,0 +1,4 @@
+﻿kmpmp_average_sol_add_one = {
+    value = average_sol
+    add = 1
+}
