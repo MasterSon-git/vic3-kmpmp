@@ -23,5 +23,8 @@
     }
     c:PER = {
         activate_law = law_type:law_interventionism
+        add_journal_entry = {
+            type = je_unite_the_homeland_per
+        }
     }
 }

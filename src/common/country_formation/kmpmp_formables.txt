@@ -27,3 +27,32 @@ UNL = {
 	}	
 	ai_will_do = { always = yes }
 }
+
+P01 = {
+	states = {
+		STATE_IRAKAJEMI
+		STATE_ISFAHAN
+		STATE_KHORASAN
+		STATE_MAZANDARAN
+		STATE_TABRIZ
+		STATE_LURISTAN
+		STATE_KHUZESTAN
+		STATE_FARS
+		STATE_LARISTAN
+		STATE_SISTAN
+		STATE_AZERBAIJAN
+		STATE_BAGHDAD
+	}
+
+	required_states_fraction = 1
+
+	ai_will_do = { always = yes }
+
+	possible = {
+		has_technology_researched = nationalism
+		custom_tooltip = {
+			text = p01_formable_tooltip
+			p01_formable >= 4
+		}
+	}
+}

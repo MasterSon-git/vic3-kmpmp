@@ -1,0 +1,311 @@
+﻿je_unite_the_homeland_per = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	group = je_group_historical_content
+	possible = {
+	}
+
+	complete = {
+		OR = {
+				 s:STATE_IRAKAJEMI = {
+    			any_scope_state = {
+        			OR = {
+            			owner = root
+            			owner = {
+                			is_subject_of = root
+            			}
+        			}
+        		count = all
+    			}
+			}
+		}
+		OR = {
+				 s:STATE_ISFAHAN = {
+    			any_scope_state = {
+        			OR = {
+            			owner = root
+            			owner = {
+                			is_subject_of = root
+            			}
+        			}
+        		count = all
+    			}
+			}
+		}
+		OR = {
+				 s:STATE_MAZANDARAN = {
+    			any_scope_state = {
+        			OR = {
+            			owner = root
+            			owner = {
+                			is_subject_of = root
+            			}
+        			}
+        		count = all
+    			}
+			}
+		}
+		OR = {
+				 s:STATE_KHORASAN  = {
+    			any_scope_state = {
+        			OR = {
+            			owner = root
+            			owner = {
+                			is_subject_of = root
+            			}
+        			}
+        		count = all
+    			}
+			}
+		}
+		OR = {
+				 s:STATE_TABRIZ = {
+    			any_scope_state = {
+        			OR = {
+            			owner = root
+            			owner = {
+                			is_subject_of = root
+            			}
+        			}
+        		count = all
+    			}
+			}
+		}
+		OR = {
+				 s:STATE_LURISTAN = {
+    			any_scope_state = {
+        			OR = {
+            			owner = root
+            			owner = {
+                			is_subject_of = root
+            			}
+        			}
+        		count = all
+    			}
+			}
+		}
+		OR = {
+				 s:STATE_KHUZESTAN = {
+    			any_scope_state = {
+        			OR = {
+            			owner = root
+            			owner = {
+                			is_subject_of = root
+            			}
+        			}
+        		count = all
+    			}
+			}
+		}
+		OR = {
+				 s:STATE_FARS = {
+    			any_scope_state = {
+        			OR = {
+            			owner = root
+            			owner = {
+                			is_subject_of = root
+            			}
+        			}
+        		count = all
+    			}
+			}
+		}
+		OR = {
+				 s:STATE_LARISTAN = {
+    			any_scope_state = {
+        			OR = {
+            			owner = root
+            			owner = {
+                			is_subject_of = root
+            			}
+        			}
+        		count = all
+    			}
+			}
+		}
+		OR = {
+				 s:STATE_SISTAN  = {
+    			any_scope_state = {
+        			OR = {
+            			owner = root
+            			owner = {
+                			is_subject_of = root
+            			}
+        			}
+        		count = all
+    			}
+			}
+		}
+		OR = {
+				 s:STATE_PASHTUNISTAN = {
+    			any_scope_state = {
+        			OR = {
+            			owner = root
+            			owner = {
+                			is_subject_of = root
+            			}
+        			}
+        		count = all
+    			}
+			}
+		}
+		OR = {
+				 s:STATE_WESTERN_AFGHANISTAN = {
+    			any_scope_state = {
+        			OR = {
+            			owner = root
+            			owner = {
+                			is_subject_of = root
+            			}
+        			}
+        		count = all
+    			}
+			}
+		}
+		OR = {
+				 s:STATE_EASTERN_AFGHANISTAN = {
+    			any_scope_state = {
+        			OR = {
+            			owner = root
+            			owner = {
+                			is_subject_of = root
+            			}
+        			}
+        		count = all
+    			}
+			}
+		}
+		OR = {
+				 s:STATE_BALUCHISTAN = {
+    			any_scope_state = {
+        			OR = {
+            			owner = root
+            			owner = {
+                			is_subject_of = root
+            			}
+        			}
+        		count = all
+    			}
+			}
+		}
+		OR = {
+				 s:STATE_IRAKAJEMI = {
+    			any_scope_state = {
+        			OR = {
+            			owner = root
+            			owner = {
+                			is_subject_of = root
+            			}
+        			}
+        		count = all
+    			}
+			}
+		}
+	}
+
+	on_complete = {
+		if = {
+			limit = {
+				exists ?= c:AFG
+			}
+		annex ?= c:AFG
+		}
+		if = {
+			limit = {
+				exists ?= c:MAK
+			}
+		annex ?= c:MAK
+		}
+		if = {
+			limit = {
+				exists ?= c:KAL
+			}
+		annex ?= c:KAL
+		}
+		trigger_event = {
+			id = the_people_celebrate_unification
+			popup = yes
+
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_TAJIKISTAN }
+			}
+			s:STATE_TAJIKISTAN = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_KIRGHIZIA }
+			}
+			s:STATE_KIRGHIZIA = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_UZBEKIA }
+			}
+			s:STATE_UZBEKIA = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_TURKMENIA }
+			}
+			s:STATE_TURKMENIA = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_KHIVA }
+			}
+			s:STATE_KHIVA = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_TIANSHAN }
+			}
+			s:STATE_TIANSHAN = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_DZUNGARIA }
+			}
+			s:STATE_DZUNGARIA = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_JETISY }
+			}
+			s:STATE_JETISY = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_SEMIRECHE }
+			}
+			s:STATE_SEMIRECHE = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_KASHMIR }
+			}
+			s:STATE_KASHMIR = {
+				add_claim = ROOT
+			}
+		}
+
+	}
+}

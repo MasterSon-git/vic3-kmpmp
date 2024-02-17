@@ -178,3 +178,19 @@ kmpmp_remove_war_modifiers = {
         }
     }
 }
+on_country_formed = {
+    on_actions = {
+        kmpmp_new_formables
+    }
+}
+
+kmpmp_new_formables = {
+    effect = {
+            if = {
+                limit = {
+                    c:P01 = ROOT
+                }
+             trigger_event = formation.21
+        }
+    }
+}

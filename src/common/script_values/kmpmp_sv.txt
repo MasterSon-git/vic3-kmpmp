@@ -1,0 +1,62 @@
+﻿p01_formable = {
+    value = 0
+    if = {
+        limit = {
+            owns_entire_state_region = STATE_BASRA
+            any_scope_state = {
+                state_region = s:STATE_BASRA
+                is_incorporated = yes
+            }
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            owns_entire_state_region = STATE_ARMENIA
+            any_scope_state = {
+                state_region = s:STATE_ARMENIA
+                is_incorporated = yes
+            }
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            owns_entire_state_region = STATE_DIYARBAKIR
+            any_scope_state = {
+                state_region = s:STATE_DIYARBAKIR
+                is_incorporated = yes
+            }
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            owns_entire_state_region = STATE_ERZURUM
+            any_scope_state = {
+                state_region = s:STATE_ERZURUM
+                is_incorporated = yes
+            }
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            owns_entire_state_region = STATE_DEIR_EZ_ZOR
+            any_scope_state = {
+                state_region = s:STATE_DEIR_EZ_ZOR
+                is_incorporated = yes
+            }
+        }
+        add = 1
+    }
+    if = {
+        limit = {
+            owns_entire_state_region = STATE_MOSUL
+            any_scope_state = {
+                state_region = s:STATE_MOSUL
+                is_incorporated = yes
+            }
+        }
+        add = 1
+    }}
