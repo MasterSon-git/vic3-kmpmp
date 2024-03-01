@@ -45,8 +45,13 @@ AUS_three-crowns = {
 		instance = { scale = { @third @third } offset = { 0.0 0.08 } }
 	}
 
-	# sub = {
-	# 	parent = "sub_AUS_tc_flag"
-	# 	instance = { scale = { @[0.025 + third] @[0.025 + third] } offset = { -1.0 @third } }
-	# }
+	sub = {
+		parent = "sub_HUN_tc_crown"
+		instance = { scale = { @third @third } offset = { @third 0.068 } }
+	}
+
+	sub = {
+		parent = "sub_CRO_tc_crown"
+		instance = { scale = { @third @third } offset = { @[1.0-third] 0.07 } }
+	}
 }

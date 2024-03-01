@@ -1,0 +1,13 @@
+﻿three_crowns = {
+	color = "three_crowns_red"
+
+	possible = {
+		exists = c:AUS
+		THIS = c:AUS
+		country_has_primary_culture = cu:hungarian
+		country_has_primary_culture = cu:serb
+		country_has_primary_culture = cu:bosniak
+		country_has_primary_culture = cu:croat
+		country_has_primary_culture = cu:romanian
+	}
+}
