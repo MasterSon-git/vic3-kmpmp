@@ -27,4 +27,7 @@
             type = je_unite_the_homeland_per
         }
     }
+    s:STATE_KUBAN = {
+        remove_homeland = cu:ukrainian
+    }
 }
