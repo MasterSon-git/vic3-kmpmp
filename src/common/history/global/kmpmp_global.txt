@@ -24,4 +24,7 @@
     c:PER = {
         activate_law = law_type:law_interventionism
     }
+    s:STATE_KUBAN = {
+        remove_homeland = cu:ukrainian
+    }
 }
