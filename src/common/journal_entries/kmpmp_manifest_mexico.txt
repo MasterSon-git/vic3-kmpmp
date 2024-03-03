@@ -1,0 +1,42 @@
+﻿kmpmp_je_manifest_mexico = {
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+    group = je_group_historical_content
+
+    is_shown_when_inactive = {
+        c:MEX = root
+    }
+
+    possible = {
+        STATE_CALIFORNIA = {
+            any_scope_state = {
+                count = all
+                is_incorporated = yes
+            }
+        }
+
+    }
+
+    immediate = {
+        add_modifier = {
+            name = kmpmp_manifest_mexico
+        }
+    }
+
+    complete = {
+        OR = {
+            NOT = {
+                ROOT = {
+                    owns_entire_state_region = STATE_CALIFORNIA
+                }
+            }
+            year = 1865
+            ROOT = {
+                is_subject_of = c:USA
+            }
+        }
+    }
+
+    on_complete = {
+        remove_modifier = kmpmp_manifest_mexico
+    }
+}
