@@ -1,4 +1,12 @@
-﻿on_monthly_pulse_country = {
+﻿# Root = Country
+on_country_formed = {
+    on_actions = {
+        kmpmp_new_formables
+    }
+}
+
+# Root = Country
+on_monthly_pulse_country = {
     on_actions = {
         kmpmp_update_nation_buffs_action
         # buff_nation_effect_for_formables
@@ -175,6 +183,17 @@ kmpmp_remove_war_modifiers = {
             scope:country_with_modifier_kmpmp_retake_whats_rightfully_german = {
                 remove_modifier = kmpmp_retake_whats_rightfully_german
             }
+        }
+    }
+}
+
+kmpmp_new_formables = {
+    effect = {
+        if = {
+            limit = {
+                c:P01 = ROOT
+            }
+            trigger_event = formation.21
         }
     }
 }
