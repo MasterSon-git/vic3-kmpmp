@@ -1647,11 +1647,11 @@ formation.21 = {
 			months = very_long_modifier_time
 		}
 		add_modifier = {
-					name = kmpmp_parthian_empire
-				}
+			name = kmpmp_parthian_empire
+		}
 		if = {
 			limit = {
-				NOT = { owns_entire_state_region = STATE:PUNJAB }
+				NOT = { owns_entire_state_region = STATE_PUNJAB }
 			}
 			s:STATE_PUNJAB = {
 				add_claim = ROOT
@@ -1670,6 +1670,7 @@ formation.21 = {
 			factor = 1
 		}
 	}
+	
 	option = {
 		name = formation.21.b
 		add_modifier = {
@@ -1682,7 +1683,7 @@ formation.21 = {
 
 		if = {
 			limit = {
-				NOT = { owns_entire_state_region = STATE:PUNJAB }
+				NOT = { owns_entire_state_region = STATE_PUNJAB }
 			}
 			s:STATE_PUNJAB = {
 				add_claim = ROOT

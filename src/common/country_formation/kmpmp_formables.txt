@@ -50,9 +50,15 @@ P01 = {
 
 	possible = {
 		has_technology_researched = nationalism
-		custom_tooltip = {
-			text = p01_formable_tooltip
-			p01_formable >= 4
+		
+		calc_true_if = {
+			amount >= 4
+			state_region_owned_and_incorporated = { STATE_REGION = STATE_BASRA }
+			state_region_owned_and_incorporated = { STATE_REGION = STATE_ARMENIA }
+			state_region_owned_and_incorporated = { STATE_REGION = STATE_DIYARBAKIR }
+			state_region_owned_and_incorporated = { STATE_REGION = STATE_ERZURUM }
+			state_region_owned_and_incorporated = { STATE_REGION = STATE_DEIR_EZ_ZOR }
+			state_region_owned_and_incorporated = { STATE_REGION = STATE_MOSUL }
 		}
 	}
 }
