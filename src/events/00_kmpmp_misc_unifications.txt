@@ -1219,6 +1219,7 @@ formation.17 = {
 			c:RHN ?= THIS
 			c:ITA ?= THIS
 			c:GER ?= THIS
+			c:P01 ?= THIS
 		}
 	}
 
@@ -1601,3 +1602,111 @@ formation.20 = {
 		}
 	}
 }
+
+# Parthia
+formation.21 = {
+	type = country_event
+	placement = ROOT
+
+	title = formation.21.t
+	desc = formation.21.d
+	flavor = formation.21.f
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	duration = 3
+
+	trigger = {
+		c:P01 ?= THIS
+		NOT = { has_global_variable = has_formed_p01 }
+	}
+
+	immediate = {
+		set_global_variable = has_formed_p01
+		save_scope_as = formation_country
+		ruler = { save_scope_as = ruler_scope }
+		every_country = {
+			limit = {
+				has_diplomatic_relevance = ROOT
+			}
+			post_notification = unification_notification_one_culture
+		}
+	}
+
+	option = {
+		name = formation.21.a
+		default_option = yes
+		add_modifier = {
+			name = unification_prestige
+			months = very_long_modifier_time
+		}
+		add_modifier = {
+			name = kmpmp_parthian_empire
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_PUNJAB }
+			}
+			s:STATE_PUNJAB = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_SINDH }
+			}
+			s:STATE_SINDH = {
+				add_claim = ROOT
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = formation.21.b
+		add_modifier = {
+			name = unification_prestige
+			months = very_long_modifier_time
+		}
+		add_modifier = {
+			name = kmpmp_parthian_empire
+		}
+
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_PUNJAB }
+			}
+			s:STATE_PUNJAB = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_SINDH }
+			}
+			s:STATE_SINDH = {
+				add_claim = ROOT
+			}
+		}
+		every_scope_state = {
+			convert_population = {
+				target = rel:zoroastrian
+				value = 0.6
+			}
+		}
+		set_state_religion = rel:zoroastrian
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+

@@ -1,0 +1,16 @@
+﻿P01 = {
+    dynamic_country_name = {
+        name = dyn_c_parthian_empire_name
+        adjective = dyn_c_parthian_empire_adj
+
+        priority = 100
+        is_main_tag_only = yes
+
+        trigger = {
+            exists = scope:actor
+            scope:actor = {
+                has_law = law_type:law_monarchy
+            }
+        }
+    }
+}

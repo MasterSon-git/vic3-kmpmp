@@ -1,0 +1,130 @@
+﻿je_unite_the_homeland_per = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	group = je_group_historical_content
+	
+	possible = {
+	}
+
+	complete = {
+		owns_or_has_subject_entire_state_region = { STATE_REGION = s:STATE_IRAKAJEMI }
+		owns_or_has_subject_entire_state_region = { STATE_REGION = s:STATE_ISFAHAN }
+		owns_or_has_subject_entire_state_region = { STATE_REGION = s:STATE_MAZANDARAN }
+		owns_or_has_subject_entire_state_region = { STATE_REGION = s:STATE_KHORASAN }
+		owns_or_has_subject_entire_state_region = { STATE_REGION = s:STATE_TABRIZ }
+		owns_or_has_subject_entire_state_region = { STATE_REGION = s:STATE_LURISTAN }
+		owns_or_has_subject_entire_state_region = { STATE_REGION = s:STATE_KHUZESTAN }
+		owns_or_has_subject_entire_state_region = { STATE_REGION = s:STATE_FARS }
+		owns_or_has_subject_entire_state_region = { STATE_REGION = s:STATE_LARISTAN }
+		owns_or_has_subject_entire_state_region = { STATE_REGION = s:STATE_SISTAN }
+		owns_or_has_subject_entire_state_region = { STATE_REGION = s:STATE_PASHTUNISTAN }
+		owns_or_has_subject_entire_state_region = { STATE_REGION = s:STATE_WESTERN_AFGHANISTAN }
+		owns_or_has_subject_entire_state_region = { STATE_REGION = s:STATE_EASTERN_AFGHANISTAN }
+		owns_or_has_subject_entire_state_region = { STATE_REGION = s:STATE_BALUCHISTAN }
+	}
+
+	on_complete = {
+		if = {
+			limit = {
+				exists = c:AFG
+			}
+			annex = c:AFG
+		}
+		if = {
+			limit = {
+				exists = c:MAK
+			}
+			annex = c:MAK
+		}
+		if = {
+			limit = {
+				exists = c:KAL
+			}
+			annex = c:KAL
+		}
+		trigger_event = {
+			id = kmpmp_ev_persia.1
+			popup = yes
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_TAJIKISTAN }
+			}
+			s:STATE_TAJIKISTAN = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_KIRGHIZIA }
+			}
+			s:STATE_KIRGHIZIA = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_UZBEKIA }
+			}
+			s:STATE_UZBEKIA = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_TURKMENIA }
+			}
+			s:STATE_TURKMENIA = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_KHIVA }
+			}
+			s:STATE_KHIVA = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_TIANSHAN }
+			}
+			s:STATE_TIANSHAN = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_DZUNGARIA }
+			}
+			s:STATE_DZUNGARIA = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_JETISY }
+			}
+			s:STATE_JETISY = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_SEMIRECHE }
+			}
+			s:STATE_SEMIRECHE = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_KASHMIR }
+			}
+			s:STATE_KASHMIR = {
+				add_claim = ROOT
+			}
+		}
+
+	}
+}
