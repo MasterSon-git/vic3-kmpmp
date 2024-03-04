@@ -169,6 +169,11 @@
  kmpmp_ev_persia.1.a:0 "Hooray"
 
  kmpmp_china_buff:0 "China buff"
+
  kmpmp_manifest_mexico:0 "Manifest Mexico"
  kmpmp_je_manifest_mexico:0 "Manifest Mexico"
- kmpmp_je_manifest_mexico_reason:0 "Hold California for Buffs"
+ kmpmp_je_manifest_mexico_reason:0 "Halte $STATE_CALIFORNIA$ um den "$kmpmp_manifest_mexico$-Buff" zu erhalten."
+ kmpmp_je_manifest_mexico_tooltip:0 "Aktiviert den "$kmpmp_manifest_mexico$-Buff""
+ kmpmp_je_manifest_fail_mexico:0 "Manifest Mexico wiederherstellen"
+ kmpmp_je_manifest_fail_mexico_reason:0 "Halte $STATE_CALIFORNIA$ um den "$kmpmp_manifest_mexico$-Buff" zu erhalten."
+ kmpmp_je_manifest_fail_mexico_tooltip:0 "Aktiviert den "$kmpmp_manifest_mexico$-Buff""
