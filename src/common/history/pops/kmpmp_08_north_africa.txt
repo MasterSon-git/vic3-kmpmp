@@ -1,0 +1,38 @@
+POPS = {
+    s:STATE_UPPER_EGYPT = {
+        region_state:EGY = {
+            create_pop = {
+                culture = misri
+                size = 640016 #320008
+            }
+            create_pop = {
+                culture = bedouin
+                size = 55992 #27996
+            }
+            create_pop = {
+                culture = misri
+                religion = oriental_orthodox
+                size = 74430 #37215
+            }
+            create_pop = {
+                culture = turkish
+                pop_type = aristocrats
+                size = 2002 #1001
+            }
+            create_pop = {
+                culture = turkish
+                pop_type = bureaucrats
+                size = 804 #402
+            }
+            create_pop = {
+                culture = sudanese
+                size = 2042 #1021
+            }
+            create_pop = {
+                pop_type = slaves
+                culture = sudanese
+                size = 8204 #4102
+            }
+        }
+    }
+}
