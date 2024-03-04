@@ -9,7 +9,7 @@
 			}
 		}
 		market ?= {
-			mg:automobiles ?= {
+			mg:engines ?= {
 				market_goods_sell_orders > 0
 			}
 		}
