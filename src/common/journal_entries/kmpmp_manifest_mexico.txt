@@ -64,11 +64,6 @@
                 type = kmpmp_je_manifest_mexico_fail
             }
         }
-        # trigger_event = {
-		# 	id = kmpmp_ev_mexico_buff.2
-		# 	days = 7
-		# 	popup = yes
-		# }
     }
 }
 
