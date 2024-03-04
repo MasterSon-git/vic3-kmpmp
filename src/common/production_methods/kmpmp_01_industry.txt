@@ -466,3 +466,84 @@ pm_bolt_action_rifles = {
 		}
 	}
 }
+
+kmpmp_pm_extensive_tank_production = {
+	texture = "gfx/interface/icons/production_method_icons/tanks.dds"
+
+	unlocking_technologies = {
+		mobile_armor
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_engines_add = 10
+			goods_input_steel_add = 20
+			goods_input_oil_add = 10
+			goods_output_aeroplanes_add = -10
+
+			# output goods
+			goods_output_tanks_add = 60
+			goods_output_aeroplanes_add = -30
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_engineers_add = 500
+		}
+	}
+}
+
+kmpmp_pm_focus_tank_production = {
+	texture = "gfx/interface/icons/production_method_icons/tanks.dds"
+
+	unlocking_technologies = {
+		mobile_armor
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_engines_add = 10
+			goods_input_steel_add = 20
+			goods_input_oil_add = 10
+			goods_output_aeroplanes_add = -10
+
+			# output goods
+			goods_output_tanks_add = 70
+			goods_output_aeroplanes_add = -40
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_engineers_add = 500
+		}
+	}
+}
+
+kmpmp_pm_prioritize_tank_production = {
+	texture = "gfx/interface/icons/production_method_icons/tanks.dds"
+
+	unlocking_technologies = {
+		mobile_armor
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_engines_add = 10
+			goods_input_steel_add = 20
+			goods_input_oil_add = 10
+			goods_output_aeroplanes_add = -10
+
+			# output goods
+			goods_output_tanks_add = 80
+			goods_output_aeroplanes_add = -50
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_engineers_add = 500
+		}
+	}
+}
