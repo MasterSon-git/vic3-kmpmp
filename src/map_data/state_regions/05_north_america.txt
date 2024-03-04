@@ -1447,9 +1447,10 @@ STATE_MEXICO = {
     arable_land = 160
     arable_resources = { "bg_maize_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_dye_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" "bg_vineyard_plantations" }
     capped_resources = {
-        bg_iron_mining = 9
-        bg_lead_mining = 12
-        bg_logging = 7
+        bg_iron_mining = 20 #9
+        bg_lead_mining = 25 #12
+        bg_logging = 15 #7
+        bg_coal_mining = 30
     }
     resource = {
         type = "bg_rubber"
@@ -1472,7 +1473,7 @@ STATE_VERACRUZ = {
     capped_resources = {
         bg_iron_mining = 9
         bg_lead_mining = 12
-        bg_logging = 6
+        bg_logging = 13 #6
         bg_fishing = 7
     }
     resource = {
