@@ -77,12 +77,12 @@ law_slave_trade = {
 	revolution_state_weight = {
 		value = 1
 		if = {
-		   limit = { 
-			  is_slave_state = no 
-			  NOT = { has_variable = former_slave_state }
-		   }	
-		   if = {
-		      limit = { 
+			limit = { 
+				is_slave_state = no 
+				NOT = { has_variable = former_slave_state }
+			}	
+			if = {
+				limit = { 
 				owner = { # special logic for ACW to try and force a historical split of states					
 					has_journal_entry = je_acw_countdown
 					OR = {
@@ -91,17 +91,17 @@ law_slave_trade = {
 					}
 					any_scope_state = {
 						OR = {
-						   is_slave_state = yes 
-						   has_variable = former_slave_state			
+							is_slave_state = yes 
+							has_variable = former_slave_state			
 						}				
 					}						
 				} 
-			  }	  
-			  multiply = 0.0
-		   }
-		   else = {
-			  multiply = 0.25
-		   }
+				}	  
+				multiply = 0.0
+			}
+			else = {
+				multiply = 0.25
+			}
 		}
 	}
 
@@ -112,7 +112,7 @@ law_slave_trade = {
 			limit = { 
 				has_journal_entry = je_government_petition
 				has_variable = desired_law_var
-                scope:law = var:desired_law_var
+				scope:law = var:desired_law_var
 			}
 			add = 750
 		}
@@ -206,12 +206,12 @@ law_legacy_slavery = {
 	revolution_state_weight = {
 		value = 1
 		if = {
-		   limit = { 
-			  is_slave_state = no 
-			  NOT = { has_variable = former_slave_state }
-		   }	
-		   if = {
-		      limit = { 
+			limit = { 
+				is_slave_state = no 
+				NOT = { has_variable = former_slave_state }
+			}	
+			if = {
+				limit = { 
 				owner = { # special logic for ACW to try and force a historical split of states					
 					has_journal_entry = je_acw_countdown
 					OR = {
@@ -220,17 +220,17 @@ law_legacy_slavery = {
 					}
 					any_scope_state = {
 						OR = {
-						   is_slave_state = yes 
-						   has_variable = former_slave_state			
+							is_slave_state = yes 
+							has_variable = former_slave_state			
 						}				
 					}						
 				} 
-			  } 
-			  multiply = 0.0
-		   }
-		   else = {
-			  multiply = 0.25
-		   }
+				} 
+				multiply = 0.0
+			}
+			else = {
+				multiply = 0.25
+			}
 		}
 	}
 	ai_enact_weight_modifier = {
@@ -269,7 +269,7 @@ law_legacy_slavery = {
 			limit = { 
 				has_journal_entry = je_government_petition
 				has_variable = desired_law_var
-                scope:law = var:desired_law_var
+				scope:law = var:desired_law_var
 			}
 			add = 750
 		}
