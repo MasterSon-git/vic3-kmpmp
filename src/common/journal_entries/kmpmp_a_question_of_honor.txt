@@ -18,12 +18,15 @@
     }
 
     complete = {
-        ROOT = {
-            is_junior_in_customs_union = yes
-        }
+        is_junior_in_customs_union = no
     }
 
     on_complete = {
-        remove_modifier = kmpmp_grow_some_balls
+        if = {
+            limit = {
+                has_modifier = kmpmp_grow_some_balls
+            }
+            remove_modifier = kmpmp_grow_some_balls
+        }
     }
 }
