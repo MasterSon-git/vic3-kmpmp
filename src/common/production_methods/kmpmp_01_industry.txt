@@ -537,8 +537,8 @@ kmpmp_pm_prioritize_tank_production = {
 			goods_output_aeroplanes_add = -10
 
 			# output goods
-			goods_output_tanks_add = 80
-			goods_output_aeroplanes_add = -50
+			goods_output_tanks_add = 81
+			goods_output_aeroplanes_add = -51
 		}
 
 		level_scaled = {
