@@ -2,6 +2,7 @@
 infamy_reputable = {
     country_authority_mult = 0.1
     country_influence_add = 100
+    country_radicals_from_conquest_mult = -0.15
 }
 
 infamy_infamous = {
