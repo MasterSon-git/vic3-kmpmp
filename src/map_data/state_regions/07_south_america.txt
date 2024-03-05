@@ -284,12 +284,13 @@ STATE_ANTOFAGASTA = {
     farm = "x694D06"
     mine = "xE96CF4"
     wood = "x8F918A"
-    arable_land = 35 #10
+    arable_land = 60 #10
     arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
         bg_iron_mining = 30
-        bg_coal_mining = 30
+        bg_coal_mining = 30 #kmpmp
         bg_sulfur_mining = 48
+        bg_logging = 9 #kmpmp
         bg_fishing = 10 #5
     }
     resource = {
