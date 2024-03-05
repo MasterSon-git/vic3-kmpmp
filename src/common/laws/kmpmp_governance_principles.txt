@@ -88,7 +88,7 @@
 			limit = { 
 				has_journal_entry = je_government_petition
 				has_variable = desired_law_var
-                scope:law = var:desired_law_var
+				scope:law = var:desired_law_var
 			}
 			add = 750
 		}
@@ -111,8 +111,8 @@ law_theocracy = {
 		country_legitimacy_ideological_incoherence_mult = 0.1
 		interest_group_ig_devout_pol_str_mult = 0.25
 		country_authority_add = 250 #200
-        state_radicals_from_sol_change_accepted_religion_mult = -0.1
-        state_loyalists_from_sol_change_accepted_religion_mult = 0.1
+		state_radicals_from_sol_change_accepted_religion_mult = -0.1
+		state_loyalists_from_sol_change_accepted_religion_mult = 0.1
 	}
 	
 	possible_political_movements = {
@@ -150,7 +150,7 @@ law_theocracy = {
 			limit = { 
 				has_journal_entry = je_government_petition
 				has_variable = desired_law_var
-                scope:law = var:desired_law_var
+				scope:law = var:desired_law_var
 			}
 			add = 750
 		}
@@ -232,7 +232,7 @@ law_council_republic = {
 			limit = { 
 				has_journal_entry = je_government_petition
 				has_variable = desired_law_var
-                scope:law = var:desired_law_var
+				scope:law = var:desired_law_var
 			}
 			add = 750
 		}
