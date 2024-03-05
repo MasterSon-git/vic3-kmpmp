@@ -6,18 +6,18 @@ infamy_reputable = {
 }
 
 infamy_infamous = {
-	country_radicals_from_conquest_mult = 0.25
+    country_radicals_from_conquest_mult = 0.25
 }
 
 infamy_notorious = {
-	country_radicals_from_conquest_mult = 0.5
+    country_radicals_from_conquest_mult = 0.5
     country_tech_spread_mult = -0.1
     country_authority_mult = -0.05
     country_influence_add = -50
 }
 
 infamy_pariah = {
-	country_radicals_from_conquest_mult = 1.0
+    country_radicals_from_conquest_mult = 1.0
     country_trade_route_competitiveness_mult = -0.5
     country_tech_spread_mult = -0.25
     country_authority_mult = -0.1

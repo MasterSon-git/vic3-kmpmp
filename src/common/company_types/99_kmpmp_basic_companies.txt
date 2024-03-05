@@ -635,3 +635,77 @@ company_basic_munitions = {
         country_military_goods_cost_mult = -0.1
     }
 }
+
+company_basic_motors = {
+    icon = "gfx/interface/icons/company_icons/basic_motors.dds"
+    background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+    
+    uses_dynamic_naming = yes
+    
+    dynamic_company_type_names = {
+        "dynamic_company_type_company"
+        "dynamic_company_type_consortium"
+        "dynamic_company_type_corporation"
+        "dynamic_company_type_conglomerate"
+        "dynamic_company_type_syndicate"
+        "dynamic_company_type_combine"
+    }
+    
+    building_types = {
+        building_motor_industry
+        building_war_machine_industry
+    }
+
+    possible = { 
+        any_scope_state = {
+            is_incorporated = yes
+            any_scope_building = {
+                OR = {
+                    is_building_type = building_motor_industry
+                    is_building_type = building_war_machine_industry
+                }
+                level >= 10
+            }
+        }
+    }
+    
+    prosperity_modifier = {
+        military_formation_movement_speed_mult = 0.1
+        building_steel_mills_throughput_add = 0.1
+        building_group_bg_oil_extraction_throughput_add = 0.1
+    }
+}
+company_basic_arts = {
+    icon = "gfx/interface/icons/company_icons/basic_arts.dds"
+    background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+    
+    uses_dynamic_naming = yes
+    
+    dynamic_company_type_names = {
+        "dynamic_company_type_company"
+        "dynamic_company_type_consortium"
+        "dynamic_company_type_corporation"
+        "dynamic_company_type_conglomerate"
+        "dynamic_company_type_syndicate"
+        "dynamic_company_type_combine"
+    }
+    
+    building_types = {
+        building_arts_academy
+    }
+
+    possible = { 
+        any_scope_state = {
+            is_incorporated = yes
+            any_scope_building = {
+                is_building_type = building_motor_industry
+                level >= 5
+            }
+        }
+    }
+    
+    prosperity_modifier = {
+        building_power_plant_throughput_add = 0.1
+        building_tooling_workshops_throughput_add = 0.1
+    }
+}
