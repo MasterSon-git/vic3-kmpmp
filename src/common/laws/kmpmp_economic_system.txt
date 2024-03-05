@@ -19,7 +19,7 @@
 	modifier = {
 		state_aristocrats_investment_pool_efficiency_mult = 0.9 #0.5
 		state_farmers_investment_pool_efficiency_mult = 0.5
-		state_capitalists_investment_pool_efficiency_mult = -0.25
+		state_capitalists_investment_pool_efficiency_mult = -0.1 #-0.25
 		country_private_construction_allocation_mult = 0.5
 		
 		country_subsidies_bg_agriculture = yes
@@ -176,10 +176,11 @@ law_industry_banned = {
 		building_group_bg_plantations_throughput_add = 0.15 #0.1
 		state_expected_sol_mult = -0.1
 		interest_group_ig_rural_folk_pol_str_mult = 0.5
-		state_aristocrats_investment_pool_contribution_add = 0.25
+		state_aristocrats_investment_pool_contribution_add = 1 #0.25
+		state_accepted_birth_rate_mult = 0.05 #kmpmp
 		country_private_construction_allocation_mult = 0.5
 		country_production_tech_research_speed_mult = -0.1 #-0.25
-        country_military_tech_research_speed_mult = 0.05
+        country_military_tech_research_speed_mult = 0.1 #0.05
         country_society_tech_research_speed_mult = 0.1
 		#country_production_tech_spread_mult = -0.25
 		country_subsidies_bg_agriculture = yes
@@ -195,6 +196,7 @@ law_industry_banned = {
 		bg_plantations
 		bg_ranching
 		bg_infrastructure
+		bg_oil_extraction #kmpmp
 	}
 	
 	possible_political_movements = {
@@ -266,6 +268,7 @@ law_laissez_faire = {
 		state_shopkeepers_investment_pool_efficiency_mult = 0.25	
 		state_capitalists_investment_pool_efficiency_mult = 0.15 #0.25
 		country_private_construction_allocation_mult = 0.75
+		building_group_bg_manufacturing_throughput_add = 0.05 #kmpmp
 
 		country_subsidies_bg_infrastructure = yes
 		country_subsidies_bg_power = yes
@@ -281,7 +284,9 @@ law_laissez_faire = {
 		bg_oil_extraction
 		bg_infrastructure
 		bg_whaling
-		bg_fishing	
+		bg_fishing
+		bg_power #kmpmp
+		bg_arts #kmpmp
 	}
 	
 	possible_political_movements = {
