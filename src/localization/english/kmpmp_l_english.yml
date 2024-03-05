@@ -169,5 +169,24 @@
  kmpmp_ev_persia.1.a:0 "Hooray"
 
  kmpmp_china_buff:0 "China buff"
+
+ kmpmp_manifest_mexico:0 "Manifest Mexico"
+ kmpmp_je_manifest_mexico:0 "$kmpmp_manifest_mexico$"
+ kmpmp_je_manifest_mexico_reason:0 "Hold $STATE_CALIFORNIA$ to have the "$kmpmp_manifest_mexico$-buff" applied."
+ kmpmp_je_manifest_mexico_tooltip:0 "While active "$kmpmp_manifest_mexico$-buff" is applied"
+ kmpmp_je_manifest_mexico_fail:0 "Restore $kmpmp_manifest_mexico$"
+ kmpmp_je_manifest_mexico_fail_reason:0 "Hold $STATE_CALIFORNIA$ to have the "$kmpmp_manifest_mexico$-buff" applied."
+ kmpmp_je_manifest_mexico_fail_tooltip:0 "While active "$kmpmp_manifest_mexico$-buff" is applied"
+
+ kmpmp_pm_extensive_tank_production:0 "Extensive Tank Production"
+ kmpmp_pm_focus_tank_production:0 "Focus Tank Production"
+ kmpmp_pm_prioritize_tank_production:0 "Prioritize Tank Production"
+
+ kmpmp_grow_some_balls:0 "Grow some Balls"
+ kmpmp_je_a_question_of_honor:0 "A question of honour"
+ kmpmp_je_a_question_of_honor_reason:0 "A question of honour"
+
+ kmpmp_ig_trait_made_in_germany:0 "Made in Germany"
+
  kmpmp_arabia:0 "Arabia"
  kmpmp_united_arabia:0 "Unified Arabia"

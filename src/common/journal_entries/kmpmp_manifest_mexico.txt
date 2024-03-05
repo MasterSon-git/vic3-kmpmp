@@ -1,0 +1,106 @@
+﻿kmpmp_je_manifest_mexico = {
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+    group = je_group_historical_content
+    #can_deactivate = yes   # if we are using this and add modifier in modifiers_while_active, the modifier is doubled on reactivation
+    can_revolution_inherit = yes
+
+    is_shown_when_inactive = {
+        c:MEX ?= root
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                NOT = {
+                    has_modifier = kmpmp_manifest_mexico
+                }
+            }
+            add_modifier = {
+                name = kmpmp_manifest_mexico
+            }
+        }
+    }
+
+    complete = {
+        year >= 1865
+    }
+
+    on_complete = {
+        if = {
+            limit = {
+                has_modifier = kmpmp_manifest_mexico
+            }
+            remove_modifier = kmpmp_manifest_mexico
+        }
+    }
+
+    fail = {
+        OR = {
+            NOT = {
+                owns_entire_state_region = STATE_CALIFORNIA
+            }
+            s:STATE_CALIFORNIA = {
+                any_scope_state = {
+                    is_incorporated = no
+                }
+            }
+            has_subject_relation_with = c:USA
+            has_diplomatic_pact = { 
+                who = c:USA
+                type = customs_union
+            }
+        }
+    }
+
+    on_fail = {
+        if = {
+            limit = {
+                has_modifier = kmpmp_manifest_mexico
+            }
+            remove_modifier = kmpmp_manifest_mexico
+        }
+        hidden_effect = {
+            add_journal_entry = {
+                type = kmpmp_je_manifest_mexico_fail
+            }
+        }
+    }
+}
+
+kmpmp_je_manifest_mexico_fail = {
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+    group = je_group_historical_content
+    #can_deactivate = yes   # if we are using this and add modifier in modifiers_while_active, the modifier is doubled on reactivation
+    can_revolution_inherit = yes
+
+    complete = {
+        owns_entire_state_region = STATE_CALIFORNIA
+        s:STATE_CALIFORNIA = {
+            any_scope_state = {
+                is_incorporated = yes
+            }
+        }
+        NOT = {
+            has_subject_relation_with = c:USA
+            has_diplomatic_pact = { 
+                who = c:USA
+                type = customs_union
+            }
+        }
+    }
+
+    on_complete = {
+        add_modifier = {
+            name = kmpmp_manifest_mexico
+        }
+        hidden_effect = {
+            add_journal_entry = {
+                type = kmpmp_je_manifest_mexico
+            }
+        }
+    }
+
+    invalid = {
+        year >= 1865
+    }
+}
