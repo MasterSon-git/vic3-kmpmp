@@ -119,7 +119,7 @@
             }
             create_building = {
                 building = "building_cotton_plantation"
-                level = 10 #8
+                level = 11 #8
                 reserves = 1
             }
             create_building = {
