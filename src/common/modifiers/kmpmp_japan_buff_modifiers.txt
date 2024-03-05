@@ -3,7 +3,7 @@
     country_law_enactment_success_add = 0.1
     country_law_enactment_time_mult = -0.15
     building_university_throughput_add = 0.3
-    country_minting_add = 10000
+    country_minting_add = 20000
 }
 
 kmpmp_japan_buff_meiji_complete = {
