@@ -8,7 +8,7 @@
 
     possible = {
         year >= 1860
-        leads_customs_union = no
+        is_junior_in_customs_union = yes
     }
 
     immediate = {
@@ -19,7 +19,7 @@
 
     complete = {
         ROOT = {
-            leads_customs_union = yes
+            is_junior_in_customs_union = yes
         }
     }
 
