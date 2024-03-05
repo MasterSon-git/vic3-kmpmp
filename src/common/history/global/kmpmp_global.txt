@@ -32,4 +32,7 @@
     s:STATE_KUBAN = {
         remove_homeland = cu:ukrainian
     }
+    c:BOL = {
+        change_infamy = -30
+    }
 }
