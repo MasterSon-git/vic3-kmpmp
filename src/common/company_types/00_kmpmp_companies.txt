@@ -1000,8 +1000,8 @@ company_imperial_tobacco = {
 	}
 
 	prosperity_modifier = {
-		country_tech_spread_mult = 0.1
-		state_infrastructure_mult = 0.15
+		country_tech_spread_mult = 0.1 #0.15
+		state_infrastructure_mult = 0.15 #0.1
 	}
 
 	ai_weight = {
@@ -2977,7 +2977,6 @@ company_rubber_corporation_indochina = {
 			state_region = s:STATE_MALAYA
 			is_incorporated = yes
 			any_scope_building = {
-				
 				is_building_type = building_rubber_plantation
 				level >= 5
 			}
@@ -3022,7 +3021,6 @@ company_taiwanese_tea = {
 			state_region = s:STATE_FORMOSA
 			is_incorporated = yes
 			any_scope_building = {
-				
 				is_building_type = building_tea_plantation
 				level >= 10
 			}
@@ -3031,7 +3029,7 @@ company_taiwanese_tea = {
 
 	prosperity_modifier = {
 		building_motor_industry_throughput_add = 0.1
-		tax_consumption_add = -0.2
+		country_consumption_tax_cost_mult = -0.2
 	}
 
 	ai_weight = {
