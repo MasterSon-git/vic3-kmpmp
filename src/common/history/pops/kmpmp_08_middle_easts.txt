@@ -4,46 +4,46 @@ POPS = {
             create_pop = {
                 culture = mashriqi
                 religion = sunni
-                size = 496000#248000
+                size = 248000 #248000
             }
             create_pop = {
                 culture = mashriqi
                 religion = shiite
-                size = 16000 #8000
+                size = 8000 #8000
             }
             create_pop = {
                 culture = mashriqi
                 religion = shiite
-                size = 51200 #25600
+                size = 25600 #25600
             }
             create_pop = {
                 culture = mashriqi
                 religion = orthodox
-                size = 116000 #58000
+                size = 58000 #58000
             }
             create_pop = {
                 culture = bedouin
                 religion = sunni
-                size = 16000 #8000
+                size = 8000 #8000
             }
             create_pop = {
                 culture = sephardic
                 religion = jewish
-                size = 36000 #18000
+                size = 18000 #18000
             }
             create_pop = {
                 culture = armenian
-                size = 2800 #1400
+                size = 1400 #1400
             }
             create_pop = {
                 pop_type = slaves
                 culture = north_caucasian
-                size = 2400 #1200
+                size = 1200 #1200
             }
             create_pop = {
                 pop_type = slaves
                 culture = lacustrine_bantu
-                size = 4600 #2300
+                size = 2300 #2300
             }
         }
     }

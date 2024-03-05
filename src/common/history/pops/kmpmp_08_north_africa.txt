@@ -3,35 +3,35 @@ POPS = {
         region_state:EGY = {
             create_pop = {
                 culture = misri
-                size = 640016 #320008
+                size = 320008 #320008
             }
             create_pop = {
                 culture = bedouin
-                size = 55992 #27996
+                size = 27996 #27996
             }
             create_pop = {
                 culture = misri
                 religion = oriental_orthodox
-                size = 74430 #37215
+                size = 37215 #37215
             }
             create_pop = {
                 culture = turkish
                 pop_type = aristocrats
-                size = 2002 #1001
+                size = 1001 #1001
             }
             create_pop = {
                 culture = turkish
                 pop_type = bureaucrats
-                size = 804 #402
+                size = 402 #402
             }
             create_pop = {
                 culture = sudanese
-                size = 2042 #1021
+                size = 1021 #1021
             }
             create_pop = {
                 pop_type = slaves
                 culture = sudanese
-                size = 8204 #4102
+                size = 4102 #4102
             }
         }
     }
