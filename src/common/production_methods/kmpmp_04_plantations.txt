@@ -2,7 +2,7 @@
 	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
 	
 	unlocking_laws = {
-        law_agrarianism #kmpmp
+		law_agrarianism #kmpmp
 		law_collectivized_agriculture
 	}
 	

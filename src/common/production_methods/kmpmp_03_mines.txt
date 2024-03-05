@@ -3,7 +3,7 @@
 
 	unlocking_laws = {
 		law_command_economy
-        law_industry_banned #kmpmp
+		law_industry_banned #kmpmp
 	}
 	
 	building_modifiers = {
@@ -21,7 +21,7 @@ pm_government_run_building_iron_mine = {
 	
 	unlocking_laws = {
 		law_command_economy
-        law_industry_banned #kmpmp
+		law_industry_banned #kmpmp
 	}
 
 	building_modifiers = {
@@ -39,7 +39,7 @@ pm_government_run_building_lead_mine = {
 	
 	unlocking_laws = {
 		law_command_economy
-        law_industry_banned #kmpmp
+		law_industry_banned #kmpmp
 	}
 
 	building_modifiers = {
@@ -57,7 +57,7 @@ pm_government_run_building_sulfur_mine = {
 
 	unlocking_laws = {
 		law_command_economy
-        law_industry_banned #kmpmp
+		law_industry_banned #kmpmp
 	}
 
 	building_modifiers = {
@@ -81,7 +81,7 @@ pm_government_run_building_gold_mine = {
 
 	unlocking_laws = {
 		law_command_economy
-        law_industry_banned #kmpmp
+		law_industry_banned #kmpmp
 	}
 
 	building_modifiers = {
