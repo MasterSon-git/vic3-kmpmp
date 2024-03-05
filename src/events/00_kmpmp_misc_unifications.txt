@@ -574,6 +574,13 @@ formation.8 = {
 			}
 			post_notification = unification_notification_four_culture
 		}
+		add_modifier = {
+			name = kmpmp_united_arabia
+			years = 10
+		}
+		add_modifier = {
+			name = kmpmp_arabia
+		}
 	}
 
 	option = {
@@ -606,6 +613,46 @@ formation.8 = {
 				}
 			}
 			add_claim = ROOT
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_KONYA }
+			}
+			s:STATE_KONYA = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_HUDAVENDIGAR }
+			}
+			s:STATE_HUDAVENDIGAR = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_AYDIN }
+			}
+			s:STATE_AYDIN = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_KASTAMONU }
+			}
+			s:STATE_KASTAMONU = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_ANKARA }
+			}
+			s:STATE_ANKARA = {
+				add_claim = ROOT
+			}
 		}
 		ai_chance = {
 			factor = 1
