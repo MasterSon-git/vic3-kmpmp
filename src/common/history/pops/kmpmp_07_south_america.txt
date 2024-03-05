@@ -41,7 +41,7 @@ POPS = {
 			}
 			create_pop = {
 				culture = afro_caribeno	# Yungas Afro-Bolivians
-				size = 105750 #3200
+				size = 4800 #3200
 			}
 		}
 	}
