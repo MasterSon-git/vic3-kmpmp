@@ -2951,7 +2951,7 @@ company_trubia = {
 }
 #Great Rubber Corporation of Indochina
 company_rubber_corporation_indochina = {
-	icon = "gfx/interface/icons/company_icons/historical_company_icons/indochina_rubber_corporation.dds" #muss noch gemacht werden
+	icon = "gfx/interface/icons/company_icons/indochina_rubber_corporation.dds" #muss noch gemacht werden
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
 
 	flavored_company = yes
@@ -2993,9 +2993,9 @@ company_rubber_corporation_indochina = {
 	}
 }
 
-#Taiwanese Tee Company
+#Taiwanese Tea Company
 company_taiwanese_tea = {
-	icon = "gfx/interface/icons/company_icons/historical_company_icons/taiwanese_tea.dds" #muss noch gemacht werden
+	icon = "gfx/interface/icons/company_icons/taiwanese_tea.dds" #muss noch gemacht werden
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
 
 	flavored_company = yes

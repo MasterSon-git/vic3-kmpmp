@@ -1,7 +1,8 @@
 ﻿l_english:
  company_imperial_tobacco:0 "Imperial Dye Corporation of Persia" #"Imperial Tobacco Corporation of Persia"
+ company_rubber_corporation_indochina: "Great Rubber Corporation of Indochina"
  company_taiwanese_tea: "Taiwanese Tea Company"
 
- company_basic_arts: "Art Studio"
+ company_basic_arts: "Standard Art Academy"
  company_basic_arts_dynamic_name_tag_singular: "Artwork"
  company_basic_arts_dynamic_name_tag_plural: "Artworks"
