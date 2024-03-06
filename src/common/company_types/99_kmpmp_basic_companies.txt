@@ -675,21 +675,13 @@ company_basic_motors = {
         building_group_bg_oil_extraction_throughput_add = 0.1
     }
 }
+
 company_basic_arts = {
     icon = "gfx/interface/icons/company_icons/basic_arts.dds"
     background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
     
-    uses_dynamic_naming = yes
-    
-    dynamic_company_type_names = {
-        "dynamic_company_type_company"
-        "dynamic_company_type_consortium"
-        "dynamic_company_type_corporation"
-        "dynamic_company_type_conglomerate"
-        "dynamic_company_type_syndicate"
-        "dynamic_company_type_combine"
-    }
-    
+    uses_dynamic_naming = no
+        
     building_types = {
         building_arts_academy
     }
