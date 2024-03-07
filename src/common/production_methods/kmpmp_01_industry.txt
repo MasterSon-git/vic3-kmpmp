@@ -388,7 +388,7 @@ pm_assembly_lines_building_munition_plants = {
 	#required_input_goods = electricity
 }
 
-pm_cannery_meat = {
+pm_cannery = {
 	texture = "gfx/interface/icons/production_method_icons/canneries.dds"
 	
 	unlocking_technologies = {
@@ -399,7 +399,32 @@ pm_cannery_meat = {
 		workforce_scaled = {
 			# input goods
 			goods_input_grain_add = -20		# x20 = -400
-			goods_input_meat_add = 25		# x20 =  600
+			goods_input_meat_add = 25 #20	# x20 =  600
+			goods_input_iron_add = 10		# x40 =  400
+			
+			# output goods
+			goods_output_groceries_add = 30	# x30 =  900
+		}
+
+		level_scaled = {
+			# profit = 300 (20.8)
+			building_employment_machinists_add = 500	# x1.5 = 750 laborer wages
+		}
+	}
+}
+
+pm_cannery_fish = {
+	texture = "gfx/interface/icons/production_method_icons/canneries.dds"
+	
+	unlocking_technologies = {
+		canneries
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_grain_add = -20		# x20 = -400
+			goods_input_fish_add = 30		# x20 =  600
 			goods_input_iron_add = 10		# x40 =  400
 			
 			# output goods
