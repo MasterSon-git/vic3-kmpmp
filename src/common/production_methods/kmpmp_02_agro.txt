@@ -63,7 +63,7 @@ pm_refrigerated_rail_cars_building_livestock_ranch = {
 	texture = "gfx/interface/icons/production_method_icons/refrigerated_rail_cars.dds"
 	
 	unlocking_technologies = {
-		flash_freezing
+		electric_railway
 	}
 	
 	building_modifiers = {

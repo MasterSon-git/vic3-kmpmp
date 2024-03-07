@@ -2,25 +2,25 @@
     every_country = {
         limit = {
             OR = {
-                c:SAR = this    # sardinien piemont
-                c:SIC = this    # two sicilies
-                c:TUR = this    # ottomans
-                c:BEL = this    # belgium
-                c:NET = this    # netherlands
-                c:SWE = this    # sweden
-                c:JAP = this    # japan
-                c:BRZ = this    # brazil
-                c:MEX = this    # mexico
-                c:PER = this    # persia
-                c:EGY = this    # egypt
-                c:POR = this    # portugal
-                c:ARG = this    # argentina
-                c:SIA = this    # siam
-                c:WAL = this    # wallachia
-                c:HBC = this    # hudson bay company
-                c:SOK = this    # sokoto
-                #c:PEU = this    # peru
-                c:BOL = this    # bolivia
+                c:SAR ?= this    # sardinien piemont
+                c:SIC ?= this    # two sicilies
+                c:TUR ?= this    # ottomans
+                c:BEL ?= this    # belgium
+                c:NET ?= this    # netherlands
+                c:SWE ?= this    # sweden
+                c:JAP ?= this    # japan
+                c:BRZ ?= this    # brazil
+                c:MEX ?= this    # mexico
+                c:PER ?= this    # persia
+                c:EGY ?= this    # egypt
+                c:POR ?= this    # portugal
+                c:ARG ?= this    # argentina
+                c:SIA ?= this    # siam
+                c:WAL ?= this    # wallachia
+                c:HBC ?= this    # hudson bay company
+                c:SOK ?= this    # sokoto
+                #c:PEU ?= this    # peru
+                c:BOL ?= this    # bolivia
             }
         }
         add_modifier = {
@@ -32,7 +32,7 @@
     every_country = {
         limit = {
             OR = {
-                c:SPA = this    # spain
+                c:SPA ?= this    # spain
             }
         }
         add_modifier = {
@@ -44,12 +44,12 @@
     every_country = {
         limit = {
             OR = {
-                c:AUS = this    # austria
-                c:FRA = this    # france
-                c:GBR = this    # great britain
-                c:RUS = this    # russia
-                c:USA = this    # usa
-                c:PRU = this    # prussia
+                c:AUS ?= this    # austria
+                c:FRA ?= this    # france
+                c:GBR ?= this    # great britain
+                c:RUS ?= this    # russia
+                c:USA ?= this    # usa
+                c:PRU ?= this    # prussia
             }
         }
         add_modifier = {

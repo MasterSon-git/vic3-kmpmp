@@ -193,7 +193,7 @@ kmpmp_new_formables = {
             limit = {
                 c:P01 = ROOT
             }
-            trigger_event = formation.21
+            trigger_event = kmpmp_formation.1
         }
     }
 }
