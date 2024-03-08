@@ -1,0 +1,36 @@
+﻿# root - country
+# STATE_REGION - <s:STATE_***>
+owns_or_has_subject_entire_state_region = {
+    $STATE_REGION$ = {
+        custom_tooltip = {
+            text = owns_or_has_subject_entire_state_region_tooltip
+            any_scope_state = {
+                OR = {
+                    owner = root
+                    owner = {
+                        is_subject_of = root
+                    }
+                }
+                count = all
+            }
+        }
+    }
+}
+
+# root - country
+# STATE_REGION - <STATE_***>
+state_region_owned_and_incorporated = {
+    s:$STATE_REGION$ = {
+        save_temporary_scope_as = state_region_to_check
+    }
+    custom_tooltip = {
+        text = state_region_owned_and_incorporated_tooltip
+        owns_entire_state_region = $STATE_REGION$
+        s:$STATE_REGION$ = {
+            any_scope_state = {
+                count = all
+                is_incorporated = yes
+            }
+        }
+    }
+}

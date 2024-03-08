@@ -1,0 +1,19 @@
+﻿ig_trait_asceticism = {
+	icon = "gfx/interface/icons/ig_trait_icons/be_fruitful_and_multiply.dds"
+	min_approval = loyal
+	
+	modifier = {
+		state_radicals_from_sol_change_mult = 0.15 #0.5
+		state_birth_rate_mult = 0.01
+	}
+}
+
+ig_trait_da_wat = {
+	icon = "gfx/interface/icons/ig_trait_icons/be_fruitful_and_multiply.dds"
+	min_approval = loyal
+	
+	modifier = {
+		state_conversion_mult = 0.5
+		state_education_access_add = 0.05
+	}
+}

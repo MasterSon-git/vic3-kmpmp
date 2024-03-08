@@ -1,0 +1,8 @@
+﻿l_german:
+ company_imperial_tobacco:1 "Kaiserliche Färbemittelgesellschaft Persiens" #"Kaiserliche Tabakgesellschaft Persiens"
+ company_rubber_corporation_indochina: "Gummiwerke von Indochina"
+ company_taiwanese_tea: "Taiwanesische Tee Geselltschaft"
+
+ company_basic_arts: "Kunstatellier"
+ company_basic_arts_dynamic_name_tag_singular: "Kunstwerk"
+ company_basic_arts_dynamic_name_tag_plural: "Kunstwerke"
