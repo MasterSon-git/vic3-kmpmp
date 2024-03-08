@@ -173,7 +173,7 @@ STATE_PALESTINE = {
     capped_resources = {
         bg_coal_mining = 20 #kmpmp
         bg_iron_mining = 24
-        bg_logging = 8 #5
+        bg_logging = 10 #8 #5
         bg_fishing = 4
     }
     naval_exit_id = 3034

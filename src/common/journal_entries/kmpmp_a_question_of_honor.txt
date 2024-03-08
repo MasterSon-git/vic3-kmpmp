@@ -1,0 +1,32 @@
+﻿kmpmp_je_a_question_of_honor = {
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+    group = je_group_historical_content
+
+    is_shown_when_inactive = {
+        c:JAP = ROOT
+    }
+
+    possible = {
+        year >= 1860
+        is_junior_in_customs_union = yes
+    }
+
+    immediate = {
+        add_modifier = {
+            name = kmpmp_grow_some_balls
+        }
+    }
+
+    complete = {
+        is_junior_in_customs_union = no
+    }
+
+    on_complete = {
+        if = {
+            limit = {
+                has_modifier = kmpmp_grow_some_balls
+            }
+            remove_modifier = kmpmp_grow_some_balls
+        }
+    }
+}
