@@ -29,6 +29,28 @@ kmpmp_sick_man_of_europe_restored_fame = {
     state_conscription_rate_mult = 0.01
 }
 
+# same buffs as kmpmp_sick_man_of_europe_restored_fame 
+# but just 1/4 this will multiplied by count of completed tazimates which is a maximum of 3
+kmpmp_sick_man_of_europe_failed = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    # +1.25% OFF / DEF Army + Navy
+    unit_defense_mult = 0.0125
+    unit_offense_mult = 0.0125
+    # +1.25% Plantations/Mines throughput
+    building_group_bg_plantations_throughput_add = 0.0125
+    building_group_bg_mining_throughput_add = 0.0125
+    # +1.25% tech spread
+    country_tech_spread_mult = 0.0125
+    # +1.25% taxation capacity
+    state_tax_capacity_mult = 0.0125
+    # +1.25% Education access
+    state_education_access_add = 0.0125
+    # +1.25% training rate
+    building_training_rate_mult = 0.0125
+    # +0.25% conscription rate
+    state_conscription_rate_mult = 0.0025
+}
+
 # add Buff "Westernization" for 20 years
 kmpmp_ottoman_path_to_westernization = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds

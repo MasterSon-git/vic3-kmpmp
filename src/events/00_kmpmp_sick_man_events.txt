@@ -216,6 +216,18 @@ sick_man.3 = {
 		ruler = {
 			save_scope_as = ottoman_sultan
 		}
+		if = {
+			limit = {
+				has_modifier = kmpmp_sick_man_of_europe_buff_1
+			}
+			remove_modifier = kmpmp_sick_man_of_europe_buff_1
+		}
+		if = {
+			limit = {
+				has_modifier = kmpmp_sick_man_of_europe_buff_2
+			}
+			remove_modifier = kmpmp_sick_man_of_europe_buff_2
+		}
 	}
 
 	option = {
@@ -245,9 +257,18 @@ sick_man.3 = {
 				make_independent = yes
 			}
 		}
-		set_country_type = unrecognized
+		# set_country_type = unrecognized
 		ruler = {
 			kill_character = yes
+		}
+		if = {
+			limit = {
+				var:sick_man_var > 0
+			}
+			add_modifier = {
+				name = kmpmp_sick_man_of_europe_failed
+				multiplier = var:sick_man_var
+			}
 		}
 	}
 }
