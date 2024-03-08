@@ -139,6 +139,7 @@
  kmpmp_sick_man_of_europe_buff_1:0 "$sick_man_of_europe$ Buff"
  kmpmp_sick_man_of_europe_buff_2:0 "$kmpmp_sick_man_of_europe_buff_1$"
  kmpmp_sick_man_of_europe_restored_fame:0 "Wiederhergestellte Ehre"
+ kmpmp_sick_man_of_europe_failed:0 "Ein wenig Ehre"
  kmpmp_ottoman_path_to_westernization:0 "Weg zum Westen"
  kmpmp_ottoman_leader_of_islam:0 "Anführer des Islam"
  kmpmp_ottoman_reform_goes_on:0 "Die Reformen gehen weiter"
