@@ -24,11 +24,11 @@ sa_migration.1 = {
 		# triggered by southamerica_migration_button
 	}
 
-	immediate = {.
+	immediate = {
 		# Note that this closely reflects triggers in the button. Do not change one without changing both
 		random_country = {
 			limit = {
-				#country_rank <= rank_value:major_power
+				# country_rank <= rank_value:major_power
 				country_rank >= rank_value:major_power
 				custom_tooltip = {
 					text = is_in_europe_tt
@@ -38,10 +38,10 @@ sa_migration.1 = {
 					text = same_state_religion
 					religion = root.religion
 				}
-				#average_sol <= root.average_sol
+				# average_sol <= root.average_sol
 				kmpmp_average_sol_add_one <= root.average_sol
 				any_primary_culture = {
-					culture_can_have_mass_migration_to = ROOT
+					culture_can_have_mass_migration_to_country = ROOT
 				}
 				any_scope_state = {
 					is_incorporated = yes
@@ -51,25 +51,23 @@ sa_migration.1 = {
 					}
 					count >= 3
 				}
-				NOR = {
-					has_variable = funny_button_prot.1
-					has_variable = funny_button_prot.2
+				NOT = {
+					has_variable = was_target_of_mass_migration
 				}
 			}
 			weight = {
-                base = 1
-                modifier = { trigger = { country_turmoil < 0.05 } add = -0.5 }
-                modifier = { trigger = { country_turmoil > 0.1 } add = 0.2 }
-                modifier = { trigger = { country_turmoil > 0.2 } add = 0.2 }
-                modifier = { trigger = { country_turmoil > 0.3 } add = 0.2 }
-                modifier = { trigger = { country_turmoil > 0.4 } add = 0.2 }
-                modifier = { trigger = { country_turmoil > 0.5 } add = 0.2 }
-                modifier = { trigger = { country_turmoil > 0.6 } add = 0.2 }
-                modifier = { trigger = { country_turmoil > 0.7 } add = 0.2 }
-                modifier = { trigger = { country_turmoil > 0.8 } add = 0.2 }
-                modifier = { trigger = { country_turmoil > 0.9 } add = 0.2 }
-                modifier = { trigger = { country_turmoil > 1 } add = 0.2 }
-            }
+				base = 1
+				modifier = { trigger = { country_turmoil < 0.05 } add = -0.5 }
+				modifier = { trigger = { country_turmoil > 0.1 } add = 0.2 }
+				modifier = { trigger = { country_turmoil > 0.2 } add = 0.2 }
+				modifier = { trigger = { country_turmoil > 0.3 } add = 0.2 }
+				modifier = { trigger = { country_turmoil > 0.4 } add = 0.2 }
+				modifier = { trigger = { country_turmoil > 0.5 } add = 0.2 }
+				modifier = { trigger = { country_turmoil > 0.6 } add = 0.2 }
+				modifier = { trigger = { country_turmoil > 0.7 } add = 0.2 }
+				modifier = { trigger = { country_turmoil > 0.8 } add = 0.2 }
+				modifier = { trigger = { country_turmoil > 0.9 } add = 0.2 }
+			}
 			save_scope_as = migration_country
 			random_scope_state = {
 				limit = {
@@ -77,34 +75,24 @@ sa_migration.1 = {
 					state_is_in_europe = yes
 					any_scope_culture = {
 						has_homeland = PREV
-						culture_can_have_mass_migration_to = ROOT
+						culture_can_have_mass_migration_to_country = ROOT
 					}
 				}
 				save_scope_as = migration_state
 				random_scope_culture = {
 					limit = {
 						has_homeland = PREV
-						culture_can_have_mass_migration_to = ROOT
+						culture_can_have_mass_migration_to_country = ROOT
 					}
 					save_scope_as = migration_culture
 				}
 			}
-			if = {
-				limit = {
-					ROOT = c:USA
-				}
-				set_variable = {
-					name = funny_button_prot.1
-					years = 20
-				}
-			}
-			else = {
-				set_variable = {
-					name = funny_button_prot.2
-					years = 10
-				}
+			set_variable = {
+				name = was_target_of_mass_migration
+				years = 10
 			}
 		}
+		
 		ordered_scope_state = {
 			limit = {
 				trigger_if = {
@@ -137,10 +125,9 @@ sa_migration.1 = {
 						}
 					}
 				}
-				is_incorporated = yes
-				is_mass_migration_target = no
+				state_is_eligible_as_mass_migration_target = yes
 			}
-			order_by = average_sol
+			order_by = migration_pull
 			save_scope_as = migration_target_state
 		}
 	}
