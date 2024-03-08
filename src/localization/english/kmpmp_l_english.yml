@@ -190,3 +190,6 @@
 
  kmpmp_arabia:0 "Arabia"
  kmpmp_united_arabia:0 "Unified Arabia"
+
+ kmpmp_average_sol_one_below_root_tt:0 "Average [concept_sol] is #b one#! below ours"
+ was_target_of_mass_migration_tt:0 "Had no wave of emigration to America in the last 10 years"

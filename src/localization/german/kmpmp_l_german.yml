@@ -190,3 +190,6 @@
 
  kmpmp_arabia:0 "Arabien"
  kmpmp_united_arabia:0 "Vereintes Arabien"
+
+ kmpmp_average_sol_one_below_root_tt:0 "Durchschnitts-[concept_sol] liegt #b eins#! unter unserem"
+ was_target_of_mass_migration_tt:0 "Hatte keine Auswanderungswelle nach Amerika in den letzten 10 Jahren"
