@@ -86,6 +86,8 @@
 				}
 				annex = c:POR
 				add_primary_culture = cu:portuguese
+				add_primary_culture = cu:afro_brazilian
+				add_primary_culture = cu:paulista
 			}
 		}
 		else_if = {

@@ -48,3 +48,8 @@ kmpmp_debuff_massive_empire = {
     goods_input_small_arms_mult = 0.05
     country_military_wages_mult = 0.05
 }
+kmpmp_china_buff = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    unit_offense_mult = 0.5
+    unit_defense_mult = 0.5
+}

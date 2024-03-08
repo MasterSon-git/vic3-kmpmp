@@ -107,6 +107,35 @@
                 reserves = 1
                 activate_production_methods = { "pm_horizontal_drawer_cabinets" }
             }
+            create_building = {
+                building = "building_paper_mills"
+                level = 5 #3
+                reserves = 1
+            }
+            create_building = {
+                building = "building_textile_mills"
+                level = 4 #3
+                reserves = 1
+            }
+            create_building = {
+                building = "building_cotton_plantation"
+                level = 11 #8
+                reserves = 1
+            }
+            create_building = {
+                building = "building_logging_camp"
+                level = 2
+                reserves = 1
+            }
+        }
+    }
+    s:STATE_PALESTINE = {
+        region_state:EGY = {
+            create_building = {
+                building = "building_tooling_workshops"
+                level = 1
+                reserves = 1
+            }
         }
     }
     s:STATE_TABRIZ = {
@@ -166,6 +195,54 @@
                 level = 4 #3
                 reserves = 1
                 activate_production_methods = { "pm_horizontal_drawer_cabinets" }
+            }
+        }
+    }
+    s:STATE_MEXICO = {
+        region_state:MEX = {
+            create_building = {
+                building = "building_tooling_workshops"
+                level = 1
+                reserves = 1
+                activate_production_methods = { "pm_crude_tools" }
+            }
+            create_building = {
+                building = "building_construction_sector"
+                level = 3 #1
+                reserves = 1
+                activate_production_methods = { "pm_wooden_buildings" }
+            }
+            create_building = {
+                building = "building_iron_mine"
+                level = 3 #1
+                reserves = 1
+                activate_production_methods = { "pm_picks_and_shovels_building_iron_mine" }
+            }
+        }
+    }
+    s:STATE_BAJIO = {
+        region_state:MEX = {
+            create_building = {
+                building = "building_gold_mine"
+                level = 4 #3
+                reserves = 1
+                activate_production_methods = { "pm_picks_and_shovels_building_gold_mine" }
+            }
+        }
+    }
+    s:STATE_JALISCO = {
+        region_state:MEX = {
+            create_building = {
+                building = "building_tooling_workshops"
+                level = 1
+                reserves = 1
+                activate_production_methods = { "pm_crude_tools" }
+            }
+            create_building = {
+                building = "building_arms_industry"
+                level = 1
+                reserves = 1
+                activate_production_methods = { "pm_muskets" }
             }
         }
     }

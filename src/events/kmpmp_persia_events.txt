@@ -1,0 +1,50 @@
+﻿namespace = kmpmp_ev_persia
+
+kmpmp_ev_persia.1 = { # the_people_celebrate_unification
+    type = country_event
+    placement = ROOT
+
+    title = kmpmp_ev_persia.1.t
+    desc = kmpmp_ev_persia.1.d
+    flavor = kmpmp_ev_persia.1.f
+
+    event_image = {
+        video = "unspecific_signed_contract"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+    duration = 3
+
+    trigger = {
+    }
+
+    immediate = {
+    }
+
+    option = {
+        name = kmpmp_ev_persia.1.a
+        default_option = yes
+        add_loyalists = {
+            culture = cu:baluchi
+            value = 0.2
+        }
+        add_loyalists = {
+            culture = cu:pashtun
+            value = 0.2
+        }
+        add_loyalists = {
+            culture = cu:tajik
+            value = 0.2
+        }
+        add_loyalists = {
+            culture = cu:hazara
+            value = 0.2
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+}

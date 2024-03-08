@@ -11,4 +11,9 @@ NMilitary {
 	MANPOWER_LOST_DUE_TO_ATTRITION_PER_WEEK_MAX = 0.072 #0.12 	# The maximum percentage of manpower a unit can lose each week due to attrition
 	CONVOY_RAIDING_COOLDOWN_DAYS_MIN = 20 #10
 	CONVOY_RAIDING_DEFENSE_MULT = 0.25 #0.15
+	MILITARY_FORMATION_WEEKLY_MAX_UNIT_UPGRADES_FLEET = 0.025 #0.05
+}
+
+NCountry = {
+	INCORPORATION_TIME_NO_MATCH = 10	#20			# Years if the state's Homeland cultures have nothing in common with the country's primary cultures
 }

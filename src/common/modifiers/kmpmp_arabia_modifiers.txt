@@ -1,0 +1,17 @@
+﻿kmpmp_united_arabia = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+
+    # +10k flat income (nicht skalierend)
+    country_minting_add = 10000
+    state_construction_mult = 0.1
+    state_birth_rate_mult = 0.08
+    country_loan_interest_rate_mult = -0.25
+}
+kmpmp_arabia = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    unit_offense_mult = 0.05
+    unit_defense_mult = 0.05
+    state_birth_rate_mult = 0.02
+    country_tech_spread_mult = 0.05
+    building_group_bg_plantations_throughput_add = 0.1
+}

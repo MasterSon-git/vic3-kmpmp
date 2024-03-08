@@ -221,6 +221,7 @@ pm_government_run_building_railway = {
 
 	unlocking_laws = {
 		law_command_economy
+		law_industry_banned #kmpmp
 		law_interventionism
 		law_agrarianism
 	}
