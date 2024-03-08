@@ -34,8 +34,7 @@ great_power = {
 	modifier = {
 		country_influence_add = 1000
 		country_diplomatic_play_maneuvers_add = 100
-		#country_max_declared_interests_add = 6
-		country_max_declared_interests_add = 10
+		country_max_declared_interests_add = 10 #6
 		country_loan_interest_rate_mult = -0.5
 		country_agitator_slots_add = 2
 		state_migration_pull_mult = 0.25
@@ -64,8 +63,7 @@ major_power = {
 	modifier = {
 		country_influence_add = 750
 		country_diplomatic_play_maneuvers_add = 75
-		#country_max_declared_interests_add = 3
-		country_max_declared_interests_add = 6
+		country_max_declared_interests_add = 6 #3
 		country_loan_interest_rate_mult = -0.25
 		country_agitator_slots_add = 2
 		state_migration_pull_mult = 0.10
@@ -89,8 +87,7 @@ minor_power = {
 	modifier = {
 		country_influence_add = 600
 		country_diplomatic_play_maneuvers_add = 60
-		#country_max_declared_interests_add = 1
-		country_max_declared_interests_add = 4
+		country_max_declared_interests_add = 4 #1
 		country_agitator_slots_add = 1
 	}
 }
@@ -113,9 +110,10 @@ insignificant_power = {
 		country_loan_interest_rate_mult = 0.25
 		state_migration_pull_mult = -0.25
 		country_agitator_slots_add = 1
-		country_max_declared_interests_add = 2
+		country_max_declared_interests_add = 2 # kmpmp
 	}
 }
+
 ##################
 ## UNRECOGNIZED ##
 ##################
@@ -139,8 +137,7 @@ unrecognized_major_power = {
 	modifier = {
 		country_influence_add = 750
 		country_diplomatic_play_maneuvers_add = 75
-		#country_max_declared_interests_add = 2
-		country_max_declared_interests_add = 3
+		country_max_declared_interests_add = 3 #2
 		country_tech_spread_mult = -0.15
 		country_loan_interest_rate_mult = 0.5
 		country_agitator_slots_add = 2
@@ -168,8 +165,7 @@ unrecognized_regional_power = {
 	modifier = {
 		country_influence_add = 600
 		country_diplomatic_play_maneuvers_add = 60
-		#country_max_declared_interests_add = 1
-		country_max_declared_interests_add = 2
+		country_max_declared_interests_add = 2 #1
 		country_tech_spread_mult = -0.20
 		country_loan_interest_rate_mult = 0.75
 		state_migration_pull_mult = -0.25
@@ -216,5 +212,6 @@ decentralized_power = {
 	
 	modifier = {
 		country_diplomatic_play_maneuvers_add = 30
+		building_throughput_add = -0.1
 	}
 }

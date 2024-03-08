@@ -93,7 +93,7 @@ nationalism = {
 	modifier = {
 		country_authority_mult = 0.1
         country_infamy_generation_mult = -0.03
-        country_max_declared_interests_add = 2
+        country_max_declared_interests_add = 1
 	}
 	
 	unlocking_technologies = {
@@ -444,7 +444,7 @@ civilizing_mission = {
 
 	modifier = {
 		country_institution_colonial_affairs_max_investment_add = 1
-		country_max_declared_interests_add = 2
+		country_max_declared_interests_add = 2 #1
 	}
 
 	unlocking_technologies = {
