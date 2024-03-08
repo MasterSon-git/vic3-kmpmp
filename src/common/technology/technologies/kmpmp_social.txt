@@ -93,6 +93,7 @@ nationalism = {
 	modifier = {
 		country_authority_mult = 0.1
         country_infamy_generation_mult = -0.03
+        country_max_declared_interests_add = 1
 	}
 	
 	unlocking_technologies = {
@@ -174,6 +175,7 @@ pan-nationalism = {
 	modifier = {
 		country_authority_mult = 0.1
         country_infamy_generation_mult = -0.03
+        country_max_declared_interests_add = 2
 	}
 	
 	unlocking_technologies = {
@@ -429,5 +431,67 @@ paved_roads = {
 	
 	ai_weight = {
 		value = 3 # Important for those nice-looking roads!
+	}
+}
+### Interest changes
+civilizing_mission = {
+	# Unlocks Panama Canal survey expedition decision
+	# Unlocks the Panama Canal
+
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/civilizing_mission.dds"
+	category = society
+
+	modifier = {
+		country_institution_colonial_affairs_max_investment_add = 1
+		country_max_declared_interests_add = 2 #1
+	}
+
+	unlocking_technologies = {
+		quinine
+		nationalism
+	}
+
+	ai_weight = {
+		value = 1
+
+		# Important for colonizers
+		if = {
+			limit = {
+				navy_size >= 25
+				is_country_type = recognized
+			}
+			add = 1
+		}
+		if = {
+			limit = {
+				has_strategy = ai_strategy_colonial_expansion
+			}
+			add = 1
+		}
+	}
+}
+multilateral_alliances = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/multilateral_alliances.dds"
+	category = society
+
+	modifier = {
+		country_diplomatic_play_maneuvers_add = 25
+		country_allow_multiple_alliances = yes
+		country_max_declared_interests_add = 4
+	}
+
+	unlocking_technologies = {
+		pan-nationalism
+	}
+
+	ai_weight = {
+		value = 1
+
+		if = {
+			limit = { country_rank >= rank_value:great_power }
+			add = 2
+		}
 	}
 }
