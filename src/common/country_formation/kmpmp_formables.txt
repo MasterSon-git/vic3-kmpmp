@@ -1,34 +1,4 @@
-﻿IBE = {
-	use_culture_states = yes
-
-	required_states_fraction = 0.9
-	
-	ai_will_do = { always = yes }
-
-	possible = {
-		has_technology_researched = nationalism
-		NOT = {
-			has_variable = reino_unido_won
-		}
-	}
-}
-UNL = {
-	states = {
-		STATE_HOLLAND
-		STATE_FLANDERS
-		STATE_WALLONIA
-		STATE_FRIESLAND
-		STATE_GELRE
-	}
-
-	required_states_fraction = 1
-	possible = {
-		has_technology_researched = nationalism
-	}	
-	ai_will_do = { always = yes }
-}
-
-P01 = {
+﻿P01 = {
 	states = {
 		STATE_IRAKAJEMI
 		STATE_ISFAHAN
