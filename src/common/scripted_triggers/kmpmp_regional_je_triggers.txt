@@ -1,0 +1,71 @@
+﻿country_is_valid_for_je_master_of_mediterranean_sea = {
+    # Balkan, Anatolia, Arabia, Nile, North Africa, Iberia, Occitania, Italy
+    save_temporary_scope_as = country_to_check
+    OR = {
+        sr:region_anatolia = {
+            any_scope_state = {
+                owner = scope:country_to_check
+            }
+        }
+        sr:region_arabic = {
+            any_scope_state = {
+                owner = scope:country_to_check
+            }
+        }
+        sr:region_balkans = {
+            any_scope_state = {
+                owner = scope:country_to_check
+            }
+        }
+        sr:region_iberia = {
+            any_scope_state = {
+                owner = scope:country_to_check
+            }
+        }
+        sr:region_italy = {
+            any_scope_state = {
+                owner = scope:country_to_check
+            }
+        }
+        sr:region_nile_basin = {
+            any_scope_state = {
+                owner = scope:country_to_check
+            }
+        }
+        sr:region_north_africa = {
+            any_scope_state = {
+                owner = scope:country_to_check
+            }
+        }
+        sr:region_occitania = {
+            any_scope_state = {
+                owner = scope:country_to_check
+            }
+        }
+    }
+}
+
+country_is_valid_for_je_leader_of_latin_america = {
+    # Reino Unido, Brazil, Mexico, Bolivia, (or andean stuff)
+    OR = {
+        AND = { # Reino Unido
+            c:POR ?= THIS
+            NOT = {
+                exists = c:BRZ
+            }
+        }
+        c:BRZ ?= THIS
+        c:MEX ?= THIS
+        c:BOL ?= THIS
+        country_has_primary_culture = cu:north_andean
+        country_has_primary_culture = cu:south_andean
+    }
+}
+
+country_is_valid_for_je_ruler_of_the_east = {
+    # Japan or Russia
+    OR = {
+        c:JAP ?= THIS
+        c:RUS ?= THIS
+    }
+}

@@ -13,6 +13,18 @@ building_input_ironclads_mult = {
     percent = yes
 }
 
+building_sugar_plantation_throughput_add = {
+	good = yes
+	percent = yes
+	num_decimals = 0
+}
+
+building_tobacco_plantation_throughput_add = {
+	good = yes
+	percent = yes
+	num_decimals = 0
+}
+
 country_military_tech_research_speed_mult = {
 	good = yes
 	percent = yes

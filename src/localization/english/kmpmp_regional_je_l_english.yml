@@ -1,0 +1,32 @@
+﻿l_english:
+ je_master_of_mediterranean_sea:0 "Master of the Mediterranean Sea"
+ je_master_of_mediterranean_sea_reason:0 "#r This is under construction#!\n\nControl at least 6 states and more than anyone else to get the buff "$kmpmp_mediterranean_sea_hegemony$".\n\nControl all states to get the buff "$kmpmp_mediterranean_sea_domination$".\n\nIf one controls all states, every other country gets debuff "$kmpmp_mediterranean_sea_domination_negative$".\n\nThe states in question are:\n$STATE_CYPRUS$, $STATE_CRETE$, $STATE_EAST_AEGEAN_ISLANDS$, $STATE_WEST_AEGEAN_ISLANDS$, $STATE_SICILY$, $STATE_SARDINIA$, $STATE_CORSICA$, $STATE_BALEARES$, $STATE_IONIAN_ISLANDS$, $STATE_TUNISIA$, $STATE_AL_RIF$, $STATE_LIBYA$"
+
+ je_leader_of_latin_america:0 "Leader of Latin America"
+ je_leader_of_latin_america_reason:0 "#r This is under construction#!\n\nControl at least 10 states and more than anyone else to get the buff "$kmpmp_leader_of_latin_america_hegemony$".\n\nThe states in question are:\n$STATE_YUCATAN$, $STATE_CHIAPAS$, $STATE_GUATEMALA$, $STATE_SAN_SALVADOR$, $STATE_HONDURAS$, $STATE_NICARAGUA$, $STATE_COSTA_RICA$, $STATE_PANAMA$, $STATE_ANTIOQUIA$, $STATE_CAUCA$, $STATE_GUAVIARE$, $STATE_CUNDINAMARCA$, $STATE_ZULIA$, $STATE_MIRANDA$, $STATE_BOLIVAR$, $STATE_GUAYANA$, $STATE_SANTIAGO$, $STATE_LOS_RIOS$, $STATE_ARAUCANIA$, $STATE_PATAGONIA$, $STATE_SOUTH_ATLANTIC_ISLANDS$, $STATE_RIO_NEGRO$, $STATE_TUCUMAN$, $STATE_CHACO$, $STATE_LA_PAMPA$, $STATE_BUENOS_AIRES$, $STATE_SANTA_FE$, $STATE_BAJO_PARAGUAY$, $STATE_ALTO_PARAGUAY$"
+
+ je_ruler_of_the_east:0 "Ruler of the East"
+ je_ruler_of_the_east_reason:0 "#r This is under construction#!\n\nControl at least 7 states to get the buff "$kmpmp_ruler_of_the_east_hegemony$", other countries gets the debuff "$kmpmp_ruler_of_the_east_hegemony_negative$".\n\nControl all states to get the buff "$kmpmp_ruler_of_the_east_domination$".\n\nIf one controls all states, every other country gets debuff "$kmpmp_ruler_of_the_east_domination_negative$".\n\nThe states in question are:\n$STATE_NORTHERN_MANCHURIA$, $STATE_OUTER_MANCHURIA$, $STATE_SOUTHERN_MANCHURIA$, $STATE_SARIWON$, $STATE_PYONGYANG$, $STATE_SEOUL$, $STATE_YANGHO$, $STATE_BUSAN$, $STATE_ULIASTAI$, $STATE_URGA$, $STATE_ALXA$, $STATE_HINGGAN$, $STATE_SHENGJING$"
+
+ je_the_sugar_monopoly:0 "The Sugar Monopoly"
+ je_the_sugar_monopoly_reason:0 "#r This is under construction#!\n\nControl at least 3 states and more than anyone else to get the buff "$kmpmp_the_sugar_monopoly_hegemony$".\n\nControl all states to get the buff "$kmpmp_the_sugar_monopoly_domination$".\n\nIf one controls all states, every other country gets debuff "$kmpmp_the_sugar_monopoly_domination_negative$".\n\nThe states in question are:\n$STATE_WEST_INDIES$, $STATE_PUERTO_RICO$, $STATE_HAITI$, $STATE_BAHAMAS$, $STATE_CUBA$, $STATE_JAMAICA$"
+
+ kmpmp_ev_regional_je.1.t:0 "$je_the_sugar_monopoly$"
+ kmpmp_ev_regional_je.1.d:0 "Another country won the run for "$je_the_sugar_monopoly$""
+ kmpmp_ev_regional_je.1.f:0 "From now on they will dominate the market. We will have to submit and live with the consequences."
+ kmpmp_ev_regional_je.1.a:0 "Well, this is inconvenient."
+
+ kmpmp_mediterranean_sea_hegemony:0 "Hegemony in the Mediterranean Sea"
+ kmpmp_mediterranean_sea_domination:0 "Domination in the Mediterranean Sea"
+ kmpmp_mediterranean_sea_domination_negative:0 "Lost control in the Mediterranean Sea"
+
+ kmpmp_leader_of_latin_america_hegemony:0 "Spearhead of Latin America"
+
+ kmpmp_ruler_of_the_east_hegemony:0 "Hegemony in East Asia"
+ kmpmp_ruler_of_the_east_hegemony_negative:0 "Humiliated in East Asia"
+ kmpmp_ruler_of_the_east_domination:0 "Ruler of East Asia"
+ kmpmp_ruler_of_the_east_domination_negative:0 "Loser of East Asia"
+
+ kmpmp_the_sugar_monopoly_hegemony:0 "Hegemony in the Caribbean Sea"
+ kmpmp_the_sugar_monopoly_domination:0 "Monopoly in the Caribbean Sea"
+ kmpmp_the_sugar_monopoly_domination_negative:0 "Suppressed in the Caribbean Sea"

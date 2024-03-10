@@ -1,0 +1,25 @@
+﻿namespace = kmpmp_ev_regional_je
+
+kmpmp_ev_regional_je.1 = {
+    type = country_event
+    placement = ROOT
+
+    title = kmpmp_ev_regional_je.1.t
+    desc = kmpmp_ev_regional_je.1.d
+    flavor = kmpmp_ev_regional_je.1.f
+
+    icon = "gfx/interface/icons/timed_modifier_icons/modifier_leadership_negative.dds"
+
+    duration = 3
+
+	event_image = {
+		video = "unspecific_factory_closed"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    option = {
+        name = kmpmp_ev_regional_je.1.a
+        default_option = yes
+    }
+}

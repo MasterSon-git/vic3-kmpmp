@@ -1,0 +1,43 @@
+﻿# Root = Country
+on_monthly_pulse_country = {
+    on_actions = {
+        kmpmp_update_regional_je_action
+    }
+}
+
+kmpmp_update_regional_je_action = {
+    effect = {
+        if = {
+            limit = {
+                NOT = {
+                    has_journal_entry = je_master_of_mediterranean_sea
+                }
+                country_is_valid_for_je_master_of_mediterranean_sea = yes
+            }
+            add_journal_entry = {
+                type = je_master_of_mediterranean_sea
+            }
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_journal_entry = je_leader_of_latin_america
+                }
+                country_is_valid_for_je_leader_of_latin_america = yes
+            }
+            add_journal_entry = {
+                type = je_leader_of_latin_america
+            }
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_journal_entry = je_the_sugar_monopoly
+                }
+            }
+            add_journal_entry = {
+                type = je_the_sugar_monopoly
+            }
+        }
+    }
+}
