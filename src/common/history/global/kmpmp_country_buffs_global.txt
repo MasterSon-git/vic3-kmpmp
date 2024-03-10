@@ -49,7 +49,7 @@
                 c:GBR ?= this    # great britain
                 c:RUS ?= this    # russia
                 c:USA ?= this    # usa
-                c:PRU ?= this    # prussia
+                # c:PRU ?= this    # prussia
             }
         }
         add_modifier = {
