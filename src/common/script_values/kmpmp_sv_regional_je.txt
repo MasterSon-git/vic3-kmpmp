@@ -1,0 +1,55 @@
+﻿kmpmp_sv_count_states_master_of_mediterranean_sea = {
+    value = 0
+    every_in_global_list = {
+        variable = states_je_master_of_mediterranean_sea
+        limit = {
+            any_scope_state = { 
+                owner = ROOT
+                count = all
+            }
+        }
+        add = 1
+    }
+}
+
+kmpmp_sv_count_states_leader_of_latin_america = {
+    value = 0
+    every_in_global_list = {
+        variable = states_je_leader_of_latin_america
+        limit = {
+            any_scope_state = { 
+                owner = ROOT
+                count = all
+            }
+        }
+        add = 1
+    }
+}
+
+kmpmp_sv_count_states_ruler_of_the_east = {
+    value = 0
+    every_in_global_list = {
+        variable = states_je_ruler_of_the_east
+        limit = {
+            any_scope_state = { 
+                owner = ROOT
+                count = all
+            }
+        }
+        add = 1
+    }
+}
+
+kmpmp_sv_count_states_the_sugar_monopoly = {
+    value = 0
+    every_in_global_list = {
+        variable = states_je_the_sugar_monopoly
+        limit = {
+            any_scope_state = { 
+                owner = ROOT
+                count = all
+            }
+        }
+        add = 1
+    }
+}

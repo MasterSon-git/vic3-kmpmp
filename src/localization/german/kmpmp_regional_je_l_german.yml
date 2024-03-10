@@ -1,0 +1,32 @@
+﻿l_german:
+ je_master_of_mediterranean_sea:0 "Meister des Mittelmeers"
+ je_master_of_mediterranean_sea_reason:0 "#r This is under construction#!\n\nKontrolliere mindestens 6 Staaten und mehr als jeder andere um den Buff "$kmpmp_mediterranean_sea_hegemony$" zu bekommen.\n\nKontrolliere alle Staaten um den Buff "$kmpmp_mediterranean_sea_domination$" zu bekommen.\n\nWenn jemand alle Staaten kontrolliert, bekommt jedes andere Land den Debuff "$kmpmp_mediterranean_sea_domination_negative$".\n\nEs geht um diese Staaten:\n$STATE_CYPRUS$, $STATE_CRETE$, $STATE_EAST_AEGEAN_ISLANDS$, $STATE_WEST_AEGEAN_ISLANDS$, $STATE_SICILY$, $STATE_SARDINIA$, $STATE_CORSICA$, $STATE_BALEARES$, $STATE_IONIAN_ISLANDS$, $STATE_TUNISIA$, $STATE_AL_RIF$, $STATE_LIBYA$"
+
+ je_leader_of_latin_america:0 "Anführer Lateinamerikas"
+ je_leader_of_latin_america_reason:0 "#r This is under construction#!\n\nKontrolliere mindestens 10 Staaten und mehr als jeder andere um den Buff "$kmpmp_leader_of_latin_america_hegemony$" zu bekommen.\n\nEs geht um diese Staaten:\n$STATE_YUCATAN$, $STATE_CHIAPAS$, $STATE_GUATEMALA$, $STATE_SAN_SALVADOR$, $STATE_HONDURAS$, $STATE_NICARAGUA$, $STATE_COSTA_RICA$, $STATE_PANAMA$, $STATE_ANTIOQUIA$, $STATE_CAUCA$, $STATE_GUAVIARE$, $STATE_CUNDINAMARCA$, $STATE_ZULIA$, $STATE_MIRANDA$, $STATE_BOLIVAR$, $STATE_GUAYANA$, $STATE_SANTIAGO$, $STATE_LOS_RIOS$, $STATE_ARAUCANIA$, $STATE_PATAGONIA$, $STATE_SOUTH_ATLANTIC_ISLANDS$, $STATE_RIO_NEGRO$, $STATE_TUCUMAN$, $STATE_CHACO$, $STATE_LA_PAMPA$, $STATE_BUENOS_AIRES$, $STATE_SANTA_FE$, $STATE_BAJO_PARAGUAY$, $STATE_ALTO_PARAGUAY$"
+
+ je_ruler_of_the_east:0 "Herrscher des Ostens"
+ je_ruler_of_the_east_reason:0 "#r This is under construction#!\n\nKontrolliere mindestens 7 Staaten um den Buff "$kmpmp_ruler_of_the_east_hegemony$" zu bekommen, andere Länder bekommen den Debuff "$kmpmp_ruler_of_the_east_hegemony_negative$".\n\nKontrolliere alle Staaten um den Buff "$kmpmp_ruler_of_the_east_domination$" zu bekommen.\n\nWenn jemand alle Staaten kontrolliert, bekommt jedes andere Land den Debuff "$kmpmp_ruler_of_the_east_domination_negative$".\n\nEs geht um diese Staaten:\n$STATE_NORTHERN_MANCHURIA$, $STATE_OUTER_MANCHURIA$, $STATE_SOUTHERN_MANCHURIA$, $STATE_SARIWON$, $STATE_PYONGYANG$, $STATE_SEOUL$, $STATE_YANGHO$, $STATE_BUSAN$, $STATE_ULIASTAI$, $STATE_URGA$, $STATE_ALXA$, $STATE_HINGGAN$, $STATE_SHENGJING$"
+
+ je_the_sugar_monopoly:0 "Das Zuckermonopol"
+ je_the_sugar_monopoly_reason:0 "#r This is under construction#!\n\nKontrolliere mindestens 3 Staaten und mehr als jeder andere um den Buff "$kmpmp_the_sugar_monopoly_hegemony$" zu bekommen.\n\nKontrolliere alle Staaten um den Buff "$kmpmp_the_sugar_monopoly_domination$".\n\nWenn jemand alle Staaten kontrolliert, bekommt jedes andere Land den Debuff "$kmpmp_the_sugar_monopoly_domination_negative$".\n\nEs geht um diese Staaten:\n$STATE_WEST_INDIES$, $STATE_PUERTO_RICO$, $STATE_HAITI$, $STATE_BAHAMAS$, $STATE_CUBA$, $STATE_JAMAICA$"
+
+ kmpmp_ev_regional_je.1.t:0 "$je_the_sugar_monopoly$"
+ kmpmp_ev_regional_je.1.d:0 "Ein anderes Land hat das Wettrennen um "$je_the_sugar_monopoly$" gewonnen"
+ kmpmp_ev_regional_je.1.f:0 "Von jetzt an werden sie den Markt beherrschen. Wir werden uns unterordnen müssen und mit den Konsequenzen leben."
+ kmpmp_ev_regional_je.1.a:0 "Nun, dies ist ungünstig."
+
+ kmpmp_mediterranean_sea_hegemony:0 "Hegemonie im Mittelmeer"
+ kmpmp_mediterranean_sea_domination:0 "Herrschaft im Mittelmeer"
+ kmpmp_mediterranean_sea_domination_negative:0 "Kontrollverlust im Mittelmeer"
+
+ kmpmp_leader_of_latin_america_hegemony:0 "Speerspitze Lateinamerikas"
+
+ kmpmp_ruler_of_the_east_hegemony:0 "Hegemonie in Ostasien"
+ kmpmp_ruler_of_the_east_hegemony_negative:0 "In Ostasien gedemütigt"
+ kmpmp_ruler_of_the_east_domination:0 "Herrscher von Ostasien"
+ kmpmp_ruler_of_the_east_domination_negative:0 "Verlierer Ostasiens"
+
+ kmpmp_the_sugar_monopoly_hegemony:0 "Hegemonie im Karibischen Meer"
+ kmpmp_the_sugar_monopoly_domination:0 "Monopol im Karibischen Meer"
+ kmpmp_the_sugar_monopoly_domination_negative:0 "Im Karibischen Meer unterdrückt"
