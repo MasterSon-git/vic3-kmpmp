@@ -971,7 +971,7 @@ company_imperial_tobacco = {
 	flavored_company = yes
 
 	building_types = {
-		building_tobacco_plantation
+		building_dye_plantation # building_tobacco_plantation
 	}
 
 	potential = {
@@ -991,7 +991,7 @@ company_imperial_tobacco = {
 			region = sr:region_persia
 			is_incorporated = yes
 			any_scope_building = {
-				is_building_type = building_tobacco_plantation
+				is_building_type = building_dye_plantation # building_tobacco_plantation
 				level >= 5
 			}
 			count >= 4
