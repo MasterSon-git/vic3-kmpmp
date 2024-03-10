@@ -65,7 +65,9 @@
                 c:GBR ?= this    # great britain
                 c:RUS ?= this    # russia
                 c:USA ?= this    # usa
-                c:PRU ?= this    # prussia
+                # c:PRU ?= this    # prussia
+                c:NGF ?= this    # north germand federation
+                c:GER ?= this    # germany
             }
             NOT = {
                 has_modifier = kmpmp_debuff_massive_empire
