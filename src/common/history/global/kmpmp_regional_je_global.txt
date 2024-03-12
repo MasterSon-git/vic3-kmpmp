@@ -1,6 +1,6 @@
 ﻿GLOBAL = {
     # add states for je_master_of_mediterranean_sea
-    # Cyprus, Crete, East Aegean Islands, West Aegean Island, Sicily, Sardinia, Corsica, Baleares, Ionian Islands, Tunesia, al Rif, Libya
+    # Cyprus, Crete, East Aegean Islands, West Aegean Island, Malta, Sicily, Sardinia, Corsica, Baleares, Ionian Islands, Tunesia, al Rif, Libya
     add_to_global_variable_list = {
         name = states_je_master_of_mediterranean_sea
         target = s:STATE_CYPRUS
@@ -16,6 +16,10 @@
     add_to_global_variable_list = {
         name = states_je_master_of_mediterranean_sea
         target = s:STATE_WEST_AEGEAN_ISLANDS
+    }
+    add_to_global_variable_list = {
+        name = states_je_master_of_mediterranean_sea
+        target = s:STATE_MALTA
     }
     add_to_global_variable_list = {
         name = states_je_master_of_mediterranean_sea

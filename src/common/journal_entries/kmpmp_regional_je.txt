@@ -30,7 +30,7 @@
             
             if = { # owner of every state
                 limit = { 
-                    var:var_count_states_master_of_mediterranean_sea >= 12
+                    var:var_count_states_master_of_mediterranean_sea >= 13
                 }
                 if = {
                     limit = {
