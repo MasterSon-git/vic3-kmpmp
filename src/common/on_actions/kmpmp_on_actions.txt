@@ -12,6 +12,9 @@ on_monthly_pulse_country = {
         # buff_nation_effect_for_formables
         # buff_nation_effect_for_unification
         player_boost_effect_state_unincorporated_education_access
+
+        # can be removed later - just a fix for current game session
+        kmpmp_fix_queen_victoria_modifier
     }
 }
 
@@ -175,6 +178,27 @@ kmpmp_new_formables = {
                 c:P01 = ROOT
             }
             trigger_event = kmpmp_formation.1
+        }
+    }
+}
+
+kmpmp_fix_queen_victoria_modifier = {
+    effect = {
+        if = {
+            limit = {
+                c:GBR ?= ROOT
+                ruler = {
+                    has_variable = is_victoria
+                    NOT = {
+                        has_modifier = queen_victoria_mod
+                    }
+                }
+            }
+            ruler = {
+                add_modifier = {
+                    name = queen_victoria_mod
+                }
+            }
         }
     }
 }
