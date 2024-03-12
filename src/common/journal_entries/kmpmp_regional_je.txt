@@ -403,7 +403,7 @@ je_the_sugar_monopoly = {
             
             if = { # owner of every state
                 limit = { 
-                    var:var_count_states_the_sugar_monopoly >= 6
+                    var:var_count_states_the_sugar_monopoly >= 7
                 }
                 if = {
                     limit = {
@@ -458,20 +458,21 @@ je_the_sugar_monopoly = {
     
             if = { # owns the most states
                 limit = {
-                    var:var_count_states_the_sugar_monopoly >= 3
+                    var:var_count_states_the_sugar_monopoly >= 4
                     NOT = { # no one has all
                         exists = global_var:var_owner_states_the_sugar_monopoly
                     }
-                    NOT = { # no one has more or equal states
-                        any_in_global_list = {
-                            variable = countries_je_the_sugar_monopoly
-                            exists = THIS
-                            NOT = {
-                                THIS = ROOT
-                            }
-                            var:var_count_states_the_sugar_monopoly >= ROOT.var:var_count_states_the_sugar_monopoly
-                        }
-                    }
+                    # since we have a total of 7 states we don't need to check most
+                    # NOT = { # no one has more or equal states
+                    #     any_in_global_list = {
+                    #         variable = countries_je_the_sugar_monopoly
+                    #         exists = THIS
+                    #         NOT = {
+                    #             THIS = ROOT
+                    #         }
+                    #         var:var_count_states_the_sugar_monopoly >= ROOT.var:var_count_states_the_sugar_monopoly
+                    #     }
+                    # }
                 }
                 if = {
                     limit = {

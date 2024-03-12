@@ -228,7 +228,7 @@
     }
 
     # add states for je_the_sugar_monopoly
-    # West Indies, Puerto Rico, Haiti, Bahamas, Cuba, Jamaica
+    # West Indies, Puerto Rico, Haiti, Santo Domingo, Bahamas, Cuba, Jamaica
     add_to_global_variable_list = {
         name = states_je_the_sugar_monopoly
         target = s:STATE_WEST_INDIES
@@ -240,6 +240,10 @@
     add_to_global_variable_list = {
         name = states_je_the_sugar_monopoly
         target = s:STATE_HAITI
+    }
+    add_to_global_variable_list = {
+        name = states_je_the_sugar_monopoly
+        target = s:STATE_SANTO_DOMINGO
     }
     add_to_global_variable_list = {
         name = states_je_the_sugar_monopoly
