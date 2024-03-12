@@ -1,0 +1,21 @@
+﻿# Technological Westernization
+kmpmp_get_recognized_by_tech_decision = {
+    is_shown = {
+        is_country_type = unrecognized
+    }
+
+    possible = {
+        has_technology_researched = nationalism
+        has_technology_researched = railways
+        has_technology_researched = napoleonic_warfare
+    }
+
+    when_taken = {
+        set_country_type = recognized
+    }
+
+    # not for ai
+    ai_chance = {
+		base = 0	
+	}
+}
