@@ -150,11 +150,11 @@ kmpmp_remove_war_modifiers = {
         if = {
             limit = {
                 OR = {
-                    scope:actor = {
+                    scope:actor ?= {
                         has_modifier = kmpmp_retake_whats_rightfully_german
                         save_temporary_scope_as = country_with_modifier_kmpmp_retake_whats_rightfully_german
                     }
-                    scope:target = {
+                    scope:target ?= {
                         has_modifier = kmpmp_retake_whats_rightfully_german
                         save_temporary_scope_as = country_with_modifier_kmpmp_retake_whats_rightfully_german
                     }
@@ -175,7 +175,7 @@ kmpmp_new_formables = {
     effect = {
         if = {
             limit = {
-                c:P01 = ROOT
+                c:P01 ?= ROOT
             }
             trigger_event = kmpmp_formation.1
         }
