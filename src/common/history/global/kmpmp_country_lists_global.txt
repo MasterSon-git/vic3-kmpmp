@@ -1,0 +1,10 @@
+﻿GLOBAL = {
+    # Iberian states
+    kmpmp_update_global_list_states_ibe = yes
+
+    # United Netherlands states
+    kmpmp_update_global_list_states_unl = yes
+
+    # Parthia states
+    kmpmp_update_global_list_states_p01 = yes
+}

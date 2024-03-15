@@ -9,8 +9,8 @@ on_country_formed = {
 on_monthly_pulse_country = {
     on_actions = {
         kmpmp_update_nation_buffs_action
-        # buff_nation_effect_for_formables
-        # buff_nation_effect_for_unification
+        kmpmp_update_united_country_buff_action
+        kmpmp_update_global_lists_action
         player_boost_effect_state_unincorporated_education_access
 
         # can be removed later - just a fix for current game session
@@ -33,95 +33,20 @@ kmpmp_update_nation_buffs_action = {
     }
 }
 
-buff_nation_effect_for_unification = {
+kmpmp_update_united_country_buff_action = {
     effect = {
-        if = {
-            limit = {
-                exists = c:ITA
-                owner = c:ITA
-            }
-            if = {
-                limit = {
-                    NOT = {
-                        has_modifier = kmpmp_buff_medium_nation
-                    }
-                }
-                add_modifier = {
-                    name = kmpmp_buff_medium_nation
-                }
-            }
-            if = {
-                limit = {
-                    has_modifier = kmpmp_buff_small_nation
-                }
-                remove_modifier = kmpmp_buff_small_nation
-            }
-        }
-
-        if = {
-            limit = {
-                exists = c:SCA
-                owner = c:SCA
-            }
-            if = {
-                limit = {
-                    NOT = {
-                        has_modifier = kmpmp_buff_medium_nation
-                    }
-                }
-                add_modifier = {
-                    name = kmpmp_buff_medium_nation
-                }
-            }
-            if = {
-                limit = {
-                    has_modifier = kmpmp_buff_small_nation
-                }
-                remove_modifier = kmpmp_buff_small_nation
-            }
-        }
+        kmpmp_update_united_country_buff = yes
     }
 }
 
-buff_nation_effect_for_formables = {
+# used to update global lists for save games where history is not executed again
+kmpmp_update_global_lists_action = {
     effect = {
-        if = {
+        if = { # only one country should update the lists, so we take gbr
             limit = {
-                exists = c:IBE
-                owner = c:IBE
+                c:GBR ?= ROOT
             }
-            if = {
-                limit = {
-                    NOT = {
-                        has_modifier = kmpmp_buff_medium_nation
-                    }
-                }
-                add_modifier = {
-                    name = kmpmp_buff_medium_nation
-                }
-            }
-            if = {
-                limit = {
-                    has_modifier = kmpmp_buff_small_nation
-                }
-                remove_modifier = kmpmp_buff_small_nation
-            }
-        }
-        if = {
-            limit = {
-                exists = c:UNL
-                owner = c:UNL
-            }
-            if = {
-                limit = {
-                    NOT = {
-                        has_modifier = kmpmp_buff_small_nation
-                    }
-                }
-                add_modifier = {
-                    name = kmpmp_buff_small_nation
-                }
-            }
+            kmpmp_update_global_lists = yes
         }
     }
 }
@@ -178,6 +103,62 @@ kmpmp_new_formables = {
                 c:P01 ?= ROOT
             }
             trigger_event = kmpmp_formation.1
+
+            # add addtional states to state list of parthia
+            if = {
+                limit = {
+                    state_region_owned_and_incorporated = { STATE_REGION = STATE_BASRA }
+                }
+                add_to_global_variable_list = {
+                    name = states_p01
+                    target = s:STATE_BASRA
+                }
+            }
+            if = {
+                limit = {
+                    state_region_owned_and_incorporated = { STATE_REGION = STATE_ARMENIA }
+                }
+                add_to_global_variable_list = {
+                    name = states_p01
+                    target = s:STATE_ARMENIA
+                }
+            }
+            if = {
+                limit = {
+                    state_region_owned_and_incorporated = { STATE_REGION = STATE_DIYARBAKIR }
+                }
+                add_to_global_variable_list = {
+                    name = states_p01
+                    target = s:STATE_DIYARBAKIR
+                }
+            }
+            if = {
+                limit = {
+                    state_region_owned_and_incorporated = { STATE_REGION = STATE_ERZURUM }
+                }
+                add_to_global_variable_list = {
+                    name = states_p01
+                    target = s:STATE_ERZURUM
+                }
+            }
+            if = {
+                limit = {
+                    state_region_owned_and_incorporated = { STATE_REGION = STATE_DEIR_EZ_ZOR }
+                }
+                add_to_global_variable_list = {
+                    name = states_p01
+                    target = s:STATE_DEIR_EZ_ZOR
+                }
+            }
+            if = {
+                limit = {
+                    state_region_owned_and_incorporated = { STATE_REGION = STATE_MOSUL }
+                }
+                add_to_global_variable_list = {
+                    name = states_p01
+                    target = s:STATE_MOSUL
+                }
+            }            
         }
     }
 }

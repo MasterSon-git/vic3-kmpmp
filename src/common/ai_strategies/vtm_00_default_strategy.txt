@@ -5670,7 +5670,8 @@ ai_strategy_default = {
 							}
 							is_subject = yes
 							NOT = {
-								THIS = c:LUX
+								#THIS = c:LUX
+								c:LUX ?= THIS
 							}
 							top_overlord = {
 								NOR = {
