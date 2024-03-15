@@ -1,0 +1,428 @@
+﻿kmpmp_change_pop_culture = {
+    if = { limit = { scope:target_culture = cu:north_german } change_pop_culture = { target = cu:north_german value = 1 } }
+    if = { limit = { scope:target_culture = cu:south_german } change_pop_culture = { target = cu:south_german value = 1 } }
+    # if = { limit = { scope:target_culture = cu:austrian } change_pop_culture = { target = cu:austrian value = 1 } }
+    if = { limit = { scope:target_culture = cu:ashkenazi } change_pop_culture = { target = cu:ashkenazi value = 1 } }
+
+    if = { limit = { scope:target_culture = cu:dutch } change_pop_culture = { target = cu:dutch value = 1 } }
+    if = { limit = { scope:target_culture = cu:flemish } change_pop_culture = { target = cu:flemish value = 1 } }
+    if = { limit = { scope:target_culture = cu:wallonian } change_pop_culture = { target = cu:wallonian value = 1 } }
+    if = { limit = { scope:target_culture = cu:boer } change_pop_culture = { target = cu:boer value = 1 } }
+
+    # if = { limit = { scope:target_culture = cu:swiss } change_pop_culture = { target = cu:swiss value = 1 } }
+
+    if = { limit = { scope:target_culture = cu:swedish } change_pop_culture = { target = cu:swedish value = 1 } }
+    if = { limit = { scope:target_culture = cu:danish } change_pop_culture = { target = cu:danish value = 1 } }
+    if = { limit = { scope:target_culture = cu:norwegian } change_pop_culture = { target = cu:norwegian value = 1 } }
+    if = { limit = { scope:target_culture = cu:icelandic } change_pop_culture = { target = cu:icelandic value = 1 } }
+    if = { limit = { scope:target_culture = cu:finnish } change_pop_culture = { target = cu:finnish value = 1 } }
+    if = { limit = { scope:target_culture = cu:sami } change_pop_culture = { target = cu:sami value = 1 } }
+
+    if = { limit = { scope:target_culture = cu:british } change_pop_culture = { target = cu:british value = 1 } }
+    if = { limit = { scope:target_culture = cu:irish } change_pop_culture = { target = cu:irish value = 1 } }
+    if = { limit = { scope:target_culture = cu:welsh } change_pop_culture = { target = cu:welsh value = 1 } }
+    if = { limit = { scope:target_culture = cu:scottish } change_pop_culture = { target = cu:scottish value = 1 } }
+    if = { limit = { scope:target_culture = cu:australian } change_pop_culture = { target = cu:australian value = 1 } }
+    if = { limit = { scope:target_culture = cu:anglo_canadian } change_pop_culture = { target = cu:anglo_canadian value = 1 } }
+
+    if = { limit = { scope:target_culture = cu:north_italian } change_pop_culture = { target = cu:north_italian value = 1 } }
+    if = { limit = { scope:target_culture = cu:south_italian } change_pop_culture = { target = cu:south_italian value = 1 } }
+    if = { limit = { scope:target_culture = cu:maltese } change_pop_culture = { target = cu:maltese value = 1 } }
+
+    if = { limit = { scope:target_culture = cu:basque } change_pop_culture = { target = cu:basque value = 1 } }
+    if = { limit = { scope:target_culture = cu:spanish } change_pop_culture = { target = cu:spanish value = 1 } }
+    if = { limit = { scope:target_culture = cu:catalan } change_pop_culture = { target = cu:catalan value = 1 } }
+    if = { limit = { scope:target_culture = cu:portuguese } change_pop_culture = { target = cu:portuguese value = 1 } }
+    if = { limit = { scope:target_culture = cu:galician } change_pop_culture = { target = cu:galician value = 1 } }
+
+    if = { limit = { scope:target_culture = cu:french } change_pop_culture = { target = cu:french value = 1 } }
+    # if = { limit = { scope:target_culture = cu:french_canadian } change_pop_culture = { target = cu:french_canadian value = 1 } }
+    if = { limit = { scope:target_culture = cu:breton } change_pop_culture = { target = cu:breton value = 1 } }
+
+    if = { limit = { scope:target_culture = cu:croat } change_pop_culture = { target = cu:croat value = 1 } }
+    if = { limit = { scope:target_culture = cu:serb } change_pop_culture = { target = cu:serb value = 1 } }
+    if = { limit = { scope:target_culture = cu:bulgarian } change_pop_culture = { target = cu:bulgarian value = 1 } }
+    if = { limit = { scope:target_culture = cu:albanian } change_pop_culture = { target = cu:albanian value = 1 } }
+    if = { limit = { scope:target_culture = cu:slovene } change_pop_culture = { target = cu:slovene value = 1 } }
+    if = { limit = { scope:target_culture = cu:bosniak } change_pop_culture = { target = cu:bosniak value = 1 } }
+
+    if = { limit = { scope:target_culture = cu:romanian } change_pop_culture = { target = cu:romanian value = 1 } }
+
+    if = { limit = { scope:target_culture = cu:hungarian } change_pop_culture = { target = cu:hungarian value = 1 } }
+
+    if = { limit = { scope:target_culture = cu:polish } change_pop_culture = { target = cu:polish value = 1 } }
+    if = { limit = { scope:target_culture = cu:lithuanian } change_pop_culture = { target = cu:lithuanian value = 1 } }
+
+    if = { limit = { scope:target_culture = cu:czech } change_pop_culture = { target = cu:czech value = 1 } }
+    if = { limit = { scope:target_culture = cu:slovak } change_pop_culture = { target = cu:slovak value = 1 } }
+
+    if = { limit = { scope:target_culture = cu:russian } change_pop_culture = { target = cu:russian value = 1 } }
+    if = { limit = { scope:target_culture = cu:byelorussian } change_pop_culture = { target = cu:byelorussian value = 1 } }
+    if = { limit = { scope:target_culture = cu:ukrainian } change_pop_culture = { target = cu:ukrainian value = 1 } }
+    if = { limit = { scope:target_culture = cu:ugrian } change_pop_culture = { target = cu:ugrian value = 1 } }
+
+    if = { limit = { scope:target_culture = cu:latvian } change_pop_culture = { target = cu:latvian value = 1 } }
+    if = { limit = { scope:target_culture = cu:estonian } change_pop_culture = { target = cu:estonian value = 1 } }
+
+    if = { limit = { scope:target_culture = cu:greek } change_pop_culture = { target = cu:greek value = 1 } }
+    if = { limit = { scope:target_culture = cu:georgian } change_pop_culture = { target = cu:georgian value = 1 } }
+    if = { limit = { scope:target_culture = cu:armenian } change_pop_culture = { target = cu:armenian value = 1 } }
+    if = { limit = { scope:target_culture = cu:sephardic } change_pop_culture = { target = cu:sephardic value = 1 } }
+
+    if = { limit = { scope:target_culture = cu:turkish } change_pop_culture = { target = cu:turkish value = 1 } }
+    if = { limit = { scope:target_culture = cu:azerbaijani } change_pop_culture = { target = cu:azerbaijani value = 1 } }
+    if = { limit = { scope:target_culture = cu:north_caucasian } change_pop_culture = { target = cu:north_caucasian value = 1 } }
+
+    if = { limit = { scope:target_culture = cu:maghrebi } change_pop_culture = { target = cu:maghrebi value = 1 } }
+    if = { limit = { scope:target_culture = cu:misri } change_pop_culture = { target = cu:misri value = 1 } }
+    if = { limit = { scope:target_culture = cu:mashriqi } change_pop_culture = { target = cu:mashriqi value = 1 } }
+    if = { limit = { scope:target_culture = cu:muskogean } change_pop_culture = { target = cu:muskogean value = 1 } }
+    if = { limit = { scope:target_culture = cu:bedouin } change_pop_culture = { target = cu:bedouin value = 1 } }
+    if = { limit = { scope:target_culture = cu:berber } change_pop_culture = { target = cu:berber value = 1 } }
+
+    if = { limit = { scope:target_culture = cu:persian } change_pop_culture = { target = cu:persian value = 1 } }
+    if = { limit = { scope:target_culture = cu:uzbek } change_pop_culture = { target = cu:uzbek value = 1 } }
+    if = { limit = { scope:target_culture = cu:kazak } change_pop_culture = { target = cu:kazak value = 1 } }
+    if = { limit = { scope:target_culture = cu:kirgiz } change_pop_culture = { target = cu:kirgiz value = 1 } }
+    if = { limit = { scope:target_culture = cu:tajik } change_pop_culture = { target = cu:tajik value = 1 } }
+    if = { limit = { scope:target_culture = cu:uighur } change_pop_culture = { target = cu:uighur value = 1 } }
+    if = { limit = { scope:target_culture = cu:pashtun } change_pop_culture = { target = cu:pashtun value = 1 } }
+    if = { limit = { scope:target_culture = cu:baluchi } change_pop_culture = { target = cu:baluchi value = 1 } }
+    if = { limit = { scope:target_culture = cu:hazara } change_pop_culture = { target = cu:hazara value = 1 } }
+    if = { limit = { scope:target_culture = cu:turkmen } change_pop_culture = { target = cu:turkmen value = 1 } }
+    if = { limit = { scope:target_culture = cu:kurdish } change_pop_culture = { target = cu:kurdish value = 1 } }
+    if = { limit = { scope:target_culture = cu:tatar } change_pop_culture = { target = cu:tatar value = 1 } }
+
+    if = { limit = { scope:target_culture = cu:mongol } change_pop_culture = { target = cu:mongol value = 1 } }
+    if = { limit = { scope:target_culture = cu:siberian } change_pop_culture = { target = cu:siberian value = 1 } }
+    if = { limit = { scope:target_culture = cu:yakut } change_pop_culture = { target = cu:yakut value = 1 } }
+    if = { limit = { scope:target_culture = cu:tibetan } change_pop_culture = { target = cu:tibetan value = 1 } }
+
+    if = { limit = { scope:target_culture = cu:assamese } change_pop_culture = { target = cu:assamese value = 1 } }
+    if = { limit = { scope:target_culture = cu:bengali } change_pop_culture = { target = cu:bengali value = 1 } }
+    if = { limit = { scope:target_culture = cu:bihari } change_pop_culture = { target = cu:bihari value = 1 } }
+    if = { limit = { scope:target_culture = cu:manipuri } change_pop_culture = { target = cu:manipuri value = 1 } }
+    if = { limit = { scope:target_culture = cu:nepali } change_pop_culture = { target = cu:nepali value = 1 } }
+    if = { limit = { scope:target_culture = cu:oriya } change_pop_culture = { target = cu:oriya value = 1 } }
+    if = { limit = { scope:target_culture = cu:sinhala } change_pop_culture = { target = cu:sinhala value = 1 } }
+    if = { limit = { scope:target_culture = cu:avadhi } change_pop_culture = { target = cu:avadhi value = 1 } }
+    if = { limit = { scope:target_culture = cu:kanauji } change_pop_culture = { target = cu:kanauji value = 1 } }
+    if = { limit = { scope:target_culture = cu:panjabi } change_pop_culture = { target = cu:panjabi value = 1 } }
+    if = { limit = { scope:target_culture = cu:kashmiri } change_pop_culture = { target = cu:kashmiri value = 1 } }
+    if = { limit = { scope:target_culture = cu:gujarati } change_pop_culture = { target = cu:gujarati value = 1 } }
+    if = { limit = { scope:target_culture = cu:marathi } change_pop_culture = { target = cu:marathi value = 1 } }
+    if = { limit = { scope:target_culture = cu:sindi } change_pop_culture = { target = cu:sindi value = 1 } }
+    if = { limit = { scope:target_culture = cu:rajput } change_pop_culture = { target = cu:rajput value = 1 } }
+    if = { limit = { scope:target_culture = cu:kannada } change_pop_culture = { target = cu:kannada value = 1 } }
+    if = { limit = { scope:target_culture = cu:malayalam } change_pop_culture = { target = cu:malayalam value = 1 } }
+    if = { limit = { scope:target_culture = cu:tamil } change_pop_culture = { target = cu:tamil value = 1 } }
+    if = { limit = { scope:target_culture = cu:telegu } change_pop_culture = { target = cu:telegu value = 1 } }
+
+    if = { limit = { scope:target_culture = cu:vietnamese } change_pop_culture = { target = cu:vietnamese value = 1 } }
+    if = { limit = { scope:target_culture = cu:khmer } change_pop_culture = { target = cu:khmer value = 1 } }
+    if = { limit = { scope:target_culture = cu:malay } change_pop_culture = { target = cu:malay value = 1 } }
+    if = { limit = { scope:target_culture = cu:dayak } change_pop_culture = { target = cu:dayak value = 1 } }
+    if = { limit = { scope:target_culture = cu:malagasy } change_pop_culture = { target = cu:malagasy value = 1 } }
+    if = { limit = { scope:target_culture = cu:filipino } change_pop_culture = { target = cu:filipino value = 1 } }
+    if = { limit = { scope:target_culture = cu:javan } change_pop_culture = { target = cu:javan value = 1 } }
+    if = { limit = { scope:target_culture = cu:moluccan } change_pop_culture = { target = cu:moluccan value = 1 } }
+    if = { limit = { scope:target_culture = cu:thai } change_pop_culture = { target = cu:thai value = 1 } }
+    if = { limit = { scope:target_culture = cu:lao } change_pop_culture = { target = cu:lao value = 1 } }
+    if = { limit = { scope:target_culture = cu:shan } change_pop_culture = { target = cu:shan value = 1 } }
+    if = { limit = { scope:target_culture = cu:burmese } change_pop_culture = { target = cu:burmese value = 1 } }
+    # if = { limit = { scope:target_culture = cu:asian_minor } change_pop_culture = { target = cu:asian_minor value = 1 } }
+    if = { limit = { scope:target_culture = cu:kachin } change_pop_culture = { target = cu:kachin value = 1 } }
+    if = { limit = { scope:target_culture = cu:karen } change_pop_culture = { target = cu:karen value = 1 } }
+
+    if = { limit = { scope:target_culture = cu:japanese } change_pop_culture = { target = cu:japanese value = 1 } }
+    if = { limit = { scope:target_culture = cu:manchu } change_pop_culture = { target = cu:manchu value = 1 } }
+    if = { limit = { scope:target_culture = cu:han } change_pop_culture = { target = cu:han value = 1 } }
+    # if = { limit = { scope:target_culture = cu:beifaren } change_pop_culture = { target = cu:beifaren value = 1 } }
+    # if = { limit = { scope:target_culture = cu:nanfaren } change_pop_culture = { target = cu:nanfaren value = 1 } }
+    if = { limit = { scope:target_culture = cu:korean } change_pop_culture = { target = cu:korean value = 1 } }
+    if = { limit = { scope:target_culture = cu:ainu } change_pop_culture = { target = cu:ainu value = 1 } }
+    if = { limit = { scope:target_culture = cu:hakka } change_pop_culture = { target = cu:hakka value = 1 } }
+    if = { limit = { scope:target_culture = cu:miao } change_pop_culture = { target = cu:miao value = 1 } }
+    if = { limit = { scope:target_culture = cu:min } change_pop_culture = { target = cu:min value = 1 } }
+    if = { limit = { scope:target_culture = cu:zhuang } change_pop_culture = { target = cu:zhuang value = 1 } }
+    if = { limit = { scope:target_culture = cu:yi } change_pop_culture = { target = cu:yi value = 1 } }
+    if = { limit = { scope:target_culture = cu:yue } change_pop_culture = { target = cu:yue value = 1 } }
+
+    if = { limit = { scope:target_culture = cu:polynesian } change_pop_culture = { target = cu:polynesian value = 1 } }
+    if = { limit = { scope:target_culture = cu:hawaiian } change_pop_culture = { target = cu:hawaiian value = 1 } }
+    if = { limit = { scope:target_culture = cu:melanesian } change_pop_culture = { target = cu:melanesian value = 1 } }
+    if = { limit = { scope:target_culture = cu:micronesian } change_pop_culture = { target = cu:micronesian value = 1 } }
+    if = { limit = { scope:target_culture = cu:maori } change_pop_culture = { target = cu:maori value = 1 } }
+    if = { limit = { scope:target_culture = cu:yuanzhumin } change_pop_culture = { target = cu:yuanzhumin value = 1 } }
+    if = { limit = { scope:target_culture = cu:aborigine } change_pop_culture = { target = cu:aborigine value = 1 } }
+
+
+    if = { limit = { scope:target_culture = cu:zapotec } change_pop_culture = { target = cu:zapotec value = 1 } }
+    if = { limit = { scope:target_culture = cu:mayan } change_pop_culture = { target = cu:mayan value = 1 } }
+    if = { limit = { scope:target_culture = cu:nahua } change_pop_culture = { target = cu:nahua value = 1 } }
+    if = { limit = { scope:target_culture = cu:tarascan } change_pop_culture = { target = cu:tarascan value = 1 } }
+    if = { limit = { scope:target_culture = cu:dakota } change_pop_culture = { target = cu:dakota value = 1 } }
+    if = { limit = { scope:target_culture = cu:cherokee } change_pop_culture = { target = cu:cherokee value = 1 } }
+    if = { limit = { scope:target_culture = cu:pueblo } change_pop_culture = { target = cu:pueblo value = 1 } }
+    if = { limit = { scope:target_culture = cu:inuit } change_pop_culture = { target = cu:inuit value = 1 } }
+    if = { limit = { scope:target_culture = cu:cree } change_pop_culture = { target = cu:cree value = 1 } }
+    if = { limit = { scope:target_culture = cu:navajo } change_pop_culture = { target = cu:navajo value = 1 } }
+    if = { limit = { scope:target_culture = cu:comanche } change_pop_culture = { target = cu:comanche value = 1 } }
+    if = { limit = { scope:target_culture = cu:athabaskan } change_pop_culture = { target = cu:athabaskan value = 1 } }
+    if = { limit = { scope:target_culture = cu:salish } change_pop_culture = { target = cu:salish value = 1 } }
+    if = { limit = { scope:target_culture = cu:nez_perce } change_pop_culture = { target = cu:nez_perce value = 1 } }
+    if = { limit = { scope:target_culture = cu:siouan } change_pop_culture = { target = cu:siouan value = 1 } }
+    if = { limit = { scope:target_culture = cu:algonquian } change_pop_culture = { target = cu:algonquian value = 1 } }
+    if = { limit = { scope:target_culture = cu:caddoan } change_pop_culture = { target = cu:caddoan value = 1 } }
+    if = { limit = { scope:target_culture = cu:paiute } change_pop_culture = { target = cu:paiute value = 1 } }
+    if = { limit = { scope:target_culture = cu:hokan } change_pop_culture = { target = cu:hokan value = 1 } }
+    if = { limit = { scope:target_culture = cu:apache } change_pop_culture = { target = cu:apache value = 1 } }
+    if = { limit = { scope:target_culture = cu:oodham } change_pop_culture = { target = cu:oodham value = 1 } }
+    if = { limit = { scope:target_culture = cu:mixtec } change_pop_culture = { target = cu:mixtec value = 1 } }
+    if = { limit = { scope:target_culture = cu:muisca } change_pop_culture = { target = cu:muisca value = 1 } }
+    if = { limit = { scope:target_culture = cu:miskito } change_pop_culture = { target = cu:miskito value = 1 } }
+    if = { limit = { scope:target_culture = cu:cariban } change_pop_culture = { target = cu:cariban value = 1 } }
+
+    if = { limit = { scope:target_culture = cu:quechua } change_pop_culture = { target = cu:quechua value = 1 } }
+    if = { limit = { scope:target_culture = cu:guarani } change_pop_culture = { target = cu:guarani value = 1 } }
+    if = { limit = { scope:target_culture = cu:aimara } change_pop_culture = { target = cu:aimara value = 1 } }
+    if = { limit = { scope:target_culture = cu:amazonian } change_pop_culture = { target = cu:amazonian value = 1 } }
+    if = { limit = { scope:target_culture = cu:patagonian } change_pop_culture = { target = cu:patagonian value = 1 } }
+    if = { limit = { scope:target_culture = cu:guajiro } change_pop_culture = { target = cu:guajiro value = 1 } }
+    if = { limit = { scope:target_culture = cu:tupinamba } change_pop_culture = { target = cu:tupinamba value = 1 } }
+    if = { limit = { scope:target_culture = cu:metis } change_pop_culture = { target = cu:metis value = 1 } }
+    # if = { limit = { scope:target_culture = cu:native_american_minor } change_pop_culture = { target = cu:native_american_minor value = 1 } }
+
+    if = { limit = { scope:target_culture = cu:yankee } change_pop_culture = { target = cu:yankee value = 1 } }
+    if = { limit = { scope:target_culture = cu:dixie } change_pop_culture = { target = cu:dixie value = 1 } }
+
+    if = { limit = { scope:target_culture = cu:mexican } change_pop_culture = { target = cu:mexican value = 1 } }
+    if = { limit = { scope:target_culture = cu:central_american } change_pop_culture = { target = cu:central_american value = 1 } }
+    if = { limit = { scope:target_culture = cu:caribeno } change_pop_culture = { target = cu:caribeno value = 1 } }
+    if = { limit = { scope:target_culture = cu:north_andean } change_pop_culture = { target = cu:north_andean value = 1 } }
+    if = { limit = { scope:target_culture = cu:south_andean } change_pop_culture = { target = cu:south_andean value = 1 } }
+    if = { limit = { scope:target_culture = cu:platinean } change_pop_culture = { target = cu:platinean value = 1 } }
+    if = { limit = { scope:target_culture = cu:brazilian } change_pop_culture = { target = cu:brazilian value = 1 } }
+
+    if = { limit = { scope:target_culture = cu:afro_american } change_pop_culture = { target = cu:afro_american value = 1 } }
+    if = { limit = { scope:target_culture = cu:afro_caribbean } change_pop_culture = { target = cu:afro_caribbean value = 1 } }
+    if = { limit = { scope:target_culture = cu:afro_caribeno } change_pop_culture = { target = cu:afro_caribeno value = 1 } }
+    if = { limit = { scope:target_culture = cu:afro_brazilian } change_pop_culture = { target = cu:afro_brazilian value = 1 } }
+    if = { limit = { scope:target_culture = cu:afro_antillean } change_pop_culture = { target = cu:afro_antillean value = 1 } }
+
+    if = { limit = { scope:target_culture = cu:akan } change_pop_culture = { target = cu:akan value = 1 } }
+    if = { limit = { scope:target_culture = cu:bambara } change_pop_culture = { target = cu:bambara value = 1 } }
+    if = { limit = { scope:target_culture = cu:bassa } change_pop_culture = { target = cu:bassa value = 1 } }
+    if = { limit = { scope:target_culture = cu:batak } change_pop_culture = { target = cu:batak value = 1 } }
+    if = { limit = { scope:target_culture = cu:dyula } change_pop_culture = { target = cu:dyula value = 1 } }
+    if = { limit = { scope:target_culture = cu:edo } change_pop_culture = { target = cu:edo value = 1 } }
+    if = { limit = { scope:target_culture = cu:ewe } change_pop_culture = { target = cu:ewe value = 1 } }
+    if = { limit = { scope:target_culture = cu:fon } change_pop_culture = { target = cu:fon value = 1 } }
+    if = { limit = { scope:target_culture = cu:fulbe } change_pop_culture = { target = cu:fulbe value = 1 } }
+    if = { limit = { scope:target_culture = cu:haratin } change_pop_culture = { target = cu:haratin value = 1 } }
+    if = { limit = { scope:target_culture = cu:hausa } change_pop_culture = { target = cu:hausa value = 1 } }
+    if = { limit = { scope:target_culture = cu:ibibio } change_pop_culture = { target = cu:ibibio value = 1 } }
+    if = { limit = { scope:target_culture = cu:ibo } change_pop_culture = { target = cu:ibo value = 1 } }
+    if = { limit = { scope:target_culture = cu:khmu } change_pop_culture = { target = cu:khmu value = 1 } }
+    if = { limit = { scope:target_culture = cu:kissi } change_pop_culture = { target = cu:kissi value = 1 } }
+    if = { limit = { scope:target_culture = cu:kru } change_pop_culture = { target = cu:kru value = 1 } }
+    if = { limit = { scope:target_culture = cu:mande } change_pop_culture = { target = cu:mande value = 1 } }
+    if = { limit = { scope:target_culture = cu:bidan } change_pop_culture = { target = cu:bidan value = 1 } }
+    if = { limit = { scope:target_culture = cu:mossi } change_pop_culture = { target = cu:mossi value = 1 } }
+    if = { limit = { scope:target_culture = cu:senufo } change_pop_culture = { target = cu:senufo value = 1 } }
+    if = { limit = { scope:target_culture = cu:songhai } change_pop_culture = { target = cu:songhai value = 1 } }
+    if = { limit = { scope:target_culture = cu:tiv } change_pop_culture = { target = cu:tiv value = 1 } }
+    if = { limit = { scope:target_culture = cu:tuareg } change_pop_culture = { target = cu:tuareg value = 1 } }
+    if = { limit = { scope:target_culture = cu:wolof } change_pop_culture = { target = cu:wolof value = 1 } }
+    if = { limit = { scope:target_culture = cu:yoruba } change_pop_culture = { target = cu:yoruba value = 1 } }
+
+    if = { limit = { scope:target_culture = cu:bakongo } change_pop_culture = { target = cu:bakongo value = 1 } }
+    if = { limit = { scope:target_culture = cu:baguirmi } change_pop_culture = { target = cu:baguirmi value = 1 } }
+    if = { limit = { scope:target_culture = cu:equatorial_bantu } change_pop_culture = { target = cu:equatorial_bantu value = 1 } }
+    if = { limit = { scope:target_culture = cu:fang } change_pop_culture = { target = cu:fang value = 1 } }
+    if = { limit = { scope:target_culture = cu:fluvian_bantu } change_pop_culture = { target = cu:fluvian_bantu value = 1 } }
+    if = { limit = { scope:target_culture = cu:kanuri } change_pop_culture = { target = cu:kanuri value = 1 } }
+    if = { limit = { scope:target_culture = cu:luba } change_pop_culture = { target = cu:luba value = 1 } }
+    if = { limit = { scope:target_culture = cu:lunda } change_pop_culture = { target = cu:lunda value = 1 } }
+    if = { limit = { scope:target_culture = cu:mon } change_pop_culture = { target = cu:mon value = 1 } }
+    if = { limit = { scope:target_culture = cu:mongo } change_pop_culture = { target = cu:mongo value = 1 } }
+    if = { limit = { scope:target_culture = cu:sara } change_pop_culture = { target = cu:sara value = 1 } }
+    if = { limit = { scope:target_culture = cu:teda } change_pop_culture = { target = cu:teda value = 1 } }
+    # if = { limit = { scope:target_culture = cu:african_minor } change_pop_culture = { target = cu:african_minor value = 1 } }
+
+    if = { limit = { scope:target_culture = cu:amhara } change_pop_culture = { target = cu:amhara value = 1 } }
+    if = { limit = { scope:target_culture = cu:afar } change_pop_culture = { target = cu:afar value = 1 } }
+    if = { limit = { scope:target_culture = cu:azande } change_pop_culture = { target = cu:azande value = 1 } }
+    if = { limit = { scope:target_culture = cu:baganda } change_pop_culture = { target = cu:baganda value = 1 } }
+    if = { limit = { scope:target_culture = cu:beja } change_pop_culture = { target = cu:beja value = 1 } }
+    if = { limit = { scope:target_culture = cu:dinka } change_pop_culture = { target = cu:dinka value = 1 } }
+    if = { limit = { scope:target_culture = cu:fur } change_pop_culture = { target = cu:fur value = 1 } }
+    if = { limit = { scope:target_culture = cu:kikuyu } change_pop_culture = { target = cu:kikuyu value = 1 } }
+    if = { limit = { scope:target_culture = cu:lacustrine_bantu } change_pop_culture = { target = cu:lacustrine_bantu value = 1 } }
+    if = { limit = { scope:target_culture = cu:luo } change_pop_culture = { target = cu:luo value = 1 } }
+    if = { limit = { scope:target_culture = cu:maasai } change_pop_culture = { target = cu:maasai value = 1 } }
+    if = { limit = { scope:target_culture = cu:nilotic } change_pop_culture = { target = cu:nilotic value = 1 } }
+    if = { limit = { scope:target_culture = cu:nuer } change_pop_culture = { target = cu:nuer value = 1 } }
+    if = { limit = { scope:target_culture = cu:nuba } change_pop_culture = { target = cu:nuba value = 1 } }
+    if = { limit = { scope:target_culture = cu:oromo } change_pop_culture = { target = cu:oromo value = 1 } }
+    if = { limit = { scope:target_culture = cu:ruanda } change_pop_culture = { target = cu:ruanda value = 1 } }
+    if = { limit = { scope:target_culture = cu:rundi } change_pop_culture = { target = cu:rundi value = 1 } }
+    if = { limit = { scope:target_culture = cu:sidama } change_pop_culture = { target = cu:sidama value = 1 } }
+    if = { limit = { scope:target_culture = cu:somali } change_pop_culture = { target = cu:somali value = 1 } }
+    if = { limit = { scope:target_culture = cu:sudanese } change_pop_culture = { target = cu:sudanese value = 1 } }
+    if = { limit = { scope:target_culture = cu:sukuma } change_pop_culture = { target = cu:sukuma value = 1 } }
+    if = { limit = { scope:target_culture = cu:swahili } change_pop_culture = { target = cu:swahili value = 1 } }
+    if = { limit = { scope:target_culture = cu:tigray } change_pop_culture = { target = cu:tigray value = 1 } }
+    if = { limit = { scope:target_culture = cu:unyamwezi } change_pop_culture = { target = cu:unyamwezi value = 1 } }
+
+    if = { limit = { scope:target_culture = cu:chewa } change_pop_culture = { target = cu:chewa value = 1 } }
+    if = { limit = { scope:target_culture = cu:herero } change_pop_culture = { target = cu:herero value = 1 } }
+    if = { limit = { scope:target_culture = cu:kavango_bantu } change_pop_culture = { target = cu:kavango_bantu value = 1 } }
+    if = { limit = { scope:target_culture = cu:khoisan } change_pop_culture = { target = cu:khoisan value = 1 } }
+    if = { limit = { scope:target_culture = cu:lomwe } change_pop_culture = { target = cu:lomwe value = 1 } }
+    if = { limit = { scope:target_culture = cu:makua } change_pop_culture = { target = cu:makua value = 1 } }
+    if = { limit = { scope:target_culture = cu:nguni } change_pop_culture = { target = cu:nguni value = 1 } }
+    if = { limit = { scope:target_culture = cu:ovimbundu } change_pop_culture = { target = cu:ovimbundu value = 1 } }
+    if = { limit = { scope:target_culture = cu:sena } change_pop_culture = { target = cu:sena value = 1 } }
+    if = { limit = { scope:target_culture = cu:shona } change_pop_culture = { target = cu:shona value = 1 } }
+    if = { limit = { scope:target_culture = cu:sotho } change_pop_culture = { target = cu:sotho value = 1 } }
+    if = { limit = { scope:target_culture = cu:tonga } change_pop_culture = { target = cu:tonga value = 1 } }
+    if = { limit = { scope:target_culture = cu:tswana } change_pop_culture = { target = cu:tswana value = 1 } }
+    if = { limit = { scope:target_culture = cu:xhosa } change_pop_culture = { target = cu:xhosa value = 1 } }
+    if = { limit = { scope:target_culture = cu:yao } change_pop_culture = { target = cu:yao value = 1 } }
+    if = { limit = { scope:target_culture = cu:zulu } change_pop_culture = { target = cu:zulu value = 1 } }
+    if = { limit = { scope:target_culture = cu:franco_canadian } change_pop_culture = { target = cu:franco_canadian value = 1 } }
+    if = { limit = { scope:target_culture = cu:sorb } change_pop_culture = { target = cu:sorb value = 1 } }
+    if = { limit = { scope:target_culture = cu:tuvan } change_pop_culture = { target = cu:tuvan value = 1 } }
+    if = { limit = { scope:target_culture = cu:corsican } change_pop_culture = { target = cu:corsican value = 1 } }
+    if = { limit = { scope:target_culture = cu:occitan } change_pop_culture = { target = cu:occitan value = 1 } }
+    if = { limit = { scope:target_culture = cu:sumatran } change_pop_culture = { target = cu:sumatran value = 1 } }
+    if = { limit = { scope:target_culture = cu:bornean } change_pop_culture = { target = cu:bornean value = 1 } }
+    if = { limit = { scope:target_culture = cu:balinese } change_pop_culture = { target = cu:balinese value = 1 } }
+    if = { limit = { scope:target_culture = cu:moro } change_pop_culture = { target = cu:moro value = 1 } }
+    if = { limit = { scope:target_culture = cu:assyrian } change_pop_culture = { target = cu:assyrian value = 1 } }
+    if = { limit = { scope:target_culture = cu:iroquoian } change_pop_culture = { target = cu:iroquoian value = 1 } }
+    if = { limit = { scope:target_culture = cu:kalmyk } change_pop_culture = { target = cu:kalmyk value = 1 } }
+    if = { limit = { scope:target_culture = cu:circassian } change_pop_culture = { target = cu:circassian value = 1 } }
+    if = { limit = { scope:target_culture = cu:francoprovencal } change_pop_culture = { target = cu:francoprovencal value = 1 } }
+    if = { limit = { scope:target_culture = cu:alemannic } change_pop_culture = { target = cu:alemannic value = 1 } }
+    if = { limit = { scope:target_culture = cu:sulista } change_pop_culture = { target = cu:sulista value = 1 } }
+    if = { limit = { scope:target_culture = cu:nordestino } change_pop_culture = { target = cu:nordestino value = 1 } }
+    if = { limit = { scope:target_culture = cu:amazonic } change_pop_culture = { target = cu:amazonic value = 1 } }
+    if = { limit = { scope:target_culture = cu:paulista } change_pop_culture = { target = cu:paulista value = 1 } }
+    if = { limit = { scope:target_culture = cu:peruvian } change_pop_culture = { target = cu:peruvian value = 1 } }
+    if = { limit = { scope:target_culture = cu:bolivian } change_pop_culture = { target = cu:bolivian value = 1 } }
+    if = { limit = { scope:target_culture = cu:ecuadorian } change_pop_culture = { target = cu:ecuadorian value = 1 } }
+    if = { limit = { scope:target_culture = cu:chilean } change_pop_culture = { target = cu:chilean value = 1 } }
+    if = { limit = { scope:target_culture = cu:argentine } change_pop_culture = { target = cu:argentine value = 1 } }
+    if = { limit = { scope:target_culture = cu:uruguayan } change_pop_culture = { target = cu:uruguayan value = 1 } }
+    if = { limit = { scope:target_culture = cu:venezuelan } change_pop_culture = { target = cu:venezuelan value = 1 } }
+    if = { limit = { scope:target_culture = cu:paraguayan } change_pop_culture = { target = cu:paraguayan value = 1 } }
+    if = { limit = { scope:target_culture = cu:colombian } change_pop_culture = { target = cu:colombian value = 1 } }
+}
+
+kmpmp_fix_migrated_non_accepted_pops = {
+    every_scope_state = {
+        limit = {
+            owner = ROOT
+            # is_incorporated = yes
+            any_scope_culture = {
+                has_homeland = PREV
+                NOT = {
+                    culture_is_discriminated_in = ROOT
+                }
+            }
+        }
+
+        save_temporary_scope_as = current_state
+        # get culture with most accepted pops in state
+        ordered_scope_culture = {
+            limit = {
+                has_homeland = scope:current_state
+                NOT = {
+                    culture_is_discriminated_in = ROOT
+                }
+            }
+            order_by = {
+                save_temporary_scope_as = culture_to_check
+                value = 0
+                scope:current_state = {
+                    if = {
+                        limit = {
+                            culture_percent_state = { target = scope:culture_to_check value > 0.1 }
+                        }
+                        add = 1
+                    }
+                    if = {
+                        limit = {
+                            culture_percent_state = { target = scope:culture_to_check value > 0.2 }
+                        }
+                        add = 1
+                    }
+                    if = {
+                        limit = {
+                            culture_percent_state = { target = scope:culture_to_check value > 0.3 }
+                        }
+                        add = 1
+                    }
+                    if = {
+                        limit = {
+                            culture_percent_state = { target = scope:culture_to_check value > 0.4 }
+                        }
+                        add = 1
+                    }
+                    if = {
+                        limit = {
+                            culture_percent_state = { target = scope:culture_to_check value > 0.5 }
+                        }
+                        add = 1
+                    }
+                    if = {
+                        limit = {
+                            culture_percent_state = { target = scope:culture_to_check value > 0.6 }
+                        }
+                        add = 1
+                    }
+                    if = {
+                        limit = {
+                            culture_percent_state = { target = scope:culture_to_check value > 0.7 }
+                        }
+                        add = 1
+                    }
+                    if = {
+                        limit = {
+                            culture_percent_state = { target = scope:culture_to_check value > 0.8 }
+                        }
+                        add = 1
+                    }
+                    if = {
+                        limit = {
+                            culture_percent_state = { target = scope:culture_to_check value > 0.9 }
+                        }
+                        add = 1
+                    }
+                }
+            }
+            save_temporary_scope_as = target_culture
+        }
+        # convert non accepted pops to target_culture
+        every_scope_pop = {
+            limit = {
+                NOT = {
+                    culture = {
+                        has_homeland = scope:current_state
+                    }
+                }
+                pop_is_discriminated = yes
+                culture_accepted = no
+            }
+            kmpmp_change_pop_culture = yes
+            # change_pop_culture = {
+            #     target = scope:target_culture
+            #     value = 1.0
+            # }
+        }
+    }
+}
+
+
