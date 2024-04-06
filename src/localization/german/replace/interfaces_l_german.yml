@@ -1,0 +1,3 @@
+﻿l_german:
+ MAP_MODE_ATTITUDE_COUNTRY: "[concept_attitude] zu [Country.GetAltName('DAT')] auf der Karte zeigen"
+ MAP_MODE_RELATIONS_COUNTRY: "[concept_relations] zu [Country.GetAltName('DAT')] auf der Karte zeigen"
