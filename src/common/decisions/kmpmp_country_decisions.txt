@@ -186,6 +186,7 @@ kmpmp_integrate_the_mesoamericans = {
 			c:BOL ?= owner
 			c:FND ?= owner
 			c:PEU ?= owner
+			c:PBC ?= owner
 		}
 	}
 
