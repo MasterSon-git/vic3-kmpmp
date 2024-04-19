@@ -1,7 +1,7 @@
 ﻿kmpmp_owns_all_ibe_states = {
     trigger_if = {
         limit = {
-            exists = global_var:states_ibe
+            has_global_variable_list = states_ibe
         }
         any_in_global_list = {
             variable = states_ibe
@@ -20,7 +20,7 @@
 kmpmp_owns_all_unl_states = {
     trigger_if = {
         limit = {
-            exists = global_var:states_unl
+            has_global_variable_list = states_unl
         }
         any_in_global_list = {
             variable = states_unl
@@ -39,7 +39,7 @@ kmpmp_owns_all_unl_states = {
 kmpmp_owns_all_p01_states = {
     trigger_if = {
         limit = {
-            exists = global_var:states_p01
+            has_global_variable_list = states_p01
         }
         any_in_global_list = {
             variable = states_p01
