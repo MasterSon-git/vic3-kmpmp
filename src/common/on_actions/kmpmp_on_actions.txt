@@ -12,10 +12,6 @@ on_monthly_pulse_country = {
         kmpmp_update_united_country_buff_action
         kmpmp_update_global_lists_action
         player_boost_effect_state_unincorporated_education_access
-
-        # can be removed later - just a fix for current game session
-        kmpmp_fix_queen_victoria_modifier
-        kmpmp_fix_migrated_non_accepted_pops_action
     }
 }
 
@@ -160,41 +156,6 @@ kmpmp_new_formables = {
                     target = s:STATE_MOSUL
                 }
             }            
-        }
-    }
-}
-
-kmpmp_fix_queen_victoria_modifier = {
-    effect = {
-        if = {
-            limit = {
-                c:GBR ?= ROOT
-                ruler = {
-                    has_variable = is_victoria
-                    NOT = {
-                        has_modifier = queen_victoria_mod
-                    }
-                }
-            }
-            ruler = {
-                add_modifier = {
-                    name = queen_victoria_mod
-                }
-            }
-        }
-    }
-}
-
-kmpmp_fix_migrated_non_accepted_pops_action = {
-    effect = {
-        if = {
-            limit = {
-                NOT = {
-                    has_variable = kmpmp_fix_migrated_non_accepted_pops_executed
-                }
-            }
-            set_variable = kmpmp_fix_migrated_non_accepted_pops_executed
-            kmpmp_fix_migrated_non_accepted_pops = yes
         }
     }
 }

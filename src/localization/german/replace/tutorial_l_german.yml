@@ -1,0 +1,2 @@
+﻿l_german:
+ je_tutorial_establish_company_reason: "Bei ausgedehnten und [Concept('concept_productivity', '$concept_productive$en')|l] [Concept('concept_building','$concept_buildings$')] können wir versuchen, deren [concept_throughput] zu erhöhen. Die Gründung einer $concept_company$, die uns bei der Verwaltung unserer Industrien hilft, würde deren Effektivität erhöhen und alle von ihr betroffenen $concept_buildings$ verbessern."

@@ -1,0 +1,2 @@
+﻿l_german:
+ DATA_COMBAT_UNIT_TYPE_ARMY_CONTEXT: "@battalions!#v [MilitaryFormation.GetNumRegularCombatUnitsOfType(CombatUnitType.Self)]#! Berufssoldaten-[MilitaryFormation.GetUnitLabel] $INCOMING_NUMBER_OF_REGULARS_OF_UNIT_TYPE_LABEL$\n@conscripts!#v [MilitaryFormation.GetNumExpectedConscriptsCombatUnitsOfType(CombatUnitType.Self)]#! [Concept('concept_conscript_battalion', '$concept_conscript_battalions$')][ConcatIfNeitherEmpty(' – ', AddLocalizationIf(Not(MilitaryFormation.HasRaisedConscripts), 'NOT_RAISED_CONSCRIPTS'))]"

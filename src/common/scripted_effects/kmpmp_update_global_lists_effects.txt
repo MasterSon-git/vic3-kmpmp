@@ -22,7 +22,7 @@ kmpmp_update_global_list_states_je_master_of_mediterranean_sea = {
         # clean up list if exists
         if = {
             limit = {
-                exists = global_var:states_je_master_of_mediterranean_sea
+                has_global_variable_list = states_je_master_of_mediterranean_sea
             }
             clear_global_variable_list = states_je_master_of_mediterranean_sea
         }
@@ -100,7 +100,7 @@ kmpmp_update_global_list_states_je_leader_of_latin_america = {
         # clean up list if exists
         if = {
             limit = {
-                exists = global_var:states_je_leader_of_latin_america
+                has_global_variable_list = states_je_leader_of_latin_america
             }
             clear_global_variable_list = states_je_leader_of_latin_america
         }
@@ -244,7 +244,7 @@ kmpmp_update_global_list_states_je_ruler_of_the_east = {
         # clean up list if exists
         if = {
             limit = {
-                exists = global_var:states_je_ruler_of_the_east
+                has_global_variable_list = states_je_ruler_of_the_east
             }
             clear_global_variable_list = states_je_ruler_of_the_east
         }
@@ -323,7 +323,7 @@ kmpmp_update_global_list_states_je_the_sugar_monopoly = {
         # clean up list if exists
         if = {
             limit = {
-                exists = global_var:states_je_the_sugar_monopoly
+                has_global_variable_list = states_je_the_sugar_monopoly
             }
             clear_global_variable_list = states_je_the_sugar_monopoly
         }
@@ -377,7 +377,7 @@ kmpmp_update_global_list_states_ibe = {
         # clean up list if exists
         if = {
             limit = {
-                exists = global_var:states_ibe
+                has_global_variable_list = states_ibe
             }
             clear_global_variable_list = states_ibe
         }
@@ -464,7 +464,7 @@ kmpmp_update_global_list_states_unl = {
         # clean up list if exists
         if = {
             limit = {
-                exists = global_var:states_unl
+                has_global_variable_list = states_unl
             }
             clear_global_variable_list = states_unl
         }
@@ -510,7 +510,7 @@ kmpmp_update_global_list_states_p01 = {
         # clean up list if exists
         if = {
             limit = {
-                exists = global_var:states_p01
+                has_global_variable_list = states_p01
             }
             clear_global_variable_list = states_p01
         }
