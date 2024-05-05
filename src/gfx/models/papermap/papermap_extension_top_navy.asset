@@ -13,8 +13,7 @@ pdxmesh = {
 	}
 }
 
-# kmpmp seems to be unnecessary
 entity = {
-	name = "papermap_extension_top_ap1_entity"
-	pdxmesh = "papermap_extension_top_ap1_mesh"
+	name = "papermap_extension_top_navy_entity"
+	pdxmesh = "papermap_extension_top_navy_mesh"
 }

@@ -1,0 +1,2 @@
+﻿l_english:
+ DATA_RELIGION_NAME_TOOLTIP_INGAME_ADDED:0 "[Religion.GetCountryDiscriminationStatus(GetPlayer.Self)][AddLocalizationIf(NotEqualTo_int64(Religion.GetPopulation(GetPlayer.Self),'(int64)0'),'RELIGION_IN_COUNTRY_DESC')]"

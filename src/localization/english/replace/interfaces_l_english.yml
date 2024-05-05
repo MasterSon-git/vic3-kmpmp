@@ -1,0 +1,2 @@
+﻿l_english:
+ GOODS_PRICE_DESC_FIXED:0 "[GOODS.GetTextIcon][GOODS.GetName] has a fixed price of @money![GOODS.GetBasePrice|1v] that will never change."
