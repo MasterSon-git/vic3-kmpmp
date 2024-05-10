@@ -90,12 +90,12 @@ kmpmp_player_boost_state_capitalism = {
 
     # +150 Authority
     country_authority_add = 150
-    # +10% manufactoring tax income
-    building_group_bg_manufacturing_tax_mult = 0.1
+    # +15% manufactoring tax income
+    building_group_bg_manufacturing_tax_mult = 0.15
     # -10% investment pool contribution eff of capitalists
     state_capitalists_investment_pool_efficiency_mult = -0.1
-    # +15% manufacturing throughput
-    building_group_bg_manufacturing_throughput_add = 0.15
+    # +5% manufacturing throughput
+    building_group_bg_manufacturing_throughput_add = 0.05
     # +10% building sector throughput
     building_construction_sector_throughput_add = 0.1
     # -15% edict costs
@@ -139,7 +139,7 @@ kmpmp_player_boost_social_welfare_state = {
     # +15% social research speed
     country_society_tech_research_speed_mult = 0.15
     # -10% production research speed
-    country_production_tech_research_speed_mult = -0.10
+    country_production_tech_research_speed_mult = -0.1
     # +10% education access
     state_education_access_add = 0.1
     # +0.5% education access per wealth
@@ -153,7 +153,7 @@ kmpmp_player_boost_social_welfare_state = {
     # +10% loyalists from SOL increase
     state_loyalists_from_sol_change_mult = 0.1
     # +20% goverment wages
-    country_government_wages_mult = 0.20
+    country_government_wages_mult = 0.2
     # add -50 Authority
     country_authority_add = -50
     # company throughput bonus -10%
