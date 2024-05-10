@@ -1,7 +1,16 @@
 ﻿l_english: 
  company_rubber_corporation_indochina: "Great Rubber Corporation of Indochina"
  company_taiwanese_tea: "Taiwanese Tea Company"
+ company_imperial_porcelan_company: "Imperial Porcelan Factory"
+ company_heineken_international: "Heineken International"
+ company_shell: "Shell"
+ company_persian_luxury_goods: "Persian Luxery Consumer Goods Company"
 
  company_basic_arts: "Standard Art Academy"
  company_basic_arts_dynamic_name_tag_singular: "Artwork"
  company_basic_arts_dynamic_name_tag_plural: "Artworks"
+
+ company_basic_furniture: "Furniture Facilities"
+ company_basic_furniture_dynamic_name_tag_singular: "Furniture"
+ company_basic_furniture_dynamic_name_tag_plural: "Furnitures"
+ 
