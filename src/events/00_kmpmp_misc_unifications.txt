@@ -574,12 +574,24 @@ formation.8 = {
 			}
 			post_notification = unification_notification_four_culture
 		}
-		add_modifier = {
-			name = kmpmp_united_arabia
-			years = 10
+		if = {
+			limit = {
+				has_modifier = kmpmp_ottoman_leader_of_islam
+			}
+			add_modifier = {
+				name = kmpmp_united_arabia
+				years = 10
+				multiplier = 0.5
+			}
 		}
-		add_modifier = {
-			name = kmpmp_arabia
+		else = {
+			add_modifier = {
+				name = kmpmp_united_arabia
+				years = 10
+			}
+			add_modifier = {
+				name = kmpmp_arabia
+			}
 		}
 	}
 
@@ -588,7 +600,7 @@ formation.8 = {
 		default_option = yes
 
 		trigger = {
-            ROOT ={
+            ROOT = {
             	has_modifier = kmpmp_ottoman_leader_of_islam
             }
         }
@@ -660,8 +672,8 @@ formation.8 = {
 		name = formation.8.b
 		default_option = yes
 		trigger = {
-            ROOT ={
-            	NOT = {has_modifier = kmpmp_ottoman_leader_of_islam}
+            ROOT = {
+            	NOT = { has_modifier = kmpmp_ottoman_leader_of_islam }
             }
         }
 		add_modifier = {
