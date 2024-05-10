@@ -23,3 +23,30 @@
         building_tooling_workshops_throughput_add = 0.1
     }
 }
+
+company_basic_furniture = {
+    icon = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+    background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+    
+    uses_dynamic_naming = no
+    
+    building_types = {
+        building_furniture_manufacturies
+        building_logging_camp
+    }
+
+    possible = { 
+        any_scope_state = {
+            is_incorporated = yes
+            any_scope_building = {
+                is_building_type = building_furniture_manufacturies
+                level >= 5
+            }
+        }
+    }
+    
+    prosperity_modifier = {
+        building_paper_mills_throughput_add = 0.1
+        building_tooling_workshops_throughput_add = 0.1
+    }
+}

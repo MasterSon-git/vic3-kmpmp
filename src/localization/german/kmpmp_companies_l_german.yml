@@ -1,7 +1,15 @@
 ﻿l_german:
  company_rubber_corporation_indochina: "Gummiwerke von Indochina"
  company_taiwanese_tea: "Taiwanesische Tee Geselltschaft"
+ company_imperial_porcelan_company: "Kaiserliche Porzellanfabrik"
+ company_heineken_international: "Heineken International"
+ company_shell: "Shell"
+ company_persian_luxury_goods: "Persisches Luxuskonsumgüterunternehmen"
 
  company_basic_arts: "Kunstatellier"
  company_basic_arts_dynamic_name_tag_singular: "Kunstwerk"
  company_basic_arts_dynamic_name_tag_plural: "Kunstwerke"
+
+ company_basic_furniture: "Möbelwerke"
+ company_basic_furniture_dynamic_name_tag_singular: "Möbel"
+ company_basic_furniture_dynamic_name_tag_plural: "Möbel"
