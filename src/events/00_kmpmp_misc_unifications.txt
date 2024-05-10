@@ -574,23 +574,95 @@ formation.8 = {
 			}
 			post_notification = unification_notification_four_culture
 		}
-		add_modifier = {
-			name = kmpmp_united_arabia
-			years = 10
+		if = {
+			limit = {
+				has_modifier = kmpmp_ottoman_leader_of_islam
+			}
+			add_modifier = {
+				name = kmpmp_united_arabia
+				years = 10
+				multiplier = 0.5
+			}
 		}
-		add_modifier = {
-			name = kmpmp_arabia
+		else = {
+			add_modifier = {
+				name = kmpmp_united_arabia
+				years = 10
+			}
+			add_modifier = {
+				name = kmpmp_arabia
+			}
 		}
 	}
 
 	option = {
 		name = formation.5.a
 		default_option = yes
+
+		trigger = {
+            ROOT = {
+            	has_modifier = kmpmp_ottoman_leader_of_islam
+            }
+        }
 		add_modifier = {
 			name = unification_prestige
 			months = very_long_modifier_time
 		}
+		add_primary_culture = cu:persian
+		add_primary_culture = cu:turkish
+		add_primary_culture = cu:kurdish
+		add_primary_culture = cu:maghrebi
 		unification_claims_effect = yes
+		every_state_region = {
+			limit = {
+				region = sr:region_north_africa
+				any_scope_state = {
+					NOT = { owner = ROOT }
+					NOT = { has_claim_by = ROOT }
+				}
+			}
+			add_claim = ROOT
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_KONYA }
+			}
+			s:STATE_KONYA = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_HUDAVENDIGAR }
+			}
+			s:STATE_HUDAVENDIGAR = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_AYDIN }
+			}
+			s:STATE_AYDIN = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_KASTAMONU }
+			}
+			s:STATE_KASTAMONU = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_ANKARA }
+			}
+			s:STATE_ANKARA = {
+				add_claim = ROOT
+			}
+		}
 		ai_chance = {
 			factor = 1
 		}
@@ -599,6 +671,11 @@ formation.8 = {
 	option = {
 		name = formation.8.b
 		default_option = yes
+		trigger = {
+            ROOT = {
+            	NOT = { has_modifier = kmpmp_ottoman_leader_of_islam }
+            }
+        }
 		add_modifier = {
 			name = unification_prestige
 			months = very_long_modifier_time
