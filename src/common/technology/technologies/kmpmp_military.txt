@@ -1,6 +1,25 @@
 ﻿######QWF
 ### ERA 3
 
+electric_telegraph = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/electrical_telegraph.dds"
+	category = military
+	
+	modifier = {
+		country_war_exhaustion_casualties_mult = -0.25
+		country_radicals_from_conquest_mult = -0.05 #kmpmp
+	}
+	
+	unlocking_technologies = {	
+		logistics
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
 military_statistics = {
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/military_statistics.dds"
@@ -9,6 +28,7 @@ military_statistics = {
 	modifier = {
 		military_formation_organization_gain_mult = 0.2
 		country_institution_qwf_conscription_max_investment_add = 1
+		country_radicals_from_conquest_mult = -0.05 #kmpmp
 	}
 	
 	unlocking_technologies = {	
@@ -22,6 +42,26 @@ military_statistics = {
 }
 
 ### ERA 4
+
+war_propaganda = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/war_propaganda.dds"
+	category = military
+
+	modifier = {
+		unit_morale_loss_mult = -0.05
+		state_conscription_rate_mult = 0.2
+		country_radicals_from_conquest_mult = -0.05 #kmpmp
+	}
+	
+	unlocking_technologies = {	
+		enlistment_offices
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
 
 wargaming = {
 	# Unlocks Siege Artillery PM in Barracks

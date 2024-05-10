@@ -63,6 +63,25 @@ modern_sewerage = {
 	}
 }
 
+organized_sports = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/organized_sports.dds"
+	category = society
+	
+	modifier = {
+		country_prestige_mult = 0.1
+		country_radicals_from_conquest_mult = -0.05 #kmpmp
+	}
+	
+	unlocking_technologies = {
+		nationalism
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
 psychiatry = {
 	era = era_2
 	texture = "gfx/interface/icons/invention_icons/psychiatry.dds"
@@ -230,6 +249,7 @@ psychoanalysis = {
 		country_influence_mult = 0.1
 		state_bureaucracy_population_base_cost_factor_mult = -0.05
         country_infamy_decay_mult = 0.03
+		country_radicals_from_conquest_mult = -0.05 #kmpmp
 	}
 	
 	unlocking_technologies = {
@@ -445,6 +465,7 @@ civilizing_mission = {
 	modifier = {
 		country_institution_colonial_affairs_max_investment_add = 1
 		country_max_declared_interests_add = 2 #1
+		country_radicals_from_conquest_mult = -0.05 #kmpmp
 	}
 
 	unlocking_technologies = {
@@ -471,6 +492,44 @@ civilizing_mission = {
 		}
 	}
 }
+
+anarchism = {
+	# Unlocks Anarchy - Distribution of Power Law
+	# New leaders may spawn with the Anarchist Ideology
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/anarchy.dds"
+	category = society
+	
+	modifier = {
+		country_radicals_from_conquest_mult = -0.05 #kmpmp
+	}
+
+	unlocking_technologies = {
+		egalitarianism
+	}
+	
+	ai_weight = {
+		value = 1
+		
+		if = {
+			limit = { 
+				has_strategy = ai_strategy_egalitarian_agenda
+			}
+			add = 1
+		}	
+		if = {
+			limit = { 
+				OR = {
+					has_strategy = ai_strategy_conservative_agenda
+					has_strategy = ai_strategy_reactionary_agenda
+					has_strategy = ai_strategy_maintain_mandate_of_heaven
+				}			
+			}
+			add = -0.5
+		}			
+	}
+}
+
 multilateral_alliances = {
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/multilateral_alliances.dds"
@@ -480,6 +539,7 @@ multilateral_alliances = {
 		country_diplomatic_play_maneuvers_add = 25
 		country_allow_multiple_alliances = yes
 		country_max_declared_interests_add = 4
+		country_radicals_from_conquest_mult = -0.05 #kmpmp
 	}
 
 	unlocking_technologies = {
