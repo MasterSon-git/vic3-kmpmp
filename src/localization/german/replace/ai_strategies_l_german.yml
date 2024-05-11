@@ -1,0 +1,2 @@
+﻿l_german:
+ ai_attitude_human_desc: "[COUNTRY.GetAltName('NOM')|U] wird von einem menschlichen Spieler gelenkt, der die eigene Haltung zu [GetPlayer.GetAltName('DAT')] ganz allein festlegt."
