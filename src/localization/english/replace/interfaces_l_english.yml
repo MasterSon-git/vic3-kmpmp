@@ -1,3 +1,5 @@
 ﻿l_english:
+ TRANSFER_RESULT_FORMATION: "[SelectLocalization(StagedFormation.HasValidFormation, 'TRANSFER_RESULT_HAS_FORMATION', 'TRANSFER_RESULT_NO_FORMATION')]"
  MILITARY_FORMATION_COMMAND_LIMIT_TOOLTIP_ORGANIZATION_MAX: "#indent_newline:3 @warning! Due to insufficient [concept_command_limit] the following applies to the [concept_military_formation]:\n[GetStaticModifier('low_command_limit').GetDesc]#!\n\n$BREAKDOWN$#!"
  GOODS_PRICE_DESC_FIXED:0 "[GOODS.GetTextIcon][GOODS.GetName] has a fixed price of @money![GOODS.GetBasePrice|1v] that will never change."
+ PROMOTION_EFFECTS_TOOLTIP:2 "[AddTextIf(IsValid(Character.GetPromoteCommand), Character.GetNextCommanderRankBenefits)]"
