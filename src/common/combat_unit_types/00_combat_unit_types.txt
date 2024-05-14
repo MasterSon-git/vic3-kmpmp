@@ -673,6 +673,8 @@ combat_unit_type_heavy_tank = {
         unit_kill_rate_add = 0.35
         unit_morale_damage_mult = 0.15
         unit_devastation_mult = 0.2
+
+        unit_FAE_siege_add = 10
     }
 
     formation_modifier = {
@@ -968,6 +970,8 @@ combat_unit_type_light_tanks = {
         unit_devastation_mult = 0.1
         unit_recovery_rate_add = -0.10
         unit_occupation_mult = 0.3
+
+        unit_FAE_siege_add = 8
     }
 
     formation_modifier = {

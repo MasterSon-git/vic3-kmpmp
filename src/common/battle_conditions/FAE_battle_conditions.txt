@@ -12,11 +12,10 @@ FAE_battle_condition_attacker_fort_breached = {
     
     possible = {
         # Generals existence check
-            scope:character ?= {
+        scope:character ?= {
             has_role = general
             exists   = opposing_commander
         }
-
         
         # Attackers only
         scope:is_advancing_side = yes
