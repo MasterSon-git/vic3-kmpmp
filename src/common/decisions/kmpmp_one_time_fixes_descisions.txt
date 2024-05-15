@@ -1,0 +1,28 @@
+﻿# fix for current mp session
+# TODO: remove later
+kmpmp_ottoman_annex_serbia_decision = {
+    is_shown = {
+        year >= 1844
+        year < 1845
+        exists = c:SER
+        c:TUR ?= owner
+        NOT = {
+            has_variable = kmpmp_ottoman_annex_serbia_decision_taken
+        }
+    }
+
+    possible = {
+        NOT = {
+            has_variable = kmpmp_ottoman_annex_serbia_decision_taken
+        }
+    }
+
+    when_taken = {
+        set_variable = kmpmp_ottoman_annex_serbia_decision_taken
+        annex = c:SER
+    }
+
+    ai_chance = {
+		base = 0	
+	}
+}
