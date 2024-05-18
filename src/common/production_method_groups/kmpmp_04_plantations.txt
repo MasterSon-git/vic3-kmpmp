@@ -3,7 +3,6 @@
 	production_methods = {
 		pm_privately_owned_plantation
 		pm_publicly_traded_plantation
-        # kmpmp TEST
 		pm_government_run_opium_plantation # pm_government_run_plantation
 		pm_worker_cooperative_plantation
 	}
