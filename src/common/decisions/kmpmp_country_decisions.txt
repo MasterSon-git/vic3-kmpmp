@@ -14,6 +14,9 @@
 	possible = {
 		exists = c:NGF
 		c:NGF ?= this
+		NOT = {
+			is_unification_candidate = GER
+		}
 		has_technology_researched = nationalism
 		year <= 1871
 		has_war_with = c:FRA
