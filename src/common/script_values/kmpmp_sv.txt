@@ -2,3 +2,15 @@
     value = average_sol
     add = 1
 }
+
+kmpmp_enemy_occupation_incorporated_states = {
+    value = 0
+    every_scope_state = {
+        limit = {
+            is_incorporated = yes
+            controller != owner
+        }
+        add = 1
+    }
+    divide = num_incorporated_states
+}
