@@ -1,0 +1,5 @@
+﻿kmpmp_naval_invasion_battle = { # will be applied for both sides to have longer battles
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    battle_casualties_mult = -0.5
+    unit_morale_damage_mult = -0.5
+}

@@ -1,0 +1,100 @@
+# Root = attacker or defender country
+# scope:enemy_country = enemy of root
+# scope:battle = battle
+# scope:attacker = attacking commander
+# scope:defender = defending commander
+# scope:state = location state
+on_battle_started = {
+    on_actions = {
+        kmpmp_naval_invasion_add_modifier_action
+    }
+}
+
+# Root = attacker or defender country
+# scope:battle = battle
+# scope:attacker = attacking commander
+# scope:defender = defending commander
+# scope:state = location state
+on_battle_ended = {
+    on_actions = {
+        kmpmp_naval_invasion_remove_modifier_action
+    }
+}
+
+# Root = invaded country
+# scope:actor = invading country
+# scope:admiral = invading admiral
+# scope:general = invading general
+# scope:state = location state
+on_naval_invasion = {
+	on_actions = {
+		kmpmp_naval_invasion_started_action
+	}
+}
+
+kmpmp_naval_invasion_add_modifier_action = {
+    effect = {
+        if = {
+            limit = {
+                scope:battle = {
+                    NOT = { # if front not exists, this is a naval landing
+                        exists = front
+                    }
+                }
+            }
+            scope:attacker ?= {
+                if = {
+                    limit = {
+                        owner = ROOT
+                    }
+                    add_modifier = {
+                        name = kmpmp_naval_invasion_battle
+                    }
+                }
+            }
+            scope:defender ?= {
+                if = {
+                    limit = {
+                        owner = ROOT
+                    }
+                    add_modifier = {
+                        name = kmpmp_naval_invasion_battle
+                    }
+                }
+            }
+        }
+    }
+}
+
+kmpmp_naval_invasion_remove_modifier_action = {
+    effect = {
+        scope:attacker ?= {
+            if = {
+                limit = {
+                    has_modifier = kmpmp_naval_invasion_battle
+                }
+                remove_modifier = kmpmp_naval_invasion_battle
+            }
+        }
+        scope:defender ?= {
+            if = {
+                limit = {
+                    has_modifier = kmpmp_naval_invasion_battle
+                }
+                remove_modifier = kmpmp_naval_invasion_battle
+            }
+        }
+    }
+}
+
+kmpmp_naval_invasion_started_action = {
+    effect = {
+        scope:actor ?= {
+            add_to_local_variable_list = {
+                name = invaded_countries
+                target = ROOT
+                days = 30
+            }
+        }
+    }
+}
