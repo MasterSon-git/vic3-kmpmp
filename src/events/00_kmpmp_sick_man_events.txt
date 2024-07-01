@@ -307,7 +307,10 @@ sick_man.3 = {
 		s:STATE_CHERSON = {
 			add_claim = ROOT
 		}
-		s:STATE_LUHANSK = {
+		# s:STATE_LUHANSK = {
+		# 	add_claim = ROOT
+		# }
+		s:STATE_KHARKOV = {
 			add_claim = ROOT
 		}
 		s:STATE_KUBAN = {
@@ -461,7 +464,10 @@ sick_man.4 = {
 		s:STATE_CHERSON = {
 			add_claim = ROOT
 		}
-		s:STATE_LUHANSK = {
+		# s:STATE_LUHANSK = {
+		# 	add_claim = ROOT
+		# }
+		s:STATE_KHARKOV = {
 			add_claim = ROOT
 		}
 		s:STATE_KUBAN = {

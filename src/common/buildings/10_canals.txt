@@ -22,6 +22,8 @@
 		pmg_canal
 		pmg_ownership_capital_building_canal
 	}
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_harbour.dds"
 }
 
 building_panama_canal = {
@@ -47,4 +49,6 @@ building_panama_canal = {
 		pmg_canal
 		pmg_ownership_capital_building_canal
 	}
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_harbour.dds"
 }

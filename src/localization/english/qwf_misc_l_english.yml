@@ -1,5 +1,6 @@
 ﻿l_english:
  institution_qwf_conscription:0 "National Defence"
  institution_qwf_conscription_desc:0 "The country's defence institutions, responsible for safeguarding the national territory"
- modifier_country_institution_qwf_conscription_max_investment_add:0 "Max $institution_qwf_conscription$ [concept_institution] Investment"
- modifier_country_institution_qwf_conscription_max_investment_add_desc:0 "A bonus or penalty to the maximum investment level of the $institution_qwf_conscription$ [concept_institution]"
+
+ country_institution_qwf_conscription_max_investment_add:0 "Max $institution_qwf_conscription$ [concept_institution] Investment"
+ country_institution_qwf_conscription_max_investment_add_desc:0 "A bonus or penalty to the maximum investment level of the $institution_qwf_conscription$ [concept_institution]"

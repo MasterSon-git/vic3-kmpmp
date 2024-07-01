@@ -480,6 +480,7 @@ types topbar_components
 			using = hud_visibility
 			datacontext = "[AccessMetaPlayer.AccessPlayedOrObservedCountry]"
 			using = clickthrough_blocker
+			# size = { 705 80 }
 			size = { 705 100 }
 			allow_outside = yes
 			resizeparent = yes
@@ -829,6 +830,7 @@ types topbar_components
 									}
 								}
 							}
+							
 						}
 						
 						#shows only on hover

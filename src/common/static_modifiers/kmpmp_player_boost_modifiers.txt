@@ -1,0 +1,235 @@
+﻿kmpmp_player_boost_adjustment = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+}
+
+kmpmp_player_boost_art_of_deal = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+
+    # +20 diplomatic manuvers
+    country_diplomatic_play_maneuvers_add = 20
+    # +10% Infamy decay
+    country_infamy_decay_mult = 0.1
+    # -10% infamy generation
+    country_infamy_generation_mult = -0.1
+    # +200 Influence
+    country_influence_add = 200
+    # +20% techspread
+    country_tech_spread_mult = 0.2
+    # +15% Authority (neu)
+    country_authority_mult = 0.15
+    # +3k Flat Minting
+    country_minting_add = 3000
+    # +10% Arty Input
+    goods_input_artillery_mult = 0.1
+    # +10% iron clads input
+    goods_input_ironclads_mult = 0.1
+}
+
+kmpmp_player_boost_imperialism_oversea_empire = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+
+    # +20% Navy att / Def
+    unit_navy_offense_mult = 0.2
+    unit_navy_defense_mult = 0.2
+    # +30% colonial growth
+    #colonial_growth_mult = 0.3
+    state_colony_growth_speed_mult = 0.3
+    # -20% supply consumption 
+    unit_supply_consumption_mult = -0.2
+    # +10% traderoute competetiveness
+    country_trade_route_competitiveness_mult = 0.1
+    # +10% throughput in unincorporated states
+    building_unincorporated_throughput_add = 0.1
+    # +10% education access in unincorporated states
+    state_unincorporated_education_access_add = 0.1
+    # -20% radicals from conquest
+    country_radicals_from_conquest_mult = -0.2
+    # add +7.5% constrution sektor TP
+    building_construction_sector_throughput_add = 0.075
+}
+
+# just a fake modifier
+kmpmp_player_boost_imperialism_oversea_empire_state_unincorporated_education_access = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+
+    state_education_access_add = 0.1 # modifier is added in on_actions
+}
+
+kmpmp_player_boost_military_industrial_complex = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+
+    # Conditions:
+    # Military IG atleast 10% cloud + positive opinion
+    # Industrial IG atleast 10% cloud + positive opinion
+
+    # Buffs:
+    # +10% military research speed
+    country_military_tech_research_speed_mult = 0.1
+    # +10% industrial research speed
+    country_production_tech_research_speed_mult = 0.1
+    # -10% social tech speed
+    country_society_tech_research_speed_mult = -0.1
+    # +10% Army Off / Def
+    # +10% Navy Off / Def
+    unit_offense_mult = 0.1
+    unit_defense_mult = 0.1
+    # -5% costs for military goods
+    country_military_goods_cost_mult = -0.05
+    # add +15% gov wages
+    country_government_wages_mult = 0.15
+    # add -10% social tech spread
+    country_society_tech_spread_mult = -0.1
+    #-10% loyalists from SOL increase
+    state_loyalists_from_sol_change_mult = -0.1
+    #+10% radicals from SOL decrease
+    state_radicals_from_sol_change_mult = 0.1
+}
+
+kmpmp_player_boost_state_capitalism = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+
+    # +150 Authority
+    country_authority_add = 150
+    # +15% manufactoring tax income
+    building_group_bg_manufacturing_tax_mult = 0.15
+    # -10% investment pool contribution eff of capitalists
+    state_capitalists_investment_pool_efficiency_mult = -0.1
+    # +5% manufacturing throughput
+    building_group_bg_manufacturing_throughput_add = 0.05
+    # +10% building sector throughput
+    building_construction_sector_throughput_add = 0.1
+    # -15% edict costs
+    state_decree_cost_mult = -0.15
+}
+
+kmpmp_player_boost_autarky = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+
+    # +10% Mines / Fishing / Whaling / Oil / Rubber throughput
+    building_group_bg_mining_throughput_add = 0.1
+    building_group_bg_fishing_throughput_add = 0.1
+    building_group_bg_whaling_throughput_add = 0.1
+    building_group_bg_oil_extraction_throughput_add = 0.1
+    building_group_bg_rubber_throughput_add = 0.1
+    # +10% agriulture throughtput
+    building_group_bg_agriculture_throughput_add = 0.1
+    # +15% Army Def
+    unit_army_defense_mult = 0.15
+    # -10% plantation throughput
+    building_group_bg_plantations_throughput_add = -0.1
+    # -10% traderoute competetivness
+    country_trade_route_competitiveness_mult = -0.1
+    # +10% uni throughput
+    building_university_throughput_add = 0.1
+    # +200 Authority
+    country_authority_add = 200
+    # add +2.5% state construction eff
+    state_construction_mult = 0.025
+    # -10% edict costs
+    state_decree_cost_mult = -0.1
+}
+
+kmpmp_player_boost_social_welfare_state = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+
+    # Conditions:
+    # inteligientia IG atleast 10% cloud and positive opinion
+
+    # Buffs:
+    # +15% social research speed
+    country_society_tech_research_speed_mult = 0.15
+    # -10% production research speed
+    country_production_tech_research_speed_mult = -0.1
+    # +10% education access
+    state_education_access_add = 0.1
+    # +0.5% education access per wealth
+    state_education_access_wealth_add = 0.005
+    # +15% uni throughput
+    building_university_throughput_add = 0.15
+    # +5% accepted pop growth
+    state_accepted_birth_rate_mult = 0.05
+    # +15% Dependents income
+    state_dependent_wage_mult = 0.15
+    # +10% loyalists from SOL increase
+    state_loyalists_from_sol_change_mult = 0.1
+    # +20% goverment wages
+    country_government_wages_mult = 0.2
+    # add -50 Authority
+    country_authority_add = -50
+    # company throughput bonus -10%
+    country_company_throughput_bonus_add = -0.1
+}
+
+kmpmp_player_boost_corporative_socialism = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+
+    # condition:
+    # Trade Unions are atleast 10% + atleast +5 opinion
+
+    # Buffs:
+    # -5% industrial research speed
+    country_production_tech_research_speed_mult = -0.05
+    # -5% social research speed
+    country_society_tech_research_speed_mult = -0.05
+    # +5% birthrate accepted pops
+    state_accepted_birth_rate_mult = 0.05
+    # +5% manu tax income
+    building_group_bg_manufacturing_tax_mult = 0.05
+    # +5 legitimacy
+    country_legitimacy_base_add = 5
+    # -20% mobilisation costs
+    building_mobilization_cost_mult = -0.2
+    # +2% conscription rate
+    state_conscription_rate_add = 0.02
+    # +150 Authority
+    country_authority_add = 150
+}
+
+kmpmp_player_boost_military_police_state = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+
+    # Condition:
+    # Military IG atleast 25% and + 10 opinion
+
+    # Buffs:
+    # +20% Army Off / Def
+    unit_army_offense_mult = 0.2
+    unit_army_defense_mult = 0.2
+    # -10% radicals from SOL decrease
+    state_radicals_from_sol_change_mult = -0.1
+    # -15% techspread
+    country_tech_spread_mult = -0.15
+    # -10% social techspeed
+    country_society_tech_research_speed_mult = -0.1
+    # +20% military wages
+    country_military_wages_mult = 0.2
+    # +3% birthrate for accepted pops
+    state_accepted_birth_rate_mult = 0.03
+    # +50 Authority
+    country_authority_add = 50
+    # +10% radicals from conquest
+    country_radicals_from_conquest_mult = 0.1
+}
+
+kmpmp_player_boost_tycoon_capitalism = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    
+    # condition:
+    # Industrialists IG atleast 5% cloud and positive opinion
+
+    # Buffs:
+    # +10% State Construction eff
+    state_construction_mult = 0.1
+    # +10% capitalist investment pool con eff.
+    state_capitalists_investment_pool_efficiency_mult = 0.1
+    # -10% loan intrest rate
+    country_loan_interest_rate_mult = -0.1
+    # +10% manufactoring tax income
+    building_group_bg_manufacturing_tax_mult = 0.1
+    # -10% military research speed
+    country_military_tech_research_speed_mult = -0.1
+    # +3% mortality
+    state_mortality_mult = 0.03
+    # company throughput bonus 10%
+    country_company_throughput_bonus_add = 0.1
+}
