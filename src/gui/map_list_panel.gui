@@ -2862,7 +2862,6 @@ types map_list_panel_types {
 
 			sort_button = {
 				visible = yes
-				enabled = no
 				size = { 70 30 }
 				align = hcenter|nobaseline
 				text = "POPULATION"
