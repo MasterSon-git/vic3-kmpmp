@@ -1,0 +1,119 @@
+﻿building_academics_shares_add = {
+	color = good
+	percent = no
+	game_data = {
+		ai_value = 0
+	}
+}
+
+building_aristocrats_shares_add = {
+	color = good
+	percent = no
+	game_data = {
+		ai_value = 0
+	}
+}
+
+building_bureaucrats_shares_add = {
+	color = good
+	percent = no
+	game_data = {
+		ai_value = 0
+	}
+}
+
+building_capitalists_shares_add = {
+	color = good
+	percent = no
+	game_data = {
+		ai_value = 0
+	}
+}
+
+building_clergymen_shares_add = {
+	color = good
+	percent = no
+	game_data = {
+		ai_value = 0
+	}
+}
+
+building_clerks_shares_add = {
+	color = good
+	percent = no
+	game_data = {
+		ai_value = 0
+	}
+}
+
+building_engineers_shares_add = {
+	color = good
+	percent = no
+	game_data = {
+		ai_value = 0
+	}
+}
+
+building_farmers_shares_add = {
+	color = good
+	percent = no
+	game_data = {
+		ai_value = 0
+	}
+}
+
+building_laborers_shares_add = {
+	color = good
+	percent = no
+	game_data = {
+		ai_value = 0
+	}
+}
+
+building_machinists_shares_add = {
+	color = good
+	percent = no
+	game_data = {
+		ai_value = 0
+	}
+}
+
+building_officers_shares_add = {
+	color = good
+	percent = no
+	game_data = {
+		ai_value = 0
+	}
+}
+
+building_peasants_shares_add = {
+	color = good
+	percent = no
+	game_data = {
+		ai_value = 0
+	}
+}
+
+building_shopkeepers_shares_add = {
+	color = good
+	percent = no
+	game_data = {
+		ai_value = 0
+	}
+}
+
+building_slaves_shares_add = {
+	color = good
+	percent = no
+	game_data = {
+		ai_value = 0
+	}
+}
+
+building_soldiers_shares_add = {
+	color = good
+	percent = no
+	game_data = {
+		ai_value = 0
+	}
+}

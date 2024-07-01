@@ -1,0 +1,17 @@
+﻿state_mortality_wealth_mult = {
+	color = bad
+	percent = yes
+	decimals = 2 #1
+	game_data = {
+		ai_value = 0
+	}
+}
+
+state_pollution_reduction_health_mult = {
+	color = bad
+	percent = yes
+	decimals = 1 #0
+	game_data = {
+		ai_value = 0
+	}
+}

@@ -1,0 +1,97 @@
+﻿goods_input_coffee_add = {
+	color = bad
+	percent = no
+	game_data = {
+		ai_value = 0
+	}
+}
+
+goods_input_tea_add = {
+	color = bad
+	percent = no
+	game_data = {
+		ai_value = 0
+	}
+}
+
+goods_input_ironclads_mult = {
+    color = bad
+    percent = yes
+	decimals = 0
+	game_data = {
+		ai_value = 0
+	}
+}
+
+#building_throughput_oil_mult = {
+building_throughput_oil_add = {
+	color = good
+	percent = yes
+	decimals = 0
+	game_data = {
+		ai_value = 0
+	}
+}
+
+building_group_bg_agriculture_unincorporated_throughput_add = {
+	color = good
+	percent = yes
+	decimals = 0
+	game_data = {
+		ai_value = 0
+	}
+}
+
+building_logging_camp_throughput_add = {
+	color = good
+	percent = yes
+	decimals = 0
+	game_data = {
+		ai_value = 0
+	}
+}
+
+building_sugar_plantation_throughput_add = {
+	color = good
+	percent = yes
+	decimals = 0
+	game_data = {
+		ai_value = 0
+	}
+}
+
+building_tobacco_plantation_throughput_add = {
+	color = good
+	percent = yes
+	decimals = 0
+	game_data = {
+		ai_value = 0
+	}
+}
+
+###Needed for Drill mob option
+##character_battle_condition_controlled_retreat_mult = {
+#	color = good
+#	percent = yes
+#}
+#character_battle_condition_panicked_retreat_mult = {
+#	color = bad
+#	percent = yes
+#}
+
+unit_combat_unit_type_light_tanks_offense_mult = {
+	color = good
+	percent = yes
+	decimals = 0
+	game_data = {
+		ai_value = 0
+	}
+}
+
+state_zoroastrian_standard_of_living_add = {
+	decimals = 1
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}

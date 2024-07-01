@@ -3,7 +3,12 @@
         region_state:PRU = {
             create_building = {
                 building = "building_government_administration"
-                level = 2
+                add_ownership = {
+                    country = {
+                        country = "c:PRU"
+                        levels = 2
+                    }
+                }
                 reserves = 1
                 activate_production_methods = { "pm_vertical_filing_cabinets" }
             }
@@ -13,7 +18,12 @@
         region_state:AUS = {
             create_building = {
                 building = "building_government_administration"
-                level = 15 #10
+                add_ownership = {
+                    country = {
+                        country = "c:AUS"
+                        levels = 15 #10
+                    }
+                }
                 reserves = 1
                 activate_production_methods = { "pm_horizontal_drawer_cabinets" }
             }
@@ -23,7 +33,12 @@
         region_state:FRA = {
             create_building = {
                 building = "building_government_administration"
-                level = 3
+                add_ownership = {
+                    country = {
+                        country = "c:FRA"
+                        levels = 3
+                    }
+                }
                 reserves = 1
                 activate_production_methods = { "pm_vertical_filing_cabinets" }
             }
@@ -33,7 +48,12 @@
         region_state:GBR = {
             create_building = {
                 building = "building_government_administration"
-                level = 7 #5
+                add_ownership = {
+                    country = {
+                        country = "c:GBR"
+                        levels = 7 #5
+                    }
+                }
                 reserves = 1
                 activate_production_methods = { "pm_vertical_filing_cabinets" }
             }
@@ -43,7 +63,12 @@
         region_state:SAR = {
             create_building = {
                 building = "building_government_administration"
-                level = 6 #5
+                add_ownership = {
+                    country = {
+                        country = "c:SAR"
+                        levels = 6 #5
+                    }
+                }
                 reserves = 1
                 activate_production_methods = { "pm_horizontal_drawer_cabinets" }
             }
@@ -53,7 +78,12 @@
         region_state:SIC = {
             create_building = {
                 building = "building_government_administration"
-                level = 8 #6
+                add_ownership = {
+                    country = {
+                        country = "c:SIC"
+                        levels = 8 #6
+                    }
+                }
                 reserves = 1
                 activate_production_methods = { "pm_horizontal_drawer_cabinets" }
             }
@@ -63,7 +93,12 @@
         region_state:TUR = {
             create_building = {
                 building = "building_government_administration"
-                level = 6 #3
+                add_ownership = {
+                    country = {
+                        country = "c:TUR"
+                        levels = 6 #3
+                    }
+                }
                 reserves = 1
                 activate_production_methods = { "pm_horizontal_drawer_cabinets" }
             }
@@ -73,7 +108,12 @@
         region_state:TUR = {
             create_building = {
                 building = "building_government_administration"
-                level = 1
+                add_ownership = {
+                    country = {
+                        country = "c:TUR"
+                        levels = 1
+                    }
+                }
                 reserves = 1
                 activate_production_methods = { "pm_horizontal_drawer_cabinets" }
             }
@@ -83,7 +123,12 @@
         region_state:MEX = {
             create_building = {
                 building = "building_government_administration"
-                level = 6 #4
+                add_ownership = {
+                    country = {
+                        country = "c:MEX"
+                        levels = 6 #4
+                    }
+                }
                 reserves = 1
                 activate_production_methods = { "pm_simple_organization" }
             }
@@ -93,7 +138,12 @@
         region_state:BOL = {
             create_building = {
                 building = "building_government_administration"
-                level = 4 #2
+                add_ownership = {
+                    country = {
+                        country = "c:BOL"
+                        levels = 4 #2
+                    }
+                }
                 reserves = 1
                 activate_production_methods = { "pm_simple_organization" }
             }
@@ -103,28 +153,53 @@
         region_state:EGY = {
             create_building = {
                 building = "building_government_administration"
-                level = 10 #7
+                add_ownership = {
+                    country = {
+                        country = "c:EGY"
+                        levels = 10 #7
+                    }
+                }
                 reserves = 1
                 activate_production_methods = { "pm_horizontal_drawer_cabinets" }
             }
             create_building = {
                 building = "building_paper_mills"
-                level = 5 #3
+                add_ownership = {
+                    country = {
+                        country = "c:EGY"
+                        levels = 5 #3
+                    }
+                }
                 reserves = 1
             }
             create_building = {
                 building = "building_textile_mills"
-                level = 4 #3
+                add_ownership = {
+                    country = {
+                        country = "c:EGY"
+                        levels = 4 #3
+                    }
+                }
                 reserves = 1
             }
             create_building = {
                 building = "building_cotton_plantation"
-                level = 11 #8
+                add_ownership = {
+                    country = {
+                        country = "c:EGY"
+                        levels = 11 #8
+                    }
+                }
                 reserves = 1
             }
             create_building = {
                 building = "building_logging_camp"
-                level = 2
+                add_ownership = {
+                    country = {
+                        country = "c:EGY"
+                        levels = 2
+                    }
+                }
                 reserves = 1
             }
         }
@@ -133,7 +208,12 @@
         region_state:EGY = {
             create_building = {
                 building = "building_tooling_workshops"
-                level = 1
+                add_ownership = {
+                    country = {
+                        country = "c:EGY"
+                        levels = 1
+                    }
+                }
                 reserves = 1
             }
         }
@@ -142,7 +222,12 @@
         region_state:PER = {
             create_building = {
                 building = "building_government_administration"
-                level = 6 #3
+                add_ownership = {
+                    country = {
+                        country = "c:PER"
+                        levels = 6 #3
+                    }
+                }
                 reserves = 1
                 activate_production_methods = { "pm_simple_organization" }
             }
@@ -152,7 +237,12 @@
         region_state:SIA = {
             create_building = {
                 building = "building_government_administration"
-                level = 5 #2
+                add_ownership = {
+                    country = {
+                        country = "c:SIA"
+                        levels = 5 #2
+                    }
+                }
                 reserves = 1
                 activate_production_methods = { "pm_simple_organization" }
             }
@@ -162,7 +252,12 @@
         region_state:JAP = {
             create_building = {
                 building = "building_government_administration"
-                level = 6 #3
+                add_ownership = {
+                    country = {
+                        country = "c:JAP"
+                        levels = 6 #3
+                    }
+                }
                 reserves = 1
                 activate_production_methods = { "pm_horizontal_drawer_cabinets" }
             }
@@ -172,7 +267,12 @@
         region_state:SPA = {
             create_building = {
                 building = "building_government_administration"
-                level = 7 #5
+                add_ownership = {
+                    country = {
+                        country = "c:SPA"
+                        levels = 7 #5
+                    }
+                }
                 reserves = 1
                 activate_production_methods = { "pm_horizontal_drawer_cabinets" }
             }
@@ -182,7 +282,12 @@
         region_state:POR = {
             create_building = {
                 building = "building_government_administration"
-                level = 1
+                add_ownership = {
+                    country = {
+                        country = "c:POR"
+                        levels = 1
+                    }
+                }
                 reserves = 1
                 activate_production_methods = { "pm_horizontal_drawer_cabinets" }
             }
@@ -192,7 +297,12 @@
         region_state:NET = {
             create_building = {
                 building = "building_government_administration"
-                level = 4 #3
+                add_ownership = {
+                    country = {
+                        country = "c:NET"
+                        levels = 4 #3
+                    }
+                }
                 reserves = 1
                 activate_production_methods = { "pm_horizontal_drawer_cabinets" }
             }
@@ -202,19 +312,34 @@
         region_state:MEX = {
             create_building = {
                 building = "building_tooling_workshops"
-                level = 1
+                add_ownership = {
+                    country = {
+                        country = "c:MEX"
+                        levels = 1
+                    }
+                }
                 reserves = 1
                 activate_production_methods = { "pm_crude_tools" }
             }
             create_building = {
                 building = "building_construction_sector"
-                level = 3 #1
+                add_ownership = {
+                    country = {
+                        country = "c:MEX"
+                        levels = 3 #1
+                    }
+                }
                 reserves = 1
                 activate_production_methods = { "pm_wooden_buildings" }
             }
             create_building = {
                 building = "building_iron_mine"
-                level = 3 #1
+                add_ownership = {
+                    country = {
+                        country = "c:MEX"
+                        levels = 3 #1
+                    }
+                }
                 reserves = 1
                 activate_production_methods = { "pm_picks_and_shovels_building_iron_mine" }
             }
@@ -224,7 +349,12 @@
         region_state:MEX = {
             create_building = {
                 building = "building_gold_mine"
-                level = 4 #3
+                add_ownership = {
+                    country = {
+                        country = "c:MEX"
+                        levels = 4 #3
+                    }
+                }
                 reserves = 1
                 activate_production_methods = { "pm_picks_and_shovels_building_gold_mine" }
             }
@@ -234,13 +364,23 @@
         region_state:MEX = {
             create_building = {
                 building = "building_tooling_workshops"
-                level = 1
+                add_ownership = {
+                    country = {
+                        country = "c:MEX"
+                        levels = 1
+                    }
+                }
                 reserves = 1
                 activate_production_methods = { "pm_crude_tools" }
             }
             create_building = {
                 building = "building_arms_industry"
-                level = 1
+                add_ownership = {
+                    country = {
+                        country = "c:MEX"
+                        levels = 1
+                    }
+                }
                 reserves = 1
                 activate_production_methods = { "pm_muskets" }
             }

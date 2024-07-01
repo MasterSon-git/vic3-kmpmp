@@ -1,22 +1,4 @@
-﻿pm_government_run = {
-	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
-	
-	unlocking_laws = {
-		law_agrarianism #kmpmp
-		law_collectivized_agriculture
-	}
-	
-	building_modifiers = {
-		level_scaled = {
-			building_employment_bureaucrats_add = 150
-		}
-		unscaled = {
-			building_government_shares_add = 1
-		}
-	}
-}
-
-pm_electric_fencing = {
+﻿pm_electric_fencing = {
 	texture = "gfx/interface/icons/production_method_icons/electric_fencing.dds"	
 	unlocking_technologies = {
 		electrical_generation	
@@ -33,10 +15,6 @@ pm_electric_fencing = {
 	}
 
 	#required_input_goods = electricity
-}
-
-pm_unrefrigerated = {
-	texture = "gfx/interface/icons/production_method_icons/no_refrigeration.dds"
 }
 
 pm_refrigerated_storage_building_livestock_ranch = {

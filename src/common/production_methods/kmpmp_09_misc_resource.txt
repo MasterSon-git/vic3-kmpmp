@@ -16,6 +16,7 @@
 
 		level_scaled = {
 			# employment
+			building_employment_shopkeepers_add = 500
 			building_employment_laborers_add = 3000
 			building_employment_machinists_add = 1000
 			building_employment_engineers_add = 500
@@ -23,24 +24,6 @@
 	}
 
 	#required_input_goods = electricity
-}
-
-pm_government_run_building_logging_camp = {
-	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
-
-	unlocking_laws = {
-		law_command_economy
-		law_industry_banned #kmpmp
-	}
-	
-	building_modifiers = {
-		level_scaled = {
-			building_employment_bureaucrats_add = 150
-		}
-		unscaled = {
-			building_government_shares_add = 1
-		}
-	}
 }
 
 pm_refrigerated_storage_building_fishing_wharf = {
@@ -211,6 +194,7 @@ pm_steam_derricks = {
 		}
 
 		level_scaled = {
+			building_employment_shopkeepers_add = 500
 			building_employment_laborers_add = 3000
 			building_employment_machinists_add = 1000
 			building_employment_engineers_add = 500
@@ -241,9 +225,10 @@ pm_combustion_derricks = {
 		}
 
 		level_scaled = {
+			building_employment_shopkeepers_add = 500
 			building_employment_laborers_add = 2000
-			building_employment_machinists_add = 2000
-			building_employment_engineers_add = 900
+			building_employment_machinists_add = 1500
+			building_employment_engineers_add = 1000
 		}
 	}
 }

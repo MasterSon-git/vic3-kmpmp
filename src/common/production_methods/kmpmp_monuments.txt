@@ -1,6 +1,8 @@
 ﻿pm_default_building_mosque_of_djenne = {
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 
+	is_hidden_when_unavailable = yes
+
 	country_modifiers = {
 		workforce_scaled = {
 			interest_group_ig_devout_pol_str_mult = 0.1
@@ -9,8 +11,7 @@
 
 	state_modifiers = {
 		workforce_scaled = {
-			#state_education_access_add = 0.2
-            state_education_access_add = 0.08
+            state_education_access_add = 0.08 #0.2
 		}
 	}
 

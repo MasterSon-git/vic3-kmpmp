@@ -4,7 +4,6 @@
 	
 	modifier = {
 		country_prestige_mult = 0.15
-		#kmpmp
-		state_aristocrats_investment_pool_efficiency_mult = 0.15
+		state_aristocrats_investment_pool_efficiency_mult = 0.15 #kmpmp
 	}
 }

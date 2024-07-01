@@ -30,7 +30,7 @@
 			owns_entire_state_region = STATE_ZEALAND
 			OR = {
 				AND = {
-					owns_entire_state_region = STATE_SOUTHERN_FINLAND
+					owns_entire_state_region = STATE_UUSIMAA
 					owns_entire_state_region = STATE_ALAND
 					owns_entire_state_region = STATE_OSTROBOTHNIA
 				}

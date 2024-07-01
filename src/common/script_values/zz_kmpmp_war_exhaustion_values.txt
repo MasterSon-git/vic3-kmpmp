@@ -110,6 +110,22 @@ war_exhaustion = {
 			desc = "WAR_EXHAUSTION_FROM_TURMOIL"
 		}
 	}
+
+	if = {
+		limit = { war_exhaustion_from_lobby_clout >= 0.01 }
+		add = {
+			add = war_exhaustion_from_lobby_clout
+			desc = "WAR_OPPOSITION_FROM_LOBBIES"
+		}
+	}	
+	
+	if = {
+		limit = { war_support_from_lobby_clout <= -0.01 }
+		add = {
+			add = war_support_from_lobby_clout
+			desc = "WAR_SUPPORT_FROM_LOBBIES"
+		}
+	}
 	
 	add = {
 		add = "additional_war_exhaustion(scope:war.diplomatic_play)"

@@ -1,0 +1,56 @@
+﻿# Building modifiers
+state_FAE_building_forts_max_level_add = {
+    color = good
+    percent = no
+    decimals = 0
+    game_data = {
+        ai_value = 0
+    }
+}
+
+building_soldiers_mortality_mult = {
+    color = bad
+    percent = yes
+    decimals = 1
+    game_data = {
+        ai_value = 0
+    }
+}
+
+building_officers_mortality_mult = {
+    color = bad
+    percent = yes
+    decimals = 1
+    game_data = {
+        ai_value = 0
+    }
+}
+
+# Battle condition modifiers
+character_FAE_battle_condition_attacker_fort_breached_mult = {
+    color = good
+    percent = yes
+    decimals = 0
+    game_data = {
+        ai_value = 0
+    }
+}
+
+# Custom modifiers
+unit_FAE_siege_add = { # Mainly for aesthetic purposes
+    color = good
+    percent = no
+    decimals = 0
+    game_data = {
+        ai_value = 1000
+    }
+}
+
+unit_FAE_entrenchment_add = { # Actually sorta functional
+    color = good
+    percent = no
+    decimals = 0
+    game_data = {
+        ai_value = 1000
+    }
+}

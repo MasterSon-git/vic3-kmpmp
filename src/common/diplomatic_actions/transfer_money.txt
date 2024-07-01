@@ -1,4 +1,8 @@
 ﻿transfer_money = {
+	groups = {
+        general
+    }
+
 	requires_approval = no
 	
 	potential = { }

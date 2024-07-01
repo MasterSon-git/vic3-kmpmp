@@ -1,5 +1,6 @@
 ﻿l_german:
  institution_qwf_conscription:0 "Landesverteidigung"
  institution_qwf_conscription_desc:0 "Die Verteidigungsinstitutionen des Landes, die für den Schutz des nationalen Territoriums verantwortlich sind"
- modifier_country_institution_qwf_conscription_max_investment_add:0 "Max $institution_qwf_conscription$ [concept_institution] Investition"
- modifier_country_institution_qwf_conscription_max_investment_add_desc:0 "Ein Bonus oder Malus auf die maximale Investitionshöhe der $institution_qwf_conscription$ [concept_institution]"
+
+ country_institution_qwf_conscription_max_investment_add:0 "Max $institution_qwf_conscription$ [concept_institution] Investition"
+ country_institution_qwf_conscription_max_investment_add_desc:0 "Ein Bonus oder Malus auf die maximale Investitionshöhe der $institution_qwf_conscription$ [concept_institution]"

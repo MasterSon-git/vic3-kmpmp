@@ -21,7 +21,7 @@
         is_junior_in_customs_union = no
     }
 
-    on_complete = {
+    on_complete = { # do we need to re add this je?
         if = {
             limit = {
                 has_modifier = kmpmp_grow_some_balls

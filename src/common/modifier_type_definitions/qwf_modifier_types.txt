@@ -1,0 +1,8 @@
+﻿country_institution_qwf_conscription_max_investment_add = {
+	color = good
+	percent = no
+	decimals = 0
+	game_data = {
+		ai_value = 0
+	}
+}

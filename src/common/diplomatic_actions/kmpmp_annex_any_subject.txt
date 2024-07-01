@@ -1,4 +1,7 @@
 ﻿kmpmp_annex_any_subject = {
+    groups = {
+        overlord
+    }
     is_hostile = yes
     show_effect_in_tooltip = yes
 
@@ -8,6 +11,7 @@
         scope:target_country = {
             NOT = { is_country_type = decentralized }
             is_direct_subject_of = root
+            liberty_desire < 25
             OR = {
                 has_diplomatic_pact = { who = root type = protectorate }
                 has_diplomatic_pact = { who = root type = dominion }

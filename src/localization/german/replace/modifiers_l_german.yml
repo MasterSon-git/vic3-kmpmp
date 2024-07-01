@@ -1,3 +1,3 @@
 ﻿l_german:
- modifier_unit_mobilization_speed_mult_desc: "Wie schnell [Concept('concept_battalion','$concept_battalions$')] [Concept('concept_mobilize_battalion','$concept_mobilize_battalion_mobilize$')|l]"
+ unit_mobilization_speed_mult_desc: "Wie schnell [Concept('concept_battalion','$concept_battalions$')] [Concept('concept_mobilize_battalion','$concept_mobilize_battalion_mobilize$')|l]"
  

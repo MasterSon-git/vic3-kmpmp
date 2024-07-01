@@ -1,5 +1,0 @@
-﻿l_german:
- AI_WILL_ACCEPT: "@green_checkmark! [DiplomaticAction.GetSecondCountry.GetAltName('NOM')|U] würde das akzeptieren"
- AI_WILL_ACCEPT_WITH_OWE_OBLIGATION: "@green_checkmark! [DiplomaticAction.GetSecondCountry.GetAltName('NOM')|U] würde akzeptieren, wenn wir dafür eine [concept_obligation] schulden"
- AI_WILL_ACCEPT_WITH_CALL_IN_OBLIGATION: "@green_checkmark! [DiplomaticAction.GetSecondCountry.GetAltName('NOM')|U] würde akzeptieren, wenn wir die [concept_obligation] einfordern, die man uns schuldet"
- AI_WILL_NOT_ACCEPT: "@red_cross! [DiplomaticAction.GetSecondCountry.GetAltName('NOM')|U] würde das #bold #n NICHT#!#! akzeptieren"

@@ -1,17 +1,14 @@
 ﻿l_english:
- modifier_goods_input_coffee_add:0 "@coffee! Coffee input per level"
- modifier_goods_input_coffee_add_desc:0 "The amount of @coffee! Coffee consumed by buildings"
- modifier_goods_input_tea_add:0 "@tea! Tea input per level"
- modifier_goods_input_tea_add_desc:0 "The amount of @tea! Tea consumed by buildings"
+ goods_input_coffee_add:0 "@coffee! Coffee input per level"
+ goods_input_coffee_add_desc:0 "The amount of @coffee! Coffee consumed by buildings"
+ goods_input_tea_add:0 "@tea! Tea input per level"
+ goods_input_tea_add_desc:0 "The amount of @tea! Tea consumed by buildings"
 
- modifier_building_input_ironclads_mult:0 "@ironclads! $ironclads$ $concept_input_mult$"
- modifier_building_input_ironclads_mult_desc:0 "$concept_input_mult$"
+ goods_input_ironclads_mult:0 "@ironclads! $ironclads$ $concept_input_mult$"
+ goods_input_ironclads_mult_desc:0 "$concept_input_mult$"
 
- modifier_state_building_military_command_center_max_level_add:0 "$building_military_command_center$ Max Level"
- modifier_state_building_military_command_center_max_level_add_desc:0 "A bonus or penalty to the maximum level of $building_military_command_center$ buildings."
+ state_unincorporated_education_access_add:0 "Education Access in [Concept('concept_unincorporated_state','$concept_unincorporated_states$')]"
+ state_unincorporated_education_access_add_desc:0 "A bonus or penalty to education access for pops in [Concept('concept_unincorporated_state','$concept_unincorporated_states$')]"
 
- modifier_state_unincorporated_education_access_add:0 "Education Access in [Concept('concept_unincorporated_state','$concept_unincorporated_states$')]"
- modifier_state_unincorporated_education_access_add_desc:0 "A bonus or penalty to education access for pops in [Concept('concept_unincorporated_state','$concept_unincorporated_states$')]"
-
- modifier_unit_combat_unit_type_light_tanks_offense_mult:0 "$combat_unit_type_light_tanks$ $modifier_unit_offense_mult$"
- modifier_unit_combat_unit_type_light_tanks_offense_mult_desc:0 "$combat_unit_type_light_tanks$ $modifier_unit_offense_mult$"
+ unit_combat_unit_type_light_tanks_offense_mult:0 "$combat_unit_type_light_tanks$ $unit_offense_mult$"
+ unit_combat_unit_type_light_tanks_offense_mult_desc:0 "$combat_unit_type_light_tanks$ $unit_offense_mult$"
