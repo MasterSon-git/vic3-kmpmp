@@ -185,8 +185,8 @@ types topbar_components
 			}
 			#Radicals
 			flowcontainer = {
-				minimumsize = { 72 30 }
-				maximumsize = { 72 30 }
+				minimumsize = { 80 30 }
+				maximumsize = { 80 30 }
 				spacing = 2
 				using = radicals_tooltip_with_graph
 				using = tooltip_below
@@ -211,8 +211,8 @@ types topbar_components
 			}
 			#Loyalists
 			flowcontainer = {
-				minimumsize = { 72 30 }
-				maximumsize = { 72 30 }
+				minimumsize = { 80 30 }
+				maximumsize = { 80 30 }
 				spacing = 2
 				using = loyalists_tooltip_with_graph
 				using = tooltip_below
@@ -312,8 +312,8 @@ types topbar_components
 				}
 				#Infamy
 				flowcontainer = {
-					minimumsize = { 62 30 }
-					maximumsize = { 62 30 }
+					minimumsize = { 75 30 }
+					maximumsize = { 75 30 }
 					spacing = 2
 					tooltip = "[Country.GetInfamyDesc]"
 					using = tooltip_below
@@ -341,8 +341,8 @@ types topbar_components
 					button = {
 						#using = glow_button	
 						name = "legitimacy"
-						minimumsize = { 75 28 }
-						maximumsize = { 75 28 }
+						minimumsize = { 80 28 }
+						maximumsize = { 80 28 }
 						#spacing = 2
 						datacontext = "[Country.GetGovernmentLegitimacyLevel]"
 						tooltip = "Top-ToolTip_LEGITIMACY_LEVEL_ACTIVE_TOOLTIP"
@@ -370,8 +370,8 @@ types topbar_components
 				flowcontainer = {
 					button = {
 						name = "Unemployed"
-						minimumsize = { 75 28 }
-						maximumsize = { 75 28 }
+						minimumsize = { 85 28 }
+						maximumsize = { 85 28 }
 						#spacing = 2
 						tooltip = "[concept_unemployed]"
 						using = tooltip_below
@@ -397,8 +397,8 @@ types topbar_components
 				flowcontainer = {
 					button = {
 						name = "Unemployed"
-						minimumsize = { 75 28 }
-						maximumsize = { 75 28 }
+						minimumsize = { 85 28 }
+						maximumsize = { 85 28 }
 						#spacing = 2
 						tooltip = "[GetPopType('peasants').GetName]"
 						using = tooltip_below
@@ -430,8 +430,7 @@ types topbar_components
 			using = hud_visibility
 			datacontext = "[AccessMetaPlayer.AccessPlayedOrObservedCountry]"
 			using = clickthrough_blocker
-			# size = { 705 80 }
-			size = { 705 100 }
+			size = { 705 80 }
 			allow_outside = yes
 			resizeparent = yes
 
@@ -780,7 +779,7 @@ types topbar_components
 									}
 								}
 							}
-							
+
 						}
 
 						#shows only on hover
