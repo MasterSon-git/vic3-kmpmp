@@ -75,6 +75,10 @@
     }
 
     ai = {
+        evaluation_chance = {
+            value = 0.0
+        }
+
         will_propose = { 
             always = no
         }

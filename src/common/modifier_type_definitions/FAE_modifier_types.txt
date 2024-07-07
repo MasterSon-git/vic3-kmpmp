@@ -23,6 +23,16 @@ building_input_ammunition_mult = {
     percent = yes
 }
 
+building_soldiers_mortality_mult = {
+    color = bad
+    percent = yes
+}
+
+building_officers_mortality_mult = {
+    color = bad
+    percent = yes
+}
+
 # Battle condition modifiers
 character_fae_battle_condition_attacker_fort_breached_mult = {
     color = good
