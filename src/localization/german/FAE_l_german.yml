@@ -7,7 +7,7 @@
     FAE_battle_condition_defender_fort_breached_desc: "Der Feind hat einige der Befestigungen dieses Kommandanten durchbrochen."
     
     # Buildings
-    FAE_building_forts: "Festungsanlagen"
+    fae_building_forts: "Festungsanlagen"
     
     # Character Traits
     FAE_trait_combat_engineer_1: "Pionier"
@@ -18,18 +18,26 @@
     FAE_trait_combat_engineer_2_desc: "Dieser Kommandeur ist ein Experte für den Einsatz von Pionieren."
     FAE_trait_combat_engineer_3_desc: "Dieser Kommandeur hat den Einsatz von Pionieren Gemeistert."
     
-    # Modifiers I (modifier_types)
-    state_FAE_building_forts_max_level_add:      "$FAE_building_forts$-Maximalstufe"
-    state_FAE_building_forts_max_level_add_desc: "Ein Bonus oder Abzug auf die maximale Stufe von $FAE_building_forts$-Gebäuden."
+    # Modifiers I (types)
+    state_fae_building_forts_max_level_add:      "$fae_building_forts$-Maximalstufe"
+    state_fae_building_forts_max_level_add_desc: "Ein Bonus oder Abzug auf die maximale Stufe von $fae_building_forts$-Gebäuden."
+
+    building_input_small_arms_mult: "@small_arms! $small_arms$ $concept_input_mult$"
+    building_input_artillery_mult:  "@artillery! $artillery$ $concept_input_mult$"
+    building_input_ammunition_mult: "@ammunition! $ammunition$ $concept_input_mult$"
     
-    character_FAE_battle_condition_attacker_fort_breached_mult:      "[GetBattleCondition('FAE_battle_condition_attacker_fort_breached').GetName]$character_battle_condition_suffix$"
-    character_FAE_battle_condition_attacker_fort_breached_mult_desc: "$character_battle_condition_desc_prefix$[GetBattleCondition('FAE_battle_condition_attacker_fort_breached').GetName]$character_battle_condition_desc_suffix$"
+    building_input_small_arms_mult_desc: "$concept_input_mult_desc$"
+    building_input_artillery_mult_desc:  "$concept_input_mult_desc$"
+    building_input_ammunition_mult_desc: "$concept_input_mult_desc$"
     
-    unit_FAE_siege_add:      "[concept_FAE_siege]"
-    unit_FAE_siege_add_desc: "Die gesamte [concept_FAE_siege], die für jede [concept_unit] hinzugefügt wird, die an einer [concept_battle] teilnimmt"
+    character_fae_battle_condition_attacker_fort_breached_mult:      "[GetBattleCondition('FAE_battle_condition_attacker_fort_breached').GetName]$character_battle_condition_suffix$"
+    character_fae_battle_condition_attacker_fort_breached_mult_desc: "$character_battle_condition_desc_prefix$[GetBattleCondition('FAE_battle_condition_attacker_fort_breached').GetName]$character_battle_condition_desc_suffix$"
     
-    unit_FAE_entrenchment_add:      "[concept_FAE_entrenchment]"
-    unit_FAE_entrenchment_add_desc:    "Die gesamte [concept_FAE_entrenchment], die für jede [concept_unit] hinzugefügt wird, die an einer [concept_battle] teilnimmt"
+    unit_fae_siege_add:      "[concept_FAE_siege]"
+    unit_fae_siege_add_desc: "Die gesamte [concept_FAE_siege], die für jede [concept_unit] hinzugefügt wird, die an einer [concept_battle] teilnimmt"
+    
+    unit_fae_entrenchment_add:      "[concept_FAE_entrenchment]"
+    unit_fae_entrenchment_add_desc:    "Die gesamte [concept_FAE_entrenchment], die für jede [concept_unit] hinzugefügt wird, die an einer [concept_battle] teilnimmt"
 
     # Modifiers II (modifiers)
     FAE_md_fort_reconstruction: "Fort Bau"
@@ -92,7 +100,7 @@
     
     FAE_txt_siege:    "[concept_FAE_siege]"
     FAE_txt_entrench: "[concept_FAE_entrenchment]"
-    FAE_txt_forts:    "[GetBuildingType('FAE_building_forts').GetName]"
+    FAE_txt_forts:    "[GetBuildingType('fae_building_forts').GetName]"
     
     FAE_txt_battles: "Zu Beginn jeder [concept_battle], die in einem [concept_state] mit einem $FAE_txt_forts$-[concept_building] stattfindet, wird der Gesamtwert von $FAE_txt_siege$ und $FAE_txt_entrench$ aus der Anzahl von [Concept('concept_unit', '$concept_units$')] im Kampf auf der angreifenden bzw. verteidigenden Seite berechnet."
     
