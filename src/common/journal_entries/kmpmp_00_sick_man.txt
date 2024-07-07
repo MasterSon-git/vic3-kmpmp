@@ -23,7 +23,7 @@
 		}
 	}
 
-	timeout = 7300
+	timeout = 10950 #kmpmp 7300
 
 	on_timeout = {
 		remove_modifier = sick_man_of_europe
