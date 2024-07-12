@@ -37,7 +37,7 @@
             has_truce_with = scope:target_country
         }
         scope:target_country = {
-            liberty_desire < 25
+            liberty_desire < define:NDiplomacy|WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_THRESHOLD
         }
     }
 
