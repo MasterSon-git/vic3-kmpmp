@@ -2,5 +2,5 @@
 
 zoroastrian = {
 	texture = "gfx/interface/icons/religion_icons/zoroastrian.dds"
-	color { 221 188 19 }
+	color = { 221 188 19 }
 }

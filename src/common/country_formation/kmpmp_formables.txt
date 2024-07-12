@@ -12,6 +12,11 @@
 		STATE_SISTAN
 		STATE_AZERBAIJAN
 		STATE_BAGHDAD
+		STATE_KERMAN
+		STATE_SEMNAN
+		STATE_HERAT
+		STATE_MERZ
+		STATE_TURKMENIA
 	}
 
 	required_states_fraction = 1
@@ -29,6 +34,7 @@
 			state_region_owned_and_incorporated = { STATE_REGION = STATE_ERZURUM }
 			state_region_owned_and_incorporated = { STATE_REGION = STATE_DEIR_EZ_ZOR }
 			state_region_owned_and_incorporated = { STATE_REGION = STATE_MOSUL }
+			state_region_owned_and_incorporated = { STATE_REGION = STATE_ELIZAVETPOL }
 		}
 	}
 }

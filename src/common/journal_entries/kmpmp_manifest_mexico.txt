@@ -45,10 +45,7 @@
                 }
             }
             has_subject_relation_with = c:USA
-            has_diplomatic_pact = { 
-                who = c:USA
-                type = customs_union
-            }
+            is_in_customs_union_with = c:USA
         }
     }
 
@@ -82,10 +79,7 @@ kmpmp_je_manifest_mexico_fail = {
         }
         NOT = {
             has_subject_relation_with = c:USA
-            has_diplomatic_pact = { 
-                who = c:USA
-                type = customs_union
-            }
+            is_in_customs_union_with = c:USA
         }
     }
 

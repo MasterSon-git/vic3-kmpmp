@@ -137,12 +137,40 @@ kmpmp_sv_infamy_war_goal = {
         }
     }
 
+    # no longer available in 1.7
+    # if = {
+    #     limit = {
+    #         scope:target_country = {
+    #             is_subject_of = ROOT
+    #         }
+    #     }
+    #     multiply = define:NDiplomacy|WAR_GOAL_INFAMY_OWN_SUBJECT_MULT
+    # }
+
     if = {
         limit = {
             scope:target_country = {
                 is_subject_of = ROOT
             }
         }
-        multiply = define:NDiplomacy|WAR_GOAL_INFAMY_OWN_SUBJECT_MULT
+        if = { # TODO: check this - is this rebelling?
+            limit = {
+                scope:target_country = {
+                    has_attitude = {
+						who = overlord
+						attitude = rebellious
+					}
+                }
+            }
+            multiply = define:NDiplomacy|WAR_GOAL_INFAMY_REBELLING_SUBJECT_MULT
+        }
+        else_if = {
+            limit = {
+                scope:target_country = {
+                    liberty_desire < define:NDiplomacy|WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_THRESHOLD
+                }
+            }
+            multiply = define:NDiplomacy|WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_SUBJECT_MULT
+        }
     }
 }

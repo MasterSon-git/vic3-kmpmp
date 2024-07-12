@@ -23,12 +23,19 @@
 		}
 	}
 
-	timeout = 7300
+	timeout = 10950 #kmpmp 7300
 
 	on_timeout = {
 		remove_modifier = sick_man_of_europe
 		trigger_event = {
 			id = sick_man.3
+		}
+		if = {
+			limit = {
+				is_in_power_bloc = yes
+				is_power_bloc_leader = yes				
+			}
+			custom_tooltip = sick_man_of_europe_lose_power_bloc
 		}
 	}
 
@@ -43,6 +50,7 @@
 	progressbar = yes
 
 	weight = 10000
+
 	should_be_pinned_by_default = yes
 }
 
@@ -255,6 +263,8 @@ je_sick_man_education = {
 	transferable = no
 
 	weight = 5000
+
+	should_be_pinned_by_default = yes
 
 	progressbar = yes
 }

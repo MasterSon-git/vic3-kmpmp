@@ -17,10 +17,6 @@
 			building_employment_clerks_add = 3000
 			building_employment_shopkeepers_add = 1000
 		}
-
-		unscaled = {
-			building_shopkeepers_shares_add = 10
-		}
 	}
 
 	#required_input_goods = electricity

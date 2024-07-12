@@ -77,8 +77,8 @@ decree_promote_social_mobility = {
 	modifier = {
 		state_education_access_add = 0.25
 		state_pop_qualifications_mult = 0.25
-        building_university_throughput_add = 0.1
-        building_arts_academy_throughput_add = 0.1
+        building_university_throughput_add = 0.1 #kmpmp #check this, maybe we need to add this to static_modifiers
+        building_arts_academy_throughput_add = 0.1 #kmpmp #check this, maybe we need to add this to static_modifiers
 	}
 	cost = 100
 	
@@ -143,7 +143,7 @@ decree_promote_national_values = {
 	modifier = {
 		state_assimilation_mult = 1.25 #1
 		state_conversion_mult = 1.25 #1
-        state_loyalists_from_sol_change_mult = 0.25
+        state_loyalists_from_sol_change_mult = 0.25 #kmpmp
 	}
 	cost = 100
 	
@@ -220,7 +220,7 @@ decree_encourage_manufacturing_industry = {
 	modifier = {
 		building_group_bg_manufacturing_throughput_add = 0.25 #0.2
 		#building_group_bg_service_throughput_add = 0.2
-        state_construction_mult = 0.05
+        state_construction_mult = 0.05 #kmpmp
 	}
 	cost = 100
 	
@@ -274,7 +274,6 @@ decree_greener_grass_campaign = {
 	modifier = {
 		state_migration_pull_add = 20
 		state_migration_pull_mult = 0.25
-		#state_migration_pull_mult = 0.75 #0.5 # kmpmp
 		state_standard_of_living_add = 1 # kmpmp
 	}
 	unlocking_technologies = { 

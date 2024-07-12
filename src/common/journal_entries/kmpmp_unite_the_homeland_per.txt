@@ -6,44 +6,32 @@
 	}
 
 	complete = {
-		owns_or_has_subject_entire_state_region = { STATE_REGION = s:STATE_IRAKAJEMI }
-		owns_or_has_subject_entire_state_region = { STATE_REGION = s:STATE_ISFAHAN }
-		owns_or_has_subject_entire_state_region = { STATE_REGION = s:STATE_MAZANDARAN }
-		owns_or_has_subject_entire_state_region = { STATE_REGION = s:STATE_KHORASAN }
-		owns_or_has_subject_entire_state_region = { STATE_REGION = s:STATE_TABRIZ }
-		owns_or_has_subject_entire_state_region = { STATE_REGION = s:STATE_LURISTAN }
-		owns_or_has_subject_entire_state_region = { STATE_REGION = s:STATE_KHUZESTAN }
-		owns_or_has_subject_entire_state_region = { STATE_REGION = s:STATE_FARS }
-		owns_or_has_subject_entire_state_region = { STATE_REGION = s:STATE_LARISTAN }
-		owns_or_has_subject_entire_state_region = { STATE_REGION = s:STATE_SISTAN }
-		owns_or_has_subject_entire_state_region = { STATE_REGION = s:STATE_PASHTUNISTAN }
-		owns_or_has_subject_entire_state_region = { STATE_REGION = s:STATE_WESTERN_AFGHANISTAN }
-		owns_or_has_subject_entire_state_region = { STATE_REGION = s:STATE_EASTERN_AFGHANISTAN }
-		owns_or_has_subject_entire_state_region = { STATE_REGION = s:STATE_BALUCHISTAN }
+		owns_or_has_subject_entire_state_region = { STATE_REGION = s:STATE_HERAT }
+		owns_or_has_subject_entire_state_region = { STATE_REGION = s:STATE_SISTAN } # Bampur
 	}
 
 	on_complete = {
-		if = {
+		every_subject_or_below = {
 			limit = {
-				exists = c:AFG
+				any_scope_state = {
+					region = sr:region_persia
+				}
 			}
-			annex = c:AFG
-		}
-		if = {
-			limit = {
-				exists = c:MAK
+			ROOT = {
+				annex = PREV
 			}
-			annex = c:MAK
-		}
-		if = {
-			limit = {
-				exists = c:KAL
-			}
-			annex = c:KAL
 		}
 		trigger_event = {
 			id = kmpmp_ev_persia.1
 			popup = yes
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_PASHTUNISTAN }
+			}
+			s:STATE_PASHTUNISTAN = {
+				add_claim = ROOT
+			}
 		}
 		if = {
 			limit = {
@@ -74,6 +62,14 @@
 				NOT = { owns_entire_state_region = STATE_TURKMENIA }
 			}
 			s:STATE_TURKMENIA = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_MERZ }
+			}
+			s:STATE_MERZ = {
 				add_claim = ROOT
 			}
 		}

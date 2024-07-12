@@ -1,3 +1,2 @@
 ﻿l_german:
- AGGRESSIVE_DIPLOMATIC_PLAYS_BLOCKED: "Aggressive [Concept('concept_diplomatic_play','$concept_diplomatic_plays$')] sind blockiert wegen:\n$DETAILS$"
  war_goal_open_market_desc: "[WAR_GOAL.GetHolder.GetAltName('AKK')|U] zwingt [WAR_GOAL.GetTarget.GetName] einen [concept_open_market] auf."

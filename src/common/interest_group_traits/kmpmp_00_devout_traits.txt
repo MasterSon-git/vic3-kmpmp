@@ -3,8 +3,8 @@
 	min_approval = loyal
 	
 	modifier = {
-		state_radicals_from_sol_change_mult = 0.15 #0.5
-		state_birth_rate_mult = 0.01
+		state_radicals_from_sol_change_mult = -0.15
+		state_birth_rate_mult = 0.01 #kmpmp
 	}
 }
 
@@ -13,7 +13,7 @@ ig_trait_da_wat = {
 	min_approval = loyal
 	
 	modifier = {
-		state_conversion_mult = 0.5
-		state_education_access_add = 0.05
+		state_conversion_mult = 0.2
+		state_education_access_add = 0.05 #kmpmp
 	}
 }

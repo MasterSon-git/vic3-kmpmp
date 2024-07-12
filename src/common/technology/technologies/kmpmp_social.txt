@@ -89,8 +89,9 @@ psychiatry = {
 	
 	modifier = {
 		country_influence_mult = 0.1
+		country_diplomatic_play_maneuvers_add = 10
 		state_bureaucracy_population_base_cost_factor_mult = -0.05
-        country_infamy_decay_mult = 0.03
+        country_infamy_decay_mult = 0.03 #kmpmp
 	}
 	
 	unlocking_technologies = {
@@ -111,8 +112,8 @@ nationalism = {
 	
 	modifier = {
 		country_authority_mult = 0.1
-        country_infamy_generation_mult = -0.03
-        country_max_declared_interests_add = 1
+        country_infamy_generation_mult = -0.03 #kmpmp
+        country_max_declared_interests_add = 1 #kmpmp
 	}
 	
 	unlocking_technologies = {
@@ -184,276 +185,6 @@ steel_frame_buildings = {
 	}
 }
 
-pan-nationalism = {
-	# Permits for the formation of a number of pan-nationalist countries
-	# Permits the Unify Germany and Unify Italy Diplomatic Plays
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/pan_nationalism.dds"
-	category = society
-	
-	modifier = {
-		country_authority_mult = 0.1
-        country_infamy_generation_mult = -0.03
-        country_max_declared_interests_add = 2
-	}
-	
-	unlocking_technologies = {
-		nationalism
-	}
-	
-	ai_weight = {
-		value = 2 # Important in general
-		
-		# Extra-important for major unifications
-		if = {
-			limit = { 
-				OR = {
-					country_has_primary_culture = cu:north_german
-					country_has_primary_culture = cu:south_german
-					country_has_primary_culture = cu:north_italian
-					country_has_primary_culture = cu:south_italian
-				}				
-			}
-			add = 2
-		}	
-	}
-}
-
-philosophical_pragmatism = {
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/philosophical_pragmatism.dds"
-	category = society
-	
-	modifier = {
-		country_influence_mult = 0.1
-		state_bureaucracy_population_base_cost_factor_mult = -0.05
-        country_infamy_decay_mult = 0.03
-	}
-	
-	unlocking_technologies = {
-		psychiatry
-	}
-	
-	ai_weight = {
-		value = 1
-	}
-}
-
-psychoanalysis = {
-	# Should provide additional methods for dealing with negative psychological character traits
-	era = era_4
-	texture = "gfx/interface/icons/invention_icons/psychoanalysis.dds"
-	category = society
-	
-	modifier = {
-		country_influence_mult = 0.1
-		state_bureaucracy_population_base_cost_factor_mult = -0.05
-        country_infamy_decay_mult = 0.03
-		country_radicals_from_conquest_mult = -0.05 #kmpmp
-	}
-	
-	unlocking_technologies = {
-		philosophical_pragmatism
-	}
-	
-	ai_weight = {
-		value = 1
-	}
-}
-
-behaviorism = {
-	era = era_5
-	texture = "gfx/interface/icons/invention_icons/behaviorism.dds"
-	category = society
-	
-	modifier = {
-		country_influence_mult = 0.1
-		state_bureaucracy_population_base_cost_factor_mult = -0.05
-        country_infamy_decay_mult = 0.03
-	}
-	
-	unlocking_technologies = {
-		psychoanalysis
-	}
-	
-	ai_weight = {
-		value = 1
-	}
-}
-
-#mapi changes
-identification_documents = {
-	# Unlocks Identification Documents PM in Government Administrations
-	# Unlocks Closed Borders Law in Migration
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/identification_documents.dds"
-	category = society
-
-	modifier = {
-		state_tax_capacity_add = 25
-		country_institution_home_affairs_max_investment_add = 1
-		state_market_access_price_impact = 0.05
-	}
-	
-	unlocking_technologies = {
-		central_archives
-	}
-	
-	ai_weight = {
-		value = 1
-	}
-}
-
-elevator = {
-	# Unlocks Arcades PM in Urban Center
-	era = era_4
-	texture = "gfx/interface/icons/invention_icons/elevator.dds"
-	category = society
-	
-	modifier = {
-		state_infrastructure_from_population_add = 1
-		state_infrastructure_from_population_max_add = 20
-		state_building_construction_sector_max_level_add = 5
-		country_max_weekly_construction_progress_add = 5
-		market_land_trade_capacity_add = 100 #10
-	}	
-	
-	unlocking_technologies = {
-		steel_frame_buildings
-	}
-	
-	ai_weight = {
-		value = 1.5 # Important in general
-	}
-}
-
-corporatism = {
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/corporatism.dds"
-	category = society
-
-	on_researched = {
-		if = {
-			limit = {
-				NOT = { has_variable = corporatism_researched }
-			}
-			set_variable = corporatism_researched
-			ig:ig_devout = {
-				remove_ideology = ideology_pious
-				add_ideology = ideology_corporatist
-			}
-		}
-	}
-	
-	modifier = {
-		state_radicals_from_sol_change_accepted_culture_mult = -0.10
-		state_market_access_price_impact = 0.05
-	}
-	
-	unlocking_technologies = {
-		labor_movement
-		nationalism
-	}
-	
-	ai_weight = {
-		value = 1
-		
-		if = {
-			limit = { 
-				has_strategy = ai_strategy_egalitarian_agenda
-			}
-			add = -0.5
-		}	
-		if = {
-			limit = { 
-				OR = {
-					has_strategy = ai_strategy_conservative_agenda
-					has_strategy = ai_strategy_reactionary_agenda
-				}			
-			}
-			add = 1.5
-		}
-	}
-}
-
-central_planning = {
-	# Unlocks Command Economy - Economic System Law
-	# Unlocks Vertical Filing Cabinets PM in Government Administrations
-	era = era_4
-	texture = "gfx/interface/icons/invention_icons/central_planning.dds"
-	category = society
-	
-	modifier = {
-		state_tax_capacity_add = 25
-		# kmpmp
-		country_max_companies_add = 1
-	}
-	
-	unlocking_technologies = {
-		identification_documents
-	}
-	
-	ai_weight = {
-		value = 1.5 # Important in general
-	}
-}
-
-zeppelins = {
-	era = era_4
-	texture = "gfx/interface/icons/invention_icons/zeppelins.dds"
-	category = society
-	
-	modifier = {
-	}
-	
-	unlocking_technologies = {
-		steel_frame_buildings
-	}
-	
-	ai_weight = {
-		value = 1
-	}
-}
-
-macroeconomics = {
-	era = era_5
-	texture = "gfx/interface/icons/invention_icons/macroeconomics.dds"
-	category = society
-	
-	modifier = {
-		#country_max_companies_add = 1
-	}
-	
-	unlocking_technologies = {
-		international_exchange_standards
-		corporate_management
-	}
-	
-	ai_weight = {
-		value = 3 # very important tech
-	}
-}
-
-paved_roads = {
-	era = era_5
-	texture = "gfx/interface/icons/invention_icons/paved_roads.dds"
-	category = society
-	
-	modifier = {
-		state_infrastructure_from_automobiles_consumption_add = 0.25
-		market_land_trade_capacity_add = 200 #20
-		state_market_access_price_impact = 0.05 #kmpmp
-	}
-	
-	unlocking_technologies = {	
-		elevator
-	}
-	
-	ai_weight = {
-		value = 3 # Important for those nice-looking roads!
-	}
-}
-### Interest changes
 civilizing_mission = {
 	# Unlocks Panama Canal survey expedition decision
 	# Unlocks the Panama Canal
@@ -530,15 +261,228 @@ anarchism = {
 	}
 }
 
+corporatism = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/corporatism.dds"
+	category = society
+
+	on_researched = {
+		if = {
+			limit = {
+				NOT = { has_variable = corporatism_researched }
+			}
+			set_variable = corporatism_researched
+			ig:ig_devout = {
+				remove_ideology = ideology_pious
+				add_ideology = ideology_corporatist
+			}
+		}
+	}
+	
+	modifier = {
+		state_radicals_from_sol_change_accepted_culture_mult = -0.10
+		state_market_access_price_impact = 0.05 #kmpmp
+	}
+	
+	unlocking_technologies = {
+		labor_movement
+		nationalism
+	}
+	
+	ai_weight = {
+		value = 1
+		
+		if = {
+			limit = { 
+				has_strategy = ai_strategy_egalitarian_agenda
+			}
+			add = -0.5
+		}	
+		if = {
+			limit = { 
+				OR = {
+					has_strategy = ai_strategy_conservative_agenda
+					has_strategy = ai_strategy_reactionary_agenda
+				}			
+			}
+			add = 1.5
+		}
+	}
+}
+
+pan-nationalism = {
+	# Permits for the formation of a number of pan-nationalist countries
+	# Permits the Unify Germany and Unify Italy Diplomatic Plays
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/pan_nationalism.dds"
+	category = society
+	
+	modifier = {
+		country_authority_mult = 0.1
+        country_infamy_generation_mult = -0.03 #kmpmp
+        country_max_declared_interests_add = 2 #kmpmp
+	}
+	
+	unlocking_technologies = {
+		nationalism
+	}
+	
+	ai_weight = {
+		value = 2 # Important in general
+		
+		# Extra-important for major unifications
+		if = {
+			limit = { 
+				OR = {
+					country_has_primary_culture = cu:north_german
+					country_has_primary_culture = cu:south_german
+					country_has_primary_culture = cu:north_italian
+					country_has_primary_culture = cu:south_italian
+				}				
+			}
+			add = 2
+		}	
+	}
+}
+
+philosophical_pragmatism = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/philosophical_pragmatism.dds"
+	category = society
+	
+	modifier = {
+		country_influence_mult = 0.1
+		country_diplomatic_play_maneuvers_add = 10
+		state_bureaucracy_population_base_cost_factor_mult = -0.05
+        country_infamy_decay_mult = 0.03 #kmpmp
+	}
+	
+	unlocking_technologies = {
+		psychiatry
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+identification_documents = {
+	# Unlocks Identification Documents PM in Government Administrations
+	# Unlocks Closed Borders Law in Migration
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/identification_documents.dds"
+	category = society
+
+	modifier = {
+		state_tax_capacity_add = 25
+		country_institution_home_affairs_max_investment_add = 1
+		state_market_access_price_impact = 0.05 #kmpmp
+	}
+	
+	unlocking_technologies = {
+		central_archives
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+elevator = {
+	# Unlocks Arcades PM in Urban Center
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/elevator.dds"
+	category = society
+	
+	modifier = {
+		state_infrastructure_from_population_add = 1
+		state_infrastructure_from_population_max_add = 20
+		state_building_construction_sector_max_level_add = 5
+		country_max_weekly_construction_progress_add = 5
+		market_land_trade_capacity_add = 100 #10
+	}	
+	
+	unlocking_technologies = {
+		steel_frame_buildings
+	}
+	
+	ai_weight = {
+		value = 1.5 # Important in general
+	}
+}
+
+zeppelins = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/zeppelins.dds"
+	category = society
+	
+	modifier = {
+		# state_market_access_price_impact = 0.05
+	}
+	
+	unlocking_technologies = {
+		steel_frame_buildings
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+central_planning = {
+	# Unlocks Command Economy - Economic System Law
+	# Unlocks Vertical Filing Cabinets PM in Government Administrations
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/central_planning.dds"
+	category = society
+	
+	modifier = {
+		state_tax_capacity_add = 25
+		country_government_dividends_efficiency_add = 0.05
+		country_max_companies_add = 1 # kmpmp
+	}
+	
+	unlocking_technologies = {
+		identification_documents
+	}
+	
+	ai_weight = {
+		value = 1.5 # Important in general
+	}
+}
+
+psychoanalysis = {
+	# Should provide additional methods for dealing with negative psychological character traits
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/psychoanalysis.dds"
+	category = society
+	
+	modifier = {
+		country_influence_mult = 0.1
+		country_diplomatic_play_maneuvers_add = 10
+		state_bureaucracy_population_base_cost_factor_mult = -0.05
+        country_infamy_decay_mult = 0.03 #kmpmp
+		country_radicals_from_conquest_mult = -0.05 #kmpmp
+	}
+	
+	unlocking_technologies = {
+		philosophical_pragmatism
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
 multilateral_alliances = {
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/multilateral_alliances.dds"
 	category = society
 
 	modifier = {
-		country_diplomatic_play_maneuvers_add = 25
-		country_allow_multiple_alliances = yes
-		country_max_declared_interests_add = 4
+		country_infamy_generation_mult = -0.25
+		country_allow_multiple_alliances_bool = yes
+		country_max_declared_interests_add = 4 #kmpmp
 		country_radicals_from_conquest_mult = -0.05 #kmpmp
 	}
 
@@ -553,5 +497,66 @@ multilateral_alliances = {
 			limit = { country_rank >= rank_value:great_power }
 			add = 2
 		}
+	}
+}
+
+macroeconomics = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/macroeconomics.dds"
+	category = society
+	
+	modifier = {
+		# country_max_companies_add = 1
+		# state_market_access_price_impact = 0.05
+	}
+	
+	unlocking_technologies = {
+		international_exchange_standards
+		corporate_management
+	}
+	
+	ai_weight = {
+		value = 3 # very important tech
+	}
+}
+
+behaviorism = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/behaviorism.dds"
+	category = society
+	
+	modifier = {
+		country_influence_mult = 0.1
+		country_diplomatic_play_maneuvers_add = 10
+		state_bureaucracy_population_base_cost_factor_mult = -0.05
+        country_infamy_decay_mult = 0.03 #kmpmp
+	}
+	
+	unlocking_technologies = {
+		psychoanalysis
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+paved_roads = {
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/paved_roads.dds"
+	category = society
+	
+	modifier = {
+		state_infrastructure_from_automobiles_consumption_add = 0.25
+		market_land_trade_capacity_add = 200 #20
+		state_market_access_price_impact = 0.05 #kmpmp
+	}
+	
+	unlocking_technologies = {	
+		elevator
+	}
+	
+	ai_weight = {
+		value = 2 # Important for those nice-looking roads!
 	}
 }

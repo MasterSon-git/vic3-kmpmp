@@ -30,7 +30,8 @@ company_nederlandse_petroleum = {
 	
 	prosperity_modifier = {
 		state_colony_growth_speed_mult = 0.10
-		building_throughput_oil_mult = 0.10
+		# building_throughput_oil_mult = 0.10
+		building_throughput_oil_add = 0.10
 		building_railway_throughput_add = 0.10
 		building_sulfur_mine_throughput_add = 0.1
 	}	
@@ -129,8 +130,8 @@ company_ericsson = {
 	}
 	
 	prosperity_modifier = {
-		country_weekly_innovation_mult = 0.15
-		state_education_access_wealth_add = 0.01
+		country_weekly_innovation_mult = 0.15 #0.1
+		state_education_access_wealth_add = 0.01 #0.005
 	}	
 	
 	ai_weight = {
@@ -1431,7 +1432,7 @@ company_sunhwaguk = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_tobacco_plantation
-				level = 10
+				level >= 10
 			}
 		}
 		has_technology_researched = central_planning
@@ -1904,14 +1905,14 @@ company_nokia = {
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
-				state_region = s:STATE_SOUTHERN_FINLAND
+				state_region = s:STATE_UUSIMAA
 			}
 		}
 	}
 
 	possible = {
 		any_scope_state = {
-			state_region = s:STATE_SOUTHERN_FINLAND
+			state_region = s:STATE_UUSIMAA
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_paper_mills
