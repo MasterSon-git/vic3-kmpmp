@@ -50,6 +50,7 @@
 	progressbar = yes
 
 	weight = 10000
+
 	should_be_pinned_by_default = yes
 }
 
@@ -262,6 +263,8 @@ je_sick_man_education = {
 	transferable = no
 
 	weight = 5000
+
+	should_be_pinned_by_default = yes
 
 	progressbar = yes
 }
