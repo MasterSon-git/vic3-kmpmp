@@ -14,3 +14,7 @@ kmpmp_enemy_occupation_incorporated_states = {
     }
     divide = num_incorporated_states
 }
+kmpmp_gdp_per_capita = {
+    value = gdp
+    divide = total_population
+}
