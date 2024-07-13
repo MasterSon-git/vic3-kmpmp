@@ -206,7 +206,6 @@
         else = {
             custom_tooltip = { # TODO: check if this is shown without effect
                 text = kmpmp_no_loyalists_from_capitulate_to_revolution
-                has_variable = kmpmp_block_loyalists_from_resign
             }
         }
 
@@ -237,7 +236,6 @@
         else = {
             custom_tooltip = { # TODO: check if this is shown without effect
                 text = kmpmp_no_loyalists_from_capitulate_to_revolution
-                has_variable = kmpmp_block_loyalists_from_abdication
             }
         }
 

@@ -1,0 +1,31 @@
+﻿kmpmp_war_support_from_power_bloc_principles = {
+    value = 0.0
+    if = {
+        limit = {
+            power_bloc ?= { has_principle = principle:principle_defensive_cooperation_2 }
+        }
+        add = -0.5
+    }
+    else_if = {
+        limit = {
+            power_bloc ?= { has_principle = principle:principle_defensive_cooperation_3 }
+        }
+        add = -1.0
+    }
+
+    if = {
+        limit = {
+            power_bloc ?= { has_principle = principle:principle_aggressive_coordination_1 }
+        }
+        add = -0.75
+    }
+    else_if = {
+        limit = {
+            OR = {
+                power_bloc ?= { has_principle = principle:principle_aggressive_coordination_2 }
+                power_bloc ?= { has_principle = principle:principle_aggressive_coordination_3 }
+            }
+        }
+        add = -1.0
+    }
+}

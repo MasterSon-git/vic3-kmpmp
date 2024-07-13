@@ -1,4 +1,13 @@
-﻿goods_input_coffee_add = {
+﻿state_engineers_investment_pool_efficiency_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+goods_input_coffee_add = {
 	color = bad
 	percent = no
 	game_data = {

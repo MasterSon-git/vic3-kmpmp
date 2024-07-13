@@ -61,6 +61,14 @@ power_bloc_leverage_gain = {
             add = {
                 value = 100
                 desc = POWER_BLOC_LEVERAGE_GAIN_FROM_SHARED_RELIGION
+
+                # kmpmp
+                if = {
+                    limit = {
+                        power_bloc ?= { has_principle_group = principle_group:principle_group_sacred_civics }
+                    }
+                    multiply = 1.25
+                }
             }
         }
         
