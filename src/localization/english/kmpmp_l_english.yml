@@ -197,3 +197,8 @@
 
  kmpmp_get_recognized_by_tech_decision:0 "Technological Recognition"
  kmpmp_get_recognized_by_tech_decision_desc:0 "We have to prove ourselves in the field of science."
+
+ kmpmp_character_abdication_legitimacy:0 "Abdication"
+ kmpmp_character_resign_from_office_legitimacy:0 "Resign from office"
+ kmpmp_no_loyalists_from_capitulate_to_revolution:0 "No loyalists for 50 years"
+ 
