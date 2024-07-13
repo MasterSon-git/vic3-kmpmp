@@ -17,3 +17,13 @@ kmpmp_character_schooling_heir_ig_expenses = {
     #country_expenses_add = 1
     state_tax_waste_add = 0.02
 }
+
+kmpmp_character_abdication_legitimacy = {
+    icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+    country_legitimacy_base_add = -10
+}
+
+kmpmp_character_resign_from_office_legitimacy = {
+    icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+    country_legitimacy_base_add = -15
+}
