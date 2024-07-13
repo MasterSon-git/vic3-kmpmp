@@ -1,0 +1,1 @@
+﻿leverage_threshold_to_invite = 175 #200 	# Minimum leverage advantage from power bloc on country to be able to invite the country
