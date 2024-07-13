@@ -12,3 +12,18 @@
 
  unit_combat_unit_type_light_tanks_offense_mult:0 "$combat_unit_type_light_tanks$-$unit_offense_mult$"
  unit_combat_unit_type_light_tanks_offense_mult_desc:0 "$combat_unit_type_light_tanks$-$unit_offense_mult$"
+
+ country_institution_size_change_speed_institution_health_system_mult:0 "Tempo der Institutionsgrößenänderung für „[GetInstitutionType('institution_health_system').GetName]“"
+ country_institution_size_change_speed_institution_health_system_mult_desc:0 "Wie schnell man die Größe von „[GetInstitutionType('institution_health_system').GetName]“ ändern kann"
+ country_institution_cost_institution_health_system_mult:0 "@bur![concept_bureaucracy]-Kosten durch „[GetInstitutionType('institution_health_system').GetName]“"
+ country_institution_cost_institution_health_system_mult_desc:0 "Eine Erhöhung oder Verringerung der @bur![Nbsp][concept_bureaucracy]-Kosten, um den Bürgern „[GetInstitutionType('institution_health_system').GetName]“ zur Verfügung zu stellen"
+
+ country_institution_size_change_speed_institution_qwf_conscription_mult:0 "Tempo der Institutionsgrößenänderung für „[GetInstitutionType('institution_qwf_conscription').GetName]“"
+ country_institution_size_change_speed_institution_qwf_conscription_mult_desc:0 "Wie schnell man die Größe von „[GetInstitutionType('institution_qwf_conscription').GetName]“ ändern kann"
+ country_institution_cost_institution_qwf_conscription_mult:0 "@bur![concept_bureaucracy]-Kosten durch „[GetInstitutionType('institution_qwf_conscription').GetName]“"
+ country_institution_cost_institution_qwf_conscription_mult_desc:0 "Eine Erhöhung oder Verringerung der @bur![Nbsp][concept_bureaucracy]-Kosten, um den Bürgern „[GetInstitutionType('institution_qwf_conscription').GetName]“ zur Verfügung zu stellen"
+
+ country_institution_size_change_speed_institution_home_affairs_mult:0 "Tempo der Institutionsgrößenänderung für „[GetInstitutionType('institution_home_affairs').GetName]“"
+ country_institution_size_change_speed_institution_home_affairs_mult_desc:0 "Wie schnell man die Größe von „[GetInstitutionType('institution_home_affairs').GetName]“ ändern kann"
+ country_institution_cost_institution_home_affairs_mult:0 "@bur![concept_bureaucracy]-Kosten durch „[GetInstitutionType('institution_home_affairs').GetName]“"
+ country_institution_cost_institution_home_affairs_mult_desc:0 "Eine Erhöhung oder Verringerung der @bur![Nbsp][concept_bureaucracy]-Kosten, um den Bürgern „[GetInstitutionType('institution_home_affairs').GetName]“ zur Verfügung zu stellen"

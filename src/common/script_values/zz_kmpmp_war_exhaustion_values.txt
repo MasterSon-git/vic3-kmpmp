@@ -126,6 +126,15 @@ war_exhaustion = {
 			desc = "WAR_SUPPORT_FROM_LOBBIES"
 		}
 	}
+
+	# kmpmp
+	if = {
+		limit = { kmpmp_war_support_from_power_bloc_principles <= -0.01 }
+		add = {
+			add = kmpmp_war_support_from_power_bloc_principles
+			desc = "KMPMP_WAR_SUPPORT_FROM_POWER_BLOC_PRINCIPLES"
+		}
+	}
 	
 	add = {
 		add = "additional_war_exhaustion(scope:war.diplomatic_play)"
