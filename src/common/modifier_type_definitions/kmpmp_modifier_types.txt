@@ -32,6 +32,15 @@ goods_input_ironclads_mult = {
 	}
 }
 
+goods_input_manowars_mult = {
+    color = bad
+    percent = yes
+	decimals = 0
+	game_data = {
+		ai_value = 0
+	}
+}
+
 #building_throughput_oil_mult = {
 building_throughput_oil_add = {
 	color = good

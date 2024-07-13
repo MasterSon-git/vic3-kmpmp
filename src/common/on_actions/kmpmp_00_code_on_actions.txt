@@ -1,4 +1,4 @@
-# Root = Country
+﻿# Root = Country
 # scope:target = the country the wargoal was enforced against
 # scope:diplomatic_play = the relevant diplomatic play
 # scope:wargoal_impact = the impact of the wargoal enforced
