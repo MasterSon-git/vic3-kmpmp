@@ -35,4 +35,13 @@
     c:BOL ?= {
         change_infamy = -30 #should be moved to history\diplomacy
     }
+    c:GBR ?= {
+        activate_law = law_type:law_mercantilism
+    }
+    c:FRA ?= {
+        activate_law = law_type:law_mercantilism
+    }
+    c:USA ?= {
+        activate_law = law_type:law_mercantilism
+    }
 }
