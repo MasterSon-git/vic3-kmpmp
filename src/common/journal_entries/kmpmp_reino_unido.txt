@@ -217,12 +217,12 @@ je_reino_unido_protectorate = {
 	}
 
 	on_complete = {
+		set_global_variable = je_reino_unido_protectorate_completed
 		if = {
 			limit = { # BRZ view
 				c:BRZ ?= ROOT
 				exists = c:POR
 			}
-			set_global_variable = je_reino_unido_protectorate_completed
 			c:BRZ ?= {
 				create_diplomatic_pact = {
 					country = c:POR
@@ -234,7 +234,6 @@ je_reino_unido_protectorate = {
 			limit = { # POR view
 				c:POR ?= ROOT
 			}
-			set_global_variable = je_reino_unido_protectorate_completed
 			c:POR ?= {
 				create_diplomatic_pact = {
 					country = c:BRZ
