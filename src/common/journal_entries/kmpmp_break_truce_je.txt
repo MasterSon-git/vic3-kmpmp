@@ -1,0 +1,76 @@
+﻿kmpmp_je_break_truce_with_country = {
+    group = je_group_foreign_affairs
+    icon = "gfx/interface/icons/lens_toolbar_icons/break_truce.dds"
+
+    immediate = {
+        add_to_variable_list = { # add target country to list of countries you have broken truce with
+            name = break_truce_with_country_list
+            target = scope:target
+        }
+    }
+
+    complete = {
+        NOT = { # completes if target country is removed from list
+            kmpmp_has_broken_truce_with_country = {
+                COUNTRY_SCOPE = scope:target
+            }
+        }
+    }
+
+    on_complete = {
+        custom_tooltip = {
+            text = kmpmp_break_truce_possible_again_tooltip
+
+            # this can be moved to monthly_pulse but we want to have an effect here
+            remove_list_variable = { # remove target country from list where you respected the truce
+                name = unbreakable_truce_with_country_list
+                target = scope:target
+            }
+        }
+    }
+
+    on_monthly_pulse = {
+        effect = {
+            if = { # target country is in list to respect truce and truce is over, so complete
+                limit = {
+                    has_variable_list = unbreakable_truce_with_country_list
+                    any_in_list = {
+                        variable = unbreakable_truce_with_country_list
+                        THIS = scope:target
+                    }
+                    NOT = {
+                        has_truce_with = scope:target
+                    }
+                }
+
+                remove_list_variable = {
+                    name = break_truce_with_country_list
+                    target = scope:target
+                }
+            }
+            else_if = { # add target country to list if we have a new truce with them after we have broken one
+                limit = {
+                    has_truce_with = scope:target
+                    OR = {
+                        NOT = {
+                            has_variable_list = unbreakable_truce_with_country_list
+                        }
+
+                        NOT = {
+                            any_in_list = {
+                                variable = unbreakable_truce_with_country_list
+                                THIS = scope:target
+                            }
+                        }
+                    }
+                }
+
+                add_to_variable_list = {
+                    name = unbreakable_truce_with_country_list
+                    target = scope:target
+                }
+            }
+
+        }
+    }
+}

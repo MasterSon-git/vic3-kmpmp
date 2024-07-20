@@ -1,0 +1,20 @@
+﻿kmpmp_has_broken_truce_with_country = {
+    $COUNTRY_SCOPE$ = {
+        save_temporary_scope_as = TARGET_COUNTRY
+    }
+
+    custom_description = {
+        # used for trigger localization
+        text = TRIGGER_KMPMP_HAS_BROKEN_TRUCE_WITH_COUNTRY
+        # in loc it is COUNTRY
+        subject = ROOT
+        # in loc it is TARGET_COUNTRY
+        object = scope:TARGET_COUNTRY
+
+        has_variable_list = break_truce_with_country_list
+        any_in_list = {
+            variable = break_truce_with_country_list
+            THIS = scope:TARGET_COUNTRY
+        }
+    }
+}
