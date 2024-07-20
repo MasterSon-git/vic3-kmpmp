@@ -158,7 +158,7 @@ pm_power_bloc_statue_religious = {
 			# kmpmp
 			state_education_access_add = 0.05
 			state_loyalists_from_sol_change_accepted_religion_mult = 0.05
-			state_radicals_from_sol_change_accepted_religion_mult = 0.05
+			state_radicals_from_sol_change_accepted_religion_mult = -0.05
 		}
 	}
 
