@@ -1,4 +1,8 @@
-﻿NDiplomacy = {
+﻿NEconomy = {
+	DECLARE_BANKRUPTCY_PENALTY_DURATION_YEARS = 4 #10		# How many years does it take for penalties from declaring bankruptcy to fully decay
+}
+
+NDiplomacy = {
 	WAR_GOAL_INFAMY_CONQUER_STATE = 4.0 #5.0
 	WAR_GOAL_INFAMY_MAKE_PROTECTORATE = 1.5 #2.0
 }
