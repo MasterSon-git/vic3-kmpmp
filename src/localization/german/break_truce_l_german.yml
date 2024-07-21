@@ -1,0 +1,24 @@
+﻿l_german:
+    
+    break_truce.tt:0 "Waffenstillstand mit [SCOPE.sCountry('target_country_scope').GetName] brechen"
+    break_truce:0 "Waffenstillstand brechen"
+    break_truce_action_name:0 "Waffenstillstand brechen"
+    break_truce_desc:0 "Diese [concept_diplomatic_action] erlaubt es dem Initiator den Waffenstillstand zu brechen, dies verursacht einen [concept_diplomatic_incident]."
+    break_truce_action_notification_name:0 "[INITIATOR_COUNTRY.GetAdjective] bricht den Waffenstillstand"
+    break_truce_action_notification_desc:0 "[INITIATOR_COUNTRY.GetName] hat den Waffenstillstand mit uns gebrochen."
+    break_truce_action_notification_third_party_name:0 "[INITIATOR_COUNTRY.GetAdjective] bricht den Waffenstillstand"
+    break_truce_action_notification_third_party_desc:0 "[INITIATOR_COUNTRY.GetName] hat den Waffenstillstand mit [TARGET_COUNTRY.GetName] gebrochen."
+    break_truce_custom_tooltip:0 "[SCOPE.sCountry('actor').GetName] bricht den Waffenstillstand mit [SCOPE.sCountry('target_country').GetName]."
+
+ kmpmp_break_truce_penalties_modifier:0 "Waffenstillstand gebrochen"
+ kmpmp_break_truce_penalties_decaying_modifier:0 "$kmpmp_break_truce_penalties_modifier$"
+
+ kmpmp_break_truce_penalties_multiplier_humiliation_tooltip:0 "#r +25%#! härtere Strafen, aufgrund der Demütigung von [SCOPE.sCountry('target_country').GetName]."
+
+ kmpmp_next_break_truce_not_possible_tooltip:0 "Kann den nächsten Waffenstillstand mit [SCOPE.sCountry('target_country').GetName] nicht brechen."
+ kmpmp_je_break_truce_with_country:0 "Waffenstillstand gebrochen mit [SCOPE.sCountry('target').GetNameNoFlag]"
+ kmpmp_je_break_truce_with_country_reason:0 "Wir haben den vorherigen Waffenstillstand mit [SCOPE.sCountry('target').GetNameNoFlag] gebrochen.\nWir müssen den nächsten [concept_truce] einhalten."
+ kmpmp_break_truce_possible_again_tooltip:0 "Wir sind in der Lage den nächsten Waffenstillstand mit [SCOPE.sCountry('target').GetNameNoFlag] zu brechen."
+
+ TRIGGER_KMPMP_HAS_BROKEN_TRUCE_WITH_COUNTRY_GLOBAL:0 "[COUNTRY.GetNameNoFlag] hat den letzten Waffenstillstand mit [TARGET_COUNTRY.GetNameNoFlag] gebrochen."
+ TRIGGER_KMPMP_HAS_BROKEN_TRUCE_WITH_COUNTRY_GLOBAL_NOT:0 "[COUNTRY.GetNameNoFlag] hat #bold nicht #!den letzten Waffenstillstand mit [TARGET_COUNTRY.GetNameNoFlag] gebrochen."

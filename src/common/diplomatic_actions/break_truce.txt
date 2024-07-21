@@ -1,0 +1,92 @@
+﻿break_truce = {
+	groups = {
+		general
+	}
+	show_confirmation_box = yes
+
+	potential = {
+		is_diplomatic_play_committed_participant = no
+		is_revolutionary = no
+		has_truce_with = scope:target_country
+		aggressive_diplomatic_plays_permitted = yes		
+	}
+
+	# kmpmp
+	possible = {
+		NOT = {
+			kmpmp_has_broken_truce_with_country = {
+				COUNTRY_SCOPE = scope:target_country 
+			}
+		}
+	}
+	
+	accept_effect = {
+		# kmpmp
+		if = {
+			limit = {
+				any_scope_diplomatic_pact = {
+					is_diplomatic_action_type = humiliation
+					first_country = scope:target_country
+				}
+			}
+			custom_tooltip = {
+				text = kmpmp_break_truce_penalties_multiplier_humiliation_tooltip
+			}
+		}
+
+		hidden_effect = {
+			end_truce = scope:target_country
+		}
+		custom_tooltip = {
+			text = break_truce_custom_tooltip
+			subject = scope:target_country
+		}
+		root = {
+			create_incident = {
+				country = scope:target_country
+				# value = break_truce_cost
+				# kmpmp
+				value = {
+					add = break_truce_cost
+					multiply = kmpmp_break_truce_penalties_multiplier
+				}
+			}
+		}
+
+		# kmpmp
+		custom_tooltip = {
+			text = kmpmp_next_break_truce_not_possible_tooltip
+			add_journal_entry = {
+				type = kmpmp_je_break_truce_with_country
+				target = scope:target_country
+			}
+		}
+		add_radicals = {
+			value = {
+				add = 0.075
+				multiply = kmpmp_break_truce_penalties_multiplier
+			}
+		}
+		add_modifier = {
+			name = kmpmp_break_truce_penalties_modifier
+			years = 5
+			multiplier = kmpmp_break_truce_penalties_multiplier
+		}
+		add_modifier = {
+			name = kmpmp_break_truce_penalties_decaying_modifier
+			years = 5
+			is_decaying = yes
+			multiplier = kmpmp_break_truce_penalties_multiplier
+		}
+	}
+
+	ai = {
+		evaluation_chance = {
+			value = 0.0
+		}
+
+		will_propose = { always = no }
+	}
+
+	is_hostile = yes
+}

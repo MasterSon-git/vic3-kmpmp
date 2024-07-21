@@ -1,0 +1,25 @@
+﻿l_english:
+    
+    break_truce.tt:0 "Break the truce with [SCOPE.sCountry('target_country_scope').GetName]"
+    break_truce:0 "Break Truce"
+    break_truce_action_name:0 "Break Truce"
+    break_truce_desc:0 "This [concept_diplomatic_action] allows the initiator to break a truce, causing a [concept_diplomatic_incident]."
+    break_truce_action_notification_name:0 "[INITIATOR_COUNTRY.GetAdjective] Breaks Truce"
+    break_truce_action_notification_desc:0 "[INITIATOR_COUNTRY.GetName] has broken their truce with us."
+    break_truce_action_notification_third_party_name:0 "[INITIATOR_COUNTRY.GetAdjective] Breaks Truce"
+    break_truce_action_notification_third_party_desc:0 "[INITIATOR_COUNTRY.GetName] has broken their truce with [TARGET_COUNTRY.GetName]."
+    break_truce_custom_tooltip:0 "[SCOPE.sCountry('actor').GetName] breaks their truce with [SCOPE.sCountry('target_country').GetName]."
+
+ kmpmp_break_truce_penalties_modifier:0 "Broken truce"
+ kmpmp_break_truce_penalties_decaying_modifier:0 "$kmpmp_break_truce_penalties_modifier$"
+
+ kmpmp_break_truce_penalties_multiplier_humiliation_tooltip:0 "#r +25%#! penalties for being humiliated by [SCOPE.sCountry('target_country').GetName]."
+
+ kmpmp_next_break_truce_not_possible_tooltip:0 "Can't break the next truce with [SCOPE.sCountry('target_country').GetName]."
+ kmpmp_je_break_truce_with_country:0 "Truce broken with [SCOPE.sCountry('target').GetNameNoFlag]"
+ kmpmp_je_break_truce_with_country_reason:0 "We have broken the previous truce with [SCOPE.sCountry('target').GetNameNoFlag].\nWe have to respect the next [concept_truce]."
+ kmpmp_break_truce_possible_again_tooltip:0 "We are able to break the next truce with [SCOPE.sCountry('target').GetNameNoFlag]."
+
+ TRIGGER_KMPMP_HAS_BROKEN_TRUCE_WITH_COUNTRY_GLOBAL:0 "[COUNTRY.GetNameNoFlag] has broken last truce with [TARGET_COUNTRY.GetNameNoFlag]."
+ TRIGGER_KMPMP_HAS_BROKEN_TRUCE_WITH_COUNTRY_GLOBAL_NOT:0 "[COUNTRY.GetNameNoFlag] has #bold not #!broken last truce with [TARGET_COUNTRY.GetNameNoFlag]."
+
