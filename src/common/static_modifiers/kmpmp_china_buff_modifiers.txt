@@ -1,0 +1,5 @@
+﻿kmpmp_china_buff_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    unit_offense_mult = 0.5
+    unit_defense_mult = 0.5
+}

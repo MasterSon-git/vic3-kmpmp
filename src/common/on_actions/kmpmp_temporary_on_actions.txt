@@ -1,0 +1,40 @@
+﻿# this is used to make changes to the game state if we add new features while loading old saves
+
+on_monthly_pulse_country = {
+    on_actions = {
+        kmpmp_add_china_buff_je_action
+    }
+}
+
+# add the journal entry for china buff, since this is a new je it won't be considered in active save games
+# can be removed next season
+kmpmp_add_china_buff_je_action = {
+    effect = {
+        if = {
+            limit = {
+                NOT = {
+                    has_journal_entry = kmpmp_china_buff_je
+                }
+        
+                OR = {
+                    any_primary_culture = {
+                        has_discrimination_trait = han_chinese
+                    }
+                    country_has_primary_culture = cu:yi
+                    country_has_primary_culture = cu:manchu
+                }
+                OR = {
+                    capital.region = sr:region_north_china
+                    capital.region = sr:region_south_china
+                    capital.region = sr:region_manchuria
+                    capital.region = sr:region_central_asia
+                    capital.region = sr:region_himalayas
+                }
+            }
+
+            add_journal_entry = {
+                type = kmpmp_china_buff_je
+            }
+        }
+    }
+}

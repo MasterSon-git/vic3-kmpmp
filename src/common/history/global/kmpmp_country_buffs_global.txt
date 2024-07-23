@@ -56,9 +56,4 @@
             name = kmpmp_debuff_massive_empire
         }
     }
-    c:CHI = {
-        add_modifier = {
-            name = kmpmp_china_buff
-        }
-    }
 }

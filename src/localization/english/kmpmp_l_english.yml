@@ -169,8 +169,6 @@
  kmpmp_ev_persia.1.f:0 "The people celebrate unification"
  kmpmp_ev_persia.1.a:0 "Hooray"
 
- kmpmp_china_buff:0 "China buff"
-
  kmpmp_manifest_mexico:0 "Manifest Mexico"
  kmpmp_je_manifest_mexico:0 "$kmpmp_manifest_mexico$"
  kmpmp_je_manifest_mexico_reason:0 "Hold $STATE_CALIFORNIA$ to have the "$kmpmp_manifest_mexico$-buff" applied."
