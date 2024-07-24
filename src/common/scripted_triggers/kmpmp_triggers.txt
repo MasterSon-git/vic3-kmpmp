@@ -34,3 +34,25 @@ state_region_owned_and_incorporated = {
         }
     }
 }
+
+# root - STATE_REGION
+# we suggest this is an island if:
+# adjacent land state regions < 2
+# adjacent sea state region > 0
+is_island = {
+    is_state_region_land = yes
+    any_scope_state = {
+        is_sea_adjacent = yes
+    }
+    # - this is state not state_region - may fail
+    # - fails for some state regions which aren't islands because they have just one adjacent land region
+    # - neighbouring states returns only states which aren't blocked by impassable land, 
+    #   so it fails for different state regions which have many impassable land around.
+    # known false positives:
+    #  Chukotka
+    # known fails:
+    #  none
+    any_neighbouring_state = {
+        count < 2
+    }
+}

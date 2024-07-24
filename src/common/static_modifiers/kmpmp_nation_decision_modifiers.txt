@@ -6,7 +6,8 @@
 	unit_kill_rate_add = 0.1
 	unit_morale_damage_mult = 0.1
 	building_training_rate_mult = 0.15
-} 
+}
+
 kmpmp_lion_of_the_north = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	unit_offense_mult = 0.05
@@ -17,6 +18,7 @@ kmpmp_lion_of_the_north = {
 	state_conscription_rate_mult = 0.02
 	building_group_bg_manufacturing_tax_mult = 0.05
 }
+
 kmpmp_risorgimento = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	unit_offense_mult = 0.05
@@ -26,13 +28,13 @@ kmpmp_risorgimento = {
 	state_construction_mult = 0.05
 	state_conscription_rate_mult = 0.01
 }
+
 kmpmp_kingdom_of_the_three_crowns = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	state_birth_rate_mult = 0.02
 	country_authority_mult = 0.05
 	state_construction_mult = 0.05
 }
-
 
 kmpmp_reino_unido = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
@@ -44,6 +46,7 @@ kmpmp_reino_unido = {
 	building_university_throughput_add = 0.15
 	state_decree_cost_mult = -0.1
 }
+
 kmpmp_united_iberia = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	unit_offense_mult = 0.05
@@ -53,6 +56,7 @@ kmpmp_united_iberia = {
 	state_birth_rate_mult = 0.03
 	building_training_rate_mult = 0.05
 }
+
 kmpmp_united_netherlands = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	state_accepted_birth_rate_mult = 0.05
@@ -67,7 +71,9 @@ kmpmp_austrian_the_great_reform = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
 	country_authority_mult = -0.2
 	country_bureaucracy_mult = -0.1
+	country_influence_mult = -0.1
 }
+
 kmpmp_parthian_empire = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	state_accepted_birth_rate_mult = 0.02

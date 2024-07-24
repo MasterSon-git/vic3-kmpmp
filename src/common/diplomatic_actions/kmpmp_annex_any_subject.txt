@@ -6,30 +6,33 @@
     show_effect_in_tooltip = yes
 
     potential = { # copy from dp_annex_subject
-        NOT = { is_country_type = decentralized }
-        aggressive_diplomatic_plays_permitted = yes
-        scope:target_country = {
-            NOT = { is_country_type = decentralized }
-            is_direct_subject_of = root
-            # liberty_desire < 25
-            OR = {
-                has_diplomatic_pact = { who = root type = protectorate }
-                has_diplomatic_pact = { who = root type = dominion }
-                # if subject is puppet or vassal use standard diplomatic play
-                #has_diplomatic_pact = { who = root type = puppet }
-                #has_diplomatic_pact = { who = root type = vassal }
-            }
-        }
-        NAND = {
-            has_journal_entry = je_peru_bolivia
-            scope:target_country = {
-                OR = {
-                    country_has_primary_culture = cu:quechua
-                    country_has_primary_culture = cu:south_andean
-                }
-            }
-        }
-        is_diplomatic_play_committed_participant = no
+        # actually deactivated - maybe activate this by a game rule?
+        always = no
+
+        # NOT = { is_country_type = decentralized }
+        # aggressive_diplomatic_plays_permitted = yes
+        # scope:target_country = {
+        #     NOT = { is_country_type = decentralized }
+        #     is_direct_subject_of = root
+        #     # liberty_desire < 25
+        #     OR = {
+        #         has_diplomatic_pact = { who = root type = protectorate }
+        #         has_diplomatic_pact = { who = root type = dominion }
+        #         # if subject is puppet or vassal use standard diplomatic play
+        #         #has_diplomatic_pact = { who = root type = puppet }
+        #         #has_diplomatic_pact = { who = root type = vassal }
+        #     }
+        # }
+        # NAND = {
+        #     has_journal_entry = je_peru_bolivia
+        #     scope:target_country = {
+        #         OR = {
+        #             country_has_primary_culture = cu:quechua
+        #             country_has_primary_culture = cu:south_andean
+        #         }
+        #     }
+        # }
+        # is_diplomatic_play_committed_participant = no
     }
 
     possible = {
