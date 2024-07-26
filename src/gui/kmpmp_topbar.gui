@@ -1,18 +1,14 @@
-template hud_elements_alpha {
-	alpha = 1
-}
-
-# Note: We are using a slightly modified version of this in outliner_framework:11, update that one as well if this one gets changed
-template hud_visibility {
-	visible = "[And( IsInGame, And( Not( IsPauseMenuShown ), Not( IsGameOverScreenShown )))]"
-}
+# new topbar implementation with power bloc infos
+# still WIP
+# to enable this topbar we need to change ingame_hud.gui
+# maybe we should implement a topbar chooser...
 
 @secondary_icon_size = 26
 
 types topbar_components
 {
 	### SECONDARY ICONS
-	type topbar_secondary_icons = container {
+	type kmpmp_topbar_secondary_icons = container {
 		position = { 120 40 }
 		
 		flowcontainer = {
@@ -48,50 +44,13 @@ types topbar_components
 					margin_right = 20
 				}
 
-				# Prestige
-				button = {
-					name = "prestige_button"
-					# size = { 88 30 }
-					size = { 90 30 }
-					using = glow_button
-					onclick = "[InformationPanelBar.OpenCountryPanel(Country.Self)]"
-					
-					flowcontainer = {
-						name = "prestige"
-						# minimumsize = { 88 30 }
-						minimumsize = { 90 30 }
-						# maximumsize = { 88 30 }
-						maximumsize = { 90 30 }
-						spacing = 2
-						tooltip = "COUNTRY_PRESTIGE_BREAKDOWN"
-						using = tooltip_below
-	
-						icon = {
-							size = { @secondary_icon_size @secondary_icon_size }
-							name = prestige_icon
-							texture = "gfx/interface/icons/generic_icons/unused/most_senior_front_commander.dds"
-							parentanchor = vcenter
-						}
-	
-						textbox = {
-							parentanchor = vcenter
-							text = "[Country.GetPrestige|1v]"
-							alpha = "[TransparentIfZero_int32(Country.GetPrestige)]"
-							autoresize = yes
-							align = left|nobaseline
-							elide = right
-							fontsize_min = 12
-						}
-					}
-				}
-				
 				# GDP
 				flowcontainer = {
 					name = "tutorial_highlight_gdp"
 					# minimumsize = { 88 30 }
-					minimumsize = { 80 30 }
+					minimumsize = { 85 30 }
 					# maximumsize = { 88 30 }
-					maximumsize = { 80 30 }
+					maximumsize = { 85 30 }
 					spacing = 2
 					using = GDP_tooltip_with_graph
 					using = tooltip_below
@@ -118,9 +77,9 @@ types topbar_components
 				# Literacy
 				flowcontainer = {
 					# minimumsize = { 84 30 }
-					minimumsize = { 70 30 }
+					minimumsize = { 73 30 }
 					# maximumsize = { 84 30 }
-					maximumsize = { 70 30 }
+					maximumsize = { 73 30 }
 					spacing = 2
 					using = literacy_tooltip_with_graph
 					using = tooltip_below
@@ -140,38 +99,6 @@ types topbar_components
 						align = left|nobaseline
 						elide = right
 						fontsize_min = 12
-					}
-				}
-
-				# SoL
-				flowcontainer = {
-					# minimumsize = { 68 30 }
-					minimumsize = { 70 30 }
-					# maximumsize = { 68 30 }
-					maximumsize = { 70 30 }
-					spacing = 2
-					using = average_standard_of_living_tooltip_with_graph
-					using = tooltip_below
-					onmousehierarchyenter = "[SetTempMapModeByKey('mm_standard_of_living')]"
-					onmousehierarchyleave = "[RemoveTempMapMode]"
-					alwaystransparent = no
-				
-					textbox = {
-						parentanchor = vcenter
-						text = "[LabelingHelper.GetIconForStandardOfLivingCFixedPoint(Country.GetAverageSoLByPopulation)|v]"
-						autoresize = yes
-						align = left|nobaseline
-						fontsize = 21 #hack to get the same size on the text icon as the rest in the top bar
-					}
-
-					textbox = {
-						parentanchor = vcenter
-						text = "[Country.GetFormattedStandardOfLivingAll|v]"
-						autoresize = yes
-						align = left|nobaseline
-						elide = right
-						fontsize_min = 12
-						margin_right = 3
 					}
 				}
 
@@ -204,35 +131,6 @@ types topbar_components
 					}
 				}
 
-				# Radicals
-				flowcontainer = {
-					# minimumsize = { 76 30 }
-					minimumsize = { 80 30 }
-					# maximumsize = { 76 30 }
-					maximumsize = { 80 30 }
-					spacing = 2	
-					using = radicals_tooltip_with_graph
-					using = tooltip_below
-					onmousehierarchyenter = "[SetTempMapModeByKey('mm_radicals')]"
-					onmousehierarchyleave = "[RemoveTempMapMode]"
-					alpha = "[TransparentIfZero_int64(Country.GetNumRadicals)]"
-					alwaystransparent = no
-			
-					icon = {
-						texture = "gfx/interface/icons/generic_icons/population_radical.dds"
-						size = { @secondary_icon_size @secondary_icon_size }
-						parentanchor = vcenter
-					}
-					textbox = {
-						parentanchor = vcenter
-						raw_text = "#variable [Country.GetNumRadicals|D]#!"
-						autoresize = yes
-						align = left|nobaseline
-						elide = right
-						fontsize_min = 12
-					}
-				}
-
 				# Loyalists
 				flowcontainer = {
 					# minimumsize = { 76 30 }
@@ -259,6 +157,111 @@ types topbar_components
 						align = left|nobaseline
 						elide = right
 						fontsize_min = 12
+					}
+				}
+
+				# Peasants
+				flowcontainer = {
+					name = "peasants"
+					# minimumsize = { 85 28 }
+					minimumsize = { 80 30 }
+					# maximumsize = { 85 28 }
+					maximumsize = { 80 30 }
+					spacing = 2
+					tooltip = "[GetPopType('peasants').GetName]"
+					using = tooltip_below
+					alpha = "[TransparentIfZero(Country.GetSubsistingWorkingAdults)]"
+					alwaystransparent = no
+					
+					icon = {
+						size = { @secondary_icon_size @secondary_icon_size }
+						name = peasants_icon
+						texture = "gfx/interface/icons/pops_icons/peasants.dds"
+						parentanchor = vcenter
+					}
+
+					textbox = {
+						parentanchor = vcenter
+						raw_text = "[Country.GetSubsistingWorkingAdults|Dv]"
+						autoresize = yes
+						align = left|nobaseline
+						elide = right
+						fontsize_min = 12
+					}
+				}
+
+				# Legitimacy
+				button = {
+					name = "legitimacy_button"
+					# size = { 68 30 }
+					size = { 64 30 }
+					using = glow_button
+					onclick = "[InformationPanelBar.OpenPanelTab('politics', 'interest_groups')]"
+
+					flowcontainer = {
+						name = "legitimacy"
+						# minimumsize = { 68 30 }
+						minimumsize = { 64 30 }
+						# maximumsize = { 68 30 }
+						maximumsize = { 64 30 }
+						spacing = 2
+						datacontext = "[Country.GetGovernmentLegitimacyLevel]"
+						tooltip = "SULIUS_LEGITIMACY_LEVEL_ACTIVE_TOOLTIP"
+						using = tooltip_below
+
+						icon = {
+							size = { @secondary_icon_size @secondary_icon_size }
+							name = legitimacy_icon
+							texture = "gfx/interface/icons/generic_icons/legitimacy.dds"
+							parentanchor = vcenter
+						}
+
+						textbox = {
+							parentanchor = vcenter
+							text = "[Country.GetGovernmentLegitimacy|1v]"
+							autoresize = yes
+							align = left|nobaseline
+							elide = right
+							fontsize_min = 12
+							margin_right = 3
+						}
+					}
+				}
+
+				# Battalions
+				button = {
+					name = "battalions_button"
+					# size = { 76 30 }
+					size = { 95 30 }
+					using = glow_button
+					onclick = "[InformationPanelBar.OpenPanelTab('military', 'army')]"
+
+					flowcontainer = {
+						name = "battalions"
+						# minimumsize = { 76 30 }
+						minimumsize = { 95 30 }
+						# maximumsize = { 76 30 }
+						maximumsize = { 95 30 }
+						spacing = 2
+						tooltip = "PANEL_MILITARY_ARMY_OVERVIEW_TOOLTIP"
+						using = tooltip_below
+
+						icon = {
+							size = { @secondary_icon_size @secondary_icon_size }
+							name = battalions_icon
+							texture = "gfx/interface/icons/generic_icons/battalions.dds"
+							parentanchor = vcenter
+						}
+
+						textbox = {
+							parentanchor = vcenter
+							text = "[Country.GetRegularBattalions|v]+[Country.CalcConscriptableBattalions|v]"
+							alpha = "[TransparentIfZero_int32(Country.GetBattalions)]"
+							autoresize = yes
+							align = left|nobaseline
+							elide = right
+							fontsize_min = 12
+						}
 					}
 				}
 
@@ -302,72 +305,36 @@ types topbar_components
 					margin_right = 10
 				}
 
-				# Battalions
+				# Prestige
 				button = {
-					name = "battalions_button"
-					# size = { 76 30 }
-					size = { 90 30 }
+					name = "prestige_button"
+					# size = { 88 30 }
+					size = { 85 30 }
 					using = glow_button
-					onclick = "[InformationPanelBar.OpenPanelTab('military', 'army')]"
-
+					onclick = "[InformationPanelBar.OpenCountryPanel(Country.Self)]"
+					
 					flowcontainer = {
-						name = "battalions"
-						# minimumsize = { 76 30 }
-						minimumsize = { 90 30 }
-						# maximumsize = { 76 30 }
-						maximumsize = { 90 30 }
+						name = "prestige"
+						# minimumsize = { 88 30 }
+						minimumsize = { 85 30 }
+						# maximumsize = { 88 30 }
+						maximumsize = { 85 30 }
 						spacing = 2
-						tooltip = "PANEL_MILITARY_ARMY_OVERVIEW_TOOLTIP"
-						using = tooltip_below
-
-						icon = {
-							size = { @secondary_icon_size @secondary_icon_size }
-							name = battalions_icon
-							texture = "gfx/interface/icons/generic_icons/battalions.dds"
-							parentanchor = vcenter
-						}
-
-						textbox = {
-							parentanchor = vcenter
-							text = "[Country.GetBattalions|v]+[Country.CalcConscriptableBattalions|v]"
-							alpha = "[TransparentIfZero_int32(Country.GetBattalions)]"
-							autoresize = yes
-							align = left|nobaseline
-							elide = right
-							fontsize_min = 12
-						}
-					}
-				}
-
-				# Flotillas
-				button = {
-					name = "flotillas_button"
-					# size = { 76 30 }
-					size = { 80 30 }
-					using = glow_button
-					onclick = "[InformationPanelBar.OpenPanelTab('military', 'navy')]"
-
-					flowcontainer = {
-						name = "Flotillas"
-						# minimumsize = { 76 30 }
-						minimumsize = { 80 30 }
-						# maximumsize = { 76 30 }
-						maximumsize = { 80 30 }
-						spacing = 2
-						tooltip = "PANEL_MILITARY_NAVY_CURRENT_FLOTILLAS_TOOLTIP"
+						# tooltip = "COUNTRY_PRESTIGE_BREAKDOWN"
+						using = kmpmp_prestige_tooltip_with_graph
 						using = tooltip_below
 	
 						icon = {
 							size = { @secondary_icon_size @secondary_icon_size }
-							name = flotillas_icon
-							texture = "gfx/interface/icons/generic_icons/flotillas.dds"
+							name = prestige_icon
+							texture = "gfx/interface/icons/generic_icons/unused/most_senior_front_commander.dds"
 							parentanchor = vcenter
 						}
 	
 						textbox = {
 							parentanchor = vcenter
-							raw_text = "#variable [Country.GetWarships|0]#!"
-							alpha = "[TransparentIfZero_int32(Country.GetWarships)]"
+							text = "[Country.GetPrestige|1v]"
+							alpha = "[TransparentIfZero_int32(Country.GetPrestige)]"
 							autoresize = yes
 							align = left|nobaseline
 							elide = right
@@ -380,16 +347,16 @@ types topbar_components
 				button = {
 					name = "innovation_button"
 					# size = { 78 30 }
-					size = { 70 30 }
+					size = { 73 30 }
 					using = glow_button
 					onclick = "[InformationPanelBar.OpenPanelCycleTabs('tech_tree', 'production|military|society')]"
 
 					flowcontainer = {
 						name = "innovation"
 						# minimumsize = { 78 30 }
-						minimumsize = { 70 30 }
+						minimumsize = { 73 30 }
 						# maximumsize = { 78 30 }
-						maximumsize = { 70 30 }
+						maximumsize = { 73 30 }
 						spacing = 2
 						tooltip = "SULIUS_RESEARCH"
 						using = tooltip_below
@@ -414,70 +381,64 @@ types topbar_components
 					}
 				}
 
-				# Infamy
+				# SoL
 				flowcontainer = {
-					# minimumsize = { 84 30 }
-					minimumsize = { 70 30 }
-					# maximumsize = { 84 30 }
-					maximumsize = { 70 30 }
+					# minimumsize = { 68 30 }
+					minimumsize = { 80 30 }
+					# maximumsize = { 68 30 }
+					maximumsize = { 80 30 }
 					spacing = 2
-					tooltip = "[Country.GetInfamyDesc]"
+					using = average_standard_of_living_tooltip_with_graph
 					using = tooltip_below
-					onmousehierarchyenter = "[SetTempMapModeByKey('mm_infamy')]"
+					onmousehierarchyenter = "[SetTempMapModeByKey('mm_standard_of_living')]"
 					onmousehierarchyleave = "[RemoveTempMapMode]"
-					alpha = "[TransparentIfZero(Country.GetInfamy)]"
 					alwaystransparent = no
-
-					icon = {
-						size = { @secondary_icon_size @secondary_icon_size }
-						texture = "[Country.GetInfamyIconTexture]"
-						parentanchor = vcenter
-					}
+				
 					textbox = {
 						parentanchor = vcenter
-						raw_text = "#variable [Country.GetInfamy|0]#!"
+						text = "[LabelingHelper.GetIconForStandardOfLivingCFixedPoint(Country.GetAverageSoLByPopulation)|v]"
+						autoresize = yes
+						align = left|nobaseline
+						fontsize = 21 #hack to get the same size on the text icon as the rest in the top bar
+					}
+
+					textbox = {
+						parentanchor = vcenter
+						text = "[Country.GetFormattedStandardOfLivingAll|v]"
 						autoresize = yes
 						align = left|nobaseline
 						elide = right
 						fontsize_min = 12
+						margin_right = 3
 					}
 				}
 
-				# Legitimacy
-				button = {
-					name = "legitimacy_button"
-					# size = { 68 30 }
-					size = { 80 30 }
-					using = glow_button
-					onclick = "[InformationPanelBar.OpenPanelTab('politics', 'interest_groups')]"
-
-					flowcontainer = {
-						name = "legitimacy"
-						# minimumsize = { 68 30 }
-						minimumsize = { 80 30 }
-						# maximumsize = { 68 30 }
-						maximumsize = { 80 30 }
-						spacing = 2
-						datacontext = "[Country.GetGovernmentLegitimacyLevel]"
-						tooltip = "SULIUS_LEGITIMACY_LEVEL_ACTIVE_TOOLTIP"
-						using = tooltip_below
-
-						icon = {
-							size = { @secondary_icon_size @secondary_icon_size }
-							name = legitimacy_icon
-							texture = "gfx/interface/icons/generic_icons/legitimacy.dds"
-							parentanchor = vcenter
-						}
-
-						textbox = {
-							parentanchor = vcenter
-							text = "[Country.GetGovernmentLegitimacy|1v]"
-							autoresize = yes
-							align = left|nobaseline
-							elide = right
-							fontsize_min = 12
-							margin_right = 3
-						}
+				# Radicals
+				flowcontainer = {
+					# minimumsize = { 76 30 }
+					minimumsize = { 80 30 }
+					# maximumsize = { 76 30 }
+					maximumsize = { 80 30 }
+					spacing = 2	
+					using = radicals_tooltip_with_graph
+					using = tooltip_below
+					onmousehierarchyenter = "[SetTempMapModeByKey('mm_radicals')]"
+					onmousehierarchyleave = "[RemoveTempMapMode]"
+					alpha = "[TransparentIfZero_int64(Country.GetNumRadicals)]"
+					alwaystransparent = no
+			
+					icon = {
+						texture = "gfx/interface/icons/generic_icons/population_radical.dds"
+						size = { @secondary_icon_size @secondary_icon_size }
+						parentanchor = vcenter
+					}
+					textbox = {
+						parentanchor = vcenter
+						raw_text = "#variable [Country.GetNumRadicals|D]#!"
+						autoresize = yes
+						align = left|nobaseline
+						elide = right
+						fontsize_min = 12
 					}
 				}
 
@@ -511,41 +472,78 @@ types topbar_components
 					}
 				}
 
-				# Peasants
+				# Infamy
 				flowcontainer = {
-					name = "peasants"
-					# minimumsize = { 85 28 }
-					minimumsize = { 80 30 }
-					# maximumsize = { 85 28 }
-					maximumsize = { 80 30 }
+					# minimumsize = { 84 30 }
+					minimumsize = { 64 30 }
+					# maximumsize = { 84 30 }
+					maximumsize = { 64 30 }
 					spacing = 2
-					tooltip = "[GetPopType('peasants').GetName]"
+					tooltip = "[Country.GetInfamyDesc]"
 					using = tooltip_below
-					alpha = "[TransparentIfZero(Country.GetSubsistingWorkingAdults)]"
+					onmousehierarchyenter = "[SetTempMapModeByKey('mm_infamy')]"
+					onmousehierarchyleave = "[RemoveTempMapMode]"
+					alpha = "[TransparentIfZero(Country.GetInfamy)]"
 					alwaystransparent = no
-					
+
 					icon = {
 						size = { @secondary_icon_size @secondary_icon_size }
-						name = peasants_icon
-						texture = "gfx/interface/icons/pops_icons/peasants.dds"
+						texture = "[Country.GetInfamyIconTexture]"
 						parentanchor = vcenter
 					}
-
 					textbox = {
 						parentanchor = vcenter
-						raw_text = "[Country.GetSubsistingWorkingAdults|Dv]"
+						raw_text = "#variable [Country.GetInfamy|0]#!"
 						autoresize = yes
 						align = left|nobaseline
 						elide = right
 						fontsize_min = 12
 					}
 				}
+
+				# Flotillas
+				button = {
+					name = "flotillas_button"
+					# size = { 76 30 }
+					size = { 95 30 }
+					using = glow_button
+					onclick = "[InformationPanelBar.OpenPanelTab('military', 'navy')]"
+
+					flowcontainer = {
+						name = "Flotillas"
+						# minimumsize = { 76 30 }
+						minimumsize = { 95 30 }
+						# maximumsize = { 76 30 }
+						maximumsize = { 95 30 }
+						spacing = 2
+						tooltip = "PANEL_MILITARY_NAVY_CURRENT_FLOTILLAS_TOOLTIP"
+						using = tooltip_below
+	
+						icon = {
+							size = { @secondary_icon_size @secondary_icon_size }
+							name = flotillas_icon
+							texture = "gfx/interface/icons/generic_icons/flotillas.dds"
+							parentanchor = vcenter
+						}
+	
+						textbox = {
+							parentanchor = vcenter
+							raw_text = "#variable [Country.GetWarships|0]#!"
+							alpha = "[TransparentIfZero_int32(Country.GetWarships)]"
+							autoresize = yes
+							align = left|nobaseline
+							elide = right
+							fontsize_min = 12
+						}
+					}
+				}
+
 			}
 		}
 	}
 		
 
-	type topbar = widget {
+	type kmpmp_topbar = widget {
 		widget = {
 			name = "topbar"
 			using = hud_visibility
@@ -578,6 +576,9 @@ types topbar_components
 			onmousehierarchyleave = "[PdxGuiInterruptThenTriggerAllAnimations('show_topbar_secondary_stats','hide_topbar_secondary_stats')]"
 
 			widget = {
+				# kmpmp can be used to move the situation and alert icons if topbar grows
+				# resizeparent = yes
+
 				### background
 				#this is also used to trigger notifications maximize/minimize
 				#when you open/close any fullscreen (did not know where else to put it)
@@ -832,6 +833,109 @@ types topbar_components
 									}
 								}	
 							}
+
+							# TODO - don't mix multiple infos... show just cohesion
+							# but in general we need to rework the topbar implementation for better size adjustment
+							# maybe we can use a hbox as parent
+							block "powerbloc_cohesion_info" {
+								button = {
+									using = glow_button
+									size = { 100 40 }
+									onclick = "[InformationPanelBar.OpenPowerBlocPanelTab( PowerBloc.Self, 'default' )]"
+									enabled = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
+
+									datacontext = "[Country.GetPowerBloc]"
+									
+									icon = {
+										parentanchor = vcenter
+										size = { 32 32 }
+										position = { 0 2 }
+										texture = "[PowerBloc.GetFlag.GetMediumPowerBlocCoaTexture]"
+										frame = "[PowerBloc.GetFlag.GetMediumPowerBlocCoaFrame]"
+										framesize = "[GetMediumPowerBlocCoaFrameSize]"
+				
+										tooltipwidget = {
+											FancyTooltip_PowerBloc = {}
+										}
+									}
+
+									flowcontainer = {
+										position = { 35 -3 }
+										parentanchor = vcenter
+										spacing = 2
+
+										flowcontainer = {
+											datacontext = "[PowerBloc.GetCohesionLevel]"
+											tooltip = "COHESION_LEVEL_ACTIVE_TOOLTIP"
+											spacing = -8
+							
+											icon = {
+												size = { 17 17 }
+												texture = "gfx/interface/icons/generic_icons/cohesion.dds"
+												alpha = 0.8
+											}
+							
+											textbox = {
+												align = nobaseline
+												parentanchor = vcenter
+												raw_text = "[PowerBloc.GetCohesion|v0]"
+												autoresize = yes
+												elide = right
+											}
+										}
+
+										flowcontainer = {
+											tooltip = "POWER_BLOC_MANDATE_PROGRESS_TOOLTIP"
+											spacing = -8
+
+											icon = {
+												size = { 17 17 }
+												texture = "gfx/interface/icons/generic_icons/mandate.dds"
+												alpha = 0.8
+											}
+
+											textbox = {
+												align = nobaseline
+												parentanchor = vcenter
+												autoresize = yes
+												elide = right
+												text = "POWER_BLOC_MANDATE_PROGRESS_TIMER"
+											}
+										}
+									}
+
+									widget = {
+										size = { 60 12 }
+										position = { 40 0 }
+										parentanchor = bottom
+							
+										kmpmp_levels_progressbar = {
+											datamodel = "[GetCohesionLevels]"
+											# position = { 0 2 }
+											parentanchor = vcenter
+											size = { 60 6 }
+											
+											blockoverride "item_properties" {
+												layoutstretchfactor_horizontal = "[FixedPointToInt(CohesionLevel.GetWidth)]"
+												size = { 0 6 }
+												# tooltip = "[SelectLocalization( CohesionLevel.IsActive( PowerBloc.GetCohesion ), 'COHESION_LEVEL_ACTIVE_TOOLTIP', 'COHESION_LEVEL_INACTIVE_TOOLTIP' )]"
+											}
+							
+											blockoverride "level_active" {
+												visible = "[CohesionLevel.IsActive( PowerBloc.GetCohesion )]"
+											}
+							
+											blockoverride "last_level" {
+												visible = "[Not(EqualTo_CFixedPoint(CohesionLevel.GetUpperBound,GetDefine('NPowerBlocs','COHESION_TARGET_MAX')))]"
+											}
+											
+											blockoverride "default_progressbar_value" {
+												value = "[CohesionLevel.GetProgress( PowerBloc.GetCohesion )]"
+											}
+										}		
+									}
+								}
+							}
 							
 							### MONEY
 							container = {
@@ -905,12 +1009,12 @@ types topbar_components
 						}
 						
 						#shows only on hover
-						topbar_secondary_icons = {
+						kmpmp_topbar_secondary_icons = {
 							visible = "[GetVariableSystem.Exists('more_topbar_info')]"
 						}
 						
 						#locked
-						topbar_secondary_icons = {
+						kmpmp_topbar_secondary_icons = {
 							visible = "[Not(GetVariableSystem.Exists('more_topbar_info'))]"
 							
 							blockoverride "animation" {
@@ -986,23 +1090,6 @@ types topbar_components
 					}
 				}
 			}
-		}
-	}
-
-	type topbar_rank = button {
-		name = "topbar_rank"
-		using = hud_visibility
-		datacontext = "[GetPlayer]"
-		using = clickthrough_blocker
-		size = { 57 57 }
-		position = { -4 78 }
-		
-		onclick = "[MapListPanelManager.ToggleCurrentPanel]"
-		onclick = "[SetTempMapModeByKey('mm_default')]"
-
-		### RANK
-		rank_badge = {
-			size = { 57 57 }
 		}
 	}
 }
