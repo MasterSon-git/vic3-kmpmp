@@ -1,2 +1,4 @@
 ﻿l_german:
+ KMPMP_PRESTIGE_HEADER: "[concept_prestige]"
+ KMPMP_ZERO_BASED: "Basis Null"
  KMPMP_WAR_SUPPORT_FROM_POWER_BLOC_PRINCIPLES:0 "Unterstützung von [Concept('concept_power_bloc_principle', '$concept_power_bloc_principles$')]"

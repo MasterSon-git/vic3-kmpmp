@@ -1,0 +1,11 @@
+﻿template kmpmp_prestige_tooltip_with_graph
+{
+	tooltip = "COUNTRY_PRESTIGE_BREAKDOWN"
+	tooltipwidget = {
+		TooltipWidgetType = {
+			blockoverride "tooltip_content_after" {
+				kmpmp_v3_plotline_prestige = {}
+			}
+		}
+	}
+}
