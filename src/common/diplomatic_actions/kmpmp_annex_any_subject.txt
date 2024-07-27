@@ -6,7 +6,7 @@
     show_effect_in_tooltip = yes
 
     potential = { # copy from dp_annex_subject
-        # actually deactivated - maybe activate this by a game rule?
+        # currently deactivated - maybe activate this by a game rule?
         always = no
 
         # NOT = { is_country_type = decentralized }
