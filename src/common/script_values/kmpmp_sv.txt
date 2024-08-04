@@ -14,6 +14,23 @@ kmpmp_enemy_occupation_incorporated_states = {
     }
     divide = num_incorporated_states
 }
+
+kmpmp_turmoil_incorporated_states = {
+    value = 0
+
+    add = {
+        every_scope_state = {
+            limit = {
+                is_incorporated = yes
+            }
+            add = turmoil
+        }
+        divide = num_incorporated_states
+
+        desc = "KMPMP_TURMOIL_INCORPORATED_STATES"
+    }
+}
+
 kmpmp_gdp_per_capita = {
     value = gdp
     divide = total_population
