@@ -5,3 +5,5 @@
 
  owns_or_has_subject_entire_state_region_tooltip: "Gesamte [concept_state_region] [THIS.GetStateRegion.GetName] im Besitz oder vasallisiert durch [SCOPE.GetRootScope.GetCountry.GetName]"
  state_region_owned_and_incorporated_tooltip: "Gesamte [concept_state_region] [SCOPE.sStateRegion('state_region_to_check').GetName] im Besitz und inkorporiert durch [SCOPE.GetRootScope.GetCountry.GetName]"
+
+ kmpmp_turmoil_incorporated_states_greater_or_equal_tooltip: "$KMPMP_TURMOIL_INCORPORATED_STATES$ ist größer oder gleich $TARGET_VALUE|%0v$"

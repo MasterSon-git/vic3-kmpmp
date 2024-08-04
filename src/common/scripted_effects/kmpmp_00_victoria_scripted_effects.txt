@@ -29,6 +29,12 @@
 		}
 		if = {
 			limit = {
+				# kmpmp
+				any_law = {
+					type = law_type:law_council_republic
+					can_be_enacted = yes
+				}
+
 				scope:revolution_leader_ig = {
 					law_stance = {
 						law = law_type:law_council_republic
@@ -99,6 +105,12 @@
 		}
 		else_if = {
 			limit = {
+				# kmpmp
+				any_law = {
+					type = law_type:law_council_republic
+					can_be_enacted = yes
+				}
+
 				scope:revolution_leader_ig = {
 					law_stance = {
 						law = law_type:law_council_republic
