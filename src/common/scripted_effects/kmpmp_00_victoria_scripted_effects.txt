@@ -196,7 +196,7 @@
                 }
             }
             add_loyalists = {
-                value = 0.25
+                value = 0.15 #0.25
             }
             set_variable = {
                 name = kmpmp_block_loyalists_from_resign
@@ -226,7 +226,7 @@
                 }
             }
             add_loyalists = {
-                value = 0.25
+                value = 0.15 #0.25
             }
             set_variable = {
                 name = kmpmp_block_loyalists_from_abdication

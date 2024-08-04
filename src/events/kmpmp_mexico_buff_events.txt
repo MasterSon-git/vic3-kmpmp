@@ -16,7 +16,7 @@ kmpmp_ev_mexico_buff.1 = {
             }
             add_modifier = {
                 name = kmpmp_mexico_defend_the_homeland
-                years = 20
+                years = 15
                 is_decaying = yes
             }
         }

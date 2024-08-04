@@ -1,7 +1,7 @@
 ﻿kmpmp_mexico_defend_the_homeland = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 
-    unit_army_defense_mult = 0.2
+    unit_army_defense_mult = 0.15
 }
 
 kmpmp_integrate_mesoamericans_positive = {

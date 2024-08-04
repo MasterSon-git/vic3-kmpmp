@@ -28,7 +28,7 @@
 		}
 		add_modifier = {
 			name = kmpmp_retake_whats_rightfully_german
-			years = 5
+			years = 4
 		}
 		set_variable = took_decision_emser_depeche
 	}

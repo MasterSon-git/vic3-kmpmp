@@ -1,0 +1,23 @@
+﻿namespace = kmpmp_ev_sardinia
+
+# annex Parma, Lucca, Modena
+kmpmp_ev_sardinia.1 = {
+    type = country_event
+	hidden = yes
+	
+	trigger = {
+        # Fired by history\global
+	}
+
+    immediate = {
+        if = {
+            limit = {
+                is_player = yes
+            }
+            
+            annex_with_incorporation = c:PAR # Parma
+            annex_with_incorporation = c:LUC # Lucca
+            annex_with_incorporation = c:MOD # Modena
+        }
+    }
+}

@@ -7,6 +7,14 @@
                 owner = ROOT
                 count = all
             }
+            trigger_if = {
+                limit = {
+                    is_island = yes
+                }
+                any_scope_state = {
+                    is_incorporated = yes
+                }
+            }
         }
         add = 1
     }
@@ -48,6 +56,14 @@ kmpmp_sv_count_states_the_sugar_monopoly = {
             any_scope_state = { 
                 owner = ROOT
                 count = all
+            }
+            trigger_if = {
+                limit = {
+                    is_island = yes
+                }
+                any_scope_state = {
+                    is_incorporated = yes
+                }
             }
         }
         add = 1
