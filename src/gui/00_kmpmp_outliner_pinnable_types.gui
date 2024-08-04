@@ -1,0 +1,30 @@
+@entry_width = 350
+@entry_height = 30
+
+types pinnable_outliner_types {
+
+	# market outliner from mod "Visible Shortage Fix"
+
+	type outliner_markets = pinnable_outliner_group {
+		datacontext = "[Outliner.AccessCategory('markets')]"
+
+		blockoverride "entry_size" {
+			size = { @entry_width @entry_height }
+		}
+
+		blockoverride "fixedgridbox_cell_size" {
+			addcolumn = @entry_width
+			addrow = 120 # 60
+		}
+
+		blockoverride "item" {
+			blockoverride "entry_size" {
+				# size = { @entry_width 60 }
+				size = { @entry_width 120 }
+			}
+
+			# market_item = {}
+			kmpmp_market_item = {}
+		}
+	}
+}

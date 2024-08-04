@@ -1,0 +1,634 @@
+﻿# COPY-PASTED FOR NOW
+@kmpmp_plotline_large_height = 200
+@kmpmp_plotline_small_height = 100
+@kmpmp_plotline_large_width = 840
+@kmpmp_plotline_small_width = 280
+
+
+types information_panels_types
+{
+	type kmpmp_v3_plotline_gdp = kmpmp_v3_plotline {
+		using = default_list_position
+		blockoverride "header" {
+			text = "GDP"
+		}
+		# blockoverride "size" {
+		# 	# size = { 280 100 }
+		# 	size = { 840 200 }
+		# }
+		blockoverride "line_color" {
+			color = { .9 .9 .9 1.0 }
+		}
+		blockoverride "line_plotpoints" {
+			visible = "[Not(IsEmpty(Country.GetGDPTrend))]"
+			plotpoints = "[GetTrendPlotPointsNormalized(Country.GetGDPTrend, '(CFixedPoint)0', GetMax(Country.GetGDPTrend) )]"
+		}
+		blockoverride "line_plotpoints_non_zero_based" {
+			visible = "[Not(IsEmpty(Country.GetGDPTrend))]"
+			plotpoints = "[GetTrendPlotPointsNormalized(Country.GetGDPTrend, GetMin(Country.GetGDPTrend), GetMax(Country.GetGDPTrend))]"
+		}
+		blockoverride "maxvalue" {
+			text = "[GetMax(Country.GetGDPTrend)|K]"
+		}
+		blockoverride "minvalue" {
+			raw_text = "0"
+		}
+		blockoverride "minvalue_non_zero_based" {
+			raw_text = "[GetMin(Country.GetGDPTrend)|K]"
+		}
+		blockoverride "startdate" {
+			text = "[GetOldestDate(Country.GetGDPTrend)]"
+		}
+		blockoverride "enddate" {
+			text = "[GetLatestDate(Country.GetGDPTrend)]"
+		}
+		blockoverride "multiitem" {}
+
+		blockoverride "empty_state_visibility" {
+			visible = "[EqualTo_string(GetOldestDate(Country.GetGDPTrend), GetLatestDate(Country.GetGDPTrend))]"
+		}
+		blockoverride "everything_that_is_not_empty_state_visibility" {
+			visible = "[Not(EqualTo_string(GetOldestDate(Country.GetGDPTrend), GetLatestDate(Country.GetGDPTrend)))]"
+		}
+		blockoverride "empty_state_text" {
+			text = "GRAPH_NOT_INITIALIZED"
+		}
+	}
+
+	type kmpmp_v3_plotline_prestige = kmpmp_v3_plotline {
+		using = default_list_position
+
+		blockoverride "header" {
+			# text = "PRESTIGE"
+			text = "KMPMP_PRESTIGE_HEADER"
+		}
+
+		# blockoverride "size" {
+		# 	# size = { 280 100 }
+		# 	size = { 840 200 }
+		# }
+		blockoverride "line_color" {
+			color = { .9 .9 .9 1.0 }
+		}
+		blockoverride "line_plotpoints" {
+			visible = "[Not(IsEmpty(Country.GetPrestigeTrend))]"
+			plotpoints = "[GetTrendPlotPointsNormalized(Country.GetPrestigeTrend, '(CFixedPoint)0', GetMax(Country.GetPrestigeTrend) )]"
+		}
+		blockoverride "line_plotpoints_non_zero_based" {
+			visible = "[Not(IsEmpty(Country.GetPrestigeTrend))]"
+			plotpoints = "[GetTrendPlotPointsNormalized(Country.GetPrestigeTrend, GetMin(Country.GetPrestigeTrend), GetMax(Country.GetPrestigeTrend))]"
+		}
+		blockoverride "maxvalue" {
+			text = "[GetMax(Country.GetPrestigeTrend)|K]"
+		}
+		blockoverride "minvalue" {
+			raw_text = "0"
+		}
+		blockoverride "minvalue_non_zero_based" {
+			raw_text = "[GetMin(Country.GetPrestigeTrend)]"
+		}
+		blockoverride "startdate" {
+			text = "[GetOldestDate(Country.GetPrestigeTrend)]"
+		}
+		blockoverride "enddate" {
+			text = "[GetLatestDate(Country.GetPrestigeTrend)]"
+		}
+		blockoverride "multiitem" {}
+
+		blockoverride "empty_state_visibility" {
+			visible = "[IsEmpty(Country.GetPrestigeTrend)]"
+		}
+		blockoverride "everything_that_is_not_empty_state_visibility" {
+			visible = "[Not(IsEmpty(Country.GetPrestigeTrend))]"
+		}
+		blockoverride "empty_state_text" {
+			text = "GRAPH_NOT_INITIALIZED"
+		}
+	}
+
+	type kmpmp_v3_plotline = flowcontainer {
+		margin_top = 10
+
+		flowcontainer = {
+			direction = vertical
+			margin_bottom = 40
+			margin_left = 60
+			margin_right = 30
+
+			background = {
+				using = paper_bg
+			}
+
+			# header
+			margin_widget = {
+				margin_right = 90 # fix the margin_left + margin_right from parent container
+				margin_bottom = 1
+				size = { 100% 38 }
+
+				section_header_button = {
+					blockoverride "layout" {
+						parentanchor = left
+						size = { 100% 38 }
+					}
+					
+					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Toggle( 'kmpmp_v3_plotline_extended' )]"
+					}
+		
+					blockoverride "onclick_showmore" {
+						visible = "[Not(GetVariableSystem.Exists( 'kmpmp_v3_plotline_extended' ))]"
+					}
+		
+					blockoverride "onclick_showless" {
+						visible = "[GetVariableSystem.Exists( 'kmpmp_v3_plotline_extended' )]"
+					}
+				}
+
+				textbox = {
+					block "header" {
+						raw_text = "#title header name#!"
+					}
+
+					size = { 100% 38 }
+					align = center|nobaseline
+					default_format = "#title"
+				}
+			}
+
+			flowcontainer = {
+				direction = horizontal
+				visible = "[GetVariableSystem.Exists( 'kmpmp_v3_plotline_extended' )]"
+				margin_bottom = 5
+
+				filter_button = {
+					blockoverride "text" {
+						text = "KMPMP_ZERO_BASED"
+					}
+
+					visible = "[GetVariableSystem.HasValue('kmpmp_v3_plotline_zero_based', 'false')]"
+
+					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Set('kmpmp_v3_plotline_zero_based', 'true')]"
+					}
+				}
+
+				filter_selected_button = {
+					blockoverride "text" {
+						text = "KMPMP_ZERO_BASED"
+					}
+
+					visible = "[Or(GetVariableSystem.HasValue('kmpmp_v3_plotline_zero_based', 'true'), Not(GetVariableSystem.Exists('kmpmp_v3_plotline_zero_based')))]"
+
+					blockoverride "onclick" {
+						onclick = "[GetVariableSystem.Set('kmpmp_v3_plotline_zero_based', 'false')]"
+					}
+				}
+			}
+
+			# graph
+			kmpmp_v3_plotline_graph = {
+				visible = "[Not(GetVariableSystem.Exists( 'kmpmp_v3_plotline_extended' ))]"
+				blockoverride "size" {
+					size = { @kmpmp_plotline_small_width @kmpmp_plotline_small_height }
+				}
+			}
+
+			kmpmp_v3_plotline_graph = {
+				visible = "[GetVariableSystem.Exists( 'kmpmp_v3_plotline_extended' )]"
+				blockoverride "size" {
+					size = { @kmpmp_plotline_large_width @kmpmp_plotline_large_height }
+				}
+			}
+
+			# widget = {
+			# 	block "size" {
+			# 		size = { 360 200 }
+			# 	}
+
+			# 	block "empty_state" {
+			# 		textbox = {
+			# 			block "empty_state_visibility" {
+			# 				visible = no
+			# 			}
+			# 			block "empty_state_text" {
+			# 				raw_text = "#todo nothing to see here#!"
+			# 			}
+			# 			parentanchor = center
+			# 			align = hcenter|nobaseline
+			# 		}
+			# 	}
+
+			# 	background = {
+			# 		texture = "gfx/interface/graph/graph_frame.dds"
+			# 		spriteType = Corneredtiled
+			# 		spriteborder = { 2 2 }
+			# 		texture_density = 2
+			# 		margin = { 4 4 }
+			# 		alpha = 0.85
+
+			# 		modify_texture = {
+			# 			texture = "gfx/interface/backgrounds/default_bg_shading.dds"
+			# 			spriteType = Corneredstretched
+			# 			spriteborder = { 0 0 }
+			# 			blend_mode = overlay
+			# 			alpha = 0.7
+			# 		}
+			# 	}
+
+			# 	widget = {
+			# 		size = { 100% 100% }
+
+			# 		block "datamodel" {}
+
+			# 		block "everything_that_is_not_empty_state_visibility" {}
+
+			# 		block "multiitem" {
+			# 			item = {
+			# 				plotline = {
+			# 					size = { 100% 100% }
+			# 					using = plot_line
+			# 					width = 3.5
+
+			# 					block "line_color" {
+			# 						color = { 0.24 0.32 0.18 0.7 }
+			# 					}
+
+			# 					block "line_plotpoints" {}
+			# 					block "tooltip" {}
+			# 				}
+			# 			}
+			# 		}
+
+			# 		block "singleitem" {
+			# 			plotline = {
+			# 				size = { 100% 100% }
+			# 				using = plot_line
+			# 				width = 3.5
+
+			# 				block "line_color" {
+			# 					color = { 0.24 0.32 0.18 0.7 }
+			# 				}
+
+			# 				block "tooltip" {}
+
+			# 				block "line_plotpoints" {}
+			# 			}
+			# 		}
+
+			# 		block "extra_plotlines" {}
+			# 	}
+
+			# 	axis = {
+			# 		size = { 100% 100% }
+			# 		direction = vertical
+
+			# 		axis_label = {
+			# 			textbox = {
+			# 				autoresize = yes
+			# 				widgetanchor = vcenter|right
+			# 				parentanchor = left
+			# 				margin_right = 8
+			# 				margin_bottom = 10
+			# 				align = left|nobaseline
+			# 				using = fontsize_small
+
+			# 				block "everything_that_is_not_empty_state_visibility" {
+			# 					visible = yes
+			# 				}
+
+			# 				block "minvalue" {
+			# 					raw_text = "0"
+			# 				}
+			# 			}
+			# 		}
+
+			# 		axis_label = {
+			# 			textbox = {
+			# 				autoresize = yes
+			# 				widgetanchor = vcenter|right
+			# 				parentanchor = left
+			# 				margin_right = 8
+			# 				margin_top = 10
+			# 				align = left|nobaseline
+			# 				using = fontsize_small
+
+			# 				block "everything_that_is_not_empty_state_visibility" {
+			# 					visible = yes
+			# 				}
+
+			# 				block "maxvalue" {
+			# 					raw_text = "100%"
+			# 				}
+			# 			}
+			# 		}
+			# 	}
+
+			# 	axis = {
+			# 		size = { 100% 100% }
+			# 		direction = horizontal
+
+			# 		axis_label = {
+			# 			textbox = {
+			# 				autoresize = yes
+			# 				parentanchor = bottom
+			# 				widgetanchor = left|top
+			# 				align = left
+			# 				margin_top = 8
+			# 				using = fontsize_small
+
+			# 				block "everything_that_is_not_empty_state_visibility" {
+			# 					visible = yes
+			# 				}
+
+			# 				block "startdate" {
+			# 					text = "[PoliticsPanel.GetCloutGraphDateStart]"
+			# 				}
+			# 			}
+			# 		}
+
+			# 		axis_label = {
+			# 			textbox = {
+			# 				autoresize = yes
+			# 				parentanchor = bottom
+			# 				widgetanchor = right|top
+			# 				align = right
+			# 				margin_top = 8
+			# 				using = fontsize_small
+
+			# 				block "everything_that_is_not_empty_state_visibility" {
+			# 					visible = yes
+			# 				}
+
+			# 				block "enddate" {
+			# 					text = "[PoliticsPanel.GetCloutGraphDateEnd]"
+			# 				}
+			# 			}
+			# 		}
+			# 	}
+			# }
+		}
+	}
+
+	type kmpmp_v3_plotline_graph = widget {
+		block "size" {
+			size = { 360 200 }
+		}
+
+		block "empty_state" {
+			textbox = {
+				block "empty_state_visibility" {
+					visible = no
+				}
+				block "empty_state_text" {
+					raw_text = "#todo nothing to see here#!"
+				}
+				parentanchor = center
+				align = hcenter|nobaseline
+			}
+		}
+
+		background = {
+			texture = "gfx/interface/graph/graph_frame.dds"
+			spriteType = Corneredtiled
+			spriteborder = { 2 2 }
+			texture_density = 2
+			margin = { 4 4 }
+			alpha = 0.85
+
+			modify_texture = {
+				texture = "gfx/interface/backgrounds/default_bg_shading.dds"
+				spriteType = Corneredstretched
+				spriteborder = { 0 0 }
+				blend_mode = overlay
+				alpha = 0.7
+			}
+		}
+
+		widget = {
+			size = { 100% 100% }
+
+			block "datamodel" {}
+
+			block "everything_that_is_not_empty_state_visibility" {}
+
+			# Zero Based
+			widget = {
+				visible = "[Or(GetVariableSystem.HasValue('kmpmp_v3_plotline_zero_based', 'true'), Not(GetVariableSystem.Exists('kmpmp_v3_plotline_zero_based')))]"
+				size = { 100% 100% }
+
+				block "multiitem" {
+					item = {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+	
+							block "line_color" {
+								color = { 0.24 0.32 0.18 0.7 }
+							}
+	
+							block "line_plotpoints" {}
+							block "tooltip" {}
+						}
+					}
+				}
+	
+				block "singleitem" {
+					plotline = {
+						size = { 100% 100% }
+						using = plot_line
+						width = 3.5
+	
+						block "line_color" {
+							color = { 0.24 0.32 0.18 0.7 }
+						}
+	
+						block "tooltip" {}
+	
+						block "line_plotpoints" {}
+					}
+				}
+			}
+
+			# Non Zero Based
+			widget = {
+				visible = "[GetVariableSystem.HasValue('kmpmp_v3_plotline_zero_based', 'false')]"
+				size = { 100% 100% }
+
+				block "multiitem" {
+					item = {
+						plotline = {
+							size = { 100% 100% }
+							using = plot_line
+							width = 3.5
+	
+							block "line_color" {
+								color = { 0.24 0.32 0.18 0.7 }
+							}
+	
+							block "line_plotpoints_non_zero_based" {}
+							block "tooltip" {}
+						}
+					}
+				}
+	
+				block "singleitem" {
+					plotline = {
+						size = { 100% 100% }
+						using = plot_line
+						width = 3.5
+	
+						block "line_color" {
+							color = { 0.24 0.32 0.18 0.7 }
+						}
+	
+						block "tooltip" {}
+	
+						block "line_plotpoints_non_zero_based" {}
+					}
+				}
+			}
+
+			block "extra_plotlines" {}
+		}
+
+		# Zero Based
+		axis = {
+			visible = "[Or(GetVariableSystem.HasValue('kmpmp_v3_plotline_zero_based', 'true'), Not(GetVariableSystem.Exists('kmpmp_v3_plotline_zero_based')))]"
+
+			size = { 100% 100% }
+			direction = vertical
+			
+			axis_label = {
+				textbox = {
+					autoresize = yes
+					widgetanchor = vcenter|right
+					parentanchor = left
+					margin_right = 8
+					margin_bottom = 10
+					align = left|nobaseline
+					using = fontsize_small
+
+					block "everything_that_is_not_empty_state_visibility" {
+						visible = yes
+					}
+
+					block "minvalue" {
+						raw_text = "0"
+					}
+				}
+			}
+
+			axis_label = {
+				textbox = {
+					autoresize = yes
+					widgetanchor = vcenter|right
+					parentanchor = left
+					margin_right = 8
+					margin_top = 10
+					align = left|nobaseline
+					using = fontsize_small
+
+					block "everything_that_is_not_empty_state_visibility" {
+						visible = yes
+					}
+
+					block "maxvalue" {
+						raw_text = "100%"
+					}
+				}
+			}
+		}
+
+		# Non Zero Based
+		axis = {
+			visible = "[GetVariableSystem.HasValue('kmpmp_v3_plotline_zero_based', 'false')]"
+
+			size = { 100% 100% }
+			direction = vertical
+			
+			axis_label = {
+				textbox = {
+					autoresize = yes
+					widgetanchor = vcenter|right
+					parentanchor = left
+					margin_right = 8
+					margin_bottom = 10
+					align = left|nobaseline
+					using = fontsize_small
+
+					block "everything_that_is_not_empty_state_visibility" {
+						visible = yes
+					}
+
+					block "minvalue_non_zero_based" {
+						raw_text = "0"
+					}
+				}
+			}
+
+			axis_label = {
+				textbox = {
+					autoresize = yes
+					widgetanchor = vcenter|right
+					parentanchor = left
+					margin_right = 8
+					margin_top = 10
+					align = left|nobaseline
+					using = fontsize_small
+
+					block "everything_that_is_not_empty_state_visibility" {
+						visible = yes
+					}
+
+					block "maxvalue" {
+						raw_text = "100%"
+					}
+				}
+			}
+		}
+
+		axis = {
+			size = { 100% 100% }
+			direction = horizontal
+
+			axis_label = {
+				textbox = {
+					autoresize = yes
+					parentanchor = bottom
+					widgetanchor = left|top
+					align = left
+					margin_top = 8
+					using = fontsize_small
+
+					block "everything_that_is_not_empty_state_visibility" {
+						visible = yes
+					}
+
+					block "startdate" {
+						text = "[PoliticsPanel.GetCloutGraphDateStart]"
+					}
+				}
+			}
+
+			axis_label = {
+				textbox = {
+					autoresize = yes
+					parentanchor = bottom
+					widgetanchor = right|top
+					align = right
+					margin_top = 8
+					using = fontsize_small
+
+					block "everything_that_is_not_empty_state_visibility" {
+						visible = yes
+					}
+
+					block "enddate" {
+						text = "[PoliticsPanel.GetCloutGraphDateEnd]"
+					}
+				}
+			}
+		}
+	}
+}
