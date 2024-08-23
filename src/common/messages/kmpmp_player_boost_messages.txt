@@ -1,0 +1,15 @@
+﻿kmpmp_player_boost_unite_the_workers_of_the_world_invalid = {
+    type = country
+    group = "kmpmp_player_boost_notification_group"
+    texture = "gfx/interface/icons/notification_icons/revolution.dds"
+	notification_type = toast
+    days = 60
+}
+
+kmpmp_player_boost_unite_the_workers_of_the_world_decision_taken = {
+    type = country
+    group = "kmpmp_player_boost_notification_group"
+    texture = "gfx/interface/icons/notification_icons/revolution.dds"
+	notification_type = toast
+    days = 60
+}
