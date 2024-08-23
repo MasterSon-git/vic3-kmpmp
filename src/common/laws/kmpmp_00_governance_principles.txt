@@ -266,12 +266,18 @@ law_council_republic = {
 				ig:ig_trade_unions ?= {
 					ig_clout >= 0.2
 				}
-				any_interest_group = {
-					leader = {
-						OR = {
-							has_ideology = ideology:ideology_anarchist
-							has_ideology = ideology:ideology_communist
-							has_ideology = ideology:ideology_vanguardist
+				custom_tooltip = {
+					text = kmpmp_law_council_republic_ideology_tooltip
+					any_interest_group = {
+						filter = {
+							THIS = PREV.ig:ig_trade_unions
+						}
+						leader = {
+							OR = {
+								has_ideology = ideology:ideology_anarchist
+								has_ideology = ideology:ideology_communist
+								has_ideology = ideology:ideology_vanguardist
+							}
 						}
 					}
 				}
