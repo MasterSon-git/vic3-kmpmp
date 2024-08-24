@@ -1,0 +1,40 @@
+﻿# Root = Country
+on_monthly_pulse_country = {
+    on_actions = {
+        kmpmp_player_boost_remove_invalid
+        kmpmp_player_boost_effect_state_unincorporated_education_access
+    }
+}
+
+kmpmp_player_boost_effect_state_unincorporated_education_access = {
+    effect = {
+        if = {
+            limit = {
+                has_modifier = kmpmp_player_boost_imperialism_oversea_empire
+            }
+            every_scope_state = {
+                limit = {
+                    is_incorporated = no
+                }
+                add_modifier = {
+                    name = kmpmp_player_boost_imperialism_oversea_empire_state_unincorporated_education_access
+                    days = 30
+                }
+            }
+        }
+    }
+}
+
+kmpmp_player_boost_remove_invalid = {
+    effect = {
+        if = {
+            limit = {
+                has_modifier = kmpmp_player_boost_unite_the_workers_of_the_world
+                kmpmp_player_boost_can_take_unite_the_workers_of_the_world = no
+            }
+            remove_modifier = kmpmp_player_boost_adjustment
+            remove_player_boost_modifiers = yes
+            post_notification = kmpmp_player_boost_unite_the_workers_of_the_world_invalid
+        }
+    }
+}

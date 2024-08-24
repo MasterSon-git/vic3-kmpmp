@@ -12,7 +12,7 @@
     when_taken = {
         add_modifier = {
             name = kmpmp_player_boost_adjustment
-            days = 5475 # 15 years
+            years = 15
         }
         remove_player_boost_modifiers = yes
         add_modifier = {
@@ -39,7 +39,7 @@ kmpmp_player_boost_imperialism_oversea_empire_decision = {
     when_taken = {
         add_modifier = {
             name = kmpmp_player_boost_adjustment
-            days = 5475 # 15 years
+            years = 15
         }
         remove_player_boost_modifiers = yes
         add_modifier = {
@@ -76,7 +76,7 @@ kmpmp_player_boost_military_industrial_complex_decision = {
     when_taken = {
         add_modifier = {
             name = kmpmp_player_boost_adjustment
-            days = 5475 # 15 years
+            years = 15
         }
         remove_player_boost_modifiers = yes
         add_modifier = {
@@ -103,7 +103,7 @@ kmpmp_player_boost_state_capitalism_decision = {
     when_taken = {
         add_modifier = {
             name = kmpmp_player_boost_adjustment
-            days = 5475 # 15 years
+            years = 15
         }
         remove_player_boost_modifiers = yes
         add_modifier = {
@@ -130,7 +130,7 @@ kmpmp_player_boost_autarky_decision = {
     when_taken = {
         add_modifier = {
             name = kmpmp_player_boost_adjustment
-            days = 5475 # 15 years
+            years = 15
         }
         remove_player_boost_modifiers = yes
         add_modifier = {
@@ -162,7 +162,7 @@ kmpmp_player_boost_social_welfare_state_decision = {
     when_taken = {
         add_modifier = {
             name = kmpmp_player_boost_adjustment
-            days = 5475 # 15 years
+            years = 15
         }
         remove_player_boost_modifiers = yes
         add_modifier = {
@@ -194,7 +194,7 @@ kmpmp_player_boost_corporative_socialism_decision = {
     when_taken = {
         add_modifier = {
             name = kmpmp_player_boost_adjustment
-            days = 5475 # 15 years
+            years = 15
         }
         remove_player_boost_modifiers = yes
         add_modifier = {
@@ -226,7 +226,7 @@ kmpmp_player_boost_military_police_state_decision = {
     when_taken = {
         add_modifier = {
             name = kmpmp_player_boost_adjustment
-            days = 5475 # 15 years
+            years = 15
         }
         remove_player_boost_modifiers = yes
         add_modifier = {
@@ -258,11 +258,95 @@ kmpmp_player_boost_tycoon_capitalism_decision = {
     when_taken = {
         add_modifier = {
             name = kmpmp_player_boost_adjustment
-            days = 5475 # 15 years
+            years = 15
         }
         remove_player_boost_modifiers = yes
         add_modifier = {
             name = kmpmp_player_boost_tycoon_capitalism
+        }
+    }
+
+    ai_chance = {
+        base = 0	
+    }
+}
+
+kmpmp_player_boost_rhine_capitalism_decision = {
+    is_shown = {
+        always = yes
+    }
+
+    possible = {
+        NOT = {
+            has_modifier = kmpmp_player_boost_adjustment
+        }
+        exists = ig:ig_armed_forces
+        exists = ig:ig_industrialists
+        exists = ig:ig_trade_unions
+
+        ig:ig_armed_forces = {
+            ig_clout >= 0.15
+            ig_approval >= 5
+        }
+
+        ig:ig_industrialists = {
+            ig_clout >= 0.15
+            ig_approval >= 5
+        }
+        
+        ig:ig_trade_unions = {
+            ig_clout >= 0.15
+            ig_approval >= 5
+        }
+    }
+
+    when_taken = {
+        add_modifier = {
+            name = kmpmp_player_boost_adjustment
+            years = 15
+        }
+        remove_player_boost_modifiers = yes
+        add_modifier = {
+            name = kmpmp_player_boost_rhine_capitalism
+        }
+    }
+
+    ai_chance = {
+        base = 0	
+    }
+}
+
+kmpmp_player_boost_unite_the_workers_of_the_world_decision = {
+    is_shown = {
+        always = yes
+    }
+
+    possible = {
+        NOT = {
+            has_modifier = kmpmp_player_boost_adjustment
+        }
+        kmpmp_player_boost_can_take_unite_the_workers_of_the_world = yes
+    }
+
+    when_taken = {
+        add_modifier = {
+            name = kmpmp_player_boost_adjustment
+            years = 15
+        }
+        remove_player_boost_modifiers = yes
+        add_modifier = {
+            name = kmpmp_player_boost_unite_the_workers_of_the_world
+        }
+
+        save_scope_as = country_takes_unite_the_workers_of_the_world
+        every_country = {
+            limit = {
+                is_player = yes
+                NOT = {
+                    ROOT = THIS
+                }
+            }
+            post_notification = kmpmp_player_boost_unite_the_workers_of_the_world_decision_taken
         }
     }
 

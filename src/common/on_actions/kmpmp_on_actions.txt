@@ -11,7 +11,6 @@ on_monthly_pulse_country = {
         kmpmp_update_nation_buffs_action
         kmpmp_update_united_country_buff_action
         kmpmp_update_global_lists_action
-        player_boost_effect_state_unincorporated_education_access
     }
 }
 
@@ -44,25 +43,6 @@ kmpmp_update_global_lists_action = {
                 c:GBR ?= ROOT
             }
             kmpmp_update_global_lists = yes
-        }
-    }
-}
-
-player_boost_effect_state_unincorporated_education_access = {
-    effect = {
-        if = {
-            limit = {
-                has_modifier = kmpmp_player_boost_imperialism_oversea_empire
-            }
-            every_scope_state = {
-                limit = {
-                    is_incorporated = no
-                }
-                add_modifier = {
-                    name = kmpmp_player_boost_imperialism_oversea_empire_state_unincorporated_education_access
-                    days = 30
-                }
-            }
         }
     }
 }
