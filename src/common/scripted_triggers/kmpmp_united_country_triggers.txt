@@ -54,3 +54,41 @@ kmpmp_owns_all_p01_states = {
         always = no
     }
 }
+
+kmpmp_owns_all_sca_states = {
+    trigger_if = {
+        limit = {
+            has_global_variable_list = states_sca
+        }
+        any_in_global_list = {
+            variable = states_sca
+            any_scope_state = {
+                owner = ROOT
+                count = all
+            }
+            count = all
+        }
+    }
+    trigger_else = {
+        always = no
+    }
+}
+
+kmpmp_owns_70percent_sca_states = {
+    trigger_if = {
+        limit = {
+            has_global_variable_list = states_sca
+        }
+        any_in_global_list = {
+            variable = states_sca
+            any_scope_state = {
+                owner = ROOT
+                count = all
+            }
+            percent >= 0.7
+        }
+    }
+    trigger_else = {
+        always = no
+    }
+}
