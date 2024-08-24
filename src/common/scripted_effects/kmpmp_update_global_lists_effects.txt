@@ -7,6 +7,7 @@
     kmpmp_update_global_list_states_ibe = yes
     kmpmp_update_global_list_states_unl = yes
     kmpmp_update_global_list_states_p01 = yes
+    kmpmp_update_global_list_states_sca = yes
 }
 
 kmpmp_update_global_list_states_je_master_of_mediterranean_sea = {
@@ -567,6 +568,63 @@ kmpmp_update_global_list_states_p01 = {
         add_to_global_variable_list = {
             name = states_p01
             target = s:STATE_BAGHDAD
+        }
+    }
+}
+
+kmpmp_update_global_list_states_sca = {
+    if = {
+        limit = { # list version not exists or version <= 0
+            OR = {
+                NOT = {
+                    exists = global_var:states_sca_version
+                }
+                global_var:states_sca_version <= 0
+            }
+        }
+        # clean up list if exists
+        if = {
+            limit = {
+                has_global_variable_list = states_sca
+            }
+            clear_global_variable_list = states_sca
+        }
+        # v1
+        set_global_variable = {
+            name = states_sca_version
+            value = 1
+        }
+        # Scandinavian states
+        every_state = {
+            state_region = {
+                if = {
+                    limit = {
+                        OR = {
+                            NOT = {
+                                has_global_variable_list = states_sca
+                            }
+                            NOT = {
+                                is_target_in_global_variable_list = {
+                                    name = states_sca
+                                    target = THIS
+                                }
+                            }
+                        }
+                        
+                        OR = {
+                            is_homeland = cu:swedish
+                            is_homeland = cu:danish
+                            is_homeland = cu:norwegian
+                            is_homeland = cu:icelandic
+                        }
+                    }
+
+                    add_to_global_variable_list = {
+                        name = states_sca
+                        target = THIS
+                    }
+                }
+            }
         }
     }
 }
