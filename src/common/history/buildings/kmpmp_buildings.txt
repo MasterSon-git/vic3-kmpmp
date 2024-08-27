@@ -248,6 +248,131 @@
             }
         }
     }
+    s:STATE_HOKKAIDO = {
+        region_state:JAP = {
+            create_building= {
+                building = "building_port"
+                add_ownership = {
+                    country = {
+                        country = "c:JAP"
+                        levels = 1
+                    }
+                }
+                reserves = 1
+                activate_production_methods = { "pm_basic_port" }
+            }
+        }
+    }
+    s:STATE_TOHOKU = {
+        region_state:JAP = {
+            create_building = {
+                building = "building_port"
+                add_ownership = {
+                    country = {
+                        country = "c:JAP"
+                        levels = 1
+                    }
+                }
+                reserves = 1
+                activate_production_methods = { "pm_basic_port" }
+            }
+            create_building = {
+                building = "building_cotton_plantation"
+                add_ownership = {
+                    country = {
+                        country = "c:JAP"
+                        levels = 1
+                    }
+                }
+                reserves = 1
+                activate_production_methods = { "default_building_cotton_plantation" "pm_road_carts"  }
+            }
+        }
+    }
+    s:STATE_KANTO = {
+        region_state:JAP = {
+            create_building = {
+                building = "building_shipyards"
+                add_ownership = {
+                    country = {
+                        country = "c:JAP"
+                        levels = 2
+                    }
+                }
+                reserves = 1
+                activate_production_methods = { "pm_basic_shipbuilding"  }
+            }
+            create_building = {
+                building = "building_military_shipyards"
+                add_ownership = {
+                    country = {
+                        country = "c:JAP"
+                        levels = 1
+                    }
+                }
+                reserves = 1
+                activate_production_methods = { "pm_military_shipbuilding_wooden"  }
+            }
+            create_building = {
+                building = "building_logging_camp"
+                add_ownership = {
+                    country = {
+                        country = "c:JAP"
+                        levels = 2
+                    }
+                }
+                reserves = 1
+            }
+            create_building = {
+                building = "building_cotton_plantation"
+                add_ownership = {
+                    country = {
+                        country = "c:JAP"
+                        levels = 2
+                    }
+                }
+                reserves = 1
+                activate_production_methods = { "default_building_cotton_plantation" "pm_road_carts"  }
+            }
+            create_building = {
+                building = "building_port"
+                add_ownership = {
+                    country = {
+                        country = "c:JAP"
+                        levels = 3 #1
+                    }
+                }
+                reserves = 1
+                activate_production_methods = { "pm_basic_port" }
+            }
+        }
+    }
+    s:STATE_CHUBU = {
+        region_state:JAP = {
+            create_building = {
+				building = "building_fishing_wharf"
+				add_ownership = {
+					country = {
+                        country = "c:JAP"
+                        levels = 1
+                    }
+				}
+				reserves = 1
+				activate_production_methods = { "pm_simple_fishing" "pm_unrefrigerated"  }
+			}
+            create_building = {
+                building = "building_port"
+                add_ownership = {
+                    country = {
+                        country = "c:JAP"
+                        levels = 1
+                    }
+                }
+                reserves = 1
+                activate_production_methods = { "pm_basic_port" }
+            }
+        }
+    }
     s:STATE_KANSAI = {
         region_state:JAP = {
             create_building = {
@@ -260,6 +385,90 @@
                 }
                 reserves = 1
                 activate_production_methods = { "pm_horizontal_drawer_cabinets" }
+            }
+            create_building = {
+                building = "building_university"
+                add_ownership = {
+                    country = {
+                        country = "c:JAP"
+                        levels = 5
+                    }
+                }
+                reserves = 1
+                activate_production_methods = { "pm_scholastic_education" "pm_religious_academia" }
+            }
+            create_building = {
+                building = "building_paper_mills"
+                add_ownership = {
+                    country = {
+                        country = "c:JAP"
+                        levels = 1
+                    }
+                }
+                reserves = 1
+                activate_production_methods = { "pm_pulp_pressing" "pm_automation_disabled"  }
+            }
+            create_building = {
+                building = "building_logging_camp"
+                add_ownership = {
+                    country = {
+                        country = "c:JAP"
+                        levels = 2
+                    }
+                }
+                reserves = 1
+            }
+            create_building = {
+                building = "building_port"
+                add_ownership = {
+                    country = {
+                        country = "c:JAP"
+                        levels = 1
+                    }
+                }
+                reserves = 1
+                activate_production_methods = { "pm_basic_port" }
+            }
+        }
+    }
+    s:STATE_CHUGOKU = {
+        region_state:JAP = {
+            create_building = {
+                building = "building_cotton_plantation"
+                add_ownership = {
+                    country = {
+                        country = "c:JAP"
+                        levels = 2
+                    }
+                }
+                reserves = 1
+                activate_production_methods = { "default_building_cotton_plantation" "pm_road_carts"  }
+            }
+            create_building = {
+                building = "building_port"
+                add_ownership = {
+                    country = {
+                        country = "c:JAP"
+                        levels = 1
+                    }
+                }
+                reserves = 1
+                activate_production_methods = { "pm_basic_port" }
+            }
+        }
+    }
+    s:STATE_SHIKOKU = {
+        region_state:JAP = {
+            create_building = {
+                building = "building_port"
+                add_ownership = {
+                    country = {
+                        country = "c:JAP"
+                        levels = 1
+                    }
+                }
+                reserves = 1
+                activate_production_methods = { "pm_basic_port" }
             }
         }
     }

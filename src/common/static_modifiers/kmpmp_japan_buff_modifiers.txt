@@ -1,9 +1,14 @@
 ﻿kmpmp_japan_buff_start = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-    country_law_enactment_success_add = 0.1
+    country_law_enactment_success_add = 0.15
     country_law_enactment_time_mult = -0.15
     building_university_throughput_add = 0.3
-    country_minting_add = 20000
+    country_minting_add = 30000
+}
+
+kmpmp_japan_buff_start_decaying = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    country_prestige_mult = 0.5
 }
 
 kmpmp_japan_buff_meiji_complete = {
@@ -13,7 +18,9 @@ kmpmp_japan_buff_meiji_complete = {
     country_infamy_decay_mult = 0.15
     unit_offense_mult = 0.2
     unit_defense_mult = 0.2
+    unit_occupation_mult = 0.3
 }
+
 kmpmp_grow_some_balls = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
 
