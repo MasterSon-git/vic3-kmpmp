@@ -144,12 +144,13 @@ law_protectionism = {
 		tariff_export_add = 0.30
 	}
 
-	possible_political_movements = {
-		law_free_trade
+	modifier = {
+		country_leverage_resistance_mult = 0.25
+		country_max_companies_add = 1 #kmpmp
 	}
 
-	modifier = {
-		country_max_companies_add = 1 #kmpmp
+	possible_political_movements = {
+		law_free_trade
 	}
 
 	pop_support = {
