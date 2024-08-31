@@ -149,9 +149,6 @@
  kmpmp_average_sol_one_below_root_tt:0 "Durchschnitts-[concept_sol] liegt #b eins#! unter unserem"
  was_target_of_mass_migration_tt:0 "Hatte keine Auswanderungswelle nach Amerika in den letzten 10 Jahren"
 
- kmpmp_get_recognized_by_tech_decision:0 "Technologische Anerkennung"
- kmpmp_get_recognized_by_tech_decision_desc:0 "Wir müssen uns auf dem Feld der Wissenschaft beweisen."
-
  kmpmp_character_abdication_legitimacy:0 "Abgedankt"
  kmpmp_character_resign_from_office_legitimacy:0 "Amtsrücktritt"
  kmpmp_no_loyalists_from_capitulate_to_revolution:0 "Keine Loyalisten für 50 Jahre"
