@@ -106,3 +106,55 @@ kmpmp_formation.1 = {
 		}
 	}
 }
+
+# Latin Empire
+kmpmp_formation.2 = {
+	type = country_event
+	placement = ROOT
+
+	title = kmpmp_formation.2.t
+	desc = kmpmp_formation.2.d
+	flavor = kmpmp_formation.2.f
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	duration = 3
+
+	trigger = {
+		c:LTN ?= THIS
+		NOT = { has_global_variable = has_formed_ltn }
+	}
+
+	immediate = {
+		set_global_variable = has_formed_ltn
+		save_scope_as = formation_country
+		ruler = { save_scope_as = ruler_scope }
+		every_country = {
+			limit = {
+				has_diplomatic_relevance = ROOT
+			}
+			post_notification = unification_notification_generic
+		}
+	}
+
+	option = {
+		name = kmpmp_formation.2.a
+		default_option = yes
+		add_modifier = {
+			name = unification_prestige
+			months = very_long_modifier_time
+		}
+		
+		kmpmp_unification_claims_effect_ltn = yes
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

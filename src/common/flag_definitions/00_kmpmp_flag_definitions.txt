@@ -56,3 +56,11 @@ P01 = { # Parthia
 		priority = 1
 	}
 }	
+
+LTN = {
+	flag_definition = {
+		coa = LTN
+		subject_canton = LTN
+		priority = 1
+	}
+}

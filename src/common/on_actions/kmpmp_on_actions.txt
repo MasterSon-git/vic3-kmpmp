@@ -79,7 +79,10 @@ kmpmp_new_formables = {
             limit = {
                 c:P01 ?= ROOT
             }
-            trigger_event = kmpmp_formation.1
+            trigger_event = {
+                id = kmpmp_formation.1
+                popup = yes
+            }
 
             # add addtional states to state list of parthia
             if = {
@@ -136,6 +139,15 @@ kmpmp_new_formables = {
                     target = s:STATE_MOSUL
                 }
             }            
+        }
+        else_if = {
+            limit = {
+                c:LTN ?= ROOT
+            }
+            trigger_event = {
+                id = kmpmp_formation.2
+                popup = yes
+            }
         }
     }
 }

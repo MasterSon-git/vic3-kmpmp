@@ -8,6 +8,7 @@
     kmpmp_update_global_list_states_unl = yes
     kmpmp_update_global_list_states_p01 = yes
     kmpmp_update_global_list_states_sca = yes
+    kmpmp_update_global_list_states_ltn = yes
 }
 
 kmpmp_update_global_list_states_je_master_of_mediterranean_sea = {
@@ -625,6 +626,246 @@ kmpmp_update_global_list_states_sca = {
                     }
                 }
             }
+        }
+    }
+}
+
+kmpmp_update_global_list_states_ltn = {
+    if = {
+        limit = { # list version not exists or version <= 0
+            OR = {
+                NOT = {
+                    exists = global_var:states_ltn_version
+                }
+                global_var:states_ltn_version <= 0
+            }
+        }
+        # clean up list if exists
+        if = {
+            limit = {
+                has_global_variable_list = states_ltn
+            }
+            clear_global_variable_list = states_ltn
+        }
+        # v1
+        set_global_variable = {
+            name = states_ltn_version
+            value = 1
+        }
+
+        # Latin Empire states
+
+        # Byzantinum
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_EASTERN_THRACE
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_ATTICA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_THESSALIA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_MACEDONIA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_SKOPIA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_WESTERN_THRACE
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_NORTHERN_THRACE
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_HUDAVENDIGAR
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_AYDIN
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_WEST_AEGEAN_ISLANDS
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_EAST_AEGEAN_ISLANDS
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_ALBANIA
+        }
+        
+        # Iberia
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_GALICIA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_ASTURIAS
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_NAVARRA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_ARAGON
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_CATALONIA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_BEIRA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_CASTILE
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_ESTREMADURA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_BADAJOZ
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_TOLEDO
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_VALENCIA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_ALENTEJO
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_ANDALUSIA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_GRANADA
+        }
+        # Iberian isles
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_AZORES
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_MADEIRA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_CANARY_ISLANDS
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_CAPE_VERDE
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_BALEARES
+        }
+        
+        # Italy
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_SAVOY
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_PIEDMONT
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_LOMBARDY
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_SOUTH_TYROL
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_VENETIA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_ISTRIA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_EMILIA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_ROMAGNA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_TUSCANY
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_UMBRIA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_LAZIO
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_ABRUZZO
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_CAMPANIA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_APULIA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_CALABRIA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_SICILY
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_SARDINIA
+        }
+        
+        # additional
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_PELOPONNESE
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_WEST_AEGEAN_ISLANDS
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_CRETE
         }
     }
 }

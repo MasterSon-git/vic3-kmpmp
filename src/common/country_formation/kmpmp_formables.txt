@@ -38,3 +38,92 @@
 		}
 	}
 }
+
+LTN = {
+	# use_culture_states = yes
+	
+	# is_major_formation = yes
+	
+	# unification_play = dp_unify_italy
+	# leadership_play = dp_leadership_italy
+
+	states = {
+		# Byzantium
+		STATE_EASTERN_THRACE 
+		STATE_ATTICA 
+		STATE_THESSALIA 
+		STATE_MACEDONIA 
+		STATE_SKOPIA
+		STATE_WESTERN_THRACE
+		STATE_NORTHERN_THRACE
+		STATE_HUDAVENDIGAR
+		STATE_AYDIN
+		STATE_WEST_AEGEAN_ISLANDS
+		STATE_EAST_AEGEAN_ISLANDS
+		STATE_ALBANIA
+
+		# Iberia
+		STATE_GALICIA
+		STATE_ASTURIAS
+		STATE_NAVARRA
+		STATE_ARAGON
+		STATE_CATALONIA
+		STATE_BEIRA
+		STATE_CASTILE
+		STATE_ESTREMADURA
+		STATE_BADAJOZ
+		STATE_TOLEDO
+		STATE_VALENCIA
+		STATE_ALENTEJO
+		STATE_ANDALUSIA
+		STATE_GRANADA
+		# Iberian isles
+		STATE_AZORES
+		STATE_MADEIRA
+		STATE_CANARY_ISLANDS
+		STATE_CAPE_VERDE
+		STATE_BALEARES
+
+		# Italy
+		STATE_SAVOY
+		STATE_PIEDMONT
+		STATE_LOMBARDY
+		STATE_SOUTH_TYROL
+		STATE_VENETIA
+		STATE_ISTRIA
+		STATE_EMILIA
+		STATE_ROMAGNA
+		STATE_TUSCANY
+		STATE_UMBRIA
+		STATE_LAZIO
+		STATE_ABRUZZO
+		STATE_CAMPANIA
+		STATE_APULIA
+		STATE_CALABRIA
+		STATE_SICILY
+		STATE_SARDINIA
+
+		# additional
+		STATE_PELOPONNESE
+		STATE_WEST_AEGEAN_ISLANDS
+		STATE_CRETE
+	}
+
+	# required_num_states = 32 # didn't work in formables
+	required_states_fraction = 0.63 # 32 total states
+	
+
+	ai_will_do = { has_technology_researched = pan-nationalism }
+
+	possible = {
+		OR = {
+			# country_has_primary_culture = cu:north_italian
+			country_has_primary_culture = cu:south_italian
+			country_has_primary_culture = cu:spanish
+		}
+
+		has_technology_researched = pan-nationalism
+
+		kmpmp_owns_and_incorporated_32_ltn_states = yes
+	}
+}

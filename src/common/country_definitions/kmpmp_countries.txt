@@ -8,6 +8,7 @@
     cultures = { persian azerbaijani}
     capital = STATE_IRAKAJEMI
 }
+
 ARA = {
     color = { 66  111  19 }
 
@@ -17,4 +18,16 @@ ARA = {
 
     cultures = { mashriqi bedouin misri yemenite }
     capital = STATE_HEDJAZ
+}
+
+# Latin Empire
+LTN = {
+    color = { 191 95 47 }
+
+    country_type = recognized
+
+    tier = hegemony
+
+    cultures = { north_italian south_italian spanish galician catalan basque portuguese greek bulgarian albanian }
+    capital = STATE_EASTERN_THRACE
 }
