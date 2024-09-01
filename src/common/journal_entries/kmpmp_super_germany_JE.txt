@@ -1,0 +1,112 @@
+﻿Way_to_greater_germany_journal = {
+    icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+	group = je_group_historical_content
+
+    is_shown_when_inactive = {
+        c:GER ?= ROOT  # Muss Deutschland sein
+	}
+
+	complete = {
+        has_diplomatic_pact = { # Österreich muss ein Rivale sein
+            who = c:AUS
+            type = rivalry
+        }  
+        
+        has_technology_researched = pan-nationalism  # Pan-Nationalismus erforscht
+        OR = {
+            owns_entire_state_region = STATE_AUSTRIA
+            owns_entire_state_region = STATE_TYROL
+            owns_entire_state_region = STATE_SOUTH_TYROL
+            owns_entire_state_region = STATE_STYRIA
+            owns_entire_state_region = STATE_BOHEMIA
+            owns_entire_state_region = STATE_MORAVIA
+        }
+    }
+
+    on_complete = {
+        every_state = {
+            if = {
+                limit = {
+                    is_homeland_of_country_cultures = ROOT
+                }
+                state_region = {
+                add_claim = ROOT
+                }    
+            }
+        }           
+    }
+}
+
+super_germany_journal = {
+    icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+    group = je_group_historical_content
+
+    is_shown_when_inactive = {
+        c:GER ?= ROOT  # Muss Deutschland sein
+	}
+
+    immediate = {
+        add_to_variable_list = {
+            name = Super_Germany_States
+            target = s:STATE_AUSTRIA
+        }  
+        add_to_variable_list = {
+            name = Super_Germany_States
+            target = s:STATE_TYROL
+        }     
+        add_to_variable_list = {
+            name = Super_Germany_States
+            target = s:STATE_SOUTH_TYROL
+        }   
+        add_to_variable_list = {
+            name = Super_Germany_States
+            target = s:STATE_STYRIA
+        }  
+        add_to_variable_list = {
+            name = Super_Germany_States
+            target = s:STATE_BOHEMIA
+        }        
+        add_to_variable_list = {
+            name = Super_Germany_States
+            target = s:STATE_MORAVIA
+        }
+    }
+
+    complete = {
+            custom_tooltip = {
+                text = own_german_states
+                any_in_list = {
+                variable = Super_Germany_States
+                any_scope_state = {
+                    owner = ROOT
+                    count = all
+                }
+                count >= 4
+            }
+        }    
+    }
+        
+
+
+    on_complete = {
+
+        # 7.5% of Czech, North German, and South German pops become loyalist
+        add_loyalists = {
+            value = 0.075
+            culture = cu:czech
+        }
+        add_loyalists = {  
+            value = 0.075  
+            culture = cu:north_german
+        }
+        add_loyalists = { 
+            value = 0.075  
+            culture = cu:south_german
+            }
+        
+        # Add Czech, Alemannic, and Sorb as primary cultures
+        add_primary_culture = cu:czech
+        add_primary_culture = cu:alemannic
+        add_primary_culture = cu:sorb
+    }    
+}

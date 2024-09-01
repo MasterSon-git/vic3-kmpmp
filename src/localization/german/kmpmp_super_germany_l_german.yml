@@ -1,0 +1,6 @@
+﻿l_german:
+ Way_to_greater_germany_journal: "Auf dem Weg zu Super-Deutschland Teil 1"
+ Way_to_greater_germany_journal_reason: "Deutschland hat den Pan-Nationalismus erforscht und hält wichtige Gebiete in Österreich. Es ist an der Zeit, alle deutschen Heimatländer zu beanspruchen."
+ super_germany_journal: "Auf dem Weg zu Super-Deutschland Teil 2"
+ super_germany_journal_reason: "Mit jedem Schritt näher an einem vereinten deutschen Reich. Sichere dir wichtige Regionen und stärke die Loyalität deiner Bevölkerung."
+ own_german_states: "Besitze mindestens 4 der folgenden deutschen Staaten: $STATE_AUSTRIA$, $STATE_TYROL$, $STATE_SOUTH_TYROL$, $STATE_STYRIA$, $STATE_BOHEMIA$, $STATE_MORAVIA$."
