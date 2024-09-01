@@ -1,5 +1,6 @@
 ﻿l_english:
  kmpmp_japan_buff_start:0 "The path of Westernization"
+ kmpmp_japan_buff_start_decaying:0 "Spirit of Shiroyama"
  kmpmp_japan_buff_meiji_complete:0 "Empire of the rising Sun"
 
  kmpmp_ev_japan_buff.1.t:0 "$kmpmp_japan_buff_start$"
@@ -135,6 +136,8 @@
  kmpmp_je_a_question_of_honor_reason:0 "A question of honour"
 
  kmpmp_ig_trait_made_in_germany:0 "Made in Germany"
+ kmpmp_ig_trait_battotai:0 "Battotai"
+ kmpmp_ig_trait_banzai:0 "Banzai"
 
  kmpmp_arabia:0 "Arabia"
  kmpmp_united_arabia:0 "Unified Arabia"

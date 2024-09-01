@@ -40,7 +40,13 @@ kmpmp_ev_japan_buff.1 = {
 
         add_modifier = {
             name = kmpmp_japan_buff_start
-            months = long_modifier_time # 10 years
+            years = 12
+        }
+
+        add_modifier = {
+            name = kmpmp_japan_buff_start_decaying
+            years = 50
+            is_decaying = yes
         }
 
         scope:shogunate_ig_leader = {
@@ -105,11 +111,16 @@ kmpmp_ev_japan_buff.2 = {
     immediate = {
         add_modifier = {
             name = kmpmp_japan_buff_meiji_complete
-            months = 182 # 15 years
+            years = 15
         }
 
         ruler = {
             save_scope_as = meiji_ruler
+        }
+
+        ig:ig_armed_forces = {
+            set_ig_trait = ig_trait:kmpmp_ig_trait_battotai
+            set_ig_trait = ig_trait:kmpmp_ig_trait_banzai
         }
     }
 
