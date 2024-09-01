@@ -6,3 +6,6 @@
 any_in_global_list_count = {
     global = TRIGGER_ANY_IN_GLOBAL_LIST_COUNT
 }
+any_scope_building_count_in_state = {
+    global = TRIGGER_ANY_SCOPE_BUILDING_COUNT_IN_STATE
+}

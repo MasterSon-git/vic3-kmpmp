@@ -275,3 +275,142 @@ company_persian_luxury_goods = {
 		value = 3 # Higher base value for flavored companies
 	}
 }
+# Korea Tungsten Company
+company_Korea_Tungsten_Company = {
+	icon = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+
+	flavored_company = yes
+
+	building_types = {
+		building_tooling_workshops
+		building_iron_mine
+		building_lead_mine
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_manchuria
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SEOUL
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_SEOUL
+		 	is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_tooling_workshops
+					is_building_type = building_iron_mine
+					is_building_type = building_lead_mine
+				}
+				level >= 3
+				count = 3
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_steel_mills_throughput_add = 0.10
+		building_military_shipyards_throughput_add = 0.10
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+# Imperial Arsenal
+company_Imperial_Arsenal = {
+	icon = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+
+	flavored_company = yes
+
+	building_types = {
+		building_arms_industry
+		building_war_machine_industry
+		building_steel_mills
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_japan
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_TOHOKU
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_TOHOKU
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_arms_industry
+				level >= 5
+			}
+		}
+		has_technology_researched = breech_loading_artillery
+	}
+
+	prosperity_modifier = {
+		unit_combat_unit_type_shrapnel_artillery_offense_mult = 0.10
+		unit_combat_unit_type_siege_artillery_offense_mult = 0.15
+		unit_combat_unit_type_light_tanks_offense_mult = 0.20
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+# Genda Shigyo
+company_Genda_Shigyo = {
+	icon = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
+
+	flavored_company = yes
+
+	building_types = {
+		building_paper_mills
+		building_logging_camp
+		building_sulfur_mine
+	}
+	potential = {
+		has_interest_marker_in_region = region_japan
+	}
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_CHUGOKU
+			}
+		}
+	}
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_CHUGOKU
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_paper_mills
+				level >= 5
+			}
+		}
+		has_technology_researched = breech_loading_artillery
+	}
+	prosperity_modifier = {
+		building_cotton_plantation_throughput_add = 0.10
+		building_synthetics_plants_throughput_add = 0.15
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
