@@ -7,6 +7,7 @@
     state_birth_rate_mult = 0.08
     country_loan_interest_rate_mult = -0.25
 }
+
 kmpmp_arabia = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
     unit_offense_mult = 0.05

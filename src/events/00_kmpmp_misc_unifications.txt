@@ -541,6 +541,7 @@ formation.17 = {
 			c:PBC ?= THIS
 			c:FND ?= THIS
 			c:P01 ?= THIS
+			c:LTN ?= THIS
 		}
 	}
 

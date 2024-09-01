@@ -92,3 +92,45 @@ kmpmp_owns_70percent_sca_states = {
         always = no
     }
 }
+
+kmpmp_owns_all_ltn_states = {
+    trigger_if = {
+        limit = {
+            has_global_variable_list = states_ltn
+        }
+        any_in_global_list = {
+            variable = states_ltn
+            any_scope_state = {
+                owner = ROOT
+                count = all
+            }
+            count = all
+        }
+    }
+    trigger_else = {
+        always = no
+    }
+}
+
+kmpmp_owns_and_incorporated_32_ltn_states = {
+    trigger_if = {
+        limit = {
+            has_global_variable_list = states_ltn
+        }
+        any_in_global_list = {
+            variable = states_ltn
+            custom_tooltip = {
+                text = kmpmp_owns_entire_state_region_and_is_incorporated_tt
+                any_scope_state = {
+                    owner = ROOT
+                    is_incorporated = yes
+                    count = all
+                }
+            }
+            count >= 32
+        }
+    }
+    trigger_else = {
+        always = no
+    }
+}

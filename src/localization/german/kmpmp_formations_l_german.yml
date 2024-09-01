@@ -1,0 +1,11 @@
+﻿l_german:
+ kmpmp_formation.1.t: "Vereinigung der Parther"
+ kmpmp_formation.1.d: "Das unter Parther vereinte iranische Volk entsteht"
+ kmpmp_formation.1.f: "Wie werden wir die Zukunft gestalten?"
+ kmpmp_formation.1.a: "Hooray"
+ kmpmp_formation.1.b: "Wechsle zu Zoroastrianism (Nur für Roleplay)"
+
+ kmpmp_formation.2.t: "Vereinigung des $LTN_GEN$"
+ kmpmp_formation.2.d: "Das $LTN_NOM$ entsteht"
+ kmpmp_formation.2.f: "Nun sind wir zurück im Hochmittelalter"
+ kmpmp_formation.2.a: "Für eine glorreiche Zukunft!"

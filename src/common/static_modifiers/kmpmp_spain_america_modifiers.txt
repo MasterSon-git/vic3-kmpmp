@@ -1,0 +1,25 @@
+﻿kmpmp_mexico_spain_cooperation = {
+    icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+
+    # +5% construction eff
+    state_construction_mult = 0.05
+    # +10% TechSpread
+    country_tech_spread_mult = 0.1
+    # -10% military goods cost
+    country_military_goods_cost_mult = -0.1
+}
+
+kmpmp_mexico_part_of_the_spanish_empire = {
+    icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+
+    # +10% minting
+    country_minting_mult = 0.1
+    # +10% goldmine TP
+    building_gold_mine_throughput_add = 0.1
+    # +10% Infrastructure
+    state_infrastructure_mult = 0.1
+    # +5% education access
+    state_education_access_add = 0.05
+    # +5% techspread
+    country_tech_spread_mult = 0.05
+}

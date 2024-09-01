@@ -2,3 +2,7 @@
     global = TRIGGER_ANY_SCOPE_STATE_ALL_IN_STATE_REGION
     global_not = TRIGGER_ANY_SCOPE_STATE_ALL_IN_STATE_REGION_NOT
 }
+
+any_in_global_list_count = {
+    global = TRIGGER_ANY_IN_GLOBAL_LIST_COUNT
+}

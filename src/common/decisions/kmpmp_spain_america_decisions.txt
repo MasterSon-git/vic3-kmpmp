@@ -1,0 +1,32 @@
+﻿kmpmp_spain_a_mutually_beneficial_deal_decision = {
+    is_shown = {
+        exists = c:MEX
+        OR = {
+            has_journal_entry = je_spain_regain_influence_in_america
+            has_variable = has_completed_je_spain_regain_influence_in_america
+        }
+        
+        NOT = {
+            has_variable = kmpmp_spain_a_mutually_beneficial_deal_decision_taken
+        }
+    }
+
+    possible = {
+        custom_tooltip = {
+            text = has_completed_je_spain_regain_influence_in_america_tt
+            has_variable = has_completed_je_spain_regain_influence_in_america
+        }
+    }
+
+    when_taken = {
+        set_variable = kmpmp_spain_a_mutually_beneficial_deal_decision_taken
+        save_scope_as = event_actor_country
+        c:MEX ?= {
+            trigger_event = {
+                id = kmpmp_ev_spain_america.1
+                days = 0
+                popup = yes
+            }
+        }
+    }
+}

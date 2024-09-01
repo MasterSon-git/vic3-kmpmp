@@ -1,0 +1,243 @@
+﻿namespace = kmpmp_ev_spain_america
+
+# Spain offers a Deal
+kmpmp_ev_spain_america.1 = {
+    type = country_event
+    placement = ROOT
+
+    title = kmpmp_ev_spain_america.1.t
+    desc = kmpmp_ev_spain_america.1.d
+    flavor = kmpmp_ev_spain_america.1.f
+
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+    duration = 3
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    trigger = { # triggered from decision kmpmp_spain_a_mutually_beneficial_deal_decision
+    }
+
+    option = { # Viva La Mexico
+        name = kmpmp_ev_spain_america.1.a
+        default_option = yes
+
+        # -50 relations to Spain
+        change_relations = { 
+            country = scope:event_actor_country 
+            value = -50
+        }
+
+        # Mexico gets claims on Guatemala, San Salvador, Honduras, Nicaragua, Costa Rica
+        s:STATE_GUATEMALA = {
+            add_claim = ROOT
+        }
+        s:STATE_SAN_SALVADOR = {
+            add_claim = ROOT
+        }
+        s:STATE_HONDURAS = {
+            add_claim = ROOT
+        }
+        s:STATE_NICARAGUA = {
+            add_claim = ROOT
+        }
+        s:STATE_COSTA_RICA = {
+            add_claim = ROOT
+        }
+        
+        # Spain gets claims on all startign provinces of Mexico + Texas
+        s:STATE_TEXAS = {
+            add_claim = scope:event_actor_country
+        }
+        s:STATE_CALIFORNIA = {
+            add_claim = scope:event_actor_country
+        }
+        s:STATE_SONORA = {
+            add_claim = scope:event_actor_country
+        }
+        s:STATE_CHIHUAHUA = {
+            add_claim = scope:event_actor_country
+        }
+        s:STATE_RIO_GRANDE = {
+            add_claim = scope:event_actor_country
+        }
+        s:STATE_DURANGO = {
+            add_claim = scope:event_actor_country
+        }
+        s:STATE_SINALOA = {
+            add_claim = scope:event_actor_country
+        }
+        s:STATE_BAJIO = {
+            add_claim = scope:event_actor_country
+        }
+        s:STATE_YUCATAN = {
+            add_claim = scope:event_actor_country
+        }
+        s:STATE_MEXICO = {
+            add_claim = scope:event_actor_country
+        }
+        s:STATE_VERACRUZ = {
+            add_claim = scope:event_actor_country
+        }
+        s:STATE_GUERRERO = {
+            add_claim = scope:event_actor_country
+        }
+        s:STATE_OAXACA = {
+            add_claim = scope:event_actor_country
+        }
+        s:STATE_JALISCO = {
+            add_claim = scope:event_actor_country
+        }
+        s:STATE_ZACATECAS = {
+            add_claim = scope:event_actor_country
+        }
+    }
+
+    option = { # economical and political cooperation
+        name = kmpmp_ev_spain_america.1.b
+        custom_tooltip = kmpmp_ev_spain_america.1.b.tt
+        
+        # Spain gets event to accept or decline
+        save_scope_as = mexico_scope # used in localization
+        if = {
+            limit = {
+                scope:event_actor_country = {
+                    is_power_bloc_leader = yes
+                    NOT = {
+                        is_in_same_power_bloc = c:MEX
+                    }
+                }
+            }
+            custom_tooltip = {
+                text = kmpmp_ev_spain_america.1.b.tt2
+                scope:event_actor_country = {
+                    trigger_event = {
+                        id = kmpmp_ev_spain_america.2
+                        popup = yes
+                    }
+                }
+            }
+        }
+        else = {
+            scope:event_actor_country = {
+                trigger_event = {
+                    id = kmpmp_ev_spain_america.2
+                    popup = yes
+                }
+            }
+        }
+
+        # Mexico gets the buff: "Spanish cooperation" for 10 years
+        add_modifier = {
+            name = kmpmp_mexico_spain_cooperation
+            years = 10
+        }
+    }
+
+    option = { # Return to the spanish Empire
+        name = kmpmp_ev_spain_america.1.c
+        custom_tooltip = kmpmp_ev_spain_america.1.c.tt
+
+        # Mexico annexes Central States of America
+        if = {
+            limit = {
+                exists = c:UCA
+            }
+            annex = c:UCA
+        }
+
+        # Mexico becomes a dominion of Spain
+        scope:event_actor_country = {
+            create_diplomatic_pact = {
+                country = ROOT
+                type = dominion
+            }
+        }
+        
+        # Mexico gets the perma buff „part of the spanish empire“
+        add_modifier = {
+            name = kmpmp_mexico_part_of_the_spanish_empire
+        }
+
+        # 10% of the mexican pops become radicals
+        add_radicals = {
+			value = 0.1
+		}
+
+        # 10% of the mexican pops become loyalists
+		add_loyalists = {
+			value = 0.1
+		}
+
+        # Spain gets 30 infamy
+        scope:event_actor_country = {
+            change_infamy = 30
+        }
+    }
+}
+
+# economical and political cooperation
+kmpmp_ev_spain_america.2 = {
+    type = country_event
+    placement = ROOT
+
+    title = kmpmp_ev_spain_america.2.t
+    desc = kmpmp_ev_spain_america.2.d
+    flavor = kmpmp_ev_spain_america.2.f
+
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+    duration = 3
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    trigger = { # triggered by kmpmp_ev_spain_america.1 option b
+    }
+
+    option = { # accept
+        name = kmpmp_ev_spain_america.2.a
+        default_option = yes
+
+        # mexico joins the spanish Powerblock (if spain is leading a block)
+        if = {
+            limit = {
+                is_power_bloc_leader = yes
+                NOT = {
+                    is_in_same_power_bloc = c:MEX
+                }
+            }
+            c:MEX ?= {
+                join_power_bloc = ROOT
+            }
+        }
+
+        # Spain turns Central America into a Dominion
+        if = {
+            limit = {
+                exists = c:UCA
+                NOT = {
+                    c:UCA ?= {
+                        is_subject_of = ROOT
+                        is_subject_type = subject_type_puppet
+                    }
+                }
+            }
+            create_diplomatic_pact = {
+                country = c:UCA
+                type = dominion
+            }
+        }
+    }
+
+    option = { # decline
+        name = kmpmp_ev_spain_america.2.b
+    }
+}

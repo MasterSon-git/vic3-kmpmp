@@ -25,6 +25,19 @@
         }
     }
 
+    c:SPA ?= {
+        s:STATE_SARDINIA = {
+            add_claim = PREV
+        }
+        s:STATE_SICILY = {
+            add_claim = PREV
+        }
+
+        add_journal_entry = {
+            type = je_spain_regain_influence_in_america
+        }
+    }
+
     c:MEX ?= {
         trigger_event = {
             id = kmpmp_ev_mexico_buff.1

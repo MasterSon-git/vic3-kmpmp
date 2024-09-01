@@ -41,6 +41,7 @@
                 #c:JAP ?= this   # japan - has special logic
                 c:SCA ?= this   # scandinavia
                 c:P01 ?= this   # parthia
+                c:LTN ?= this   # latin empire
             }
             NOT = {
                 has_modifier = kmpmp_buff_medium_nation

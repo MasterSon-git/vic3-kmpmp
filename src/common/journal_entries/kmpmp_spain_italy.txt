@@ -1,0 +1,44 @@
+﻿je_spain_aragons_legacy = {
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+	group = je_group_historical_content
+
+    possible = {
+        OR = {
+            c:SPA ?= ROOT
+            c:IBE ?= ROOT
+        }
+    }
+
+    complete = {
+        state_region_owned_and_incorporated = { STATE_REGION = STATE_SARDINIA }
+        state_region_owned_and_incorporated = { STATE_REGION = STATE_SICILY }
+    }
+
+    on_complete = {
+        # claims on Campania, Abruzzo, Apulia, Calabria
+        if = {
+            limit = { NOT = { has_claim = s:STATE_CAMPANIA } }
+            s:STATE_CAMPANIA = {
+                add_claim = ROOT
+            }
+        }
+        if = {
+            limit = { NOT = { has_claim = s:STATE_ABRUZZO } }
+            s:STATE_ABRUZZO = {
+                add_claim = ROOT
+            }
+        }
+        if = {
+            limit = { NOT = { has_claim = s:STATE_APULIA } }
+            s:STATE_APULIA = {
+                add_claim = ROOT
+            }
+        }
+        if = {
+            limit = { NOT = { has_claim = s:STATE_CALABRIA } }
+            s:STATE_CALABRIA = {
+                add_claim = ROOT
+            }
+        }
+    }
+}
