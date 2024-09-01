@@ -46,7 +46,8 @@ krakatoa.1 = { #krakatoa erupts and you're the owner
 		}
 		every_country = {
 			limit = {
-				is_player = yes
+				# kmpmp event should also be triggered if no player is in the region
+				# is_player = yes
 				any_scope_state = {
 					is_coastal = yes
 					OR = {
@@ -109,5 +110,58 @@ krakatoa.1 = { #krakatoa erupts and you're the owner
 		add_journal_entry = {	
 			type = je_krakatoa
 		}
+	}
+}
+
+krakatoa.2 = { #global tsunamis
+	type = country_event
+	placement = scope:tsunami_state
+	
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	title = krakatoa.2.t
+	desc = krakatoa.2.d
+	flavor = krakatoa.2.f
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				is_coastal = yes
+			}
+			save_scope_as = tsunami_state
+		}
+
+		# kmpmp make sure krakatoa_tsunami_effect is executed just once
+		if = {
+			limit = {
+				NOT = {
+					exists = global_var:kmpmp_krakatoa_tsunami_effect_executed
+				}
+			}
+
+			set_global_variable = {
+				name = kmpmp_krakatoa_tsunami_effect_executed
+				years = 1
+			}
+
+			krakatoa_tsunami_effect = yes
+		}
+		
+		# vanilla
+		# krakatoa_tsunami_effect = yes
+	}
+
+	duration = 3
+
+	option = { #this is a tragedy
+		name = krakatoa.2.a
+		default_option = yes
+		custom_tooltip = krakatoa_tsunami_tt
 	}
 }
