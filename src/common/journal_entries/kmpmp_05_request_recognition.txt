@@ -177,7 +177,16 @@
     }
 
     current_value = {
-        value = root.var:recognition_progress_var
+        # kmpmp if je is not active this throws errors because variable is not set
+        value = 0
+        if = {
+            limit = {
+                exists = root.var:recognition_progress_var
+            }
+            add = root.var:recognition_progress_var
+        }
+        # vanilla
+        # value = root.var:recognition_progress_var
     }
 
     goal_add_value = {
