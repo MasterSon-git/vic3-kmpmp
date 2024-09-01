@@ -1,16 +1,21 @@
-﻿Way_to_greater_germany_journal = {
+﻿je_way_to_greater_germany = {
     icon = "gfx/interface/icons/event_icons/waving_flag.dds"
-	group = je_group_historical_content
+    group = je_group_historical_content
 
     is_shown_when_inactive = {
         c:GER ?= ROOT  # Muss Deutschland sein
-	}
+    }
 
-	complete = {
-        has_diplomatic_pact = { # Österreich muss ein Rivale sein
-            who = c:AUS
-            type = rivalry
-        }  
+    complete = {
+        trigger_if = {
+            limit = {
+                exists = c:AUS
+            }
+            has_diplomatic_pact = { # Österreich muss ein Rivale sein
+                who = c:AUS
+                type = rivalry
+            }
+        } 
         
         has_technology_researched = pan-nationalism  # Pan-Nationalismus erforscht
         OR = {
@@ -24,26 +29,39 @@
     }
 
     on_complete = {
+        set_variable = je_way_to_greater_germany_completed
+
         every_state = {
             if = {
                 limit = {
+                    owner != ROOT
                     is_homeland_of_country_cultures = ROOT
+                    NOT = {
+                        has_claim_by = ROOT
+                    }
                 }
                 state_region = {
-                add_claim = ROOT
-                }    
+                    add_claim = ROOT
+                }
             }
-        }           
+        }
     }
 }
 
-super_germany_journal = {
+je_super_germany = {
     icon = "gfx/interface/icons/event_icons/waving_flag.dds"
     group = je_group_historical_content
 
     is_shown_when_inactive = {
         c:GER ?= ROOT  # Muss Deutschland sein
-	}
+    }
+
+    possible = {
+        custom_tooltip = {
+            text = je_super_germany_possible_tooltip
+            has_variable = je_way_to_greater_germany_completed
+        }
+    }
 
     immediate = {
         add_to_variable_list = {
@@ -73,9 +91,9 @@ super_germany_journal = {
     }
 
     complete = {
-            custom_tooltip = {
-                text = own_german_states
-                any_in_list = {
+        custom_tooltip = {
+            text = je_super_germany_condition_own_german_states_tooltip
+            any_in_list = {
                 variable = Super_Germany_States
                 any_scope_state = {
                     owner = ROOT
@@ -85,11 +103,8 @@ super_germany_journal = {
             }
         }    
     }
-        
-
 
     on_complete = {
-
         # 7.5% of Czech, North German, and South German pops become loyalist
         add_loyalists = {
             value = 0.075
@@ -102,11 +117,11 @@ super_germany_journal = {
         add_loyalists = { 
             value = 0.075  
             culture = cu:south_german
-            }
+        }
         
         # Add Czech, Alemannic, and Sorb as primary cultures
         add_primary_culture = cu:czech
         add_primary_culture = cu:alemannic
         add_primary_culture = cu:sorb
-    }    
+    }
 }
