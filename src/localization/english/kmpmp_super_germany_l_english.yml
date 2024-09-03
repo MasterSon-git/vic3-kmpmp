@@ -1,0 +1,7 @@
+﻿l_english:
+ je_way_to_greater_germany: "A step towards Greater Germany"
+ je_way_to_greater_germany_reason: "Germany has researched pan-nationalism and holds important territories in Austria. It is time to claim all German homelands."
+ je_super_germany: "On the way to Greater Germany"
+ je_super_germany_reason: "With every step you are closer to a united German Empire. Secure important regions and strengthen the loyalty of your population."
+ je_super_germany_possible_tooltip: "[concept_journal_entry] '$je_way_to_greater_germany$' completed"
+ je_super_germany_condition_own_german_states_tooltip: "Own at least 4 of the following german states: $STATE_AUSTRIA$, $STATE_TYROL$, $STATE_SOUTH_TYROL$, $STATE_STYRIA$, $STATE_BOHEMIA$, $STATE_MORAVIA$."
