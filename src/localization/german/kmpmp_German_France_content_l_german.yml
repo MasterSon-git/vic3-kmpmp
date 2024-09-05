@@ -1,0 +1,26 @@
+﻿l_german:
+  # PRUSSIA / NGF / DEUTSCHLAND
+  
+  je_the_matter_of_the_reichsland: "Die Frage des Reichslandes"
+  kmpmp_the_reichsland_buff: "Das Reichsland"
+  kmpmp_the_reichsland_training_buff: "The Reichsland Training"
+
+  je_the_industrial_heartland: "Das Industrielle Herzland"
+  kmpmp_industrial_heartland_lost: "Das Industrielle Herzland ist Verloren"
+
+  # FRANKREICH
+  
+  je_the_border_with_the_germans: "Die Grenze zu den Deutschen"
+  kmpmp_historical_border_buff: "Historische Grenze"
+
+  je_humiliated_by_the_germans: "Von den Deutschen gedemütigt"
+  humiliated_by_the_germans: "Von den Deutschen gedemütigt"
+  kmpmp_humiliated_by_the_germans_buff: "Von den Deutschen gedemütigt"
+
+  rhine_borders: "Rhein-Grenzen"
+  kmpmp_natural_borders_buff: "Die natürlichen Grenzen"
+
+  kmpmp_victory_for_the_masses_buff: "Ein Sieg für die Massen"
+  
+  cultural_expansion: "Kulturelle Expansion"
+

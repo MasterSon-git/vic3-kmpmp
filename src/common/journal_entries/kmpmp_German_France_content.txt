@@ -1,0 +1,171 @@
+﻿# Prussia NGF Germany
+je_the_matter_of_the_reichsland = {
+    group = je_group_historical_content
+    icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+    is_shown_when_inactive = {
+        OR = {
+            c:PRU ?= root
+            c:NGF ?= root
+            c:GER ?= root
+        }   
+    }    
+    complete = {
+        year < 1871
+        owns_entire_state_region = STATE_ALSACE_LORRAINE
+    }
+
+    on_complete = {
+        add_loyalists = {
+            value = 0.05
+        }
+
+        add_modifier = {
+        name = kmpmp_historical_border_buff
+        }
+
+        add_modifier = {
+        name = kmpmp_the_reichsland_buff
+    }      
+
+        add_modifier = {
+        name = kmpmp_the_reichsland_training_buff
+    }
+}
+
+je_the_industrial_heartland = {
+    group = je_group_historical_content
+    icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+    is_shown_when_inactive = {
+        OR = {
+            c:PRU ?= root
+            c:NGF ?= root
+            c:GER ?= root
+        } 
+
+    complete = {
+        year >= 1860
+        NOT = {
+            owns_entire_state_region = STATE_RHINELAND
+            owns_entire_state_region = STATE_NORTH_RHINE
+        }
+    }
+
+    on_complete = {
+        add_radicals = {
+            amount = 0.08
+            population = {
+                culture = c:culture_north_german
+                culture = c:culture_south_german
+            }
+        }
+        add_modifier = {
+            name = kmpmp_industrial_heartland_lost
+        }
+    }
+}
+
+#FRANCE:
+
+je_the_border_with_the_germans = {
+    group = je_group_historical_content
+    icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+    is_shown_when_inactive = {
+    c:FRA ?= root
+        OR = {     
+            year = 1845
+            year > 1845
+        }    
+    } 
+
+    complete = {
+        year < 1871
+        owns_entire_state_region = STATE_ALSACE_LORRAINE
+    }
+
+    on_complete = {
+        add_modifier = {
+        name = kmpmp_historical_border_buff
+    }    
+}
+  
+    fail = {
+        NOT = {
+            owns_entire_state_region = STATE_ALSACE_LORRAINE
+        }
+        remove_modifier = {
+            OR = {   
+                name = kmpmp_historical_border_buff
+                name = kmpmp_natural_borders_buff
+            }
+        }    
+    }
+}
+
+je_humiliated_by_the_germans = {
+    group = je_group_historical_content
+    icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+    is_shown_when_inactive = {
+        OR = {
+            c:FRA ?= root
+        }
+    }   
+
+    complete = {
+        NOT = {
+            owns_entire_state_region = STATE_ALSACE_LORRAINE
+        }
+        duration >= 7
+        progressbar = yes
+        }
+    }
+
+    on_complete = {
+        add_modifier = {
+            name = "kmpmp_humiliated_by_the_germans"
+        }
+        restart = true
+    }
+}
+
+je_France_strategic_position_along_the_Rhine_is_of_utmost_importance = {
+    group = je_group_historical_content
+    icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+    on_complete = {
+        option_1 = {
+            title = "Natural Borders"
+            name = "Establish and maintain the natural borders of France along the Rhine."
+            remove_modifier = {
+                name = kmpmp_historical_border_buff
+            }
+            add_modifier = {
+                name = kmpmp_natural_borders_buff
+                duration = -1 
+            }
+            tooltip = "This buff is maintained as long as France holds Rhineland and North Rhine as incorporated states."
+        }
+
+        option_2 = {
+            title = "A Victory for the Masses"
+            name = "Celebrate the victory for the people of France."
+            add_loyalists = {
+                amount = 0.15
+            }
+            add_modifier = {
+                name = kmpmp_victory_for_the_masses_buff
+                duration = 20
+                }
+            }
+        }
+
+        option_3 = {
+            title = "Cultural Expansion"
+            name = "Include the Allemanic culture as a primary culture of France."
+            add_primary_culture = c:culture_allemanic
+        }
+    }
+}
