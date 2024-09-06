@@ -4,7 +4,7 @@
  TRIGGER_ANY_IN_GLOBAL_LIST_COUNT: "$PARAMETERS$ $FILTER$:"
  TRIGGER_ANY_SCOPE_STATE_ALL_IN_STATE_REGION: "Alle [Concept('concept_state', '$concept_states$')] in der [concept_state_region] [STATE_REGION.GetName]"
  TRIGGER_ANY_SCOPE_STATE_ALL_IN_STATE_REGION_NOT: "Kein [concept_state] in der [concept_state_region] [STATE_REGION.GetName]"
- TRIGGER_ANY_SCOPE_BUILDING_COUNT_IN_STATE: "$PARAMETERS$ Gebäude erfüllen die Bedingungen in diesem Staat: "
+ TRIGGER_ANY_SCOPE_BUILDING_COUNT_IN_STATE: "$PARAMETERS$ Gebäude erfüllen die Bedingungen in diesem Staat:"
 
  owns_or_has_subject_entire_state_region_tooltip: "Gesamte [concept_state_region] [THIS.GetStateRegion.GetName] im Besitz oder vasallisiert durch [SCOPE.GetRootScope.GetCountry.GetName]"
  state_region_owned_and_incorporated_tooltip: "Gesamte [concept_state_region] [SCOPE.sStateRegion('state_region_to_check').GetName] im Besitz und inkorporiert durch [SCOPE.GetRootScope.GetCountry.GetName]"
