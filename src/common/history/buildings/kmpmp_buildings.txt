@@ -277,6 +277,17 @@
                 activate_production_methods = { "pm_basic_port" }
             }
             create_building = {
+                building = "building_iron_mine"
+                add_ownership = {
+                    country = {
+                        country = "c:JAP"
+                        levels = 1 
+                    }
+                }
+                reserves = 1
+                activate_production_methods = { "pm_picks_and_shovels_building_iron_mine" }
+            }
+            create_building = {
                 building = "building_cotton_plantation"
                 add_ownership = {
                     country = {
@@ -287,7 +298,40 @@
                 reserves = 1
                 activate_production_methods = { "default_building_cotton_plantation" "pm_road_carts"  }
             }
-        }
+            create_building = {
+                building = "building_government_administration"
+                add_ownership = {
+                    country = {
+                        country = "c:JAP"
+                        levels = 1 
+                    }
+                }
+                reserves = 1
+                activate_production_methods = { "pm_horizontal_drawer_cabinets" }
+            }
+            create_building = {
+                building = "building_paper_mills"
+                add_ownership = {
+                    country = {
+                        country = "c:JAP"
+                        levels = 1
+                    }
+                }
+                reserves = 1
+                activate_production_methods = { "pm_pulp_pressing" "pm_automation_disabled"  }
+            }
+            create_building = {
+                building = "building_construction_sector"
+                add_ownership = {
+                    country = {
+                        country = "c:JAP"
+                        levels = 1 
+                    }
+                }
+                reserves = 1
+                activate_production_methods = { "pm_wooden_buildings" }
+            }
+        }    
     }
     s:STATE_KANTO = {
         region_state:JAP = {
@@ -302,6 +346,28 @@
                 reserves = 1
                 activate_production_methods = { "pm_basic_shipbuilding"  }
             }
+            create_building = {
+                building = "building_iron_mine"
+                add_ownership = {
+                    country = {
+                        country = "c:JAP"
+                        levels = 1 #1
+                    }
+                }
+                reserves = 1
+                activate_production_methods = { "pm_picks_and_shovels_building_iron_mine" }
+            }
+            create_building = {
+                building = "building_construction_sector"
+                add_ownership = {
+                    country = {
+                        country = "c:JAP"
+                        levels = 1 
+                    }
+                }
+                reserves = 1
+                activate_production_methods = { "pm_wooden_buildings" }
+            }    
             create_building = {
                 building = "building_military_shipyards"
                 add_ownership = {
@@ -345,7 +411,18 @@
                 reserves = 1
                 activate_production_methods = { "pm_basic_port" }
             }
-        }
+            create_building = {
+                building = "building_government_administration"
+                add_ownership = {
+                    country = {
+                        country = "c:JAP"
+                        levels = 2 #3
+                    }
+                }
+                reserves = 1
+                activate_production_methods = { "pm_horizontal_drawer_cabinets" }       
+            }
+        }    
     }
     s:STATE_CHUBU = {
         region_state:JAP = {
