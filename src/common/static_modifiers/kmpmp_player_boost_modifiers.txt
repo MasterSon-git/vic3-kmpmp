@@ -99,8 +99,8 @@ kmpmp_player_boost_state_capitalism = {
 
     # +150 Authority
     country_authority_add = 150
-    # +10% manufactoring tax income
-    building_group_bg_manufacturing_tax_mult = 0.1
+    # +10% dividends tax
+    tax_dividends_add = 0.1
     # -20% investment pool contribution eff of capitalists
     state_capitalists_investment_pool_efficiency_mult = -0.2
     # +10% building sector throughput

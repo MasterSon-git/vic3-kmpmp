@@ -15,9 +15,26 @@ kmpmp_ev_sardinia.1 = {
                 is_player = yes
             }
             
-            annex_with_incorporation = c:PAR # Parma
-            annex_with_incorporation = c:LUC # Lucca
-            annex_with_incorporation = c:MOD # Modena
+            # Sardinia-Piedmont no longer annexes these three
+            # annex_with_incorporation = c:PAR # Parma
+            # annex_with_incorporation = c:LUC # Lucca
+            # annex_with_incorporation = c:MOD # Modena
+
+            # Lucca annexes Parma and Modena because they are not in a power bloc
+            c:LUC ?= {
+                annex_with_incorporation = c:PAR # Parma
+                annex_with_incorporation = c:MOD # Modena
+            }
+
+            # claim on Emilia
+            s:STATE_EMILIA = {
+                add_claim = ROOT
+            }
+
+            # claim on Tuscany
+            s:STATE_TUSCANY = {
+                add_claim = ROOT
+            }
         }
     }
 }

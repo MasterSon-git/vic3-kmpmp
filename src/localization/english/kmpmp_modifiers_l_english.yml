@@ -10,6 +10,8 @@
  state_unincorporated_education_access_add:0 "Education Access in [Concept('concept_unincorporated_state','$concept_unincorporated_states$')]"
  state_unincorporated_education_access_add_desc:0 "A bonus or penalty to education access for pops in [Concept('concept_unincorporated_state','$concept_unincorporated_states$')]"
 
+ unit_combat_unit_type_heavy_tank_defense_mult:0 "$combat_unit_type_heavy_tank$ $unit_defense_mult$"
+ unit_combat_unit_type_heavy_tank_defense_mult_desc:0 "$combat_unit_type_heavy_tank$ $unit_defense_mult$"
  unit_combat_unit_type_light_tanks_offense_mult:0 "$combat_unit_type_light_tanks$ $unit_offense_mult$"
  unit_combat_unit_type_light_tanks_offense_mult_desc:0 "$combat_unit_type_light_tanks$ $unit_offense_mult$"
 

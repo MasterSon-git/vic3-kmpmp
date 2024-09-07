@@ -1,0 +1,77 @@
+﻿je_opium_wars = {
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	group = je_group_foreign_affairs
+	
+	complete = {
+		any_scope_state = {
+			is_treaty_port = yes
+			state_region = {
+				any_scope_state = {
+					owner = scope:target
+				}
+			}
+		}
+	}
+
+	on_complete = {
+		trigger_event = {
+			id = opium_wars.5
+			days = 5
+		}
+	}
+
+	fail = {
+		custom_tooltip = {
+			text = opium_wars_fail_tt
+			scope:target = {
+				NOT = {
+					any_primary_culture = {
+						has_cultural_obsession = opium
+					}
+				}
+			}
+		}
+	}
+
+	invalid = {
+		NOT = {
+			exists = scope:target
+		}
+	}
+
+	on_invalid = {
+		remove_variable = opium_wars_aggressor
+	}
+
+	on_fail = {
+		custom_tooltip = {
+			text = opium_wars_fail_invalid_tt
+			remove_variable = opium_wars_aggressor
+		}
+
+		# kmpmp
+		custom_tooltip = {
+			text = kmpmp_opium_wars_lost_effect_tt
+			kmpmp_opium_wars_lost_effect = yes
+		}
+	}
+
+	on_timeout = {
+		custom_tooltip = {
+			text = opium_wars_fail_invalid_tt
+			remove_variable = opium_wars_aggressor
+		}
+
+		# kmpmp
+		custom_tooltip = {
+			text = kmpmp_opium_wars_lost_effect_tt
+			kmpmp_opium_wars_lost_effect = yes
+		}
+	}
+
+	weight = 10000
+	should_be_pinned_by_default = yes
+
+	timeout = 1825
+}
