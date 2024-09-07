@@ -1,0 +1,10 @@
+﻿LOBBIES = {
+    	c:MEX = {
+		type = lobby_anti_country  
+		target = c:USA
+		add_lobby_menber = {  
+            add_interest_group = ig:ig_devout
+        	add_interest_group = ig:ig_landowners
+		}
+	}
+}	

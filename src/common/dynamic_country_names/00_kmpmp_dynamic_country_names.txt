@@ -14,3 +14,18 @@
         }
     }
 }
+
+P02 = {
+    dynamic_country_name = {
+        name = dyn_c_Gran_Colombia_name
+        adjective = dyn_c_Gran_Colombia_adj
+
+        priority = 100
+        is_main_tag_only = yes
+
+        trigger = {
+            has_variable =  kmpmp_je_a_true_gran_colombia_comp
+        }
+        
+    }
+}

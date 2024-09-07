@@ -55,10 +55,11 @@
  je_reino_unido_protectorate:0 "Make them to our protectorate"
  je_reino_unido_protectorate_reason:0 "Force protectorate status"
  je_reino_unido_protectorate_completed_trigger_desc:0 "[concept_journal_entry] '$je_reino_unido_protectorate$' completed"
-#  je_reino_unido_por:0 "$kmpmp_reino_unido$"
-#  je_reino_unido_por_reason:0 "Unify the crowns"
-#  je_reino_unido_brz:0 "$kmpmp_reino_unido$"
-#  je_reino_unido_brz_reason:0 "Unify the crowns"
+
+ #  je_reino_unido_por:0 "$kmpmp_reino_unido$"
+ #  je_reino_unido_por_reason:0 "Unify the crowns"
+ #  je_reino_unido_brz:0 "$kmpmp_reino_unido$"
+ #  je_reino_unido_brz_reason:0 "Unify the crowns"
 
  kmpmp_austrian_hungarian_agreement:0 "The Austro-Hungarian Agreement"
  kmpmp_austrian_hungarian_agreement_desc:0 "$kmpmp_austrian_hungarian_agreement$"
@@ -76,6 +77,10 @@
  kmpmp_mexico_integrate_the_mesoamericans_desc:0 "$kmpmp_integrate_the_mesoamericans$"
  kmpmp_mexico_integrate_the_mesoamericans_tooltip:0 ""
  kmpmp_mexico_defend_the_homeland:0 "Defend the homeland"
+ kmpmp_united_states_of_latin_america:0 "Unite the state of Latin America!"
+ kmpmp_glory_in_latin_america:0 "Victory in Latin America"
+ 
+
 
  kmpmp_italy_risorgimento_buff:0 "Italy Risorgimento Buff"
 
@@ -102,6 +107,8 @@
  kmpmp_ev_persia.1.f:0 "The people celebrate unification"
  kmpmp_ev_persia.1.a:0 "Hooray"
 
+  # Manifest Mexico
+
  kmpmp_manifest_mexico:0 "Manifest Mexico"
  kmpmp_je_manifest_mexico:0 "$kmpmp_manifest_mexico$"
  kmpmp_je_manifest_mexico_reason:0 "Hold $STATE_CALIFORNIA$ to have the "$kmpmp_manifest_mexico$-buff" applied."
@@ -109,6 +116,22 @@
  kmpmp_je_manifest_mexico_fail:0 "Restore $kmpmp_manifest_mexico$"
  kmpmp_je_manifest_mexico_fail_reason:0 "Hold $STATE_CALIFORNIA$ to have the "$kmpmp_manifest_mexico$-buff" applied."
  kmpmp_je_manifest_mexico_fail_tooltip:0 "While active "$kmpmp_manifest_mexico$-buff" is applied"
+
+ # Successor of Gran Colombia
+ kmpmp_je_successor_of_gran_colombia: "Successor of Gran Colombia"
+ kmpmp_je_successor_of_gran_colombia_reason: "Mexico is looking to re-establish itself as the successor of Gran Colombia by uniting Central America under its rule."
+
+ # A True Gran Colombia
+ kmpmp_je_a_true_gran_colombia: "A True Gran Colombia"
+ kmpmp_je_a_true_gran_colombia_reason: "After succeeding as the heir of Gran Colombia, Mexico seeks to reclaim the rest of the lost lands."
+
+ # United States of Latin America
+ kmpmp_je_united_states_of_latin_america: "United States of Latin America"
+ kmpmp_je_united_states_of_latin_america_reason: "Having consolidated Gran Colombia, Mexico now aims to unify Latin America under a single banner."
+
+ # Consolidate California
+ kmpmp_je_consolidate_california: "Consolidate California"
+ kmpmp_je_consolidate_california_reason: "Mexico seeks to establish its presence across North America, starting with California."
 
  kmpmp_pm_extensive_tank_production:0 "Extensive Tank Production"
  kmpmp_pm_focus_tank_production:0 "Focus Tank Production"
