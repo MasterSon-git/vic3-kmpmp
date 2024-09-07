@@ -124,9 +124,9 @@ je_humiliated_by_the_germans = {
     group = je_group_historical_content
     icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
-    # TODO: activate je if STATE_ALSACE_LORRAINE is lost
     is_shown_when_inactive = {
-        c:FRA ?= root
+        # added through on_actions if STATE_ALSACE_LORRAINE is lost
+        # c:FRA ?= root
     }
 
     immediate = {
@@ -152,6 +152,12 @@ je_humiliated_by_the_germans = {
         }
     }
 
+    on_fail = {
+        add_modifier = {
+            name = kmpmp_humiliated_by_the_germans
+        }
+    }
+
     # on_action which is triggered every first day of the year
 	on_yearly_pulse = {
 		effect = {
@@ -173,39 +179,4 @@ je_humiliated_by_the_germans = {
 	}
 
     progressbar = yes
-}
-
-je_France_strategic_position_along_the_Rhine_is_of_utmost_importance = {
-    group = je_group_historical_content
-    icon = "gfx/interface/icons/event_icons/waving_flag.dds"
-    on_complete = {
-        option_1 = {
-            title = "Natural Borders"
-            name = "Establish and maintain the natural borders of France along the Rhine."
-            remove_modifier = {
-                name = kmpmp_historical_border_buff
-            }
-            add_modifier = {
-                name = kmpmp_natural_borders_buff
-                duration = -1
-            }
-            tooltip = "This buff is maintained as long as France holds Rhineland and North Rhine as incorporated states."
-        }
-        option_2 = {
-            title = "A Victory for the Masses"
-            name = "Celebrate the victory for the people of France."
-            add_loyalists = {
-                amount = 0.15
-            }
-            add_modifier = {
-                name = kmpmp_victory_for_the_masses_buff
-                duration = 20
-            }
-        }
-    }
-    option_3 = {
-        title = "Cultural Expansion"
-        name = "Include the Allemanic culture as a primary culture of France."
-        add_primary_culture = c:culture_allemanic
-    }
 }

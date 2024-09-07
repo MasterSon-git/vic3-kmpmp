@@ -1,0 +1,91 @@
+﻿# Root = Country
+on_monthly_pulse_country = {
+    on_actions = {
+        kmpmp_check_state_alsace_lorraine
+        kmpmp_check_states_rhine
+    }
+}
+
+kmpmp_check_state_alsace_lorraine = {
+    effect = {
+        if = {
+            limit = {
+                c:FRA ?= ROOT
+            }
+
+            # add je_humiliated_by_the_germans
+            if = {
+                limit = {
+                    NOT = {
+                        owns_entire_state_region = STATE_ALSACE_LORRAINE
+                    }
+                    NOT = {
+                        has_journal_entry = je_humiliated_by_the_germans
+                    }
+                    NOT = {
+                        has_modifier = kmpmp_humiliated_by_the_germans
+                    }
+                }
+
+                add_journal_entry = {
+                    type = je_humiliated_by_the_germans
+                }
+            }
+
+            if = {
+                limit = {
+                    owns_entire_state_region = STATE_ALSACE_LORRAINE
+                    has_modifier = kmpmp_humiliated_by_the_germans
+                }
+                remove_modifier = kmpmp_humiliated_by_the_germans
+            }
+        }
+    }
+}
+
+kmpmp_check_states_rhine = {
+    effect = {
+        if = {
+            limit = {
+                c:FRA ?= ROOT
+            }
+
+            if = {
+                limit = {
+                    has_variable = natural_borders_2_a_taken
+                }
+
+                if = {
+                    limit = {
+                        NOT = {
+                            has_modifier = kmpmp_natural_borders_buff
+                        }
+                    }
+
+                    if = {
+                        limit = {
+                            state_region_owned_and_incorporated = { STATE_REGION = STATE_RHINELAND }
+                            state_region_owned_and_incorporated = { STATE_REGION = STATE_NORTH_RHINE }
+                        }
+
+                        add_modifier = {
+                            name = kmpmp_natural_borders_buff
+                        }
+                    }
+                }
+                else_if = {
+                    limit = {
+                        NOT = {
+                            OR = {
+                                state_region_owned_and_incorporated = { STATE_REGION = STATE_RHINELAND }
+                                state_region_owned_and_incorporated = { STATE_REGION = STATE_NORTH_RHINE }
+                            }
+                        }
+                    }
+
+                    remove_modifier = kmpmp_natural_borders_buff
+                }
+            }
+        }
+    }
+}
