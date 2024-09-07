@@ -14,13 +14,13 @@ kmpmp_player_boost_art_of_deal = {
     # +15% Authority (neu)
     country_authority_mult = 0.15
     # +7k Flat Minting
-    country_minting_add = 5000
+    country_minting_add = 7000
     # +10% Arty Input
     goods_input_artillery_mult = 0.1
     # +10% iron clads input
     goods_input_ironclads_mult = 0.1
     # +12 innovation
-    country_weekly_innovation_add = 10
+    country_weekly_innovation_add = 12
 }
 
 kmpmp_player_boost_imperialism_oversea_empire = {
