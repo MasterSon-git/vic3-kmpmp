@@ -303,7 +303,7 @@
                 add_ownership = {
                     country = {
                         country = "c:JAP"
-                        levels = 1 
+                        levels = 5 #3
                     }
                 }
                 reserves = 1
@@ -331,7 +331,7 @@
                 reserves = 1
                 activate_production_methods = { "pm_wooden_buildings" }
             }
-        }    
+        }
     }
     s:STATE_KANTO = {
         region_state:JAP = {
@@ -351,7 +351,7 @@
                 add_ownership = {
                     country = {
                         country = "c:JAP"
-                        levels = 1 #1
+                        levels = 1
                     }
                 }
                 reserves = 1
@@ -416,7 +416,7 @@
                 add_ownership = {
                     country = {
                         country = "c:JAP"
-                        levels = 2 #3
+                        levels = 4 #3
                     }
                 }
                 reserves = 1
