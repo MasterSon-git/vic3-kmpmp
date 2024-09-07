@@ -276,7 +276,7 @@ company_persian_luxury_goods = {
 	}
 }
 # Korea Tungsten Company
-company_Korea_Tungsten_Company = {
+company_korean_tungsten_company = {
 	icon = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 
@@ -326,7 +326,7 @@ company_Korea_Tungsten_Company = {
 	}
 }
 # Imperial Arsenal
-company_Imperial_Arsenal = {
+company_imperial_arsenal = {
 	icon = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 
@@ -373,7 +373,7 @@ company_Imperial_Arsenal = {
 	}
 }
 # Genda Shigyo
-company_Genda_Shigyo = {
+company_genda_shigyo = {
 	icon = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
 

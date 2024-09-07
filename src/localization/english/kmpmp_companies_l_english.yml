@@ -13,6 +13,7 @@
  company_basic_furniture: "Furniture Facilities"
  company_basic_furniture_dynamic_name_tag_singular: "Furniture"
  company_basic_furniture_dynamic_name_tag_plural: "Furnitures"
- company_Korea_Tungsten_Company: "Korean Tungsten Company"
- company_Imperial_Arsenal: "Imperial Arsenal"
- company_Genda_Shigyo: "Geda Shigyo"
+
+ company_korean_tungsten_company: "Korean Tungsten Company"
+ company_imperial_arsenal: "Imperial Arsenal Factory"
+ company_genda_shigyo: "Genda Shigyo"
