@@ -5,13 +5,12 @@ je_the_matter_of_the_reichsland = {
 
     is_shown_when_inactive = {
         OR = {
-            c:PRU ?= root
             c:NGF ?= root
             c:GER ?= root
-        }   
-    }    
+        }
+    }
+
     complete = {
-        year < 1871
         owns_entire_state_region = STATE_ALSACE_LORRAINE
     }
 
@@ -19,17 +18,18 @@ je_the_matter_of_the_reichsland = {
         add_loyalists = {
             value = 0.05
         }
-
         add_modifier = {
-        name = kmpmp_historical_border_buff
+            name = kmpmp_the_reichsland_buff
+            years = 5
         }
-
         add_modifier = {
-        name = kmpmp_the_reichsland_buff
-    }      
+            name = kmpmp_the_reichsland_training_buff
+            years = 1
+        }
+    }
 
-        add_modifier = {
-        name = kmpmp_the_reichsland_training_buff
+    invalid = {
+        year >= 1871
     }
 }
 
@@ -38,27 +38,28 @@ je_the_industrial_heartland = {
     icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
     is_shown_when_inactive = {
+        year >= 1860
         OR = {
-            c:PRU ?= root
             c:NGF ?= root
             c:GER ?= root
-        } 
+        }
+    }
 
     complete = {
-        year >= 1860
         NOT = {
-            owns_entire_state_region = STATE_RHINELAND
-            owns_entire_state_region = STATE_NORTH_RHINE
+            state_region_owned_and_incorporated = { STATE_REGION = STATE_RHINELAND }
+            state_region_owned_and_incorporated = { STATE_REGION = STATE_NORTH_RHINE }
         }
     }
 
     on_complete = {
         add_radicals = {
-            amount = 0.08
-            population = {
-                culture = c:culture_north_german
-                culture = c:culture_south_german
-            }
+            value = 0.08
+            culture = cu:north_german
+        }
+        add_radicals = {
+            value = 0.08
+            culture = cu:south_german
         }
         add_modifier = {
             name = kmpmp_industrial_heartland_lost
@@ -67,40 +68,55 @@ je_the_industrial_heartland = {
 }
 
 #FRANCE:
-
 je_the_border_with_the_germans = {
     group = je_group_historical_content
     icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
     is_shown_when_inactive = {
-    c:FRA ?= root
-        OR = {     
-            year = 1845
-            year > 1845
-        }    
-    } 
+        c:FRA ?= root
+    }
+
+    possible = {
+        year >= 1845
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                state_region_owned_and_incorporated = { STATE_REGION = STATE_ALSACE_LORRAINE }
+            }
+            add_modifier = {
+                name = kmpmp_historical_border_buff
+            }
+        }
+    }
 
     complete = {
-        year < 1871
-        owns_entire_state_region = STATE_ALSACE_LORRAINE
+        year >= 1871
     }
 
     on_complete = {
-        add_modifier = {
-        name = kmpmp_historical_border_buff
-    }    
-}
-  
+        if = {
+            limit = {
+                has_modifier = kmpmp_historical_border_buff
+            }
+            remove_modifier = kmpmp_historical_border_buff
+        }
+    }
+
     fail = {
         NOT = {
             owns_entire_state_region = STATE_ALSACE_LORRAINE
         }
-        remove_modifier = {
-            OR = {   
-                name = kmpmp_historical_border_buff
-                name = kmpmp_natural_borders_buff
+    }
+
+    on_fail = {
+        if = {
+            limit = {
+                has_modifier = kmpmp_historical_border_buff
             }
-        }    
+            remove_modifier = kmpmp_historical_border_buff
+        }
     }
 }
 
@@ -108,33 +124,60 @@ je_humiliated_by_the_germans = {
     group = je_group_historical_content
     icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
+    # TODO: activate je if STATE_ALSACE_LORRAINE is lost
     is_shown_when_inactive = {
-        OR = {
-            c:FRA ?= root
+        c:FRA ?= root
+    }
+
+    immediate = {
+        set_variable = {
+            name = je_humiliated_by_the_germans_activated_years
+            value = 0
         }
-    }   
+    }
 
     complete = {
+        owns_entire_state_region = STATE_ALSACE_LORRAINE
+    }
+        
+    on_complete = {
+    }
+
+    fail = {
+        scope:journal_entry = {
+			is_goal_complete = yes
+		}
         NOT = {
             owns_entire_state_region = STATE_ALSACE_LORRAINE
         }
-        duration >= 7
-        progressbar = yes
-        }
     }
 
-    on_complete = {
-        add_modifier = {
-            name = "kmpmp_humiliated_by_the_germans"
-        }
-        restart = true
-    }
+    # on_action which is triggered every first day of the year
+	on_yearly_pulse = {
+		effect = {
+            change_variable = {
+                name = je_humiliated_by_the_germans_activated_years
+                add = 1
+            }
+		}
+	}
+
+    # a script value computing the goal completion metric
+	current_value = {
+		value = var:je_humiliated_by_the_germans_activated_years
+	}
+
+	# when the journal entry is activated current_value and goal_add_value are evaluated and added together to determine the goal value
+	goal_add_value = {
+		value = 7
+	}
+
+    progressbar = yes
 }
 
 je_France_strategic_position_along_the_Rhine_is_of_utmost_importance = {
     group = je_group_historical_content
     icon = "gfx/interface/icons/event_icons/waving_flag.dds"
-
     on_complete = {
         option_1 = {
             title = "Natural Borders"
@@ -144,11 +187,10 @@ je_France_strategic_position_along_the_Rhine_is_of_utmost_importance = {
             }
             add_modifier = {
                 name = kmpmp_natural_borders_buff
-                duration = -1 
+                duration = -1
             }
             tooltip = "This buff is maintained as long as France holds Rhineland and North Rhine as incorporated states."
         }
-
         option_2 = {
             title = "A Victory for the Masses"
             name = "Celebrate the victory for the people of France."
@@ -158,14 +200,12 @@ je_France_strategic_position_along_the_Rhine_is_of_utmost_importance = {
             add_modifier = {
                 name = kmpmp_victory_for_the_masses_buff
                 duration = 20
-                }
             }
         }
-
-        option_3 = {
-            title = "Cultural Expansion"
-            name = "Include the Allemanic culture as a primary culture of France."
-            add_primary_culture = c:culture_allemanic
-        }
+    }
+    option_3 = {
+        title = "Cultural Expansion"
+        name = "Include the Allemanic culture as a primary culture of France."
+        add_primary_culture = c:culture_allemanic
     }
 }

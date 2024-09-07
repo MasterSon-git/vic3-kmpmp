@@ -8,58 +8,9 @@
 	building_training_rate_mult = 0.15
 }
 
-kmpmp_the_reichsland_buff = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-    country_loan_interest_rate_mult = -0.15
-}
-
-kmpmp_the_reichsland_training_buff = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-    building_training_rate_mult = 0.2
-}
-
 kmpmp_austrian_the_great_reform = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
 	country_authority_mult = -0.2
 	country_bureaucracy_mult = -0.1
 	country_influence_mult = -0.1
-}
-
-kmpmp_industrial_heartland_lost = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-    country_company_construction_efficiency_bonus_add = -0.10
-	building_group_bg_manufacturing_throughput_add = -0.05
-	building_group_bg_government_throughput_add = -0.05
-	building_group_bg_military_throughput_add = -0.05
-}
-
-kmpmp_humiliated_by_the_germans = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-    tax_waste = 0.03
-    country_legitimacy_base_add = -3
-    interest_group_approval_add = ig_armed_forces
-	value = -1
-		
-}
-
-kmpmp_historical_border_buff = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-    legitimacy = 5
-    country_minting_mult = 0.05
-    birth_rate_mult = 0.01
-}
-
-kmpmp_natural_borders_buff = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-    unit_defense_mult = 0.10
-    birth_rate_mult = 0.03
-    legitimacy = 5
-}
-
-kmpmp_victory_for_the_masses_buff = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-    influence = 0.25
-    country_loan_interest_rate_mult = -0.20
-    mandate_progress_add = 0.20
-    state_loyalists_from_sol_change_mult = 0.20
 }
