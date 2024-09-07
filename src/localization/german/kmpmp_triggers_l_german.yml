@@ -4,6 +4,7 @@
  TRIGGER_ANY_IN_GLOBAL_LIST_COUNT: "$PARAMETERS$ $FILTER$:"
  TRIGGER_ANY_SCOPE_STATE_ALL_IN_STATE_REGION: "Alle [Concept('concept_state', '$concept_states$')] in der [concept_state_region] [STATE_REGION.GetName]"
  TRIGGER_ANY_SCOPE_STATE_ALL_IN_STATE_REGION_NOT: "Kein [concept_state] in der [concept_state_region] [STATE_REGION.GetName]"
+ TRIGGER_ANY_SCOPE_BUILDING_COUNT_IN_STATE: "$PARAMETERS$ Gebäude erfüllen die Bedingungen in diesem Staat:"
 
  owns_or_has_subject_entire_state_region_tooltip: "Gesamte [concept_state_region] [THIS.GetStateRegion.GetName] im Besitz oder vasallisiert durch [SCOPE.GetRootScope.GetCountry.GetName]"
  state_region_owned_and_incorporated_tooltip: "Gesamte [concept_state_region] [SCOPE.sStateRegion('state_region_to_check').GetName] im Besitz und inkorporiert durch [SCOPE.GetRootScope.GetCountry.GetName]"
@@ -12,3 +13,4 @@
  kmpmp_law_council_republic_ideology_tooltip: "Ein [concept_interest_group] [concept_leader] ausser [GetInterestGroupVariant('ig_trade_unions', GetPlayer).GetNameWithCountryVariant] hat die [concept_ideology]:\n[GetIdeology('ideology_anarchist').GetName], [GetIdeology('ideology_communist').GetName] oder [GetIdeology('ideology_vanguardist').GetName]"
 
  kmpmp_owns_entire_state_region_and_is_incorporated_tt: "Gesamte [concept_state_region] im Besitz und inkorporiert durch [SCOPE.GetRootScope.GetCountry.GetName]"
+ 
