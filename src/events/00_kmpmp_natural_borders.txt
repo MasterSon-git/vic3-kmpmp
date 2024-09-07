@@ -1,0 +1,63 @@
+﻿namespace = natural_borders
+
+# reward event
+natural_borders.2 = {
+	type = country_event
+	placement = root
+	title = natural_borders.2.t
+	desc = natural_borders.2.d
+	flavor = natural_borders.2.f
+
+	duration = 3
+
+	dlc = dlc004
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/bicorne_hat.dds"
+
+	trigger = {
+		# triggered by je_french_natural_borders
+	}
+
+	option = { # assimilate the new states
+		name = natural_borders.2.a
+		default_option = yes
+
+        add_modifier = {
+            name = kmpmp_natural_borders_buff
+        }
+
+        custom_tooltip = kmpmp_natural_borders_buff_tt
+        
+        # used to de-/activate the buff
+        set_variable = natural_borders_2_a_taken
+	}
+
+	option = { # empower imperialist IG's
+		name = natural_borders.2.b
+		
+        add_loyalists = {
+            value = 0.15
+        }
+
+        add_modifier = {
+            name = kmpmp_victory_for_the_masses_buff
+        }
+	}
+
+	option = { # get French cultures as primary
+		name = natural_borders.2.c
+		add_primary_culture = cu:wallonian
+		add_primary_culture = cu:breton
+		add_primary_culture = cu:occitan
+		add_primary_culture = cu:francoprovencal
+
+        # kmpmp
+        add_primary_culture = cu:alemannic
+	}
+}
