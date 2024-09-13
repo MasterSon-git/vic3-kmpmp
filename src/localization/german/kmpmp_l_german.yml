@@ -77,6 +77,9 @@
  kmpmp_mexico_integrate_the_mesoamericans_desc:0 "$kmpmp_integrate_the_mesoamericans$"
  kmpmp_mexico_integrate_the_mesoamericans_tooltip:0 ""
  kmpmp_mexico_defend_the_homeland:0 "Verteidigt das Vaterland"
+ kmpmp_united_states_of_latin_america:0 "Vereinige die Staaten Südamerikas!"
+ kmpmp_glory_in_latin_america:0 "Siegreich in Südamerika"
+
 
  kmpmp_italy_risorgimento_buff:0 "Italien Risorgimento Buff"
 
@@ -110,6 +113,22 @@
  kmpmp_je_manifest_mexico_fail:0 "Manifest Mexico wiederherstellen"
  kmpmp_je_manifest_mexico_fail_reason:0 "Halte $STATE_CALIFORNIA$ um den "$kmpmp_manifest_mexico$-Buff" zu erhalten."
  kmpmp_je_manifest_mexico_fail_tooltip:0 "Aktiviert den "$kmpmp_manifest_mexico$-Buff""
+
+ # Nachfolger von Großkolumbien
+ kmpmp_je_successor_of_gran_colombia: "Nachfolger von Großkolumbien"
+ kmpmp_je_successor_of_gran_colombia_reason: "Mexiko strebt danach, sich als Nachfolger von Großkolumbien zu etablieren, indem es Mittelamerika unter seine Herrschaft vereint."
+
+ # Ein Wahres Großkolumbien
+ kmpmp_je_a_true_gran_colombia: "Ein Wahres Großkolumbien"
+ kmpmp_je_a_true_gran_colombia_reason: "Nachdem Mexiko sich als Erbe von Großkolumbien etabliert hat, strebt es nun danach, die restlichen verlorenen Ländereien zurückzufordern."
+
+ # Vereinigte Staaten von Lateinamerika
+ kmpmp_je_united_states_of_latin_america: "Vereinigte Staaten von Lateinamerika"
+ kmpmp_je_united_states_of_latin_america_reason: "Nachdem Großkolumbien gefestigt wurde, strebt Mexiko nun danach, ganz Lateinamerika unter einem Banner zu vereinen."
+
+ # Kalifornien Konsolidieren
+ kmpmp_je_consolidate_california: "Kalifornien Konsolidieren"
+ kmpmp_je_consolidate_california_reason: "Mexiko hat sich vorgenommen, die Kontrolle über den Südwesten der Vereinigten Staaten zu konsolidieren."
 
  kmpmp_pm_extensive_tank_production:0 "Erhöhte Panzer Produktion"
  kmpmp_pm_focus_tank_production:0 "Fokus auf Panzer Produktion"

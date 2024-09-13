@@ -28,3 +28,26 @@ kmpmp_integrate_mesoamericans_negative = {
     # -10% Bureaucracy over 10 year (decying)
     country_bureaucracy_mult = -0.1
 }
+
+kmpmp_glory_in_latin_america = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+
+    country_loan_interest_rate_mult = -0.15
+    country_minting_mult = 0.10
+    country_weekly_innovation_mult = 0.15
+    country_mass_migration_attraction_mult = 1.00
+    state_migration_quota_mult = 0.20
+}
+
+kmpmp_united_states_of_latin_america = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+
+    unit_offense_mult = 0.05
+    unit_navy_offense_mult = 0.05
+    unit_defense_mult = 0.05
+    unit_navy_defense_mult = 0.05
+    country_authority_mult = 0.10
+    country_minting_mult = 0.10
+    country_influence_mult = 0.1
+    country_mass_migration_attraction_mult = 0.10
+}

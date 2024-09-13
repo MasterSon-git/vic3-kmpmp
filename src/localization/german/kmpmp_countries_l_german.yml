@@ -8,6 +8,7 @@
  P01_VON:0 "von Parther"
  P01_IN:0 "in Parther"
  P01_NACH:0 "nach Parther"
+
  dyn_c_parthian_empire_name:0 "Partherreich"
  dyn_c_parthian_empire_adj:0 "Partherreich"
 
@@ -20,3 +21,6 @@
  LTN_VON: "vom Lateinischen Kaiserreich"
  LTN_IN: "im Lateinischen Kaiserreich"
  LTN_NACH: "nach Lateinisches Kaiserreich"
+
+ dyn_c_gran_colombia: "Großkolumbien"
+ dyn_c_gran_colombia_adj: "Groß Kolumbianisch"
