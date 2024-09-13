@@ -9,8 +9,8 @@
 		}
 
 		scope:relevant_lobby ?= {
-			add_lobby_menber = PREV.ig:ig_devout
-			add_lobby_menber = PREV.ig:ig_landowners
+			add_lobby_member = PREV.ig:ig_devout
+			add_lobby_member = PREV.ig:ig_landowners
 		}
 	}
 }

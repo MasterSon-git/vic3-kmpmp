@@ -1,7 +1,7 @@
 ﻿kmpmp_je_successor_of_gran_colombia = {
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 	group = je_group_historical_content
-    
+
 	is_shown_when_inactive = {
 		c:MEX ?= ROOT
 	}
@@ -88,6 +88,24 @@
 			}
 		}
 		set_variable = kmpmp_successor_of_gran_colombia_comp
+
+        # temporary fix kmpmp_je_a_true_gran_colombia is new and not loaded in active session 
+        # can be removed next season
+        hidden_effect = {
+            if = {
+                limit = {
+                    NOT = {
+                        OR = {
+                            has_journal_entry = kmpmp_je_a_true_gran_colombia
+                            has_inactive_journal_entry = kmpmp_je_a_true_gran_colombia
+                        }
+                    }
+                }
+                add_journal_entry = {
+                    type = kmpmp_je_a_true_gran_colombia
+                }
+            }
+        }
 	}
 }
 
@@ -232,6 +250,24 @@ kmpmp_je_a_true_gran_colombia = {
 				add_claim = ROOT
 			}
 		}
+
+        # temporary fix kmpmp_je_united_states_of_latin_america is new and not loaded in active session 
+        # can be removed next season
+        hidden_effect = {
+            if = {
+                limit = {
+                    NOT = {
+                        OR = {
+                            has_journal_entry = kmpmp_je_united_states_of_latin_america
+                            has_inactive_journal_entry = kmpmp_je_united_states_of_latin_america
+                        }
+                    }
+                }
+                add_journal_entry = {
+                    type = kmpmp_je_united_states_of_latin_america
+                }
+            }
+        }
 	}
 }
 
@@ -321,6 +357,24 @@ kmpmp_je_manifest_mexico = {
 			remove_modifier = kmpmp_manifest_mexico
 		}
 		set_variable = kmpmp_je_manifest_mexico_comp
+
+        # temporary fix kmpmp_je_consolidate_california is new and not loaded in active session 
+        # can be removed next season
+        hidden_effect = {
+            if = {
+                limit = {
+                    NOT = {
+                        OR = {
+                            has_journal_entry = kmpmp_je_consolidate_california
+                            has_inactive_journal_entry = kmpmp_je_consolidate_california
+                        }
+                    }
+                }
+                add_journal_entry = {
+                    type = kmpmp_je_consolidate_california
+                }
+            }
+        }
 	}
 
 	fail = {
@@ -346,7 +400,49 @@ kmpmp_je_manifest_mexico = {
 			}
 			remove_modifier = kmpmp_manifest_mexico
 		}
+
+        hidden_effect = {
+            add_journal_entry = {
+                type = kmpmp_je_manifest_mexico_fail
+            }
+        }
 	}
+}
+
+kmpmp_je_manifest_mexico_fail = {
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+    group = je_group_historical_content
+    #can_deactivate = yes   # if we are using this and add modifier in modifiers_while_active, the modifier is doubled on reactivation
+    can_revolution_inherit = yes
+
+    complete = {
+        owns_entire_state_region = STATE_CALIFORNIA
+        s:STATE_CALIFORNIA = {
+            any_scope_state = {
+                is_incorporated = yes
+            }
+        }
+        NOT = {
+            has_subject_relation_with = c:USA
+            is_in_customs_union_with = c:USA
+            is_in_same_power_bloc = c:USA
+        }
+    }
+
+    on_complete = {
+        add_modifier = {
+            name = kmpmp_manifest_mexico
+        }
+        hidden_effect = {
+            add_journal_entry = {
+                type = kmpmp_je_manifest_mexico
+            }
+        }
+    }
+
+    invalid = {
+        year > 1860
+    }
 }
 
 kmpmp_je_consolidate_california = {

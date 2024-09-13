@@ -3,6 +3,7 @@
 on_monthly_pulse_country = {
     on_actions = {
         kmpmp_add_china_buff_je_action
+        kmpmp_add_mexico_je_action
     }
 }
 
@@ -34,6 +35,35 @@ kmpmp_add_china_buff_je_action = {
 
             add_journal_entry = {
                 type = kmpmp_china_buff_je
+            }
+        }
+    }
+}
+
+# add mexicos new journal entries
+# can be removed next season
+kmpmp_add_mexico_je_action = {
+    effect = {
+        if = {
+            limit = {
+                c:MEX ?= ROOT
+            }
+
+            if = {
+                limit = {
+                    NOT = {
+                        has_variable = kmpmp_successor_of_gran_colombia_comp
+                    }
+                    NOT = {
+                        OR = {
+                            has_journal_entry = kmpmp_je_successor_of_gran_colombia
+                            has_inactive_journal_entry = kmpmp_je_successor_of_gran_colombia
+                        }
+                    }
+                }
+                add_journal_entry = {
+                    type = kmpmp_je_successor_of_gran_colombia
+                }
             }
         }
     }
