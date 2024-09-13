@@ -269,8 +269,8 @@ law_council_republic = {
 				custom_tooltip = {
 					text = kmpmp_law_council_republic_ideology_tooltip
 					any_interest_group = {
-						filter = {
-							THIS = PREV.ig:ig_trade_unions
+						NOT = {
+							is_interest_group_type = ig_trade_unions
 						}
 						leader = {
 							OR = {

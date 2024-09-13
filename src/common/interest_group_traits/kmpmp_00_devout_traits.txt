@@ -17,3 +17,13 @@ ig_trait_da_wat = {
 		state_education_access_add = 0.05 #kmpmp
 	}
 }
+
+ig_trait_secular_shrine_theory = {
+	icon = "gfx/interface/icons/ig_trait_icons/divine_right.dds"
+	min_approval = happy
+	
+	modifier = {
+		state_birth_rate_mult = 0.025 #kmpmp
+		state_conversion_mult = 0.20 #0.15
+	}
+}

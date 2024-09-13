@@ -1,9 +1,9 @@
-﻿state_engineers_investment_pool_efficiency_mult={
-	decimals=0
-	color=good
-	percent=yes
-	game_data={
-		ai_value=0
+﻿state_engineers_investment_pool_efficiency_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
 	}
 }
 
@@ -24,8 +24,8 @@ goods_input_tea_add = {
 }
 
 goods_input_ironclads_mult = {
-    color = bad
-    percent = yes
+	color = bad
+	percent = yes
 	decimals = 0
 	game_data = {
 		ai_value = 0
@@ -33,9 +33,18 @@ goods_input_ironclads_mult = {
 }
 
 goods_input_manowars_mult = {
-    color = bad
-    percent = yes
+	color = bad
+	percent = yes
 	decimals = 0
+	game_data = {
+		ai_value = 0
+	}
+}
+
+building_group_bg_owner_buildings_tax_mult = {
+	decimals = 1
+	color = neutral
+	percent = yes
 	game_data = {
 		ai_value = 0
 	}
@@ -96,7 +105,6 @@ building_tobacco_plantation_throughput_add = {
 #	color = bad
 #	percent = yes
 #}
-
 unit_combat_unit_type_light_tanks_offense_mult = {
 	color = good
 	percent = yes

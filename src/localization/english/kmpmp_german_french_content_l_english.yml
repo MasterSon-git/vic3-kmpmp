@@ -1,0 +1,27 @@
+﻿l_english:
+ # PRUSSIA / NGF / GERMANY
+  
+ je_the_matter_of_the_reichsland: "The Matter of the Reichsland"
+ je_the_matter_of_the_reichsland_reason: ""
+ kmpmp_the_reichsland_buff: "The Reichsland"
+ kmpmp_the_reichsland_training_buff: "The Reichsland Training"
+
+ je_the_industrial_heartland: "The Industrial Heartland"
+ je_the_industrial_heartland_reason: ""
+ kmpmp_industrial_heartland_lost: "The Industrial Heartland is Lost"
+
+ # FRANCE
+  
+ je_the_border_with_the_germans: "The Border with the Germans"
+ je_the_border_with_the_germans_reason: "Maintaining control over Alsace-Lorraine is critical for France's strategic interests."
+ kmpmp_historical_border_buff: "Historical Border"
+
+ je_humiliated_by_the_germans: "Humiliated by the Germans"
+ je_humiliated_by_the_germans_reason: ""
+ kmpmp_humiliated_by_the_germans: "Humiliated by the Germans"
+
+ kmpmp_natural_borders_buff: "The Natural Borders"
+ kmpmp_natural_borders_buff_tt: "Hold the states $STATE_RHINELAND$ and $STATE_NORTH_RHINE$ to maintain the buff."
+
+ kmpmp_victory_for_the_masses_buff: "A Victory for the Masses"
+ 

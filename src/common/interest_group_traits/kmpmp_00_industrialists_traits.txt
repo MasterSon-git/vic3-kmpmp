@@ -3,7 +3,8 @@
 	min_approval = loyal
 	
 	modifier = {
-		building_group_bg_manufacturing_tax_mult = 0.1
+		# building_group_bg_manufacturing_tax_mult = 0.1
+		tax_dividends_add = 0.1 #kmpmp
 		state_construction_mult = 0.05 #kmpmp
 		country_authority_mult = 0.05 #kmpmp
 	}
@@ -16,7 +17,8 @@ ig_trait_kommerskollegium = {
 	modifier = {
 		state_capitalists_investment_pool_efficiency_mult = 0.05
 		building_group_bg_mining_tax_mult = 0.1
-		building_group_bg_manufacturing_tax_mult = 0.025 #kmpmp
+		# building_group_bg_manufacturing_tax_mult = 0.025 #kmpmp
+		tax_dividends_add = 0.05 #kmpmp
 	}
 }
 

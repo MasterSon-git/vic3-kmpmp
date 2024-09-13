@@ -5,9 +5,15 @@
 NDiplomacy = {
 	WAR_GOAL_INFAMY_CONQUER_STATE = 4.0 #5.0
 	WAR_GOAL_INFAMY_MAKE_PROTECTORATE = 1.5 #2.0
+	WAR_GOAL_INFAMY_FORCE_NATIONALIZATION = 0.15 #0.5
 
 	# kmpmp TEST
 	# DEFAULT_TRUCE_MONTHS = 2
+}
+
+NCharacter = {
+	# kmpmp - try to reroll chars after months
+	VOIDED_CHARACTER_DEFAULT_DURATION = 6 #12 # Default months a character will be in the void before being deleted
 }
 
 NWar = {

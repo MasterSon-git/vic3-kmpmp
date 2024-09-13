@@ -1,0 +1,152 @@
+﻿l_english:
+
+# Journal entry
+
+	je_zw_autonom_invest_management:0 "$concept_private_constructions$ Management"
+	je_zw_autonom_invest_management_reason:0 "" 
+
+# Decisions
+
+	zw_cpc_add_je:0 "$je_zw_autonom_invest_management$"
+	zw_cpc_add_je_desc:0 "Add $concept_journal_entry$ $je_zw_autonom_invest_managemen$"
+
+# Decrees
+	
+	decree_zw_no_state_private_investment: "Ban $concept_private_constructions$"
+	decree_zw_no_state_private_investment_desc: "Ban $concept_private_constructions$"
+
+# Only expand highly profitable buildings
+
+	zw_auto_invest_profitable_buildings_only_button:0 "Highly Profitable Buildings Only"
+	zw_auto_invest_profitable_buildings_only_button_desc:0 ""
+	zw_auto_invest_profitable_buildings_only_undo_button:0 "No Extra Profit Conditions"
+	zw_auto_invest_profitable_buildings_only_undo_button_desc:0 ""
+
+	zw_auto_invest_profitable_buildings_only_button_tt:0 "Private investment only expands buildings:\n$concept_occupancy$ >= 0.9\n$TRIGGER_BUILDING_HAS_GOODS_SHORTAGE_NOT$\nFor normal buildings:\n  $concept_market_access$ = 100%\n  $concept_building_balance_profit$ > (100 * $concept_building_levels$)\nFor railways:\n  $concept_market_access$ = 100%\n  $concept_building_balance_profit$ > (100 * $concept_building_levels$)\n  Or,\n  $concept_infrastructure$ < $concept_infrastructure_usage$\n  $TRIGGER_NAND$\n    $IS_SUBSIDIZED$\n    $concept_building_balance_profit$ > 0"
+
+# Scripted buttons
+
+	zw_auto_expand_incorporated_states_only_button:0 "$AUTO_EXPAND$ $concept_incorporated_states$"
+	zw_auto_expand_incorporated_states_only_button_desc:0 "Only buildings in $concept_incorporated_states$ can be auto-expanded"
+	zw_auto_expand_incorporated_states_only_undo_button:0 "$AUTO_EXPAND$ All $concept_states$"
+	zw_auto_expand_incorporated_states_only_undo_button_desc:0 "Buildings in all $concept_states$ can be auto-expanded"
+
+	zw_auto_invest_incorporated_states_only_button:0 "Invest $concept_incorporated_states$"
+	zw_auto_invest_incorporated_states_only_button_desc:0 "$concept_private_constructions$ can only build/expand buildings in incorporated states"
+	zw_auto_invest_incorporated_states_only_undo_button:0 "Invest All $concept_states$"
+	zw_auto_invest_incorporated_states_only_undo_button_desc:0 "$concept_private_constructions$ can build/expand buildings in all states"
+
+	zw_auto_invest_existing_buildings_only_button:0 "Existing $concept_buildings$ Only"
+	zw_auto_invest_existing_buildings_only_button_desc:0 "$concept_private_constructions$ are only allowed to expand existing buildings"
+	zw_auto_invest_existing_buildings_only_undo_button:0 "New $concept_buildings$ Allowed"
+	zw_auto_invest_existing_buildings_only_undo_button_desc:0 "$concept_private_constructions$ are allowed to build new buildings"
+
+
+
+	zw_auto_invest_disallow_building_food_industry_button:0 "No $building_food_industry$"
+	zw_auto_invest_disallow_building_food_industry_button_desc:0 ""
+	zw_auto_invest_disallow_building_food_industry_undo_button:0 "$building_food_industry$"
+	zw_auto_invest_disallow_building_food_industry_undo_button_desc:0 ""
+
+	zw_auto_invest_disallow_building_textile_mills_button:0 "No $building_textile_mills$"
+	zw_auto_invest_disallow_building_textile_mills_button_desc:0 ""
+	zw_auto_invest_disallow_building_textile_mills_undo_button:0 "$building_textile_mills$"
+	zw_auto_invest_disallow_building_textile_mills_undo_button_desc:0 ""
+
+	zw_auto_invest_disallow_building_furniture_manufacturies_button:0 "No $building_furniture_manufacturies$"
+	zw_auto_invest_disallow_building_furniture_manufacturies_button_desc:0 ""
+	zw_auto_invest_disallow_building_furniture_manufacturies_undo_button:0 "$building_furniture_manufacturies$"
+	zw_auto_invest_disallow_building_furniture_manufacturies_undo_button_desc:0 ""
+
+	zw_auto_invest_disallow_building_glassworks_button:0 "No $building_glassworks$"
+	zw_auto_invest_disallow_building_glassworks_button_desc:0 ""
+	zw_auto_invest_disallow_building_glassworks_undo_button:0 "$building_glassworks$"
+	zw_auto_invest_disallow_building_glassworks_undo_button_desc:0 ""
+
+	zw_auto_invest_disallow_building_paper_mills_button:0 "No $building_paper_mills$"
+	zw_auto_invest_disallow_building_paper_mills_button_desc:0 ""
+	zw_auto_invest_disallow_building_paper_mills_undo_button:0 "$building_paper_mills$"
+	zw_auto_invest_disallow_building_paper_mills_undo_button_desc:0 ""
+
+	zw_auto_invest_disallow_building_chemical_plants_button:0 "No $building_chemical_plants$"
+	zw_auto_invest_disallow_building_chemical_plants_button_desc:0 ""
+	zw_auto_invest_disallow_building_chemical_plants_undo_button:0 "$building_chemical_plants$"
+	zw_auto_invest_disallow_building_chemical_plants_undo_button_desc:0 ""
+
+	zw_auto_invest_disallow_building_explosives_factory_button:0 "No $building_explosives_factory$"
+	zw_auto_invest_disallow_building_explosives_factory_button_desc:0 ""
+	zw_auto_invest_disallow_building_explosives_factory_undo_button:0 "$building_explosives_factory$"
+	zw_auto_invest_disallow_building_explosives_factory_undo_button_desc:0 ""
+
+	zw_auto_invest_disallow_building_synthetics_plants_button:0 "No $building_synthetics_plants$"
+	zw_auto_invest_disallow_building_synthetics_plants_button_desc:0 ""
+	zw_auto_invest_disallow_building_synthetics_plants_undo_button:0 "$building_synthetics_plants$"
+	zw_auto_invest_disallow_building_synthetics_plants_undo_button_desc:0 ""
+
+	zw_auto_invest_disallow_building_tooling_workshops_button:0 "No $building_tooling_workshops$"
+	zw_auto_invest_disallow_building_tooling_workshops_button_desc:0 ""
+	zw_auto_invest_disallow_building_tooling_workshops_undo_button:0 "$building_tooling_workshops$"
+	zw_auto_invest_disallow_building_tooling_workshops_undo_button_desc:0 ""
+
+	zw_auto_invest_disallow_building_steel_mills_button:0 "No $building_steel_mills$"
+	zw_auto_invest_disallow_building_steel_mills_button_desc:0 ""
+	zw_auto_invest_disallow_building_steel_mills_undo_button:0 "$building_steel_mills$"
+	zw_auto_invest_disallow_building_steel_mills_undo_button_desc:0 ""
+
+	zw_auto_invest_disallow_building_motor_industry_button:0 "No $building_motor_industry$"
+	zw_auto_invest_disallow_building_motor_industry_button_desc:0 ""
+	zw_auto_invest_disallow_building_motor_industry_undo_button:0 "$building_motor_industry$"
+	zw_auto_invest_disallow_building_motor_industry_undo_button_desc:0 ""
+
+	zw_auto_invest_disallow_building_electrics_industry_button:0 "No $building_electrics_industry$"
+	zw_auto_invest_disallow_building_electrics_industry_button_desc:0 ""
+	zw_auto_invest_disallow_building_electrics_industry_undo_button:0 "$building_electrics_industry$"
+	zw_auto_invest_disallow_building_electrics_industry_undo_button_desc:0 ""
+
+	zw_auto_invest_disallow_building_shipyards_button:0 "No $building_shipyards$"
+	zw_auto_invest_disallow_building_shipyards_button_desc:0 ""
+	zw_auto_invest_disallow_building_shipyards_undo_button:0 "$building_shipyards$"
+	zw_auto_invest_disallow_building_shipyards_undo_button_desc:0 ""
+
+	zw_auto_invest_disallow_building_arts_academy_button:0 "No $building_arts_academy$"
+	zw_auto_invest_disallow_building_arts_academy_button_desc:0 ""
+	zw_auto_invest_disallow_building_arts_academy_undo_button:0 "$building_arts_academy$"
+	zw_auto_invest_disallow_building_arts_academy_undo_button_desc:0 ""
+
+	zw_auto_invest_disallow_agro_button:0 "No $bg_agriculture$"
+	zw_auto_invest_disallow_agro_button_desc:0 ""
+	zw_auto_invest_disallow_agro_undo_button:0 "$bg_agriculture$"
+	zw_auto_invest_disallow_agro_undo_button_desc:0 ""
+
+	zw_auto_invest_disallow_plantations_button:0 "No $bg_plantations$"
+	zw_auto_invest_disallow_plantations_button_desc:0 ""
+	zw_auto_invest_disallow_plantations_undo_button:0 "$bg_plantations$"
+	zw_auto_invest_disallow_plantations_undo_button_desc:0 ""
+
+	zw_auto_invest_disallow_mines_button:0 "No $bg_mining$"
+	zw_auto_invest_disallow_mines_button_desc:0 ""
+	zw_auto_invest_disallow_mines_undo_button:0 "$bg_mining$"
+	zw_auto_invest_disallow_mines_undo_button_desc:0 ""
+
+	# Translation needed 
+	zw_auto_invest_disallow_misc_button:0 "No $RESOURCES$ $concept_buildings$"
+	zw_auto_invest_disallow_misc_button_desc:0 ""
+	zw_auto_invest_disallow_misc_undo_button:0 "$RESOURCES$ $concept_buildings$"
+	zw_auto_invest_disallow_misc_undo_button_desc:0 ""
+
+
+	# Translation needed
+	zw_auto_invest_disallow_military_button:0 "No $COST_OF_WAR_TYPE_MATERIEL$"
+	zw_auto_invest_disallow_military_button_desc:0 ""
+	zw_auto_invest_disallow_military_undo_button:0 "$COST_OF_WAR_TYPE_MATERIEL$"
+	zw_auto_invest_disallow_military_undo_button_desc:0 ""
+
+	zw_auto_invest_disallow_building_power_plant_button:0 "No $building_power_plant$"
+	zw_auto_invest_disallow_building_power_plant_button_desc:0 ""
+	zw_auto_invest_disallow_building_power_plant_undo_button:0 "$building_power_plant$"
+	zw_auto_invest_disallow_building_power_plant_undo_button_desc:0 ""
+
+	zw_auto_invest_disallow_building_railway_button:0 "No $building_railway$"
+	zw_auto_invest_disallow_building_railway_button_desc:0 ""
+	zw_auto_invest_disallow_building_railway_undo_button:0 "$building_railway$"
+	zw_auto_invest_disallow_building_railway_undo_button_desc:0 ""

@@ -24,3 +24,12 @@ state_pollution_reduction_health_mult = {
 		ai_value = 0
 	}
 }
+
+unit_combat_unit_type_heavy_tank_defense_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}

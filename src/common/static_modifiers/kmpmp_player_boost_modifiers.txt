@@ -13,14 +13,14 @@ kmpmp_player_boost_art_of_deal = {
     country_tech_spread_mult = 0.15
     # +15% Authority (neu)
     country_authority_mult = 0.15
-    # +5k Flat Minting
-    country_minting_add = 5000
+    # +7k Flat Minting
+    country_minting_add = 7000
     # +10% Arty Input
     goods_input_artillery_mult = 0.1
     # +10% iron clads input
     goods_input_ironclads_mult = 0.1
-    # +10 innovation
-    country_weekly_innovation_add = 10
+    # +12 innovation
+    country_weekly_innovation_add = 12
 }
 
 kmpmp_player_boost_imperialism_oversea_empire = {
@@ -99,8 +99,8 @@ kmpmp_player_boost_state_capitalism = {
 
     # +150 Authority
     country_authority_add = 150
-    # +10% manufactoring tax income
-    building_group_bg_manufacturing_tax_mult = 0.1
+    # +10% dividends tax
+    tax_dividends_add = 0.1
     # -20% investment pool contribution eff of capitalists
     state_capitalists_investment_pool_efficiency_mult = -0.2
     # +10% building sector throughput
@@ -188,6 +188,8 @@ kmpmp_player_boost_corporative_socialism = {
     state_accepted_birth_rate_mult = 0.05
     # +5% manu tax income
     building_group_bg_manufacturing_tax_mult = 0.05
+    # +5% government dividends eff
+    country_government_dividends_efficiency_add = 0.05
     # +5 legitimacy
     country_legitimacy_base_add = 5
     # -20% mobilisation costs
@@ -241,6 +243,8 @@ kmpmp_player_boost_tycoon_capitalism = {
     country_loan_interest_rate_mult = -0.1
     # +10% manufactoring tax income
     building_group_bg_manufacturing_tax_mult = 0.1
+    # +10% dividends tax
+    tax_dividends_add = 0.01
     # -10% military research speed
     country_military_tech_research_speed_mult = -0.1
     # +4% mortality
@@ -262,6 +266,8 @@ kmpmp_player_boost_rhine_capitalism = {
     building_minimum_wage_mult = 0.15
     # +10% Manufacturing Tax income
     building_group_bg_manufacturing_tax_mult = 0.1
+    # +10% dividends tax
+    tax_dividends_add = 0.1
     # +5% Army Offense / Defense
     unit_army_offense_mult = 0.05
     unit_army_defense_mult = 0.05
