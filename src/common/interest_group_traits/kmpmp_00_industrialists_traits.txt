@@ -3,7 +3,8 @@
 	min_approval = loyal
 	
 	modifier = {
-		building_group_bg_manufacturing_tax_mult = 0.1
+		# building_group_bg_manufacturing_tax_mult = 0.1
+		tax_dividends_add = 0.1 #kmpmp
 		state_construction_mult = 0.05 #kmpmp
 		country_authority_mult = 0.05 #kmpmp
 	}

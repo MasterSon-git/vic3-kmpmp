@@ -9,3 +9,7 @@ any_in_global_list_count = {
 any_scope_building_count_in_state = {
     global = TRIGGER_ANY_SCOPE_BUILDING_COUNT_IN_STATE
 }
+
+kmpmp_turmoil_incorporated_states_greater_or_equal_tooltip = {
+    global = TRIGGER_KMPMP_TURMOIL_INCORPORATED_STATES_GREATER_OR_EQUAL_TOOLTIP
+}

@@ -9,7 +9,7 @@
  owns_or_has_subject_entire_state_region_tooltip: "Entire [concept_state_region] [THIS.GetStateRegion.GetName] is owned or subjected by [SCOPE.GetRootScope.GetCountry.GetName]"
  state_region_owned_and_incorporated_tooltip: "Entire [concept_state_region] [SCOPE.sStateRegion('state_region_to_check').GetName] is owned and incorporated by [SCOPE.GetRootScope.GetCountry.GetName]"
 
- kmpmp_turmoil_incorporated_states_greater_or_equal_tooltip: "$KMPMP_TURMOIL_INCORPORATED_STATES$ is greater or equal to $TARGET_VALUE|%0v$"
+ TRIGGER_KMPMP_TURMOIL_INCORPORATED_STATES_GREATER_OR_EQUAL_TOOLTIP: "$KMPMP_TURMOIL_INCORPORATED_STATES$ is greater or equal to $TARGET_VALUE|%0v$"
  kmpmp_law_council_republic_ideology_tooltip: "Any [concept_interest_group] [concept_leader] except [GetInterestGroupVariant('ig_trade_unions', GetPlayer).GetNameWithCountryVariant] has [concept_ideology]:\n[GetIdeology('ideology_anarchist').GetName], [GetIdeology('ideology_communist').GetName] or [GetIdeology('ideology_vanguardist').GetName]"
 
  kmpmp_owns_entire_state_region_and_is_incorporated_tt: "Entire [concept_state_region] is owned and incorporated by [SCOPE.GetRootScope.GetCountry.GetName]"
