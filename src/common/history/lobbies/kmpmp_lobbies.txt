@@ -1,0 +1,16 @@
+﻿LOBBIES = {
+	c:MEX ?= {
+		random_political_lobby = {
+			limit = {
+				is_political_lobby_type = lobby_anti_country
+				target = c:USA
+			}
+			save_scope_as = relevant_lobby
+		}
+
+		scope:relevant_lobby ?= {
+			add_lobby_menber = PREV.ig:ig_devout
+			add_lobby_menber = PREV.ig:ig_landowners
+		}
+	}
+}
