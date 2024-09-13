@@ -325,8 +325,8 @@ company_korean_tungsten_company = {
 		value = 3 # Higher base value for flavored companies
 	}
 }
-# Imperial Arsenal
-company_imperial_arsenal = {
+# Imperial Arsenal Japan
+company_imperial_arsenal_japan = {
 	icon = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 
@@ -403,7 +403,6 @@ company_genda_shigyo = {
 				level >= 5
 			}
 		}
-		has_technology_researched = breech_loading_artillery
 	}
 	prosperity_modifier = {
 		building_cotton_plantation_throughput_add = 0.10
