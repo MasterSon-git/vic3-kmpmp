@@ -283,42 +283,7 @@ sick_man.3 = {
 			var:sick_man_var > 1
 		}
 
-		s:STATE_ATTICA = {
-			add_claim = ROOT
-		}
-		s:STATE_PELOPONNESE = {
-			add_claim = ROOT
-		}
-		s:STATE_CRETE = {
-			add_claim = ROOT
-		}
-		s:STATE_NORTHERN_SERBIA = {
-			add_claim = ROOT
-		}
-		s:STATE_SOUTHERN_TRANSYLVANIA = {
-			add_claim = ROOT
-		}
-		s:STATE_NORTHERN_TRANSYLVANIA = {
-			add_claim = ROOT
-		}
-		s:STATE_CRIMEA = {
-			add_claim = ROOT
-		}
-		s:STATE_CHERSON = {
-			add_claim = ROOT
-		}
-		# s:STATE_LUHANSK = {
-		# 	add_claim = ROOT
-		# }
-		s:STATE_KHARKOV = {
-			add_claim = ROOT
-		}
-		s:STATE_KUBAN = {
-			add_claim = ROOT
-		}
-		s:STATE_GREATER_CAUCASUS = {
-			add_claim = ROOT
-		}
+		kmpmp_give_claims_for_sick_man_westernization = yes
 
 		add_primary_culture = cu:greek
 		add_primary_culture = cu:bulgarian
@@ -339,30 +304,8 @@ sick_man.3 = {
 		trigger = {
 			var:sick_man_var > 1
 		}
-		s:STATE_TABRIZ = {
-			add_claim = ROOT
-		}
-		s:STATE_LURISTAN = {
-			add_claim = ROOT
-		}
-		s:STATE_KHUZESTAN = {
-			add_claim = ROOT
-		}
-		s:STATE_ARMENIA = {
-			add_claim = ROOT
-		}
-		s:STATE_AZERBAIJAN = {
-			add_claim = ROOT
-		}
-		s:STATE_LIBYA = {
-			add_claim = ROOT
-		}
-		s:STATE_TRIPOLI = {
-			add_claim = ROOT
-		}
-		s:STATE_TUNISIA = {
-			add_claim = ROOT
-		}
+		
+		kmpmp_give_claims_for_sick_man_leader_of_islam = yes
 
 		add_primary_culture = cu:kurdish
 		add_primary_culture = cu:bedouin
@@ -440,42 +383,7 @@ sick_man.4 = {
 		name = sick_man.4.a
 		default_option = yes
 
-		s:STATE_ATTICA = {
-			add_claim = ROOT
-		}
-		s:STATE_PELOPONNESE = {
-			add_claim = ROOT
-		}
-		s:STATE_CRETE = {
-			add_claim = ROOT
-		}
-		s:STATE_NORTHERN_SERBIA = {
-			add_claim = ROOT
-		}
-		s:STATE_SOUTHERN_TRANSYLVANIA = {
-			add_claim = ROOT
-		}
-		s:STATE_NORTHERN_TRANSYLVANIA = {
-			add_claim = ROOT
-		}
-		s:STATE_CRIMEA = {
-			add_claim = ROOT
-		}
-		s:STATE_CHERSON = {
-			add_claim = ROOT
-		}
-		# s:STATE_LUHANSK = {
-		# 	add_claim = ROOT
-		# }
-		s:STATE_KHARKOV = {
-			add_claim = ROOT
-		}
-		s:STATE_KUBAN = {
-			add_claim = ROOT
-		}
-		s:STATE_GREATER_CAUCASUS = {
-			add_claim = ROOT
-		}
+		kmpmp_give_claims_for_sick_man_westernization = yes
 
 		add_primary_culture = cu:greek
 		add_primary_culture = cu:bulgarian
@@ -490,30 +398,7 @@ sick_man.4 = {
 	option = {
 		name = sick_man.4.b
 		
-		s:STATE_TABRIZ = {
-			add_claim = ROOT
-		}
-		s:STATE_LURISTAN = {
-			add_claim = ROOT
-		}
-		s:STATE_KHUZESTAN = {
-			add_claim = ROOT
-		}
-		s:STATE_ARMENIA = {
-			add_claim = ROOT
-		}
-		s:STATE_AZERBAIJAN = {
-			add_claim = ROOT
-		}
-		s:STATE_LIBYA = {
-			add_claim = ROOT
-		}
-		s:STATE_TRIPOLI = {
-			add_claim = ROOT
-		}
-		s:STATE_TUNISIA = {
-			add_claim = ROOT
-		}
+		kmpmp_give_claims_for_sick_man_leader_of_islam = yes
 
 		add_primary_culture = cu:kurdish
 		add_primary_culture = cu:bedouin
