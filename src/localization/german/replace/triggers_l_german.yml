@@ -1,0 +1,2 @@
+﻿l_german:
+ TRIGGER_IS_DIPLOMATIC_PLAY_ENEMY_OF_THIRD_NOT: "[COUNTRY.GetAltName('NOM')|U] stellt sich #bold nicht#! in einem [concept_diplomatic_play] gegen [TARGET_COUNTRY.GetAltName('AKK')]"
