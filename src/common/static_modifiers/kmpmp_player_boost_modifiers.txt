@@ -244,7 +244,7 @@ kmpmp_player_boost_tycoon_capitalism = {
     # +10% manufactoring tax income
     building_group_bg_manufacturing_tax_mult = 0.1
     # +10% dividends tax
-    tax_dividends_add = 0.01
+    tax_dividends_add = 0.1
     # -10% military research speed
     country_military_tech_research_speed_mult = -0.1
     # +4% mortality
