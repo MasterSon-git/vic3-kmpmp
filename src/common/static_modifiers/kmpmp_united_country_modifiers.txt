@@ -6,9 +6,7 @@
 	country_military_goods_cost_mult = -0.05
 	state_birth_rate_mult = 0.05
 	state_conscription_rate_mult = 0.02
-	building_group_bg_manufacturing_tax_mult = 0.05
-	# +5% dividends tax
-	tax_dividends_add = 0.05
+	country_minting_mult = 0.1
 }
 
 kmpmp_risorgimento = {
