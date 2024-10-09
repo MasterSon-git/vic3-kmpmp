@@ -9,3 +9,5 @@ Thanks to everyone, supporting development of this mod:
   - Gui bugfixing and testing
 - Tziplays
   - Was here
+- Dman153
+  - Was here 2
