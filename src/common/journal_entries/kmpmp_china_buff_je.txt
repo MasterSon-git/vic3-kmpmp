@@ -42,6 +42,19 @@
         always = no
     }
 
+    invalid = {
+        global_var:kmpmp_china_is_player ?= yes
+    }
+
+    on_invalid = {
+        if = {
+            limit = {
+                has_modifier = kmpmp_china_buff_modifier
+            }
+            remove_modifier = kmpmp_china_buff_modifier
+        }
+    }
+
     can_revolution_inherit = yes
 
     can_deactivate = no
