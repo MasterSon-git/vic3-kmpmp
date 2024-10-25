@@ -13,6 +13,8 @@ kmpmp_add_china_buff_je_action = {
     effect = {
         if = {
             limit = {
+                global_var:kmpmp_china_is_player ?= no
+
                 NOT = {
                     has_journal_entry = kmpmp_china_buff_je
                 }

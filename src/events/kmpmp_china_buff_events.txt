@@ -1,0 +1,28 @@
+﻿namespace = kmpmp_ev_china_buff
+
+kmpmp_ev_china_buff.1 = {
+    type = country_event
+	hidden = yes
+	
+	trigger = {
+        # Fired by history global
+	}
+
+    immediate = {
+        if = {
+            limit = {
+                is_player = yes
+            }
+            set_global_variable = {
+                name = kmpmp_china_is_player
+                value = yes
+            }
+        }
+        else = {
+            set_global_variable = {
+                name = kmpmp_china_is_player
+                value = no
+            }
+        }
+    }
+}
