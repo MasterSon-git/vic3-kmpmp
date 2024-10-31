@@ -54,6 +54,12 @@
         }
     }
 
+    s:STATE_GOTLAND ?= { #should be moved to history\states
+        every_scope_state = {
+            set_state_type = unincorporated
+        }
+    }
+
     s:STATE_KUBAN ?= {
         remove_homeland = cu:ukrainian #should be moved to history\states
     }

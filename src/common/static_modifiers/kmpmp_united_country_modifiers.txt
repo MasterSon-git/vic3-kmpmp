@@ -1,12 +1,55 @@
 ﻿kmpmp_lion_of_the_north = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	# +5% Off / Def Army + Navy
 	unit_offense_mult = 0.05
 	unit_defense_mult = 0.05
-	unit_recovery_rate_add = 0.1
-	country_military_goods_cost_mult = -0.05
+	# +5% pop growth
 	state_birth_rate_mult = 0.05
-	state_conscription_rate_mult = 0.02
+	# -5% military goods costs
+	country_military_goods_cost_mult = -0.05
+	# +10% recovery Rate
+	unit_recovery_rate_add = 0.1
+	# +10% Minting
 	country_minting_mult = 0.1
+	# +2% conscription rate
+	state_conscription_rate_mult = 0.02
+}
+
+kmpmp_greater_scandinavia = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+
+	# +5% Off / Def Army + Navy
+	unit_offense_mult = 0.05
+	unit_defense_mult = 0.05
+	# +1% pop growth
+	state_birth_rate_mult = 0.01
+	# -5% military goods costs
+	country_military_goods_cost_mult = -0.05
+	# +15% Migration Attraction
+	state_migration_pull_mult = 0.15
+	# +1 Sol
+	state_standard_of_living_add = 1
+	# +5% state construction eff.
+	state_construction_mult = 0.05
+	# -10% radicals from Conquest
+	country_radicals_from_conquest_mult = -0.1
+}
+
+kmpmp_baltic_empire = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+
+	# +4% pop growth
+	state_birth_rate_mult = 0.04
+	# -5% military goods costs
+	country_military_goods_cost_mult = -0.05
+	# +10% Migration Attraction
+	state_migration_pull_mult = 0.1
+	# +1 Sol
+	state_standard_of_living_add = 1
+	# +5% state construction eff.
+	state_construction_mult = 0.05
+	# -5% radicals from Conquest
+	country_radicals_from_conquest_mult = -0.05
 }
 
 kmpmp_risorgimento = {

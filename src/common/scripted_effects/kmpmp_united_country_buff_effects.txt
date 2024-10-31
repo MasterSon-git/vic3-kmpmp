@@ -17,12 +17,6 @@
         }
         kmpmp_update_united_country_buff_p01 = yes
     }
-    if = {
-        limit = {
-            c:SCA ?= ROOT
-        }
-        kmpmp_update_united_country_buff_sca = yes
-    }
 }
 
 kmpmp_update_united_country_buff_ibe = {
@@ -94,44 +88,5 @@ kmpmp_update_united_country_buff_p01 = {
             has_modifier = kmpmp_parthian_empire
         }
         remove_modifier = kmpmp_parthian_empire
-    }
-}
-
-kmpmp_update_united_country_buff_sca = {
-    if = {
-        limit = {
-            kmpmp_owns_70percent_sca_states = yes
-
-            OR = { # copied from kmpmp_00_major_formables
-                owns_entire_state_region = STATE_ZEALAND
-    
-                AND = {
-                    owns_entire_state_region = STATE_ALAND
-                    owns_entire_state_region = STATE_UUSIMAA
-                    owns_entire_state_region = STATE_OSTROBOTHNIA
-                    owns_entire_state_region = STATE_OULU
-                }
-    
-                c:FIN ?= {
-                    is_direct_subject_of = ROOT
-                }
-            }
-        }
-        if = {
-            limit = {
-                NOT = {
-                    has_modifier = kmpmp_lion_of_the_north
-                }
-            }
-            add_modifier = {
-                name = kmpmp_lion_of_the_north
-            }
-        }
-    }
-    else_if = {
-        limit = {
-            has_modifier = kmpmp_lion_of_the_north
-        }
-        remove_modifier = kmpmp_lion_of_the_north
     }
 }

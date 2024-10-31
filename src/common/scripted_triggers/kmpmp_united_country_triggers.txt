@@ -63,7 +63,10 @@ kmpmp_owns_all_sca_states = {
         any_in_global_list = {
             variable = states_sca
             any_scope_state = {
-                owner = ROOT
+                custom_tooltip = {
+                    text = kmpmp_state_owner_root_tt
+                    owner = ROOT
+                }
                 count = all
             }
             count = all

@@ -1,6 +1,7 @@
 ﻿l_english:
  TRIGGER_MILITARY_FORMATION_NUM_UNITS_GREATER_OR_EQUAL: "Number of military units in formation is greater or equal than $TARGET_VALUE|0v$"
 
+ TRIGGER_ANY_IN_GLOBAL_LIST_ALL: "$PARAMETERS$ $FILTER$:"
  TRIGGER_ANY_IN_GLOBAL_LIST_COUNT: "$PARAMETERS$ $FILTER$:"
  TRIGGER_ANY_SCOPE_STATE_ALL_IN_STATE_REGION: "All [Concept('concept_state', '$concept_states$')] in [concept_state_region] [STATE_REGION.GetName]"
  TRIGGER_ANY_SCOPE_STATE_ALL_IN_STATE_REGION_NOT: "No [concept_state] in [concept_state_region] [STATE_REGION.GetName]"
@@ -13,3 +14,5 @@
  kmpmp_law_council_republic_ideology_tooltip: "Any [concept_interest_group] [concept_leader] except [GetInterestGroupVariant('ig_trade_unions', GetPlayer).GetNameWithCountryVariant] has [concept_ideology]:\n[GetIdeology('ideology_anarchist').GetName], [GetIdeology('ideology_communist').GetName] or [GetIdeology('ideology_vanguardist').GetName]"
 
  kmpmp_owns_entire_state_region_and_is_incorporated_tt: "Entire [concept_state_region] is owned and incorporated by [SCOPE.GetRootScope.GetCountry.GetName]"
+
+ kmpmp_state_owner_root_tt: "[SCOPE.GetRootScope.GetState.GetName] - test"
