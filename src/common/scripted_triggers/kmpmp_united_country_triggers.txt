@@ -60,17 +60,60 @@ kmpmp_owns_all_sca_states = {
         limit = {
             has_global_variable_list = states_sca
         }
-        any_in_global_list = {
-            variable = states_sca
-            any_scope_state = {
-                custom_tooltip = {
-                    text = kmpmp_state_owner_root_tt
-                    owner = ROOT
-                }
-                count = all
-            }
-            count = all
+
+
+        save_temporary_scope_value_as = {
+            name = list_name
+            value = "states_sca"
         }
+        
+        custom_tooltip = {
+            text = kmpmp_owns_all_sca_states_tooltip
+            any_in_global_list = {
+                variable = states_sca
+                count = all
+    
+                state_region_owned = yes
+            }
+        }
+
+
+
+        # custom_description = {
+        #     text = kmpmp_owns_all_sca_states_tooltip
+
+        #     any_in_global_list = {
+        #         variable = states_sca
+        #         count = all
+
+        #         state_region_owned = yes
+        #     }
+        # }
+
+
+        # any_in_global_list = {
+        #     variable = states_sca
+            
+        #     state_region_owned = yes
+
+        #     # custom_tooltip = {
+        #     #     text = kmpmp_owns_all_states_in_state_region_tt
+        #     #     any_scope_state = {
+        #     #         owner = ROOT
+        #     #         count = all
+        #     #     }
+        #     # }
+            
+        #     # any_scope_state = {
+        #     #     custom_tooltip = {
+        #     #         text = kmpmp_state_owner_root_tt
+        #     #         owner = ROOT
+        #     #     }
+        #     #     count = all
+        #     # }
+
+        #     count = all
+        # }
     }
     trigger_else = {
         always = no
