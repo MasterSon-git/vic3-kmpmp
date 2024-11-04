@@ -71,6 +71,7 @@ organized_sports = {
 	modifier = {
 		country_prestige_mult = 0.1
 		country_radicals_from_conquest_mult = -0.05 #kmpmp
+		country_infamy_decay_mult = 0.1 #kmpmp
 	}
 	
 	unlocking_technologies = {
@@ -91,11 +92,31 @@ psychiatry = {
 		country_influence_mult = 0.1
 		country_diplomatic_play_maneuvers_add = 10
 		state_bureaucracy_population_base_cost_factor_mult = -0.05
-        country_infamy_decay_mult = 0.03 #kmpmp
+        country_infamy_decay_mult = 0.05 #kmpmp
 	}
 	
 	unlocking_technologies = {
 		empiricism
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+realism = {
+	# Unlocks Realist Art PM in Art Academies
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/realism.dds"
+	category = society
+	
+	modifier = {
+		country_prestige_mult = 0.05
+		country_infamy_generation_mult = -0.05 #kmpmp
+	}
+	
+	unlocking_technologies = {
+		romanticism
 	}
 	
 	ai_weight = {
@@ -163,6 +184,27 @@ nationalism = {
 	}
 }
 
+postal_savings = {
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/postal_savings.dds"
+	category = society
+	
+	modifier = {
+		state_farmers_investment_pool_efficiency_mult = 0.15
+		state_shopkeepers_investment_pool_efficiency_mult = 0.15
+		building_cash_reserves_mult = 0.3 #0.2
+	}
+	
+	unlocking_technologies = {
+		stock_exchange
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+
 steel_frame_buildings = {
 	# Unlocks Covered Markets PM in Urban Centers
 	era = era_3
@@ -197,6 +239,7 @@ civilizing_mission = {
 		country_institution_colonial_affairs_max_investment_add = 1
 		country_max_declared_interests_add = 2 #1
 		country_radicals_from_conquest_mult = -0.05 #kmpmp
+		country_infamy_generation_mult = -0.05 #kmpmp
 	}
 
 	unlocking_technologies = {
@@ -261,6 +304,58 @@ anarchism = {
 	}
 }
 
+socialism = {
+	# Unlocks Council Republic - Governance Principles Law
+	# Unlocks Graduated Taxation - Income Taxation Law
+	# New leaders may spawn with the Social Democrat, Communist Ideologies
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/socialism.dds"
+	category = society
+	
+	modifier = {
+		state_expected_sol_from_literacy = 1
+		country_institution_workplace_safety_max_investment_add = 2
+		country_government_dividends_efficiency_add = 0.05 #kmpmp
+	}
+
+	on_researched = {
+		if = {
+			limit = {
+				NOT = { has_variable = socialism_researched }
+			}
+			set_variable = socialism_researched
+			ig:ig_trade_unions = {
+				add_ideology = ideology_socialist
+			}
+		}
+	}
+	
+	unlocking_technologies = {
+		labor_movement
+		dialectics
+	}
+	
+	ai_weight = {
+		value = 1
+		
+		if = {
+			limit = { 
+				has_strategy = ai_strategy_egalitarian_agenda
+			}
+			add = -0.5
+		}	
+		if = {
+			limit = { 
+				OR = {
+					has_strategy = ai_strategy_conservative_agenda
+					has_strategy = ai_strategy_reactionary_agenda
+				}			
+			}
+			add = 1
+		}
+	}
+}
+
 corporatism = {
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/corporatism.dds"
@@ -319,7 +414,7 @@ pan-nationalism = {
 	
 	modifier = {
 		country_authority_mult = 0.1
-        country_infamy_generation_mult = -0.03 #kmpmp
+        country_infamy_generation_mult = -0.05 #kmpmp
         country_max_declared_interests_add = 2 #kmpmp
 	}
 	
@@ -342,6 +437,26 @@ pan-nationalism = {
 			}
 			add = 2
 		}	
+	}
+}
+
+camera = {
+	# Unlocks Photographic Art, Improved Propaganda Centers PMs in Art Academy
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/camera.dds"
+	category = society
+	
+	modifier = {
+		country_prestige_mult = 0.05
+		country_infamy_generation_mult = -0.05 #kmpmp
+	}
+	
+	unlocking_technologies = {
+		realism
+	}
+	
+	ai_weight = {
+		value = 1
 	}
 }
 
@@ -438,7 +553,6 @@ central_planning = {
 	
 	modifier = {
 		state_tax_capacity_add = 25
-		country_government_dividends_efficiency_add = 0.05
 		country_max_companies_add = 1 # kmpmp
 	}
 	
@@ -500,6 +614,26 @@ multilateral_alliances = {
 	}
 }
 
+film = {
+	# Unlocks Film Propaganda Center PM in Arts Academies
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/film.dds"
+	category = society
+	
+	modifier = {
+		country_prestige_mult = 0.05
+		country_infamy_generation_mult = -0.05 #kmpmp
+	}
+	
+	unlocking_technologies = {
+		camera
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
 macroeconomics = {
 	era = era_5
 	texture = "gfx/interface/icons/invention_icons/macroeconomics.dds"
@@ -508,6 +642,7 @@ macroeconomics = {
 	modifier = {
 		# country_max_companies_add = 1
 		# state_market_access_price_impact = 0.05
+		building_cash_reserves_mult = 0.25 #kmpmp
 	}
 	
 	unlocking_technologies = {
