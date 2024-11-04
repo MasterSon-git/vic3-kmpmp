@@ -9,9 +9,9 @@ law_local_police = {
 	}
 
 	# kmpmp
-	modifier = {
-		country_institution_police_max_investment_add = 1
-	}
+	# modifier = {
+	# 	country_institution_police_max_investment_add = 1
+	# }
 
 	progressiveness = -50
 
