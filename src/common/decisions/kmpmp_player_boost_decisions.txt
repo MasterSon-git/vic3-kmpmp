@@ -280,7 +280,7 @@ kmpmp_player_boost_rhine_capitalism_decision = {
         NOT = {
             has_modifier = kmpmp_player_boost_adjustment
             OR = {
-                has_law = law_command_economy
+                has_law = law_type:law_command_economy
             }
         }
         exists = ig:ig_armed_forces
