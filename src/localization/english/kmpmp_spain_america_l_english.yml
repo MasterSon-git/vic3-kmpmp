@@ -25,3 +25,6 @@
  kmpmp_ev_spain_america.2.f: "Expanding our influence in America could pay off for us in the long run."
  kmpmp_ev_spain_america.2.a: "We warmly welcome [SCOPE.sCountry('mexico_scope').GetName]"
  kmpmp_ev_spain_america.2.b: "I see no advantage for us"
+
+ kmpmp_mexico_spain_cooperation: "Spanish cooperation"
+ kmpmp_mexico_part_of_the_spanish_empire: "Part of the spanish empire"
