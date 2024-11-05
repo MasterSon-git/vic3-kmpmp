@@ -665,10 +665,11 @@ identity_religious = {
 	}
 
 	member_modifier = {
-		state_conversion_mult = 0.33
+		state_conversion_mult = 0.50
 		interest_group_ig_devout_pol_str_mult = 0.25
 		# kmpmp
 		state_mortality_mult = -0.02
+		
 	}
 
 	can_leave = {

@@ -95,8 +95,8 @@ pm_power_bloc_statue_military_treaty = {
 		workforce_scaled = {
 			state_conscription_rate_mult = 0.25
 			# kmpmp
-			state_accepted_birth_rate_mult = 0.02
-			state_radicals_from_sol_change_mult = -0.1
+			state_accepted_birth_rate_mult = 0.0175
+			state_radicals_from_sol_change_mult = -0.15
 		}
 	}
 
@@ -153,7 +153,7 @@ pm_power_bloc_statue_religious = {
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_conversion_mult = 0.25
+			state_conversion_mult = 1
 			state_turmoil_effects_mult = -0.1
 			# kmpmp
 			state_education_access_add = 0.05
