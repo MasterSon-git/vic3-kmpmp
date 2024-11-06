@@ -8,11 +8,6 @@ law_local_police = {
 		tech_bureaucracy
 	}
 
-	# kmpmp
-	modifier = {
-		country_institution_police_max_investment_add = 1
-	}
-
 	progressiveness = -50
 
 	institution = institution_police
