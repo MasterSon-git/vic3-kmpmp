@@ -61,6 +61,16 @@
 	unit_experience_gain_add = 1.0
 }
 
+in_default = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	building_throughput_add = -0.4 #-0.5
+	unit_offense_mult = -0.5
+	unit_defense_mult = -0.5
+	# kmpmp
+	# -200% training rate
+	building_training_rate_mult = -2.0
+}
+
 declared_bankruptcy = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
 	country_prestige_mult = -0.5 #-0.75
@@ -91,6 +101,12 @@ legislative_efficiency = {
 	#kmpmp
 	building_training_rate_mult = 0.35
 	country_military_goods_cost_mult = -0.1
+}
+
+# Scales by the amount of debt owed to government owned buildings (ie; government self owned debt)
+government_owned_debt = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	country_government_dividends_waste_add = 0.5 #1
 }
 
 country_navy_power_projection = {

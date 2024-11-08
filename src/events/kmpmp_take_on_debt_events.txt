@@ -1,0 +1,41 @@
+﻿namespace = kmpmp_ev_take_on_debt
+
+kmpmp_ev_take_on_debt.1 = { # remove target from cooldown list
+    type = country_event
+    hidden = yes
+
+    trigger = {
+        # Fired by diplomatic action take_on_debt
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                is_target_in_variable_list = {
+                    name = kmpmp_take_on_debt_cooldown_list
+                    target = scope:take_on_debt_initiator
+                }
+            }
+
+            remove_list_variable = {
+                name = kmpmp_take_on_debt_cooldown_list
+                target = scope:take_on_debt_initiator
+            }
+        }
+
+        if = {
+            limit = {
+                is_target_in_variable_list = {
+                    name = kmpmp_take_on_debt_cooldown_list
+                    target = scope:take_on_debt_target
+                }
+            }
+
+            remove_list_variable = {
+                name = kmpmp_take_on_debt_cooldown_list
+                target = scope:take_on_debt_target
+            }
+        }
+        
+    }
+}
