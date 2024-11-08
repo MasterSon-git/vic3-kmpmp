@@ -1,0 +1,6 @@
+﻿l_german:
+ rule_kmpmp_player_protectorate_own_market: "Protektorat - Eigener Markt"
+ setting_kmpmp_player_protectorate_own_market_standard: "Standard"
+ setting_kmpmp_player_protectorate_own_market_standard_desc: "Protektorats Marktmechaniken verhalten sich wie in Vanilla"
+ setting_kmpmp_player_protectorate_own_market_force: "Erzwingen (nur Spieler)"
+ setting_kmpmp_player_protectorate_own_market_force_desc: "Spielerprotektorate haben immer ihren eigenen Markt, bis das Powerblock-Prinzip Marktvereinigung 3 gewählt wird."

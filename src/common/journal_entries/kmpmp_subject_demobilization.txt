@@ -1,0 +1,144 @@
+﻿kmpmp_je_subject_demobilization = {
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+	group = je_group_foreign_affairs
+
+    possible = { # added through on_actions
+
+    }
+
+    immediate = {
+        add_to_variable_list = {
+            name = je_subject_demobilization_list
+            target = scope:journal_entry
+        }
+    }
+
+    complete = {
+        OR = {
+            NOT = {
+                exists = scope:target
+            }
+            NOT = {
+                scope:target.war = {
+                    is_war_participant = ROOT
+                }
+            }
+        }
+    }
+
+    on_complete = {
+        # remove je from list
+        remove_list_variable = {
+            name = je_subject_demobilization_list
+            target = scope:journal_entry
+        }
+
+        # remove mobilization blocker
+        if = {
+            limit = {
+                has_variable = kmpmp_block_mobilization
+            }
+            remove_variable = kmpmp_block_mobilization
+        }
+    }
+
+    current_value = {
+        value = 0
+        scope:target.war = {
+            # if = {
+            #     limit = { has_war_support = { target = ROOT value < 0 } }
+            #     add = 1
+            # }
+            if = {
+                limit = { has_war_support = { target = ROOT value <= -10 } }
+                add = 1
+            }
+            if = {
+                limit = { has_war_support = { target = ROOT value <= -20 } }
+                add = 1
+            }
+            if = {
+                limit = { has_war_support = { target = ROOT value <= -30 } }
+                add = 1
+            }
+            if = {
+                limit = { has_war_support = { target = ROOT value <= -40 } }
+                add = 1
+            }
+            if = {
+                limit = { has_war_support = { target = ROOT value <= -50 } }
+                add = 1
+            }
+            if = {
+                limit = { has_war_support = { target = ROOT value <= -60 } }
+                add = 1
+            }
+            if = {
+                limit = { has_war_support = { target = ROOT value <= -70 } }
+                add = 1
+            }
+            if = {
+                limit = { has_war_support = { target = ROOT value <= -80 } }
+                add = 1
+            }
+            if = {
+                limit = { has_war_support = { target = ROOT value <= -90 } }
+                add = 1
+            }
+            if = {
+                limit = { has_war_support = { target = ROOT value <= -100 } }
+                add = 1
+            }
+        }
+    }
+
+    goal_add_value = {
+        value = 10
+    }
+
+    on_weekly_pulse = {
+        effect = {
+            if = {
+                limit = {
+                    scope:journal_entry = {
+                        is_goal_complete = yes
+                    }
+                }
+    
+                # set variable to block mobilization
+                if = {
+                    limit = {
+                        NOT = {
+                            has_variable = kmpmp_block_mobilization
+                        }
+                    }
+                    set_variable = kmpmp_block_mobilization
+                }
+    
+                # demobilize military formations not in battle
+                every_military_formation = {
+                    limit = {
+                        is_fleet = no
+                        is_mobilized = yes
+                        NOT = {
+                            any_scope_character = {
+                                is_in_battle = yes
+                            }
+                        }
+                    }
+                    # that's not working, can be just used to mobilze...
+                    # so we'd like to add a gui hack...
+                    mobilize_army = no
+                }
+    
+                # TODO: what about fleets?
+                # actually i don't see an option to send them home...
+            }
+        }
+    }
+
+    progressbar = yes
+
+    weight = 1000
+	should_be_pinned_by_default = yes
+}
