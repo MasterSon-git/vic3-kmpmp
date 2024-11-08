@@ -1,0 +1,6 @@
+﻿kmpmp_player_protectorate_own_market = {
+    default = kmpmp_player_protectorate_own_market_standard
+    
+    kmpmp_player_protectorate_own_market_standard = {}
+    kmpmp_player_protectorate_own_market_force = {}
+}

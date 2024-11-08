@@ -5,74 +5,6 @@ on_country_formed = {
     }
 }
 
-# Root = Country
-on_monthly_pulse_country = {
-    on_actions = {
-        kmpmp_update_nation_buffs_action
-        kmpmp_update_united_country_buff_action
-        kmpmp_update_global_lists_action
-    }
-}
-
-# Root = Diplomatic Play
-# scope:actor = Initiator country
-# scope:target = Target country
-on_war_end = {
-    on_actions = {
-        kmpmp_remove_war_modifiers
-    }
-}
-
-kmpmp_update_nation_buffs_action = {
-    effect = {
-        kmpmp_update_nation_buffs = yes
-    }
-}
-
-kmpmp_update_united_country_buff_action = {
-    effect = {
-        kmpmp_update_united_country_buff = yes
-    }
-}
-
-# used to update global lists for save games where history is not executed again
-kmpmp_update_global_lists_action = {
-    effect = {
-        if = { # only one country should update the lists, so we take gbr
-            limit = {
-                c:GBR ?= ROOT
-            }
-            kmpmp_update_global_lists = yes
-        }
-    }
-}
-
-kmpmp_remove_war_modifiers = {
-    effect = {
-        if = {
-            limit = {
-                OR = {
-                    scope:actor ?= {
-                        has_modifier = kmpmp_retake_whats_rightfully_german
-                        save_temporary_scope_as = country_with_modifier_kmpmp_retake_whats_rightfully_german
-                    }
-                    scope:target ?= {
-                        has_modifier = kmpmp_retake_whats_rightfully_german
-                        save_temporary_scope_as = country_with_modifier_kmpmp_retake_whats_rightfully_german
-                    }
-                }
-                OR = {
-                    c:FRA ?= scope:actor
-                    c:FRA ?= scope:target
-                }
-            }
-            scope:country_with_modifier_kmpmp_retake_whats_rightfully_german = {
-                remove_modifier = kmpmp_retake_whats_rightfully_german
-            }
-        }
-    }
-}
-
 kmpmp_new_formables = {
     effect = {
         if = {
@@ -151,3 +83,72 @@ kmpmp_new_formables = {
         }
     }
 }
+
+# Root = Country
+on_monthly_pulse_country = {
+    on_actions = {
+        kmpmp_update_nation_buffs_action
+        kmpmp_update_united_country_buff_action
+        kmpmp_update_global_lists_action
+    }
+}
+
+kmpmp_update_nation_buffs_action = {
+    effect = {
+        kmpmp_update_nation_buffs = yes
+    }
+}
+
+kmpmp_update_united_country_buff_action = {
+    effect = {
+        kmpmp_update_united_country_buff = yes
+    }
+}
+
+# used to update global lists for save games where history is not executed again
+kmpmp_update_global_lists_action = {
+    effect = {
+        if = { # only one country should update the lists, so we take gbr
+            limit = {
+                c:GBR ?= ROOT
+            }
+            kmpmp_update_global_lists = yes
+        }
+    }
+}
+
+# Root = Diplomatic Play
+# scope:actor = Initiator country
+# scope:target = Target country
+on_war_end = {
+    on_actions = {
+        kmpmp_remove_war_modifiers
+    }
+}
+
+kmpmp_remove_war_modifiers = {
+    effect = {
+        if = {
+            limit = {
+                OR = {
+                    scope:actor ?= {
+                        has_modifier = kmpmp_retake_whats_rightfully_german
+                        save_temporary_scope_as = country_with_modifier_kmpmp_retake_whats_rightfully_german
+                    }
+                    scope:target ?= {
+                        has_modifier = kmpmp_retake_whats_rightfully_german
+                        save_temporary_scope_as = country_with_modifier_kmpmp_retake_whats_rightfully_german
+                    }
+                }
+                OR = {
+                    c:FRA ?= scope:actor
+                    c:FRA ?= scope:target
+                }
+            }
+            scope:country_with_modifier_kmpmp_retake_whats_rightfully_german = {
+                remove_modifier = kmpmp_retake_whats_rightfully_german
+            }
+        }
+    }
+}
+
