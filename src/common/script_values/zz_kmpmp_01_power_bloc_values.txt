@@ -35,7 +35,7 @@ power_bloc_leverage_gain = {
                         has_principle_group = principle_group:principle_group_foreign_investment
                     }
                 }
-                multiply = 1.5
+                multiply = 2 #1.5
             }
     
             desc = POWER_BLOC_LEVERAGE_GAIN_FROM_ECONOMIC_DEPENDENCE
