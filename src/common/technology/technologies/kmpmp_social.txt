@@ -469,7 +469,7 @@ philosophical_pragmatism = {
 		country_influence_mult = 0.1
 		country_diplomatic_play_maneuvers_add = 10
 		state_bureaucracy_population_base_cost_factor_mult = -0.05
-        country_infamy_decay_mult = 0.03 #kmpmp
+        country_infamy_decay_mult = 0.05 #kmpmp
 	}
 	
 	unlocking_technologies = {
@@ -553,6 +553,7 @@ central_planning = {
 	
 	modifier = {
 		state_tax_capacity_add = 25
+		#country_government_dividends_efficiency_add = 0.05
 		country_max_companies_add = 1 # kmpmp
 	}
 	
@@ -575,7 +576,7 @@ psychoanalysis = {
 		country_influence_mult = 0.1
 		country_diplomatic_play_maneuvers_add = 10
 		state_bureaucracy_population_base_cost_factor_mult = -0.05
-        country_infamy_decay_mult = 0.03 #kmpmp
+        country_infamy_decay_mult = 0.05 #kmpmp
 		country_radicals_from_conquest_mult = -0.05 #kmpmp
 	}
 	
@@ -664,7 +665,7 @@ behaviorism = {
 		country_influence_mult = 0.1
 		country_diplomatic_play_maneuvers_add = 10
 		state_bureaucracy_population_base_cost_factor_mult = -0.05
-        country_infamy_decay_mult = 0.03 #kmpmp
+        country_infamy_decay_mult = 0.05 #kmpmp
 	}
 	
 	unlocking_technologies = {
