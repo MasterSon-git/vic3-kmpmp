@@ -27,7 +27,7 @@
 		# kmpmp country_max_companies_add = 1
 		country_disable_nationalization_bool = yes
 		country_force_privatization_bool = yes
-		building_throughput_add = 0.1 
+		building_throughput_add = 0.1 #kmpmp
 	}
 	
 	possible_political_movements = {
@@ -514,8 +514,8 @@ law_cooperative_ownership = {
 		state_farmers_investment_pool_efficiency_mult = 0.25
 		country_private_construction_allocation_mult = 0.35
 		country_government_dividends_reinvestment_add = 1.0
-		building_group_bg_manufacturing_throughput_add = 0.20
-		building_group_bg_mining_throughput_add = 0.20
+		building_group_bg_manufacturing_throughput_add = 0.20 #kmpmp
+		building_group_bg_mining_throughput_add = 0.20 #kmpmp
 		country_force_collectivization_bool = yes
 		country_disable_privatization_bool = yes
 	}
@@ -616,9 +616,9 @@ law_command_economy = {
 		country_government_dividends_efficiency_add = 0.4
 		
 		country_leverage_resistance_mult = 0.25
-		building_throughput_add = -0.3 
-		country_bureaucracy_mult = -0.1
-		country_military_goods_cost_mult = 0.05
+		building_throughput_add = -0.3 #kmpmp
+		country_bureaucracy_mult = -0.1 #kmpmp
+		country_military_goods_cost_mult = 0.05 #kmpmp
 
 		country_disable_privatization_bool = yes
 	}
