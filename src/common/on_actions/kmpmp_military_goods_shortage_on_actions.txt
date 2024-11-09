@@ -1,0 +1,32 @@
+﻿# Fires when a diplomatic play is started
+# root = The diplomatic play that has been started
+# scope:initiator = Initiator of the play
+# scope:target = Target of the play
+on_diplomatic_play_started = {
+    on_actions = {
+        kmpmp_add_je_military_goods_shortage
+    }
+}
+
+# Root = Diplomatic Play
+on_diplo_play_join_side = {
+	on_actions = {
+		kmpmp_add_je_military_goods_shortage
+	}
+}
+
+kmpmp_add_je_military_goods_shortage = {
+    effect = {
+        every_scope_play_involved = {
+            limit = {
+                is_diplomatic_play_committed_participant = yes
+                NOT = {
+                    has_journal_entry = kmpmp_je_military_goods_shortage
+                }
+            }
+            add_journal_entry = {
+                type = kmpmp_je_military_goods_shortage
+            }
+        }
+    }
+}

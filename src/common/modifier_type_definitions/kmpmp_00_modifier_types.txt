@@ -33,3 +33,212 @@ unit_combat_unit_type_heavy_tank_defense_mult = {
 		ai_value = 0
 	}
 }
+
+unit_combat_unit_type_squad_infantry_offense_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}
+
+unit_combat_unit_type_mechanized_infantry_offense_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}
+
+unit_combat_unit_type_scout_cruiser_offense_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}
+
+unit_combat_unit_type_scout_cruiser_defense_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}
+
+unit_combat_unit_type_dreadnought_offense_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}
+
+unit_combat_unit_type_dreadnought_defense_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}
+
+unit_combat_unit_type_battleship_offense_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}
+
+unit_combat_unit_type_battleship_defense_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}
+
+unit_combat_unit_type_carrier_defense_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}
+
+unit_combat_unit_type_squad_infantry_defense_add = {
+	decimals = 0
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+unit_combat_unit_type_mechanized_infantry_defense_add = {
+	decimals = 0
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+unit_combat_unit_type_siege_artillery_offense_add = {
+	decimals = 0
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+unit_combat_unit_type_siege_artillery_defense_add = {
+	decimals = 0
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+unit_combat_unit_type_heavy_tank_offense_add = {
+	decimals = 0
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+unit_combat_unit_type_heavy_tank_defense_add = {
+	decimals = 0
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+unit_combat_unit_type_light_tanks_offense_add = {
+	decimals = 0
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+unit_combat_unit_type_light_tanks_defense_add = {
+	decimals = 0
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+unit_combat_unit_type_scout_cruiser_offense_add = {
+	decimals = 0
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+unit_combat_unit_type_scout_cruiser_defense_add = {
+	decimals = 0
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+unit_combat_unit_type_dreadnought_offense_add = {
+	decimals = 0
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+unit_combat_unit_type_dreadnought_defense_add = {
+	decimals = 0
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+unit_combat_unit_type_battleship_offense_add = {
+	decimals = 0
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+unit_combat_unit_type_battleship_defense_add = {
+	decimals = 0
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+unit_combat_unit_type_carrier_offense_add = {
+	decimals = 0
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+unit_combat_unit_type_carrier_defense_add = {
+	decimals = 0
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
