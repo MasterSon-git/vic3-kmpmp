@@ -488,6 +488,7 @@ principle_defensive_cooperation_3 = {
 		country_institution_cost_institution_qwf_conscription_mult = -0.5
 		country_military_wages_mult = -0.1
 		building_mobilization_cost_mult = -0.05
+		country_military_goods_cost_mult = -0.05 #kmpmp
 	}
 
 	power_bloc_modifier = {
@@ -873,7 +874,7 @@ principle_police_coordination_3 = {
 	institution = institution_police
 	institution_modifier = {
 		# Police institution adds authority
-		country_authority_add = 50
+		country_authority_add = 75 #50
 		
 		# Police institution reduces radicalism of political movements
 		political_movement_radicalism_mult = -0.05
@@ -949,6 +950,7 @@ principle_transport_3 = {
 		country_convoys_capacity_mult = 0.2
 		state_infrastructure_from_population_mult = 0.33
 		state_infrastructure_from_population_max_mult = 0.33 
+		state_market_access_price_impact = 0.05 #kmpmp
 		
 		# Increased land trade capacity
 		market_land_trade_capacity_add = 200 #50
@@ -1146,7 +1148,7 @@ principle_colonial_offices_3 = {
 		# kmpmp
 		country_institution_size_change_speed_institution_health_system_mult = 0.5
 		country_institution_cost_institution_health_system_mult = -0.5
-		building_unincorporated_throughput_add = 0.05
+		building_unincorporated_throughput_add = 0.10
 	}
 
 	leader_modifier = {
