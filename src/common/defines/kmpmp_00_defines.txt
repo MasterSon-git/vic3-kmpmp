@@ -34,3 +34,8 @@ NMilitary = {
 NCountry = {
 	INCORPORATION_TIME_NO_MATCH = 10	#20			# Years if the state's Homeland cultures have nothing in common with the country's primary cultures
 }
+
+NPowerBlocs = {
+	COUNTRY_POPULATION_LEVERAGE_RESISTANCE_MODIFIER_DIVISOR = 1200000 	#1000000 	# Population divided by this is multiplied by country_leverage_resistance_per_population to give a certain amount of leverage per million people
+	COUNTRY_POPULATION_LEVERAGE_RESISTANCE_MODIFIER_MAX_MULTIPLIER = 100	# Max multiplier given by population. With the value above at 1 000 000, this means the cap for leverage resistance is at 100 000 000.
+}
