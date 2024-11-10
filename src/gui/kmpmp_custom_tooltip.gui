@@ -8,7 +8,8 @@ types TooltipTypes
 
 		blockoverride "name" {
 			# raw_text = "[StateRegion.GetNameNoFormatting]"
-            raw_text = "name - schnulli [Scope.GetFlagName('list_name')]"
+            #raw_text = "name - schnulli [Scope.GetFlagName('list_name')]"
+            raw_text = "name - schnulli"
 		}
 
 		blockoverride "type" {

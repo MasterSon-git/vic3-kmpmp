@@ -6,3 +6,5 @@
  je_baltic_empire: "Baltisches Reich"
  je_baltic_empire_reason: "Die $STATE_BALTIC_SEA$ ist unser natürlicher Einflussbereich."
  je_baltic_empire_possible_tt: "[concept_journal_entry] $je_united_scandinavia$ abgeschlossen."
+ je_baltic_empire_maintain: "Erhaltung des Baltischen Reiches"
+ je_baltic_empire_maintain_reason: "Erhaltung des Baltischen Reiches"
