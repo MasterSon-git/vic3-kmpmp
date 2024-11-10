@@ -61,11 +61,11 @@ kmpmp_owns_all_sca_states = {
             has_global_variable_list = states_sca
         }
 
-
-        save_temporary_scope_value_as = {
-            name = list_name
-            value = "states_sca"
-        }
+        # actually not used - prepared for cooltip
+        # save_temporary_scope_value_as = {
+        #     name = list_name
+        #     value = "states_sca"
+        # }
         
         custom_tooltip = {
             text = kmpmp_owns_all_sca_states_tooltip
