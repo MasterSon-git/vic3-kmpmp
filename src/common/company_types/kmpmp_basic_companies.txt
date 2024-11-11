@@ -25,7 +25,7 @@
 }
 
 company_basic_furniture = {
-    icon = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+    icon = "gfx/interface/icons/company_icons/basic_furniture.dds"
     background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
     
     uses_dynamic_naming = no
