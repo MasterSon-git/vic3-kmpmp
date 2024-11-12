@@ -88,7 +88,7 @@ company_taiwanese_tea = {
 
 # Imperial Porcelan Factory
 company_imperial_porcelan_company = {
-	icon = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	icon = "gfx/interface/icons/company_icons/imperial_porcelan_company.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
 	flavored_company = yes
@@ -137,7 +137,7 @@ company_imperial_porcelan_company = {
 
 # Heineken International
 company_heineken_international = {
-	icon = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	icon = "gfx/interface/icons/company_icons/heineken_international.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
 	flavored_company = yes
@@ -192,7 +192,7 @@ company_heineken_international = {
 
 # Shell
 company_shell = {
-	icon = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	icon = "gfx/interface/icons/company_icons/shell.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
 	flavored_company = yes
@@ -233,7 +233,7 @@ company_shell = {
 
 #Persian Luxery consumer goods Company
 company_persian_luxury_goods = {
-	icon = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	icon = "gfx/interface/icons/company_icons/persian_luxury_goods.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
 	flavored_company = yes
@@ -277,7 +277,7 @@ company_persian_luxury_goods = {
 }
 # Korea Tungsten Company
 company_korean_tungsten_company = {
-	icon = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	icon = "gfx/interface/icons/company_icons/korean_tungsten_company.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 
 	flavored_company = yes
@@ -327,7 +327,7 @@ company_korean_tungsten_company = {
 }
 # Imperial Arsenal Japan
 company_imperial_arsenal_japan = {
-	icon = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	icon = "gfx/interface/icons/company_icons/imperial_arsenal_japan.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 
 	flavored_company = yes
@@ -374,7 +374,7 @@ company_imperial_arsenal_japan = {
 }
 # Genda Shigyo
 company_genda_shigyo = {
-	icon = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	icon = "gfx/interface/icons/company_icons/genda_shigyo.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
 
 	flavored_company = yes
