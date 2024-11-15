@@ -11,9 +11,13 @@ kmpmp_player_protectorate_own_market = {
         if = {
             limit = { # if triggers are changed, check diplomatic_actions grant_own_market actor_can_break trigger
                 has_game_rule = kmpmp_player_protectorate_own_market_force
-                power_bloc ?= {
-                    NOT = {
-                        has_principle = principle:principle_market_unification_3
+                OR = {
+                    is_in_power_bloc = no
+
+                    power_bloc ?= {
+                        NOT = {
+                            has_principle = principle:principle_market_unification_3
+                        }
                     }
                 }
             }
