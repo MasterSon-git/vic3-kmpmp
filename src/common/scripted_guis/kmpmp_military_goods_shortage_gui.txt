@@ -1,0 +1,65 @@
+﻿# in testing phase... it's not working as expected actually
+kmpmp_military_goods_shortage_desc_gui = {
+	scope = country
+	saved_scopes = {
+		journal_entry
+	}
+    is_shown = {
+        kmpmp_has_goods_shortage_low = {
+			MARKET_GOOD = small_arms
+		}
+		kmpmp_has_goods_shortage_low = {
+			MARKET_GOOD = ammunition
+		}
+		kmpmp_has_goods_shortage_low = {
+			MARKET_GOOD = artillery
+		}
+		kmpmp_has_goods_shortage_low = {
+			MARKET_GOOD = radios
+		}
+		kmpmp_has_goods_shortage_low = {
+			MARKET_GOOD = tanks
+		}
+		kmpmp_has_goods_shortage_low = {
+			MARKET_GOOD = aeroplanes
+		}
+    }
+	is_valid = {
+		kmpmp_has_goods_shortage_low = {
+			MARKET_GOOD = small_arms
+		}
+		kmpmp_has_goods_shortage_low = {
+			MARKET_GOOD = ammunition
+		}
+		kmpmp_has_goods_shortage_low = {
+			MARKET_GOOD = artillery
+		}
+		kmpmp_has_goods_shortage_low = {
+			MARKET_GOOD = radios
+		}
+		kmpmp_has_goods_shortage_low = {
+			MARKET_GOOD = tanks
+		}
+		kmpmp_has_goods_shortage_low = {
+			MARKET_GOOD = aeroplanes
+		}
+
+        market ?= {
+            mg:small_arms ?= {
+                market_goods_cheaper >= {
+                    value = 0
+                    subtract = kmpmp_military_goods_shortage_value_low
+                }
+                market_goods_cheaper < {
+                    value = 0
+                    subtract = kmpmp_military_goods_shortage_value_medium
+                }
+            }
+        }
+	}
+	effect = {
+		kmpmp_apply_military_goods_shortage_modifiers = {
+			TARGET = scope:journal_entry
+		}
+	}
+}

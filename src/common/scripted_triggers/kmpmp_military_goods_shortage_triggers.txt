@@ -1,0 +1,109 @@
+﻿# root - country
+kmpmp_has_any_military_goods_shortage = {
+	OR = {
+		kmpmp_has_goods_shortage = {
+			MARKET_GOOD = small_arms
+			LOW = yes
+			MEDIUM = yes
+			HIGH = yes
+		}
+		kmpmp_has_goods_shortage = {
+			MARKET_GOOD = ammunition
+            LOW = yes
+			MEDIUM = yes
+			HIGH = yes
+		}
+		kmpmp_has_goods_shortage = {
+			MARKET_GOOD = artillery
+            LOW = yes
+			MEDIUM = yes
+			HIGH = yes
+		}
+		kmpmp_has_goods_shortage = {
+			MARKET_GOOD = radios
+            LOW = no
+			MEDIUM = yes
+			HIGH = yes
+		}
+		kmpmp_has_goods_shortage = {
+			MARKET_GOOD = tanks
+            LOW = yes
+			MEDIUM = yes
+			HIGH = yes
+		}
+		kmpmp_has_goods_shortage = {
+			MARKET_GOOD = aeroplanes
+            LOW = no
+			MEDIUM = yes
+			HIGH = yes
+		}
+	}
+}
+
+# root - country
+# MARKET_GOOD - market good
+# LOW - yes/no check market good shortage low
+# MEDIUM - yes/no check market good shortage medium
+# HIGH - yes/no check market good shortage high
+kmpmp_has_goods_shortage = {
+	OR = {
+		trigger_if = {
+			limit = {
+				always = $LOW$
+			}
+			kmpmp_has_goods_shortage_low = {
+				MARKET_GOOD = $MARKET_GOOD$
+			}
+		}
+
+		trigger_if = {
+			limit = {
+				always = $MEDIUM$
+			}
+			kmpmp_has_goods_shortage_medium = {
+				MARKET_GOOD = $MARKET_GOOD$
+			}
+		}
+
+		trigger_if = {
+			limit = {
+				always = $HIGH$
+			}
+			kmpmp_has_goods_shortage_high = {
+				MARKET_GOOD = $MARKET_GOOD$
+			}
+		}
+	}
+}
+
+# root - country
+# MARKET_GOOD - market good
+kmpmp_has_goods_shortage_low = {
+	market ?= {
+		mg:$MARKET_GOOD$ ?= {
+			market_goods_pricier >= kmpmp_military_goods_shortage_value_low
+			market_goods_pricier < kmpmp_military_goods_shortage_value_medium
+		}
+	}
+}
+
+# root - country
+# MARKET_GOOD - market good
+kmpmp_has_goods_shortage_medium = {
+	market ?= {
+		mg:$MARKET_GOOD$ ?= {
+			market_goods_pricier >= kmpmp_military_goods_shortage_value_medium
+			market_goods_pricier < kmpmp_military_goods_shortage_value_high
+		}
+	}
+}
+
+# root - country
+# MARKET_GOOD - market good
+kmpmp_has_goods_shortage_high = {
+	market ?= {
+		mg:$MARKET_GOOD$ ?= {
+			market_goods_pricier >= kmpmp_military_goods_shortage_value_high
+		}
+	}
+}

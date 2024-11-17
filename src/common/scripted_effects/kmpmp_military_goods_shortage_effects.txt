@@ -1,175 +1,96 @@
-﻿kmpmp_apply_goods_shortage_modifier_low_medium_high = {
-	if = {
-		limit = {
-			market ?= {
-				mg:$MARKET_GOOD$ ?= {
-					market_goods_pricier < 0.5
-				}
-			}
-			$TARGET$ = {
-				OR = {
-					has_modifier = $MODIFIER$_low
-					has_modifier = $MODIFIER$_medium
-					has_modifier = $MODIFIER$_high
-				}
-			}
-		}
-		$TARGET$ = {
-			kmpmp_remove_goods_shortage_modifier_low = {
-				MODIFIER = $MODIFIER$
-			}
-			kmpmp_remove_goods_shortage_modifier_medium = {
-				MODIFIER = $MODIFIER$
-			}
-			kmpmp_remove_goods_shortage_modifier_high = {
-				MODIFIER = $MODIFIER$
-			}
-		}
+﻿# root - country
+# TARGET - scope to apply the modifiers
+kmpmp_apply_military_goods_shortage_modifiers = {
+	kmpmp_apply_goods_shortage_modifier_low_medium_high = {
+		TARGET = $TARGET$
+		MARKET_GOOD = small_arms
+		MODIFIER = kmpmp_shortage_of_small_arms
 	}
-	else_if = {
-		limit = {
-			market ?= {
-				mg:$MARKET_GOOD$ ?= {
-					market_goods_pricier >= 0.5
-					market_goods_pricier < 0.6
-				}
-			}
-			$TARGET$ = {
-				NOT = {
-					has_modifier = $MODIFIER$_low
-				}
-			}
-		}
-		$TARGET$ = {
-			kmpmp_add_goods_shortage_modifier_low = {
-				MODIFIER = $MODIFIER$
-			}
-			kmpmp_remove_goods_shortage_modifier_medium = {
-				MODIFIER = $MODIFIER$
-			}
-			kmpmp_remove_goods_shortage_modifier_high = {
-				MODIFIER = $MODIFIER$
-			}
-		}
+	kmpmp_apply_goods_shortage_modifier_low_medium_high = {
+		TARGET = $TARGET$
+		MARKET_GOOD = ammunition
+		MODIFIER = kmpmp_shortage_of_ammo
 	}
-	else_if = {
-		limit = {
-			market ?= {
-				mg:$MARKET_GOOD$ ?= {
-					market_goods_pricier >= 0.6
-					market_goods_pricier < 0.75
-				}
-			}
-			$TARGET$ = {
-				NOT = {
-					has_modifier = $MODIFIER$_medium
-				}
-			}
-		}
-		$TARGET$ = {
-			kmpmp_add_goods_shortage_modifier_medium = {
-				MODIFIER = $MODIFIER$
-			}
-			kmpmp_remove_goods_shortage_modifier_low = {
-				MODIFIER = $MODIFIER$
-			}
-			kmpmp_remove_goods_shortage_modifier_high = {
-				MODIFIER = $MODIFIER$
-			}
-		}
+	kmpmp_apply_goods_shortage_modifier_low_medium_high = {
+		TARGET = $TARGET$
+		MARKET_GOOD = artillery
+		MODIFIER = kmpmp_shortage_of_artillery
 	}
-	else_if = {
-		limit = {
-			market ?= {
-				mg:$MARKET_GOOD$ ?= {
-					market_goods_pricier >= 0.75
-				}
-			}
-			$TARGET$ = {
-				NOT = {
-					has_modifier = $MODIFIER$_high
-				}
-			}
-		}
-		$TARGET$ = {
-			kmpmp_add_goods_shortage_modifier_high = {
-				MODIFIER = $MODIFIER$
-			}
-			kmpmp_remove_goods_shortage_modifier_low = {
-				MODIFIER = $MODIFIER$
-			}
-			kmpmp_remove_goods_shortage_modifier_medium = {
-				MODIFIER = $MODIFIER$
-			}
-		}
+	kmpmp_apply_goods_shortage_modifier_medium_high = {
+		TARGET = $TARGET$
+		MARKET_GOOD = radios
+		MODIFIER = kmpmp_shortage_of_radios
+	}
+	kmpmp_apply_goods_shortage_modifier_low_medium_high = {
+		TARGET = $TARGET$
+		MARKET_GOOD = tanks
+		MODIFIER = kmpmp_shortage_of_tanks
+	}
+	kmpmp_apply_goods_shortage_modifier_medium_high = {
+		TARGET = $TARGET$
+		MARKET_GOOD = aeroplanes
+		MODIFIER = kmpmp_shortage_of_airplanes
 	}
 }
 
+# root - country
+# MARKET_GOOD - market good to check
+# MODIFIER - modifier prefix to apply on low, medium, high shortage
+# TARGET - scope to apply the modifier
+kmpmp_apply_goods_shortage_modifier_low_medium_high = {
+	kmpmp_apply_goods_shortage_modifier = {
+		MARKET_GOOD = $MARKET_GOOD$
+		MODIFIER = $MODIFIER$
+		TARGET = $TARGET$
+		SHORTAGE_TYPE = low
+	}
+	kmpmp_apply_goods_shortage_modifier_medium_high = {
+		MARKET_GOOD = $MARKET_GOOD$
+		MODIFIER = $MODIFIER$
+		TARGET = $TARGET$
+	}
+}
+
+# root - country
+# MARKET_GOOD - market good to check
+# MODIFIER - modifier prefix to apply on low, medium, high shortage
+# TARGET - scope to apply the modifier
 kmpmp_apply_goods_shortage_modifier_medium_high = {
+	kmpmp_apply_goods_shortage_modifier = {
+		MARKET_GOOD = $MARKET_GOOD$
+		MODIFIER = $MODIFIER$
+		TARGET = $TARGET$
+		SHORTAGE_TYPE = medium
+	}
+	kmpmp_apply_goods_shortage_modifier = {
+		MARKET_GOOD = $MARKET_GOOD$
+		MODIFIER = $MODIFIER$
+		TARGET = $TARGET$
+		SHORTAGE_TYPE = high
+	}
+}
+
+# root - country
+# MARKET_GOOD - market good to check
+# MODIFIER - modifier prefix to apply on low, medium, high shortage
+# TARGET - scope to apply the modifier
+# SHORTAGE_TYPE - low, medium, high
+kmpmp_apply_goods_shortage_modifier = {
 	if = {
 		limit = {
-			market ?= {
-				mg:$MARKET_GOOD$ ?= {
-					market_goods_pricier < 0.6
-				}
-			}
-			$TARGET$ = {
-				OR = {
-					has_modifier = $MODIFIER$_medium
-					has_modifier = $MODIFIER$_high
-				}
+			kmpmp_has_goods_shortage_$SHORTAGE_TYPE$ = {
+				MARKET_GOOD = $MARKET_GOOD$
 			}
 		}
 		$TARGET$ = {
-			kmpmp_remove_goods_shortage_modifier_medium = {
-				MODIFIER = $MODIFIER$
-			}
-			kmpmp_remove_goods_shortage_modifier_high = {
+			kmpmp_add_goods_shortage_modifier_$SHORTAGE_TYPE$ = {
 				MODIFIER = $MODIFIER$
 			}
 		}
 	}
-	else_if = {
-		limit = {
-			market ?= {
-				mg:$MARKET_GOOD$ ?= {
-					market_goods_pricier >= 0.6
-					market_goods_pricier < 0.75
-				}
-			}
-			$TARGET$ = {
-				NOT = {
-					has_modifier = $MODIFIER$_medium
-				}
-			}
-		}
+	else = {
 		$TARGET$ = {
-			kmpmp_add_goods_shortage_modifier_medium = {
-				MODIFIER = $MODIFIER$
-			}
-			kmpmp_remove_goods_shortage_modifier_high = {
-				MODIFIER = $MODIFIER$
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			market ?= {
-				mg:$MARKET_GOOD$ ?= {
-					market_goods_pricier >= 0.75
-				}
-			}
-			$TARGET$ = {
-				NOT = {
-					has_modifier = $MODIFIER$_high
-				}
-			}
-		}
-		$TARGET$ = {
-			kmpmp_add_goods_shortage_modifier_high = {
-				MODIFIER = $MODIFIER$
-			}
-			kmpmp_remove_goods_shortage_modifier_medium = {
+			kmpmp_remove_goods_shortage_modifier_$SHORTAGE_TYPE$ = {
 				MODIFIER = $MODIFIER$
 			}
 		}
