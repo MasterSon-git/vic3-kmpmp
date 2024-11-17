@@ -1,6 +1,12 @@
 ﻿l_english:
- kmpmp_je_military_goods_shortage: "[Concept('concept_military_good', '$concept_military_goods$')] [Concept('concept_input_goods_shortage', '$concept_input_goods_shortage_short$')]"
+ kmpmp_je_military_goods_shortage: "$concept_military_goods$ $concept_input_goods_shortage_short$"
+# in testing phase... it's not working as expected actually
+#  kmpmp_je_military_goods_shortage_reason: "If our military goods become scarce, it will severely affect us on the battlefield.\n\nMilitary goods shortage occurs for:\n[GetScriptedGui('kmpmp_military_goods_shortage_desc_gui').IsShownTooltip(GuiScope.SetRoot(Country.MakeScope).AddScope('journal_entry', JournalEntry.MakeScope).End)]"
  kmpmp_je_military_goods_shortage_reason: "If our military goods become scarce, it will severely affect us on the battlefield."
+
+# in testing phase... it's not working as expected actually
+#  kmpmp_je_military_goods_shortage_status_has_shortage: "We suffer from shortage in:"
+#  kmpmp_je_military_goods_shortage_status_no_shortage: "Our military goods supply is sufficient."
 
  # Small Arms
  kmpmp_shortage_of_small_arms: "$small_arms$ [Concept('concept_input_goods_shortage', '$concept_input_goods_shortage_short$')]"
