@@ -44,6 +44,7 @@ kmpmp_shortage_of_artillery_low = {
     unit_combat_unit_type_mobile_artillery_offense_mult = -0.05
     unit_combat_unit_type_shrapnel_artillery_offense_mult = -0.05
     unit_combat_unit_type_siege_artillery_offense_mult = -0.05
+    unit_combat_unit_type_fort_buster_artillery_offense_mult = -0.05
 }
 
 kmpmp_shortage_of_artillery_medium = {
@@ -53,6 +54,7 @@ kmpmp_shortage_of_artillery_medium = {
     unit_combat_unit_type_mobile_artillery_offense_mult = -0.1
     unit_combat_unit_type_shrapnel_artillery_offense_mult = -0.1
     unit_combat_unit_type_siege_artillery_offense_mult = -0.1
+    unit_combat_unit_type_fort_buster_artillery_offense_mult = -0.1
 }
 
 kmpmp_shortage_of_artillery_high = {
@@ -62,6 +64,7 @@ kmpmp_shortage_of_artillery_high = {
     unit_combat_unit_type_mobile_artillery_offense_mult = -0.25
     unit_combat_unit_type_shrapnel_artillery_offense_mult = -0.25
     unit_combat_unit_type_siege_artillery_offense_mult = -0.25
+    unit_combat_unit_type_fort_buster_artillery_offense_mult = -0.25
 }
 
 # Radios
@@ -72,6 +75,7 @@ kmpmp_shortage_of_radios_medium = {
     unit_combat_unit_type_mechanized_infantry_offense_mult = -0.1
 
     unit_combat_unit_type_siege_artillery_offense_mult = -0.1
+    unit_combat_unit_type_fort_buster_artillery_offense_mult = -0.1
 
     unit_combat_unit_type_heavy_tank_offense_mult = -0.1
     unit_combat_unit_type_light_tanks_offense_mult = -0.1
@@ -93,6 +97,7 @@ kmpmp_shortage_of_radios_high = {
     unit_combat_unit_type_mechanized_infantry_offense_mult = -0.2
 
     unit_combat_unit_type_siege_artillery_offense_mult = -0.2
+    unit_combat_unit_type_fort_buster_artillery_offense_mult = -0.2
 
     unit_combat_unit_type_heavy_tank_offense_mult = -0.2
     unit_combat_unit_type_light_tanks_offense_mult = -0.2
@@ -117,6 +122,8 @@ kmpmp_shortage_of_radios_cheese = {
 
     unit_combat_unit_type_siege_artillery_offense_add = -50
     unit_combat_unit_type_siege_artillery_defense_add = -50
+    unit_combat_unit_type_fort_buster_artillery_offense_add = -50
+    unit_combat_unit_type_fort_buster_artillery_defense_add = -50
 
     unit_combat_unit_type_heavy_tank_offense_add = -50
     unit_combat_unit_type_heavy_tank_defense_add = -50

@@ -25,6 +25,24 @@ state_pollution_reduction_health_mult = {
 	}
 }
 
+unit_combat_unit_type_fort_buster_artillery_defense_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}
+
+unit_combat_unit_type_fort_buster_artillery_offense_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}
+
 unit_combat_unit_type_heavy_tank_defense_mult = {
 	decimals = 0
 	color = good
@@ -140,6 +158,22 @@ unit_combat_unit_type_siege_artillery_offense_add = {
 }
 
 unit_combat_unit_type_siege_artillery_defense_add = {
+	decimals = 0
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+unit_combat_unit_type_fort_buster_artillery_offense_add = {
+	decimals = 0
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+unit_combat_unit_type_fort_buster_artillery_defense_add = {
 	decimals = 0
 	color = good
 	game_data = {
