@@ -57,6 +57,15 @@ FAE_se_calculate_siege = {
         }
         else_if = {
             limit = {
+                has_unit_type = unit_type:combat_unit_type_fort_buster_artillery
+            }
+            change_local_variable = {
+                name = total_siege
+                add  = FAE_siege_fort_arty
+            }
+        }
+        else_if = {
+            limit = {
                 has_unit_type = unit_type:combat_unit_type_siege_artillery
             }
             change_local_variable = {

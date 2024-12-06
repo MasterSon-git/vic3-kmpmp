@@ -430,6 +430,7 @@ combat_unit_type_cannon_artillery = {
         combat_unit_type_mobile_artillery
         combat_unit_type_shrapnel_artillery
         combat_unit_type_siege_artillery
+        combat_unit_type_fort_buster_artillery
     }
 }
 
@@ -499,6 +500,7 @@ combat_unit_type_mobile_artillery = {
     upgrades = {
         combat_unit_type_shrapnel_artillery
         combat_unit_type_siege_artillery
+        combat_unit_type_fort_buster_artillery
     }
 }
 
@@ -564,6 +566,51 @@ combat_unit_type_shrapnel_artillery = {
     combat_unit_image = {
         # fallback
         texture = "gfx/unit_illustrations/artillery_eu_shrapnel.dds"
+    }
+
+    upgrades = {
+        combat_unit_type_siege_artillery
+        combat_unit_type_fort_buster_artillery
+    }
+}
+
+# kmpmp
+combat_unit_type_fort_buster_artillery = {
+    group = combat_unit_group_artillery
+
+    can_build_conscript = {
+        NOT = {
+            has_law = law_type:law_peasant_levies
+        }
+    }
+    
+    upkeep_modifier = {
+        goods_input_artillery_add = 10
+        goods_input_ammunition_add = 10
+        goods_input_radios_add = 1
+    }
+
+    battle_modifier = {
+        unit_offense_add = 55
+        unit_defense_add = 30
+        unit_morale_loss_add = 5 #6
+        unit_kill_rate_add = 0.35 #0.25
+        unit_devastation_mult = 0.2
+        unit_occupation_mult = 0.1
+
+        unit_fae_siege_add = 18
+    }
+
+    formation_modifier = {
+        military_formation_mobilization_speed_mult = -0.2
+        military_formation_movement_speed_mult = -0.2
+    }
+
+	unlocking_technologies = { defense_in_depth }
+
+    combat_unit_image = {
+        # fallback
+        texture = "gfx/unit_illustrations/artillery_eu_fort.dds"
     }
 
     upgrades = {
@@ -634,6 +681,11 @@ combat_unit_type_siege_artillery = {
     combat_unit_image = {
         # fallback
         texture = "gfx/unit_illustrations/artillery_eu_siege.dds"
+    }
+
+    # kmpmp
+    upgrades = {
+        combat_unit_type_fort_buster_artillery
     }
 }
 

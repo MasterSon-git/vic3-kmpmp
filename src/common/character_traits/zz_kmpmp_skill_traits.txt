@@ -3,6 +3,7 @@
 	texture = gfx/interface/icons/character_trait_icons/basic_artillery_commander.dds
     
 	command_modifier = {
+		unit_combat_unit_type_fort_buster_artillery_offense_mult = 0.05 #kmpmp
 		unit_combat_unit_type_siege_artillery_offense_mult = 0.05
 		unit_combat_unit_type_shrapnel_artillery_offense_mult = 0.05
 		unit_combat_unit_type_cannon_artillery_offense_mult = 0.05
@@ -99,6 +100,24 @@
 			}
 			multiply = 20
 		}
+		# kmpmp
+		if = {
+			limit = {
+				owner = {
+					any_military_formation = {
+						is_army = yes
+						any_scope_general = {
+							this = root
+						}
+						formation_army_unit_type_fraction = {
+							target = unit_type:combat_unit_type_fort_buster_artillery
+							value >= 0.2
+						}
+					}
+				}
+			}
+			multiply = 20
+		}
 		if = {
 			limit = {
 				owner = {
@@ -129,6 +148,7 @@ experienced_artillery_commander = {
 	texture = gfx/interface/icons/character_trait_icons/experienced_artillery_commander.dds
 
 	command_modifier = {
+		unit_combat_unit_type_fort_buster_artillery_offense_mult = 0.1 #kmpmp
 		unit_combat_unit_type_siege_artillery_offense_mult = 0.1
 		unit_combat_unit_type_shrapnel_artillery_offense_mult = 0.1
 		unit_combat_unit_type_cannon_artillery_offense_mult = 0.1
@@ -201,6 +221,24 @@ experienced_artillery_commander = {
 			}
 			multiply = 20
 		}
+		# kmpmp
+		if = {
+			limit = {
+				owner = {
+					any_military_formation = {
+						is_army = yes
+						any_scope_general = {
+							this = root
+						}
+						formation_army_unit_type_fraction = {
+							target = unit_type:combat_unit_type_fort_buster_artillery
+							value >= 0.2
+						}
+					}
+				}
+			}
+			multiply = 20
+		}
 		if = {
 			limit = {
 				owner = {
@@ -232,6 +270,7 @@ expert_artillery_commander = {
 	texture = gfx/interface/icons/character_trait_icons/expert_artillery_commander.dds
 
 	command_modifier = {
+		unit_combat_unit_type_fort_buster_artillery_offense_mult = 0.15 #kmpmp
 		unit_combat_unit_type_siege_artillery_offense_mult = 0.15
 		unit_combat_unit_type_shrapnel_artillery_offense_mult = 0.15
 		unit_combat_unit_type_cannon_artillery_offense_mult = 0.15
@@ -280,6 +319,24 @@ expert_artillery_commander = {
 						}
 						formation_army_unit_type_fraction = {
 							target = unit_type:combat_unit_type_siege_artillery
+							value >= 0.2
+						}
+					}
+				}
+			}
+			multiply = 20
+		}
+		# kmpmp
+		if = {
+			limit = {
+				owner = {
+					any_military_formation = {
+						is_army = yes
+						any_scope_general = {
+							this = root
+						}
+						formation_army_unit_type_fraction = {
+							target = unit_type:combat_unit_type_fort_buster_artillery
 							value >= 0.2
 						}
 					}

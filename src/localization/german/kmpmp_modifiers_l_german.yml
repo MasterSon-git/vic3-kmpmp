@@ -15,6 +15,15 @@
  state_unincorporated_education_access_add:0 "Bildungszugang in [Concept('concept_unincorporated_state','$concept_unincorporated_states$')]"
  state_unincorporated_education_access_add_desc:0 "Ein Bonus oder Abzug auf den Bildungszugang von Pops in [Concept('concept_unincorporated_state','$concept_unincorporated_states$')]."
 
+ unit_combat_unit_type_fort_buster_artillery_defense_add: "$combat_unit_type_fort_buster_artillery$ $unit_defense_add$"
+ unit_combat_unit_type_fort_buster_artillery_defense_add_desc: "$combat_unit_type_fort_buster_artillery$ $unit_defense_add$"
+ unit_combat_unit_type_fort_buster_artillery_offense_add: "$combat_unit_type_fort_buster_artillery$ $unit_offense_add$"
+ unit_combat_unit_type_fort_buster_artillery_offense_add_desc: "$combat_unit_type_fort_buster_artillery$ $unit_offense_add$"
+ unit_combat_unit_type_fort_buster_artillery_defense_mult: "$combat_unit_type_fort_buster_artillery$ $unit_defense_mult$"
+ unit_combat_unit_type_fort_buster_artillery_defense_mult_desc: "$combat_unit_type_fort_buster_artillery$ $unit_defense_mult$"
+ unit_combat_unit_type_fort_buster_artillery_offense_mult: "$combat_unit_type_fort_buster_artillery$ $unit_offense_mult$"
+ unit_combat_unit_type_fort_buster_artillery_offense_mult_desc: "$combat_unit_type_fort_buster_artillery$ $unit_offense_mult$"
+
  unit_combat_unit_type_heavy_tank_defense_mult:0 "$combat_unit_type_heavy_tank$-$unit_defense_mult$"
  unit_combat_unit_type_heavy_tank_defense_mult_desc:0 "$combat_unit_type_heavy_tank$-$unit_defense_mult$"
  unit_combat_unit_type_light_tanks_offense_mult:0 "$combat_unit_type_light_tanks$-$unit_offense_mult$"

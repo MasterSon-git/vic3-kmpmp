@@ -13,6 +13,7 @@ FAE_siege_combat_engies = 4
 FAE_siege_light_tank    = 8
 
 FAE_siege_heavy_tank    = 10
+FAE_siege_fort_arty     = 18 #kmpmp
 FAE_siege_siege_arty    = 6
 FAE_siege_shrapnel_arty = 4
 FAE_siege_mobile_arty   = 3
