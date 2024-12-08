@@ -1,0 +1,25 @@
+﻿kmpmp_player_protectorate_is_own_market_forced = {
+    # game rule active
+    hidden_trigger = {
+        has_game_rule = kmpmp_player_protectorate_own_market_force
+    }
+
+    # country is player
+    is_player = yes
+    
+    # country is subject
+    is_subject_type = subject_type_protectorate
+
+    OR = {
+        # country is not in power_bloc
+        is_in_power_bloc = no
+        
+        # OR power_bloc is neither trade_league nor has market_unification_3
+        power_bloc ?= {
+            NOR = {
+                has_identity = identity:identity_trade_league
+                has_principle = principle:principle_market_unification_3
+            }
+        }
+    }
+}

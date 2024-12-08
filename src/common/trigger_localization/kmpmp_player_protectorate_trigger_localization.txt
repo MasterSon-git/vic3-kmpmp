@@ -1,0 +1,4 @@
+﻿kmpmp_player_protectorate_is_own_market_forced = {
+    global = TRIGGER_KMPMP_PLAYER_PROTECTORATE_IS_OWN_MARKET_FORCED_GLOBAL
+    global_not = TRIGGER_KMPMP_PLAYER_PROTECTORATE_IS_OWN_MARKET_FORCED_GLOBAL_NOT
+}
