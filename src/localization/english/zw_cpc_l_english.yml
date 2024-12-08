@@ -8,7 +8,7 @@
 # Decisions
 
 	zw_cpc_add_je:0 "$je_zw_autonom_invest_management$"
-	zw_cpc_add_je_desc:0 "Add $concept_journal_entry$ $je_zw_autonom_invest_managemen$"
+	zw_cpc_add_je_desc:0 "Add $concept_journal_entry$ $je_zw_autonom_invest_management$"
 
 # Decrees
 	

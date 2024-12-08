@@ -56,8 +56,15 @@ formation.5 = {
 			name = unification_prestige
 			months = very_long_modifier_time
 		}
-		add_modifier = {
-			name = kmpmp_united_iberia
+		if = {
+			limit = {
+				NOT = {
+					has_modifier = kmpmp_united_iberia
+				}
+			}
+			add_modifier = {
+				name = kmpmp_united_iberia
+			}
 		}
 		if = {
 			limit = {
@@ -556,8 +563,8 @@ formation.17 = {
 			c:GCO ?= THIS
 			c:PBC ?= THIS
 			c:FND ?= THIS
-			c:P01 ?= THIS
-			c:LTN ?= THIS
+			c:P01 ?= THIS #kmpmp
+			c:LTN ?= THIS #kmpmp
 		}
 	}
 
@@ -642,8 +649,15 @@ formation.19 = {
 			name = unification_prestige
 			months = very_long_modifier_time
 		}
-		add_modifier = {
-			name = kmpmp_united_netherlands
+		if = { #kmpmp
+			limit = {
+				NOT = {
+					has_modifier = kmpmp_united_netherlands
+				}
+			}
+			add_modifier = {
+				name = kmpmp_united_netherlands
+			}
 		}
 		add_loyalists = {
 			value = 0.25
