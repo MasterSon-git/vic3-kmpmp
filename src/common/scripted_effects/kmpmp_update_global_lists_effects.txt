@@ -861,10 +861,6 @@ kmpmp_update_global_list_states_ltn = {
         }
         add_to_global_variable_list = {
             name = states_ltn
-            target = s:STATE_WEST_AEGEAN_ISLANDS
-        }
-        add_to_global_variable_list = {
-            name = states_ltn
             target = s:STATE_CRETE
         }
     }
