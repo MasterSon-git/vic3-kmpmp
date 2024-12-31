@@ -30,7 +30,7 @@ aus_unified_sgf = {
 
 # fra_secular_legacy = { #URGENT
 # 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
-# 	state_accepted_birth_rate_mult = -0.3
+# 	state_birth_rate_mult = -0.3
 # }
 
 # communist_pressure_modifier = { #URGENT

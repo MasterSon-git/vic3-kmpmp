@@ -1,6 +1,6 @@
 ﻿capitulate_to_revolution = {
 	scope:ongoing_revolution_movement = { #Can't trigger if they want governance reforms anyway.
-		this.desired_law = {
+		this.most_desired_law = {
 			save_scope_as = revolutionaries_law
 		}
 	}
@@ -17,209 +17,38 @@
 		order_by = ig_clout
 		save_scope_as = revolution_leader_ig
 	}
-	if = { # Never activate Governance Principles twice.
-		limit = {
-			NOR = {
-				scope:revolutionaries_law = law_type:law_presidential_republic
-				scope:revolutionaries_law = law_type:law_parliamentary_republic
-				scope:revolutionaries_law = law_type:law_monarchy
-				scope:revolutionaries_law = law_type:law_council_republic
-				scope:revolutionaries_law = law_type:law_theocracy
-			}
-		}
-		if = {
-			limit = {
-				# kmpmp
-				any_law = {
-					type = law_type:law_council_republic
-					can_be_enacted = yes
-				}
 
-				scope:revolution_leader_ig = {
-					law_stance = {
-						law = law_type:law_council_republic
-						value = strongly_approve
-					}
-				}
-				NOT = {
-					has_law = law_type:law_council_republic
-				}
-			}
-			activate_law = law_type:law_council_republic
-		}
-		else_if = {
-			limit = {
-				scope:revolution_leader_ig = {
-					law_stance = {
-						law = law_type:law_monarchy
-						value = strongly_approve
-					}
-				}
-				NOT = {
-					has_law = law_type:law_monarchy
-				}
-			}
-			activate_law = law_type:law_monarchy
-		}
-		else_if = {
-			limit = {
-				scope:revolution_leader_ig = {
-					law_stance = {
-						law = law_type:law_parliamentary_republic
-						value = strongly_approve
-					}
-				}
-				NOT = {
-					has_law = law_type:law_parliamentary_republic
-				}
-			}
-			activate_law = law_type:law_parliamentary_republic
-		}
-		else_if = {
-			limit = {
-				scope:revolution_leader_ig = {
-					law_stance = {
-						law = law_type:law_presidential_republic
-						value = strongly_approve
-					}
-				}
-				NOT = {
-					has_law = law_type:law_presidential_republic
-				}
-			}
-			activate_law = law_type:law_presidential_republic
-		}
-		else_if = {
-			limit = {
-				scope:revolution_leader_ig = {
-					law_stance = {
-						law = law_type:law_theocracy
-						value = strongly_approve
-					}
-				}
-				NOT = {
-					has_law = law_type:law_theocracy
-				}
-			}
-			activate_law = law_type:law_theocracy
-		}
-		else_if = {
-			limit = {
-				# kmpmp
-				any_law = {
-					type = law_type:law_council_republic
-					can_be_enacted = yes
-				}
-
-				scope:revolution_leader_ig = {
-					law_stance = {
-						law = law_type:law_council_republic
-						value = approve
-					}
-				}
-				NOT = {
-					has_law = law_type:law_council_republic
-				}
-			}
-			activate_law = law_type:law_council_republic
-		}
-		else_if = {
-			limit = {
-				scope:revolution_leader_ig = {
-					law_stance = {
-						law = law_type:law_monarchy
-						value = approve
-					}
-				}
-				NOT = {
-					has_law = law_type:law_monarchy
-				}
-			}
-			activate_law = law_type:law_monarchy
-		}
-		else_if = {
-			limit = {
-				scope:revolution_leader_ig = {
-					law_stance = {
-						law = law_type:law_parliamentary_republic
-						value = approve
-					}
-				}
-				NOT = {
-					has_law = law_type:law_parliamentary_republic
-				}
-			}
-			activate_law = law_type:law_parliamentary_republic
-		}
-		else_if = {
-			limit = {
-				scope:revolution_leader_ig = {
-					law_stance = {
-						law = law_type:law_presidential_republic
-						value = approve
-					}
-				}
-				NOT = {
-					has_law = law_type:law_presidential_republic
-				}
-			}
-			activate_law = law_type:law_presidential_republic
-		}
-		else_if = {
-			limit = {
-				scope:revolution_leader_ig = {
-					law_stance = {
-						law = law_type:law_theocracy
-						value = approve
-					}
-				}
-				NOT = {
-					has_law = law_type:law_theocracy
-				}
-			}
-			activate_law = law_type:law_theocracy
-		}
-	}
-
-	if = {
-		limit = {
-			scope:ongoing_revolution_movement = {
-				is_political_movement_type = movement_to_preserve
-			}
-		}
-		cancel_enactment = yes
-	}
-	else = {
-		activate_law = scope:revolutionaries_law
-	}
+	activate_law = scope:revolutionaries_law
 
     # kmpmp
     # add_loyalists = {
 	# 	value = 0.25
 	# }
+	# kmpmp - no more loyalists with 1.8
+	# but we still like to add legitimacy debuff
     if = { # resign from office
         limit = {
             exists = scope:resigning_politician
         }
-        if = { # loyalists
-            limit = {
-                NOT = {
-                    has_variable = kmpmp_block_loyalists_from_resign
-                }
-            }
-            add_loyalists = {
-                value = 0.15 #0.25
-            }
-            set_variable = {
-                name = kmpmp_block_loyalists_from_resign
-                years = 50
-            }
-        }
-        else = {
-            custom_tooltip = { # TODO: check if this is shown without effect
-                text = kmpmp_no_loyalists_from_capitulate_to_revolution
-            }
-        }
+        # if = { # loyalists
+        #     limit = {
+        #         NOT = {
+        #             has_variable = kmpmp_block_loyalists_from_resign
+        #         }
+        #     }
+        #     add_loyalists = {
+        #         value = 0.15 #0.25
+        #     }
+        #     set_variable = {
+        #         name = kmpmp_block_loyalists_from_resign
+        #         years = 50
+        #     }
+        # }
+        # else = {
+        #     custom_tooltip = { # TODO: check if this is shown without effect
+        #         text = kmpmp_no_loyalists_from_capitulate_to_revolution
+        #     }
+        # }
 
         add_modifier = { # legitimacy
             name = kmpmp_character_resign_from_office_legitimacy
@@ -231,36 +60,36 @@
             exists = scope:abdicating_monarch
         }
 
-        if = { # loyalists
-            limit = {
-                NOT = {
-                    has_variable = kmpmp_block_loyalists_from_abdication
-                }
-            }
-            add_loyalists = {
-                value = 0.15 #0.25
-            }
-            set_variable = {
-                name = kmpmp_block_loyalists_from_abdication
-                years = 50
-            }
-        }
-        else = {
-            custom_tooltip = { # TODO: check if this is shown without effect
-                text = kmpmp_no_loyalists_from_capitulate_to_revolution
-            }
-        }
+        # if = { # loyalists
+        #     limit = {
+        #         NOT = {
+        #             has_variable = kmpmp_block_loyalists_from_abdication
+        #         }
+        #     }
+        #     add_loyalists = {
+        #         value = 0.15 #0.25
+        #     }
+        #     set_variable = {
+        #         name = kmpmp_block_loyalists_from_abdication
+        #         years = 50
+        #     }
+        # }
+        # else = {
+        #     custom_tooltip = { # TODO: check if this is shown without effect
+        #         text = kmpmp_no_loyalists_from_capitulate_to_revolution
+        #     }
+        # }
 
         add_modifier = { # legitimacy
             name = kmpmp_character_abdication_legitimacy
             years = 10
         }
     }
-    else = {
-        add_loyalists = {
-            value = 0.25
-        }
-    }
+    # else = {
+    #     add_loyalists = {
+    #         value = 0.25
+    #     }
+    # }
 	
 	every_interest_group = {
 		limit = {

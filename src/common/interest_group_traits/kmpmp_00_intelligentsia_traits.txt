@@ -3,7 +3,13 @@
 	min_approval = happy
 	
 	modifier = {
-		state_radicals_from_sol_change_mult = -0.1
+		state_radicals_from_political_movements_mult = -0.1
+		# kmpmp
+		country_radicalism_increases_full_acceptance_mult = -0.1
+		country_radicalism_increases_second_rate_citizen_mult = -0.1
+		country_radicalism_increases_open_prejudice_mult = -0.1
+		country_radicalism_increases_cultural_erasure_mult = -0.1
+		country_radicalism_increases_violent_hostility_mult = -0.1
 		country_society_tech_research_speed_mult = 0.1 #kmpmp
 	}
 }

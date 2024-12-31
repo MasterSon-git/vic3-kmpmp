@@ -1,4 +1,6 @@
-﻿kmpmp_ig_trait_battotai = {
+﻿# kmpmp TODO: check if we need to add them in interest_groups, like it's done for kmpmp_ig_trait_made_in_germany
+
+kmpmp_ig_trait_battotai = {
 	icon = "gfx/interface/icons/ig_trait_icons/patriotic_fervor.dds"
 	min_approval = loyal
 	

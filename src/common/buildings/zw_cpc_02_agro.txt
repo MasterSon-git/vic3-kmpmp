@@ -3,7 +3,7 @@
 building_rye_farm = {
 	building_group = bg_rye_farms
 	
-	texture = "gfx/interface/icons/building_icons/rye_farm.dds"
+	icon = "gfx/interface/icons/building_icons/rye_farm.dds"
 
 	city_type = farm
 	levels_per_mesh = 5
@@ -36,7 +36,7 @@ building_rye_farm = {
 building_wheat_farm = {
 	building_group = bg_wheat_farms
 	
-	texture = "gfx/interface/icons/building_icons/wheat_farm.dds"
+	icon = "gfx/interface/icons/building_icons/wheat_farm.dds"
 
 	city_type = farm
 	levels_per_mesh = 5
@@ -69,7 +69,7 @@ building_wheat_farm = {
 building_rice_farm = {
 	building_group = bg_rice_farms
 	
-	texture = "gfx/interface/icons/building_icons/rice_farm.dds"
+	icon = "gfx/interface/icons/building_icons/rice_farm.dds"
 
 	city_type = farm
 	levels_per_mesh = 5
@@ -102,7 +102,7 @@ building_rice_farm = {
 building_maize_farm = {
 	building_group = bg_maize_farms
 	
-	texture = "gfx/interface/icons/building_icons/maize_farm.dds"
+	icon = "gfx/interface/icons/building_icons/maize_farm.dds"
 
 	city_type = farm
 	levels_per_mesh = 5
@@ -135,7 +135,7 @@ building_maize_farm = {
 building_millet_farm = {
 	building_group = bg_millet_farms
 	
-	texture = "gfx/interface/icons/building_icons/millet_farm.dds"
+	icon = "gfx/interface/icons/building_icons/millet_farm.dds"
 
 	city_type = farm
 	levels_per_mesh = 5
@@ -168,7 +168,7 @@ building_millet_farm = {
 building_livestock_ranch = {
 	building_group = bg_livestock_ranches
 
-	texture = "gfx/interface/icons/building_icons/cattle_ranch.dds"
+	icon = "gfx/interface/icons/building_icons/cattle_ranch.dds"
 	
 	city_type = farm
 	levels_per_mesh = 5
@@ -195,34 +195,6 @@ building_livestock_ranch = {
 		zw_autonom_investment_trigger = {
 			building_1 = building_livestock_ranch
 			var_disallowed_building = agro
-		}
-	}
-}
-
-building_vineyard_plantation = {
-	building_group = bg_vineyard_plantations
-	texture = "gfx/interface/icons/building_icons/vineyards.dds"
-	required_construction = construction_cost_low
-
-	unlocking_technologies = {
-		enclosure
-	}
-
-	city_type = farm
-	levels_per_mesh = 5
-	
-	production_method_groups = {
-		pmg_base_building_vineyard_plantation
-		pmg_train_automation_building_vineyard_plantation
-	}
-	ownership_type = self
-
-	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_plantations.dds"
-
-	can_build_private = {
-		zw_autonom_investment_trigger = {
-			building_1 = building_vineyard_plantation
-			var_disallowed_building = plantations
 		}
 	}
 }

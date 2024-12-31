@@ -75,7 +75,8 @@ kmpmp_ottoman_leader_of_islam = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 
     # +7% birthrate for accepted pops
-    state_accepted_birth_rate_mult = 0.07
+    # +4.2% birthrate for pops
+    state_birth_rate_mult = 0.042
     # -15% Decree costs
     state_decree_cost_mult = -0.15
     # -20% Military goods costs
@@ -97,7 +98,8 @@ kmpmp_ottoman_reform_goes_on = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
     
     # +15% Pop growth of accepted pops
-    state_accepted_birth_rate_mult = 0.15
+    # +9% Pop growth of pops
+    state_birth_rate_mult = 0.09
     # +20% State construction eff
     state_construction_mult = 0.2
     # +25% tech Spread

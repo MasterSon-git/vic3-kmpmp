@@ -31,8 +31,6 @@
 
  country_institution_size_change_speed_institution_health_system_mult:0 "Tempo der Institutionsgrößenänderung für „[GetInstitutionType('institution_health_system').GetName]“"
  country_institution_size_change_speed_institution_health_system_mult_desc:0 "Wie schnell man die Größe von „[GetInstitutionType('institution_health_system').GetName]“ ändern kann"
- country_institution_cost_institution_health_system_mult:0 "@bur![concept_bureaucracy]-Kosten durch „[GetInstitutionType('institution_health_system').GetName]“"
- country_institution_cost_institution_health_system_mult_desc:0 "Eine Erhöhung oder Verringerung der @bur![Nbsp][concept_bureaucracy]-Kosten, um den Bürgern „[GetInstitutionType('institution_health_system').GetName]“ zur Verfügung zu stellen"
 
  country_institution_size_change_speed_institution_qwf_conscription_mult:0 "Tempo der Institutionsgrößenänderung für „[GetInstitutionType('institution_qwf_conscription').GetName]“"
  country_institution_size_change_speed_institution_qwf_conscription_mult_desc:0 "Wie schnell man die Größe von „[GetInstitutionType('institution_qwf_conscription').GetName]“ ändern kann"

@@ -44,10 +44,24 @@
 		law_no_police = disapprove
 	}
 	
-	possible = {
-		owner = { 
-			has_technology_researched = nationalism #political_agitation #mass_propaganda
-		}
+	lawgroup_governance_principles = {
+		law_theocracy = disapprove
+		law_monarchy = neutral
+		law_presidential_republic = neutral
+		law_parliamentary_republic = neutral
+		law_corporate_state = approve
+		law_council_republic = strongly_disapprove
+	}
+
+	country_trigger = {
+		has_technology_researched = nationalism #mass_propaganda
+	}
+
+	interest_group_leader_trigger = {
+		ideology_fascist_valid_trigger = yes
+	}
+	
+	non_interest_group_leader_trigger = {
 		# Agitator ideologies should disapprove of a current law
 		NAND = {
 			has_role = agitator
@@ -58,17 +72,12 @@
 				has_law = law_type:law_militarized_police
 			}
 		}
-		# Any Interest Group
-		scope:interest_group = {
-			NOR = {
-				has_variable = communist_ig_var
-				has_variable = chose_vanguardism
-				has_variable = chose_ethno_nationalism
-			}
+		interest_group = { 
+			ideology_fascist_valid_trigger = yes
 		}
 	}
 	
-	leader_weight = {
+	interest_group_leader_weight = {
 		value = 100
 		# More likely if paying war reparations
 		if = {
@@ -90,7 +99,7 @@
 					any_scope_state = {
 						is_incorporated = yes
 						any_scope_pop = {
-							pop_is_discriminated = yes
+							pop_acceptance < acceptance_status_4
 						}
 					}
 				}
@@ -121,10 +130,8 @@
 				owner = {
 					NOT = { has_law = law_type:law_ethnostate }
 				}
-				scope:interest_group = {
-					ig_approval <= -5
-					NOT = { is_interest_group_type = ig_trade_unions }
-				}
+				ig_approval <= -5
+				NOT = { is_interest_group_type = ig_trade_unions }
 			}
 			add = 75
 		}
@@ -136,20 +143,16 @@
 						has_law = law_type:law_ethnostate
 					}
 				}
-				scope:interest_group = {
-					ig_approval >= 5
-				}
+				ig_approval >= 5
 			}
 			add = -75
 		}
 		# more likely for PB and armed forces
 		if = {
 			limit = {
-				scope:interest_group = {
-					OR = {
-						is_interest_group_type = ig_petty_bourgeoisie
-						is_interest_group_type = ig_armed_forces
-					}
+				OR = {
+					is_interest_group_type = ig_petty_bourgeoisie
+					is_interest_group_type = ig_armed_forces
 				}
 			}
 			add = 50
@@ -157,11 +160,9 @@
 		# less likely for unions and intelligentsia
 		if = {
 			limit = {
-				scope:interest_group = {
-					OR = {
-						is_interest_group_type = ig_trade_unions
-						is_interest_group_type = ig_intelligentsia
-					}
+				OR = {
+					is_interest_group_type = ig_trade_unions
+					is_interest_group_type = ig_intelligentsia
 				}
 			}
 			add = -25
@@ -178,29 +179,35 @@
 						is_enacting_law = law_type:law_cultural_exclusion
 					}
 				}
-				scope:interest_group = {
-					is_in_government = yes
-				}
+				is_in_government = yes
 			}
 			add = 150
 		}
 		# conservative and/or reactionary leaders have a higher spawn chance if the Anti-Dreyfusards won.
 		if = {
 			limit = {
-				scope:interest_group = {
-					has_variable = anti_dreyfusard_victory
-				}
+				has_variable = anti_dreyfusard_victory
 			}
 			add = 50
 		}
 		# red scare can make you more fascist
 		if = {
 			limit = {
-				scope:interest_group = {
-					has_variable = fascist_uptick
-				}
+				has_variable = fascist_uptick
 			}
 			add = 25
+		}
+		# Fascism JE causes an uptick in fascism
+		if = {
+			limit = {
+				owner = {
+					OR = {
+						has_journal_entry = je_fascism_1
+						has_variable = completed_fascism_1_var
+					}
+				}
+			}
+			multiply = 1.25
 		}
 		if = { #Brazil has Integralists instead
 			limit = {
@@ -210,5 +217,35 @@
 			}
 			multiply = 0
 		}
+		if = {
+			limit = {
+				OR = {
+					has_variable = communist_ig_var
+					has_variable = chose_vanguardism
+					has_variable = chose_anarchism
+					has_variable = chose_communism
+					has_variable = chose_ethno_nationalism
+				}
+			}
+			multiply = 0.1
+		}
 	}
+	
+	non_interest_group_leader_weight = {
+		value = 100
+		if = {
+			limit = {
+				interest_group = {
+					OR = {
+						has_variable = communist_ig_var
+						has_variable = chose_vanguardism
+						has_variable = chose_anarchism
+						has_variable = chose_communism
+						has_variable = chose_ethno_nationalism
+					}
+				}
+			}
+			multiply = 0.1
+		}
+	}	
 }

@@ -25,8 +25,19 @@ kmpmp_grow_some_balls = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
 
     state_tax_waste_add = 0.1
-    state_radicals_from_sol_change_mult = 0.1
-    state_loyalists_from_sol_change_mult = -0.1
+    
+    country_radicalism_increases_full_acceptance_mult = 0.1
+    country_radicalism_increases_second_rate_citizen_mult = 0.1
+    country_radicalism_increases_open_prejudice_mult = 0.1
+    country_radicalism_increases_cultural_erasure_mult = 0.1
+    country_radicalism_increases_violent_hostility_mult = 0.1
+
+    country_loyalism_increases_full_acceptance_mult = -0.1
+    country_loyalism_increases_second_rate_citizen_mult = -0.1
+    country_loyalism_increases_open_prejudice_mult = -0.1
+    country_loyalism_increases_cultural_erasure_mult = -0.1
+    country_loyalism_increases_violent_hostility_mult = -0.1
+    
     country_legitimacy_base_add = -15
     interest_group_approval_add = -2
 }

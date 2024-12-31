@@ -8,7 +8,7 @@ kmpmp_integrate_mesoamericans_positive = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 
     # 5% pop growth of accepted pops for 5 years
-    state_accepted_birth_rate_mult = 0.05
+    state_birth_rate_mult = 0.03
 }
 kmpmp_manifest_mexico = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
@@ -17,7 +17,7 @@ kmpmp_manifest_mexico = {
     state_construction_mult = 0.15
     country_minting_add = 10000
     country_legitimacy_base_add = 10
-    state_accepted_birth_rate_mult = 0.2
+    state_birth_rate_mult = 0.12
 
 }
 kmpmp_integrate_mesoamericans_negative = {

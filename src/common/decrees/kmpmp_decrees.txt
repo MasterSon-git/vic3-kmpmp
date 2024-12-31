@@ -4,7 +4,8 @@
 		state_infrastructure_from_population_add = 1
 		state_infrastructure_from_population_max_add = 20
 		state_construction_mult = 0.10
-        building_construction_sector_throughput_add = 0.1
+		# kmpmp
+		building_construction_sector_throughput_add = 0.1
 	}
 	unlocking_technologies = { 
 		centralization
@@ -72,14 +73,106 @@
 	}
 }
 
+decree_emergency_relief = {
+	texture = "gfx/interface/icons/decree/decree_emergency_relief.dds"
+	unlocking_technologies = {
+		centralization
+	}
+	modifier = {
+		state_tax_collection_mult = -0.5
+		state_infrastructure_mult = 0.1
+		state_market_access_price_impact = 0.05
+		state_food_security_add = 0.05
+		# kmpmp
+		state_radicalism_increases_full_acceptance_mult = -0.35
+		state_radicalism_increases_second_rate_citizen_mult = -0.35
+		state_radicalism_increases_open_prejudice_mult = -0.35
+		state_radicalism_increases_cultural_erasure_mult = -0.35
+		state_radicalism_increases_violent_hostility_mult = -0.35
+		state_peasants_education_access_add = 0.1
+		state_bureaucracy_population_base_cost_factor_mult = 0.15
+	}
+
+	state_trigger = {
+		trigger_if = {
+			limit = {
+				has_decree = decree_emergency_relief
+			}
+			any_scope_pop = {
+				percent >= 0.2
+
+				is_in_starvation = yes
+			}
+		}
+		trigger_else = {
+			OR = {
+				has_famine = yes
+				devastation > 0.2
+				ROOT.state_region = {
+					OR = {
+						has_harvest_condition = flood
+						has_harvest_condition = wildfire
+						has_harvest_condition = drought
+						has_harvest_condition = disease_outbreak
+						has_harvest_condition = extreme_winds	
+					}
+				}	
+			}
+		}
+	}
+
+	cost = 50
+	
+	ai_weight = {
+		value = 0
+		
+		if = {
+			limit = { 
+				average_sol < average_expected_sol
+			}
+			add = 100
+		}
+		if = {
+			limit = {
+				scope:country = {
+					OR = {
+						has_strategy = ai_strategy_nationalist_agenda
+						has_strategy = ai_strategy_reactionary_agenda
+					}
+				}
+			}
+			multiply = 0.5
+		}	
+	}
+}
+
 decree_promote_social_mobility = {
 	texture = "gfx/interface/icons/decree/decree_promote_social_mobility.dds"
+
+	state_trigger = {
+		NOT = {
+			AND = {
+				owner = {
+					OR = {
+						has_law = law_type:law_hindu_caste_enforced
+						has_law = law_type:law_hindu_caste_codified
+					}
+				}
+				religion_percent_state = {
+					target = rel:hindu  
+					value >= 0.3
+				}
+			}
+		}
+	}
+
 	modifier = {
 		state_education_access_add = 0.25
 		state_pop_qualifications_mult = 0.25
-        building_university_throughput_add = 0.1 #kmpmp #check this, maybe we need to add this to static_modifiers
-        building_arts_academy_throughput_add = 0.1 #kmpmp #check this, maybe we need to add this to static_modifiers
+		building_university_throughput_add = 0.1 #kmpmp
+		building_arts_academy_throughput_add = 0.1 #kmpmp
 	}
+
 	cost = 100
 	
 	ai_weight = {
@@ -134,7 +227,7 @@ decree_promote_national_values = {
 	unlocking_technologies = {
 		centralization
 	}
-	valid = {
+	state_trigger = {
 		OR = {
 			has_assimilating_pops = yes
 			has_converting_pops = yes
@@ -143,7 +236,12 @@ decree_promote_national_values = {
 	modifier = {
 		state_assimilation_mult = 1.25 #1
 		state_conversion_mult = 1.25 #1
-        state_loyalists_from_sol_change_mult = 0.25 #kmpmp
+		# kmpmp
+		state_loyalism_increases_full_acceptance_mult = 0.25
+		state_loyalism_increases_second_rate_citizen_mult = 0.25
+		state_loyalism_increases_open_prejudice_mult = 0.25
+		state_loyalism_increases_cultural_erasure_mult = 0.25
+		state_loyalism_increases_violent_hostility_mult = 0.25
 	}
 	cost = 100
 	
@@ -211,7 +309,7 @@ decree_encourage_manufacturing_industry = {
 	unlocking_technologies = {
 		manufacturies
 	}	
-	valid = {
+	state_trigger = {
 		NOR = { 
 			has_decree = decree_encourage_agricultural_industry
 			has_decree = decree_encourage_resource_industry
@@ -220,7 +318,7 @@ decree_encourage_manufacturing_industry = {
 	modifier = {
 		building_group_bg_manufacturing_throughput_add = 0.25 #0.2
 		#building_group_bg_service_throughput_add = 0.2
-        state_construction_mult = 0.05 #kmpmp
+		state_construction_mult = 0.05 #kmpmp
 	}
 	cost = 100
 	
@@ -265,7 +363,7 @@ decree_encourage_manufacturing_industry = {
 
 decree_greener_grass_campaign = {
 	texture = "gfx/interface/icons/decree/decree_greener_grass_campaign.dds"
-	valid = {
+	state_trigger = {
 		NOR = {
 			is_isolated_from_market = yes
 			# kmpmp
@@ -323,42 +421,5 @@ decree_greener_grass_campaign = {
 			}
 			multiply = 0
 		}
-	}
-}
-
-decree_emergency_relief = {
-	texture = "gfx/interface/icons/decree/decree_emergency_relief.dds"
-	unlocking_technologies = {
-		centralization
-	}
-	modifier = {
-		state_welfare_payments_add = 0.5
-		state_radicals_from_sol_change_mult = -0.35
-		state_peasants_education_access_add = 0.1
-		state_bureaucracy_population_base_cost_factor_mult = 0.15
-
-	}
-	cost = 75
-	
-	ai_weight = {
-		value = 0
-		
-		if = {
-			limit = { 
-				average_sol < average_expected_sol
-			}
-			add = 100
-		}
-		if = {
-			limit = {
-				scope:country = {
-					OR = {
-						has_strategy = ai_strategy_nationalist_agenda
-						has_strategy = ai_strategy_reactionary_agenda
-					}
-				}
-			}
-			multiply = 0.5
-		}	
 	}
 }

@@ -12,17 +12,16 @@
 	disallowing_laws = {
 		law_state_religion
 	}
+
+	modifier = {
+		country_institution_cost_institution_schools_mult = -0.4
+	}
 	
 	institution = institution_schools
 	institution_modifier = {
 		state_education_access_wealth_add = 0.0075 #0.005
 		interest_group_ig_intelligentsia_pol_str_mult = 0.1
 	}
-	
-	possible_political_movements = {
-		law_religious_schools
-		law_public_schools
-	}	
 	
 	can_impose = {
 		OR = {
@@ -37,20 +36,6 @@
 		}
 	}
 
-	pop_support = {
-		value = 0
-		add = {
-			desc = "POP_WEALTH"			
-			# Wealth 20 gives 0.1 pop support, 22 -> 0.2, 24 -> 0.3, ..., 30 -> 0.6
-			value = wealth
-			subtract = 18
-			divide = 2
-			multiply = 0.1
-			min = 0
-			max = 0.6
-		}
-	}
-
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
 		
@@ -59,16 +44,21 @@
 			add = 750
 		}
 		
-	
 		if = {
-			limit = { 
-				OR = {
-					has_journal_entry = je_sick_man_education
-					has_journal_entry = je_terakoya
-				}
+			limit = {
 				has_law = law_type:law_no_schools
 			}
-			add = 1000
+			add = 500
+
+			if = {
+				limit = { 
+					OR = {
+						has_journal_entry = je_sick_man_education
+						has_journal_entry = je_terakoya
+					}
+				}
+				add = 500
+			}
 		}		
 	}
 
@@ -92,6 +82,20 @@
 				power_bloc ?= { has_principle_group = principle_group:principle_group_advanced_research }
 			}
 			add = 10
+		}
+
+		if = {
+			limit = {
+				scope:target_country = {
+					c:BIC ?= this
+					OR = {	
+						has_journal_entry = je_british_dictate_plantations
+						has_journal_entry = je_british_dictate_military
+						has_journal_entry = je_british_dictate_universities
+					}
+				}
+			}
+			multiply = 0
 		}
 	}
 }

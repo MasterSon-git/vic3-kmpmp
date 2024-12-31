@@ -1,6 +1,7 @@
 ﻿# REGARDING BRAZIL: There are several varying estimates for Brazil's population overall in the 1830s. There's no good censuses for 1836 specifically, and provincial censuses are all over the place in terms of quality and distance in time from 1836. Everything will be drawn from estimates of estimates and probably have some issues with accuracy. I can do nothing but apologize, and encourage students of history to go forth and write a book I can steal data from in the future.
 
 POPS = {
+	# kmpmp add more pops *10
 	s:STATE_ANTOFAGASTA = {
 		region_state:BOL = {
 			create_pop = {
@@ -21,6 +22,7 @@ POPS = {
 			}
 		}
 	}
+	# kmpmp add more pops *1.5
 	s:STATE_LA_PAZ = {
 		region_state:BOL = {
 			create_pop = {
@@ -45,6 +47,7 @@ POPS = {
 			}
 		}
 	}
+	# kmpmp double the pops
 	s:STATE_LIMA = {
 		region_state:NPU = {
 			create_pop = {

@@ -1,5 +1,0 @@
-﻿l_german:
- country_suppression_cost_mult_desc: "Eine Erhöhung oder Verringerung der [Concept('concept_suppress', '$concept_suppressing$skosten')] von [Concept('concept_interest_group', '$concept_interest_groups$')]."
- country_convoy_contribution_to_market_owner_add: "@convoys![Nbsp][concept_convoys]-Beitrag zu [concept_market_owner]"
- character_convoy_protection_mult: "[Concept('concept_admiral', 'Admirals')]-[concept_convoys]-Schutz#!"
- character_convoy_raiding_mult: "[Concept('concept_admiral', 'Admirals')]-[concept_convoys]-Überfall-Effizienz"

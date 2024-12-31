@@ -3,7 +3,13 @@
 	min_approval = loyal
 	
 	modifier = {
-		state_radicals_from_sol_change_mult = -0.15
+		state_radicals_from_political_movements_mult = -0.15
+		# kmpmp
+		country_radicalism_increases_full_acceptance_mult = -0.15
+		country_radicalism_increases_second_rate_citizen_mult = -0.15
+		country_radicalism_increases_open_prejudice_mult = -0.15
+		country_radicalism_increases_cultural_erasure_mult = -0.15
+		country_radicalism_increases_violent_hostility_mult = -0.15
 		state_birth_rate_mult = 0.01 #kmpmp
 	}
 }
