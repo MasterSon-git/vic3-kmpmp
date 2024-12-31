@@ -24,9 +24,7 @@
 		country_acceptance_culture_base_add = 0
 
 		# kmpmp
-		state_radicals_from_sol_change_accepted_culture_mult = -0.2
-		state_loyalists_from_sol_change_accepted_culture_mult = 0.2
-        state_accepted_birth_rate_mult = 0.15 #kmpmp
+        state_birth_rate_mult = 0.09 #kmpmp
 	}
 	
 	acceptance_modifier = {

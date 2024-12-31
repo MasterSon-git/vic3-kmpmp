@@ -127,7 +127,12 @@ company_imperial_porcelan_company = {
 	prosperity_modifier = {
 		building_logging_camp_throughput_add = 0.1
 		building_sulfur_mine_throughput_add = 0.1
-		state_radicals_from_sol_change_mult = -0.1
+		# kmpmp
+		country_radicalism_increases_full_acceptance_mult = -0.1
+		country_radicalism_increases_second_rate_citizen_mult = -0.1
+		country_radicalism_increases_open_prejudice_mult = -0.1
+		country_radicalism_increases_cultural_erasure_mult = -0.1
+		country_radicalism_increases_violent_hostility_mult = -0.1
 	}
 
 	ai_weight = {

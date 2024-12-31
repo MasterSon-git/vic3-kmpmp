@@ -28,8 +28,7 @@ kmpmp_decree_public_health_program = {
 		centralization
 	}
 	modifier = {
-		state_birth_rate_mult = 0.05
-		state_accepted_birth_rate_mult = 0.05
+		state_birth_rate_mult = 0.09
 		state_mortality_mult = -0.05
 	}
 	cost = 100

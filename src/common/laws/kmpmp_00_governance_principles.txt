@@ -288,8 +288,12 @@ law_theocracy = {
 		country_legitimacy_ideological_incoherence_mult = 0.1
 		interest_group_ig_devout_pol_str_mult = 0.25
 		country_authority_add = 250 #200
-		state_radicals_from_sol_change_accepted_religion_mult = -0.05 #kmpmp
-		state_loyalists_from_sol_change_accepted_religion_mult = 0.05 #kmpmp
+		# kmpmp
+		country_radicalism_increases_full_acceptance_mult = -0.05
+		country_radicalism_increases_second_rate_citizen_mult = -0.25
+		# kmpmp
+		country_loyalism_increases_full_acceptance_mult = 0.05
+		country_loyalism_increases_second_rate_citizen_mult = 0.25
 	}
 	
 	ai_will_do = {

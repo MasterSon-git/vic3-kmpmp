@@ -640,7 +640,12 @@ company_peruvian_amazon = {
 		state_loyalists_from_political_movements_mult = 0.1
 		# building_group_bg_rubber_mortality_mult = 0.1
 		# kmpmp
-		state_loyalists_from_sol_change_mult = 0.1
+		country_loyalism_increases_full_acceptance_mult = 0.1
+		country_loyalism_increases_second_rate_citizen_mult = 0.1
+		country_loyalism_increases_open_prejudice_mult = 0.1
+		country_loyalism_increases_cultural_erasure_mult = 0.1
+		country_loyalism_increases_violent_hostility_mult = 0.1
+
 		building_steel_mills_throughput_add = 0.1
 	}
 
@@ -919,9 +924,15 @@ company_mantetsu = {
 	}
 	
 	prosperity_modifier = {
-		state_loyalists_from_sol_change_mult = 0.15 #kmpmp
 		state_non_homeland_colony_growth_speed_mult = 0.1
 		building_wheat_farm_throughput_add = 0.15
+
+		# kmpmp
+		country_loyalism_increases_full_acceptance_mult = 0.15
+		country_loyalism_increases_second_rate_citizen_mult = 0.15
+		country_loyalism_increases_open_prejudice_mult = 0.15
+		country_loyalism_increases_cultural_erasure_mult = 0.15
+		country_loyalism_increases_violent_hostility_mult = 0.15
 	}	
 	
 	ai_weight = {
@@ -1110,8 +1121,14 @@ company_misr = {
 
 	prosperity_modifier = {
 		state_loyalists_from_political_movements_mult = 0.1
+
 		# kmpmp
-		state_loyalists_from_sol_change_mult = 0.1
+		country_loyalism_increases_full_acceptance_mult = 0.1
+		country_loyalism_increases_second_rate_citizen_mult = 0.1
+		country_loyalism_increases_open_prejudice_mult = 0.1
+		country_loyalism_increases_cultural_erasure_mult = 0.1
+		country_loyalism_increases_violent_hostility_mult = 0.1
+
 		building_dye_plantation_throughput_add = 0.1
 	}
 
@@ -1342,8 +1359,13 @@ company_allatini_mills = {
 		state_radicalism_increases_violent_hostility_mult = -0.1 #-0.05
 		state_radicalism_increases_cultural_erasure_mult = -0.1 #-0.05
 		state_radicalism_increases_open_prejudice_mult = -0.1 #-0.05
-		state_loyalists_from_sol_change_mult = 0.1 #kmpmp
-		state_accepted_birth_rate_mult = 0.03 #kmpmp
+		# kmpmp
+		country_loyalism_increases_full_acceptance_mult = 0.1
+		country_loyalism_increases_second_rate_citizen_mult = 0.1
+		country_loyalism_increases_open_prejudice_mult = 0.1
+		country_loyalism_increases_cultural_erasure_mult = 0.1
+		country_loyalism_increases_violent_hostility_mult = 0.1
+		state_birth_rate_mult = 0.018 #kmpmp
 	}
 
 	ai_weight = {
@@ -2052,7 +2074,7 @@ company_cgv = {
 	prosperity_modifier = {
 		country_prestige_mult = 0.15
 		building_vineyard_plantation_throughput_add = 0.1
-		state_accepted_birth_rate_mult = 0.01 #kmpmp
+		state_birth_rate_mult = 0.006 #kmpmp
 	}
 
 	ai_weight = {
@@ -2588,7 +2610,12 @@ company_ricordi = {
 		# country_prestige_mult = 0.15
 		state_loyalists_from_political_movements_mult = 0.15 #0.05
 		# kmpmp
-		state_loyalists_from_sol_change_mult = 0.15
+		country_loyalism_increases_full_acceptance_mult = 0.15
+		country_loyalism_increases_second_rate_citizen_mult = 0.15
+		country_loyalism_increases_open_prejudice_mult = 0.15
+		country_loyalism_increases_cultural_erasure_mult = 0.15
+		country_loyalism_increases_violent_hostility_mult = 0.15
+
 		building_paper_mills_throughput_add = 0.1
 		building_sulfur_mine_throughput_add = 0.1
 	}
@@ -2874,7 +2901,11 @@ company_vodka_monopoly = {
 	prosperity_modifier = {
 		state_radicals_from_political_movements_mult = -0.15
 		# kmpmp
-		state_radicals_from_sol_change_mult = -0.2 #-0.15
+		country_radicalism_increases_full_acceptance_mult = -0.2
+		country_radicalism_increases_second_rate_citizen_mult = -0.2
+		country_radicalism_increases_open_prejudice_mult = -0.2
+		country_radicalism_increases_cultural_erasure_mult = -0.2
+		country_radicalism_increases_violent_hostility_mult = -0.2
 		unit_morale_loss_mult = -0.2
 		# state_mortality_mult = 0.01
 	}
