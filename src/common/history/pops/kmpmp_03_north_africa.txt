@@ -1,7 +1,8 @@
 ﻿POPS = {
-    s:STATE_UPPER_EGYPT = {
-        region_state:EGY = {
-            create_pop = {
+	# kmpmp double the pops
+	s:STATE_UPPER_EGYPT = {
+		region_state:EGY = {
+			create_pop = {
 				culture = misri
 				size = 349025
 			}
@@ -25,6 +26,6 @@
 				culture = sudanese
 				size = 4102
 			}
-        }
-    }
+		}
+	}
 }

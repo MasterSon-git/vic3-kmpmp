@@ -5,16 +5,10 @@
                 region = sr:region_central_america
             }
 
-            # negative values doesn't work
-            # add_radicals_in_state = {
-            #     value = -1.0
-            # }
-
-            # so add loyalists, thats not perfect but very close
-            add_loyalists_in_state = {
-                # turmoil not calculated in history
-                # value = turmoil
-                value = radical_fraction
+            # negative values should be allowed since 1.8.3
+            # https://forum.paradoxplaza.com/forum/developer-diary/victoria-3-dev-diary-139-hotfix-1-8-3-released-and-future-patches.1718087/
+            add_radicals_in_state = {
+                value = -1.0
             }
         }
     }

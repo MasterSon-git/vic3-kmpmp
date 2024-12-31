@@ -28,6 +28,7 @@ unable_to_enact.1 = {
 	}
 
 	immediate = {
+		# set_variable = { name = legislative_failures_event days = 100 }
 		set_variable = legislative_failures_event
 
 		currently_enacting_law = {

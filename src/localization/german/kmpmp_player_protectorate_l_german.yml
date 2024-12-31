@@ -6,4 +6,4 @@
  setting_kmpmp_player_protectorate_own_market_force_desc: "Spielerprotektorate haben immer ihren eigenen Markt, bis das Powerblock-Prinzip Marktvereinigung 3 gewählt wird."
 
  TRIGGER_KMPMP_PLAYER_PROTECTORATE_IS_OWN_MARKET_FORCED_GLOBAL: "Spielerprotektorat ist zu eigenem Markt gezwungen"
- TRIGGER_KMPMP_PLAYER_PROTECTORATE_IS_OWN_MARKET_FORCED_GLOBAL: "Spielerprotektorat ist #b nicht#! zu eigenem Markt gezwungen"
+ TRIGGER_KMPMP_PLAYER_PROTECTORATE_IS_OWN_MARKET_FORCED_GLOBAL_NOT: "Spielerprotektorat ist #b nicht#! zu eigenem Markt gezwungen"

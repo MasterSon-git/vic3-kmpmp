@@ -28,7 +28,7 @@
 		level_scaled = {
 			building_employment_clerks_add = 1000
 			building_employment_machinists_add = 1500
-			building_employment_capitalists_add = 250
+			building_employment_bureaucrats_add = 250
 		}
 	}
 }
@@ -61,7 +61,7 @@ pm_canals_mint = {
 		level_scaled = {
 			building_employment_clerks_add = 1000
 			building_employment_machinists_add = 1000
-			building_employment_capitalists_add = 250
+			building_employment_bureaucrats_add = 250
 		}
 	}
 }
@@ -96,7 +96,7 @@ pm_canals_eletric = {
 		level_scaled = {
 			building_employment_clerks_add = 1000
 			building_employment_machinists_add = 2000
-			building_employment_capitalists_add = 300
+			building_employment_bureaucrats_add = 300
 		}
 	}
 }
@@ -131,7 +131,7 @@ pm_canals_oil = {
 		level_scaled = {
 			building_employment_clerks_add = 1500
 			building_employment_machinists_add = 3500
-			building_employment_capitalists_add = 500
+			building_employment_bureaucrats_add = 500
 		}
 	}
 }

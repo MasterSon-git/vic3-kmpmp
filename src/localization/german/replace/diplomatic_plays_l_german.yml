@@ -1,2 +1,0 @@
-﻿l_german:
- war_goal_open_market_desc: "[WAR_GOAL.GetHolder.GetAltName('AKK')|U] zwingt [WAR_GOAL.GetTarget.GetName] einen [concept_open_market] auf."

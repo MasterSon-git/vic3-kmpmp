@@ -30,6 +30,8 @@ company_basic_colonial_plantations_1 = {
     }
 
     prosperity_modifier = {
+        state_radicals_from_political_movements_mult = -0.05
+        # kmpmp
         state_radicals_from_sol_change_mult = -0.05
         building_motor_industry_throughput_add = 0.1
     }
@@ -253,7 +255,9 @@ company_basic_gold_mining = {
     }
 
     prosperity_modifier = {
-        country_minting_mult = 0.1
+        country_minting_mult = 0.1 #0.05
+        state_loyalists_from_political_movements_mult = 0.05
+        # kmpmp
         state_loyalists_from_sol_change_mult = 0.05
     }
 }
@@ -407,6 +411,46 @@ company_basic_paper = {
     }
 }
 
+company_basic_home_goods = {
+	icon = "gfx/interface/icons/company_icons/basic_home_goods.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+	
+	uses_dynamic_naming = yes
+	
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_corporation"
+		"dynamic_company_type_conglomerate"
+		"dynamic_company_type_syndicate"
+		"dynamic_company_type_combine"
+	}
+	
+	building_types = {
+		building_glassworks
+		building_furniture_manufacturies
+	}
+
+	possible = { 
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_glassworks
+					is_building_type = building_furniture_manufacturies
+				}
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_loyalists_from_political_movements_mult = 0.1
+        # kmpmp
+        state_loyalists_from_sol_change_mult = 0.1
+	}
+}
+
 company_basic_textiles = {
     icon = "gfx/interface/icons/company_icons/basic_textiles.dds"
     background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
@@ -437,6 +481,8 @@ company_basic_textiles = {
     }
 
     prosperity_modifier = {
+        state_radicals_from_political_movements_mult = -0.1
+        # kmpmp
         state_radicals_from_sol_change_mult = -0.1
         building_cotton_plantation_throughput_add = 0.1
         building_tooling_workshops_throughput_add = 0.05

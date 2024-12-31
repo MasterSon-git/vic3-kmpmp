@@ -331,7 +331,7 @@ types topbar_components
 						icon = {
 							size = { @secondary_icon_size @secondary_icon_size }
 							name = prestige_icon
-							texture = "gfx/interface/icons/generic_icons/unused/most_senior_front_commander.dds"
+							texture = "gfx/interface/icons/generic_icons/prestige.dds"
 							parentanchor = vcenter
 						}
 	
@@ -550,6 +550,7 @@ types topbar_components
 	type topbar = widget {
 		widget = {
 			name = "topbar"
+			max_update_rate = 8
 			using = hud_visibility
 			datacontext = "[AccessMetaPlayer.AccessPlayedOrObservedCountry]"
 			using = clickthrough_blocker
@@ -999,7 +1000,7 @@ types topbar_components
 		size = { 57 57 }
 		position = { -4 78 }
 		
-		onclick = "[MapListPanelManager.ToggleCurrentPanel]"
+		onclick = "[MapListPanelManager.OpenCurrentPanel]"
 		onclick = "[SetTempMapModeByKey('mm_default')]"
 
 		### RANK

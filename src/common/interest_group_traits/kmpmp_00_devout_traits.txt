@@ -3,7 +3,8 @@
 	min_approval = loyal
 	
 	modifier = {
-		state_radicals_from_sol_change_mult = -0.15
+		state_radicals_from_political_movements_mult = -0.15
+		state_radicals_from_sol_change_mult = -0.15 #kmpmp
 		state_birth_rate_mult = 0.01 #kmpmp
 	}
 }

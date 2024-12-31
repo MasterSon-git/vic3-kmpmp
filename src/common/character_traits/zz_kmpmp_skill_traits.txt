@@ -138,6 +138,7 @@
 	}
 
 	replace = {
+		inexperienced
 	}
 
 	value = 1

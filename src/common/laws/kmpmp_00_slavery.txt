@@ -12,9 +12,29 @@ law_slave_trade = {
 	disallowing_laws = {
 		law_cultural_exclusion
 		law_multicultural
+		law_affirmative_action
 	}
 	
 	on_activate = {
+		set_variable = {
+			name = slavery_recently_enacted
+			value = yes
+			days = 1825
+		}	
+		every_scope_state = {
+			limit = { 
+				NOT = {
+					any_scope_pop = {
+						is_pop_type = slaves
+					}
+				}
+			}
+			set_variable = {
+				name = former_free_state
+				value = yes
+				days = 1825
+			}			
+		}		
 		if = {
 			limit = { has_variable = slavery_recently_abolished }
 			custom_tooltip = {
@@ -48,60 +68,10 @@ law_slave_trade = {
 		state_migration_pull_mult = 0.1 #kmpmp
 	}
 	
-	possible_political_movements = {
-		law_slavery_banned
-		law_legacy_slavery
-	}
-
-	pop_support = {
-		value = 0
-		
-		add = {
-			desc = "POP_ARISTOCRATS"
-			if = {
-				limit = { 
-					is_pop_type = aristocrats
-				}
-				value = 0.1
-			}
-		}
-	}
-	
 	ai_will_do = {
 		exists = ruler
 		ruler = {
 			has_ideology = ideology:ideology_slaver
-		}
-	}
-	
-	revolution_state_weight = {
-		value = 1
-		if = {
-			limit = { 
-				is_slave_state = no 
-				NOT = { has_variable = former_slave_state }
-			}	
-			if = {
-				limit = { 
-				owner = { # special logic for ACW to try and force a historical split of states					
-					has_journal_entry = je_acw_countdown
-					OR = {
-						has_law = law_type:law_legacy_slavery
-						has_variable = slavery_recently_abolished
-					}
-					any_scope_state = {
-						OR = {
-							is_slave_state = yes 
-							has_variable = former_slave_state			
-						}				
-					}						
-				} 
-				}	  
-				multiply = 0.0
-			}
-			else = {
-				multiply = 0.25
-			}
 		}
 	}
 
@@ -160,75 +130,7 @@ law_legacy_slavery = {
 		state_aristocrats_investment_pool_efficiency_mult = 0.15 #kmpmp
 		state_accepted_birth_rate_mult = 0.01 #kmpmp
 	}
-	
-	possible_political_movements = {
-		law_slavery_banned
-	}
 
-	pop_support = {
-		value = 0
-		add = {
-			desc = "POP_ACADEMICS"
-			if = {
-				limit = {
-					is_pop_type = academics
-				}
-				value = 0.1
-			}
-		}
-		add = {
-			desc = "POP_CLERGYMEN"
-			if = {
-				limit = {
-					is_pop_type = clergymen
-				}
-				value = 0.05
-			}
-		}
-		# Brazilian pops are more likely to pursue legacy slavery if the Aberdeen Act is being enforced
-		if = {
-			desc = "aberdeen_act_pop_support"
-			limit = {
-				c:BRZ ?= owner
-				owner = { 
-					has_law = law_type:law_slave_trade 
-					has_modifier = aberdeen_act_enforced_brz
-				}
-			}
-			value = 0.1
-		}
-	}
-
-	revolution_state_weight = {
-		value = 1
-		if = {
-			limit = { 
-				is_slave_state = no 
-				NOT = { has_variable = former_slave_state }
-			}	
-			if = {
-				limit = { 
-				owner = { # special logic for ACW to try and force a historical split of states					
-					has_journal_entry = je_acw_countdown
-					OR = {
-						has_law = law_type:law_legacy_slavery
-						has_variable = slavery_recently_abolished
-					}
-					any_scope_state = {
-						OR = {
-							is_slave_state = yes 
-							has_variable = former_slave_state			
-						}				
-					}						
-				} 
-				} 
-				multiply = 0.0
-			}
-			else = {
-				multiply = 0.25
-			}
-		}
-	}
 	ai_enact_weight_modifier = {
 		value = 0
 		#Brazilian AI is more likely to pursue legacy slavery if there are no abolitionists in power.

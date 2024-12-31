@@ -143,24 +143,6 @@ object={
 	count=0
 }
 object={
-	name="env_tropical_rain"
-	clamp_to_water_level=no
-	render_under_water=no
-	generated_content=no
-	layer="environmental_effects"
-	entity="env_tropical_rain_entity"
-	count=0
-}
-object={
-	name="env_tropical_rain_dense"
-	clamp_to_water_level=no
-	render_under_water=no
-	generated_content=no
-	layer="environmental_effects"
-	entity="env_tropical_rain_dense_entity"
-	count=0
-}
-object={
 	name="env_volcano_idle_obj"
 	clamp_to_water_level=no
 	render_under_water=no

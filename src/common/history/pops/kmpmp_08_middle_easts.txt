@@ -1,4 +1,5 @@
 ﻿POPS = {
+    # kmpmp double the pops
     s:STATE_PALESTINE = {
         region_state:EGY = {
             create_pop = {

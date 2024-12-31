@@ -1,10 +1,8 @@
 ﻿decree_zw_no_state_private_investment = {
 	texture = "gfx/decree_zw_no_state_private_investment.dds"
 
-	valid = {
-		owner = {
-			is_player = yes
-		}
+	country_trigger = {
+		is_player = yes
 	}
 
 	cost = 0

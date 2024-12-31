@@ -3,7 +3,8 @@
 	min_approval = happy
 	
 	modifier = {
-		state_radicals_from_sol_change_mult = -0.1
+		state_radicals_from_political_movements_mult = -0.1
+		state_radicals_from_sol_change_mult = -0.1 #kmpmp
 		country_society_tech_research_speed_mult = 0.1 #kmpmp
 	}
 }

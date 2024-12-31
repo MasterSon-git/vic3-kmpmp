@@ -30,8 +30,8 @@ company_nederlandse_petroleum = {
 	
 	prosperity_modifier = {
 		state_colony_growth_speed_mult = 0.10
-		# building_throughput_oil_mult = 0.10
-		building_throughput_oil_add = 0.10
+		# kmpmp
+		building_oil_rig_throughput_add = 0.10
 		building_railway_throughput_add = 0.10
 		building_sulfur_mine_throughput_add = 0.1
 	}	
@@ -637,6 +637,9 @@ company_peruvian_amazon = {
 	}
 
 	prosperity_modifier = {
+		state_loyalists_from_political_movements_mult = 0.1
+		# building_group_bg_rubber_mortality_mult = 0.1
+		# kmpmp
 		state_loyalists_from_sol_change_mult = 0.1
 		building_steel_mills_throughput_add = 0.1
 	}
@@ -746,8 +749,8 @@ company_united_fruit = {
 	flavored_company = yes
 
 	building_types = {
-		building_banana_plantation
 		building_sugar_plantation
+		building_banana_plantation
 	}
 
 	potential = {
@@ -758,34 +761,25 @@ company_united_fruit = {
 	}
 
 	possible = {
-		OR = {
-			any_scope_state = {
+		any_country = {
 				OR = {
-					state_is_in_south_america = yes
-					state_is_in_central_america = yes
+					country_is_in_south_america = yes
+					country_is_in_central_america = yes
 				}
 				any_scope_building = {
-					is_building_type = building_banana_plantation
-					level >= 5
+						is_building_type = building_banana_plantation
+						levels_owned_by_country = {
+							target = ROOT 
+							value  > 15
+						}
 				}
-			}
-		}
-		any_subject_or_below = {
-			OR = {
-				country_is_in_south_america = yes
-				country_is_in_central_america = yes
-			}
-			any_scope_state = {
-				any_scope_building = {
-					is_building_type = building_banana_plantation
-					level >= 5
-				}
-			}
-		}
+		}	
 	}
 
 	prosperity_modifier = {
 		building_group_bg_plantations_throughput_add = 0.2
+		# country_infamy_decay_mult = -0.25
+		# kmpmp
 		building_cotton_plantation_throughput_add = 0.1
 	}
 
@@ -1115,6 +1109,8 @@ company_misr = {
 	}
 
 	prosperity_modifier = {
+		state_loyalists_from_political_movements_mult = 0.1
+		# kmpmp
 		state_loyalists_from_sol_change_mult = 0.1
 		building_dye_plantation_throughput_add = 0.1
 	}
@@ -1343,7 +1339,9 @@ company_allatini_mills = {
 
 	prosperity_modifier = {
 		building_food_industry_throughput_add = 0.1
-		# state_radicals_from_discrimination_mult = -0.1
+		state_radicalism_increases_violent_hostility_mult = -0.1 #-0.05
+		state_radicalism_increases_cultural_erasure_mult = -0.1 #-0.05
+		state_radicalism_increases_open_prejudice_mult = -0.1 #-0.05
 		state_loyalists_from_sol_change_mult = 0.1 #kmpmp
 		state_accepted_birth_rate_mult = 0.03 #kmpmp
 	}
@@ -2054,7 +2052,7 @@ company_cgv = {
 	prosperity_modifier = {
 		country_prestige_mult = 0.15
 		building_vineyard_plantation_throughput_add = 0.1
-		state_accepted_birth_rate_mult = 0.01
+		state_accepted_birth_rate_mult = 0.01 #kmpmp
 	}
 
 	ai_weight = {
@@ -2587,8 +2585,11 @@ company_ricordi = {
 	}
 
 	prosperity_modifier = {
-		building_paper_mills_throughput_add = 0.1
+		# country_prestige_mult = 0.15
+		state_loyalists_from_political_movements_mult = 0.15 #0.05
+		# kmpmp
 		state_loyalists_from_sol_change_mult = 0.15
+		building_paper_mills_throughput_add = 0.1
 		building_sulfur_mine_throughput_add = 0.1
 	}
 
@@ -2871,6 +2872,8 @@ company_vodka_monopoly = {
 	}
 
 	prosperity_modifier = {
+		state_radicals_from_political_movements_mult = -0.15
+		# kmpmp
 		state_radicals_from_sol_change_mult = -0.2 #-0.15
 		unit_morale_loss_mult = -0.2
 		# state_mortality_mult = 0.01
@@ -3085,8 +3088,8 @@ company_mozambique_company = {
 		building_cotton_plantation
 		building_tea_plantation
 		building_rice_farm
-		building_coffee_plantation
-		building_tobacco_plantation
+		building_coffee_plantation # kmpmp
+		building_tobacco_plantation # kmpmp
 	}
 
 	potential = {
@@ -3113,7 +3116,7 @@ company_mozambique_company = {
 
 	prosperity_modifier = {
 		state_colony_growth_speed_mult = 0.1
-		state_colony_growth_creation_mult = 0.1
+		state_colony_growth_creation_factor = 0.1
 	}
 
 	ai_weight = {
