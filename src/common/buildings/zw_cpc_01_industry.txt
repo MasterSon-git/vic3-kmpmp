@@ -24,8 +24,15 @@ building_food_industry = {
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
 
+	can_build_government = {
+		zw_gov_investment_trigger = {
+			building_1 = building_food_industry
+			bgs_1 = industry
+		}
+	}
+
 	can_build_private = {
-		zw_autonom_investment_trigger = {
+		zw_autonom_investment_trigger_manufacture = {
 			building_1 = building_food_industry
 			var_disallowed_building = building_food_industry
 		}
@@ -55,8 +62,15 @@ building_textile_mills = {
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
 
+	can_build_government = {
+		zw_gov_investment_trigger = {
+			building_1 = building_textile_mills
+			bgs_1 = industry
+		}
+	}
+
 	can_build_private = {
-		zw_autonom_investment_trigger = {
+		zw_autonom_investment_trigger_manufacture = {
 			building_1 = building_textile_mills
 			var_disallowed_building = building_textile_mills
 		}
@@ -86,8 +100,15 @@ building_furniture_manufacturies = {
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
 
+	can_build_government = {
+		zw_gov_investment_trigger = {
+			building_1 = building_furniture_manufacturies
+			bgs_1 = industry
+		}
+	}
+
 	can_build_private = {
-		zw_autonom_investment_trigger = {
+		zw_autonom_investment_trigger_manufacture = {
 			building_1 = building_furniture_manufacturies
 			var_disallowed_building = building_furniture_manufacturies
 		}
@@ -115,8 +136,15 @@ building_glassworks = {
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
 
+	can_build_government = {
+		zw_gov_investment_trigger = {
+			building_1 = building_glassworks
+			bgs_1 = industry
+		}
+	}
+
 	can_build_private = {
-		zw_autonom_investment_trigger = {
+		zw_autonom_investment_trigger_manufacture = {
 			building_1 = building_glassworks
 			var_disallowed_building = building_glassworks
 		}
@@ -148,8 +176,15 @@ building_tooling_workshops = {
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
 
+	can_build_government = {
+		zw_gov_investment_trigger = {
+			building_1 = building_tooling_workshops
+			bgs_1 = industry
+		}
+	}
+
 	can_build_private = {
-		zw_autonom_investment_trigger = {
+		zw_autonom_investment_trigger_manufacture = {
 			building_1 = building_tooling_workshops
 			var_disallowed_building = building_tooling_workshops
 		}
@@ -179,8 +214,15 @@ building_paper_mills = {
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
 
+	can_build_government = {
+		zw_gov_investment_trigger = {
+			building_1 = building_paper_mills
+			bgs_1 = industry
+		}
+	}
+
 	can_build_private = {
-		zw_autonom_investment_trigger = {
+		zw_autonom_investment_trigger_manufacture = {
 			building_1 = building_paper_mills
 			var_disallowed_building = building_paper_mills
 		}
@@ -219,8 +261,15 @@ building_chemical_plants = {
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_heavy_industry.dds"
 
+	can_build_government = {
+		zw_gov_investment_trigger = {
+			building_1 = building_chemical_plants
+			bgs_1 = industry
+		}
+	}
+
 	can_build_private = {
-		zw_autonom_investment_trigger = {
+		zw_autonom_investment_trigger_manufacture = {
 			building_1 = building_chemical_plants
 			var_disallowed_building = building_chemical_plants
 		}
@@ -258,8 +307,15 @@ building_explosives_factory = {
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_heavy_industry.dds"
 
+	can_build_government = {
+		zw_gov_investment_trigger = {
+			building_1 = building_explosives_factory
+			bgs_1 = industry
+		}
+	}
+
 	can_build_private = {
-		zw_autonom_investment_trigger = {
+		zw_autonom_investment_trigger_manufacture = {
 			building_1 = building_explosives_factory
 			var_disallowed_building = building_explosives_factory
 		}
@@ -297,8 +353,15 @@ building_synthetics_plants = {
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_heavy_industry.dds"
 
+	can_build_government = {
+		zw_gov_investment_trigger = {
+			building_1 = building_synthetics_plants
+			bgs_1 = industry
+		}
+	}
+
 	can_build_private = {
-		zw_autonom_investment_trigger = {
+		zw_autonom_investment_trigger_manufacture = {
 			building_1 = building_synthetics_plants
 			var_disallowed_building = building_synthetics_plants
 		}
@@ -338,8 +401,15 @@ building_steel_mills = {
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_heavy_industry.dds"
 
+	can_build_government = {
+		zw_gov_investment_trigger = {
+			building_1 = building_steel_mills
+			bgs_1 = industry
+		}
+	}
+
 	can_build_private = {
-		zw_autonom_investment_trigger = {
+		zw_autonom_investment_trigger_manufacture = {
 			building_1 = building_steel_mills
 			var_disallowed_building = building_steel_mills
 		}
@@ -378,15 +448,21 @@ building_motor_industry = {
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_heavy_industry.dds"
 
+	can_build_government = {
+		zw_gov_investment_trigger = {
+			building_1 = building_motor_industry
+			bgs_1 = industry
+		}
+	}
+
 	can_build_private = {
-		zw_autonom_investment_trigger = {
+		zw_autonom_investment_trigger_manufacture = {
 			building_1 = building_motor_industry
 			var_disallowed_building = building_motor_industry
 		}
 	}
 }
 
-# has special auto-expand rules
 building_shipyards = {
 	building_group = bg_shipyards
 	icon = "gfx/interface/icons/building_icons/shipyards.dds"
@@ -413,17 +489,23 @@ building_shipyards = {
 
 	should_auto_expand = {
 		zw_building_shipyards_auto_expand_trigger = yes
-	}	
+	}
+
+	can_build_government = {
+		zw_gov_investment_trigger = {
+			building_1 = building_shipyards
+			bgs_1 = industry
+		}
+	}
 
 	can_build_private = {
-		zw_autonom_investment_trigger = {
+		zw_autonom_investment_trigger_manufacture = {
 			building_1 = building_shipyards
 			var_disallowed_building = building_shipyards
 		}
 	}
 }
 
-# has special auto-expand rules
 building_military_shipyards = {
 	building_group = bg_military_shipyards
 	icon = "gfx/interface/icons/building_icons/military_shipyards.dds"
@@ -452,15 +534,21 @@ building_military_shipyards = {
 		zw_building_military_shipyards_auto_expand_trigger = yes
 	}
 
+	can_build_government = {
+		zw_gov_investment_trigger = {
+			building_1 = building_military_shipyards
+			bgs_1 = industry
+		}
+	}
+
 	can_build_private = {
-		zw_autonom_investment_trigger = {
+		zw_autonom_investment_trigger_manufacture = {
 			building_1 = building_military_shipyards
 			var_disallowed_building = military 
 		}
 	}
 }
 
-# has special auto-expand rules
 building_war_machine_industry = {
 	building_group = bg_heavy_industry
 	icon = "gfx/interface/icons/building_icons/vehicles_industry.dds"
@@ -498,8 +586,15 @@ building_war_machine_industry = {
 		zw_building_war_machine_industry_auto_expand_trigger = yes
 	}
 
+	can_build_government = {
+		zw_gov_investment_trigger = {
+			building_1 = building_war_machine_industry
+			bgs_1 = industry
+		}
+	}
+
 	can_build_private = {
-		zw_autonom_investment_trigger = {
+		zw_autonom_investment_trigger_manufacture = {
 			building_1 = building_war_machine_industry
 			var_disallowed_building = military
 		}
@@ -537,15 +632,21 @@ building_electrics_industry = {
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_heavy_industry.dds"
 
+	can_build_government = {
+		zw_gov_investment_trigger = {
+			building_1 = building_electrics_industry
+			bgs_1 = industry
+		}
+	}
+
 	can_build_private = {
-		zw_autonom_investment_trigger = {
+		zw_autonom_investment_trigger_manufacture = {
 			building_1 = building_electrics_industry
 			var_disallowed_building = building_electrics_industry
 		}
 	}
 }
 
-# has special auto-expand rules
 building_arms_industry = {
 	building_group = bg_arms_industries
 	icon = "gfx/interface/icons/building_icons/arms_industry.dds"
@@ -572,15 +673,22 @@ building_arms_industry = {
 		zw_building_arms_industry_auto_expand_trigger = yes
 	}
 
+	can_build_government = {
+		zw_gov_investment_trigger = {
+			building_1 = building_arms_industry
+			bgs_1 = industry
+		}
+	}
+
 	can_build_private = {
-		zw_autonom_investment_trigger = {
+		zw_autonom_investment_trigger_manufacture = {
 			building_1 = building_arms_industry
 			var_disallowed_building = military
 		}
 	}
+
 }
 
-# has special auto-expand rules
 building_artillery_foundries = {
 	building_group = bg_artillery_foundaries
 	icon = "gfx/interface/icons/building_icons/artillery_foundry.dds"
@@ -607,15 +715,21 @@ building_artillery_foundries = {
 		zw_building_artillery_foundries_auto_expand_trigger = yes
 	}
 
+	can_build_government = {
+		zw_gov_investment_trigger = {
+			building_1 = building_artillery_foundries
+			bgs_1 = industry
+		}
+	}
+
 	can_build_private = {
-		zw_autonom_investment_trigger = {
+		zw_autonom_investment_trigger_manufacture = {
 			building_1 = building_artillery_foundries
 			var_disallowed_building = military
 		}
 	}
 }
 
-# has special auto-expand rules
 building_munition_plants = {
 	building_group = bg_munition_plants
 	icon = "gfx/interface/icons/building_icons/munition_plants.dds"
@@ -653,8 +767,15 @@ building_munition_plants = {
 		zw_building_munition_plants_auto_expand_trigger = yes
 	}
 
+	can_build_government = {
+		zw_gov_investment_trigger = {
+			building_1 = building_munition_plants
+			bgs_1 = industry
+		}
+	}
+
 	can_build_private = {
-		zw_autonom_investment_trigger = {
+		zw_autonom_investment_trigger_manufacture = {
 			building_1 = building_munition_plants
 			var_disallowed_building = military
 		}

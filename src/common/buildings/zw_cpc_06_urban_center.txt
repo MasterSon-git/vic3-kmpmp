@@ -25,8 +25,15 @@ building_arts_academy = {
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
+	can_build_government = {
+		zw_gov_investment_trigger = {
+			building_1 = building_arts_academy
+			bgs_1 = industry
+		}
+	}
+
 	can_build_private = {
-		zw_autonom_investment_trigger = {
+		zw_autonom_investment_trigger_manufacture = {
 			building_1 = building_arts_academy
 			var_disallowed_building = building_arts_academy
 		}
@@ -75,17 +82,20 @@ building_power_plant = {
 			NOT = { has_law = law_type:law_industry_banned } 
 		}
 	}
-
-	should_auto_expand = {
-		zw_building_power_plant_auto_expand_trigger = yes
-	}
 	
 	ownership_type = self
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 
+	can_build_government = {
+		zw_gov_investment_trigger = {
+			building_1 = building_power_plant
+			bgs_1 = industry
+		}
+	}
+
 	can_build_private = {
-		zw_autonom_investment_trigger = {
+		zw_autonom_investment_trigger_power = {
 			building_1 = building_power_plant
 			var_disallowed_building = building_power_plant
 		}
