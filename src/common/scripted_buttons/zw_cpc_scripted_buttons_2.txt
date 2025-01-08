@@ -1,117 +1,125 @@
-﻿# Auton-Expand only in incorporated states
+﻿# disallow private construction for certain building types
 
-	zw_auto_expand_incorporated_states_only_button = {
-		name = "zw_auto_expand_incorporated_states_only_button"
-		desc = "zw_auto_expand_incorporated_states_only_button_desc"
+	zw_auto_invest_disallow_building_button = {
+		name = "zw_auto_invest_disallow_building_button"
+		desc = "zw_auto_invest_disallow_building_button_desc"
 		visible = { always = yes }
-		selected = { has_variable = zw_var_auto_expand_incorporated_states_only }
-		possible = { always = yes }
+		selected = { has_variable = zw_var_auto_invest_disallow_building }
+		possible = {}
 		effect = {
-			set_variable = { name = zw_var_auto_expand_incorporated_states_only }
+			custom_tooltip = zw_auto_invest_disallow_building_button_effect
+			set_variable = { name = zw_var_auto_invest_disallow_building }
 		}
 	}
 
-	zw_auto_expand_incorporated_states_only_undo_button = {
-		name = "zw_auto_expand_incorporated_states_only_undo_button"
-		desc = "zw_auto_expand_incorporated_states_only_undo_button_desc"
-		visible = { always = yes }
-		selected = {
-			NOT = { has_variable = zw_var_auto_expand_incorporated_states_only }
-		}
-		possible = { always = yes }
-		effect = {
-			remove_variable = zw_var_auto_expand_incorporated_states_only
-		}
-	}
-
-# Autonom-Investment only builds in incorporated states
-
-	zw_auto_invest_incorporated_states_only_button = {
-		name = "zw_auto_invest_incorporated_states_only_button"
-		desc = "zw_auto_invest_incorporated_states_only_button_desc"
-		visible = { always = yes }
-		selected = { has_variable = zw_var_auto_invest_incorporated_states_only }
-		possible = { always = yes }
-		effect = {
-			set_variable = { name = zw_var_auto_invest_incorporated_states_only }
-		}
-	}
-
-	zw_auto_invest_incorporated_states_only_undo_button = {
-		name = "zw_auto_invest_incorporated_states_only_undo_button"
-		desc = "zw_auto_invest_incorporated_states_only_undo_button_desc"
+	zw_auto_invest_disallow_building_undo_button = {
+		name = "zw_auto_invest_disallow_building_undo_button"
+		desc = "zw_auto_invest_disallow_building_undo_button_desc"
 		visible = { always = yes }
 		selected = {
-			NOT = { has_variable = zw_var_auto_invest_incorporated_states_only }
+			NOT = { has_variable = zw_var_auto_invest_disallow_building }
 		}
-		possible = { always = yes }
+		possible = {}
 		effect = {
-			remove_variable = zw_var_auto_invest_incorporated_states_only
+			custom_tooltip = zw_auto_invest_disallow_building_undo_button_effect
+			remove_variable = zw_var_auto_invest_disallow_building
+			if = {
+				limit = { has_variable = zw_var_auto_invest_disallow_building_food_industry }
+				remove_variable = zw_var_auto_invest_disallow_building_food_industry
+			}
+			if = {
+				limit = { has_variable = zw_var_auto_invest_disallow_building_textile_mills }
+				remove_variable = zw_var_auto_invest_disallow_building_textile_mills
+			}
+			if = {
+				limit = { has_variable = zw_var_auto_invest_disallow_building_furniture_manufacturies }
+				remove_variable = zw_var_auto_invest_disallow_building_furniture_manufacturies
+			}
+			if = {
+				limit = { has_variable = zw_var_auto_invest_disallow_building_glassworks }
+				remove_variable = zw_var_auto_invest_disallow_building_glassworks
+			}
+			if = {
+				limit = { has_variable = zw_var_auto_invest_disallow_building_paper_mills }
+				remove_variable = zw_var_auto_invest_disallow_building_paper_mills
+			}
+			if = {
+				limit = { has_variable = zw_var_auto_invest_disallow_building_chemical_plants }
+				remove_variable = zw_var_auto_invest_disallow_building_chemical_plants
+			}
+			if = {
+				limit = { has_variable = zw_var_auto_invest_disallow_building_explosives_factory }
+				remove_variable = zw_var_auto_invest_disallow_building_explosives_factory
+			}
+			if = {
+				limit = { has_variable = zw_var_auto_invest_disallow_building_synthetics_plants }
+				remove_variable = zw_var_auto_invest_disallow_building_synthetics_plants
+			}
+			if = {
+				limit = { has_variable = zw_var_auto_invest_disallow_building_tooling_workshops }
+				remove_variable = zw_var_auto_invest_disallow_building_tooling_workshops
+			}
+			if = {
+				limit = { has_variable = zw_var_auto_invest_disallow_building_steel_mills }
+				remove_variable = zw_var_auto_invest_disallow_building_steel_mills
+			}
+			if = {
+				limit = { has_variable = zw_var_auto_invest_disallow_building_motor_industry }
+				remove_variable = zw_var_auto_invest_disallow_building_motor_industry
+			}
+			if = {
+				limit = { has_variable = zw_var_auto_invest_disallow_building_electrics_industry }
+				remove_variable = zw_var_auto_invest_disallow_building_electrics_industry
+			}
+			if = {
+				limit = { has_variable = zw_var_auto_invest_disallow_building_shipyards }
+				remove_variable = zw_var_auto_invest_disallow_building_shipyards
+			}
+			if = {
+				limit = { has_variable = zw_var_auto_invest_disallow_building_arts_academy }
+				remove_variable = zw_var_auto_invest_disallow_building_arts_academy
+			}
+			if = {
+				limit = { has_variable = zw_var_auto_invest_disallow_agro }
+				remove_variable = zw_var_auto_invest_disallow_agro
+			}
+			if = {
+				limit = { has_variable = zw_var_auto_invest_disallow_plantations }
+				remove_variable = zw_var_auto_invest_disallow_plantations
+			}
+			if = {
+				limit = { has_variable = zw_var_auto_invest_disallow_mines }
+				remove_variable = zw_var_auto_invest_disallow_mines
+			}
+			if = {
+				limit = { has_variable = zw_var_auto_invest_disallow_misc }
+				remove_variable = zw_var_auto_invest_disallow_misc
+			}
+			if = {
+				limit = { has_variable = zw_var_auto_invest_disallow_military }
+				remove_variable = zw_var_auto_invest_disallow_military
+			}
+			if = {
+				limit = { has_variable = zw_var_auto_invest_disallow_building_power_plant }
+				remove_variable = zw_var_auto_invest_disallow_building_power_plant
+			}
+			if = {
+				limit = { has_variable = zw_var_auto_invest_disallow_building_railway }
+				remove_variable = zw_var_auto_invest_disallow_building_railway
+			}
 		}
 	}
 
-# Autonom-Investment only expands already existing buildings
-
-	zw_auto_invest_existing_buildings_only_button = {
-		name = "zw_auto_invest_existing_buildings_only_button"
-		desc = "zw_auto_invest_existing_buildings_only_button_desc"
-		visible = { always = yes }
-		selected = { has_variable = zw_var_auto_invest_existing_buildings_only }
-		possible = { always = yes }
-		effect = {
-			set_variable = { name = zw_var_auto_invest_existing_buildings_only }
-		}
-	}
-
-	zw_auto_invest_existing_buildings_only_undo_button = {
-		name = "zw_auto_invest_existing_buildings_only_undo_button"
-		desc = "zw_auto_invest_existing_buildings_only_undo_button_desc"
-		visible = { always = yes }
-		selected = {
-			NOT = { has_variable = zw_var_auto_invest_existing_buildings_only }
-		}
-		possible = { always = yes }
-		effect = {
-			remove_variable = zw_var_auto_invest_existing_buildings_only
-		}
-	}
-
-# Autonom-Investment only expands highly profitable buildings
-
-	zw_auto_invest_profitable_buildings_only_button = {
-		name = "zw_auto_invest_profitable_buildings_only_button"
-		desc = "zw_auto_invest_profitable_buildings_only_button_desc"
-		visible = { always = yes }
-		selected = { has_variable = zw_var_auto_invest_profitable_buildings_only }
-		possible = { always = yes }
-		effect = {
-			set_variable = { name = zw_var_auto_invest_profitable_buildings_only }
-			custom_tooltip = { text = zw_auto_invest_profitable_buildings_only_button_tt }
-		}
-	}
-
-	zw_auto_invest_profitable_buildings_only_undo_button = {
-		name = "zw_auto_invest_profitable_buildings_only_undo_button"
-		desc = "zw_auto_invest_profitable_buildings_only_undo_button_desc"
-		visible = { always = yes }
-		selected = {
-			NOT = { has_variable = zw_var_auto_invest_profitable_buildings_only }
-		}
-		possible = { always = yes }
-		effect = {
-			remove_variable = zw_var_auto_invest_profitable_buildings_only
-		}
-	}
-
-# Disallow Private Construction for Industry (except military industry)
+# disallow private construction for manufacture 
 
 	zw_auto_invest_disallow_building_food_industry_button = {
 		name = "zw_auto_invest_disallow_building_food_industry_button"
 		desc = "zw_auto_invest_disallow_building_food_industry_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = { has_variable = zw_var_auto_invest_disallow_building_food_industry }
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_building_food_industry_button_effect
 			set_variable = { name = zw_var_auto_invest_disallow_building_food_industry }
 		}
 	}
@@ -119,12 +127,13 @@
 	zw_auto_invest_disallow_building_food_industry_undo_button = {
 		name = "zw_auto_invest_disallow_building_food_industry_undo_button"
 		desc = "zw_auto_invest_disallow_building_food_industry_undo_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = {
 			NOT = { has_variable = zw_var_auto_invest_disallow_building_food_industry }
 		}
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_building_food_industry_undo_button_effect
 			remove_variable = zw_var_auto_invest_disallow_building_food_industry
 		}
 	}
@@ -132,10 +141,11 @@
 	zw_auto_invest_disallow_building_textile_mills_button = {
 		name = "zw_auto_invest_disallow_building_textile_mills_button"
 		desc = "zw_auto_invest_disallow_building_textile_mills_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = { has_variable = zw_var_auto_invest_disallow_building_textile_mills }
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_building_textile_mills_button_effect
 			set_variable = { name = zw_var_auto_invest_disallow_building_textile_mills }
 		}
 	}
@@ -143,12 +153,13 @@
 	zw_auto_invest_disallow_building_textile_mills_undo_button = {
 		name = "zw_auto_invest_disallow_building_textile_mills_undo_button"
 		desc = "zw_auto_invest_disallow_building_textile_mills_undo_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = {
 			NOT = { has_variable = zw_var_auto_invest_disallow_building_textile_mills }
 		}
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_building_textile_mills_undo_button_effect
 			remove_variable = zw_var_auto_invest_disallow_building_textile_mills
 		}
 	}
@@ -156,10 +167,11 @@
 	zw_auto_invest_disallow_building_furniture_manufacturies_button = {
 		name = "zw_auto_invest_disallow_building_furniture_manufacturies_button"
 		desc = "zw_auto_invest_disallow_building_furniture_manufacturies_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = { has_variable = zw_var_auto_invest_disallow_building_furniture_manufacturies }
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_building_furniture_manufacturies_button_effect
 			set_variable = { name = zw_var_auto_invest_disallow_building_furniture_manufacturies }
 		}
 	}
@@ -167,12 +179,13 @@
 	zw_auto_invest_disallow_building_furniture_manufacturies_undo_button = {
 		name = "zw_auto_invest_disallow_building_furniture_manufacturies_undo_button"
 		desc = "zw_auto_invest_disallow_building_furniture_manufacturies_undo_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = {
 			NOT = { has_variable = zw_var_auto_invest_disallow_building_furniture_manufacturies }
 		}
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_building_furniture_manufacturies_undo_button_effect
 			remove_variable = zw_var_auto_invest_disallow_building_furniture_manufacturies
 		}
 	}
@@ -180,10 +193,11 @@
 	zw_auto_invest_disallow_building_glassworks_button = {
 		name = "zw_auto_invest_disallow_building_glassworks_button"
 		desc = "zw_auto_invest_disallow_building_glassworks_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = { has_variable = zw_var_auto_invest_disallow_building_glassworks }
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_building_glassworks_button_effect
 			set_variable = { name = zw_var_auto_invest_disallow_building_glassworks }
 		}
 	}
@@ -191,12 +205,13 @@
 	zw_auto_invest_disallow_building_glassworks_undo_button = {
 		name = "zw_auto_invest_disallow_building_glassworks_undo_button"
 		desc = "zw_auto_invest_disallow_building_glassworks_undo_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = {
 			NOT = { has_variable = zw_var_auto_invest_disallow_building_glassworks }
 		}
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_building_glassworks_undo_button_effect
 			remove_variable = zw_var_auto_invest_disallow_building_glassworks
 		}
 	}
@@ -204,10 +219,11 @@
 	zw_auto_invest_disallow_building_paper_mills_button = {
 		name = "zw_auto_invest_disallow_building_paper_mills_button"
 		desc = "zw_auto_invest_disallow_building_paper_mills_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = { has_variable = zw_var_auto_invest_disallow_building_paper_mills }
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_building_paper_mills_button_effect
 			set_variable = { name = zw_var_auto_invest_disallow_building_paper_mills }
 		}
 	}
@@ -215,12 +231,13 @@
 	zw_auto_invest_disallow_building_paper_mills_undo_button = {
 		name = "zw_auto_invest_disallow_building_paper_mills_undo_button"
 		desc = "zw_auto_invest_disallow_building_paper_mills_undo_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = {
 			NOT = { has_variable = zw_var_auto_invest_disallow_building_paper_mills }
 		}
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_building_paper_mills_undo_button_effect
 			remove_variable = zw_var_auto_invest_disallow_building_paper_mills
 		}
 	}
@@ -228,10 +245,11 @@
 	zw_auto_invest_disallow_building_chemical_plants_button = {
 		name = "zw_auto_invest_disallow_building_chemical_plants_button"
 		desc = "zw_auto_invest_disallow_building_chemical_plants_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = { has_variable = zw_var_auto_invest_disallow_building_chemical_plants }
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_building_chemical_plants_button_effect
 			set_variable = { name = zw_var_auto_invest_disallow_building_chemical_plants }
 		}
 	}
@@ -239,12 +257,13 @@
 	zw_auto_invest_disallow_building_chemical_plants_undo_button = {
 		name = "zw_auto_invest_disallow_building_chemical_plants_undo_button"
 		desc = "zw_auto_invest_disallow_building_chemical_plants_undo_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = {
 			NOT = { has_variable = zw_var_auto_invest_disallow_building_chemical_plants }
 		}
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_building_chemical_plants_undo_button_effect
 			remove_variable = zw_var_auto_invest_disallow_building_chemical_plants
 		}
 	}
@@ -252,10 +271,11 @@
 	zw_auto_invest_disallow_building_explosives_factory_button = {
 		name = "zw_auto_invest_disallow_building_explosives_factory_button"
 		desc = "zw_auto_invest_disallow_building_explosives_factory_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = { has_variable = zw_var_auto_invest_disallow_building_explosives_factory }
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_building_explosives_factory_button_effect
 			set_variable = { name = zw_var_auto_invest_disallow_building_explosives_factory }
 		}
 	}
@@ -263,12 +283,13 @@
 	zw_auto_invest_disallow_building_explosives_factory_undo_button = {
 		name = "zw_auto_invest_disallow_building_explosives_factory_undo_button"
 		desc = "zw_auto_invest_disallow_building_explosives_factory_undo_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = {
 			NOT = { has_variable = zw_var_auto_invest_disallow_building_explosives_factory }
 		}
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_building_explosives_factory_undo_button_effect
 			remove_variable = zw_var_auto_invest_disallow_building_explosives_factory
 		}
 	}
@@ -276,10 +297,11 @@
 	zw_auto_invest_disallow_building_synthetics_plants_button = {
 		name = "zw_auto_invest_disallow_building_synthetics_plants_button"
 		desc = "zw_auto_invest_disallow_building_synthetics_plants_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = { has_variable = zw_var_auto_invest_disallow_building_synthetics_plants }
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_building_synthetics_plants_button_effect
 			set_variable = { name = zw_var_auto_invest_disallow_building_synthetics_plants }
 		}
 	}
@@ -287,12 +309,13 @@
 	zw_auto_invest_disallow_building_synthetics_plants_undo_button = {
 		name = "zw_auto_invest_disallow_building_synthetics_plants_undo_button"
 		desc = "zw_auto_invest_disallow_building_synthetics_plants_undo_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = {
 			NOT = { has_variable = zw_var_auto_invest_disallow_building_synthetics_plants }
 		}
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_building_synthetics_plants_undo_button_effect
 			remove_variable = zw_var_auto_invest_disallow_building_synthetics_plants
 		}
 	}
@@ -300,10 +323,11 @@
 	zw_auto_invest_disallow_building_tooling_workshops_button = {
 		name = "zw_auto_invest_disallow_building_tooling_workshops_button"
 		desc = "zw_auto_invest_disallow_building_tooling_workshops_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = { has_variable = zw_var_auto_invest_disallow_building_tooling_workshops }
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_building_tooling_workshops_button_effect
 			set_variable = { name = zw_var_auto_invest_disallow_building_tooling_workshops }
 		}
 	}
@@ -311,12 +335,13 @@
 	zw_auto_invest_disallow_building_tooling_workshops_undo_button = {
 		name = "zw_auto_invest_disallow_building_tooling_workshops_undo_button"
 		desc = "zw_auto_invest_disallow_building_tooling_workshops_undo_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = {
 			NOT = { has_variable = zw_var_auto_invest_disallow_building_tooling_workshops }
 		}
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_building_tooling_workshops_undo_button_effect
 			remove_variable = zw_var_auto_invest_disallow_building_tooling_workshops
 		}
 	}
@@ -324,10 +349,11 @@
 	zw_auto_invest_disallow_building_steel_mills_button = {
 		name = "zw_auto_invest_disallow_building_steel_mills_button"
 		desc = "zw_auto_invest_disallow_building_steel_mills_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = { has_variable = zw_var_auto_invest_disallow_building_steel_mills }
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_building_steel_mills_button_effect
 			set_variable = { name = zw_var_auto_invest_disallow_building_steel_mills }
 		}
 	}
@@ -335,12 +361,13 @@
 	zw_auto_invest_disallow_building_steel_mills_undo_button = {
 		name = "zw_auto_invest_disallow_building_steel_mills_undo_button"
 		desc = "zw_auto_invest_disallow_building_steel_mills_undo_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = {
 			NOT = { has_variable = zw_var_auto_invest_disallow_building_steel_mills }
 		}
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_building_steel_mills_undo_button_effect
 			remove_variable = zw_var_auto_invest_disallow_building_steel_mills
 		}
 	}
@@ -348,10 +375,11 @@
 	zw_auto_invest_disallow_building_motor_industry_button = {
 		name = "zw_auto_invest_disallow_building_motor_industry_button"
 		desc = "zw_auto_invest_disallow_building_motor_industry_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = { has_variable = zw_var_auto_invest_disallow_building_motor_industry }
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_building_motor_industry_button_effect
 			set_variable = { name = zw_var_auto_invest_disallow_building_motor_industry }
 		}
 	}
@@ -359,12 +387,13 @@
 	zw_auto_invest_disallow_building_motor_industry_undo_button = {
 		name = "zw_auto_invest_disallow_building_motor_industry_undo_button"
 		desc = "zw_auto_invest_disallow_building_motor_industry_undo_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = {
 			NOT = { has_variable = zw_var_auto_invest_disallow_building_motor_industry }
 		}
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_building_motor_industry_undo_button_effect
 			remove_variable = zw_var_auto_invest_disallow_building_motor_industry
 		}
 	}
@@ -372,10 +401,11 @@
 	zw_auto_invest_disallow_building_electrics_industry_button = {
 		name = "zw_auto_invest_disallow_building_electrics_industry_button"
 		desc = "zw_auto_invest_disallow_building_electrics_industry_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = { has_variable = zw_var_auto_invest_disallow_building_electrics_industry }
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_building_electrics_industry_button_effect
 			set_variable = { name = zw_var_auto_invest_disallow_building_electrics_industry }
 		}
 	}
@@ -383,12 +413,13 @@
 	zw_auto_invest_disallow_building_electrics_industry_undo_button = {
 		name = "zw_auto_invest_disallow_building_electrics_industry_undo_button"
 		desc = "zw_auto_invest_disallow_building_electrics_industry_undo_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = {
 			NOT = { has_variable = zw_var_auto_invest_disallow_building_electrics_industry }
 		}
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_building_electrics_industry_undo_button_effect
 			remove_variable = zw_var_auto_invest_disallow_building_electrics_industry
 		}
 	}
@@ -396,10 +427,11 @@
 	zw_auto_invest_disallow_building_shipyards_button = {
 		name = "zw_auto_invest_disallow_building_shipyards_button"
 		desc = "zw_auto_invest_disallow_building_shipyards_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = { has_variable = zw_var_auto_invest_disallow_building_shipyards }
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_building_shipyards_button_effect
 			set_variable = { name = zw_var_auto_invest_disallow_building_shipyards }
 		}
 	}
@@ -407,25 +439,27 @@
 	zw_auto_invest_disallow_building_shipyards_undo_button = {
 		name = "zw_auto_invest_disallow_building_shipyards_undo_button"
 		desc = "zw_auto_invest_disallow_building_shipyards_undo_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = {
 			NOT = { has_variable = zw_var_auto_invest_disallow_building_shipyards }
 		}
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_building_shipyards_undo_button_effect
 			remove_variable = zw_var_auto_invest_disallow_building_shipyards
 		}
 	}
 
-# Disallow Private Construction for Arts Academy
+# disallow private construction for arts academy
 
 	zw_auto_invest_disallow_building_arts_academy_button = {
 		name = "zw_auto_invest_disallow_building_arts_academy_button"
 		desc = "zw_auto_invest_disallow_building_arts_academy_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = { has_variable = zw_var_auto_invest_disallow_building_arts_academy }
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_building_arts_academy_button_effect
 			set_variable = { name = zw_var_auto_invest_disallow_building_arts_academy }
 		}
 	}
@@ -433,25 +467,27 @@
 	zw_auto_invest_disallow_building_arts_academy_undo_button = {
 		name = "zw_auto_invest_disallow_building_arts_academy_undo_button"
 		desc = "zw_auto_invest_disallow_building_arts_academy_undo_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = {
 			NOT = { has_variable = zw_var_auto_invest_disallow_building_arts_academy }
 		}
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_building_arts_academy_undo_button_effect
 			remove_variable = zw_var_auto_invest_disallow_building_arts_academy
 		}
 	}
 
-# Disallow Private Construction for Agro
+# disallow private construction for agro (farms, ranch)
 
 	zw_auto_invest_disallow_agro_button = {
 		name = "zw_auto_invest_disallow_agro_button"
 		desc = "zw_auto_invest_disallow_agro_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = { has_variable = zw_var_auto_invest_disallow_agro }
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_agro_button_effect
 			set_variable = { name = zw_var_auto_invest_disallow_agro }
 		}
 	}
@@ -459,25 +495,27 @@
 	zw_auto_invest_disallow_agro_undo_button = {
 		name = "zw_auto_invest_disallow_agro_undo_button"
 		desc = "zw_auto_invest_disallow_agro_undo_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = {
 			NOT = { has_variable = zw_var_auto_invest_disallow_agro }
 		}
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_agro_undo_button_effect
 			remove_variable = zw_var_auto_invest_disallow_agro
 		}
 	}
 
-# Disallow Private Construction for Plantations
+# disallow private construction for plantations
 
 	zw_auto_invest_disallow_plantations_button = {
 		name = "zw_auto_invest_disallow_plantations_button"
 		desc = "zw_auto_invest_disallow_plantations_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = { has_variable = zw_var_auto_invest_disallow_plantations }
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_plantations_button_effect
 			set_variable = { name = zw_var_auto_invest_disallow_plantations }
 		}
 	}
@@ -485,25 +523,27 @@
 	zw_auto_invest_disallow_plantations_undo_button = {
 		name = "zw_auto_invest_disallow_plantations_undo_button"
 		desc = "zw_auto_invest_disallow_plantations_undo_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = {
 			NOT = { has_variable = zw_var_auto_invest_disallow_plantations }
 		}
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_plantations_undo_button_effect
 			remove_variable = zw_var_auto_invest_disallow_plantations
 		}
 	}
 
-# Disallow Private Construction for Mines
+# disallow private construction for mines
 
 	zw_auto_invest_disallow_mines_button = {
 		name = "zw_auto_invest_disallow_mines_button"
 		desc = "zw_auto_invest_disallow_mines_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = { has_variable = zw_var_auto_invest_disallow_mines }
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_mines_button_effect
 			set_variable = { name = zw_var_auto_invest_disallow_mines }
 		}
 	}
@@ -511,25 +551,27 @@
 	zw_auto_invest_disallow_mines_undo_button = {
 		name = "zw_auto_invest_disallow_mines_undo_button"
 		desc = "zw_auto_invest_disallow_mines_undo_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = {
 			NOT = { has_variable = zw_var_auto_invest_disallow_mines }
 		}
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_mines_undo_button_effect
 			remove_variable = zw_var_auto_invest_disallow_mines
 		}
 	}
 
-# Disallow Private Construction for Misc-Resources
+# disallow private construction for misc-resources
 
 	zw_auto_invest_disallow_misc_button = {
 		name = "zw_auto_invest_disallow_misc_button"
 		desc = "zw_auto_invest_disallow_misc_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = { has_variable = zw_var_auto_invest_disallow_misc }
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_misc_button_effect
 			set_variable = { name = zw_var_auto_invest_disallow_misc }
 		}
 	}
@@ -537,25 +579,27 @@
 	zw_auto_invest_disallow_misc_undo_button = {
 		name = "zw_auto_invest_disallow_misc_undo_button"
 		desc = "zw_auto_invest_disallow_misc_undo_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = {
 			NOT = { has_variable = zw_var_auto_invest_disallow_misc }
 		}
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_misc_undo_button_effect
 			remove_variable = zw_var_auto_invest_disallow_misc
 		}
 	}
 
-# Disallow Private Construction for Military Industry
+# disallow private construction for military industry
 
 	zw_auto_invest_disallow_military_button = {
 		name = "zw_auto_invest_disallow_military_button"
 		desc = "zw_auto_invest_disallow_military_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = { has_variable = zw_var_auto_invest_disallow_military }
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_military_button_effect
 			set_variable = { name = zw_var_auto_invest_disallow_military }
 		}
 	}
@@ -563,25 +607,27 @@
 	zw_auto_invest_disallow_military_undo_button = {
 		name = "zw_auto_invest_disallow_military_undo_button"
 		desc = "zw_auto_invest_disallow_military_undo_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = {
 			NOT = { has_variable = zw_var_auto_invest_disallow_military }
 		}
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_military_undo_button_effect
 			remove_variable = zw_var_auto_invest_disallow_military
 		}
 	}
 
-# Disallow Private Construction for Power Plants
+# disallow private construction for power plants
 
 	zw_auto_invest_disallow_building_power_plant_button = {
 		name = "zw_auto_invest_disallow_building_power_plant_button"
 		desc = "zw_auto_invest_disallow_building_power_plant_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = { has_variable = zw_var_auto_invest_disallow_building_power_plant }
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_building_power_plant_button_effect
 			set_variable = { name = zw_var_auto_invest_disallow_building_power_plant }
 		}
 	}
@@ -589,25 +635,27 @@
 	zw_auto_invest_disallow_building_power_plant_undo_button = {
 		name = "zw_auto_invest_disallow_building_power_plant_undo_button"
 		desc = "zw_auto_invest_disallow_building_power_plant_undo_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = {
 			NOT = { has_variable = zw_var_auto_invest_disallow_building_power_plant }
 		}
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_building_power_plant_undo_button_effect
 			remove_variable = zw_var_auto_invest_disallow_building_power_plant
 		}
 	}
 
-# Disallow Private Construction for Railways
+# disallow private construction for railways
 
 	zw_auto_invest_disallow_building_railway_button = {
 		name = "zw_auto_invest_disallow_building_railway_button"
 		desc = "zw_auto_invest_disallow_building_railway_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = { has_variable = zw_var_auto_invest_disallow_building_railway }
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_building_railway_button_effect
 			set_variable = { name = zw_var_auto_invest_disallow_building_railway }
 		}
 	}
@@ -615,12 +663,13 @@
 	zw_auto_invest_disallow_building_railway_undo_button = {
 		name = "zw_auto_invest_disallow_building_railway_undo_button"
 		desc = "zw_auto_invest_disallow_building_railway_undo_button_desc"
-		visible = { always = yes }
+		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = {
 			NOT = { has_variable = zw_var_auto_invest_disallow_building_railway }
 		}
-		possible = { always = yes }
+		possible = {}
 		effect = {
+			custom_tooltip = zw_auto_invest_disallow_building_railway_undo_button_effect
 			remove_variable = zw_var_auto_invest_disallow_building_railway
 		}
 	}

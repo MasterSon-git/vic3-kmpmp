@@ -1,0 +1,371 @@
+﻿# auto-Eexpand only in incorporated states
+
+	zw_auto_expand_incorporated_states_only_button = {
+		name = "zw_auto_expand_incorporated_states_only_button"
+		desc = "zw_auto_expand_incorporated_states_only_button_desc"
+		visible = { always = yes }
+		selected = { has_variable = zw_var_auto_expand_incorporated_states_only }
+		possible = {}
+		effect = {
+			custom_tooltip = zw_auto_expand_incorporated_states_only_button_effect
+			set_variable = { name = zw_var_auto_expand_incorporated_states_only }
+		}
+	}
+
+	zw_auto_expand_incorporated_states_only_undo_button = {
+		name = "zw_auto_expand_incorporated_states_only_undo_button"
+		desc = "zw_auto_expand_incorporated_states_only_undo_button_desc"
+		visible = { always = yes }
+		selected = {
+			NOT = { has_variable = zw_var_auto_expand_incorporated_states_only }
+		}
+		possible = {}
+		effect = {
+			custom_tooltip = zw_auto_expand_incorporated_states_only_undo_button_effect
+			remove_variable = zw_var_auto_expand_incorporated_states_only
+		}
+	}
+
+# only in incorporated states
+
+	zw_auto_invest_incorporated_states_only_button = {
+		name = "zw_auto_invest_incorporated_states_only_button"
+		desc = "zw_auto_invest_incorporated_states_only_button_desc"
+		visible = { always = yes }
+		selected = { has_variable = zw_var_auto_invest_incorporated_states_only }
+		possible = {}
+		effect = {
+			custom_tooltip = zw_auto_invest_incorporated_states_only_button_effect
+			set_variable = { name = zw_var_auto_invest_incorporated_states_only }
+		}
+	}
+
+	zw_auto_invest_incorporated_states_only_undo_button = {
+		name = "zw_auto_invest_incorporated_states_only_undo_button"
+		desc = "zw_auto_invest_incorporated_states_only_undo_button_desc"
+		visible = { always = yes }
+		selected = {
+			NOT = { has_variable = zw_var_auto_invest_incorporated_states_only }
+		}
+		possible = {}
+		effect = {
+			custom_tooltip = zw_auto_invest_incorporated_states_only_undo_button_effect
+			remove_variable = zw_var_auto_invest_incorporated_states_only
+		}
+	}
+
+# only expands existing buildings manufacture
+
+	zw_auto_invest_existing_buildings_only_manufacture_button = {
+		name = "zw_auto_invest_existing_buildings_only_manufacture_button"
+		desc = "zw_auto_invest_existing_buildings_only_manufacture_button_desc"
+		visible = { always = yes }
+		selected = { has_variable = zw_var_auto_invest_existing_buildings_only_manufacture }
+		possible = {}
+		effect = {
+			custom_tooltip = zw_auto_invest_existing_buildings_only_manufacture_button_effect
+			set_variable = { name = zw_var_auto_invest_existing_buildings_only_manufacture }
+		}
+	}
+
+	zw_auto_invest_existing_buildings_only_manufacture_undo_button = {
+		name = "zw_auto_invest_existing_buildings_only_manufacture_undo_button"
+		desc = "zw_auto_invest_existing_buildings_only_manufacture_undo_button_desc"
+		visible = { always = yes }
+		selected = {
+			NOT = { has_variable = zw_var_auto_invest_existing_buildings_only_manufacture }
+		}
+		possible = {}
+		effect = {
+			custom_tooltip = zw_auto_invest_existing_buildings_only_manufacture_undo_button_effect
+			remove_variable = zw_var_auto_invest_existing_buildings_only_manufacture
+		}
+	}
+
+# only expands existing buildings agro
+
+	zw_auto_invest_existing_buildings_only_agro_button = {
+		name = "zw_auto_invest_existing_buildings_only_agro_button"
+		desc = "zw_auto_invest_existing_buildings_only_agro_button_desc"
+		visible = { always = yes }
+		selected = { has_variable = zw_var_auto_invest_existing_buildings_only_agro }
+		possible = {}
+		effect = {
+			custom_tooltip = zw_auto_invest_existing_buildings_only_agro_button_effect
+			set_variable = { name = zw_var_auto_invest_existing_buildings_only_agro }
+		}
+	}
+
+	zw_auto_invest_existing_buildings_only_agro_undo_button = {
+		name = "zw_auto_invest_existing_buildings_only_agro_undo_button"
+		desc = "zw_auto_invest_existing_buildings_only_agro_undo_button_desc"
+		visible = { always = yes }
+		selected = {
+			NOT = { has_variable = zw_var_auto_invest_existing_buildings_only_agro }
+		}
+		possible = {}
+		effect = {
+			custom_tooltip = zw_auto_invest_existing_buildings_only_agro_undo_button_effect
+			remove_variable = zw_var_auto_invest_existing_buildings_only_agro
+		}
+	}
+
+# only expands existing buildings resource
+
+	zw_auto_invest_existing_buildings_only_resource_button = {
+		name = "zw_auto_invest_existing_buildings_only_resource_button"
+		desc = "zw_auto_invest_existing_buildings_only_resource_button_desc"
+		visible = { always = yes }
+		selected = { has_variable = zw_var_auto_invest_existing_buildings_only_resource }
+		possible = {}
+		effect = {
+			custom_tooltip = zw_auto_invest_existing_buildings_only_resource_button_effect
+			set_variable = { name = zw_var_auto_invest_existing_buildings_only_resource }
+		}
+	}
+
+	zw_auto_invest_existing_buildings_only_resource_undo_button = {
+		name = "zw_auto_invest_existing_buildings_only_resource_undo_button"
+		desc = "zw_auto_invest_existing_buildings_only_resource_undo_button_desc"
+		visible = { always = yes }
+		selected = {
+			NOT = { has_variable = zw_var_auto_invest_existing_buildings_only_resource }
+		}
+		possible = {}
+		effect = {
+			custom_tooltip = zw_auto_invest_existing_buildings_only_resource_undo_button_effect
+			remove_variable = zw_var_auto_invest_existing_buildings_only_resource
+		}
+	}
+
+# only expands existing buildings infrastructure
+
+	zw_auto_invest_existing_buildings_only_infrastructure_button = {
+		name = "zw_auto_invest_existing_buildings_only_infrastructure_button"
+		desc = "zw_auto_invest_existing_buildings_only_infrastructure_button_desc"
+		visible = { always = yes }
+		selected = { has_variable = zw_var_auto_invest_existing_buildings_only_infrastructure }
+		possible = {}
+		effect = {
+			custom_tooltip = zw_auto_invest_existing_buildings_only_infrastructure_button_effect
+			set_variable = { name = zw_var_auto_invest_existing_buildings_only_infrastructure }
+		}
+	}
+
+	zw_auto_invest_existing_buildings_only_infrastructure_undo_button = {
+		name = "zw_auto_invest_existing_buildings_only_infrastructure_undo_button"
+		desc = "zw_auto_invest_existing_buildings_only_infrastructure_undo_button_desc"
+		visible = { always = yes }
+		selected = {
+			NOT = { has_variable = zw_var_auto_invest_existing_buildings_only_infrastructure }
+		}
+		possible = {}
+		effect = {
+			custom_tooltip = zw_auto_invest_existing_buildings_only_infrastructure_undo_button_effect
+			remove_variable = zw_var_auto_invest_existing_buildings_only_infrastructure
+		}
+	}
+
+# only expands existing profitable buildings
+
+	zw_auto_invest_profitable_buildings_only_button = {
+		name = "zw_auto_invest_profitable_buildings_only_button"
+		desc = "zw_auto_invest_profitable_buildings_only_button_desc"
+		visible = { always = yes }
+		selected = { has_variable = zw_var_auto_invest_profitable_buildings_only }
+		possible = {}
+		effect = {
+			custom_tooltip = zw_auto_invest_profitable_buildings_only_button_effect
+			set_variable = { name = zw_var_auto_invest_profitable_buildings_only }	
+		}
+	}
+
+	zw_auto_invest_profitable_buildings_only_undo_button = {
+		name = "zw_auto_invest_profitable_buildings_only_undo_button"
+		desc = "zw_auto_invest_profitable_buildings_only_undo_button_desc"
+		visible = { always = yes }
+		selected = {
+			NOT = { has_variable = zw_var_auto_invest_profitable_buildings_only }
+		}
+		possible = {}
+		effect = {
+			custom_tooltip = zw_auto_invest_profitable_buildings_only_undo_button_effect
+			remove_variable = zw_var_auto_invest_profitable_buildings_only
+		}
+	}
+
+# no foreign investment manufacture
+
+	zw_no_foreign_private_investment_manufacture_button = {
+		name = "zw_no_foreign_private_investment_manufacture_button"
+		desc = "zw_no_foreign_private_investment_manufacture_button_desc"
+		visible = { always = yes }
+		selected = { has_variable = zw_var_no_foreign_private_investment_manufacture }
+		possible = {}
+		effect = {
+			custom_tooltip = zw_no_foreign_private_investment_manufacture_button_effect
+			set_variable = { name = zw_var_no_foreign_private_investment_manufacture }
+		}
+	}
+
+	zw_no_foreign_private_investment_manufacture_undo_button = {
+		name = "zw_no_foreign_private_investment_manufacture_undo_button"
+		desc = "zw_no_foreign_private_investment_manufacture_undo_button_desc"
+		visible = { always = yes }
+		selected = {
+			NOT = { has_variable = zw_var_no_foreign_private_investment_manufacture }
+		}
+		possible = {}
+		effect = {
+			custom_tooltip = zw_no_foreign_private_investment_manufacture_undo_button_effect
+			remove_variable = zw_var_no_foreign_private_investment_manufacture
+		}
+	}
+
+# no foreign investment agro
+
+	zw_no_foreign_private_investment_agro_button = {
+		name = "zw_no_foreign_private_investment_agro_button"
+		desc = "zw_no_foreign_private_investment_agro_button_desc"
+		visible = { always = yes }
+		selected = { has_variable = zw_var_no_foreign_private_investment_agro }
+		possible = {}
+		effect = {
+			custom_tooltip = zw_no_foreign_private_investment_agro_button_effect
+			set_variable = { name = zw_var_no_foreign_private_investment_agro }
+		}
+	}
+
+	zw_no_foreign_private_investment_agro_undo_button = {
+		name = "zw_no_foreign_private_investment_agro_undo_button"
+		desc = "zw_no_foreign_private_investment_agro_undo_button_desc"
+		visible = { always = yes }
+		selected = {
+			NOT = { has_variable = zw_var_no_foreign_private_investment_agro }
+		}
+		possible = {}
+		effect = {
+			custom_tooltip = zw_no_foreign_private_investment_agro_undo_button_effect
+			remove_variable = zw_var_no_foreign_private_investment_agro
+		}
+	}
+
+# no foreign investment resource
+
+	zw_no_foreign_private_investment_resource_button = {
+		name = "zw_no_foreign_private_investment_resource_button"
+		desc = "zw_no_foreign_private_investment_resource_button_desc"
+		visible = { always = yes }
+		selected = { has_variable = zw_var_no_foreign_private_investment_resource }
+		possible = {}
+		effect = {
+			custom_tooltip = zw_no_foreign_private_investment_resource_button_effect
+			set_variable = { name = zw_var_no_foreign_private_investment_resource }
+		}
+	}
+
+	zw_no_foreign_private_investment_resource_undo_button = {
+		name = "zw_no_foreign_private_investment_resource_undo_button"
+		desc = "zw_no_foreign_private_investment_resource_undo_button_desc"
+		visible = { always = yes }
+		selected = {
+			NOT = { has_variable = zw_var_no_foreign_private_investment_resource }
+		}
+		possible = {}
+		effect = {
+			custom_tooltip = zw_no_foreign_private_investment_resource_undo_button_effect
+			remove_variable = zw_var_no_foreign_private_investment_resource
+		}
+	}
+
+# no foreign investment infrastructure
+
+	zw_no_foreign_private_investment_infrastructure_button = {
+		name = "zw_no_foreign_private_investment_infrastructure_button"
+		desc = "zw_no_foreign_private_investment_infrastructure_button_desc"
+		visible = { always = yes }
+		selected = { has_variable = zw_var_no_foreign_private_investment_infrastructure }
+		possible = {}
+		effect = {
+			custom_tooltip = zw_no_foreign_private_investment_infrastructure_button_effect
+			set_variable = { name = zw_var_no_foreign_private_investment_infrastructure }
+		}
+	}
+
+	zw_no_foreign_private_investment_infrastructure_undo_button = {
+		name = "zw_no_foreign_private_investment_infrastructure_undo_button"
+		desc = "zw_no_foreign_private_investment_infrastructure_undo_button_desc"
+		visible = { always = yes }
+		selected = {
+			NOT = { has_variable = zw_var_no_foreign_private_investment_infrastructure }
+		}
+		possible = {}
+		effect = {
+			custom_tooltip = zw_no_foreign_private_investment_infrastructure_undo_button_effect
+			remove_variable = zw_var_no_foreign_private_investment_infrastructure
+		}
+	}
+
+# intervene investment from foreign countries in industry
+
+	zw_intervene_investment_from_abroad_industry_button = {
+		name = "zw_intervene_investment_from_abroad_industry_button"
+		desc = "zw_intervene_investment_from_abroad_industry_button_desc"
+		visible = { always = yes }
+		selected = { has_variable = zw_var_intervene_investment_from_abroad_industry }
+		possible = {}
+		effect = {
+			custom_tooltip = zw_intervene_investment_from_abroad_industry_button_effect
+			set_variable = { name = zw_var_intervene_investment_from_abroad_industry }
+			add_modifier = {
+				name = zw_modifier_intervene_investment_from_abroad_industry
+			}
+		}
+	}
+
+	zw_intervene_investment_from_abroad_industry_undo_button = {
+		name = "zw_intervene_investment_from_abroad_industry_undo_button"
+		desc = "zw_intervene_investment_from_abroad_industry_undo_button_desc"
+		visible = { always = yes }
+		selected = {
+			NOT = { has_variable = zw_var_intervene_investment_from_abroad_industry }
+		}
+		possible = {}
+		effect = {
+			custom_tooltip = zw_intervene_investment_from_abroad_industry_undo_button_effect
+			remove_variable = zw_var_intervene_investment_from_abroad_industry
+			remove_modifier = zw_modifier_intervene_investment_from_abroad_industry
+		}
+	}
+
+# intervene investment from foreign countries in agriculture
+
+	zw_intervene_investment_from_abroad_agriculture_button = {
+		name = "zw_intervene_investment_from_abroad_agriculture_button"
+		desc = "zw_intervene_investment_from_abroad_agriculture_button_desc"
+		visible = { always = yes }
+		selected = { has_variable = zw_var_intervene_investment_from_abroad_agriculture }
+		possible = {}
+		effect = {
+			custom_tooltip = zw_intervene_investment_from_abroad_agriculture_button_effect
+			set_variable = { name = zw_var_intervene_investment_from_abroad_agriculture }
+			add_modifier = {
+				name = zw_modifier_intervene_investment_from_abroad_agriculture
+			}
+		}
+	}
+
+	zw_intervene_investment_from_abroad_agriculture_undo_button = {
+		name = "zw_intervene_investment_from_abroad_agriculture_undo_button"
+		desc = "zw_intervene_investment_from_abroad_agriculture_undo_button_desc"
+		visible = { always = yes }
+		selected = {
+			NOT = { has_variable = zw_var_intervene_investment_from_abroad_agriculture }
+		}
+		possible = {}
+		effect = {
+			custom_tooltip = zw_intervene_investment_from_abroad_agriculture_undo_button_effect
+			remove_variable = zw_var_intervene_investment_from_abroad_agriculture
+			remove_modifier = zw_modifier_intervene_investment_from_abroad_agriculture
+		}
+	}

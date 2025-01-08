@@ -25,8 +25,15 @@ building_rye_farm = {
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
 
+	can_build_government = {
+		zw_gov_investment_trigger = {
+			building_1 = building_rye_farm
+			bgs_1 = agriculture
+		}
+	}
+
 	can_build_private = {
-		zw_autonom_investment_trigger = {
+		zw_autonom_investment_trigger_agro = {
 			building_1 = building_rye_farm
 			var_disallowed_building = agro
 		}
@@ -58,8 +65,15 @@ building_wheat_farm = {
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
 
+	can_build_government = {
+		zw_gov_investment_trigger = {
+			building_1 = building_wheat_farm
+			bgs_1 = agriculture
+		}
+	}
+
 	can_build_private = {
-		zw_autonom_investment_trigger = {
+		zw_autonom_investment_trigger_agro = {
 			building_1 = building_wheat_farm
 			var_disallowed_building = agro
 		}
@@ -91,8 +105,15 @@ building_rice_farm = {
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
 
+	can_build_government = {
+		zw_gov_investment_trigger = {
+			building_1 = building_rice_farm
+			bgs_1 = agriculture
+		}
+	}
+
 	can_build_private = {
-		zw_autonom_investment_trigger = {
+		zw_autonom_investment_trigger_agro = {
 			building_1 = building_rice_farm
 			var_disallowed_building = agro
 		}
@@ -124,8 +145,15 @@ building_maize_farm = {
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
 
+	can_build_government = {
+		zw_gov_investment_trigger = {
+			building_1 = building_maize_farm
+			bgs_1 = agriculture
+		}
+	}
+
 	can_build_private = {
-		zw_autonom_investment_trigger = {
+		zw_autonom_investment_trigger_agro = {
 			building_1 = building_maize_farm
 			var_disallowed_building = agro
 		}
@@ -157,8 +185,15 @@ building_millet_farm = {
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
 
+	can_build_government = {
+		zw_gov_investment_trigger = {
+			building_1 = building_millet_farm
+			bgs_1 = agriculture
+		}
+	}
+
 	can_build_private = {
-		zw_autonom_investment_trigger = {
+		zw_autonom_investment_trigger_agro = {
 			building_1 = building_millet_farm
 			var_disallowed_building = agro
 		}
@@ -191,8 +226,15 @@ building_livestock_ranch = {
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
 
+	can_build_government = {
+		zw_gov_investment_trigger = {
+			building_1 = building_livestock_ranch
+			bgs_1 = agriculture
+		}
+	}
+
 	can_build_private = {
-		zw_autonom_investment_trigger = {
+		zw_autonom_investment_trigger_agro = {
 			building_1 = building_livestock_ranch
 			var_disallowed_building = agro
 		}
