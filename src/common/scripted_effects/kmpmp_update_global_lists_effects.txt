@@ -616,7 +616,7 @@ kmpmp_update_global_list_states_sca = {
                             is_homeland = cu:swedish
                             is_homeland = cu:danish
                             is_homeland = cu:norwegian
-                            is_homeland = cu:icelandic
+                            # is_homeland = cu:icelandic
                         }
                     }
 
