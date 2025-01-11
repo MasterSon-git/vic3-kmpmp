@@ -186,7 +186,8 @@
     add_to_global_variable_list = { name = cultures_central_asian target = cu:pathan }
     add_to_global_variable_list = { name = cultures_central_asian target = cu:buryat }
 
-    # mongol cultures - replaced to cu:tuvan
+    # mongol cultures - replaced to cu:mongol
+    add_to_global_variable_list = { name = cultures_mongol target = cu:mongol }
     add_to_global_variable_list = { name = cultures_mongol target = cu:tuvan }
     add_to_global_variable_list = { name = cultures_mongol target = cu:yakut }
 
@@ -202,13 +203,15 @@
     add_to_global_variable_list = { name = cultures_indonesian target = cu:filipino }
     add_to_global_variable_list = { name = cultures_indonesian target = cu:javan }
 
-    # tai cultures - replaced to cu:lao
-    add_to_global_variable_list = { name = cultures_tai target = cu:khmer }
-    add_to_global_variable_list = { name = cultures_tai target = cu:khmu }
-    add_to_global_variable_list = { name = cultures_tai target = cu:lao }
-    add_to_global_variable_list = { name = cultures_tai target = cu:shan }
+    # thai cultures - replaced to cu:thai
+    add_to_global_variable_list = { name = cultures_thai target = cu:thai }
+    add_to_global_variable_list = { name = cultures_thai target = cu:khmer }
+    add_to_global_variable_list = { name = cultures_thai target = cu:khmu }
+    add_to_global_variable_list = { name = cultures_thai target = cu:lao }
+    add_to_global_variable_list = { name = cultures_thai target = cu:shan }
 
-    # burmese cultures - replaced to cu:kachin
+    # burmese cultures - replaced to cu:burmese
+    add_to_global_variable_list = { name = cultures_burmese target = cu:burmese }
     add_to_global_variable_list = { name = cultures_burmese target = cu:lushai }
     add_to_global_variable_list = { name = cultures_burmese target = cu:karen }
     add_to_global_variable_list = { name = cultures_burmese target = cu:mon }
@@ -292,10 +295,10 @@
         kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_south_american TARGET_CULTURE = cu:brazilian }
         kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_south_american_native TARGET_CULTURE = cu:amazonian }
         kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_central_asian TARGET_CULTURE = cu:tajik }
-        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_mongol TARGET_CULTURE = cu:tuvan }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_mongol TARGET_CULTURE = cu:mongol }
         kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_indonesian TARGET_CULTURE = cu:sumatran }
-        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_tai TARGET_CULTURE = cu:lao }
-        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_burmese TARGET_CULTURE = cu:kachin }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_thai TARGET_CULTURE = cu:thai }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_burmese TARGET_CULTURE = cu:burmese }
         kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_oceanic_native TARGET_CULTURE = cu:polynesian }
         kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_north_german TARGET_CULTURE = cu:north_german }
         kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_dutch TARGET_CULTURE = cu:dutch }
@@ -325,10 +328,10 @@
         kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_south_american TARGET_CULTURE = cu:brazilian }
         kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_south_american_native TARGET_CULTURE = cu:amazonian }
         kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_central_asian TARGET_CULTURE = cu:tajik }
-        kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_mongol TARGET_CULTURE = cu:tuvan }
+        kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_mongol TARGET_CULTURE = cu:mongol }
         kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_indonesian TARGET_CULTURE = cu:sumatran }
-        kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_tai TARGET_CULTURE = cu:lao }
-        kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_burmese TARGET_CULTURE = cu:kachin }
+        kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_thai TARGET_CULTURE = cu:thai }
+        kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_burmese TARGET_CULTURE = cu:burmese }
         kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_oceanic_native TARGET_CULTURE = cu:polynesian }
         kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_north_german TARGET_CULTURE = cu:north_german }
         kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_dutch TARGET_CULTURE = cu:dutch }
@@ -357,10 +360,10 @@
     kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_south_american TARGET_CULTURE = cu:brazilian }
     kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_south_american_native TARGET_CULTURE = cu:amazonian }
     kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_central_asian TARGET_CULTURE = cu:tajik }
-    kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_mongol TARGET_CULTURE = cu:tuvan }
+    kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_mongol TARGET_CULTURE = cu:mongol }
     kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_indonesian TARGET_CULTURE = cu:sumatran }
-    kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_tai TARGET_CULTURE = cu:lao }
-    kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_burmese TARGET_CULTURE = cu:kachin }
+    kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_thai TARGET_CULTURE = cu:thai }
+    kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_burmese TARGET_CULTURE = cu:burmese }
     kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_oceanic_native TARGET_CULTURE = cu:polynesian }
     kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_north_german TARGET_CULTURE = cu:north_german }
     kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_dutch TARGET_CULTURE = cu:dutch }
@@ -390,7 +393,7 @@
     clear_global_variable_list = cultures_central_asian
     clear_global_variable_list = cultures_mongol
     clear_global_variable_list = cultures_indonesian
-    clear_global_variable_list = cultures_tai
+    clear_global_variable_list = cultures_thai
     clear_global_variable_list = cultures_burmese
     clear_global_variable_list = cultures_oceanic_native
     clear_global_variable_list = cultures_north_german
