@@ -16,7 +16,7 @@
 	institution = institution_home_affairs
 	institution_modifier = {
 		country_suppression_attraction_mult = -0.075 #-0.05
-		country_bolster_attraction_mult = 0.075
+		country_bolster_attraction_mult = 0.075 #kmpmp
 		political_movement_radicalism_add = -0.1
 		# kmpmp
 		# - no longer supported with 1.8: 
@@ -63,6 +63,7 @@ law_guaranteed_liberties = {
 		state_radicals_from_political_movements_mult = -0.10 #-0.05
 		state_loyalists_from_political_movements_mult = 0.10 #0.05
 		state_conscription_rate_mult = -0.0025 #kmpmp
+		state_migration_pull_mult = 0.075 #kmpmp
 	}
 	
 	ai_enact_weight_modifier = { #Petitions

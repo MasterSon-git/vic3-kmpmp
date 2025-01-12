@@ -82,9 +82,7 @@
 
     c:EGY ?= {
         every_scope_state = {
-            owner = c:EGY
-            }
-            state_region = { add_claim = c:TUR }           
+            state_region = { add_claim = c:TUR }
         }
     }
 
