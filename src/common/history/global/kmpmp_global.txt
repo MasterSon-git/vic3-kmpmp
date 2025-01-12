@@ -73,6 +73,21 @@
         add_technology_researched = academia
     }
 
+    #kmpmp
+
+    c:TUR ?= {
+        add_technology_researched = paddle_steamer
+        add_technology_researched = cotton_gin
+    }
+
+    c:EGY ?= {
+        every_scope_state = {
+            owner = c:EGY
+            }
+            state_region = { add_claim = c:TUR }           
+        }
+    }
+
     # add claims for persia on all persian hq states it does not own at start
     every_state_region = {
         limit = {

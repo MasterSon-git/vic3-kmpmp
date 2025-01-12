@@ -10,16 +10,17 @@
 
 	modifier = {
 		country_institution_cost_institution_health_system_mult = -0.2
-		country_institution_health_system_max_investment_add = 1 #kmpmp
+		country_institution_health_system_max_investment_add = 2 #kmpmp #1
 	}
 
 	institution = institution_health_system
 	institution_modifier = {
-		state_mortality_mult = -0.03
+		state_mortality_mult = -0.025 #-0.03
 		interest_group_ig_devout_pol_str_mult = 0.1
 		state_pollution_reduction_health_mult = -0.1
 		state_food_security_add = 0.02
 		state_lower_strata_standard_of_living_add = 0.6 #kmpmp
+		state_birth_rate_mult = 0.005 #kmpmp
 	}
 	
 	# Don't return to charity if we have something more advanced
@@ -58,8 +59,8 @@ law_private_health_insurance = {
 	institution = institution_health_system
 	institution_modifier = {
 		interest_group_ig_petty_bourgeoisie_pol_str_mult = 0.1
-		state_mortality_wealth_mult = -0.0025 #-0.003 #-0.002
-		state_pollution_reduction_health_mult = -0.125 #-0.1
+		state_mortality_wealth_mult = -0.0035 #0.0025 #-0.003 #-0.002
+		state_pollution_reduction_health_mult = -0.175 #0.125 #-0.1
 		state_upper_strata_standard_of_living_add = 0.8 #0.6 #0.5
 		# kmpmp
 		state_middle_strata_standard_of_living_add = 0.5 #0.3

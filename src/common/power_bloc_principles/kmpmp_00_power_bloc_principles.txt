@@ -88,6 +88,8 @@ principle_internal_trade_1 = {
 	member_modifier = {
 		# Members get a bonus to Company throughput
 		country_company_throughput_bonus_add = 0.1
+		unit_convoy_defense_mult = 0.05 #kmpmp
+		building_group_bg_manufacturing_throughput_add = 0.15 #kmpmp
 		# More convoy going to the market owner, effect scaling upwards with principle levels
 		country_convoy_contribution_to_market_owner_add = 0.2
 	}
@@ -121,6 +123,8 @@ principle_internal_trade_2 = {
 	member_modifier = {
 		# Modifiers from previous level(s)
 		country_company_throughput_bonus_add = 0.1
+		unit_convoy_defense_mult = 0.10 #kmpmp
+		building_group_bg_manufacturing_throughput_add = 0.15 #kmpmp
 		country_convoy_contribution_to_market_owner_add = 0.3
 	
 		# Members get increased tariffs from countries outside the Power Bloc and infrastructure
@@ -145,6 +149,8 @@ principle_internal_trade_3 = {
 		tariff_import_outside_power_bloc_mult = 0.2
 		tariff_export_outside_power_bloc_mult = 0.2
 		state_infrastructure_mult = 0.1
+		unit_convoy_defense_mult = 0.15 #kmpmp
+		building_group_bg_manufacturing_throughput_add = 0.15 #kmpmp
 		
 		# Cheaper port connections
 		country_port_connection_cost_mult = -0.25
@@ -618,6 +624,7 @@ principle_external_trade_1 = {
 
 		# kmpmp
 		country_convoys_capacity_mult = 0.1
+		building_group_bg_manufacturing_throughput_add = 0.15 #kmpmp
 	}
 	
 	ai_weight = {
@@ -669,6 +676,7 @@ principle_external_trade_2 = {
 		# kmpmp
 		country_convoys_capacity_mult = 0.1
 		market_land_trade_capacity_add = 400
+		building_group_bg_manufacturing_throughput_add = 0.15 #kmpmp
 	}
 	
 	ai_weight = {
@@ -699,6 +707,7 @@ principle_external_trade_3 = {
 		country_convoys_capacity_mult = 0.1
 		market_land_trade_capacity_add = 400
 		country_trade_route_quantity_mult = 0.3
+		building_group_bg_manufacturing_throughput_add = 0.15 #kmpmp
 	}
 
 	ai_weight = {
