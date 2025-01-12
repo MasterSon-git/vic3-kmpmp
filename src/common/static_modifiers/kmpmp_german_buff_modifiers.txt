@@ -1,0 +1,25 @@
+﻿kmpmp_ger_buff_rising_great_power_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+
+    # +3% Pop growth
+    state_birth_rate_mult = 0.03
+    # +5% construction eff.
+    state_construction_mult = 0.05
+    # +5% tech speed for industry and mil category
+    country_production_tech_spread_mult = 0.05
+    country_military_tech_spread_mult = 0.05
+}
+
+kmpmp_ger_buff_ngf_formed_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+
+    # +7% birthrate
+    state_birth_rate_mult = 0.07
+    # +5% construction eff.
+    state_construction_mult = 0.05
+    # -15% loan interest rate
+    country_loan_interest_rate_mult = -0.15
+    # 5% Army Off / Def
+    unit_army_offense_mult = 0.05
+    unit_army_defense_mult = 0.05
+}
