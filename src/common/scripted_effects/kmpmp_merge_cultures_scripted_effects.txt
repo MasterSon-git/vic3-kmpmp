@@ -1,0 +1,82 @@
+﻿# ROOT - country
+# CULTURE_LIST - list of cultures to replace
+# TARGET_CULTURE - culture to set as primary culture
+kmpmp_replace_country_primary_cultures = {
+    save_temporary_scope_as = current_country
+
+    every_in_global_list = {
+        variable = $CULTURE_LIST$
+        save_temporary_scope_as = current_culture
+
+        if = {
+            limit = {
+                scope:current_culture != $TARGET_CULTURE$
+                scope:current_country = {
+                    country_has_primary_culture = scope:current_culture
+                }
+            }
+            scope:current_country = {
+                remove_primary_culture = scope:current_culture
+
+                if = {
+                    limit = {
+                        NOT = {
+                            country_has_primary_culture = $TARGET_CULTURE$
+                        }
+                    }
+                    add_primary_culture = $TARGET_CULTURE$
+                }
+            }
+        }
+    }
+}
+
+# ROOT - state_region
+# CULTURE_LIST - list of cultures to replace
+# TARGET_CULTURE - culture to set as primary culture
+kmpmp_replace_state_region_homeland_cultures = {
+    save_temporary_scope_as = current_state_region
+
+    every_in_global_list = {
+        variable = $CULTURE_LIST$
+        save_temporary_scope_as = current_culture
+
+        if = {
+            limit = {
+                scope:current_culture != $TARGET_CULTURE$
+                scope:current_state_region = {
+                    is_homeland = scope:current_culture
+                }
+            }
+            scope:current_state_region = {
+                remove_homeland = scope:current_culture
+
+                if = {
+                    limit = {
+                        NOT = {
+                            is_homeland = $TARGET_CULTURE$
+                        }
+                    }
+                    add_homeland = $TARGET_CULTURE$
+                }
+            }
+        }
+    }
+}
+
+# CULTURE_LIST - list of cultures to replace
+# TARGET_CULTURE - culture to set as primary culture
+kmpmp_replace_pop_cultures = {
+    every_in_global_list = {
+        variable = $CULTURE_LIST$
+
+        if = {
+            limit = {
+                THIS != $TARGET_CULTURE$
+            }
+            every_scope_pop = {
+                change_pop_culture = { target = $TARGET_CULTURE$ value = 1.0 }
+            }
+        }
+    }
+}

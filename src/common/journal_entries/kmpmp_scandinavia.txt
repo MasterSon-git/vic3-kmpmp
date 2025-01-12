@@ -7,7 +7,7 @@
             country_has_primary_culture = cu:swedish
             country_has_primary_culture = cu:danish
             country_has_primary_culture = cu:norwegian
-            country_has_primary_culture = cu:icelandic
+            # country_has_primary_culture = cu:icelandic
         }
     }
 

@@ -1,0 +1,88 @@
+﻿# kmpmp - merge cultures fixes
+namespace = brazilian_slavery
+
+# Slavery Fail Event
+brazilian_slavery.13 = {
+	type = country_event
+	placement = root
+
+	title = brazilian_slavery.13.t
+	desc = brazilian_slavery.13.d
+	flavor = brazilian_slavery.13.f
+
+	event_image = {
+		video = "votp_gunboat_diplomacy"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	duration = 3
+
+	dlc = dlc008
+
+	trigger = {
+		# triggered by journal entry
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				c:GBR ?= {
+					has_law = law_type:law_slavery_banned
+				}
+			}
+			c:GBR ?= {
+				save_scope_as = anti_slavery_great_power_scope
+			}
+		}
+		else_if = {
+			limit = {
+				any_country = {
+					has_law = law_type:law_slavery_banned
+					country_rank = rank_value:great_power					
+				}
+			}
+			random_country = {
+				limit = {
+					has_law = law_type:law_slavery_banned
+					country_rank = rank_value:great_power
+				}
+				save_scope_as = anti_slavery_great_power_scope
+			}
+		}
+		else = {
+			random_country = {
+				limit = {
+					has_law = law_type:law_slavery_banned
+				}
+				save_scope_as = anti_slavery_great_power_scope				
+			}
+		}
+	}
+
+	option = {
+		name = brazilian_slavery.13.a
+		default_option = yes
+        ig:ig_rural_folk = {
+            add_ideology = ideology_pro_slavery
+        }
+        add_modifier = {
+            name = brazil_slaving_pariah_modifier
+        }
+        add_loyalists = {
+        	pop_type = aristocrats
+        	value = medium_radicals
+        }
+        add_radicals = {
+        	culture = cu:afro_american #cu:afro_brazilian
+        	value = large_radicals
+        }
+        every_country = {
+        	limit = {
+				has_law = law_type:law_slavery_banned
+				country_rank >= rank_value:great_power
+        	}
+        	change_relations = { country = root value = -30 }
+        }
+	}
+}
