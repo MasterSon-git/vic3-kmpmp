@@ -46,7 +46,6 @@ principle_construction_2 = {
 		state_construction_mult = 0.1
 
 		#kmpmp
-
 		country_loan_interest_rate_mult = -0.10
 		
 		# Members Construction Sectors cost less infrastructure
@@ -69,7 +68,7 @@ principle_construction_3 = {
 		building_group_bg_construction_infrastructure_usage_mult = -0.75
 
 		#kmpmp
-
+		country_loan_interest_rate_mult = -0.10
 		building_group_bg_construction_throughput_add = 0.15
 		
 		# Members can form Construction type Companies unlock triggers in the company
@@ -247,7 +246,7 @@ principle_vassalization_1 = {
 
 	member_modifier = {
 		# Each subject increases authority
-		country_authority_per_subject_add = 12.5
+		country_authority_per_subject_add = 12.5 #25
 	}
 	
 	ai_weight = {
@@ -752,7 +751,7 @@ principle_food_standardization_2 = {
 		building_group_bg_agriculture_throughput_add = 0.15 #0.1
 		
 		# Lower mortality
-		state_mortality_mult = -0.05 # -0.1
+		state_mortality_mult = -0.05 #-0.1
 	}
 	
 	ai_weight = {
@@ -882,7 +881,7 @@ principle_police_coordination_3 = {
 	institution = institution_police
 	institution_modifier = {
 		# Police institution adds authority
-		country_authority_add = 85 #50
+		country_authority_add = 65 #50
 		
 		# Police institution reduces radicalism of political movements
 		political_movement_radicalism_add = -0.05
@@ -910,8 +909,7 @@ principle_transport_1 = {
 		state_infrastructure_from_population_max_mult = 0.33 
 
 		#kmpmp
-
-		state_pollution_reduction_health_mult = -0.025		
+		state_pollution_reduction_health_mult = -0.025
 	}
 	
 	ai_weight = {
@@ -948,8 +946,7 @@ principle_transport_2 = {
 		country_convoys_capacity_mult = 0.2
 
 		#kmpmp
-
-		state_pollution_reduction_health_mult = -0.05	
+		state_pollution_reduction_health_mult = -0.05
 		state_infrastructure_mult = 0.025
 	}
 	
@@ -970,8 +967,7 @@ principle_transport_3 = {
 		state_market_access_price_impact = 0.05 #kmpmp
 
 		#kmpmp
-
-		state_pollution_reduction_health_mult = -0.010	
+		state_pollution_reduction_health_mult = -0.1
 		state_infrastructure_mult = 0.05
 		
 		# Increased land trade capacity
@@ -1171,7 +1167,6 @@ principle_colonial_offices_3 = {
 		country_institution_size_change_speed_institution_health_system_mult = 0.5
 		country_institution_cost_institution_health_system_mult = -0.5
 		building_unincorporated_throughput_add = 0.10
-		country_authority_add = 85
 	}
 
 	leader_modifier = {
@@ -1183,6 +1178,7 @@ principle_colonial_offices_3 = {
 		# Modifiers from previous level(s)	
 		state_colony_growth_creation_factor = 0.05
 		country_infamy_generation_against_unrecognized_mult = -0.05
+		country_authority_add = 25
 	}		
 
 	ai_weight = {
