@@ -346,7 +346,7 @@ STATE_LA_PAZ = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 30
+        undiscovered_amount = 45 #30
     }
 }
 
@@ -1033,7 +1033,7 @@ STATE_SAO_PAULO = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 5
+        undiscovered_amount = 20 #5
     }
     naval_exit_id = 3064
 }

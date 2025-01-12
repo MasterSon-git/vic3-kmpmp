@@ -44,7 +44,7 @@ STATE_RIGA = {
     farm = "xE7C9B1"
     mine = "x521396"
     wood = "xBF2060"
-    arable_land = 48 #38
+    arable_land = 63 #48 #38
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 11
@@ -322,7 +322,7 @@ STATE_VOLHYNIA = {
     farm = "x5A26AE"
     mine = "x8201CF"
     wood = "xAC3079"
-    arable_land = 40
+    arable_land = 70 #40
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_coal_mining = 42
@@ -1187,6 +1187,10 @@ STATE_ELIZAVETPOL = {
     capped_resources = {
         bg_iron_mining = 10
         bg_logging = 12
+    }
+        resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 30 #kmpmp
     }
 }
 
