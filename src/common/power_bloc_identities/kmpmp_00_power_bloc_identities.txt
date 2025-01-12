@@ -12,6 +12,7 @@
 
 	leader_modifier = {
 		country_trade_route_quantity_mult = 0.1
+		tax_dividends_add = 0.05 #kmpmp
 	}
 	
 	non_leader_modifier = {

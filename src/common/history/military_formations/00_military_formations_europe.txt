@@ -3356,7 +3356,7 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_frigate
 				state_region = s:STATE_CAMPANIA
-				count = 4
+				count = 6 #4
 			}
 
 			combat_unit = {
@@ -3466,7 +3466,7 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_frigate
 				state_region = s:STATE_PIEDMONT
-				count = 4
+				count = 9 #4
 			}
 
 			combat_unit = {
