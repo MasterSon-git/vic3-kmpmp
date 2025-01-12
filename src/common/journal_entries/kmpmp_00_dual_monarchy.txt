@@ -6,7 +6,8 @@
 	complete = {
 		# cultural_acceptance_base = { target = cu:hungarian value >= acceptance_status_5 }
 		# kmpmp - don't ask me why "49", higher values didn't work with law_racial_segregation
-		country_average_cultural_acceptance = { target = cu:hungarian value >= 49 }
+		cultural_acceptance_base = { target = cu:hungarian value >= 49 }
+		# country_average_cultural_acceptance = { target = cu:hungarian value >= 49 }
 	}
 
 	on_complete = {
