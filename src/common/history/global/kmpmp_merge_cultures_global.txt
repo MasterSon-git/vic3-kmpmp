@@ -1,0 +1,421 @@
+﻿GLOBAL = {
+    # west african cultures - replaced to cu:bambara
+    add_to_global_variable_list = { name = cultures_west_african target = cu:akan }
+    add_to_global_variable_list = { name = cultures_west_african target = cu:bambara } # relevant for country formation Mali formation.11
+    add_to_global_variable_list = { name = cultures_west_african target = cu:bassa }
+    add_to_global_variable_list = { name = cultures_west_african target = cu:dyula }
+    add_to_global_variable_list = { name = cultures_west_african target = cu:edo }
+    add_to_global_variable_list = { name = cultures_west_african target = cu:ewe }
+    add_to_global_variable_list = { name = cultures_west_african target = cu:fon }
+    add_to_global_variable_list = { name = cultures_west_african target = cu:fulbe } # relevant for country formation Mali formation.11
+    add_to_global_variable_list = { name = cultures_west_african target = cu:hausa }
+    add_to_global_variable_list = { name = cultures_west_african target = cu:ibibio }
+    add_to_global_variable_list = { name = cultures_west_african target = cu:ibo }
+    add_to_global_variable_list = { name = cultures_west_african target = cu:kissi }
+    add_to_global_variable_list = { name = cultures_west_african target = cu:kru }
+    add_to_global_variable_list = { name = cultures_west_african target = cu:mande } # relevant for country formation Mali formation.11
+    add_to_global_variable_list = { name = cultures_west_african target = cu:mossi }
+    add_to_global_variable_list = { name = cultures_west_african target = cu:senufo }
+    add_to_global_variable_list = { name = cultures_west_african target = cu:songhai }
+    add_to_global_variable_list = { name = cultures_west_african target = cu:tiv }
+    add_to_global_variable_list = { name = cultures_west_african target = cu:tuareg }
+    add_to_global_variable_list = { name = cultures_west_african target = cu:wolof } # relevant for country formation Mali formation.11
+    add_to_global_variable_list = { name = cultures_west_african target = cu:yoruba }
+
+    # central african cultures - replaced to cu:fang
+    add_to_global_variable_list = { name = cultures_central_african target = cu:bakongo }
+    add_to_global_variable_list = { name = cultures_central_african target = cu:baguirmi }
+    add_to_global_variable_list = { name = cultures_central_african target = cu:fang }
+    add_to_global_variable_list = { name = cultures_central_african target = cu:kanuri }
+    add_to_global_variable_list = { name = cultures_central_african target = cu:luba }
+    add_to_global_variable_list = { name = cultures_central_african target = cu:lunda }
+    add_to_global_variable_list = { name = cultures_central_african target = cu:mongo }
+    add_to_global_variable_list = { name = cultures_central_african target = cu:sara }
+    add_to_global_variable_list = { name = cultures_central_african target = cu:teda }
+    add_to_global_variable_list = { name = cultures_central_african target = cu:equatorial_bantu }
+    add_to_global_variable_list = { name = cultures_central_african target = cu:fluvian_bantu }
+
+    # east african cultures - replaced to cu:beja
+    add_to_global_variable_list = { name = cultures_east_african target = cu:nilotic }
+    add_to_global_variable_list = { name = cultures_east_african target = cu:amhara } # relevant for ai_strategy_unify_ethiopia and for country formation Ethiopia formation.4 
+    add_to_global_variable_list = { name = cultures_east_african target = cu:afar }
+    add_to_global_variable_list = { name = cultures_east_african target = cu:azande }
+    add_to_global_variable_list = { name = cultures_east_african target = cu:baganda }
+    add_to_global_variable_list = { name = cultures_east_african target = cu:beja }
+    add_to_global_variable_list = { name = cultures_east_african target = cu:dinka }
+    add_to_global_variable_list = { name = cultures_east_african target = cu:fur }
+    add_to_global_variable_list = { name = cultures_east_african target = cu:kikuyu }
+    add_to_global_variable_list = { name = cultures_east_african target = cu:luo }
+    add_to_global_variable_list = { name = cultures_east_african target = cu:maasai }
+    add_to_global_variable_list = { name = cultures_east_african target = cu:nuer }
+    add_to_global_variable_list = { name = cultures_east_african target = cu:nuba }
+    add_to_global_variable_list = { name = cultures_east_african target = cu:oromo } # relevant for ai_strategy_unify_ethiopia and for country formation Ethiopia formation.4 
+    add_to_global_variable_list = { name = cultures_east_african target = cu:ruanda }
+    add_to_global_variable_list = { name = cultures_east_african target = cu:rundi }
+    add_to_global_variable_list = { name = cultures_east_african target = cu:sidama }
+    add_to_global_variable_list = { name = cultures_east_african target = cu:sukuma }
+    add_to_global_variable_list = { name = cultures_east_african target = cu:swahili }
+    add_to_global_variable_list = { name = cultures_east_african target = cu:tigray } # relevant for ai_strategy_unify_ethiopia and for country formation Ethiopia formation.4 
+    add_to_global_variable_list = { name = cultures_east_african target = cu:unyamwezi }
+    add_to_global_variable_list = { name = cultures_east_african target = cu:lacustrine_bantu }
+    add_to_global_variable_list = { name = cultures_east_african target = cu:malagasy }
+
+    # south african cultures - replaced to cu:chewa
+    add_to_global_variable_list = { name = cultures_south_african target = cu:chewa }
+    add_to_global_variable_list = { name = cultures_south_african target = cu:herero }
+    add_to_global_variable_list = { name = cultures_south_african target = cu:khoisan }
+    add_to_global_variable_list = { name = cultures_south_african target = cu:lomwe }
+    add_to_global_variable_list = { name = cultures_south_african target = cu:makua }
+    add_to_global_variable_list = { name = cultures_south_african target = cu:nguni }
+    add_to_global_variable_list = { name = cultures_south_african target = cu:ovimbundu }
+    add_to_global_variable_list = { name = cultures_south_african target = cu:sena }
+    add_to_global_variable_list = { name = cultures_south_african target = cu:shona }
+    add_to_global_variable_list = { name = cultures_south_african target = cu:sotho }
+    add_to_global_variable_list = { name = cultures_south_african target = cu:tonga }
+    add_to_global_variable_list = { name = cultures_south_african target = cu:tswana }
+    add_to_global_variable_list = { name = cultures_south_african target = cu:xhosa }
+    add_to_global_variable_list = { name = cultures_south_african target = cu:yao }
+    add_to_global_variable_list = { name = cultures_south_african target = cu:zulu }
+    add_to_global_variable_list = { name = cultures_south_african target = cu:kavango_bantu }
+
+    # middle east cultures - replaced to cu:misri
+    add_to_global_variable_list = { name = cultures_middle_east target = cu:azerbaijani } # relevant in event caucasuswar_end.4
+    add_to_global_variable_list = { name = cultures_middle_east target = cu:maghrebi } # relevant in je_the_algerian_departements and event algeria_events.1, algeria_events.2, algeria_events.8
+    add_to_global_variable_list = { name = cultures_middle_east target = cu:misri } # relevant in country formation Arabia formation.8
+    add_to_global_variable_list = { name = cultures_middle_east target = cu:mashriqi } # relevant in country formation Arabia formation.8
+    add_to_global_variable_list = { name = cultures_middle_east target = cu:bedouin } # relevant in country formation Arabia formation.8
+    add_to_global_variable_list = { name = cultures_middle_east target = cu:berber } # relevant in je_the_algerian_departements and event algeria_events.1, algeria_events.2, algeria_events.8
+    add_to_global_variable_list = { name = cultures_middle_east target = cu:yemenite } # relevant in country formation Arabia formation.8 and Yemen formation.15
+    add_to_global_variable_list = { name = cultures_middle_east target = cu:assyrian }
+    add_to_global_variable_list = { name = cultures_middle_east target = cu:somali }
+    add_to_global_variable_list = { name = cultures_middle_east target = cu:sudanese }
+
+    # persian cultures - replaced to cu:persian
+    add_to_global_variable_list = { name = cultures_persian target = cu:persian }
+    add_to_global_variable_list = { name = cultures_persian target = cu:kurdish }
+    add_to_global_variable_list = { name = cultures_persian target = cu:luri }
+    add_to_global_variable_list = { name = cultures_persian target = cu:mazanderani }
+    add_to_global_variable_list = { name = cultures_persian target = cu:baluchi } # relevant in scripted_effects sepoy_mutiny_tag_specific_war_goals
+
+    # afro american cultures - replaced to cu:afro_american
+    add_to_global_variable_list = { name = cultures_afro_american target = cu:afro_american }
+    add_to_global_variable_list = { name = cultures_afro_american target = cu:afro_caribbean }
+    add_to_global_variable_list = { name = cultures_afro_american target = cu:afro_brazilian } # relevant in event brazilian_minors.2, brazilian_slavery.13, pedro.7
+    add_to_global_variable_list = { name = cultures_afro_american target = cu:afro_antillean }
+
+    # american cultures - replaced to cu:yankee
+    # actually removed - too much work...
+    # merging yankee and dixie is maybe stupid
+    # add_to_global_variable_list = { name = cultures_american target = cu:yankee }
+    # add_to_global_variable_list = { name = cultures_american target = cu:dixie }
+    # add_to_global_variable_list = { name = cultures_american target = cu:anglo_canadian }
+    # add_to_global_variable_list = { name = cultures_american target = cu:franco_canadian }
+    # add_to_global_variable_list = { name = cultures_american target = cu:central_american }
+    # add_to_global_variable_list = { name = cultures_american target = cu:cajun }
+
+    # mesoamerican cultures - replaced to cu:mayan
+    add_to_global_variable_list = { name = cultures_mesoamerican target = cu:mayan }
+    add_to_global_variable_list = { name = cultures_mesoamerican target = cu:miskito }
+    add_to_global_variable_list = { name = cultures_mesoamerican target = cu:nahua }
+    add_to_global_variable_list = { name = cultures_mesoamerican target = cu:tarascan }
+    add_to_global_variable_list = { name = cultures_mesoamerican target = cu:zapotec }
+    add_to_global_variable_list = { name = cultures_mesoamerican target = cu:mixtec }
+
+    # north american native cultures - replaced to cu:cherokee
+    add_to_global_variable_list = { name = cultures_north_american_native target = cu:metis }
+    add_to_global_variable_list = { name = cultures_north_american_native target = cu:dakota }
+    add_to_global_variable_list = { name = cultures_north_american_native target = cu:cherokee } # relevant in resettlement jes and events
+    add_to_global_variable_list = { name = cultures_north_american_native target = cu:muskogean } # relevant in je je_seminole_wars and in event native_resettlement.7
+    add_to_global_variable_list = { name = cultures_north_american_native target = cu:pueblo }
+    add_to_global_variable_list = { name = cultures_north_american_native target = cu:inuit }
+    add_to_global_variable_list = { name = cultures_north_american_native target = cu:cree }
+    add_to_global_variable_list = { name = cultures_north_american_native target = cu:navajo }
+    add_to_global_variable_list = { name = cultures_north_american_native target = cu:athabaskan } # relevant in event alk_breakup.1
+    add_to_global_variable_list = { name = cultures_north_american_native target = cu:salish }
+    add_to_global_variable_list = { name = cultures_north_american_native target = cu:nez_perce }
+    add_to_global_variable_list = { name = cultures_north_american_native target = cu:siouan }
+    add_to_global_variable_list = { name = cultures_north_american_native target = cu:comanche }
+    add_to_global_variable_list = { name = cultures_north_american_native target = cu:algonquian }
+    add_to_global_variable_list = { name = cultures_north_american_native target = cu:iroquoian }
+    add_to_global_variable_list = { name = cultures_north_american_native target = cu:caddoan }
+    add_to_global_variable_list = { name = cultures_north_american_native target = cu:paiute }
+    add_to_global_variable_list = { name = cultures_north_american_native target = cu:hokan }
+    add_to_global_variable_list = { name = cultures_north_american_native target = cu:apache }
+    add_to_global_variable_list = { name = cultures_north_american_native target = cu:oodham }
+
+    # south american cultures - replaced to cu:brazilian
+    # actually removed - too much work...
+    # mabye we should merge them in other groups to better reflect the south american jes and events
+    # add_to_global_variable_list = { name = cultures_south_american target = cu:north_andean }
+    # add_to_global_variable_list = { name = cultures_south_american target = cu:colombian }
+    # add_to_global_variable_list = { name = cultures_south_american target = cu:ecuadorian }
+    # add_to_global_variable_list = { name = cultures_south_american target = cu:venezuelan }
+    # add_to_global_variable_list = { name = cultures_south_american target = cu:south_andean }
+    # add_to_global_variable_list = { name = cultures_south_american target = cu:bolivian }
+    # add_to_global_variable_list = { name = cultures_south_american target = cu:chilean }
+    # add_to_global_variable_list = { name = cultures_south_american target = cu:peruvian }
+    # add_to_global_variable_list = { name = cultures_south_american target = cu:platinean }
+    # add_to_global_variable_list = { name = cultures_south_american target = cu:argentine }
+    # add_to_global_variable_list = { name = cultures_south_american target = cu:paraguayan }
+    # add_to_global_variable_list = { name = cultures_south_american target = cu:uruguayan }
+    # add_to_global_variable_list = { name = cultures_south_american target = cu:brazilian }
+    # add_to_global_variable_list = { name = cultures_south_american target = cu:amazonic } # relevant in event brazilian_minors.2
+    # add_to_global_variable_list = { name = cultures_south_american target = cu:paulista }
+    # add_to_global_variable_list = { name = cultures_south_american target = cu:nordestino }
+    # add_to_global_variable_list = { name = cultures_south_american target = cu:sulista }
+
+    # south american native cultures - replaced to cu:amazonian
+    add_to_global_variable_list = { name = cultures_south_american_native target = cu:aimara }
+    add_to_global_variable_list = { name = cultures_south_american_native target = cu:amazonian } # relevant in event amazonas.8, brazilian_minors.2
+    add_to_global_variable_list = { name = cultures_south_american_native target = cu:guajiro }
+    add_to_global_variable_list = { name = cultures_south_american_native target = cu:guarani } # relevant in on_country_formed and in event paraguay.1 - but ignored, paraguay isn't a player country...
+    add_to_global_variable_list = { name = cultures_south_american_native target = cu:patagonian } # relevant in event bp1_patagonia.1 - but ignored
+    add_to_global_variable_list = { name = cultures_south_american_native target = cu:tupinamba }
+    add_to_global_variable_list = { name = cultures_south_american_native target = cu:quechua } # relevant in diplomatic play dp_annex_subject and in jes je_peru_bolivia, je_war_of_the_confederation
+    add_to_global_variable_list = { name = cultures_south_american_native target = cu:muisca }
+    add_to_global_variable_list = { name = cultures_south_american_native target = cu:cariban }
+
+    # central asian cultures - replaced to cu:tajik
+    # actually reduced to cultures without any game effect - new replacement culture is cu:hazara
+    add_to_global_variable_list = { name = cultures_central_asian target = cu:tatar }
+    #add_to_global_variable_list = { name = cultures_central_asian target = cu:uzbek } # relevant in je je_pacify_the_steppes and in on_country_formed and events kazakhstan_events.7, persia_events.5
+    #add_to_global_variable_list = { name = cultures_central_asian target = cu:kazak } # relevant in je je_pacify_the_steppes and country formation formation.16, kazakhstan_events.1, kazakhstan_events.2, kazakhstan_events.3, kazakhstan_events.4, kazakhstan_events.5, kazakhstan_events.6, kazakhstan_events.8
+    #add_to_global_variable_list = { name = cultures_central_asian target = cu:kirgiz } # relevant in je je_pacify_the_steppes and in events russo_chinese.2, kazakhstan_events.7
+    #add_to_global_variable_list = { name = cultures_central_asian target = cu:tajik } # relevant in ai_strategies and jes je_maintain_afghan_protectorate, je_unify_afghanistan and scripted_triggers has_je_subjugation_reason and events persia_events.8
+    #add_to_global_variable_list = { name = cultures_central_asian target = cu:uighur } # relevant in je je_pacify_the_steppes scripted_effects warlord_setup_effect and events warlord_china_events.101, kazakhstan_events.7
+    add_to_global_variable_list = { name = cultures_central_asian target = cu:hazara }
+    add_to_global_variable_list = { name = cultures_central_asian target = cu:bashkir }
+    add_to_global_variable_list = { name = cultures_central_asian target = cu:chuvash }
+    #add_to_global_variable_list = { name = cultures_central_asian target = cu:turkmen } # relevant in jes je_eastern_frontier, je_pacify_the_steppes and in on_country_formed and in scripted_buttons persian_baluchistan_button, je_conquest_of_central_asia_turkmen_button and in events kazakhstan_events.7, russian_central_asia.3, persia_events.3, persia_events.5
+    add_to_global_variable_list = { name = cultures_central_asian target = cu:kalmyk }
+    #add_to_global_variable_list = { name = cultures_central_asian target = cu:pathan } # relevant in scripted_triggers state_is_homeland_of_indian_cultures
+    add_to_global_variable_list = { name = cultures_central_asian target = cu:buryat }
+
+    # mongol cultures - replaced to cu:mongol
+    add_to_global_variable_list = { name = cultures_mongol target = cu:mongol }
+    add_to_global_variable_list = { name = cultures_mongol target = cu:tuvan }
+    add_to_global_variable_list = { name = cultures_mongol target = cu:yakut }
+
+    # indonesian cultures - replaced to cu:javan
+    add_to_global_variable_list = { name = cultures_indonesian target = cu:moluccan } # relevant in event dei_breakup.1
+    add_to_global_variable_list = { name = cultures_indonesian target = cu:balinese } # relevant in event dei_breakup.1
+    add_to_global_variable_list = { name = cultures_indonesian target = cu:melanesian }
+    add_to_global_variable_list = { name = cultures_indonesian target = cu:moro }
+    add_to_global_variable_list = { name = cultures_indonesian target = cu:bornean } # relevant in event dei_breakup.1
+    add_to_global_variable_list = { name = cultures_indonesian target = cu:dayak } # relevant in event dei_breakup.1
+    add_to_global_variable_list = { name = cultures_indonesian target = cu:batak } # relevant in event dei_breakup.1
+    add_to_global_variable_list = { name = cultures_indonesian target = cu:sumatran } # relevant in event dei_breakup.1
+    add_to_global_variable_list = { name = cultures_indonesian target = cu:filipino }
+    add_to_global_variable_list = { name = cultures_indonesian target = cu:javan } # relevant in event dei_breakup.1
+    add_to_global_variable_list = { name = cultures_indonesian target = cu:malay } # relevant in event dei_breakup.1
+
+    # thai cultures - replaced to cu:thai
+    # actually reduced to cultures without any game effect
+    add_to_global_variable_list = { name = cultures_thai target = cu:thai }
+    add_to_global_variable_list = { name = cultures_thai target = cu:khmer }
+    add_to_global_variable_list = { name = cultures_thai target = cu:khmu }
+    # add_to_global_variable_list = { name = cultures_thai target = cu:lao } # relevant in country formation Laos formation.1
+    add_to_global_variable_list = { name = cultures_thai target = cu:shan }
+
+    # burmese cultures - replaced to cu:burmese
+    add_to_global_variable_list = { name = cultures_burmese target = cu:burmese }
+    add_to_global_variable_list = { name = cultures_burmese target = cu:lushai } # relevant in scripted_triggers state_is_homeland_of_indian_cultures, but we ignore this
+    add_to_global_variable_list = { name = cultures_burmese target = cu:karen }
+    add_to_global_variable_list = { name = cultures_burmese target = cu:mon }
+    add_to_global_variable_list = { name = cultures_burmese target = cu:kachin }
+
+    # oceanic native cultures - replaced to cu:polynesian
+    # actually reduced to cultures without any game effect
+    add_to_global_variable_list = { name = cultures_oceanic_native target = cu:polynesian }
+    # add_to_global_variable_list = { name = cultures_oceanic_native target = cu:hawaiian } # relevant in hawaiian interest_groups
+    add_to_global_variable_list = { name = cultures_oceanic_native target = cu:melanesian }
+    add_to_global_variable_list = { name = cultures_oceanic_native target = cu:micronesian }
+    # add_to_global_variable_list = { name = cultures_oceanic_native target = cu:maori } # relevant in australian jes and events
+    add_to_global_variable_list = { name = cultures_oceanic_native target = cu:yuanzhumin }
+    # add_to_global_variable_list = { name = cultures_oceanic_native target = cu:aborigine } # relevant in australian jes and events
+
+    # north german - replaced to cu:north_german
+    add_to_global_variable_list = { name = cultures_north_german target = cu:north_german }
+    add_to_global_variable_list = { name = cultures_north_german target = cu:sorb }
+
+    # dutch cultures - replaced to cu:dutch
+    add_to_global_variable_list = { name = cultures_dutch target = cu:dutch }
+    add_to_global_variable_list = { name = cultures_dutch target = cu:boer } # only relevant in dynamic_state_names
+
+    # danish cultures - replaced to cu:danish
+    add_to_global_variable_list = { name = cultures_danish target = cu:danish }
+    add_to_global_variable_list = { name = cultures_danish target = cu:icelandic } # relevant in forming scandinavia
+
+    # swedish cultures - replaced to cu:swedish
+    add_to_global_variable_list = { name = cultures_swedish target = cu:swedish }
+    add_to_global_variable_list = { name = cultures_swedish target = cu:sami }
+
+    # british cultures - replaced to cu:british
+    add_to_global_variable_list = { name = cultures_british target = cu:british }
+    add_to_global_variable_list = { name = cultures_british target = cu:welsh }
+
+    # finnish cultures - replaced to cu:finnish
+    add_to_global_variable_list = { name = cultures_finnish target = cu:finnish }
+    add_to_global_variable_list = { name = cultures_finnish target = cu:karelian }
+    add_to_global_variable_list = { name = cultures_finnish target = cu:ugrian }
+    add_to_global_variable_list = { name = cultures_finnish target = cu:mari }
+    add_to_global_variable_list = { name = cultures_finnish target = cu:mordvin }
+    add_to_global_variable_list = { name = cultures_finnish target = cu:udmurt }
+
+    # spanish cultures - replaced to cu:spanish
+    add_to_global_variable_list = { name = cultures_spanish target = cu:spanish }
+    add_to_global_variable_list = { name = cultures_spanish target = cu:basque }
+    add_to_global_variable_list = { name = cultures_spanish target = cu:catalan }
+    add_to_global_variable_list = { name = cultures_spanish target = cu:galician }
+
+    # south italian cultures - replaced to cu:south_italian
+    add_to_global_variable_list = { name = cultures_south_italian target = cu:south_italian }
+    add_to_global_variable_list = { name = cultures_south_italian target = cu:maltese }
+
+    # jugoslav cultures - replaced to cu:serb
+    # actually removed - too much work...
+    # add_to_global_variable_list = { name = cultures_jugoslav target = cu:bosniak } # relevant in country formation Yugoslavia formation.9
+    # add_to_global_variable_list = { name = cultures_jugoslav target = cu:croat } # relevant in country formation Yugoslavia formation.9, Danube formation.7
+    # add_to_global_variable_list = { name = cultures_jugoslav target = cu:slovene } # relevant in country formation Yugoslavia formation.9, Danube formation.7
+    # add_to_global_variable_list = { name = cultures_jugoslav target = cu:serb } # relevant in country formation Yugoslavia formation.9
+
+    # hungarian cultures - replaced to cu:hungarian
+    add_to_global_variable_list = { name = cultures_hungarian target = cu:hungarian }
+    add_to_global_variable_list = { name = cultures_hungarian target = cu:szekely }
+
+    # causasian cultures - replaced to cu:georgian
+    # actually cu:circassian removed cause of the je
+    add_to_global_variable_list = { name = cultures_caucasian target = cu:georgian } # relevant in event caucasuswar_end.4
+    add_to_global_variable_list = { name = cultures_caucasian target = cu:armenian } # relevant in event caucasuswar_end.4
+    add_to_global_variable_list = { name = cultures_caucasian target = cu:chechen }
+    # add_to_global_variable_list = { name = cultures_caucasian target = cu:circassian } # relevant in jes je_circassian_expulsions and in event caucasuswar.1, caucasuswar.5, caucasus_expulsions.1, caucasus_expulsions.2, caucasus_expulsions.3
+    add_to_global_variable_list = { name = cultures_caucasian target = cu:north_caucasian } # relevant in event caucasuswar.6, caucasuswar.7, caucasuswar.9, caucasuswar_end.3
+
+    # replace primary cultures in countries
+    every_country = {
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_west_african TARGET_CULTURE = cu:bambara }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_central_african TARGET_CULTURE = cu:fang }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_east_african TARGET_CULTURE = cu:beja }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_south_african TARGET_CULTURE = cu:chewa }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_middle_east TARGET_CULTURE = cu:misri }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_persian TARGET_CULTURE = cu:persian }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_afro_american TARGET_CULTURE = cu:afro_american }
+        # kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_american TARGET_CULTURE = cu:yankee }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_mesoamerican TARGET_CULTURE = cu:mayan }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_north_american_native TARGET_CULTURE = cu:cherokee }
+        # kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_south_american TARGET_CULTURE = cu:brazilian }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_south_american_native TARGET_CULTURE = cu:amazonian }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_central_asian TARGET_CULTURE = cu:hazara }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_mongol TARGET_CULTURE = cu:mongol }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_indonesian TARGET_CULTURE = cu:javan }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_thai TARGET_CULTURE = cu:thai }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_burmese TARGET_CULTURE = cu:burmese }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_oceanic_native TARGET_CULTURE = cu:polynesian }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_north_german TARGET_CULTURE = cu:north_german }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_dutch TARGET_CULTURE = cu:dutch }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_danish TARGET_CULTURE = cu:danish }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_swedish TARGET_CULTURE = cu:swedish }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_british TARGET_CULTURE = cu:british }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_finnish TARGET_CULTURE = cu:finnish }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_spanish TARGET_CULTURE = cu:spanish }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_south_italian TARGET_CULTURE = cu:south_italian }
+        # kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_jugoslav TARGET_CULTURE = cu:serb }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_hungarian TARGET_CULTURE = cu:hungarian }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_caucasian TARGET_CULTURE = cu:georgian }
+    }
+
+    # replace state homelands
+    every_state_region = {
+        kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_west_african TARGET_CULTURE = cu:bambara }
+        kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_central_african TARGET_CULTURE = cu:fang }
+        kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_east_african TARGET_CULTURE = cu:beja }
+        kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_south_african TARGET_CULTURE = cu:chewa }
+        kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_middle_east TARGET_CULTURE = cu:misri }
+        kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_persian TARGET_CULTURE = cu:persian }
+        kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_afro_american TARGET_CULTURE = cu:afro_american }
+        # kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_american TARGET_CULTURE = cu:yankee }
+        kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_mesoamerican TARGET_CULTURE = cu:mayan }
+        kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_north_american_native TARGET_CULTURE = cu:cherokee }
+        # kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_south_american TARGET_CULTURE = cu:brazilian }
+        kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_south_american_native TARGET_CULTURE = cu:amazonian }
+        kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_central_asian TARGET_CULTURE = cu:hazara }
+        kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_mongol TARGET_CULTURE = cu:mongol }
+        kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_indonesian TARGET_CULTURE = cu:javan }
+        kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_thai TARGET_CULTURE = cu:thai }
+        kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_burmese TARGET_CULTURE = cu:burmese }
+        kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_oceanic_native TARGET_CULTURE = cu:polynesian }
+        kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_north_german TARGET_CULTURE = cu:north_german }
+        kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_dutch TARGET_CULTURE = cu:dutch }
+        kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_danish TARGET_CULTURE = cu:danish }
+        kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_swedish TARGET_CULTURE = cu:swedish }
+        kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_british TARGET_CULTURE = cu:british }
+        kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_finnish TARGET_CULTURE = cu:finnish }
+        kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_spanish TARGET_CULTURE = cu:spanish }
+        kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_south_italian TARGET_CULTURE = cu:south_italian }
+        # kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_jugoslav TARGET_CULTURE = cu:serb }
+        kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_hungarian TARGET_CULTURE = cu:hungarian }
+        kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_caucasian TARGET_CULTURE = cu:georgian }
+    }
+
+    # replace pop culture
+    kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_west_african TARGET_CULTURE = cu:bambara }
+    kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_central_african TARGET_CULTURE = cu:fang }
+    kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_east_african TARGET_CULTURE = cu:beja }
+    kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_south_african TARGET_CULTURE = cu:chewa }
+    kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_middle_east TARGET_CULTURE = cu:misri }
+    kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_persian TARGET_CULTURE = cu:persian }
+    kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_afro_american TARGET_CULTURE = cu:afro_american }
+    # kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_american TARGET_CULTURE = cu:yankee }
+    kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_mesoamerican TARGET_CULTURE = cu:mayan }
+    kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_north_american_native TARGET_CULTURE = cu:cherokee }
+    # kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_south_american TARGET_CULTURE = cu:brazilian }
+    kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_south_american_native TARGET_CULTURE = cu:amazonian }
+    kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_central_asian TARGET_CULTURE = cu:hazara }
+    kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_mongol TARGET_CULTURE = cu:mongol }
+    kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_indonesian TARGET_CULTURE = cu:javan }
+    kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_thai TARGET_CULTURE = cu:thai }
+    kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_burmese TARGET_CULTURE = cu:burmese }
+    kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_oceanic_native TARGET_CULTURE = cu:polynesian }
+    kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_north_german TARGET_CULTURE = cu:north_german }
+    kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_dutch TARGET_CULTURE = cu:dutch }
+    kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_danish TARGET_CULTURE = cu:danish }
+    kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_swedish TARGET_CULTURE = cu:swedish }
+    kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_british TARGET_CULTURE = cu:british }
+    kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_finnish TARGET_CULTURE = cu:finnish }
+    kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_spanish TARGET_CULTURE = cu:spanish }
+    kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_south_italian TARGET_CULTURE = cu:south_italian }
+    # kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_jugoslav TARGET_CULTURE = cu:serb }
+    kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_hungarian TARGET_CULTURE = cu:hungarian }
+    kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_caucasian TARGET_CULTURE = cu:georgian }
+
+    # clear culture lists
+    clear_global_variable_list = cultures_west_african
+    clear_global_variable_list = cultures_central_african
+    clear_global_variable_list = cultures_east_african
+    clear_global_variable_list = cultures_south_african
+    clear_global_variable_list = cultures_middle_east
+    clear_global_variable_list = cultures_persian
+    clear_global_variable_list = cultures_afro_american
+    # clear_global_variable_list = cultures_american
+    clear_global_variable_list = cultures_mesoamerican
+    clear_global_variable_list = cultures_north_american_native
+    # clear_global_variable_list = cultures_south_american
+    clear_global_variable_list = cultures_south_american_native
+    clear_global_variable_list = cultures_central_asian
+    clear_global_variable_list = cultures_mongol
+    clear_global_variable_list = cultures_indonesian
+    clear_global_variable_list = cultures_thai
+    clear_global_variable_list = cultures_burmese
+    clear_global_variable_list = cultures_oceanic_native
+    clear_global_variable_list = cultures_north_german
+    clear_global_variable_list = cultures_dutch
+    clear_global_variable_list = cultures_danish
+    clear_global_variable_list = cultures_swedish
+    clear_global_variable_list = cultures_british
+    clear_global_variable_list = cultures_finnish
+    clear_global_variable_list = cultures_spanish
+    clear_global_variable_list = cultures_south_italian
+    # clear_global_variable_list = cultures_jugoslav
+    clear_global_variable_list = cultures_hungarian
+    clear_global_variable_list = cultures_caucasian
+}

@@ -166,15 +166,16 @@ kmpmp_mexico_integrate_the_mesoamericans = {
 			culture = cu:mayan
 		}
 
-		add_loyalists = {
-			value = 0.05
-			culture = cu:nahua
-		}
+		# kmpmp - merge cultures fixes
+		# add_loyalists = {
+		# 	value = 0.05
+		# 	culture = cu:nahua
+		# }
 
-		add_loyalists = {
-			value = 0.05
-			culture = cu:tarascan
-		}
+		# add_loyalists = {
+		# 	value = 0.05
+		# 	culture = cu:tarascan
+		# }
 
 		add_primary_culture = cu:mayan
 	}
@@ -221,18 +222,19 @@ kmpmp_integrate_the_mesoamericans = {
 			culture = cu:amazonian
 		}
 
-		add_loyalists = {
-			value = 0.05
-			culture = cu:quechua
-		}
+		# kmpmp - merge cultures fixes
+		# add_loyalists = {
+		# 	value = 0.05
+		# 	culture = cu:quechua
+		# }
 
-		add_loyalists = {
-			value = 0.05
-			culture = cu:aimara
-		}
+		# add_loyalists = {
+		# 	value = 0.05
+		# 	culture = cu:aimara
+		# }
 
 		add_primary_culture = cu:amazonian
-		add_primary_culture = cu:quechua
+		# add_primary_culture = cu:quechua
 	}
 }
 

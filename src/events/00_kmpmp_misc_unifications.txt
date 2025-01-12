@@ -370,14 +370,14 @@ formation.10 = {
 		cu:norwegian = {
 			save_scope_as = unification_culture
 		}
-		cu:icelandic = {
-			save_scope_as = unification_culture_2
-		}
+		# cu:icelandic = {
+		# 	save_scope_as = unification_culture_2
+		# }
 		cu:danish = {
-			save_scope_as = unification_culture_3
+			save_scope_as = unification_culture_2 #unification_culture_3
 		}
 		cu:swedish = {
-			save_scope_as = unification_culture_4
+			save_scope_as = unification_culture_3 #unification_culture_4
 		}
 		cu:finnish = {
 			save_scope_as = finns_scope
@@ -392,7 +392,7 @@ formation.10 = {
 			limit = {
 				has_diplomatic_relevance = ROOT
 			}
-			post_notification = unification_notification_four_culture
+			post_notification = unification_notification_three_culture #unification_notification_four_culture
 		}
 	}
 

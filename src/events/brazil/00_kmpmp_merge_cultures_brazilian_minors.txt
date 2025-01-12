@@ -1,0 +1,75 @@
+﻿# kmpmp - merge cultures fixes
+namespace = brazilian_minors
+
+# Cabanagem Defeat Event
+brazilian_minors.2 = {
+	type = country_event
+	placement = scope:para_state_scope
+
+	duration = 3
+
+	title = brazilian_minors.2.t
+	desc = brazilian_minors.2.d
+	flavor = brazilian_minors.2.f
+
+	event_image = {
+		video = "southamerica_war_civilians"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	trigger = {
+		# Triggered by on_wargoal_enforced
+	}
+	
+	immediate = {
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_PARA
+			}
+			save_scope_as = para_state_scope
+		}
+		cu:amazonian = {
+			save_scope_as = amazonian_culture_scope
+		}
+		cu:afro_american = { #cu:afro_brazilian = {
+			save_scope_as = afro_brazilian_culture_scope
+		}
+	}
+	
+	option = {
+		name = brazilian_minors.2.a 
+		default_option = yes
+		change_infamy = 5
+		every_scope_state = {
+			limit ={
+				OR = {
+					state_region = s:STATE_PARA
+					state_region = s:STATE_AMAZONAS
+				}
+			}
+			state_region = {
+				add_devastation = 90
+			}
+			kill_population_percent_in_state = {
+				culture = cu:afro_american #cu:afro_brazilian
+				percent = 0.2
+			}
+			kill_population_percent_in_state = {
+				culture = cu:amazonian
+				percent = 0.2
+			}
+			kill_population_percent_in_state = {
+				culture = cu:amazonic
+				percent = 0.1
+			}
+			add_modifier = {
+				name = crushing_the_cabaganem_modifier
+				months = normal_modifier_time
+			}
+			add_radicals_in_state = {
+				value = medium_radicals
+			}
+		}
+	}
+}

@@ -15,14 +15,14 @@
 			country_has_primary_culture = cu:swedish
 			country_has_primary_culture = cu:danish
 			country_has_primary_culture = cu:norwegian
-			country_has_primary_culture = cu:icelandic
+			# country_has_primary_culture = cu:icelandic
 		}	
 		any_country = {
 			OR = {
 				country_has_primary_culture = cu:swedish
 				country_has_primary_culture = cu:danish
 				country_has_primary_culture = cu:norwegian
-				country_has_primary_culture = cu:icelandic
+				# country_has_primary_culture = cu:icelandic
 			}	
 			has_technology_researched = nationalism	
 		}
