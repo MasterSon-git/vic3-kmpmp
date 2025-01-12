@@ -309,6 +309,7 @@
 			age = 36
 			traits = {
 				expert_offensive_planner
+				experienced_artillery_commander #kmpmp
 				resupply_commander
 				reserved
 			}
@@ -383,7 +384,7 @@
 			combat_unit = { # Technically had no warships at game start, but the Prussian Maritime Enterprise operated some armed merchantmen
 				type = unit_type:combat_unit_type_frigate
 				state_region = s:STATE_POMERANIA
-				count = 1
+				count = 11 #1
 			}
 		}	
 
@@ -647,7 +648,7 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_frigate
 				state_region = s:STATE_VENETIA
-				count = 4
+				count = 6 #4
 			}
 
 			combat_unit = {

@@ -7,9 +7,20 @@
         }
     }
 
+    c:PRU ?= {
+        add_modifier = {
+            name = kmpmp_ger_buff_rising_great_power_modifier
+            years = 15
+        }
+    }
+
     c:AUS ?= {
         add_journal_entry = {
             type = je_empire_of_the_three_crowns
+        }
+        add_modifier = {
+            name = kmpmp_aus_buff_habsburg_legacy_modifier
+            years = 15
         }
     }
 

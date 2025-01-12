@@ -55,6 +55,30 @@
 				add_claim = ROOT
 			}
 		}
-
+		# claims on Volhynia, Kiev and Cherson
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_VOLHYNIA }
+			}
+			s:STATE_VOLHYNIA = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_KIEV }
+			}
+			s:STATE_KIEV = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_CHERSON }
+			}
+			s:STATE_CHERSON = {
+				add_claim = ROOT
+			}
+		}
 	}
 }

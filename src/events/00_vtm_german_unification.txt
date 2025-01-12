@@ -125,6 +125,17 @@ german_unification.1 = {
 			}
 
 			change_tag = NGF
+			if = {
+				limit = {
+					NOT = {
+						has_modifier = kmpmp_ger_buff_ngf_formed_modifier
+					}
+				}
+				add_modifier = {
+					name = kmpmp_ger_buff_ngf_formed_modifier
+					years = 10
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -154,6 +165,17 @@ german_unification.1 = {
 				}
 			}
 			change_tag = NGF
+			if = {
+				limit = {
+					NOT = {
+						has_modifier = kmpmp_ger_buff_ngf_formed_modifier
+					}
+				}
+				add_modifier = {
+					name = kmpmp_ger_buff_ngf_formed_modifier
+					years = 10
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -484,11 +506,35 @@ german_unification.5 = {
 			add_journal_entry = {
 				type = je_north_german_unification
 			}
+
+			# kmpmp give claims on north germany
+			every_state = {
+				limit = {
+					NOT = { owner = ROOT }
+					state_region = {
+						is_homeland = cu:north_german
+					}
+				}
+				
+				state_region = { add_claim = ROOT }
+			}
 		}
 		else_if = {
 			limit = { country_has_primary_culture = cu:south_german }
 			add_journal_entry = {
 				type = je_south_german_unification
+			}
+
+			# kmpmp give claims on south germany
+			every_state = {
+				limit = {
+					NOT = { owner = ROOT }
+					state_region = {
+						is_homeland = cu:south_german
+					}
+				}
+				
+				state_region = { add_claim = ROOT }
 			}
 		}		
 	}

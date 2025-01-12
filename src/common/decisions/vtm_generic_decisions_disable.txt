@@ -115,7 +115,18 @@ prussia_form_ngf = {
 		}
 		root = {
 			change_tag = NGF
-		}		
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_modifier = kmpmp_ger_buff_ngf_formed_modifier
+				}
+			}
+			add_modifier = {
+				name = kmpmp_ger_buff_ngf_formed_modifier
+				years = 10
+			}
+		}
 		remove_global_variable = aggressive_austria_var
 	}
 
