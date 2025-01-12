@@ -7,11 +7,11 @@
     farm = "x867A90"
     mine = "x3F1E38"
     wood = "x4713EE"
-    arable_land = 110
+    arable_land = 130 #110
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_vineyard_plantations" }
     capped_resources = {
-        bg_iron_mining = 27
-        bg_lead_mining = 19
+        bg_iron_mining = 40 #27
+        bg_lead_mining = 30 #19
         bg_logging = 7
     }
     resource = {
@@ -356,9 +356,9 @@ STATE_GALICIA = {
     arable_land = 40
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_vineyard_plantations" }
     capped_resources = {
-        bg_iron_mining = 14
+        bg_iron_mining = 26 #14
         bg_logging = 5
-        bg_fishing = 4
+        bg_fishing = 12 #4
     }
     naval_exit_id = 3029
 }
@@ -373,12 +373,12 @@ STATE_ASTURIAS = {
     farm = "xBF2564"
     mine = "x0F84B8"
     wood = "x5060C0"
-    arable_land = 30
+    arable_land = 42 #30
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_gold_mining = 4
         bg_coal_mining = 65
-        bg_iron_mining = 14
+        bg_iron_mining = 30 #14
         bg_logging = 5
         bg_fishing = 7
     }
@@ -422,7 +422,7 @@ STATE_NAVARRA = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 10
+        undiscovered_amount = 25 #10
     }
     naval_exit_id = 3029
 }
@@ -457,8 +457,8 @@ STATE_CATALONIA = {
     arable_land = 35
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_vineyard_plantations" }
     capped_resources = {
-        bg_lead_mining = 24
-        bg_logging = 6
+        bg_lead_mining = 37 #24
+        bg_logging = 9 #6
         bg_fishing = 12
     }
     naval_exit_id = 3032
@@ -489,12 +489,12 @@ STATE_ANDALUSIA = {
     farm = "x3C4E5B"
     mine = "xD06000"
     wood = "x801020"
-    arable_land = 40
+    arable_land = 95 #65 #40
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_vineyard_plantations" }
     capped_resources = {
         bg_iron_mining = 30
         bg_sulfur_mining = 60
-        bg_logging = 4
+        bg_logging = 12 #4
         bg_fishing = 9
     }
     naval_exit_id = 3031

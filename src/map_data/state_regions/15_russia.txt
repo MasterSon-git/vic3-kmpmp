@@ -7,7 +7,7 @@
     farm = "x25CC83"
     mine = "x5C8F48"
     wood = "x80A021"
-    arable_land = 32 #22
+    arable_land = 50 #32 #22
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 9
@@ -25,7 +25,7 @@ STATE_TARTU = {
     farm = "xB9FF4E"
     mine = "x297D54"
     wood = "xBF6060"
-    arable_land = 28 #18
+    arable_land = 45 #28 #18
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 7
@@ -44,7 +44,7 @@ STATE_RIGA = {
     farm = "xE7C9B1"
     mine = "x521396"
     wood = "xBF2060"
-    arable_land = 48 #38
+    arable_land = 63 #48 #38
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 11
@@ -62,10 +62,11 @@ STATE_COURLAND = {
     farm = "xFD1424"
     mine = "xFA8436"
     wood = "x74042F"
-    arable_land = 32 #22
+    arable_land = 47 #32 #22
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 7
+        bg_fishing = 8 #kmpmp
     }
     naval_exit_id = 3000
 }
@@ -306,7 +307,7 @@ STATE_BREST = {
     farm = "xAB3AC5"
     mine = "x157352"
     wood = "xA6BED3"
-    arable_land = 75
+    arable_land = 100 #75
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 14
@@ -322,7 +323,7 @@ STATE_VOLHYNIA = {
     farm = "x5A26AE"
     mine = "x8201CF"
     wood = "xAC3079"
-    arable_land = 40
+    arable_land = 70 #40
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_coal_mining = 42
@@ -761,7 +762,7 @@ STATE_MERZ = {
     arable_land = 38
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_tea_plantations" }
     capped_resources = {
-        bg_iron_mining = 21
+        bg_iron_mining = 6 #21
         bg_logging = 5
     }
 }
@@ -1187,6 +1188,10 @@ STATE_ELIZAVETPOL = {
     capped_resources = {
         bg_iron_mining = 10
         bg_logging = 12
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 30 #kmpmp
     }
 }
 

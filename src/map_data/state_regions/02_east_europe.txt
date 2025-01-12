@@ -9,8 +9,9 @@
     arable_land = 75
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
-        bg_coal_mining = 24
-        bg_logging = 8
+        bg_coal_mining = 54 #24
+        bg_iron_mining = 30 #kmpmp
+        bg_logging = 20 #8
     }
 }
 
@@ -23,7 +24,7 @@ STATE_SILESIA = {
     farm = "xAF9F20"
     mine = "x272E48"
     wood = "x90B12B"
-    arable_land = 105
+    arable_land = 135 #105
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_coal_mining = 120
@@ -48,7 +49,7 @@ STATE_GREATER_POLAND = {
         bg_coal_mining = 84
         bg_iron_mining = 48
         bg_lead_mining = 24
-        bg_logging = 9
+        bg_logging = 15 #9
     }
 }
 
@@ -80,12 +81,12 @@ STATE_WEST_PRUSSIA = {
     farm = "x41A021"
     mine = "x945000"
     wood = "x374AC3"
-    arable_land = 40
+    arable_land = 70 #40
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_sulfur_mining = 40
-        bg_logging = 8
-        bg_fishing = 10
+        bg_logging = 12 #8
+        bg_fishing = 13 #10
     }
     naval_exit_id = 3000
 }
@@ -99,11 +100,11 @@ STATE_EAST_PRUSSIA = {
     farm = "x2399A2"
     mine = "xC020A0"
     wood = "xEEF586"
-    arable_land = 40
+    arable_land = 70 #40
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_logging = 17
-        bg_fishing = 10
+        bg_fishing = 15 #10
     }
     naval_exit_id = 3000
 }
@@ -116,11 +117,11 @@ STATE_POSEN = {
     farm = "xFCC7B7"
     mine = "x2141A0"
     wood = "xE513C0"
-    arable_land = 90
+    arable_land = 115 #90
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
-        bg_iron_mining = 24
-        bg_logging = 9
+        bg_iron_mining = 36 #24
+        bg_logging = 15 #9
     }
 }
 
@@ -175,7 +176,7 @@ STATE_CENTRAL_HUNGARY = {
     farm = "x51E0E0"
     mine = "xC97829"
     wood = "x93A8CA"
-    arable_land = 110
+    arable_land = 130 #110
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_vineyard_plantations" }
     capped_resources = {
         bg_coal_mining = 20
@@ -314,7 +315,7 @@ STATE_NORTHERN_TRANSYLVANIA = {
     farm = "x6E6896"
     mine = "x73F00B"
     wood = "x897F3D"
-    arable_land = 50
+    arable_land = 80 #50
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_vineyard_plantations" }
     capped_resources = {
         bg_coal_mining = 48

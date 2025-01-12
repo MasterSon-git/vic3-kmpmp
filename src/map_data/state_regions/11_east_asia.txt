@@ -202,7 +202,7 @@ STATE_SHENGJING = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 10
+        undiscovered_amount = 25 #10
     }
     naval_exit_id = 3057
 }
@@ -233,7 +233,7 @@ STATE_OUTER_MANCHURIA = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 10
+        undiscovered_amount = 25 #10
     }
     naval_exit_id = 3059
 }
