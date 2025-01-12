@@ -1,0 +1,41 @@
+﻿kmpmp_je_baby_boom = {
+    # Sweden, Portugal, Bolivia, Netherlands, Brazil add babyboom JE
+    # req: has invented pharmaceuticals, has SOL of 10 avg on nation
+    # grants: 10% birthrate for 10 years
+
+    icon = "gfx/interface/icons/invention_icons/pharmaceuticals.dds"
+    group = je_group_technology
+
+    is_shown_when_inactive = {
+        NOT = {
+            has_variable = kmpmp_je_baby_boom_completed
+        }
+        OR = {
+            c:SWE ?= ROOT
+            # c:SCA ?= ROOT
+            c:POR ?= ROOT
+            c:NET ?= ROOT
+            # c:UNL ?= ROOT
+            c:BOL ?= ROOT
+            c:BRZ ?= ROOT
+        }
+    }
+
+    possible = {
+        has_technology_researched = pharmaceuticals
+    }
+
+    complete = {
+        average_sol >= 10
+    }
+
+    on_complete = {
+        set_variable = kmpmp_je_baby_boom_completed
+
+        add_modifier = {
+            name = kmpmp_baby_boom_modifier
+            years = 10
+        }
+    }
+
+}

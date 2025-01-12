@@ -44,6 +44,9 @@ principle_construction_2 = {
 		# Modifiers from previous level(s)
 		
 		state_construction_mult = 0.1
+
+		#kmpmp
+		country_loan_interest_rate_mult = -0.10
 		
 		# Members Construction Sectors cost less infrastructure
 		building_group_bg_construction_infrastructure_usage_mult = -0.75
@@ -63,6 +66,10 @@ principle_construction_3 = {
 		
 		state_construction_mult = 0.1
 		building_group_bg_construction_infrastructure_usage_mult = -0.75
+
+		#kmpmp
+		country_loan_interest_rate_mult = -0.10
+		building_construction_sector_throughput_add = 0.15
 		
 		# Members can form Construction type Companies unlock triggers in the company
 	}
@@ -81,6 +88,8 @@ principle_internal_trade_1 = {
 	member_modifier = {
 		# Members get a bonus to Company throughput
 		country_company_throughput_bonus_add = 0.1
+		unit_convoy_defense_mult = 0.05 #kmpmp
+		building_group_bg_manufacturing_throughput_add = 0.15 #kmpmp
 		# More convoy going to the market owner, effect scaling upwards with principle levels
 		country_convoy_contribution_to_market_owner_add = 0.2
 	}
@@ -114,6 +123,8 @@ principle_internal_trade_2 = {
 	member_modifier = {
 		# Modifiers from previous level(s)
 		country_company_throughput_bonus_add = 0.1
+		unit_convoy_defense_mult = 0.10 #kmpmp
+		building_group_bg_manufacturing_throughput_add = 0.15 #kmpmp
 		country_convoy_contribution_to_market_owner_add = 0.3
 	
 		# Members get increased tariffs from countries outside the Power Bloc and infrastructure
@@ -138,6 +149,8 @@ principle_internal_trade_3 = {
 		tariff_import_outside_power_bloc_mult = 0.2
 		tariff_export_outside_power_bloc_mult = 0.2
 		state_infrastructure_mult = 0.1
+		unit_convoy_defense_mult = 0.15 #kmpmp
+		building_group_bg_manufacturing_throughput_add = 0.15 #kmpmp
 		
 		# Cheaper port connections
 		country_port_connection_cost_mult = -0.25
@@ -239,7 +252,7 @@ principle_vassalization_1 = {
 
 	member_modifier = {
 		# Each subject increases authority
-		country_authority_per_subject_add = 25
+		country_authority_per_subject_add = 12.5 #25
 	}
 	
 	ai_weight = {
@@ -611,6 +624,7 @@ principle_external_trade_1 = {
 
 		# kmpmp
 		country_convoys_capacity_mult = 0.1
+		building_group_bg_manufacturing_throughput_add = 0.15 #kmpmp
 	}
 	
 	ai_weight = {
@@ -662,6 +676,7 @@ principle_external_trade_2 = {
 		# kmpmp
 		country_convoys_capacity_mult = 0.1
 		market_land_trade_capacity_add = 400
+		building_group_bg_manufacturing_throughput_add = 0.15 #kmpmp
 	}
 	
 	ai_weight = {
@@ -692,6 +707,7 @@ principle_external_trade_3 = {
 		country_convoys_capacity_mult = 0.1
 		market_land_trade_capacity_add = 400
 		country_trade_route_quantity_mult = 0.3
+		building_group_bg_manufacturing_throughput_add = 0.15 #kmpmp
 	}
 
 	ai_weight = {
@@ -744,7 +760,7 @@ principle_food_standardization_2 = {
 		building_group_bg_agriculture_throughput_add = 0.15 #0.1
 		
 		# Lower mortality
-		state_mortality_mult = -0.1
+		state_mortality_mult = -0.05 #-0.1
 	}
 	
 	ai_weight = {
@@ -758,8 +774,8 @@ principle_food_standardization_3 = {
 
 	member_modifier = {
 		# Modifiers from previous level(s)
-		building_group_bg_agriculture_throughput_add = 0.15 #0.1
-		state_mortality_mult = -0.1
+		building_group_bg_agriculture_throughput_add = 0.20 #0.1
+		state_mortality_mult = -0.075 # -0.1
 		
 		# Higher SoL
 		state_standard_of_living_add = 1
@@ -874,7 +890,7 @@ principle_police_coordination_3 = {
 	institution = institution_police
 	institution_modifier = {
 		# Police institution adds authority
-		country_authority_add = 75 #50
+		country_authority_add = 65 #50
 		
 		# Police institution reduces radicalism of political movements
 		political_movement_radicalism_add = -0.05
@@ -899,7 +915,10 @@ principle_transport_1 = {
 	member_modifier = {
 		# Members get increased Infrastructure from pops
 		state_infrastructure_from_population_mult = 0.33
-		state_infrastructure_from_population_max_mult = 0.33 		
+		state_infrastructure_from_population_max_mult = 0.33 
+
+		#kmpmp
+		state_pollution_reduction_health_mult = -0.025
 	}
 	
 	ai_weight = {
@@ -934,6 +953,10 @@ principle_transport_2 = {
 		
 		# Members have increased convoy capacity
 		country_convoys_capacity_mult = 0.2
+
+		#kmpmp
+		state_pollution_reduction_health_mult = -0.05
+		state_infrastructure_mult = 0.025
 	}
 	
 	ai_weight = {
@@ -951,6 +974,10 @@ principle_transport_3 = {
 		state_infrastructure_from_population_mult = 0.33
 		state_infrastructure_from_population_max_mult = 0.33 
 		state_market_access_price_impact = 0.05 #kmpmp
+
+		#kmpmp
+		state_pollution_reduction_health_mult = -0.1
+		state_infrastructure_mult = 0.05
 		
 		# Increased land trade capacity
 		market_land_trade_capacity_add = 200 #50
@@ -1160,6 +1187,7 @@ principle_colonial_offices_3 = {
 		# Modifiers from previous level(s)	
 		state_colony_growth_creation_factor = 0.05
 		country_infamy_generation_against_unrecognized_mult = -0.05
+		country_authority_add = 25
 	}		
 
 	ai_weight = {
@@ -1698,6 +1726,11 @@ principle_sacred_civics_2 = {
 
 		# kmpmp
 		power_bloc_religion_subject_income_transfer_mult = 0.5
+		state_radicalism_increases_full_acceptance_mult = -0.075
+		state_radicalism_increases_second_rate_citizen_mult = -0.075
+		state_radicalism_increases_open_prejudice_mult = -0.075
+		state_radicalism_increases_cultural_erasure_mult = -0.075
+		state_radicalism_increases_violent_hostility_mult = -0.075
 	}
 	
 	ai_weight = {
@@ -1717,6 +1750,11 @@ principle_sacred_civics_3 = {
 		# kmpmp
 		power_bloc_religion_subject_income_transfer_mult = 0.5
 		country_infamy_generation_heathen_mult = -0.3
+		state_radicalism_increases_full_acceptance_mult = -0.15
+		state_radicalism_increases_second_rate_citizen_mult = -0.15
+		state_radicalism_increases_open_prejudice_mult = -0.15
+		state_radicalism_increases_cultural_erasure_mult = -0.15
+		state_radicalism_increases_violent_hostility_mult = -0.15
 	}
 
 	leader_modifier = {
