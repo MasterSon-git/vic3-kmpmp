@@ -18,14 +18,3 @@ ig_trait_el_buen_jefe = {
 		unit_defense_mult = 0.1 #kmpmp
 	}
 }
-
-ig_trait_patriotic_fervor = {
-	icon = "gfx/interface/icons/ig_trait_icons/patriotic_fervor.dds"
-	min_approval = loyal
-	
-	modifier = {
-		unit_offense_mult = 0.1
-		unit_defense_mult = 0.1	
-		country_military_goods_cost_mult = -0.025
-	}
-}

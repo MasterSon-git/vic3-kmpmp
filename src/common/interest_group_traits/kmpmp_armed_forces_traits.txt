@@ -21,3 +21,14 @@ kmpmp_ig_trait_banzai = {
         country_radicals_from_conquest_mult = -0.1
 	}
 }
+
+kmpmp_ig_trait_army_with_a_state = {
+	icon = "gfx/interface/icons/ig_trait_icons/patriotic_fervor.dds"
+	min_approval = loyal
+	
+	modifier = {
+		unit_offense_mult = 0.1
+		unit_defense_mult = 0.1	
+		country_military_goods_cost_mult = -0.025
+	}
+}
