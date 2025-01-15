@@ -4,6 +4,7 @@ on_monthly_pulse_country = {
     on_actions = {
         kmpmp_add_china_buff_je_action
         kmpmp_add_mexico_je_action
+        kmpmp_add_ig_trait_army_with_a_state_action
     }
 }
 
@@ -66,6 +67,26 @@ kmpmp_add_mexico_je_action = {
                 add_journal_entry = {
                     type = kmpmp_je_successor_of_gran_colombia
                 }
+            }
+        }
+    }
+}
+
+# change german armed forces ig trait
+# can be removed next season
+kmpmp_add_ig_trait_army_with_a_state_action = {
+    effect = {
+        if = {
+            limit = {
+                OR = {
+                    c:PRU ?= ROOT
+                    c:NGF ?= ROOT
+                    c:GER ?= ROOT
+                }
+            }
+
+            ig:ig_armed_forces = {
+                set_ig_trait = ig_trait:kmpmp_ig_trait_army_with_a_state
             }
         }
     }
