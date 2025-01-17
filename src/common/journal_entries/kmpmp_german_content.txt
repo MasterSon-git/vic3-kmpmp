@@ -19,6 +19,7 @@
 
     complete = {
         # owns Warsaw, Lublin, Minsk or Riga + at least 8 other states Estland Dorpat Kurland Pskov vitebsk mogilev volhynia plock ingria kiev chernigov
+        # add states Kovno, Wilno, Grodno
         # (when holding all 4 in first part then 7 other states)
         owns_entire_state_region = STATE_GREATER_POLAND # Warsaw
         owns_entire_state_region = STATE_LESSER_POLAND # Lublin
@@ -35,10 +36,13 @@
 
             calc_true_if = {
                 amount >= 7
-    
+
+                owns_entire_state_region = STATE_VILNIUS # Wilno
+                owns_entire_state_region = STATE_KAUNAS # Kovno
                 owns_entire_state_region = STATE_TALINN # Estland
                 owns_entire_state_region = STATE_TARTU # Dorpat
                 owns_entire_state_region = STATE_COURLAND
+                owns_entire_state_region = STATE_BREST # Grodno
                 owns_entire_state_region = STATE_PSKOV
                 owns_entire_state_region = STATE_VITEBSK
                 owns_entire_state_region = STATE_MOGILEV
@@ -52,10 +56,13 @@
         trigger_else = {
             calc_true_if = {
                 amount >= 8
-    
+
+                owns_entire_state_region = STATE_VILNIUS # Wilno
+                owns_entire_state_region = STATE_KAUNAS # Kovno
                 owns_entire_state_region = STATE_TALINN # Estland
                 owns_entire_state_region = STATE_TARTU # Dorpat
                 owns_entire_state_region = STATE_COURLAND
+                owns_entire_state_region = STATE_BREST # Grodno
                 owns_entire_state_region = STATE_PSKOV
                 owns_entire_state_region = STATE_VITEBSK
                 owns_entire_state_region = STATE_MOGILEV
@@ -132,9 +139,12 @@ je_german_fate_in_the_east_expand = {
         owns_entire_state_region = STATE_LESSER_POLAND # Lublin
         owns_entire_state_region = STATE_MINSK
         owns_entire_state_region = STATE_RIGA
+        owns_entire_state_region = STATE_VILNIUS # Wilno
+        owns_entire_state_region = STATE_KAUNAS # Kovno
         owns_entire_state_region = STATE_TALINN # Estland
         owns_entire_state_region = STATE_TARTU # Dorpat
         owns_entire_state_region = STATE_COURLAND
+        owns_entire_state_region = STATE_BREST # Grodno
         owns_entire_state_region = STATE_PSKOV
         owns_entire_state_region = STATE_VITEBSK
         owns_entire_state_region = STATE_MOGILEV
@@ -188,10 +198,13 @@ je_german_fate_in_the_east_expand = {
 
             calc_true_if = {
                 amount < 5
-    
+
+                owns_entire_state_region = STATE_VILNIUS # Wilno
+                owns_entire_state_region = STATE_KAUNAS # Kovno
                 owns_entire_state_region = STATE_TALINN # Estland
                 owns_entire_state_region = STATE_TARTU # Dorpat
                 owns_entire_state_region = STATE_COURLAND
+                owns_entire_state_region = STATE_BREST # Grodno
                 owns_entire_state_region = STATE_PSKOV
                 owns_entire_state_region = STATE_VITEBSK
                 owns_entire_state_region = STATE_MOGILEV
@@ -250,9 +263,12 @@ je_german_fate_in_the_east_maintain = {
             owns_entire_state_region = STATE_LESSER_POLAND # Lublin
             owns_entire_state_region = STATE_MINSK
             owns_entire_state_region = STATE_RIGA
+            owns_entire_state_region = STATE_VILNIUS # Wilno
+            owns_entire_state_region = STATE_KAUNAS # Kovno
             owns_entire_state_region = STATE_TALINN # Estland
             owns_entire_state_region = STATE_TARTU # Dorpat
             owns_entire_state_region = STATE_COURLAND
+            owns_entire_state_region = STATE_BREST # Grodno
             owns_entire_state_region = STATE_PSKOV
             owns_entire_state_region = STATE_VITEBSK
             owns_entire_state_region = STATE_MOGILEV
