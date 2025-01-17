@@ -508,15 +508,20 @@ german_unification.5 = {
 			}
 
 			# kmpmp give claims on north germany
-			every_state = {
+			if = {
 				limit = {
-					NOT = { owner = ROOT }
-					state_region = {
-						is_homeland = cu:north_german
-					}
+					c:PRU ?= ROOT
 				}
-				
-				state_region = { add_claim = ROOT }
+				every_state = {
+					limit = {
+						NOT = { owner = ROOT }
+						state_region = {
+							is_homeland = cu:north_german
+						}
+					}
+					
+					state_region = { add_claim = ROOT }
+				}
 			}
 		}
 		else_if = {
@@ -526,15 +531,20 @@ german_unification.5 = {
 			}
 
 			# kmpmp give claims on south germany
-			every_state = {
+			if = {
 				limit = {
-					NOT = { owner = ROOT }
-					state_region = {
-						is_homeland = cu:south_german
-					}
+					c:AUS ?= ROOT
 				}
-				
-				state_region = { add_claim = ROOT }
+				every_state = {
+					limit = {
+						NOT = { owner = ROOT }
+						state_region = {
+							is_homeland = cu:south_german
+						}
+					}
+					
+					state_region = { add_claim = ROOT }
+				}
 			}
 		}		
 	}
