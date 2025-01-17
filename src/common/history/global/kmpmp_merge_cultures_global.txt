@@ -268,9 +268,9 @@
     add_to_global_variable_list = { name = cultures_spanish target = cu:catalan }
     add_to_global_variable_list = { name = cultures_spanish target = cu:galician }
 
-    # south italian cultures - replaced to cu:south_italian
-    add_to_global_variable_list = { name = cultures_south_italian target = cu:south_italian }
-    add_to_global_variable_list = { name = cultures_south_italian target = cu:maltese }
+    # corsican cultures - replaced to cu:corsican
+    add_to_global_variable_list = { name = cultures_corsican target = cu:corsican }
+    add_to_global_variable_list = { name = cultures_corsican target = cu:maltese } # in the first iteration we made them south_italian but this forced gb in the italian unification war
 
     # jugoslav cultures - replaced to cu:serb
     # actually removed - too much work...
@@ -318,7 +318,7 @@
         kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_british TARGET_CULTURE = cu:british }
         kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_finnish TARGET_CULTURE = cu:finnish }
         kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_spanish TARGET_CULTURE = cu:spanish }
-        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_south_italian TARGET_CULTURE = cu:south_italian }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_corsican TARGET_CULTURE = cu:corsican }
         # kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_jugoslav TARGET_CULTURE = cu:serb }
         kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_hungarian TARGET_CULTURE = cu:hungarian }
         kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_caucasian TARGET_CULTURE = cu:georgian }
@@ -351,7 +351,7 @@
         kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_british TARGET_CULTURE = cu:british }
         kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_finnish TARGET_CULTURE = cu:finnish }
         kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_spanish TARGET_CULTURE = cu:spanish }
-        kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_south_italian TARGET_CULTURE = cu:south_italian }
+        kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_corsican TARGET_CULTURE = cu:corsican }
         # kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_jugoslav TARGET_CULTURE = cu:serb }
         kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_hungarian TARGET_CULTURE = cu:hungarian }
         kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_caucasian TARGET_CULTURE = cu:georgian }
@@ -383,7 +383,7 @@
     kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_british TARGET_CULTURE = cu:british }
     kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_finnish TARGET_CULTURE = cu:finnish }
     kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_spanish TARGET_CULTURE = cu:spanish }
-    kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_south_italian TARGET_CULTURE = cu:south_italian }
+    kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_corsican TARGET_CULTURE = cu:corsican }
     # kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_jugoslav TARGET_CULTURE = cu:serb }
     kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_hungarian TARGET_CULTURE = cu:hungarian }
     kmpmp_replace_pop_cultures = { CULTURE_LIST = cultures_caucasian TARGET_CULTURE = cu:georgian }
@@ -414,7 +414,7 @@
     clear_global_variable_list = cultures_british
     clear_global_variable_list = cultures_finnish
     clear_global_variable_list = cultures_spanish
-    clear_global_variable_list = cultures_south_italian
+    clear_global_variable_list = cultures_corsican
     # clear_global_variable_list = cultures_jugoslav
     clear_global_variable_list = cultures_hungarian
     clear_global_variable_list = cultures_caucasian
