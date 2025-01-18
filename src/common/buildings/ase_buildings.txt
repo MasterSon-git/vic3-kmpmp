@@ -1,0 +1,34 @@
+﻿
+building_ase_stockpile_saving = {
+    icon = "gfx/interface/icons/building_icons/building_trade_center.dds"
+    building_group = bg_ase_stockpile
+    production_method_groups = {
+        pmg_ase_stockpile_saving_base
+        pmg_ase_stockpile_saving_input
+    }
+    buildable = no
+    expandable = no
+    downsizeable = no
+	ownership_type = self
+    min_raise_to_hire = -1.0
+    residence_points_per_level = 0
+    levels_per_mesh = 2
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+building_ase_stockpile_spending = {
+    icon = "gfx/interface/icons/building_icons/building_trade_center.dds"
+    building_group = bg_ase_stockpile
+    production_method_groups = {
+        pmg_ase_stockpile_spending_base
+        pmg_ase_stockpile_spending_output
+    }
+    buildable = no
+    expandable = no
+    downsizeable = no
+	ownership_type = self
+    min_raise_to_hire = -1.0
+    residence_points_per_level = 0
+    levels_per_mesh = 2
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
