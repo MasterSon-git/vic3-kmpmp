@@ -36,10 +36,25 @@
 			name = south_america_incorporated_states
 			value = 0
 		}
+		set_variable = { # kmpmp
+			name = south_america_incorporated_population_start
+			value = 0
+		}
 		every_scope_state = {
 			limit = {
 				is_incorporated = yes
 				state_is_in_south_america = yes
+			}
+			if = { # kmpmp
+				limit = {
+					NOT = {
+						has_variable = south_america_incorporated_population_state_start
+					}
+				}
+				set_variable = {
+					name = south_america_incorporated_population_state_start
+					value = state_population
+				}
 			}
 			ROOT = {
 				change_variable = {
@@ -50,6 +65,25 @@
 					name = south_america_incorporated_states
 					add = 1
 				}
+				change_variable = { # kmpmp
+					name = south_america_incorporated_population_start
+					add = PREV.var:south_america_incorporated_population_state_start
+				}
+			}
+		}
+		# kmpmp
+		set_variable = {
+			name = south_america_migration_goal_min
+			value = {
+				value = var:south_america_incorporated_population_start
+				add = 3000000
+			}
+		}
+		set_variable = {
+			name = south_america_migration_goal_max
+			value = {
+				value = var:south_america_incorporated_population_start
+				add = 8000000
 			}
 		}
 		set_variable = {
@@ -60,7 +94,8 @@
 			name = south_america_migration_goal
 			multiply = 1500000
 			# kmpmp
-			max = 8000000
+			min = var:south_america_migration_goal_min
+			max = var:south_america_migration_goal_max
 		}
 		trigger_event = { id = sa_migration.2 popup = yes }
 	}
@@ -71,20 +106,12 @@
 				name = south_america_incorporated_population
 				value = 0
 			}
-			every_scope_state = {
-				limit = {
-					is_incorporated = yes
-					state_is_in_south_america = yes
-				}
-				ROOT = {
-					change_variable = {
-						name = south_america_incorporated_population
-						add = PREV.state_population
-					}
-				}
-			}
 			set_variable = {
 				name = south_america_incorporated_states
+				value = 0
+			}
+			set_variable = { # kmpmp
+				name = south_america_incorporated_population_start
 				value = 0
 			}
 			every_scope_state = {
@@ -92,11 +119,45 @@
 					is_incorporated = yes
 					state_is_in_south_america = yes
 				}
+				if = { # kmpmp
+					limit = {
+						NOT = {
+							has_variable = south_america_incorporated_population_state_start
+						}
+					}
+					set_variable = {
+						name = south_america_incorporated_population_state_start
+						value = state_population
+					}
+				}
 				ROOT = {
+					change_variable = {
+						name = south_america_incorporated_population
+						add = PREV.state_population
+					}
 					change_variable = {
 						name = south_america_incorporated_states
 						add = 1
 					}
+					change_variable = { # kmpmp
+						name = south_america_incorporated_population_start
+						add = PREV.var:south_america_incorporated_population_state_start
+					}
+				}
+			}
+			# kmpmp
+			set_variable = {
+				name = south_america_migration_goal_min
+				value = {
+					value = var:south_america_incorporated_population_start
+					add = 3000000
+				}
+			}
+			set_variable = {
+				name = south_america_migration_goal_max
+				value = {
+					value = var:south_america_incorporated_population_start
+					add = 8000000
 				}
 			}
 			set_variable = {
@@ -107,7 +168,8 @@
 				name = south_america_migration_goal
 				multiply = 1500000
 				# kmpmp
-				max = 8000000
+				min = var:south_america_migration_goal_min
+				max = var:south_america_migration_goal_max
 			}
 		}
 	}
@@ -190,12 +252,27 @@ je_central_america_migration = {
 			name = central_america_incorporated_states
 			value = 0
 		}
+		set_variable = { # kmpmp
+			name = central_america_incorporated_population_start
+			value = 0
+		}
 		every_scope_state = {
 			limit = {
 				is_incorporated = yes
 				OR = {
 					region = sr:region_mexico
 					region = sr:region_central_america
+				}
+			}
+			if = { # kmpmp
+				limit = {
+					NOT = {
+						has_variable = central_america_incorporated_population_state_start
+					}
+				}
+				set_variable = {
+					name = central_america_incorporated_population_state_start
+					value = state_population
 				}
 			}
 			ROOT = {
@@ -207,6 +284,25 @@ je_central_america_migration = {
 					name = central_america_incorporated_states
 					add = 1
 				}
+				change_variable = { # kmpmp
+					name = central_america_incorporated_population_start
+					add = PREV.var:central_america_incorporated_population_state_start
+				}
+			}
+		}
+		# kmpmp
+		set_variable = {
+			name = central_america_migration_goal_min
+			value = {
+				value = var:central_america_incorporated_population_start
+				add = 3000000
+			}
+		}
+		set_variable = {
+			name = central_america_migration_goal_max
+			value = {
+				value = var:central_america_incorporated_population_start
+				add = 8000000
 			}
 		}
 		set_variable = {
@@ -217,7 +313,8 @@ je_central_america_migration = {
 			name = central_america_migration_goal
 			multiply = 1500000
 			# kmpmp
-			max = 8000000
+			min = var:central_america_migration_goal_min
+			max = var:central_america_migration_goal_max
 		}
 		trigger_event = { id = sa_migration.2 popup = yes }
 	}
@@ -228,23 +325,12 @@ je_central_america_migration = {
 				name = central_america_incorporated_population
 				value = 0
 			}
-			every_scope_state = {
-				limit = {
-					is_incorporated = yes
-					OR = {
-						region = sr:region_mexico
-						region = sr:region_central_america
-					}
-				}
-				ROOT = {
-					change_variable = {
-						name = central_america_incorporated_population
-						add = PREV.state_population
-					}
-				}
-			}
 			set_variable = {
 				name = central_america_incorporated_states
+				value = 0
+			}
+			set_variable = { # kmpmp
+				name = central_america_incorporated_population_start
 				value = 0
 			}
 			every_scope_state = {
@@ -255,11 +341,45 @@ je_central_america_migration = {
 						region = sr:region_central_america
 					}
 				}
+				if = { # kmpmp
+					limit = {
+						NOT = {
+							has_variable = central_america_incorporated_population_state_start
+						}
+					}
+					set_variable = {
+						name = central_america_incorporated_population_state_start
+						value = state_population
+					}
+				}
 				ROOT = {
+					change_variable = {
+						name = central_america_incorporated_population
+						add = PREV.state_population
+					}
 					change_variable = {
 						name = central_america_incorporated_states
 						add = 1
 					}
+					change_variable = { # kmpmp
+						name = central_america_incorporated_population_start
+						add = PREV.var:central_america_incorporated_population_state_start
+					}
+				}
+			}
+			# kmpmp
+			set_variable = {
+				name = central_america_migration_goal_min
+				value = {
+					value = var:central_america_incorporated_population_start
+					add = 3000000
+				}
+			}
+			set_variable = {
+				name = central_america_migration_goal_max
+				value = {
+					value = var:central_america_incorporated_population_start
+					add = 8000000
 				}
 			}
 			set_variable = {
@@ -270,7 +390,8 @@ je_central_america_migration = {
 				name = central_america_migration_goal
 				multiply = 1000000
 				# kmpmp
-				max = 8000000
+				min = var:central_america_migration_goal_min
+				max = var:central_america_migration_goal_max
 			}
 		}
 	}
@@ -359,12 +480,27 @@ je_american_west_migration = {
 			name = american_west_incorporated_states
 			value = 0
 		}
+		set_variable = { # kmpmp
+			name = american_west_incorporated_population_start
+			value = 0
+		}
 		every_scope_state = {
 			limit = {
 				is_incorporated = yes
 				OR = {
 					region = sr:region_pacific_coast
 					region = sr:region_great_plains
+				}
+			}
+			if = { # kmpmp
+				limit = {
+					NOT = {
+						has_variable = american_west_incorporated_population_state_start
+					}
+				}
+				set_variable = {
+					name = american_west_incorporated_population_state_start
+					value = state_population
 				}
 			}
 			ROOT = {
@@ -376,6 +512,25 @@ je_american_west_migration = {
 					name = american_west_incorporated_states
 					add = 1
 				}
+				change_variable = { # kmpmp
+					name = american_west_incorporated_population_start
+					add = PREV.var:american_west_incorporated_population_state_start
+				}
+			}
+		}
+		# kmpmp
+		set_variable = {
+			name = american_west_migration_goal_min
+			value = {
+				value = var:american_west_incorporated_population_start
+				add = 3000000
+			}
+		}
+		set_variable = {
+			name = american_west_migration_goal_max
+			value = {
+				value = var:american_west_incorporated_population_start
+				add = 8000000
 			}
 		}
 		set_variable = {
@@ -385,8 +540,9 @@ je_american_west_migration = {
 		change_variable = {
 			name = american_west_migration_goal
 			multiply = 500000 # 1500000
-			min = 3000000
-			max = 8000000
+			# kmpmp
+			min = var:american_west_migration_goal_min
+			max = var:american_west_migration_goal_max
 		}
 		trigger_event = { id = sa_migration.2 popup = yes }
 	}
@@ -397,23 +553,12 @@ je_american_west_migration = {
 				name = american_west_incorporated_population
 				value = 0
 			}
-			every_scope_state = {
-				limit = {
-					is_incorporated = yes
-					OR = {
-						region = sr:region_pacific_coast
-						region = sr:region_great_plains
-					}
-				}
-				ROOT = {
-					change_variable = {
-						name = american_west_incorporated_population
-						add = PREV.state_population
-					}
-				}
-			}
 			set_variable = {
 				name = american_west_incorporated_states
+				value = 0
+			}
+			set_variable = { # kmpmp
+				name = american_west_incorporated_population_start
 				value = 0
 			}
 			every_scope_state = {
@@ -424,11 +569,45 @@ je_american_west_migration = {
 						region = sr:region_great_plains
 					}
 				}
+				if = { # kmpmp
+					limit = {
+						NOT = {
+							has_variable = american_west_incorporated_population_state_start
+						}
+					}
+					set_variable = {
+						name = american_west_incorporated_population_state_start
+						value = state_population
+					}
+				}
 				ROOT = {
+					change_variable = {
+						name = american_west_incorporated_population
+						add = PREV.state_population
+					}
 					change_variable = {
 						name = american_west_incorporated_states
 						add = 1
 					}
+					change_variable = { # kmpmp
+						name = american_west_incorporated_population_start
+						add = PREV.var:american_west_incorporated_population_state_start
+					}
+				}
+			}
+			# kmpmp
+			set_variable = {
+				name = american_west_migration_goal_min
+				value = {
+					value = var:american_west_incorporated_population_start
+					add = 3000000
+				}
+			}
+			set_variable = {
+				name = american_west_migration_goal_max
+				value = {
+					value = var:american_west_incorporated_population_start
+					add = 8000000
 				}
 			}
 			set_variable = {
@@ -438,8 +617,9 @@ je_american_west_migration = {
 			change_variable = {
 				name = american_west_migration_goal
 				multiply = 500000 # 1000000
-				min = 3000000
-				max = 8000000
+				# kmpmp
+				min = var:american_west_migration_goal_min
+				max = var:american_west_migration_goal_max
 			}
 		}
 	}
