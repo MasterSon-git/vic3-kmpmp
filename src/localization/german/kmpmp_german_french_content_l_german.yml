@@ -18,7 +18,7 @@
 
  je_humiliated_by_the_germans: "Von den Deutschen gedemütigt"
  je_humiliated_by_the_germans_reason: ""
- kmpmp_humiliated_by_the_germans_buff: "Von den Deutschen gedemütigt"
+ kmpmp_humiliated_by_the_germans: "Von den Deutschen gedemütigt"
 
  kmpmp_natural_borders_buff: "Die natürlichen Grenzen"
  kmpmp_natural_borders_buff_tt: "Halte die Staaten $STATE_RHINELAND$ und $STATE_NORTH_RHINE$ um den Buff zu behalten."
