@@ -1,0 +1,110 @@
+﻿je_adriatic_empire = {
+    group = je_group_foreign_affairs
+    icon = "gfx/interface/icons/event_icons/event_advantage.dds"
+
+    is_shown_when_inactive = {
+        # has italian prime pop, is austria, is ottoman empire (or follow state)
+        OR = {
+            any_primary_culture = {
+                OR = {
+                    cu:north_italian = THIS
+                    cu:south_italian = THIS
+                }
+            }
+            c:AUS = ROOT
+            c:TUR = ROOT
+            was_formed_from = TUR
+        }
+    }
+
+    possible = {
+        # has researched pan nationalism
+        has_technology_researched = pan-nationalism
+    }
+
+    complete = {
+        # own at least 9 of the following states:
+        # apulia, abruzzo, Umbria, Romagna, Venetia, Croatia, Istria, Dalmatia, Montenegro, Albania
+        calc_true_if = {
+            amount >= 9
+
+            owns_entire_state_region = STATE_APULIA
+            owns_entire_state_region = STATE_ABRUZZO
+            owns_entire_state_region = STATE_UMBRIA
+            owns_entire_state_region = STATE_ROMAGNA
+            owns_entire_state_region = STATE_VENETIA
+            owns_entire_state_region = STATE_ISTRIA
+            owns_entire_state_region = STATE_CROATIA
+            owns_entire_state_region = STATE_DALMATIA
+            owns_entire_state_region = STATE_MONTENEGRO
+            owns_entire_state_region = STATE_ALBANIA
+        }
+    }
+
+    on_complete = {
+        if = {
+            limit = {
+                NOT = {
+                    has_modifier = kmpmp_adriatic_empire_modifier
+                }
+            }
+            add_modifier = {
+                name = kmpmp_adriatic_empire_modifier
+            }
+        }
+
+        if = {
+            limit = {
+                NOT = {
+                    has_journal_entry = je_adriatic_empire_maintain
+                }
+            }
+            add_journal_entry = {
+                type = je_adriatic_empire_maintain
+            }
+        }
+    }
+}
+
+je_adriatic_empire_maintain = {
+    group = je_group_foreign_affairs
+    icon = "gfx/interface/icons/event_icons/event_advantage.dds"
+
+    fail = {
+        # deactivates if owns less then 7 states
+        calc_true_if = {
+            amount < 7
+
+            owns_entire_state_region = STATE_APULIA
+            owns_entire_state_region = STATE_ABRUZZO
+            owns_entire_state_region = STATE_UMBRIA
+            owns_entire_state_region = STATE_ROMAGNA
+            owns_entire_state_region = STATE_VENETIA
+            owns_entire_state_region = STATE_ISTRIA
+            owns_entire_state_region = STATE_CROATIA
+            owns_entire_state_region = STATE_DALMATIA
+            owns_entire_state_region = STATE_MONTENEGRO
+            owns_entire_state_region = STATE_ALBANIA
+        }
+    }
+
+    on_fail = {
+        if = {
+            limit = {
+                has_modifier = kmpmp_adriatic_empire_modifier
+            }
+            remove_modifier = kmpmp_adriatic_empire_modifier
+        }
+
+        if = {
+            limit = {
+                NOT = {
+                    has_journal_entry = je_adriatic_empire
+                }
+            }
+            add_journal_entry = {
+                type = je_adriatic_empire
+            }
+        }
+    }
+}
