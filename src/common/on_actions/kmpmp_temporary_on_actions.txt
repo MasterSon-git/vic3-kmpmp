@@ -6,6 +6,7 @@ on_monthly_pulse_country = {
         kmpmp_add_mexico_je_action
         kmpmp_add_ig_trait_army_with_a_state_action
         kmpmp_add_german_fate_in_the_east_je_action
+        kmpmp_add_je_adriatic_empire_action
     }
 }
 
@@ -111,6 +112,37 @@ kmpmp_add_german_fate_in_the_east_je_action = {
             }
             add_journal_entry = {
                 type = je_german_fate_in_the_east
+            }
+        }
+    }
+}
+
+# add new je once, since we are mid session
+# can be removed next season
+kmpmp_add_je_adriatic_empire_action = {
+    effect = {
+        if = {
+            limit = {
+                NOR = {
+                    has_journal_entry = je_adriatic_empire
+                    has_journal_entry = je_adriatic_empire_maintain
+                }
+                has_technology_researched = pan-nationalism
+                # has italian prime pop, is austria, is ottoman empire (or follow state)
+                OR = {
+                    any_primary_culture = {
+                        OR = {
+                            cu:north_italian = THIS
+                            cu:south_italian = THIS
+                        }
+                    }
+                    c:AUS = ROOT
+                    c:TUR = ROOT
+                    was_formed_from = TUR
+                }
+            }
+            add_journal_entry = {
+                type = je_adriatic_empire
             }
         }
     }

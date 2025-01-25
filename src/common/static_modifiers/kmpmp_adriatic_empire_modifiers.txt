@@ -1,0 +1,17 @@
+﻿kmpmp_adriatic_empire_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    
+    # +25% Convois
+    country_convoys_capacity_mult = 0.25
+    # +10% Navy OFF DEF
+    unit_navy_defense_mult = 0.1
+    unit_navy_offense_mult = 0.1
+    # +20% Traderoute Volume
+    country_trade_route_quantity_mult = 0.2
+    # +10% Tradecenter TP
+    building_trade_center_throughput_add = 0.1
+    # +10% Port TP
+    building_port_throughput_add = 0.1
+    # +10% sulfur mine TP
+    building_sulfur_mine_throughput_add = 0.1
+}
