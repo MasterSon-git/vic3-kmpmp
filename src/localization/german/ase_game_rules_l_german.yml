@@ -172,7 +172,7 @@
  setting_ase_goods_that_can_be_stockpiled_by_ai_all_desc:0 "$ase_goods_that_can_be_stockpiled_by_ai_introduction$ alle auf dem Markt verfügbare Waren.$ase_goods_that_can_be_stockpiled_by_ai_rank_dependency$$ase_warning_has_a_major_impact_on_performance$"
 
  ase_percentage_of_stockpiling_states_player_setting_desc:0 "Lager in Spieler Ländern werden auf eine Reihe von Staaten aufgeteilt deren gemeinsames BIP dem angegebenen Prozensatz des BIP des Landes entspricht.\n@information! Länder mit wenigen Staaten verwenden einen etwas höheren Wert.$ase_warning_has_a_major_impact_on_performance$"
- rule_ase_percentage_of_stockpiling_states_player:0 "[Concept('concept_ase_mod_description', 'ASE')] | [Concept('concept_ase_market_stockpile', 'Lager')]-Staaten für Spieler"
+ rule_ase_percentage_of_stockpiling_states_player:0 "[Concept('concept_ase_mod_description', 'ASE')] | Staats [Concept('concept_ase_market_stockpile', 'Warenlager')] für Spieler"
  setting_ase_percentage_of_stockpiling_states_player_0:0 "Nur Hauptstadt"
  setting_ase_percentage_of_stockpiling_states_player_0_desc:0 "$ase_percentage_of_stockpiling_states_player_setting_desc$"
  setting_ase_percentage_of_stockpiling_states_player_005:0 "#bold 5%#!"
@@ -217,7 +217,7 @@
  setting_ase_percentage_of_stockpiling_states_player_100_desc:0 "$ase_percentage_of_stockpiling_states_player_setting_desc$"
 
  ase_percentage_of_stockpiling_states_ai_setting_desc:0 "Lager in KI-Ländern werden auf eine Reihe von Staaten aufgeteilt deren gemeinsames BIP dem angegebenen Prozensatz des BIP des Landes entspricht.\n@information! Länder mit wenigen Staaten verwenden einen etwas höheren Wert.$ase_warning_has_a_major_impact_on_performance$"
- rule_ase_percentage_of_stockpiling_states_ai:0 "[Concept('concept_ase_mod_description', 'ASE')] | [Concept('concept_ase_market_stockpile', 'Lager')]-Staaten für KI-Länder"
+ rule_ase_percentage_of_stockpiling_states_ai:0 "[Concept('concept_ase_mod_description', 'ASE')] | Staats [Concept('concept_ase_market_stockpile', 'Warenlager')] für KI-Länder"
  setting_ase_percentage_of_stockpiling_states_ai_0:0 "Nur Hauptstadt"
  setting_ase_percentage_of_stockpiling_states_ai_0_desc:0 "$ase_percentage_of_stockpiling_states_ai_setting_desc$"
  setting_ase_percentage_of_stockpiling_states_ai_005:0 "#bold 5%#!"
