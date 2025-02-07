@@ -1,38 +1,38 @@
 ﻿l_german:
- kmpmp_je_military_goods_shortage: "[Concept('concept_military_good', '$concept_military_goods$')] [Concept('concept_input_goods_shortage', '$concept_input_goods_shortage_short$')]"
- kmpmp_je_military_goods_shortage_reason: "Sollten unsere Militärwaren knapp werden, wird uns das auf dem Schlachtfeld stark beeinträchtigen."
+ kmpmp_je_military_goods_shortage: "$concept_military_goods$ $concept_shortages$"
+ kmpmp_je_military_goods_shortage_reason: "Sollten unsere Militärwaren knapp werden, wird uns das auf dem Schlachtfeld stark beeinträchtigen. [Concept('concept_shortage', '$concept_input_goods_shortages$')] treten in drei Stufen (#v [SCOPE.ScriptValue('kmpmp_military_goods_shortage_value_low')|%0=-]#!, #v [SCOPE.ScriptValue('kmpmp_military_goods_shortage_value_medium')|%0=-]#! und #v [SCOPE.ScriptValue('kmpmp_military_goods_shortage_value_high')|%0=-]#!) auf, falls der [concept_market_price] darüber liegt."
 
  # Small Arms
- kmpmp_shortage_of_small_arms: "$small_arms$ [Concept('concept_input_goods_shortage', '$concept_input_goods_shortage_short$')]"
+ kmpmp_shortage_of_small_arms: "$small_arms$ [Concept('concept_shortage', '$concept_input_goods_shortage$')]"
  kmpmp_shortage_of_small_arms_low: "#yellow Leichte#! $kmpmp_shortage_of_small_arms$"
  kmpmp_shortage_of_small_arms_medium: "#orange Mittlere#! $kmpmp_shortage_of_small_arms$"
  kmpmp_shortage_of_small_arms_high: "#red Extreme#! $kmpmp_shortage_of_small_arms$"
 
  # Ammo
- kmpmp_shortage_of_ammo: "$ammunition$ [Concept('concept_input_goods_shortage', '$concept_input_goods_shortage_short$')]"
+ kmpmp_shortage_of_ammo: "$ammunition$ [Concept('concept_shortage', '$concept_input_goods_shortage$')]"
  kmpmp_shortage_of_ammo_low: "#yellow Leichte#! $kmpmp_shortage_of_ammo$"
  kmpmp_shortage_of_ammo_medium: "#orange Mittlere#! $kmpmp_shortage_of_ammo$"
  kmpmp_shortage_of_ammo_high: "#red Extreme#! $kmpmp_shortage_of_ammo$"
 
  # Cannons
- kmpmp_shortage_of_artillery: "$artillery$ [Concept('concept_input_goods_shortage', '$concept_input_goods_shortage_short$')]"
+ kmpmp_shortage_of_artillery: "$artillery$ [Concept('concept_shortage', '$concept_input_goods_shortage$')]"
  kmpmp_shortage_of_artillery_low: "#yellow Leichte#! $kmpmp_shortage_of_artillery$"
  kmpmp_shortage_of_artillery_medium: "#orange Mittlere#! $kmpmp_shortage_of_artillery$"
  kmpmp_shortage_of_artillery_high: "#red Extreme#! $kmpmp_shortage_of_artillery$"
 
  # Radios
- kmpmp_shortage_of_radios: "$radios$ [Concept('concept_input_goods_shortage', '$concept_input_goods_shortage_short$')]"
+ kmpmp_shortage_of_radios: "$radios$ [Concept('concept_shortage', '$concept_input_goods_shortage$')]"
  kmpmp_shortage_of_radios_medium: "#orange Mittlere#! $kmpmp_shortage_of_radios$"
  kmpmp_shortage_of_radios_high: "#red Extreme#! $kmpmp_shortage_of_radios$"
  kmpmp_shortage_of_radios_cheese: "Stop cheesing Radios u nerd"
 
  # Tanks
- kmpmp_shortage_of_tanks: "$tanks$ [Concept('concept_input_goods_shortage', '$concept_input_goods_shortage_short$')]"
+ kmpmp_shortage_of_tanks: "$tanks$ [Concept('concept_shortage', '$concept_input_goods_shortage$')]"
  kmpmp_shortage_of_tanks_low: "#yellow Leichte#! $kmpmp_shortage_of_tanks$"
  kmpmp_shortage_of_tanks_medium: "#orange Mittlere#! $kmpmp_shortage_of_tanks$"
  kmpmp_shortage_of_tanks_high: "#red Extreme#! $kmpmp_shortage_of_tanks$"
 
  # Airplanes
- kmpmp_shortage_of_airplanes: "$aeroplanes$ [Concept('concept_input_goods_shortage', '$concept_input_goods_shortage_short$')]"
+ kmpmp_shortage_of_airplanes: "$aeroplanes$ [Concept('concept_shortage', '$concept_input_goods_shortage$')]"
  kmpmp_shortage_of_airplanes_medium: "#orange Medium#! $kmpmp_shortage_of_airplanes$"
  kmpmp_shortage_of_airplanes_high:  "#red Extreme#! $kmpmp_shortage_of_airplanes$"
