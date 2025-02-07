@@ -3,8 +3,8 @@
  goods_input_coffee_add_desc:0 "The amount of @coffee! Coffee consumed by buildings"
  goods_input_tea_add:0 "@tea! Tea input per level"
  goods_input_tea_add_desc:0 "The amount of @tea! Tea consumed by buildings"
- good_input_manowars_mult:0 "@manowars! $manowars$ $concept_input_mult$"
- goods_input_manowars_desc:0 "$concept_input_mult$"
+ goods_input_manowars_mult:0 "@manowars! $manowars$ $concept_input_mult$"
+ goods_input_manowars_mult_desc:0 "$concept_input_mult$"
 
  goods_input_ironclads_mult:0 "@ironclads! $ironclads$ $concept_input_mult$"
  goods_input_ironclads_mult_desc:0 "$concept_input_mult$"
