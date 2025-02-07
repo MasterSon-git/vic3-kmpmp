@@ -3,7 +3,7 @@
  goods_input_coffee_add_desc:0 "Die Menge an @coffee! Kaffee, die das Gebäude verbraucht."
  goods_input_tea_add:0 "@tea! Tee-Zufuhr pro Stufe"
  goods_input_tea_add_desc:0 "Die Menge an @tea! Tee, die das Gebäude verbraucht."
- goods_input_manowars_mult:0 "@manowars! $manowars$! $concept_input_mult$"
+ goods_input_manowars_mult:0 "@manowars! $manowars$ $concept_input_mult$"
  goods_input_manowars_mult_desc:0 "$concept_input_mult$"
 
  goods_input_ironclads_mult:0 "@ironclads! $ironclads$ $concept_input_mult$"
