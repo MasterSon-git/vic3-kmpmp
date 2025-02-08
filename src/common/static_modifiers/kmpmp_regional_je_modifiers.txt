@@ -1,0 +1,128 @@
+﻿# "Hegemony in the Mediterranean Sea"
+kmpmp_mediterranean_sea_hegemony = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_leadership_positive.dds
+
+    # +10% Naval OFF / DEF
+    unit_navy_defense_mult = 0.1
+    unit_navy_offense_mult = 0.1
+    # +10% Tradecenter TP
+    building_trade_center_throughput_add = 0.1
+}
+
+# "Domination in the Mediterranean Sea"
+kmpmp_mediterranean_sea_domination = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_leadership_positive.dds
+
+    # +20% Naval OFF / DEF
+    unit_navy_defense_mult = 0.2
+    unit_navy_offense_mult = 0.2
+    # +20% Tradecenter TP
+    building_trade_center_throughput_add = 0.2
+}
+
+# "Lost control in the Mediterranean Sea"
+kmpmp_mediterranean_sea_domination_negative = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_leadership_negative.dds
+
+    # -2 Army intrest group approval
+    interest_group_ig_armed_forces_approval_add = -2
+    # -10% Tradecenter TP
+    building_trade_center_throughput_add = -0.1
+    # -15% Prestige
+    country_prestige_mult = -0.15
+}
+
+# "Spearhead of Latin America"
+kmpmp_leader_of_latin_america_hegemony = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_leadership_positive.dds
+
+    # +5% Pop growth
+    state_birth_rate_mult = 0.05
+    # +25% Prestige
+    country_prestige_mult = 0.25
+    # +10 Legitimacy
+    country_legitimacy_base_add = 10
+    # +15% Migration attraction
+    state_migration_pull_mult = 0.15
+}
+
+# "Hegemony in East Asia"
+kmpmp_ruler_of_the_east_hegemony = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_leadership_positive.dds
+
+    # +5% OFF / DEF for army
+    unit_army_defense_mult = 0.05
+    unit_army_offense_mult = 0.05
+    # +5% Techspread
+    country_tech_spread_mult = 0.05
+}
+
+# "Humiliated in East Asia"
+kmpmp_ruler_of_the_east_hegemony_negative = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_leadership_negative.dds
+
+    # -5% OFF / DEF for army
+    unit_army_defense_mult = -0.05
+    unit_army_offense_mult = -0.05
+    # -5% Techspread
+    country_tech_spread_mult = -0.05
+    # +3% Tax waste
+    state_tax_waste_add = 0.03
+}
+
+# "Ruler of East Asia"
+kmpmp_ruler_of_the_east_domination = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_leadership_positive.dds
+
+    # +10% OFF / DEF for army
+    unit_army_defense_mult = 0.1
+    unit_army_offense_mult = 0.1
+    # +5% Techspread
+    country_tech_spread_mult = 0.05
+    # +10% Lead and Sulfur Mines TP
+    building_lead_mine_throughput_add = 0.1
+    building_sulfur_mine_throughput_add = 0.1
+}
+
+# "Loser of East Asia"
+kmpmp_ruler_of_the_east_domination_negative = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_leadership_negative.dds
+
+    # -10% OFF / DEF for army
+    unit_army_defense_mult = -0.1
+    unit_army_offense_mult = -0.1
+    # -10% Techspread
+    country_tech_spread_mult = -0.1
+    # +5% Tax waste
+    state_tax_waste_add = 0.05
+}
+
+# "Hegemony in the Caribbean Sea"
+kmpmp_the_sugar_monopoly_hegemony = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_leadership_positive.dds
+
+    # +5% TP for Food industry
+    building_food_industry_throughput_add = 0.05
+    # +5% TP for Ports
+    building_port_throughput_add = 0.05
+}
+
+# "Monopoly in the Caribbean Sea"
+kmpmp_the_sugar_monopoly_domination = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_leadership_positive.dds
+
+    # +10% TP for Food industry
+    building_food_industry_throughput_add = 0.1
+    # +10% TP for Ports
+    building_port_throughput_add = 0.1
+}
+
+# "Suppressed in the Caribbean Sea"
+kmpmp_the_sugar_monopoly_domination_negative = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_leadership_negative.dds
+
+    # -5% TP for Food Industry
+    building_food_industry_throughput_add = -0.05
+    # -5% TP for Sugar Plantations
+    building_sugar_plantation_throughput_add = -0.05
+}

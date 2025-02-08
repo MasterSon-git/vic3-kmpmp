@@ -16,6 +16,7 @@
 
 		level_scaled = {
 			# employment
+			building_employment_shopkeepers_add = 500
 			building_employment_laborers_add = 3000
 			building_employment_machinists_add = 1000
 			building_employment_engineers_add = 500
@@ -193,6 +194,7 @@ pm_steam_derricks = {
 		}
 
 		level_scaled = {
+			building_employment_shopkeepers_add = 500
 			building_employment_laborers_add = 3000
 			building_employment_machinists_add = 1000
 			building_employment_engineers_add = 500
@@ -223,9 +225,10 @@ pm_combustion_derricks = {
 		}
 
 		level_scaled = {
+			building_employment_shopkeepers_add = 500
 			building_employment_laborers_add = 2000
-			building_employment_machinists_add = 2000
-			building_employment_engineers_add = 900
+			building_employment_machinists_add = 1500
+			building_employment_engineers_add = 1000
 		}
 	}
 }

@@ -1,0 +1,61 @@
+﻿kmpmp_china_buff_je = {
+    icon = "gfx/interface/icons/event_icons/event_advantage.dds"
+    group = je_group_historical_content
+
+    is_shown_when_inactive = {
+        OR = {
+            any_primary_culture = {
+                has_discrimination_trait = han_chinese
+            }
+            country_has_primary_culture = cu:yi
+            country_has_primary_culture = cu:manchu
+        }
+        OR = {
+            capital.region = sr:region_north_china
+            capital.region = sr:region_south_china
+            capital.region = sr:region_manchuria
+            capital.region = sr:region_central_asia
+            capital.region = sr:region_himalayas
+        }
+    }
+
+    possible = {
+        NOT = {
+            has_journal_entry = kmpmp_china_buff_je
+        }
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                NOT = {
+                    has_modifier = kmpmp_china_buff_modifier
+                }
+            }
+            add_modifier = {
+                name = kmpmp_china_buff_modifier
+            }
+        }
+    }
+
+    complete = {
+        always = no
+    }
+
+    invalid = {
+        global_var:kmpmp_china_is_player ?= yes
+    }
+
+    on_invalid = {
+        if = {
+            limit = {
+                has_modifier = kmpmp_china_buff_modifier
+            }
+            remove_modifier = kmpmp_china_buff_modifier
+        }
+    }
+
+    can_revolution_inherit = yes
+
+    can_deactivate = no
+}

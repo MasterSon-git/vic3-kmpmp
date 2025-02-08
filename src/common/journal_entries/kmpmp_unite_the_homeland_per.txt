@@ -1,0 +1,126 @@
+﻿je_unite_the_homeland_per = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	group = je_group_historical_content
+	
+	possible = {
+	}
+
+	complete = {
+		owns_or_has_subject_entire_state_region = { STATE_REGION = s:STATE_HERAT }
+		owns_or_has_subject_entire_state_region = { STATE_REGION = s:STATE_SISTAN } # Bampur
+	}
+
+	on_complete = {
+		every_subject_or_below = {
+			limit = {
+				any_scope_state = {
+					region = sr:region_persia
+				}
+			}
+			ROOT = {
+				annex = PREV
+			}
+		}
+		trigger_event = {
+			id = kmpmp_ev_persia.1
+			popup = yes
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_PASHTUNISTAN }
+			}
+			s:STATE_PASHTUNISTAN = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_TAJIKISTAN }
+			}
+			s:STATE_TAJIKISTAN = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_KIRGHIZIA }
+			}
+			s:STATE_KIRGHIZIA = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_UZBEKIA }
+			}
+			s:STATE_UZBEKIA = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_TURKMENIA }
+			}
+			s:STATE_TURKMENIA = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_MERZ }
+			}
+			s:STATE_MERZ = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_KHIVA }
+			}
+			s:STATE_KHIVA = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_TIANSHAN }
+			}
+			s:STATE_TIANSHAN = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_DZUNGARIA }
+			}
+			s:STATE_DZUNGARIA = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_JETISY }
+			}
+			s:STATE_JETISY = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_SEMIRECHE }
+			}
+			s:STATE_SEMIRECHE = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_KASHMIR }
+			}
+			s:STATE_KASHMIR = {
+				add_claim = ROOT
+			}
+		}
+
+	}
+}

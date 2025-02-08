@@ -30,9 +30,62 @@ company_nederlandse_petroleum = {
 	
 	prosperity_modifier = {
 		state_colony_growth_speed_mult = 0.10
-		building_throughput_oil_mult = 0.10
+		# kmpmp
+		building_oil_rig_throughput_add = 0.10
 		building_railway_throughput_add = 0.10
 		building_sulfur_mine_throughput_add = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Koninklijke Philips N.V.
+company_philips = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/philips.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_electrics_industry
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_rhine
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_HOLLAND
+					state_region = s:STATE_GELRE
+				}
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_HOLLAND
+				state_region = s:STATE_GELRE
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_electrics_industry
+				level >= 3
+			}
+		}
+		has_technology_researched = electrical_generation
+	}
+	
+	prosperity_modifier = {
+		building_power_plant_throughput_add = 0.05 #kmpmp
+		country_weekly_innovation_mult = 0.05
+		country_weekly_innovation_max_add = 15
 	}	
 	
 	ai_weight = {
@@ -69,7 +122,7 @@ company_ericsson = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_electrics_industry
-				level >= 10
+				level >= 3
 			}
 		}
 		has_technology_researched = electric_telegraph
@@ -77,8 +130,8 @@ company_ericsson = {
 	}
 	
 	prosperity_modifier = {
-		country_weekly_innovation_mult = 0.15
-		state_education_access_wealth_add = 0.01
+		country_weekly_innovation_mult = 0.15 #0.1
+		state_education_access_wealth_add = 0.01 #0.005
 	}	
 	
 	ai_weight = {
@@ -115,7 +168,7 @@ company_lkab = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_iron_mine
-				level >= 10
+				level >= 3
 			}
 			has_building = building_railway
 		}
@@ -299,7 +352,7 @@ company_estanifera_llallagua = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_lead_mine
-				level >= 10
+				level >= 3
 			}
 		}
 	}
@@ -342,7 +395,7 @@ company_sao_paulo_railway = {
 			has_building = building_railway
 			any_scope_building = {
 				is_building_type = building_coffee_plantation
-				level >= 10
+				level >= 3
 			}
 		}
 		any_scope_state = {
@@ -355,7 +408,7 @@ company_sao_paulo_railway = {
 
 	prosperity_modifier = {
 		building_group_bg_coffee_plantations_throughput_add = 0.15
-		market_land_trade_capacity_add = 100
+		market_land_trade_capacity_add = 500 #10
 	}
 
 	ai_weight = {
@@ -391,7 +444,7 @@ company_rossi = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_arms_industry
-				level >= 10
+				level >= 3
 			}
 		}
 	}
@@ -436,7 +489,7 @@ company_fundidora_monterrey = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_steel_mills
-				level >= 10
+				level >= 3
 			}
 		}
 		has_technology_researched = bessemer_process
@@ -447,6 +500,55 @@ company_fundidora_monterrey = {
 		building_iron_mine_throughput_add = 0.1
 	}
 
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Compañía Mexicana de Petróleo El Águila SA
+company_el_aguila = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/el_aguila.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	
+	flavored_company = yes
+	
+	building_types = {
+		building_oil_rig
+		building_lead_mine #kmpmp
+		building_dye_plantation #kmpmp
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_mexico
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				region = sr:region_mexico
+			}
+		}
+	}	
+	
+	possible = {
+		any_scope_state = {
+			region = sr:region_mexico
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_oil_rig
+				level >= 5
+			}
+			is_coastal = yes
+		}
+		has_technology_researched = pumpjacks
+	}
+	
+	prosperity_modifier = {
+		building_glassworks_throughput_add = 0.1 #kmpmp
+		country_convoys_capacity_mult = 0.2 #0.15
+		interest_group_ig_industrialists_approval_add = 3
+	}
+	
 	ai_weight = {
 		value = 3 # Higher base value for flavored companies
 	}
@@ -483,7 +585,7 @@ company_la_rosada = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_arms_industry
-				level >= 10
+				level >= 3
 			}
 		}
 		has_technology_researched = shell_gun
@@ -528,14 +630,22 @@ company_peruvian_amazon = {
 			state_region = s:STATE_PASTAZA
 			any_scope_building = {
 				is_building_type = building_rubber_plantation
-				level >= 10
+				level >= 3
 			}
 		}
 		has_technology_researched = rubber_mastication
 	}
 
 	prosperity_modifier = {
-		state_loyalists_from_sol_change_mult = 0.1
+		state_loyalists_from_political_movements_mult = 0.1
+		# building_group_bg_rubber_mortality_mult = 0.1
+		# kmpmp
+		country_loyalism_increases_full_acceptance_mult = 0.1
+		country_loyalism_increases_second_rate_citizen_mult = 0.1
+		country_loyalism_increases_open_prejudice_mult = 0.1
+		country_loyalism_increases_cultural_erasure_mult = 0.1
+		country_loyalism_increases_violent_hostility_mult = 0.1
+
 		building_steel_mills_throughput_add = 0.1
 	}
 
@@ -543,6 +653,54 @@ company_peruvian_amazon = {
 		value = 3 # Higher base value for flavored companies
 	}
 }
+
+# Kablin Irmãos & Cia.
+company_kablin = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/brazil_kablin_irmaos_and_cia.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
+	
+	flavored_company = yes
+	
+	building_types = {
+		building_paper_mills
+		building_logging_camp
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_brazil
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				region = sr:region_brazil
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			region = sr:region_brazil
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_paper_mills
+				level >= 3
+			}
+		}
+		has_technology_researched = mechanical_tools
+	}
+	
+	prosperity_modifier = {
+		building_arts_academy_throughput_add = 0.2 #kmpmp
+		building_tooling_workshops_throughput_add = 0.1
+		state_infrastructure_from_population_max_add = 15
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
 # Standard Oil
 company_standard_oil = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/american_standard_oil.dds"
@@ -596,8 +754,8 @@ company_united_fruit = {
 	flavored_company = yes
 
 	building_types = {
-		building_banana_plantation
 		building_sugar_plantation
+		building_banana_plantation
 	}
 
 	potential = {
@@ -608,34 +766,25 @@ company_united_fruit = {
 	}
 
 	possible = {
-		OR = {
-			any_scope_state = {
+		any_country = {
 				OR = {
-					state_is_in_south_america = yes
-					state_is_in_central_america = yes
+					country_is_in_south_america = yes
+					country_is_in_central_america = yes
 				}
 				any_scope_building = {
-					is_building_type = building_banana_plantation
-					level >= 5
+						is_building_type = building_banana_plantation
+						levels_owned_by_country = {
+							target = ROOT 
+							value  > 15
+						}
 				}
-			}
-		}
-		any_subject_or_below = {
-			OR = {
-				country_is_in_south_america = yes
-				country_is_in_central_america = yes
-			}
-			any_scope_state = {
-				any_scope_building = {
-					is_building_type = building_banana_plantation
-					level >= 5
-				}
-			}
-		}
+		}	
 	}
 
 	prosperity_modifier = {
 		building_group_bg_plantations_throughput_add = 0.2
+		# country_infamy_decay_mult = -0.25
+		# kmpmp
 		building_cotton_plantation_throughput_add = 0.1
 	}
 
@@ -673,7 +822,7 @@ company_ford_motor = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_motor_industry
-				level >= 10
+				level >= 3
 			}
 		}
 		has_technology_researched = combustion_engine
@@ -719,7 +868,7 @@ company_mitsui = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_textile_mills
-				level >= 10
+				level >= 3
 			}
 		}
 		has_technology_researched = cotton_gin
@@ -739,6 +888,58 @@ company_mitsui = {
 		value = 3 # Higher base value for flavored companies
 	}
 }
+
+# South Manchuria Railway
+company_mantetsu = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/japanese_mantetsu.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_railway
+		building_coal_mine
+		building_glassworks
+	}
+	
+	potential = {
+		country_has_primary_culture = cu:japanese
+	}
+	
+	possible = { 
+		country_or_subject_owns_entire_state_region = STATE_SHENGJING
+		has_technology_researched = railways
+		any_scope_state = {
+			OR = {
+				region = sr:region_manchuria
+				region = sr:region_north_china
+			}
+			has_building = building_railway
+			count >= 4
+		}
+		custom_tooltip = {
+			text = is_meiji_japan
+			has_variable = meiji_restoration_complete
+		}
+	}
+	
+	prosperity_modifier = {
+		state_non_homeland_colony_growth_speed_mult = 0.1
+		building_wheat_farm_throughput_add = 0.15
+
+		# kmpmp
+		country_loyalism_increases_full_acceptance_mult = 0.15
+		country_loyalism_increases_second_rate_citizen_mult = 0.15
+		country_loyalism_increases_open_prejudice_mult = 0.15
+		country_loyalism_increases_cultural_erasure_mult = 0.15
+		country_loyalism_increases_violent_hostility_mult = 0.15
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
 # Mitsubishi
 company_mitsubishi = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/japanese_mitsubishi.dds"
@@ -766,7 +967,7 @@ company_mitsubishi = {
 					is_building_type = building_military_shipyards
 					is_building_type = building_coal_mine
 				}
-				level >= 10
+				level >= 3
 			}
 		}
 		has_technology_researched = ironclad_tech
@@ -823,7 +1024,7 @@ company_b_grimm = {
 					is_building_type = building_rice_farm
 					is_building_type = building_opium_plantation
 				}
-				level >= 10
+				level >= 3
 			}
 		}
 	}
@@ -868,7 +1069,7 @@ company_nam_dinh = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_textile_mills
-				level >= 10
+				level >= 3
 			}
 		}
 		has_technology_researched = corporate_charters
@@ -912,14 +1113,22 @@ company_misr = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_textile_mills
-				level >= 10
+				level >= 3
 			}
 		}
 		has_technology_researched = corporate_charters
 	}
 
 	prosperity_modifier = {
-		state_loyalists_from_sol_change_mult = 0.1
+		state_loyalists_from_political_movements_mult = 0.1
+
+		# kmpmp
+		country_loyalism_increases_full_acceptance_mult = 0.1
+		country_loyalism_increases_second_rate_citizen_mult = 0.1
+		country_loyalism_increases_open_prejudice_mult = 0.1
+		country_loyalism_increases_cultural_erasure_mult = 0.1
+		country_loyalism_increases_violent_hostility_mult = 0.1
+
 		building_dye_plantation_throughput_add = 0.1
 	}
 
@@ -963,7 +1172,7 @@ company_egyptian_rail = {
 		value = 3 # Higher base value for flavored companies
 	}
 }
-# Imperial Tobacco Corporation of Persia, Limited
+#Imperial Dye Corporation of Persia, Limited
 company_imperial_tobacco = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/imperial_tobacco.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
@@ -971,7 +1180,8 @@ company_imperial_tobacco = {
 	flavored_company = yes
 
 	building_types = {
-		building_tobacco_plantation
+		building_dye_plantation # building_tobacco_plantation
+		building_sulfur_mine
 	}
 
 	potential = {
@@ -991,7 +1201,7 @@ company_imperial_tobacco = {
 			region = sr:region_persia
 			is_incorporated = yes
 			any_scope_building = {
-				is_building_type = building_tobacco_plantation
+				is_building_type = building_dye_plantation # building_tobacco_plantation
 				level >= 5
 			}
 			count >= 4
@@ -1000,8 +1210,8 @@ company_imperial_tobacco = {
 	}
 
 	prosperity_modifier = {
-		country_tech_spread_mult = 0.15
-		state_infrastructure_mult = 0.1
+		country_tech_spread_mult = 0.1 #0.15
+		state_infrastructure_mult = 0.15 #0.1
 	}
 
 	ai_weight = {
@@ -1038,7 +1248,7 @@ company_imperial_arsenal = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_military_shipyards
-				level >= 10
+				level >= 3
 			}
 		}
 		has_technology_researched = hydraulic_cranes
@@ -1063,7 +1273,8 @@ company_ottoman_tobacco_regie = {
 	flavored_company = yes
 
 	building_types = {
-		building_tobacco_plantation
+		building_vineyard_plantation #kmpmp
+		# building_tobacco_plantation
 		building_opium_plantation
 	}
 
@@ -1075,7 +1286,8 @@ company_ottoman_tobacco_regie = {
 		any_scope_state = {
 			is_incorporated = yes
 			any_scope_building = {
-				is_building_type = building_tobacco_plantation
+				# is_building_type = building_tobacco_plantation
+				is_building_type = building_vineyard_plantation
 				level >= 5
 			}
 			count >= 4
@@ -1088,7 +1300,7 @@ company_ottoman_tobacco_regie = {
 
 	prosperity_modifier = {
 		country_production_tech_spread_mult = 0.1
-		country_society_tech_spread_mult = 0.05
+		country_society_tech_spread_mult = 0.15 #kmpmp
 	}
 
 	ai_weight = {
@@ -1105,8 +1317,9 @@ company_allatini_mills = {
 
 	building_types = {
 		building_wheat_farm
-		building_rye_farm
-		building_tea_plantation
+		# building_rye_farm
+		building_vineyard_plantation #kmpmp
+		building_tea_plantation #kmpmp
 	}
 
 	potential = {
@@ -1129,8 +1342,10 @@ company_allatini_mills = {
 				OR = {
 					is_building_type = building_wheat_farm
 					is_building_type = building_rye_farm
+					is_building_type = building_vineyard_plantation #kmpmp
+					is_building_type = building_tea_plantation #kmpmp
 				}
-				level >= 10
+				level >= 3
 			}
 		}
 		NOR = {
@@ -1141,8 +1356,16 @@ company_allatini_mills = {
 
 	prosperity_modifier = {
 		building_food_industry_throughput_add = 0.1
-		state_radicals_from_discrimination_mult = -0.1
-		state_accepted_birth_rate_mult = 0.02
+		state_radicalism_increases_violent_hostility_mult = -0.1 #-0.05
+		state_radicalism_increases_cultural_erasure_mult = -0.1 #-0.05
+		state_radicalism_increases_open_prejudice_mult = -0.1 #-0.05
+		# kmpmp
+		country_loyalism_increases_full_acceptance_mult = 0.1
+		country_loyalism_increases_second_rate_citizen_mult = 0.1
+		country_loyalism_increases_open_prejudice_mult = 0.1
+		country_loyalism_increases_cultural_erasure_mult = 0.1
+		country_loyalism_increases_violent_hostility_mult = 0.1
+		state_birth_rate_mult = 0.018 #kmpmp
 	}
 
 	ai_weight = {
@@ -1196,6 +1419,54 @@ company_orient_express = {
 	}
 }
 
+# Sunhwaguk
+company_sunhwaguk = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/korea_sunhwaguk.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_tobacco_plantation
+		building_rice_farm
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_manchuria
+	}
+	
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = { is_homeland = cu:korean }
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = {
+				is_homeland = cu:korean
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_tobacco_plantation
+				level >= 10
+			}
+		}
+		has_technology_researched = central_planning
+	}
+	
+	prosperity_modifier = {
+		country_tech_spread_mult = 0.2 #0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
 # Škoda Works
 company_skoda = {
     icon = "gfx/interface/icons/company_icons/historical_company_icons/skoda.dds"
@@ -1231,7 +1502,7 @@ company_skoda = {
                     is_building_type = building_arms_industry
                     is_building_type = building_artillery_foundries
                 }
-                level >= 10
+                level >= 3
             }
         }
         has_technology_researched = shell_gun
@@ -1280,7 +1551,7 @@ company_mav = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_motor_industry
-				level >= 10
+				level >= 3
 			}
 		}
 		has_technology_researched = railways
@@ -1328,7 +1599,7 @@ company_manfred_weiss = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_steel_mills
-				level >= 10
+				level >= 3
 			}
 		}
 		has_technology_researched = open_hearth_process
@@ -1426,7 +1697,7 @@ company_oevg = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_arms_industry
-				level >= 10
+				level >= 3
 			}
 		}
 		has_technology_researched = percussion_cap
@@ -1477,7 +1748,7 @@ company_franco_belge = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_motor_industry
-				level >= 10
+				level >= 3
 			}
 		}
 	}
@@ -1515,7 +1786,7 @@ company_ccci = {
 					region = sr:region_congo
 					any_scope_building = {
 						is_building_type = building_rubber_plantation
-						level >= 10
+						level >= 3
 					}
 				}
 			}
@@ -1523,7 +1794,7 @@ company_ccci = {
 				region = sr:region_congo
 				any_scope_building = {
 					is_building_type = building_rubber_plantation
-					level >= 10
+					level >= 3
 				}
 			}
 		}
@@ -1571,7 +1842,7 @@ company_chr_hansens = {
 					is_building_type = building_food_industry
 					is_building_type = building_chemical_plants
 				}
-				level >= 10
+				level >= 3
 			}
 		}
 	}
@@ -1617,7 +1888,7 @@ company_ap_moller = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_shipyards
-				level >= 10
+				level >= 3
 			}
 		}
 	}
@@ -1654,18 +1925,18 @@ company_nokia = {
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
-				state_region = s:STATE_SOUTHERN_FINLAND
+				state_region = s:STATE_UUSIMAA
 			}
 		}
 	}
 
 	possible = {
 		any_scope_state = {
-			state_region = s:STATE_SOUTHERN_FINLAND
+			state_region = s:STATE_UUSIMAA
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_paper_mills
-				level >= 10
+				level >= 3
 			}
 		}
 		has_technology_researched = atmospheric_engine
@@ -1710,7 +1981,7 @@ company_societe_mokta_el_hadid = {
 			state_region = s:STATE_CONSTANTINE
 			any_scope_building = {
 				is_building_type = building_iron_mine
-				level >= 10
+				level >= 3
 			}
 		}
 		has_technology_researched = bessemer_process
@@ -1755,7 +2026,7 @@ company_dmc = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_textile_mills
-				level >= 10
+				level >= 3
 			}
 		}
 		has_technology_researched = cotton_gin
@@ -1793,17 +2064,17 @@ company_cgv = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_vineyard_plantation
-				level >= 10
+				level >= 3
 			}
 			count >= 4
 		}
-		has_technology_researched = central_planning
+		has_technology_researched = mutual_funds #central_planning
 	}
 
 	prosperity_modifier = {
 		country_prestige_mult = 0.15
 		building_vineyard_plantation_throughput_add = 0.1
-		state_accepted_birth_rate_mult = 0.01
+		state_birth_rate_mult = 0.006 #kmpmp
 	}
 
 	ai_weight = {
@@ -1845,7 +2116,7 @@ company_fcm = {
 					is_building_type = building_shipyards
 					is_building_type = building_military_shipyards
 				}
-				level >= 10
+				level >= 3
 			}
 		}
 		has_technology_researched = ironclad_tech
@@ -1902,7 +2173,7 @@ company_rheinmetall = {
 					is_building_type = building_artillery_foundries
 					is_building_type = building_munition_plants
 				}
-				level >= 10
+				level >= 3
 			}
 		}
 		has_technology_researched = automatic_machine_guns
@@ -1951,7 +2222,7 @@ company_schichau = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_motor_industry
-				level >= 10
+				level >= 3
 			}
 		}
 		has_technology_researched = atmospheric_engine
@@ -1997,7 +2268,7 @@ company_siemens_and_halske = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_electrics_industry
-				level >= 10
+				level >= 3
 			}
 		}
 		has_technology_researched = electric_telegraph
@@ -2086,7 +2357,7 @@ company_basf = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_synthetics_plants
-				level >= 10
+				level >= 3
 			}
 		}
 	}
@@ -2133,7 +2404,7 @@ company_armstrong_whitworth = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_military_shipyards
-				level >= 10
+				level >= 3
 			}
 		}
 		has_technology_researched = ironclad_tech
@@ -2182,7 +2453,7 @@ company_john_brown = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_shipyards
-				level >= 10
+				level >= 3
 			}
 		}
 		has_technology_researched = steelworking
@@ -2200,6 +2471,53 @@ company_john_brown = {
 	}
 }
 
+# Ilva
+company_ilva = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/ilva.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_steel_mills
+		building_iron_mine
+		building_railway #kmpmp
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_italy
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_PIEDMONT
+			}
+		}
+	}	
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_PIEDMONT
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_steel_mills
+				level >= 3
+			}
+		}
+		has_technology_researched = arc_welding
+	}
+	
+	prosperity_modifier = {
+		building_railway_throughput_add = 0.1
+		building_artillery_foundries_throughput_add = 0.05
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
 # Ansaldo
 company_ansaldo = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/ansaldo.dds"
@@ -2208,8 +2526,9 @@ company_ansaldo = {
 	flavored_company = yes
 
 	building_types = {
+		building_munition_plants #kmpmp
 		building_artillery_foundries
-		building_steel_mills
+		# building_steel_mills
 		building_military_shipyards
 	}
 
@@ -2235,17 +2554,17 @@ company_ansaldo = {
 					is_building_type = building_arms_industry
 					is_building_type = building_artillery_foundries
 				}
-				level >= 10
+				level >= 3
 			}
 		}
 		has_technology_researched = railways
 	}
 
 	prosperity_modifier = {
-		unit_navy_offense_mult = 0.05
-		unit_navy_defense_mult = 0.05
-		unit_army_offense_mult = 0.05
-		unit_army_defense_mult = 0.05
+		unit_navy_offense_mult = 0.1 #0.05
+		unit_navy_defense_mult = 0.1 #kmpmp
+		unit_army_offense_mult = 0.1 #0.05
+		unit_army_defense_mult = 0.1 #kmpmp
 	}
 
 	ai_weight = {
@@ -2282,15 +2601,23 @@ company_ricordi = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_arts_academy
-				level >= 10
+				level >= 3
 			}
 		}
 	}
 
 	prosperity_modifier = {
-		building_paper_mills_throughput_add = 0.1
-		state_loyalists_from_sol_change_mult = 0.15
+		# country_prestige_mult = 0.15
+		state_loyalists_from_political_movements_mult = 0.15 #0.05
+		# kmpmp
+		country_loyalism_increases_full_acceptance_mult = 0.15
+		country_loyalism_increases_second_rate_citizen_mult = 0.15
+		country_loyalism_increases_open_prejudice_mult = 0.15
+		country_loyalism_increases_cultural_erasure_mult = 0.15
+		country_loyalism_increases_violent_hostility_mult = 0.15
 
+		building_paper_mills_throughput_add = 0.1
+		building_sulfur_mine_throughput_add = 0.1
 	}
 
 	ai_weight = {
@@ -2331,7 +2658,7 @@ company_fiat = {
 					is_building_type = building_motor_industry
 					is_building_type = building_war_machine_industry
 				}
-				level >= 10
+				level >= 3
 			}
 		}
 		has_technology_researched = combustion_engine
@@ -2340,8 +2667,8 @@ company_fiat = {
 	prosperity_modifier = {
 		military_formation_movement_speed_mult = 0.1
 		unit_army_offense_mult = 0.05
-		unit_army_defense_mult = 0.05
-		unit_combat_unit_type_light_tanks_offense_mult = 0.05
+		unit_army_defense_mult = 0.05 #kmpmp
+		unit_combat_unit_type_light_tanks_offense_mult = 0.1 #kmpmp
 	}
 
 	ai_weight = {
@@ -2382,7 +2709,7 @@ company_stt = {
 					is_building_type = building_shipyards
 					is_building_type = building_military_shipyards
 				}
-				level >= 10
+				level >= 3
 			}
 		}
 		has_technology_researched = gantry_cranes
@@ -2429,7 +2756,7 @@ company_aker_mek = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_shipyards
-				level >= 10
+				level >= 3
 			}
 		}
 		has_technology_researched = gantry_cranes
@@ -2474,13 +2801,14 @@ company_ursus = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_motor_industry
-				level >= 10
+				level >= 3
 			}
 		}
 		has_technology_researched = combustion_engine
 	}
 
 	prosperity_modifier = {
+		building_rye_farm_throughput_add = 0.2 #kmpmp
 		building_wheat_farm_throughput_add = 0.2
 		building_food_industry_throughput_add = 0.1
 	}
@@ -2529,7 +2857,7 @@ company_lilpop = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_steel_mills
-				level >= 10
+				level >= 3
 			}
 		}
 		has_technology_researched = steelworking
@@ -2571,9 +2899,15 @@ company_vodka_monopoly = {
 	}
 
 	prosperity_modifier = {
-		state_radicals_from_sol_change_mult = -0.2
-		unit_morale_loss_mult = -0.1
-		state_mortality_mult = 0.01
+		state_radicals_from_political_movements_mult = -0.15
+		# kmpmp
+		country_radicalism_increases_full_acceptance_mult = -0.2
+		country_radicalism_increases_second_rate_citizen_mult = -0.2
+		country_radicalism_increases_open_prejudice_mult = -0.2
+		country_radicalism_increases_cultural_erasure_mult = -0.2
+		country_radicalism_increases_violent_hostility_mult = -0.2
+		unit_morale_loss_mult = -0.2
+		# state_mortality_mult = 0.01
 	}
 
 	ai_weight = {
@@ -2616,7 +2950,7 @@ company_putilov_company = {
 					is_building_type = building_military_shipyards
 					is_building_type = building_artillery_foundries
 				}
-				level >= 10
+				level >= 3
 			}
 		}
 		has_technology_researched = railways
@@ -2678,6 +3012,55 @@ company_branobel = {
 		value = 3 # Higher base value for flavored companies
 	}
 }
+
+# Izhevsk Arms Plant
+company_izhevsk_arms_plant = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/russian_izhevsk_arms_plant.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_arms_industry
+		building_munition_plants
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_west_siberia
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_PERM
+			}
+		}
+	}			
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_PERM
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_arms_industry
+				level >= 3
+			}
+		}
+		has_technology_researched = rifling # corresponds roughly with the Izhevsk plant's incorporation as a private commercial enterprise, and not a state arsenal.
+	}
+	
+	prosperity_modifier = {
+		building_arms_industry_throughput_add = 0.1
+		building_artillery_foundries_throughput_add = 0.1
+		building_war_machine_industry_throughput_add = 0.1 #kmpmp
+		unit_army_defense_mult = 0.05 #kmpmp
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
 # Savva Morozov & Sons Cotton Textile Mfg. Co.
 company_savva_morozov = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/russian_savva_morozov_and_sons.dds"
@@ -2707,16 +3090,18 @@ company_savva_morozov = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_textile_mills
-				level >= 10
+				level >= 3
 			}
 		}
 		has_technology_researched = joint_stock_companies
 	}
 
 	prosperity_modifier = {
-		building_livestock_ranch_throughput_add = 0.1
-		building_logging_camp_throughput_add = 0.05
-		interest_group_ig_industrialists_pop_attraction_mult = 0.1
+		building_livestock_ranch_throughput_add = 0.1 #kmpmp
+		building_logging_camp_throughput_add = 0.1 #kmpmp
+		building_tooling_workshops_throughput_add = 0.1 #kmpmp
+		# country_prestige_mult = 0.1
+		# interest_group_ig_industrialists_pop_attraction_mult = 0.1
 	}
 
 	ai_weight = {
@@ -2734,8 +3119,8 @@ company_mozambique_company = {
 		building_cotton_plantation
 		building_tea_plantation
 		building_rice_farm
-		building_coffee_plantation
-		building_tobacco_plantation
+		building_coffee_plantation # kmpmp
+		building_tobacco_plantation # kmpmp
 	}
 
 	potential = {
@@ -2754,7 +3139,7 @@ company_mozambique_company = {
 					is_building_type = building_cotton_plantation
 					is_building_type = building_tea_plantation
 				}
-				level >= 10
+				level >= 3
 			}
 		}
 		has_technology_researched = mutual_funds
@@ -2762,7 +3147,7 @@ company_mozambique_company = {
 
 	prosperity_modifier = {
 		state_colony_growth_speed_mult = 0.1
-		state_colony_growth_creation_mult = 0.1
+		state_colony_growth_creation_factor = 0.1
 	}
 
 	ai_weight = {
@@ -2838,7 +3223,7 @@ company_zastava = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_arms_industry
-				level >= 10
+				level >= 3
 			}
 		}
 		has_technology_researched = gunsmithing
@@ -2885,7 +3270,7 @@ company_espana_industrial = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_textile_mills
-				level >= 10
+				level >= 3
 			}
 		}
 		has_technology_researched = cotton_gin
@@ -2932,7 +3317,7 @@ company_trubia = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_arms_industry
-				level >= 10
+				level >= 3
 			}
 		}
 		has_technology_researched = gunsmithing
@@ -2949,4 +3334,3 @@ company_trubia = {
 		value = 3 # Higher base value for flavored companies
 	}
 }
-

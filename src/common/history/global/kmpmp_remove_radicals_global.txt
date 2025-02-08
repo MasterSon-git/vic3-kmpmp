@@ -1,0 +1,15 @@
+﻿GLOBAL = {
+    every_state = {
+        if = {
+            limit = {
+                region = sr:region_central_america
+            }
+
+            # negative values should be allowed since 1.8.3
+            # https://forum.paradoxplaza.com/forum/developer-diary/victoria-3-dev-diary-139-hotfix-1-8-3-released-and-future-patches.1718087/
+            add_radicals_in_state = {
+                value = -1.0
+            }
+        }
+    }
+}

@@ -1,0 +1,3 @@
+﻿kmpmp_military_goods_shortage_value_low = 0.5       # shortage if market good pricier > value
+kmpmp_military_goods_shortage_value_medium = 0.6    # shortage if market good pricier > value
+kmpmp_military_goods_shortage_value_high = 0.75     # shortage if market good pricier > value

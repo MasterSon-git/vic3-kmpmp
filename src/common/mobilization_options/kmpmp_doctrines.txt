@@ -1,31 +1,4 @@
-﻿#mobilization_option_drill = {
-#
-#	possible = {
-#		market ?= {
-#			mg:tools ?= {
-#				market_goods_sell_orders > 0
-#			}
-#		}
-#	}
-#	
-#	unlocking_technologies = {
-#		napoleonic_warfare
-#	}
-#	upkeep_modifier = {
-#		goods_input_tools_add = 1
-#	}
-#	unit_modifier = {
-#		character_battle_condition_controlled_retreat_mult = 0.75
-#		character_battle_condition_panicked_retreat_mult = -0.75
-#	}
-#	ai_weight = {
-#		value = 1
-#	}
-#
-#    group = kmpmp_mog_doctrines
-#}
-
-mobilization_option_school_of_defence = {
+﻿mobilization_option_school_of_defence = {
 	texture = "gfx/interface/icons/military_icons/mobilization_option_school_of_defence.dds"
 	possible = {
 		market ?= {

@@ -1,0 +1,3 @@
+﻿l_english:
+ KMPMP_TURMOIL_INCORPORATED_STATES: "[concept_turmoil] in [Concept('concept_incorporated_state', '$concept_incorporated_states$')]"
+ KMPMP_POWER_BLOC_MANDATE_PROGRESS_JAPAN: "Japan is [concept_power_bloc_leader]"

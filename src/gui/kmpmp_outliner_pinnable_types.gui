@@ -1,0 +1,235 @@
+﻿@entry_width = 350
+@entry_height = 30
+
+types pinnable_outliner_types {
+
+	# market outliner from mod "Visible Shortage Fix"
+
+	type kmpmp_market_item = outliner_entry {
+		datacontext = "[OutlinerEntry.AccessScope.AccessMarket]"
+
+		blockoverride "pin_buttons" {
+			container = {
+				parentanchor = right
+				position = { 0 5 }
+
+				pin_buttons = {}
+			}
+		}
+
+		blockoverride "widget" {
+			flowcontainer = {
+				position = { 5 0 }
+				direction = vertical
+				parentanchor = vcenter
+				spacing = 4
+				
+				# market icon and name
+				flowcontainer = {
+					direction = horizontal
+
+					flowcontainer = {
+						parentanchor = vcenter
+						margin_right = 7
+						margin_left = 3
+
+						tiny_flag = {
+							parentanchor = vcenter
+							datacontext = "[Market.GetOwner]"
+						}
+					}
+
+					textbox = {
+						text = "[Market.GetNameNoFormatting]"
+						
+						tooltipwidget = {
+							FancyTooltip_Market = {}
+						}
+
+						align = left|nobaseline
+						autoresize = yes
+						elide = right
+						parentanchor = vcenter
+						fontsize_min = 14
+
+						minimumsize = { 135 -1 }
+						maximumsize = { 135 -1 }
+						block "expand_buttons_margin" {}
+					}
+				}
+
+				# top goods low/high
+				flowcontainer = {
+					direction = vertical
+					
+					flowcontainer = {
+						spacing = 11
+						maximumsize = { @entry_width -1 }
+						datamodel = "[Market.GetTopGoodsByLowestBalance('(int32)4')]"
+
+						item = {
+							button = {
+								size = { 75 23 }
+								visible = "[Not(Goods.IsLocal)]"
+
+								flowcontainer = {
+									spacing = 0
+									icon = {
+										size = { 23 23 }
+										texture = "[Goods.GetTexture]"
+									}
+
+									textbox = {
+										autoresize = yes
+										minimumsize = {38 -1}
+										maximumsize = {38 -1}
+										align = right|nobaseline
+										raw_text = "#blue [Goods.GetMarketBuyAndSellOrdersBalance|0=*]#!"
+										margin_right = 2
+									}
+
+									textbox = {
+										autoresize = yes
+										scale = 0.9
+										align = vcenter
+										#raw_text = "[Goods.GetMarketPrice|0]"
+										text = "[Goods.GetCompareIconAgainstBasePriceNoTooltip(Goods.GetMarketPrice)]"
+									}
+								}
+
+								
+
+								onclick = "[InformationPanelBar.OpenGoodsPanel( Market.Self, Goods.Self )]"
+								onrightclick = "[RightClickMenuManager.ShowForGoods( Goods.AccessSelf )]"
+								tooltipwidget = {
+									FancyTooltip_Goods = {}
+								}
+							}
+						}
+					}
+						
+					flowcontainer = {
+						spacing = 11
+						maximumsize = { @entry_width -1 }
+						datamodel = "[Market.GetTopGoodsByHighestBalance('(int32)4')]"
+
+						item = {
+							button = {
+								visible = "[Not(Goods.IsLocal)]"
+								size = { 75 23 }
+
+								flowcontainer = {
+									icon = {
+										size = {23 23}
+										texture = "[Goods.GetTexture]"
+									}
+
+									textbox = {
+										autoresize = yes
+										minimumsize = {38 -1}
+										maximumsize = {38 -1}
+										align = right|nobaseline
+										raw_text = "#gold [Goods.GetMarketBuyAndSellOrdersBalance|0=*]#!"
+										margin_right = 2
+									}
+
+									textbox = {
+										autoresize = yes
+										scale = 0.9
+										align = vcenter
+										#raw_text = "[Goods.GetMarketPrice|0]"
+										text = "[Goods.GetCompareIconAgainstBasePriceNoTooltip(Goods.GetMarketPrice)]"
+									}
+								}
+								onclick = "[InformationPanelBar.OpenGoodsPanel( Market.Self, Goods.Self )]"
+								onrightclick = "[RightClickMenuManager.ShowForGoods( Goods.AccessSelf )]"
+								tooltipwidget = {
+									FancyTooltip_Goods = {}
+								}
+							}
+						}
+					}
+				}
+				
+				divider_gold = {
+					#visible = "[Market.HasAnyGoodsShortage]"
+					size = { @entry_width 1 }
+				}
+
+				# shortages
+				flowcontainer = {
+					spacing = 3
+					margin_left = 3
+
+					icon = {
+						size = { 25 25 }
+						texture = "gfx/interface/icons/generic_icons/goods_shortage.dds"
+						parentanchor = bottom
+						alpha = "[TransparentIfFalse(Market.HasAnyGoodsShortage)]"
+					}
+
+					flowcontainer = {
+						datamodel = "[Market.GetGoodsWithShortage]"
+						righttoleft = yes
+						spacing = 5
+						visible = "[Market.HasAnyGoodsShortage]"
+						margin_left = 5
+						parentanchor = vcenter
+
+						item = {
+							button = {
+								visible = "[Goods.HasGoodsShortage]"
+								size = { 0 23 }
+
+								flowcontainer = {
+									resizeparent = yes
+
+									icon = {
+										size = { 23 23 }
+										texture = "[Goods.GetTexture]"
+									}
+
+									textbox = {
+										autoresize = yes
+										align = left|nobaseline
+										raw_text = "#r [Goods.GetMarketBuyAndSellOrdersBalance|0=*]#!"
+										margin_left = 2
+										margin_right = 2
+									}
+								}
+								onclick = "[InformationPanelBar.OpenGoodsPanel( Market.Self, Goods.Self )]"
+								onrightclick = "[RightClickMenuManager.ShowForGoods( Goods.AccessSelf )]"
+								tooltipwidget = {
+									FancyTooltip_Goods = {}
+								}
+							}
+						}
+					}
+
+					textbox = {
+						visible = "[Not(Market.HasAnyGoodsShortage)]"
+						autoresize = yes
+						text = "NO_MARKET_SHORTAGES"
+						align = nobaseline
+						margin_left = 5
+						alpha = "[TransparentIfFalse('(bool)no')]"
+						parentanchor = vcenter
+					}
+				}
+			}
+		}
+
+		blockoverride  "onrightclick" {
+			onrightclick = "[RightClickMenuManager.ShowForMarket(Market.AccessSelf)]"
+		}
+
+		blockoverride "onclick" {
+			onclick = "[InformationPanelBar.OpenMarketPanel( Market.AccessSelf )]"
+		}
+
+		blockoverride "onhover" {
+			onmousehierarchyenter = "[AccessHighlightManager.HighlightMarket(Market.Self)]"
+			onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+		}
+	}
+}

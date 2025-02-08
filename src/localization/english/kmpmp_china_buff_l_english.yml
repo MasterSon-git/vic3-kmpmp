@@ -1,0 +1,6 @@
+﻿l_english:
+ kmpmp_china_buff_modifier: "China buff"
+ kmpmp_china_buff_je: "$kmpmp_china_buff_modifier$"
+ kmpmp_china_buff_je_reason: "AI countries likes buffs."
+
+ KMPMP_DIPLOMATIC_ACCEPTANCE_CHINA_AGAINST_PLAYER: "You are player"

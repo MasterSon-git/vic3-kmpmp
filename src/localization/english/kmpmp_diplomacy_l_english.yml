@@ -1,2 +1,3 @@
 ﻿l_english:
+ DIPLO_ACTION_RELATIONS_COLD_OR_GREATER:1 "$DIPLO_ACTION_RELATIONS$ are at least $relations_cold$"
  DIPLO_ACTION_RELATIONS_COLD_OR_GREATER_NOT:1 "$DIPLO_ACTION_RELATIONS$ are less than $relations_cold$"

@@ -86,6 +86,8 @@
 				}
 				annex = c:POR
 				add_primary_culture = cu:portuguese
+				add_primary_culture = cu:afro_brazilian
+				add_primary_culture = cu:paulista
 			}
 		}
 		else_if = {
@@ -215,12 +217,12 @@ je_reino_unido_protectorate = {
 	}
 
 	on_complete = {
+		set_global_variable = je_reino_unido_protectorate_completed
 		if = {
 			limit = { # BRZ view
 				c:BRZ ?= ROOT
 				exists = c:POR
 			}
-			set_global_variable = je_reino_unido_protectorate_completed
 			c:BRZ ?= {
 				create_diplomatic_pact = {
 					country = c:POR
@@ -232,7 +234,6 @@ je_reino_unido_protectorate = {
 			limit = { # POR view
 				c:POR ?= ROOT
 			}
-			set_global_variable = je_reino_unido_protectorate_completed
 			c:POR ?= {
 				create_diplomatic_pact = {
 					country = c:BRZ

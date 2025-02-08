@@ -1,0 +1,7 @@
+﻿schleswig_holstein_question_solver = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_mult = 0.15 #0.25
+    # kmpmp
+    unit_offense_mult = 0.05
+    unit_defense_mult = 0.05
+}

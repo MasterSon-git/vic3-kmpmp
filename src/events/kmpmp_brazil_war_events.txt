@@ -1,0 +1,25 @@
+﻿namespace = kmpmp_ev_brazil_war
+
+kmpmp_ev_brazil_war.1 = {
+    type = country_event
+    hidden = yes
+
+    trigger = {
+        # Fired by history\global
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                is_player = yes
+            }
+
+            every_diplomatic_play = {
+                limit = {
+                    c:BRZ ?= initiator
+                }
+                resolve_play_for = initiator
+            }
+        }
+    }
+}

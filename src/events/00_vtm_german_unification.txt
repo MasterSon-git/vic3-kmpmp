@@ -53,8 +53,11 @@ german_unification.1 = {
 						country_has_primary_culture = cu:south_german
 					}					
 				}
-				NOT = {
+				NOR = {
 					THIS = ROOT
+					is_subject_type = subject_type_colony
+					is_subject_type = subject_type_dominion
+					is_subject_type = subject_type_chartered_company
 				}				
 			}
 			
@@ -62,10 +65,7 @@ german_unification.1 = {
 				limit = {
 					is_ai = yes			
 					OR = {
-						has_diplomatic_pact = {
-							who = ROOT
-							type = customs_union
-						}
+						is_in_customs_union_with = root
 						is_supporting_unification_candidate = { who = root country_formation = GER }
 					}
 				}			
@@ -100,7 +100,42 @@ german_unification.1 = {
 					country_tier = principality
 				}
 			}
+
+			# Reconcile with Austria if we didn't conquer states from them or release any crucial territories
+			hidden_effect = {
+				if = {
+					limit = {
+						exists = c:AUS
+						c:AUS = {
+							country_rank >= rank_value:great_power
+							NOT = { has_claim = root }
+							owns_entire_state_region = STATE_BOHEMIA
+							owns_entire_state_region = STATE_CENTRAL_HUNGARY
+							owns_entire_state_region = STATE_LOMBARDY
+						}
+					}
+					
+					c:AUS = {
+						set_mutual_secret_goal = {
+							country = root
+							secret_goal = reconcile
+						}
+					}
+				}
+			}
+
 			change_tag = NGF
+			if = {
+				limit = {
+					NOT = {
+						has_modifier = kmpmp_ger_buff_ngf_formed_modifier
+					}
+				}
+				add_modifier = {
+					name = kmpmp_ger_buff_ngf_formed_modifier
+					years = 10
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -130,6 +165,17 @@ german_unification.1 = {
 				}
 			}
 			change_tag = NGF
+			if = {
+				limit = {
+					NOT = {
+						has_modifier = kmpmp_ger_buff_ngf_formed_modifier
+					}
+				}
+				add_modifier = {
+					name = kmpmp_ger_buff_ngf_formed_modifier
+					years = 10
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -367,6 +413,22 @@ german_unification.4 = {
 
 	duration = 3
 
+	immediate = {
+		if = {
+			limit = {
+				has_global_variable = bismarck_variable
+			}
+			s:STATE_NORTH_DAKOTA = {
+				random_scope_state = {
+					set_hub_name = {
+						type = city
+						name = HUB_NAME_STATE_NORTH_DAKOTA_city_bismarck
+					}
+				}
+			}
+		}
+	}
+
 	trigger = {
 	}
 
@@ -444,11 +506,45 @@ german_unification.5 = {
 			add_journal_entry = {
 				type = je_north_german_unification
 			}
+
+			# kmpmp give claims on north germany
+			if = {
+				limit = {
+					c:PRU ?= ROOT
+				}
+				every_state = {
+					limit = {
+						NOT = { owner = ROOT }
+						state_region = {
+							is_homeland = cu:north_german
+						}
+					}
+					
+					state_region = { add_claim = ROOT }
+				}
+			}
 		}
 		else_if = {
 			limit = { country_has_primary_culture = cu:south_german }
 			add_journal_entry = {
 				type = je_south_german_unification
+			}
+
+			# kmpmp give claims on south germany
+			if = {
+				limit = {
+					c:AUS ?= ROOT
+				}
+				every_state = {
+					limit = {
+						NOT = { owner = ROOT }
+						state_region = {
+							is_homeland = cu:south_german
+						}
+					}
+					
+					state_region = { add_claim = ROOT }
+				}
 			}
 		}		
 	}
@@ -563,10 +659,7 @@ german_unification.100 = {
 				limit = {
 					is_ai = yes			
 					OR = {
-						has_diplomatic_pact = {
-							who = ROOT
-							type = customs_union
-						}
+						is_in_customs_union_with = root
 						is_supporting_unification_candidate = { who = root country_formation = GER }
 					}
 				}			

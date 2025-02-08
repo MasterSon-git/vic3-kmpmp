@@ -1,14 +1,41 @@
-﻿NDiplomacy = {
+﻿NEconomy = {
+	DECLARE_BANKRUPTCY_PENALTY_DURATION_YEARS = 4 #10		# How many years does it take for penalties from declaring bankruptcy to fully decay
+}
+
+NDiplomacy = {
 	WAR_GOAL_INFAMY_CONQUER_STATE = 4.0 #5.0
 	WAR_GOAL_INFAMY_MAKE_PROTECTORATE = 1.5 #2.0
+	WAR_GOAL_INFAMY_FORCE_NATIONALIZATION = 0.15 #5.0
+
+	# kmpmp TEST
+	# DEFAULT_TRUCE_MONTHS = 2
+}
+
+NCharacter = {
+	# kmpmp - try to reroll chars after months
+	VOIDED_CHARACTER_DEFAULT_DURATION = 6 #12 # Default months a character will be in the void before being deleted
 }
 
 NWar = {
-	WAR_EXHAUSTION_KIA_FACTOR =  1.65 #kmpmp #5.0 # Scaled by casualties compared to total manpower
+	WAR_EXHAUSTION_KIA_FACTOR =  1.65 #kmpmp #4.0 # Scaled by casualties compared to total manpower
+
+	STATE_CONQUEST_HOMELAND_AND_CLAIM_RADICALIZATION = 0.0 #0.1
+	STATE_CONQUEST_HOMELAND_OR_CLAIM_RADICALIZATION = 0.0 #0.3
 }
-NMilitary {
+
+NMilitary = {
 	MANPOWER_LOST_DUE_TO_ATTRITION_PER_WEEK_MIN = 0.024 #0.04 	# The minimum percentage of manpower a unit can lose each week due to attrition
 	MANPOWER_LOST_DUE_TO_ATTRITION_PER_WEEK_MAX = 0.072 #0.12 	# The maximum percentage of manpower a unit can lose each week due to attrition
 	CONVOY_RAIDING_COOLDOWN_DAYS_MIN = 20 #10
 	CONVOY_RAIDING_DEFENSE_MULT = 0.25 #0.15
+	MILITARY_FORMATION_WEEKLY_MAX_UNIT_UPGRADES_FLEET = 0.025 #0.05
+}
+
+NCountry = {
+	INCORPORATION_TIME_NO_MATCH = 10	#20			# Years if the state's Homeland cultures have nothing in common with the country's primary cultures
+}
+
+NPowerBlocs = {
+	COUNTRY_POPULATION_LEVERAGE_RESISTANCE_MODIFIER_DIVISOR = 1200000 	#1000000 	# Population divided by this is multiplied by country_leverage_resistance_per_population to give a certain amount of leverage per million people
+	COUNTRY_POPULATION_LEVERAGE_RESISTANCE_MODIFIER_MAX_MULTIPLIER = 100	# Max multiplier given by population. With the value above at 1 000 000, this means the cap for leverage resistance is at 100 000 000.
 }

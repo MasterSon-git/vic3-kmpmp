@@ -1,0 +1,12 @@
+﻿any_scope_state_all_in_state_region = {
+    global = TRIGGER_ANY_SCOPE_STATE_ALL_IN_STATE_REGION
+    global_not = TRIGGER_ANY_SCOPE_STATE_ALL_IN_STATE_REGION_NOT
+}
+
+any_scope_building_count_in_state = {
+    global = TRIGGER_ANY_SCOPE_BUILDING_COUNT_IN_STATE
+}
+
+kmpmp_turmoil_incorporated_states_greater_or_equal_tooltip = {
+    global = TRIGGER_KMPMP_TURMOIL_INCORPORATED_STATES_GREATER_OR_EQUAL_TOOLTIP
+}

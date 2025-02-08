@@ -1,0 +1,92 @@
+﻿kmpmp_update_united_country_buff = {
+    if = {
+        limit = {
+            c:IBE ?= ROOT
+        }
+        kmpmp_update_united_country_buff_ibe = yes
+    }
+    if = {
+        limit = {
+            c:UNL ?= ROOT
+        }
+        kmpmp_update_united_country_buff_unl = yes
+    }
+    if = {
+        limit = {
+            c:P01 ?= ROOT
+        }
+        kmpmp_update_united_country_buff_p01 = yes
+    }
+}
+
+kmpmp_update_united_country_buff_ibe = {
+    if = {
+        limit = {
+            kmpmp_owns_all_ibe_states = yes
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_modifier = kmpmp_united_iberia
+                }
+            }
+            add_modifier = {
+                name = kmpmp_united_iberia
+            }
+        }
+    }
+    else_if = {
+        limit = {
+            has_modifier = kmpmp_united_iberia
+        }
+        remove_modifier = kmpmp_united_iberia
+    }
+}
+
+kmpmp_update_united_country_buff_unl = {
+    if = {
+        limit = {
+            kmpmp_owns_all_unl_states = yes
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_modifier = kmpmp_united_netherlands
+                }
+            }
+            add_modifier = {
+                name = kmpmp_united_netherlands
+            }
+        }
+    }
+    else_if = {
+        limit = {
+            has_modifier = kmpmp_united_netherlands
+        }
+        remove_modifier = kmpmp_united_netherlands
+    }
+}
+
+kmpmp_update_united_country_buff_p01 = {
+    if = {
+        limit = {
+            kmpmp_owns_all_p01_states = yes
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_modifier = kmpmp_parthian_empire
+                }
+            }
+            add_modifier = {
+                name = kmpmp_parthian_empire
+            }
+        }
+    }
+    else_if = {
+        limit = {
+            has_modifier = kmpmp_parthian_empire
+        }
+        remove_modifier = kmpmp_parthian_empire
+    }
+}

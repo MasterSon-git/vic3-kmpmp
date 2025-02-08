@@ -1,0 +1,63 @@
+﻿papermap_cleanmap = {
+	category = papermap_theme
+
+	papermap_textures_file = "gfx/map/textures/maptextures_cleanmap.settings"
+
+	map_object = {
+		pdxmesh = "papermap_extension_top_mesh"
+		locator = "papermap_extension_top_locator"
+	}
+
+	map_object = {
+		pdxmesh = "papermap_extension_bottom_mesh"
+		locator = "papermap_extension_bottom_locator"
+	}
+}
+
+papermap_navy = {
+	category = papermap_theme
+
+	papermap_textures_file = "gfx/map/textures/maptextures_navy.settings"
+
+	map_object = {
+		pdxmesh = "papermap_extension_top_navy_mesh"
+		locator = "papermap_extension_top_locator"
+	}
+
+	map_object = {
+		pdxmesh = "papermap_extension_bottom_navy_mesh"
+		locator = "papermap_extension_bottom_locator"
+	}
+}
+
+papermap_shadedreliefv2_mod_linwajun = {
+	category = papermap_theme
+
+	papermap_textures_file = "gfx/map/textures/maptextures_shadedreliefv2.settings"
+
+	map_object = {
+		pdxmesh = "papermap_extension_top_mesh"
+		locator = "papermap_extension_top_locator"
+	}
+
+	map_object = {
+		pdxmesh = "papermap_extension_bottom_mesh"
+		locator = "papermap_extension_bottom_locator"
+	}
+}
+
+papermap_vic2stylemap = {
+	category = papermap_theme
+
+	papermap_textures_file = "gfx/map/textures/maptextures_vic2stylemap.settings"
+
+	map_object = {
+		pdxmesh = "papermap_extension_top_mesh"
+		locator = "papermap_extension_top_locator"
+	}
+
+	map_object = {
+		pdxmesh = "papermap_extension_bottom_mesh"
+		locator = "papermap_extension_bottom_locator"
+	}
+}

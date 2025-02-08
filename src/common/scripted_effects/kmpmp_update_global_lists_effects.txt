@@ -1,0 +1,867 @@
+﻿kmpmp_update_global_lists = {
+    kmpmp_update_global_list_states_je_master_of_mediterranean_sea = yes
+    kmpmp_update_global_list_states_je_leader_of_latin_america = yes
+    kmpmp_update_global_list_states_je_ruler_of_the_east = yes
+    kmpmp_update_global_list_states_je_the_sugar_monopoly = yes
+
+    kmpmp_update_global_list_states_ibe = yes
+    kmpmp_update_global_list_states_unl = yes
+    kmpmp_update_global_list_states_p01 = yes
+    kmpmp_update_global_list_states_sca = yes
+    kmpmp_update_global_list_states_ltn = yes
+}
+
+kmpmp_update_global_list_states_je_master_of_mediterranean_sea = {
+    if = {
+        limit = { # list version not exists or version <= 0
+            OR = {
+                NOT = {
+                    exists = global_var:states_je_master_of_mediterranean_sea_version
+                }
+                global_var:states_je_master_of_mediterranean_sea_version <= 0
+            }
+        }
+        # clean up list if exists
+        if = {
+            limit = {
+                has_global_variable_list = states_je_master_of_mediterranean_sea
+            }
+            clear_global_variable_list = states_je_master_of_mediterranean_sea
+        }
+        # v1
+        set_global_variable = {
+            name = states_je_master_of_mediterranean_sea_version
+            value = 1
+        }
+        # Cyprus, Crete, East Aegean Islands, West Aegean Island, Malta, Sicily, Sardinia, Corsica, Baleares, Ionian Islands, Tunesia, al Rif, Libya
+        add_to_global_variable_list = {
+            name = states_je_master_of_mediterranean_sea
+            target = s:STATE_CYPRUS
+        }
+        add_to_global_variable_list = {
+            name = states_je_master_of_mediterranean_sea
+            target = s:STATE_CRETE
+        }
+        add_to_global_variable_list = {
+            name = states_je_master_of_mediterranean_sea
+            target = s:STATE_EAST_AEGEAN_ISLANDS
+        }
+        add_to_global_variable_list = {
+            name = states_je_master_of_mediterranean_sea
+            target = s:STATE_WEST_AEGEAN_ISLANDS
+        }
+        add_to_global_variable_list = {
+            name = states_je_master_of_mediterranean_sea
+            target = s:STATE_MALTA
+        }
+        add_to_global_variable_list = {
+            name = states_je_master_of_mediterranean_sea
+            target = s:STATE_SICILY
+        }
+        add_to_global_variable_list = {
+            name = states_je_master_of_mediterranean_sea
+            target = s:STATE_SARDINIA
+        }
+        add_to_global_variable_list = {
+            name = states_je_master_of_mediterranean_sea
+            target = s:STATE_CORSICA
+        }
+        add_to_global_variable_list = {
+            name = states_je_master_of_mediterranean_sea
+            target = s:STATE_BALEARES
+        }
+        add_to_global_variable_list = {
+            name = states_je_master_of_mediterranean_sea
+            target = s:STATE_IONIAN_ISLANDS
+        }
+        add_to_global_variable_list = {
+            name = states_je_master_of_mediterranean_sea
+            target = s:STATE_TUNISIA
+        }
+        add_to_global_variable_list = {
+            name = states_je_master_of_mediterranean_sea
+            target = s:STATE_AL_RIF
+        }
+        add_to_global_variable_list = {
+            name = states_je_master_of_mediterranean_sea
+            target = s:STATE_LIBYA
+        }
+    }
+}
+
+kmpmp_update_global_list_states_je_leader_of_latin_america = {
+    if = {
+        limit = { # list version not exists or version <= 0
+            OR = {
+                NOT = {
+                    exists = global_var:states_je_leader_of_latin_america_version
+                }
+                global_var:states_je_leader_of_latin_america_version <= 0
+            }
+        }
+        # clean up list if exists
+        if = {
+            limit = {
+                has_global_variable_list = states_je_leader_of_latin_america
+            }
+            clear_global_variable_list = states_je_leader_of_latin_america
+        }
+        # v1
+        set_global_variable = {
+            name = states_je_leader_of_latin_america_version
+            value = 1
+        }
+        # Central America (Yucatan, Chiapas, Guatemala, SanSalvador, Honduras, Nicaragua, Costa Rica, Panama)
+        add_to_global_variable_list = {
+            name = states_je_leader_of_latin_america
+            target = s:STATE_YUCATAN
+        }
+        add_to_global_variable_list = {
+            name = states_je_leader_of_latin_america
+            target = s:STATE_CHIAPAS
+        }
+        add_to_global_variable_list = {
+            name = states_je_leader_of_latin_america
+            target = s:STATE_GUATEMALA
+        }
+        add_to_global_variable_list = {
+            name = states_je_leader_of_latin_america
+            target = s:STATE_SAN_SALVADOR
+        }
+        add_to_global_variable_list = {
+            name = states_je_leader_of_latin_america
+            target = s:STATE_HONDURAS
+        }
+        add_to_global_variable_list = {
+            name = states_je_leader_of_latin_america
+            target = s:STATE_NICARAGUA
+        }
+        add_to_global_variable_list = {
+            name = states_je_leader_of_latin_america
+            target = s:STATE_COSTA_RICA
+        }
+        add_to_global_variable_list = {
+            name = states_je_leader_of_latin_america
+            target = s:STATE_PANAMA
+        }
+        # Grand Colombia (Antioquia, Cauca, Guaviare, Cundinamarca, Zulia, Miranda, Bolivar, Guayana)
+        add_to_global_variable_list = {
+            name = states_je_leader_of_latin_america
+            target = s:STATE_ANTIOQUIA
+        }
+        add_to_global_variable_list = {
+            name = states_je_leader_of_latin_america
+            target = s:STATE_CAUCA
+        }
+        add_to_global_variable_list = {
+            name = states_je_leader_of_latin_america
+            target = s:STATE_GUAVIARE
+        }
+        add_to_global_variable_list = {
+            name = states_je_leader_of_latin_america
+            target = s:STATE_CUNDINAMARCA
+        }
+        add_to_global_variable_list = {
+            name = states_je_leader_of_latin_america
+            target = s:STATE_ZULIA
+        }
+        add_to_global_variable_list = {
+            name = states_je_leader_of_latin_america
+            target = s:STATE_MIRANDA
+        }
+        add_to_global_variable_list = {
+            name = states_je_leader_of_latin_america
+            target = s:STATE_BOLIVAR
+        }
+        add_to_global_variable_list = {
+            name = states_je_leader_of_latin_america
+            target = s:STATE_GUAYANA
+        }
+        # La Plata (Santiago, Los Rios, Araucania, Patagonia, South Atlantic islands, Mendoza (STATE_RIO_NEGRO), Tucuman, Chaco, Cordoba (STATE_LA_PAMPA), Buenos Aires, Santa Fe, Bajo Paraguay, Alto Paraguay)
+        add_to_global_variable_list = {
+            name = states_je_leader_of_latin_america
+            target = s:STATE_SANTIAGO
+        }
+        add_to_global_variable_list = {
+            name = states_je_leader_of_latin_america
+            target = s:STATE_LOS_RIOS
+        }
+        add_to_global_variable_list = {
+            name = states_je_leader_of_latin_america
+            target = s:STATE_ARAUCANIA
+        }
+        add_to_global_variable_list = {
+            name = states_je_leader_of_latin_america
+            target = s:STATE_PATAGONIA
+        }
+        add_to_global_variable_list = {
+            name = states_je_leader_of_latin_america
+            target = s:STATE_SOUTH_ATLANTIC_ISLANDS
+        }
+        add_to_global_variable_list = {
+            name = states_je_leader_of_latin_america
+            target = s:STATE_RIO_NEGRO
+        }
+        add_to_global_variable_list = {
+            name = states_je_leader_of_latin_america
+            target = s:STATE_TUCUMAN
+        }
+        add_to_global_variable_list = {
+            name = states_je_leader_of_latin_america
+            target = s:STATE_CHACO
+        }
+        add_to_global_variable_list = {
+            name = states_je_leader_of_latin_america
+            target = s:STATE_LA_PAMPA
+        }
+        add_to_global_variable_list = {
+            name = states_je_leader_of_latin_america
+            target = s:STATE_BUENOS_AIRES
+        }
+        add_to_global_variable_list = {
+            name = states_je_leader_of_latin_america
+            target = s:STATE_SANTA_FE
+        }
+        add_to_global_variable_list = {
+            name = states_je_leader_of_latin_america
+            target = s:STATE_BAJO_PARAGUAY
+        }
+        add_to_global_variable_list = {
+            name = states_je_leader_of_latin_america
+            target = s:STATE_ALTO_PARAGUAY
+        }
+    }
+}
+
+kmpmp_update_global_list_states_je_ruler_of_the_east = {
+    if = {
+        limit = { # list version not exists or version <= 0
+            OR = {
+                NOT = {
+                    exists = global_var:states_je_ruler_of_the_east_version
+                }
+                global_var:states_je_ruler_of_the_east_version <= 0
+            }
+        }
+        # clean up list if exists
+        if = {
+            limit = {
+                has_global_variable_list = states_je_ruler_of_the_east
+            }
+            clear_global_variable_list = states_je_ruler_of_the_east
+        }
+        # v1
+        set_global_variable = {
+            name = states_je_ruler_of_the_east_version
+            value = 1
+        }
+        # Manchuria region (North Manchuria, Outer Manchuria, Southern Manchuria, Gwanbuk (STATE_SARIWON), Yangseo (STATE_PYONGYANG), Gyeonggi (STATE_SEOUL), Yangho, Yeongnam (STATE_BUSAN))
+        add_to_global_variable_list = {
+            name = states_je_ruler_of_the_east
+            target = s:STATE_NORTHERN_MANCHURIA
+        }
+        add_to_global_variable_list = {
+            name = states_je_ruler_of_the_east
+            target = s:STATE_OUTER_MANCHURIA
+        }
+        add_to_global_variable_list = {
+            name = states_je_ruler_of_the_east
+            target = s:STATE_SOUTHERN_MANCHURIA
+        }
+        add_to_global_variable_list = {
+            name = states_je_ruler_of_the_east
+            target = s:STATE_SARIWON
+        }
+        add_to_global_variable_list = {
+            name = states_je_ruler_of_the_east
+            target = s:STATE_PYONGYANG
+        }
+        add_to_global_variable_list = {
+            name = states_je_ruler_of_the_east
+            target = s:STATE_SEOUL
+        }
+        add_to_global_variable_list = {
+            name = states_je_ruler_of_the_east
+            target = s:STATE_YANGHO
+        }
+        add_to_global_variable_list = {
+            name = states_je_ruler_of_the_east
+            target = s:STATE_BUSAN
+        }
+        # North China (Uliastai, Urga, Alxa, Monan (STATE_HINGGAN), Shengjing)
+        add_to_global_variable_list = {
+            name = states_je_ruler_of_the_east
+            target = s:STATE_ULIASTAI
+        }
+        add_to_global_variable_list = {
+            name = states_je_ruler_of_the_east
+            target = s:STATE_URGA
+        }
+        add_to_global_variable_list = {
+            name = states_je_ruler_of_the_east
+            target = s:STATE_ALXA
+        }
+        add_to_global_variable_list = {
+            name = states_je_ruler_of_the_east
+            target = s:STATE_HINGGAN
+        }
+        add_to_global_variable_list = {
+            name = states_je_ruler_of_the_east
+            target = s:STATE_SHENGJING
+        }
+    }
+}
+
+kmpmp_update_global_list_states_je_the_sugar_monopoly = {
+    if = {
+        limit = { # list version not exists or version <= 0
+            OR = {
+                NOT = {
+                    exists = global_var:states_je_the_sugar_monopoly_version
+                }
+                global_var:states_je_the_sugar_monopoly_version <= 0
+            }
+        }
+        # clean up list if exists
+        if = {
+            limit = {
+                has_global_variable_list = states_je_the_sugar_monopoly
+            }
+            clear_global_variable_list = states_je_the_sugar_monopoly
+        }
+        # v1
+        set_global_variable = {
+            name = states_je_the_sugar_monopoly_version
+            value = 1
+        }
+        # West Indies, Puerto Rico, Haiti, Santo Domingo, Bahamas, Cuba, Jamaica
+        add_to_global_variable_list = {
+            name = states_je_the_sugar_monopoly
+            target = s:STATE_WEST_INDIES
+        }
+        add_to_global_variable_list = {
+            name = states_je_the_sugar_monopoly
+            target = s:STATE_PUERTO_RICO
+        }
+        add_to_global_variable_list = {
+            name = states_je_the_sugar_monopoly
+            target = s:STATE_HAITI
+        }
+        add_to_global_variable_list = {
+            name = states_je_the_sugar_monopoly
+            target = s:STATE_SANTO_DOMINGO
+        }
+        add_to_global_variable_list = {
+            name = states_je_the_sugar_monopoly
+            target = s:STATE_BAHAMAS
+        }
+        add_to_global_variable_list = {
+            name = states_je_the_sugar_monopoly
+            target = s:STATE_CUBA
+        }
+        add_to_global_variable_list = {
+            name = states_je_the_sugar_monopoly
+            target = s:STATE_JAMAICA
+        }
+    }
+}
+
+kmpmp_update_global_list_states_ibe = {
+    if = {
+        limit = { # list version not exists or version <= 0
+            OR = {
+                NOT = {
+                    exists = global_var:states_ibe_version
+                }
+                global_var:states_ibe_version <= 0
+            }
+        }
+        # clean up list if exists
+        if = {
+            limit = {
+                has_global_variable_list = states_ibe
+            }
+            clear_global_variable_list = states_ibe
+        }
+        # v1
+        set_global_variable = {
+            name = states_ibe_version
+            value = 1
+        }
+        # Iberian states
+        add_to_global_variable_list = {
+            name = states_ibe
+            target = s:STATE_GALICIA
+        }
+        add_to_global_variable_list = {
+            name = states_ibe
+            target = s:STATE_ASTURIAS
+        }
+        add_to_global_variable_list = {
+            name = states_ibe
+            target = s:STATE_CASTILE
+        }
+        add_to_global_variable_list = {
+            name = states_ibe
+            target = s:STATE_NAVARRA
+        }
+        add_to_global_variable_list = {
+            name = states_ibe
+            target = s:STATE_ARAGON
+        }
+        add_to_global_variable_list = {
+            name = states_ibe
+            target = s:STATE_CATALONIA
+        }
+        add_to_global_variable_list = {
+            name = states_ibe
+            target = s:STATE_BADAJOZ
+        }
+        add_to_global_variable_list = {
+            name = states_ibe
+            target = s:STATE_TOLEDO
+        }
+        add_to_global_variable_list = {
+            name = states_ibe
+            target = s:STATE_VALENCIA
+        }
+        add_to_global_variable_list = {
+            name = states_ibe
+            target = s:STATE_GALICIA
+        }
+        add_to_global_variable_list = {
+            name = states_ibe
+            target = s:STATE_ANDALUSIA
+        }
+        add_to_global_variable_list = {
+            name = states_ibe
+            target = s:STATE_GRANADA
+        }
+        # portuguese states
+        add_to_global_variable_list = {
+            name = states_ibe
+            target = s:STATE_BEIRA
+        }
+        add_to_global_variable_list = {
+            name = states_ibe
+            target = s:STATE_ESTREMADURA
+        }
+        add_to_global_variable_list = {
+            name = states_ibe
+            target = s:STATE_ALENTEJO
+        }
+    }
+}
+
+kmpmp_update_global_list_states_unl = {
+    if = {
+        limit = { # list version not exists or version <= 0
+            OR = {
+                NOT = {
+                    exists = global_var:states_unl_version
+                }
+                global_var:states_unl_version <= 0
+            }
+        }
+        # clean up list if exists
+        if = {
+            limit = {
+                has_global_variable_list = states_unl
+            }
+            clear_global_variable_list = states_unl
+        }
+        # v1
+        set_global_variable = {
+            name = states_unl_version
+            value = 1
+        }
+        # United Netherlands states
+        add_to_global_variable_list = {
+            name = states_unl
+            target = s:STATE_FRIESLAND
+        }
+        add_to_global_variable_list = {
+            name = states_unl
+            target = s:STATE_HOLLAND
+        }
+        add_to_global_variable_list = {
+            name = states_unl
+            target = s:STATE_GELRE
+        }
+        add_to_global_variable_list = {
+            name = states_unl
+            target = s:STATE_FLANDERS
+        }
+        add_to_global_variable_list = {
+            name = states_unl
+            target = s:STATE_WALLONIA
+        }
+    }
+}
+
+kmpmp_update_global_list_states_p01 = {
+    if = {
+        limit = { # list version not exists or version <= 0
+            OR = {
+                NOT = {
+                    exists = global_var:states_p01_version
+                }
+                global_var:states_p01_version <= 0
+            }
+        }
+        # clean up list if exists
+        if = {
+            limit = {
+                has_global_variable_list = states_p01
+            }
+            clear_global_variable_list = states_p01
+        }
+        # v1
+        set_global_variable = {
+            name = states_p01_version
+            value = 1
+        }
+        # Parthia states
+        add_to_global_variable_list = {
+            name = states_p01
+            target = s:STATE_IRAKAJEMI
+        }
+        add_to_global_variable_list = {
+            name = states_p01
+            target = s:STATE_ISFAHAN
+        }
+        add_to_global_variable_list = {
+            name = states_p01
+            target = s:STATE_KHORASAN
+        }
+        add_to_global_variable_list = {
+            name = states_p01
+            target = s:STATE_MAZANDARAN
+        }
+        add_to_global_variable_list = {
+            name = states_p01
+            target = s:STATE_TABRIZ
+        }
+        add_to_global_variable_list = {
+            name = states_p01
+            target = s:STATE_LURISTAN
+        }
+        add_to_global_variable_list = {
+            name = states_p01
+            target = s:STATE_KHUZESTAN
+        }
+        add_to_global_variable_list = {
+            name = states_p01
+            target = s:STATE_FARS
+        }
+        add_to_global_variable_list = {
+            name = states_p01
+            target = s:STATE_LARISTAN
+        }
+        add_to_global_variable_list = {
+            name = states_p01
+            target = s:STATE_SISTAN
+        }
+        add_to_global_variable_list = {
+            name = states_p01
+            target = s:STATE_AZERBAIJAN
+        }
+        add_to_global_variable_list = {
+            name = states_p01
+            target = s:STATE_BAGHDAD
+        }
+    }
+}
+
+kmpmp_update_global_list_states_sca = {
+    if = {
+        limit = { # list version not exists or version <= 0
+            OR = {
+                NOT = {
+                    exists = global_var:states_sca_version
+                }
+                global_var:states_sca_version <= 0
+            }
+        }
+        # clean up list if exists
+        if = {
+            limit = {
+                has_global_variable_list = states_sca
+            }
+            clear_global_variable_list = states_sca
+        }
+        # v1
+        set_global_variable = {
+            name = states_sca_version
+            value = 1
+        }
+        # Scandinavian states
+        every_state = {
+            state_region = {
+                if = {
+                    limit = {
+                        OR = {
+                            NOT = {
+                                has_global_variable_list = states_sca
+                            }
+                            NOT = {
+                                is_target_in_global_variable_list = {
+                                    name = states_sca
+                                    target = THIS
+                                }
+                            }
+                        }
+                        
+                        OR = {
+                            is_homeland = cu:swedish
+                            is_homeland = cu:danish
+                            is_homeland = cu:norwegian
+                            # is_homeland = cu:icelandic
+                        }
+                    }
+
+                    add_to_global_variable_list = {
+                        name = states_sca
+                        target = THIS
+                    }
+                }
+            }
+        }
+    }
+}
+
+kmpmp_update_global_list_states_ltn = {
+    if = {
+        limit = { # list version not exists or version <= 0
+            OR = {
+                NOT = {
+                    exists = global_var:states_ltn_version
+                }
+                global_var:states_ltn_version <= 0
+            }
+        }
+        # clean up list if exists
+        if = {
+            limit = {
+                has_global_variable_list = states_ltn
+            }
+            clear_global_variable_list = states_ltn
+        }
+        # v1
+        set_global_variable = {
+            name = states_ltn_version
+            value = 1
+        }
+
+        # Latin Empire states
+
+        # Byzantinum
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_EASTERN_THRACE
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_ATTICA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_THESSALIA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_MACEDONIA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_SKOPIA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_WESTERN_THRACE
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_NORTHERN_THRACE
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_HUDAVENDIGAR
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_AYDIN
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_WEST_AEGEAN_ISLANDS
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_EAST_AEGEAN_ISLANDS
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_ALBANIA
+        }
+        
+        # Iberia
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_GALICIA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_ASTURIAS
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_NAVARRA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_ARAGON
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_CATALONIA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_BEIRA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_CASTILE
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_ESTREMADURA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_BADAJOZ
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_TOLEDO
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_VALENCIA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_ALENTEJO
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_ANDALUSIA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_GRANADA
+        }
+        # Iberian isles
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_AZORES
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_MADEIRA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_CANARY_ISLANDS
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_CAPE_VERDE
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_BALEARES
+        }
+        
+        # Italy
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_SAVOY
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_PIEDMONT
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_LOMBARDY
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_SOUTH_TYROL
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_VENETIA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_ISTRIA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_EMILIA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_ROMAGNA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_TUSCANY
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_UMBRIA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_LAZIO
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_ABRUZZO
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_CAMPANIA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_APULIA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_CALABRIA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_SICILY
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_SARDINIA
+        }
+        
+        # additional
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_PELOPONNESE
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_CRETE
+        }
+    }
+}

@@ -1,0 +1,420 @@
+﻿#Great Rubber Corporation of Indochina
+company_rubber_corporation_indochina = {
+	icon = "gfx/interface/icons/company_icons/indochina_rubber_corporation.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+
+	flavored_company = yes
+
+	building_types = {
+		building_rubber_plantation
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_indochina
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_MALAYA
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_MALAYA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_rubber_plantation
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_electrics_industry_throughput_add = 0.05
+		building_trade_center_throughput_add = 0.05
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#Taiwanese Tea Company
+company_taiwanese_tea = {
+	icon = "gfx/interface/icons/company_icons/taiwanese_tea.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
+
+	flavored_company = yes
+
+	building_types = {
+		building_tea_plantation
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_south_china
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_FORMOSA
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_FORMOSA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_tea_plantation
+				level >= 10
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_motor_industry_throughput_add = 0.1
+		country_consumption_tax_cost_mult = -0.2
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Imperial Porcelan Factory
+company_imperial_porcelan_company = {
+	icon = "gfx/interface/icons/company_icons/imperial_porcelan_company.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = yes
+
+	building_types = {
+		building_glassworks
+		building_lead_mine
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_russia
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_INGRIA
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_INGRIA
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_glassworks
+					is_building_type = building_lead_mine
+				}
+				level >= 3
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_logging_camp_throughput_add = 0.1
+		building_sulfur_mine_throughput_add = 0.1
+		# kmpmp
+		country_radicalism_increases_full_acceptance_mult = -0.1
+		country_radicalism_increases_second_rate_citizen_mult = -0.1
+		country_radicalism_increases_open_prejudice_mult = -0.1
+		country_radicalism_increases_cultural_erasure_mult = -0.1
+		country_radicalism_increases_violent_hostility_mult = -0.1
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Heineken International
+company_heineken_international = {
+	icon = "gfx/interface/icons/company_icons/heineken_international.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = yes
+
+	building_types = {
+		building_textile_mills
+		building_glassworks
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_rhine
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_HOLLAND
+					state_region = s:STATE_GELRE
+				}
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_HOLLAND
+				state_region = s:STATE_GELRE
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_textile_mills
+					is_building_type = building_glassworks
+				}
+				level >= 3
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_paper_mills_throughput_add = 0.1
+		building_sulfur_mine_throughput_add = 0.1
+		country_tech_spread_mult = 0.05
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Shell
+company_shell = {
+	icon = "gfx/interface/icons/company_icons/shell.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = yes
+
+	building_types = {
+		building_oil_rig
+		building_synthetics_plants
+		building_sulfur_mine
+	}
+	
+	potential = {
+		country_has_primary_culture = cu:dutch
+	}
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_HOLLAND
+				state_region = s:STATE_FRIESLAND
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_oil_rig
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		country_convoys_capacity_mult = 0.15
+		building_power_plant_throughput_add = 0.05
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#Persian Luxery consumer goods Company
+company_persian_luxury_goods = {
+	icon = "gfx/interface/icons/company_icons/persian_luxury_goods.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = yes
+
+	building_types = {
+		building_textile_mills
+		building_furniture_manufacturies
+		building_electrics_industry
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_persia
+	}
+
+	attainable = {
+		owns_entire_state_region = STATE_IRAKAJEMI
+	}
+
+	possible = {
+		any_scope_state = {
+			region = sr:region_persia
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_textile_mills
+					is_building_type = building_furniture_manufacturies
+				}
+				level >= 3
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_silk_plantation_throughput_add = 0.1
+		building_rubber_plantation_throughput_add = 0.2
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+# Korea Tungsten Company
+company_korean_tungsten_company = {
+	icon = "gfx/interface/icons/company_icons/korean_tungsten_company.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+
+	flavored_company = yes
+
+	building_types = {
+		building_tooling_workshops
+		building_iron_mine
+		building_lead_mine
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_manchuria
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SEOUL
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_SEOUL
+		 	is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_tooling_workshops
+					is_building_type = building_iron_mine
+					is_building_type = building_lead_mine
+				}
+				level >= 3
+				count = 3
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_steel_mills_throughput_add = 0.10
+		building_military_shipyards_throughput_add = 0.10
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+# Imperial Arsenal Japan
+company_imperial_arsenal_japan = {
+	icon = "gfx/interface/icons/company_icons/imperial_arsenal_japan.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+
+	flavored_company = yes
+
+	building_types = {
+		building_arms_industry
+		building_war_machine_industry
+		building_steel_mills
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_japan
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_TOHOKU
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_TOHOKU
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_arms_industry
+				level >= 5
+			}
+		}
+		has_technology_researched = breech_loading_artillery
+	}
+
+	prosperity_modifier = {
+		unit_combat_unit_type_shrapnel_artillery_offense_mult = 0.10
+		unit_combat_unit_type_siege_artillery_offense_mult = 0.15
+		unit_combat_unit_type_light_tanks_offense_mult = 0.20
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+# Genda Shigyo
+company_genda_shigyo = {
+	icon = "gfx/interface/icons/company_icons/genda_shigyo.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
+
+	flavored_company = yes
+
+	building_types = {
+		building_paper_mills
+		building_logging_camp
+		building_sulfur_mine
+	}
+	potential = {
+		has_interest_marker_in_region = region_japan
+	}
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_CHUGOKU
+			}
+		}
+	}
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_CHUGOKU
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_paper_mills
+				level >= 5
+			}
+		}
+	}
+	prosperity_modifier = {
+		building_cotton_plantation_throughput_add = 0.10
+		building_synthetics_plants_throughput_add = 0.15
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}

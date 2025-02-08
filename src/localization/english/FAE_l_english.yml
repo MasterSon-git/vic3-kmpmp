@@ -7,7 +7,7 @@
     FAE_battle_condition_defender_fort_breached_desc: "The enemy has successfully breached some of this commander's fortifications."
     
     # Buildings
-    FAE_building_forts: "Fortifications"
+    fae_building_forts: "Fortifications"
     
     # Character Traits
     FAE_trait_combat_engineer_1: "Combat Engineer"
@@ -18,25 +18,26 @@
     FAE_trait_combat_engineer_2_desc: "This commander has an expert grasp of the use of combat engineers in warfare."
     FAE_trait_combat_engineer_3_desc: "This commander has truly mastered the art of modern warfare with regards to combat engineers."
     
-    # Modifiers I (modifier_types)
-    modifier_state_FAE_building_forts_max_level_add:      "$FAE_building_forts$ Max Level"
-    modifier_state_FAE_building_forts_max_level_add_desc: "A bonus or penalty to the maximum level of $FAE_building_forts$ buildings."
+    # Modifiers I (types)
+    state_fae_building_forts_max_level_add:      "$fae_building_forts$ Max Level"
+    state_fae_building_forts_max_level_add_desc: "A bonus or penalty to the maximum level of $fae_building_forts$ buildings."
     
-    modifier_building_input_small_arms_mult: "@small_arms! $small_arms$ $concept_input_mult$"
-    modifier_building_input_artillery_mult:  "@artillery! $artillery$ $concept_input_mult$"
-    modifier_building_input_ammunition_mult: "@ammunition! $ammunition$ $concept_input_mult$"
+    building_input_small_arms_mult: "@small_arms! $small_arms$ $concept_input_mult$"
+    building_input_artillery_mult:  "@artillery! $artillery$ $concept_input_mult$"
+    building_input_ammunition_mult: "@ammunition! $ammunition$ $concept_input_mult$"
     
-    modifier_building_input_small_arms_mult_desc: "$concept_input_mult_desc$"
-    modifier_building_input_artillery_mult_desc:  "$concept_input_mult_desc$"
-    modifier_building_input_ammunition_mult_desc: "$concept_input_mult_desc$"
+    building_input_small_arms_mult_desc: "$concept_input_mult_desc$"
+    building_input_artillery_mult_desc:  "$concept_input_mult_desc$"
+    building_input_ammunition_mult_desc: "$concept_input_mult_desc$"
+
+    character_fae_battle_condition_attacker_fort_breached_mult:      "[GetBattleCondition('FAE_battle_condition_attacker_fort_breached').GetName]$character_battle_condition_suffix$"
+    character_fae_battle_condition_attacker_fort_breached_mult_desc: "$character_battle_condition_desc_prefix$[GetBattleCondition('FAE_battle_condition_attacker_fort_breached').GetName]$character_battle_condition_desc_suffix$"
     
-    modifier_character_FAE_battle_condition_attacker_fort_breached_mult:      "[GetBattleCondition('FAE_battle_condition_attacker_fort_breached').GetName]$modifier_character_battle_condition_suffix$"
-    modifier_character_FAE_battle_condition_attacker_fort_breached_mult_desc: "$modifier_character_battle_condition_desc_prefix$[GetBattleCondition('FAE_battle_condition_attacker_fort_breached').GetName]$modifier_character_battle_condition_desc_suffix$"
+    unit_fae_siege_add:      "[concept_FAE_siege]"
+    unit_fae_siege_add_desc: "The total [concept_FAE_siege] added for each [concept_unit] participating in a [concept_battle]"
     
-    modifier_unit_FAE_siege_add:        "[concept_FAE_siege]"
-    modifier_unit_FAE_siege_add_desc:   "The unit base [concept_FAE_siege]"
-    modifier_unit_FAE_entrenchment_add: "[concept_FAE_entrenchment]"
-    modifier_unit_FAE_entrenchment_add_desc:    "The [concept_FAE_entrenchment] base value which will be multiplied with defending units count in battle."
+    unit_fae_entrenchment_add:      "[concept_FAE_entrenchment]"
+    unit_fae_entrenchment_add_desc: "The total [concept_FAE_entrenchment] added for each [concept_unit] participating in a [concept_battle]"
     
     # Modifiers II (modifiers)
     FAE_md_fort_reconstruction: "Fort Construction"
@@ -46,10 +47,12 @@
     FAE_md_fort_in_battle: "Engaged in Combat"
     
     FAE_md_fort_defense_strong:   "Strong Fortifications"
+    FAE_md_fort_defense_mid:      "Partially-Weakened Fortifications"
     FAE_md_fort_defense_weak:     "Weakened Fortifications"
     FAE_md_fort_occupation_speed: "Hampered by Enemy Fortifications"
     
     FAE_md_fort_kill_rate_strong:      "$FAE_md_fort_defense_strong$"
+    FAE_md_fort_kill_rate_mid:         "$FAE_md_fort_defense_mid$"
     FAE_md_fort_kill_rate_weak:        "$FAE_md_fort_defense_weak$"
     FAE_md_fort_provinces_lost_strong: "$FAE_md_fort_defense_strong$"
     FAE_md_fort_provinces_lost_weak:   "$FAE_md_fort_defense_weak$"
@@ -97,14 +100,15 @@
     
     FAE_txt_siege:    "[concept_FAE_siege]"
     FAE_txt_entrench: "[concept_FAE_entrenchment]"
-    FAE_txt_forts:    "[GetBuildingType('FAE_building_forts').GetName]"
+    FAE_txt_forts:    "[GetBuildingType('fae_building_forts').GetName]"
     
     FAE_txt_battles: "At the start of every [concept_battle] taking place in a [concept_state] with a $FAE_txt_forts$ [concept_building], the total $FAE_txt_siege$ and $FAE_txt_entrench$ is calculated from the number of [Concept('concept_unit', '$concept_units$')] in the battle on the attacking and defending sides, respectively."
     
-    FAE_txt_siege_stats:   "The per-[Concept('concept_unit', 'unit')] $FAE_txt_siege$ is calculated from:\n$FAE_txt_siege_stats_1$\n$FAE_txt_siege_stats_2$\n$FAE_txt_siege_stats_3$\n$FAE_txt_siege_stats_4$\n$FAE_txt_siege_stats_5$\n$FAE_txt_siege_stats_6$\n$FAE_txt_siege_stats_7$"
+    FAE_txt_siege_stats:   "The per-[Concept('concept_unit', 'unit')] $FAE_txt_siege$ is calculated from:\n$FAE_txt_siege_stats_1$\n$FAE_txt_siege_stats_2$\n$FAE_txt_siege_stats_3$\n$FAE_txt_siege_stats_4_1$\n$FAE_txt_siege_stats_4$\n$FAE_txt_siege_stats_5$\n$FAE_txt_siege_stats_6$\n$FAE_txt_siege_stats_7$"
     FAE_txt_siege_stats_1: "#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_combat_engies')]#! if its [concept_military_formation] has the [GetMobilizationOption('FAE_mo_combat_engineers').GetName] [concept_mobilization_option] active"
     FAE_txt_siege_stats_2: "#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_heavy_tank')]#! if it is a [GetCombatUnitType('combat_unit_type_heavy_tank').GetName] [Concept('concept_combat_unit_type', 'Unit')]"
     FAE_txt_siege_stats_3: "#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_light_tank')]#! if it is a [GetCombatUnitType('combat_unit_type_light_tanks').GetName] [Concept('concept_combat_unit_type', 'Unit')]"
+    FAE_txt_siege_stats_4_1: "#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_fort_arty')]#! if it is a [GetCombatUnitType('combat_unit_type_fort_buster_artillery').GetName] [Concept('concept_combat_unit_type', 'Unit')]"
     FAE_txt_siege_stats_4: "#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_siege_arty')]#! if it is a [GetCombatUnitType('combat_unit_type_siege_artillery').GetName] [Concept('concept_combat_unit_type', 'Unit')]"
     FAE_txt_siege_stats_5: "#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_shrapnel_arty')]#! if it is a [GetCombatUnitType('combat_unit_type_shrapnel_artillery').GetName] [Concept('concept_combat_unit_type', 'Unit')]"
     FAE_txt_siege_stats_6: "#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_mobile_arty')]#! if it is a [GetCombatUnitType('combat_unit_type_mobile_artillery').GetName] [Concept('concept_combat_unit_type', 'Unit')]"

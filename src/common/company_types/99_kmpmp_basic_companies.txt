@@ -24,13 +24,19 @@ company_basic_colonial_plantations_1 = {
                     is_building_type = building_opium_plantation
                     is_building_type = building_tea_plantation
                 }
-                level >= 10
+                level >= 3
             }
         }
     }
 
     prosperity_modifier = {
-        state_radicals_from_sol_change_mult = -0.05
+        state_radicals_from_political_movements_mult = -0.05
+        # kmpmp
+		country_radicalism_increases_full_acceptance_mult = -0.05
+		country_radicalism_increases_second_rate_citizen_mult = -0.05
+		country_radicalism_increases_open_prejudice_mult = -0.05
+		country_radicalism_increases_cultural_erasure_mult = -0.05
+		country_radicalism_increases_violent_hostility_mult = -0.05
         building_motor_industry_throughput_add = 0.1
     }
 }
@@ -63,7 +69,7 @@ company_basic_colonial_plantations_2 = {
                     is_building_type = building_sugar_plantation
                     is_building_type = building_tobacco_plantation
                 }
-                level >= 10
+                level >= 3
             }
         }
     }
@@ -100,7 +106,7 @@ company_basic_silk_and_dye = {
                     is_building_type = building_silk_plantation
                     is_building_type = building_dye_plantation
                 }
-                level >= 10
+                level >= 3
             }
         }
     }
@@ -139,7 +145,7 @@ company_basic_fishing = {
                     is_building_type = building_fishing_wharf
                     is_building_type = building_whaling_station
                 }
-                level >= 10
+                level >= 3
             }
         }
     }
@@ -179,7 +185,7 @@ company_basic_forestry = {
                     is_building_type = building_logging_camp
                     is_building_type = building_rubber_plantation
                 }
-                level >= 10
+                level >= 3
             }
         }
     }
@@ -253,8 +259,14 @@ company_basic_gold_mining = {
     }
 
     prosperity_modifier = {
-        country_minting_mult = 0.1
-        state_loyalists_from_sol_change_mult = 0.05
+        country_minting_mult = 0.1 #0.05
+        state_loyalists_from_political_movements_mult = 0.05
+        # kmpmp
+		country_loyalism_increases_full_acceptance_mult = 0.05
+		country_loyalism_increases_second_rate_citizen_mult = 0.05
+		country_loyalism_increases_open_prejudice_mult = 0.05
+		country_loyalism_increases_cultural_erasure_mult = 0.05
+		country_loyalism_increases_violent_hostility_mult = 0.05
     }
 }
 
@@ -286,7 +298,7 @@ company_basic_metal_mining = {
                     is_building_type = building_iron_mine
                     is_building_type = building_lead_mine
                 }
-                level >= 10
+                level >= 3
             }
         }
     }
@@ -324,7 +336,7 @@ company_basic_mineral_mining = {
                     is_building_type = building_sulfur_mine
                     is_building_type = building_coal_mine
                 }
-                level >= 10
+                level >= 3
             }
         }
     }
@@ -407,6 +419,50 @@ company_basic_paper = {
     }
 }
 
+company_basic_home_goods = {
+	icon = "gfx/interface/icons/company_icons/basic_home_goods.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+	
+	uses_dynamic_naming = yes
+	
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_corporation"
+		"dynamic_company_type_conglomerate"
+		"dynamic_company_type_syndicate"
+		"dynamic_company_type_combine"
+	}
+	
+	building_types = {
+		building_glassworks
+		building_furniture_manufacturies
+	}
+
+	possible = { 
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_glassworks
+					is_building_type = building_furniture_manufacturies
+				}
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_loyalists_from_political_movements_mult = 0.1
+        # kmpmp
+		country_loyalism_increases_full_acceptance_mult = 0.1
+		country_loyalism_increases_second_rate_citizen_mult = 0.1
+		country_loyalism_increases_open_prejudice_mult = 0.1
+		country_loyalism_increases_cultural_erasure_mult = 0.1
+		country_loyalism_increases_violent_hostility_mult = 0.1
+	}
+}
+
 company_basic_textiles = {
     icon = "gfx/interface/icons/company_icons/basic_textiles.dds"
     background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
@@ -437,7 +493,13 @@ company_basic_textiles = {
     }
 
     prosperity_modifier = {
-        state_radicals_from_sol_change_mult = -0.1
+        state_radicals_from_political_movements_mult = -0.1
+        # kmpmp
+		country_radicalism_increases_full_acceptance_mult = -0.1
+		country_radicalism_increases_second_rate_citizen_mult = -0.1
+		country_radicalism_increases_open_prejudice_mult = -0.1
+		country_radicalism_increases_cultural_erasure_mult = -0.1
+		country_radicalism_increases_violent_hostility_mult = -0.1
         building_cotton_plantation_throughput_add = 0.1
         building_tooling_workshops_throughput_add = 0.05
     }
@@ -508,7 +570,7 @@ company_basic_metalworks = {
                     is_building_type = building_arms_industry
                     is_building_type = building_artillery_foundries
                 }
-                level >= 10
+                level >= 3
             }
         }
     }
@@ -547,7 +609,7 @@ company_basic_shipyards = {
                     is_building_type = building_shipyards
                     is_building_type = building_military_shipyards
                 }
-                level >= 10
+                level >= 3
             }
         }
     }
@@ -586,7 +648,7 @@ company_basic_chemicals = {
                     is_building_type = building_chemical_plants
                     is_building_type = building_synthetics_plants
                 }
-                level >= 10
+                level >= 3
             }
         }
     }
@@ -594,6 +656,46 @@ company_basic_chemicals = {
     prosperity_modifier = {
         unit_supply_consumption_mult = -0.05
         building_sulfur_mine_throughput_add = 0.1
+    }
+}
+
+company_basic_motors = {
+    icon = "gfx/interface/icons/company_icons/basic_motors.dds"
+    background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+    
+    uses_dynamic_naming = yes
+    
+    dynamic_company_type_names = {
+        "dynamic_company_type_company"
+        "dynamic_company_type_consortium"
+        "dynamic_company_type_corporation"
+        "dynamic_company_type_conglomerate"
+        "dynamic_company_type_syndicate"
+        "dynamic_company_type_combine"
+    }
+    
+    building_types = {
+        building_motor_industry
+        building_war_machine_industry
+    }
+
+    possible = { 
+        any_scope_state = {
+            is_incorporated = yes
+            any_scope_building = {
+                OR = {
+                    is_building_type = building_motor_industry
+                    is_building_type = building_war_machine_industry
+                }
+                level >= 3
+            }
+        }
+    }
+    
+    prosperity_modifier = {
+        military_formation_movement_speed_mult = 0.1
+        building_steel_mills_throughput_add = 0.1
+        building_group_bg_oil_extraction_throughput_add = 0.1
     }
 }
 
@@ -626,7 +728,7 @@ company_basic_munitions = {
                     is_building_type = building_munition_plants
                     is_building_type = building_explosives_factory
                 }
-                level >= 10
+                level >= 3
             }
         }
     }

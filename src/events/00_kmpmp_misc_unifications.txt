@@ -1,245 +1,5 @@
 ﻿namespace = formation
 
-# Laos
-formation.1 = {
-	type = country_event
-	placement = ROOT
-
-	title = formation.1.t
-	desc = formation.1.d
-	flavor = formation.1.f
-
-	event_image = {
-		video = "unspecific_signed_contract"
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
-
-	duration = 3
-
-	trigger = {
-		c:LAO ?= THIS
-		NOT = { has_global_variable = has_formed_laos }
-	}
-
-	immediate = {
-		set_global_variable = has_formed_laos
-		save_scope_as = formation_country
-		cu:lao = {
-			save_scope_as = unification_culture
-		}
-		every_country = {
-			limit = {
-				has_diplomatic_relevance = ROOT
-			}
-			post_notification = unification_notification_one_culture
-		}
-	}
-	option = {
-		name = formation.1.a
-		default_option = yes
-		if = {
-			limit = {
-				any_state_region = {
-					any_scope_state = {
-						is_homeland_of_country_cultures = ROOT
-						NOT = { owner = ROOT }
-						NOT = { has_claim_by = ROOT }
-					}
-				}
-			}
-			unification_claims_effect = yes
-		}
-		add_modifier = {
-			name = unification_prestige
-			months = very_long_modifier_time
-		}
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
-
-# Baltic
-formation.2 = {
-	type = country_event
-	placement = ROOT
-
-	title = formation.2.t
-	desc = formation.2.d
-	flavor = formation.2.f
-
-	event_image = {
-		video = "unspecific_signed_contract"
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
-
-	duration = 3
-
-	trigger = {
-		c:UBD ?= THIS
-		NOT = { has_global_variable = has_formed_baltic }
-	}
-
-	immediate = {
-		set_global_variable = has_formed_baltic
-		save_scope_as = formation_country
-		cu:estonian = {
-			save_scope_as = unification_culture
-		}
-		cu:latvian = {
-			save_scope_as = unification_culture_2
-		}
-		cu:lithuanian = {
-			save_scope_as = unification_culture_3
-		}
-		every_country = {
-			limit = {
-				has_diplomatic_relevance = ROOT
-			}
-			post_notification = unification_notification_three_culture
-		}
-	}
-
-	option = {
-		name = formation.2.a
-		default_option = yes
-		add_modifier = {
-			name = unification_prestige
-			months = very_long_modifier_time
-		}
-		unification_claims_effect = yes
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
-
-# Byz
-formation.3 = {
-	type = country_event
-	placement = ROOT
-
-	title = formation.3.t
-	desc = formation.3.d
-	flavor = formation.3.f
-
-	event_image = {
-		video = "unspecific_signed_contract"
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
-
-	duration = 3
-
-	trigger = {
-		c:BYZ ?= THIS
-		NOT = { has_global_variable = has_formed_byz }
-	}
-
-	immediate = {
-		set_global_variable = has_formed_byz
-		save_scope_as = formation_country
-		every_country = {
-			limit = {
-				has_diplomatic_relevance = ROOT
-			}
-			post_notification = unification_notification_byz
-		}
-	}
-
-	option = {
-		name = formation.3.a
-		default_option = yes
-		add_modifier = {
-			name = unification_prestige
-			months = very_long_modifier_time
-		}
-		every_state_region = {
-			limit = {
-				OR = {
-					region = sr:region_anatolia
-					region = sr:region_balkans
-				}
-				any_scope_state = {
-					NOT = { owner = ROOT }
-					NOT = { has_claim_by = ROOT }
-				}
-			}
-			add_claim = ROOT
-		}
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
-
-# Ethiopia
-formation.4 = {
-	type = country_event
-	placement = ROOT
-
-	title = formation.4.t
-	desc = formation.4.d
-	flavor = formation.4.f
-
-	event_image = {
-		video = "unspecific_signed_contract"
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
-
-	duration = 3
-
-	trigger = {
-		# triggered by je_age_of_princes
-	}
-
-	immediate = {
-		save_scope_as = formation_country
-		ruler = {
-			save_scope_as = ruler_scope
-		}
-		cu:amhara = {
-			save_scope_as = unification_culture
-		}
-		cu:oromo = {
-			save_scope_as = unification_culture_2
-		}
-		cu:tigray = {
-			save_scope_as = unification_culture_3
-		}
-		every_country = {
-			limit = {
-				has_diplomatic_relevance = ROOT
-			}
-			post_notification = unification_notification_three_culture
-		}
-	}
-
-	option = {
-		name = formation.4.a
-		default_option = yes
-		add_modifier = {
-			name = unification_prestige
-			months = very_long_modifier_time
-		}
-		unification_claims_effect = yes
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
-
 # Iberia
 formation.5 = {
 	type = country_event
@@ -296,8 +56,15 @@ formation.5 = {
 			name = unification_prestige
 			months = very_long_modifier_time
 		}
-		add_modifier = {
-			name = kmpmp_united_iberia
+		if = {
+			limit = {
+				NOT = {
+					has_modifier = kmpmp_united_iberia
+				}
+			}
+			add_modifier = {
+				name = kmpmp_united_iberia
+			}
 		}
 		if = {
 			limit = {
@@ -365,170 +132,6 @@ formation.5 = {
 	}
 }
 
-# Reunited a country that exists at game start
-# BRZ, USA, South Africa
-formation.6 = {
-	type = country_event
-	placement = ROOT
-
-	title = formation.6.t
-	desc = formation.6.d
-	flavor = {
-		first_valid = {
-			triggered_desc = {
-				desc = formation.6.f1
-				trigger = {
-					c:BRZ ?= THIS
-				}
-			}
-			triggered_desc = {
-				desc = formation.6.f2
-				trigger = {
-					c:USA ?= THIS
-				}
-			}
-			triggered_desc = {
-				desc = formation.6.f3
-				trigger = {
-					c:SAF ?= THIS
-				}
-			}
-		}
-	}
-
-	event_image = {
-		video = "unspecific_signed_contract"
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
-
-	duration = 3
-
-	trigger = {
-		OR = {
-			AND = {
-				c:BRZ ?= THIS
-				NOT = { has_global_variable = has_formed_brz }
-			}
-			AND = {
-				c:USA ?= THIS
-				NOT = { has_global_variable = has_formed_usa }
-			}
-			AND = {
-				c:SAF ?= THIS
-				NOT = { has_global_variable = has_formed_saf }
-			}
-		}
-	}
-
-	immediate = {
-		if = {
-			limit = {
-				c:BRZ ?= THIS
-			}
-			set_global_variable = has_formed_brz
-		}
-		else_if = {
-			limit = {
-				c:USA ?= THIS
-			}
-			set_global_variable = has_formed_usa
-		}
-		else = {
-			set_global_variable = has_formed_saf
-		}
-		save_scope_as = formation_country
-		every_country = {
-			limit = {
-				has_diplomatic_relevance = ROOT
-			}
-			post_notification = reunification_notification
-		}
-	}
-
-	option = {
-		name = formation.5.a
-		default_option = yes
-		add_modifier = {
-			name = unification_prestige
-			months = very_long_modifier_time
-		}
-		unification_claims_effect = yes
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
-
-# Danube
-formation.7 = {
-	type = country_event
-	placement = ROOT
-
-	title = formation.7.t
-	desc = formation.7.d
-	flavor = formation.7.f
-
-	event_image = {
-		video = "unspecific_signed_contract"
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
-
-	duration = 3
-
-	trigger = {
-		c:KUK ?= THIS
-		NOT = { has_global_variable = has_formed_kuk }
-	}
-
-	immediate = {
-		set_global_variable = has_formed_kuk
-		save_scope_as = formation_country
-		every_country = {
-			limit = {
-				has_diplomatic_relevance = ROOT
-			}
-			post_notification = unification_notification_kuk
-		}
-		cu:hungarian = {
-			save_scope_as = hungarian_culture
-		}
-		cu:romanian = {
-			save_scope_as = romanian_culture
-		}
-		cu:czech = {
-			save_scope_as = czech_culture
-		}
-		cu:croat = {
-			save_scope_as = croatian_culture
-		}
-		cu:slovene = {
-			save_scope_as = slovene_culture
-		}
-		cu:slovak = {
-			save_scope_as = slovak_culture
-		}
-	}
-
-	option = {
-		name = formation.5.a
-		default_option = yes
-		add_modifier = {
-			name = unification_prestige
-			months = very_long_modifier_time
-		}
-		unification_claims_effect = yes
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
-
 # Arabia
 formation.8 = {
 	type = country_event
@@ -574,16 +177,95 @@ formation.8 = {
 			}
 			post_notification = unification_notification_four_culture
 		}
+		if = {
+			limit = {
+				has_modifier = kmpmp_ottoman_leader_of_islam
+			}
+			add_modifier = {
+				name = kmpmp_united_arabia
+				years = 10
+				multiplier = 0.5
+			}
+		}
+		else = {
+			add_modifier = {
+				name = kmpmp_united_arabia
+				years = 10
+			}
+			add_modifier = {
+				name = kmpmp_arabia
+			}
+		}
 	}
 
 	option = {
 		name = formation.5.a
 		default_option = yes
+
+		trigger = {
+            ROOT = {
+            	has_modifier = kmpmp_ottoman_leader_of_islam
+            }
+        }
 		add_modifier = {
 			name = unification_prestige
 			months = very_long_modifier_time
 		}
+		add_primary_culture = cu:persian
+		add_primary_culture = cu:turkish
+		add_primary_culture = cu:kurdish
+		add_primary_culture = cu:maghrebi
 		unification_claims_effect = yes
+		every_state_region = {
+			limit = {
+				region = sr:region_north_africa
+				any_scope_state = {
+					NOT = { owner = ROOT }
+					NOT = { has_claim_by = ROOT }
+				}
+			}
+			add_claim = ROOT
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_KONYA }
+			}
+			s:STATE_KONYA = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_HUDAVENDIGAR }
+			}
+			s:STATE_HUDAVENDIGAR = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_AYDIN }
+			}
+			s:STATE_AYDIN = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_KASTAMONU }
+			}
+			s:STATE_KASTAMONU = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_ANKARA }
+			}
+			s:STATE_ANKARA = {
+				add_claim = ROOT
+			}
+		}
 		ai_chance = {
 			factor = 1
 		}
@@ -592,6 +274,11 @@ formation.8 = {
 	option = {
 		name = formation.8.b
 		default_option = yes
+		trigger = {
+            ROOT = {
+            	NOT = { has_modifier = kmpmp_ottoman_leader_of_islam }
+            }
+        }
 		add_modifier = {
 			name = unification_prestige
 			months = very_long_modifier_time
@@ -607,67 +294,46 @@ formation.8 = {
 			}
 			add_claim = ROOT
 		}
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
-
-# Yugoslavia
-formation.9 = {
-	type = country_event
-	placement = ROOT
-
-	title = formation.9.t
-	desc = formation.9.d
-	flavor = formation.9.f
-
-	event_image = {
-		video = "unspecific_signed_contract"
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
-
-	duration = 3
-
-	trigger = {
-		c:YUG ?= THIS
-		NOT = { has_global_variable = has_formed_yug }
-	}
-
-	immediate = {
-		set_global_variable = has_formed_yug
-		save_scope_as = formation_country
-		cu:bosniak = {
-			save_scope_as = unification_culture
-		}
-		cu:croat = {
-			save_scope_as = unification_culture_2
-		}
-		cu:serb = {
-			save_scope_as = unification_culture_3
-		}
-		cu:slovene = {
-			save_scope_as = unification_culture_4
-		}
-		every_country = {
+		if = {
 			limit = {
-				has_diplomatic_relevance = ROOT
+				NOT = { owns_entire_state_region = STATE_KONYA }
 			}
-			post_notification = unification_notification_four_culture
+			s:STATE_KONYA = {
+				add_claim = ROOT
+			}
 		}
-	}
-
-	option = {
-		name = formation.5.a
-		default_option = yes
-		add_modifier = {
-			name = unification_prestige
-			months = very_long_modifier_time
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_HUDAVENDIGAR }
+			}
+			s:STATE_HUDAVENDIGAR = {
+				add_claim = ROOT
+			}
 		}
-		unification_claims_effect = yes
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_AYDIN }
+			}
+			s:STATE_AYDIN = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_KASTAMONU }
+			}
+			s:STATE_KASTAMONU = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_ANKARA }
+			}
+			s:STATE_ANKARA = {
+				add_claim = ROOT
+			}
+		}
 		ai_chance = {
 			factor = 1
 		}
@@ -704,14 +370,14 @@ formation.10 = {
 		cu:norwegian = {
 			save_scope_as = unification_culture
 		}
-		cu:icelandic = {
-			save_scope_as = unification_culture_2
-		}
+		# cu:icelandic = {
+		# 	save_scope_as = unification_culture_2
+		# }
 		cu:danish = {
-			save_scope_as = unification_culture_3
+			save_scope_as = unification_culture_2 #unification_culture_3
 		}
 		cu:swedish = {
-			save_scope_as = unification_culture_4
+			save_scope_as = unification_culture_3 #unification_culture_4
 		}
 		cu:finnish = {
 			save_scope_as = finns_scope
@@ -726,7 +392,7 @@ formation.10 = {
 			limit = {
 				has_diplomatic_relevance = ROOT
 			}
-			post_notification = unification_notification_four_culture
+			post_notification = unification_notification_three_culture #unification_notification_four_culture
 		}
 	}
 
@@ -737,8 +403,16 @@ formation.10 = {
 			name = unification_prestige
 			months = very_long_modifier_time
 		}
-		add_modifier = {
-			name = kmpmp_lion_of_the_north
+		if = {
+			limit = {
+				NOT = {
+					has_modifier = kmpmp_lion_of_the_north
+				}
+			}
+
+			add_modifier = {
+				name = kmpmp_lion_of_the_north
+			}
 		}
 		if = {
 			limit = {
@@ -785,15 +459,22 @@ formation.10 = {
 				is_direct_subject_of = c:SCA
 			}
 		}
-		
 
 		default_option = yes
 		add_modifier = {
 			name = unification_prestige
 			months = very_long_modifier_time
 		}
-		add_modifier = {
-			name = kmpmp_lion_of_the_north
+		if = {
+			limit = {
+				NOT = {
+					has_modifier = kmpmp_lion_of_the_north
+				}
+			}
+
+			add_modifier = {
+				name = kmpmp_lion_of_the_north
+			}
 		}
 		annex = c:FIN
 		ai_chance = {
@@ -831,347 +512,6 @@ formation.10 = {
 			s:STATE_MECKLENBURG = {
 				add_claim = ROOT
 			}
-		}
-	}
-}
-
-# Mali
-formation.11 = {
-	type = country_event
-	placement = ROOT
-
-	title = formation.11.t
-	desc = formation.11.d
-	flavor = formation.11.f
-
-	event_image = {
-		video = "unspecific_signed_contract"
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
-
-	duration = 3
-
-	trigger = {
-		c:MAL ?= THIS
-		NOT = { has_global_variable = has_formed_mal }
-	}
-
-	immediate = {
-		set_global_variable = has_formed_mal
-		save_scope_as = formation_country
-		ruler = { save_scope_as = ruler_scope }
-		cu:bambara = {
-			save_scope_as = unification_culture
-		}
-		cu:fulbe = {
-			save_scope_as = unification_culture_2
-		}
-		cu:wolof = {
-			save_scope_as = unification_culture_3
-		}
-		cu:mande = {
-			save_scope_as = unification_culture_4
-		}
-		every_country = {
-			limit = {
-				has_diplomatic_relevance = ROOT
-			}
-			post_notification = unification_notification_four_culture
-		}
-	}
-
-	option = {
-		name = formation.11.a
-		default_option = yes
-		add_modifier = {
-			name = unification_prestige
-			months = very_long_modifier_time
-		}
-		unification_claims_effect = yes
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
-
-# Turkestan
-formation.12 = {
-	type = country_event
-	placement = ROOT
-
-	title = formation.12.t
-	desc = formation.12.d
-	flavor = formation.12.f
-
-	event_image = {
-		video = "unspecific_signed_contract"
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
-
-	duration = 3
-
-	trigger = {
-		c:TRH ?= THIS
-		NOT = { has_global_variable = has_formed_trh }
-	}
-
-	immediate = {
-		set_global_variable = has_formed_trh
-		save_scope_as = formation_country
-		every_country = {
-			limit = {
-				has_diplomatic_relevance = ROOT
-			}
-			post_notification = unification_notification_trh
-		}
-	}
-
-	option = {
-		name = formation.5.a
-		default_option = yes
-		add_modifier = {
-			name = unification_prestige
-			months = very_long_modifier_time
-		}
-		unification_claims_effect = yes
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
-
-# Indonesia
-formation.13 = {
-	type = country_event
-	placement = ROOT
-
-	title = formation.13.t
-	desc = formation.13.d
-	flavor = formation.13.f
-
-	event_image = {
-		video = "unspecific_signed_contract"
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
-
-	duration = 3
-
-	trigger = {
-		c:IDN ?= THIS
-		NOT = { has_global_variable = has_formed_indonesia }
-	}
-
-	immediate = {
-		set_global_variable = has_formed_indonesia
-		save_scope_as = formation_country
-		every_country = {
-			limit = {
-				has_diplomatic_relevance = ROOT
-			}
-			post_notification = unification_notification_idn
-		}
-	}
-
-	option = {
-		name = formation.5.a
-		default_option = yes
-		add_modifier = {
-			name = unification_prestige
-			months = very_long_modifier_time
-		}
-		unification_claims_effect = yes
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
-
-# India
-formation.14 = {
-	type = country_event
-	placement = ROOT
-
-	title = formation.14.t
-	desc = formation.14.d
-	flavor = {
-		first_valid = {
-			triggered_desc = {
-				desc = formation.14.f
-				trigger = {
-					has_law = law_type:law_monarchy
-				}
-			}
-			triggered_desc = {
-				desc = formation.14.f2
-				trigger = {
-					OR = {
-						has_law = law_type:law_census_voting
-						has_law = law_type:law_wealth_voting
-						has_law = law_type:law_universal_suffrage
-					}
-				}
-			}
-			triggered_desc = {
-				desc = formation.14.f3
-				trigger = {
-					always = yes
-				}
-			}
-		}
-	}
-
-	event_image = {
-		video = "unspecific_signed_contract"
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
-
-	duration = 3
-
-	trigger = {
-		c:BHT ?= THIS
-		NOT = { has_global_variable = has_formed_india }
-	}
-
-	immediate = {
-		set_global_variable = has_formed_india
-		save_scope_as = formation_country
-		ruler = { save_scope_as = ruler_scope }
-		every_country = {
-			limit = {
-				has_diplomatic_relevance = ROOT
-			}
-			post_notification = unification_notification_ind
-		}
-	}
-
-	option = {
-		name = formation.5.a
-		default_option = yes
-		add_modifier = {
-			name = unification_prestige
-			months = very_long_modifier_time
-		}
-		unification_claims_effect = yes
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
-
-# Yemen
-formation.15 = {
-	type = country_event
-	placement = ROOT
-
-	title = formation.15.t
-	desc = formation.15.d
-	flavor = formation.15.f
-
-	event_image = {
-		video = "unspecific_signed_contract"
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
-
-	duration = 3
-
-	trigger = {
-		c:YEM ?= THIS
-		NOT = { has_global_variable = has_formed_yem }
-	}
-
-	immediate = {
-		set_global_variable = has_formed_yem
-		save_scope_as = formation_country
-		ruler = { save_scope_as = ruler_scope }
-		cu:yemenite = {
-			save_scope_as = unification_culture
-		}
-		every_country = {
-			limit = {
-				has_diplomatic_relevance = ROOT
-			}
-			post_notification = unification_notification_one_culture
-		}
-	}
-
-	option = {
-		name = formation.5.a
-		default_option = yes
-		add_modifier = {
-			name = unification_prestige
-			months = very_long_modifier_time
-		}
-		unification_claims_effect = yes
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
-
-# Kazakhstan
-formation.16 = {
-	type = country_event
-	placement = ROOT
-
-	title = formation.16.t
-	desc = formation.16.d
-	flavor = formation.16.f
-
-	event_image = {
-		video = "unspecific_signed_contract"
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
-
-	duration = 3
-
-	trigger = {
-		c:KAZ ?= THIS
-		NOT = { has_global_variable = has_formed_kaz }
-	}
-
-	immediate = {
-		set_global_variable = has_formed_kaz
-		save_scope_as = formation_country
-		ruler = { save_scope_as = ruler_scope }
-		cu:kazak = {
-			save_scope_as = unification_culture
-		}
-		every_country = {
-			limit = {
-				has_diplomatic_relevance = ROOT
-			}
-			post_notification = unification_notification_one_culture
-		}
-	}
-
-	option = {
-		name = formation.5.a
-		default_option = yes
-		add_modifier = {
-			name = unification_prestige
-			months = very_long_modifier_time
-		}
-		unification_claims_effect = yes
-		ai_chance = {
-			factor = 1
 		}
 	}
 }
@@ -1219,6 +559,12 @@ formation.17 = {
 			c:RHN ?= THIS
 			c:ITA ?= THIS
 			c:GER ?= THIS
+			c:PLT ?= THIS
+			c:GCO ?= THIS
+			c:PBC ?= THIS
+			c:FND ?= THIS
+			c:P01 ?= THIS #kmpmp
+			c:LTN ?= THIS #kmpmp
 		}
 	}
 
@@ -1247,183 +593,6 @@ formation.17 = {
 		unification_claims_effect = yes
 		ai_chance = {
 			factor = 1
-		}
-	}
-}
-
-# Holy Roman Empire
-formation.18 = {
-	type = country_event
-	placement = ROOT
-
-	title = formation.18.t
-	desc = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					has_law = law_type:law_monarchy
-				}
-				desc = formation.18.d_1
-			}
-			triggered_desc = {
-				trigger = {
-					coa_fascist_trigger = yes
-					NOT = {
-						has_law = law_type:law_council_republic
-					}
-				}
-				desc = formation.18.d_2
-			}
-			triggered_desc = {
-				trigger = {
-					has_law = law_type:law_council_republic
-				}
-				desc = formation.18.d_3
-			}
-			triggered_desc = {
-				trigger = {
-					OR = {
-						has_law = law_type:law_parliamentary_republic
-						has_law = law_type:law_presidential_republic
-					}
-				}
-				desc = formation.18.d_4
-			}
-		}
-	}
-	flavor = {
-		first_valid = {
-			triggered_desc = {
-				trigger = {
-					has_law = law_type:law_monarchy
-				}
-				desc = formation.18.f_1
-			}
-			triggered_desc = {
-				trigger = {
-					coa_fascist_trigger = yes
-					NOT = {
-						has_law = law_type:law_council_republic
-					}
-				}
-				desc = formation.18.f_2
-			}
-			triggered_desc = {
-				trigger = {
-					has_law = law_type:law_council_republic
-				}
-				desc = formation.18.f_3
-			}
-			triggered_desc = {
-				trigger = {
-					OR = {
-						has_law = law_type:law_parliamentary_republic
-						has_law = law_type:law_presidential_republic
-					}
-				}
-				desc = formation.18.f_4
-			}
-		}
-	}
-	event_image = {
-		video = "unspecific_signed_contract"
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
-
-	duration = 3
-
-	trigger = {
-		c:HRE ?= THIS
-		NOT = { has_global_variable = has_formed_hre }
-	}
-
-	immediate = {
-		set_global_variable = has_formed_hre
-		save_scope_as = formation_country
-		ruler = { save_scope_as = ruler_scope }
-		every_country = {
-			limit = {
-				has_diplomatic_relevance = ROOT
-			}
-			post_notification = unification_notification_one_culture
-		}
-	}
-
-	option = {
-		name = formation.18.a
-		default_option = yes
-		add_modifier = {
-			name = unification_prestige
-			months = very_long_modifier_time
-		}
-		ai_chance = {
-			factor = 1
-		}
-	}
-	
-	option = {
-		name = formation.18.b
-		trigger = { 
-			has_law = law_type:law_council_republic
-			NOT = {
-				c:FRA ?= {
-					has_law = law_type:law_council_republic
-				}
-			}
-		}
-		ai_chance = {
-			factor = 1
-		}
-		ROOT = {
-			create_incident = {
-				country = c:FRA
-				value = 15
-			}
-		}
-		add_modifier = {
-			name = unification_prestige
-			months = very_long_modifier_time
-		}
-		add_primary_culture = cu:french
-		add_radicals = {
-			value = medium_radicals
-			culture = cu:north_german
-		}
-		add_radicals = {
-			value = medium_radicals
-			culture = cu:south_german
-		}
-	}
-	
-	option = {
-		name = formation.18.c
-		trigger = {
-			OR = {
-				has_law = law_type:law_parliamentary_republic
-				has_law = law_type:law_presidential_republic
-			}
-			NOT = {
-				coa_fascist_trigger = yes
-			}
-		}
-		ai_chance = {
-			factor = 1
-		}
-		add_modifier = {
-			name = unification_prestige
-			months = very_long_modifier_time
-		}
-		add_primary_culture = cu:french
-		add_radicals = {
-			value = large_radicals
-			culture = cu:north_german
-		}
-		add_radicals = {
-			value = large_radicals
-			culture = cu:south_german
 		}
 	}
 }
@@ -1480,8 +649,15 @@ formation.19 = {
 			name = unification_prestige
 			months = very_long_modifier_time
 		}
-		add_modifier = {
-			name = kmpmp_united_netherlands
+		if = { #kmpmp
+			limit = {
+				NOT = {
+					has_modifier = kmpmp_united_netherlands
+				}
+			}
+			add_modifier = {
+				name = kmpmp_united_netherlands
+			}
 		}
 		add_loyalists = {
 			value = 0.25
@@ -1546,55 +722,6 @@ formation.19 = {
 			s:STATE_TRANSVAAL = {
 				add_claim = ROOT
 			}
-		}
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
-
-# Confederation of the Rhine
-formation.20 = {
-	type = country_event
-	placement = ROOT
-
-	title = formation.20.t
-	desc = formation.20.d
-	flavor = formation.20.f
-
-	event_image = {
-		video = "unspecific_signed_contract"
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
-
-	duration = 3
-
-	trigger = {
-		c:RHN ?= THIS
-		NOT = { has_global_variable = has_formed_rhn }
-	}
-
-	immediate = {
-		set_global_variable = has_formed_rhn
-		save_scope_as = formation_country
-		ruler = { save_scope_as = ruler_scope }
-		every_country = {
-			limit = {
-				has_diplomatic_relevance = ROOT
-			}
-			post_notification = unification_notification_one_culture
-		}
-	}
-
-	option = {
-		name = formation.20.a
-		default_option = yes
-		add_modifier = {
-			name = unification_prestige
-			months = very_long_modifier_time
 		}
 		ai_chance = {
 			factor = 1

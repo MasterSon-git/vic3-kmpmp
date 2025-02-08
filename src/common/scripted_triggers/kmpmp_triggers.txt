@@ -1,0 +1,70 @@
+﻿# root - country
+# STATE_REGION - <s:STATE_***>
+owns_or_has_subject_entire_state_region = {
+    $STATE_REGION$ = {
+        custom_tooltip = {
+            text = owns_or_has_subject_entire_state_region_tooltip
+            any_scope_state = {
+                OR = {
+                    owner = root
+                    owner = {
+                        is_subject_of = root
+                    }
+                }
+                count = all
+            }
+        }
+    }
+}
+
+# root - country
+# this - STATE_REGION
+state_region_owned = {
+    custom_tooltip = {
+        text = state_region_owned_tooltip
+        any_scope_state = {
+            count = all
+            owner = ROOT
+        }
+    }
+}
+
+# root - country
+# STATE_REGION - <STATE_***>
+state_region_owned_and_incorporated = {
+    s:$STATE_REGION$ = {
+        save_temporary_scope_as = state_region_to_check
+    }
+    custom_tooltip = {
+        text = state_region_owned_and_incorporated_tooltip
+        owns_entire_state_region = $STATE_REGION$
+        s:$STATE_REGION$ = {
+            any_scope_state = {
+                count = all
+                is_incorporated = yes
+            }
+        }
+    }
+}
+
+# root - STATE_REGION
+# we suggest this is an island if:
+# adjacent land state regions < 2
+# adjacent sea state region > 0
+is_island = {
+    is_state_region_land = yes
+    any_scope_state = {
+        is_sea_adjacent = yes
+    }
+    # - this is state not state_region - may fail
+    # - fails for some state regions which aren't islands because they have just one adjacent land region
+    # - neighbouring states returns only states which aren't blocked by impassable land, 
+    #   so it fails for different state regions which have many impassable land around.
+    # known false positives:
+    #  Chukotka
+    # known fails:
+    #  none
+    any_neighbouring_state = {
+        count < 2
+    }
+}

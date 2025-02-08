@@ -1,0 +1,114 @@
+﻿kmpmp_lion_of_the_north = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	# +5% Off / Def Army + Navy
+	unit_offense_mult = 0.05
+	unit_defense_mult = 0.05
+	# +5% pop growth
+	state_birth_rate_mult = 0.05
+	# -5% military goods costs
+	country_military_goods_cost_mult = -0.05
+	# +10% recovery Rate
+	unit_recovery_rate_add = 0.1
+	# +10% Minting
+	country_minting_mult = 0.1
+	# +2% conscription rate
+	state_conscription_rate_mult = 0.02
+}
+
+kmpmp_greater_scandinavia = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+
+	# +5% Off / Def Army + Navy
+	unit_offense_mult = 0.05
+	unit_defense_mult = 0.05
+	# +1% pop growth
+	state_birth_rate_mult = 0.01
+	# -5% military goods costs
+	country_military_goods_cost_mult = -0.05
+	# +15% Migration Attraction
+	state_migration_pull_mult = 0.15
+	# +1 Sol
+	state_standard_of_living_add = 1
+	# +5% state construction eff.
+	state_construction_mult = 0.05
+	# -10% radicals from Conquest
+	country_radicals_from_conquest_mult = -0.1
+}
+
+kmpmp_baltic_empire = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+
+	# +4% pop growth
+	state_birth_rate_mult = 0.04
+	# -5% military goods costs
+	country_military_goods_cost_mult = -0.05
+	# +10% Migration Attraction
+	state_migration_pull_mult = 0.1
+	# +1 Sol
+	state_standard_of_living_add = 1
+	# +5% state construction eff.
+	state_construction_mult = 0.05
+	# -5% radicals from Conquest
+	country_radicals_from_conquest_mult = -0.05
+}
+
+kmpmp_risorgimento = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	unit_offense_mult = 0.05
+	unit_defense_mult = 0.05
+	country_tech_spread_mult = 0.05
+	state_birth_rate_mult = 0.02
+	state_construction_mult = 0.05
+	state_conscription_rate_mult = 0.01
+}
+
+kmpmp_kingdom_of_the_three_crowns = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_birth_rate_mult = 0.02
+	country_authority_mult = 0.05
+	state_construction_mult = 0.05
+}
+
+kmpmp_reino_unido = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_birth_rate_mult = 0.042
+	unit_offense_mult = 0.1
+	unit_defense_mult = 0.1
+	building_group_bg_plantations_throughput_add = 0.1
+	building_group_bg_logging_throughput_add = 0.1
+	building_university_throughput_add = 0.15
+	state_decree_cost_mult = -0.1
+}
+
+kmpmp_united_iberia = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	unit_offense_mult = 0.05
+	unit_defense_mult = 0.05
+	country_tech_spread_mult = 0.05
+	state_tax_capacity_mult = 0.05
+	state_birth_rate_mult = 0.03
+	building_training_rate_mult = 0.05
+}
+
+kmpmp_united_netherlands = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_birth_rate_mult = 0.03
+	unit_offense_mult = 0.15
+	unit_defense_mult = 0.15
+	building_university_throughput_add = 0.1
+	building_group_bg_manufacturing_throughput_add = 0.1
+	country_loyalism_increases_full_acceptance_mult = 0.1
+	country_loyalism_increases_second_rate_citizen_mult = 0.1
+	country_loyalism_increases_open_prejudice_mult = 0.1
+	country_loyalism_increases_cultural_erasure_mult = 0.1
+	country_loyalism_increases_violent_hostility_mult = 0.1
+}
+
+kmpmp_parthian_empire = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_birth_rate_mult = 0.012
+	unit_offense_mult = 0.05
+	unit_defense_mult = 0.05
+	state_infrastructure_mult = 0.1
+	building_group_bg_plantations_throughput_add = 0.1
+}

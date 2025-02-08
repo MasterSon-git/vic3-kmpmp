@@ -1,0 +1,69 @@
+﻿l_german:
+ # modifiers
+ kmpmp_player_boost_adjustment:0 "$kmpmp_player_boost_description$ Anpassung"
+
+ kmpmp_player_boost_art_of_deal:0 "Die Kunst des Deals"
+ kmpmp_player_boost_imperialism_oversea_empire:0 "Imperialistisches Übersee Imperium"
+ kmpmp_player_boost_imperialism_oversea_empire_state_unincorporated_education_access:0 "$kmpmp_player_boost_imperialism_oversea_empire$"
+ kmpmp_player_boost_military_industrial_complex:0 "Miltärisch Industrieller Komplex"
+ kmpmp_player_boost_state_capitalism:0 "Staatskapitalismus"
+ kmpmp_player_boost_autarky:0 "Wirtschaftliche Unabhängigkeit"
+ kmpmp_player_boost_social_welfare_state:0 "Sozial- und Wohlfahrtsstaat"
+ kmpmp_player_boost_corporative_socialism:0 "Korporativer Sozialismus"
+ kmpmp_player_boost_military_police_state:0 "Militärischer Polizei Staat"
+ kmpmp_player_boost_tycoon_capitalism:0 "Tycoon Kapitalismus"
+ kmpmp_player_boost_rhine_capitalism:0 "Rheinkapitalismus"
+ kmpmp_player_boost_unite_the_workers_of_the_world:0 "Vereint die Arbeiter der Welt"
+
+ kmpmp_player_boost_description:0 "Staatsausrichtung"
+
+ kmpmp_player_boost_art_of_deal_decision:0 "$kmpmp_player_boost_art_of_deal$"
+ kmpmp_player_boost_art_of_deal_decision_desc:0 "$kmpmp_player_boost_description$"
+ kmpmp_player_boost_art_of_deal_decision_tooltip:0 ""
+
+ kmpmp_player_boost_imperialism_oversea_empire_decision:0 "$kmpmp_player_boost_imperialism_oversea_empire$"
+ kmpmp_player_boost_imperialism_oversea_empire_decision_desc:0 "$kmpmp_player_boost_description$"
+ kmpmp_player_boost_imperialism_oversea_empire_decision_tooltip:0 ""
+
+ kmpmp_player_boost_military_industrial_complex_decision:0 "$kmpmp_player_boost_military_industrial_complex$"
+ kmpmp_player_boost_military_industrial_complex_decision_desc:0 "$kmpmp_player_boost_description$"
+ kmpmp_player_boost_military_industrial_complex_decision_tooltip:0 ""
+
+ kmpmp_player_boost_state_capitalism_decision:0 "$kmpmp_player_boost_state_capitalism$"
+ kmpmp_player_boost_state_capitalism_decision_desc:0 "$kmpmp_player_boost_description$"
+ kmpmp_player_boost_state_capitalism_decision_tooltip:0 ""
+
+ kmpmp_player_boost_autarky_decision:0 "$kmpmp_player_boost_autarky$"
+ kmpmp_player_boost_autarky_decision_desc:0 "$kmpmp_player_boost_description$"
+ kmpmp_player_boost_autarky_decision_tooltip:0 ""
+
+ kmpmp_player_boost_social_welfare_state_decision:0 "$kmpmp_player_boost_social_welfare_state$"
+ kmpmp_player_boost_social_welfare_state_decision_desc:0 "$kmpmp_player_boost_description$"
+ kmpmp_player_boost_social_welfare_state_decision_tooltip:0 ""
+
+ kmpmp_player_boost_corporative_socialism_decision:0 "$kmpmp_player_boost_corporative_socialism$"
+ kmpmp_player_boost_corporative_socialism_decision_desc:0 "$kmpmp_player_boost_description$"
+ kmpmp_player_boost_corporative_socialism_decision_tooltip:0 ""
+
+ kmpmp_player_boost_military_police_state_decision:0 "$kmpmp_player_boost_military_police_state$"
+ kmpmp_player_boost_military_police_state_decision_desc:0 "$kmpmp_player_boost_description$"
+ kmpmp_player_boost_military_police_state_decision_tooltip:0 ""
+ 
+ kmpmp_player_boost_tycoon_capitalism_decision:0 "$kmpmp_player_boost_tycoon_capitalism$"
+ kmpmp_player_boost_tycoon_capitalism_decision_desc:0 "$kmpmp_player_boost_description$"
+ kmpmp_player_boost_tycoon_capitalism_decision_tooltip:0 ""
+
+ kmpmp_player_boost_rhine_capitalism_decision:0 "$kmpmp_player_boost_rhine_capitalism$"
+ kmpmp_player_boost_rhine_capitalism_decision_desc:0 "$kmpmp_player_boost_description$"
+ kmpmp_player_boost_rhine_capitalism_decision_tooltip:0 ""
+
+ kmpmp_player_boost_unite_the_workers_of_the_world_decision:0 "$kmpmp_player_boost_unite_the_workers_of_the_world$"
+ kmpmp_player_boost_unite_the_workers_of_the_world_decision_desc:0 "$kmpmp_player_boost_description$"
+ kmpmp_player_boost_unite_the_workers_of_the_world_decision_tooltip:0 ""
+
+ # notifications
+ kmpmp_player_boost_notification_group:0 "$kmpmp_player_boost_description$"
+ notification_kmpmp_player_boost_unite_the_workers_of_the_world_invalid_name:0 "$kmpmp_player_boost_description$"
+ notification_kmpmp_player_boost_unite_the_workers_of_the_world_invalid_desc:0 "[GetStaticModifier('kmpmp_player_boost_unite_the_workers_of_the_world').GetName] ist nicht länger valide."
+ notification_kmpmp_player_boost_unite_the_workers_of_the_world_decision_taken_name:0 "$kmpmp_player_boost_description$"
+ notification_kmpmp_player_boost_unite_the_workers_of_the_world_decision_taken_desc:0 "[SCOPE.sCountry('country_takes_unite_the_workers_of_the_world').GetName] hat $kmpmp_player_boost_description$ $kmpmp_player_boost_unite_the_workers_of_the_world_decision$ gewählt."

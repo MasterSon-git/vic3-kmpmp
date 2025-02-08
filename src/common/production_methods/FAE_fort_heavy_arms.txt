@@ -9,10 +9,10 @@
     
     building_modifiers = {
         workforce_scaled = {
-            goods_input_artillery_add = 1
-            goods_input_tools_add     = 1
+            goods_input_artillery_add = 1.1 #1
+            goods_input_tools_add     = 1.1 #1
             
-            unit_defense_add   = 1
+            unit_defense_add   = 0.9 #1
             unit_kill_rate_add = 0.01
         }
     }
@@ -35,11 +35,11 @@ FAE_pm_casemates = {
     
     building_modifiers = {
         workforce_scaled = {
-            goods_input_artillery_add  = 1
-            goods_input_ammunition_add = 1
-            goods_input_tools_add      = 1
+            goods_input_artillery_add  = 1.1 #1
+            goods_input_ammunition_add = 1.1 #1
+            goods_input_tools_add      = 1.1 #1
             
-            unit_defense_add   = 2
+            unit_defense_add   = 1.8 #2
             unit_kill_rate_add = 0.02
         }
     }
@@ -62,12 +62,12 @@ FAE_pm_turrets = {
     
     building_modifiers = {
         workforce_scaled = {
-            goods_input_artillery_add  = 2
-            goods_input_ammunition_add = 2
-            goods_input_tools_add      = 2
-            goods_input_engines_add    = 1
+            goods_input_artillery_add  = 2.2 #2
+            goods_input_ammunition_add = 2.2 #2
+            goods_input_tools_add      = 2.2 #2
+            goods_input_engines_add    = 1.1 #1
             
-            unit_defense_add   = 3
+            unit_defense_add   = 2.7 #3
             unit_kill_rate_add = 0.03
         }
         

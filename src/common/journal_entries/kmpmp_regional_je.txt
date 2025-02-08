@@ -1,0 +1,496 @@
+﻿je_master_of_mediterranean_sea = {
+    group = je_group_foreign_affairs
+    icon = "gfx/interface/icons/event_icons/event_advantage.dds"
+
+    is_shown_when_inactive = {
+        country_is_valid_for_je_master_of_mediterranean_sea = yes
+    }
+
+    # possible = {
+
+    # }
+
+    immediate = {
+        add_to_global_variable_list = {
+            name = countries_je_master_of_mediterranean_sea
+            target = ROOT
+        }
+        set_variable = {
+            name = var_count_states_master_of_mediterranean_sea
+            value = kmpmp_sv_count_states_master_of_mediterranean_sea
+        }
+    }
+
+    on_monthly_pulse = {
+        effect = {
+            set_variable = {
+                name = var_count_states_master_of_mediterranean_sea
+                value = kmpmp_sv_count_states_master_of_mediterranean_sea
+            }
+            
+            if = { # owner of every state
+                limit = { 
+                    var:var_count_states_master_of_mediterranean_sea >= 13
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            exists = global_var:var_owner_states_master_of_mediterranean_sea
+                        }
+                    }
+                    set_global_variable = {
+                        name = var_owner_states_master_of_mediterranean_sea
+                        value = ROOT
+                    }
+                    add_modifier = {
+                        name = kmpmp_mediterranean_sea_domination
+                    }
+                }
+            }
+            else_if = { # we have an owner of every state
+                limit = {
+                    exists = global_var:var_owner_states_master_of_mediterranean_sea
+                }
+                if = { # not longer owner of every state - remove buff
+                    limit = {
+                        ROOT = global_var:var_owner_states_master_of_mediterranean_sea
+                    }
+                    remove_global_variable = var_owner_states_master_of_mediterranean_sea
+                    remove_modifier = kmpmp_mediterranean_sea_domination
+                }
+                else_if = { # someone owns all states
+                    limit = {
+                        NOT = {
+                            has_modifier = kmpmp_mediterranean_sea_domination_negative
+                        }
+                    }
+                    add_modifier = {
+                        name = kmpmp_mediterranean_sea_domination_negative
+                    }
+                }
+            }
+            else_if = { # we have no owner of every state - remove debuf
+                limit = {
+                    NOT = {
+                        exists = global_var:var_owner_states_master_of_mediterranean_sea
+                    }
+                    has_modifier = kmpmp_mediterranean_sea_domination_negative
+                }
+                remove_modifier = kmpmp_mediterranean_sea_domination_negative
+            }
+    
+            if = { # owns the most states
+                limit = {
+                    var:var_count_states_master_of_mediterranean_sea >= 6
+                    NOT = { # no one has all
+                        exists = global_var:var_owner_states_master_of_mediterranean_sea
+                    }
+                    NOT = { # no one has more or equal states
+                        any_in_global_list = {
+                            variable = countries_je_master_of_mediterranean_sea
+                            exists = THIS
+                            NOT = {
+                                THIS = ROOT
+                            }
+                            var:var_count_states_master_of_mediterranean_sea >= ROOT.var:var_count_states_master_of_mediterranean_sea
+                        }
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            has_modifier = kmpmp_mediterranean_sea_hegemony
+                        }
+                    }
+                    add_modifier = {
+                        name = kmpmp_mediterranean_sea_hegemony
+                    }
+                }
+            }
+            else_if = { # we don't own most states - remove buff
+                limit = {
+                    has_modifier = kmpmp_mediterranean_sea_hegemony
+                }
+                remove_modifier = kmpmp_mediterranean_sea_hegemony
+            }
+        }
+    }
+
+    invalid = {
+        country_is_valid_for_je_master_of_mediterranean_sea = no
+    }
+
+    on_invalid = {
+        remove_list_global_variable = {
+            name = countries_je_master_of_mediterranean_sea
+            target = ROOT
+        }
+        remove_variable = var_count_states_master_of_mediterranean_sea
+
+        # we are no longer part of the game, so remove all modifiers
+        if = {
+            limit = {
+                has_modifier = kmpmp_mediterranean_sea_hegemony
+            }
+            remove_modifier = kmpmp_mediterranean_sea_hegemony
+        }
+        if = {
+            limit = {
+                has_modifier = kmpmp_mediterranean_sea_domination
+            }
+            remove_modifier = kmpmp_mediterranean_sea_domination
+        }
+        if = {
+            limit = {
+                has_modifier = kmpmp_mediterranean_sea_domination_negative
+            }
+            remove_modifier = kmpmp_mediterranean_sea_domination_negative
+        }
+    }
+}
+
+je_leader_of_latin_america = {
+    group = je_group_foreign_affairs
+    icon = "gfx/interface/icons/event_icons/event_advantage.dds"
+
+    is_shown_when_inactive = {
+        country_is_valid_for_je_leader_of_latin_america = yes
+    }
+
+    immediate = {
+        add_to_global_variable_list = {
+            name = countries_je_leader_of_latin_america
+            target = ROOT
+        }
+        set_variable = {
+            name = var_count_states_leader_of_latin_america
+            value = kmpmp_sv_count_states_leader_of_latin_america
+        }
+    }
+
+    on_monthly_pulse = {
+        effect = {
+            set_variable = {
+                name = var_count_states_leader_of_latin_america
+                value = kmpmp_sv_count_states_leader_of_latin_america
+            }
+    
+            if = { # owns the most states
+                limit = {
+                    var:var_count_states_leader_of_latin_america >= 10
+                    NOT = { # no one has more or equal states
+                        any_in_global_list = {
+                            variable = countries_je_leader_of_latin_america
+                            exists = THIS
+                            NOT = {
+                                THIS = ROOT
+                            }
+                            var:var_count_states_leader_of_latin_america >= ROOT.var:var_count_states_leader_of_latin_america
+                        }
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            has_modifier = kmpmp_leader_of_latin_america_hegemony
+                        }
+                    }
+                    add_modifier = {
+                        name = kmpmp_leader_of_latin_america_hegemony
+                    }
+                }
+            }
+            else_if = { # we don't own most states - remove buff
+                limit = {
+                    has_modifier = kmpmp_leader_of_latin_america_hegemony
+                }
+                remove_modifier = kmpmp_leader_of_latin_america_hegemony
+            }
+        }
+    }
+
+    invalid = {
+        country_is_valid_for_je_leader_of_latin_america = no
+    }
+
+    on_invalid = {
+        remove_list_global_variable = {
+            name = countries_je_leader_of_latin_america
+            target = ROOT
+        }
+        remove_variable = var_count_states_leader_of_latin_america
+
+        # we are no longer part of the game, so remove all modifiers
+        if = {
+            limit = {
+                has_modifier = kmpmp_leader_of_latin_america_hegemony
+            }
+            remove_modifier = kmpmp_leader_of_latin_america_hegemony
+        }
+    }
+}
+
+je_ruler_of_the_east = {
+    group = je_group_foreign_affairs
+    icon = "gfx/interface/icons/event_icons/event_advantage.dds"
+
+    is_shown_when_inactive = {
+        country_is_valid_for_je_ruler_of_the_east = yes
+    }
+
+    immediate = {
+        add_to_global_variable_list = {
+            name = countries_je_ruler_of_the_east
+            target = ROOT
+        }
+        set_variable = {
+            name = var_count_states_ruler_of_the_east
+            value = kmpmp_sv_count_states_ruler_of_the_east
+        }
+    }
+
+    on_monthly_pulse = {
+        effect = {
+            set_variable = {
+                name = var_count_states_ruler_of_the_east
+                value = kmpmp_sv_count_states_ruler_of_the_east
+            }
+    
+            if = { # owner of every state
+                limit = { 
+                    var:var_count_states_ruler_of_the_east >= 13
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            exists = global_var:var_owner_states_ruler_of_the_east
+                        }
+                    }
+                    set_global_variable = {
+                        name = var_owner_states_ruler_of_the_east
+                        value = ROOT
+                    }
+                    add_modifier = {
+                        name = kmpmp_ruler_of_the_east_domination
+                    }
+                }
+            }
+            else_if = { # we have an owner of every state
+                limit = {
+                    exists = global_var:var_owner_states_ruler_of_the_east
+                }
+                if = { # not longer owner of every state - remove buff
+                    limit = {
+                        ROOT = global_var:var_owner_states_ruler_of_the_east
+                    }
+                    remove_global_variable = var_owner_states_ruler_of_the_east
+                    remove_modifier = kmpmp_ruler_of_the_east_domination
+                }
+                else_if = { # someone owns all states
+                    limit = {
+                        NOT = {
+                            has_modifier = kmpmp_ruler_of_the_east_domination_negative
+                        }
+                    }
+                    add_modifier = {
+                        name = kmpmp_ruler_of_the_east_domination_negative
+                    }
+                }
+            }
+            else_if = { # we have no owner of every state - remove debuf
+                limit = {
+                    NOT = {
+                        exists = global_var:var_owner_states_ruler_of_the_east
+                    }
+                    has_modifier = kmpmp_ruler_of_the_east_domination_negative
+                }
+                remove_modifier = kmpmp_ruler_of_the_east_domination_negative
+            }
+    
+            if = { # owns the most states
+                limit = {
+                    var:var_count_states_ruler_of_the_east >= 7
+                    NOT = { # no one has all
+                        exists = global_var:var_owner_states_ruler_of_the_east
+                    }
+                    # NOT = { # no one has more or equal states
+                    #     any_in_global_list = {
+                    #         variable = countries_je_ruler_of_the_east
+                    #         exists = THIS
+                    #         NOT = {
+                    #             THIS = ROOT
+                    #         }
+                    #         var:var_count_states_ruler_of_the_east >= ROOT.var:var_count_states_ruler_of_the_east
+                    #     }
+                    # }
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            has_modifier = kmpmp_ruler_of_the_east_hegemony
+                        }
+                    }
+                    add_modifier = {
+                        name = kmpmp_ruler_of_the_east_hegemony
+                    }
+                }
+            }
+            else = { # we don't own most states
+                if = { # remove buff
+                    limit = {
+                        has_modifier = kmpmp_ruler_of_the_east_hegemony
+                    }
+                    remove_modifier = kmpmp_ruler_of_the_east_hegemony
+                }
+            }
+    
+            if = { # someone has most states - add debuf
+                limit = {
+                    any_in_global_list = {
+                        variable = countries_je_ruler_of_the_east
+                        NOT = {
+                            THIS = ROOT
+                        }
+                        has_modifier = kmpmp_ruler_of_the_east_hegemony
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            has_modifier = kmpmp_ruler_of_the_east_hegemony_negative
+                        }
+                    }
+                    add_modifier = {
+                        name = kmpmp_ruler_of_the_east_hegemony_negative
+                    }
+                }
+            }
+            else_if = { # no one has most states - remove debuf
+                limit = {
+                    has_modifier = kmpmp_ruler_of_the_east_hegemony_negative
+                }
+                remove_modifier = kmpmp_ruler_of_the_east_hegemony_negative
+            }
+        }
+    }
+}
+
+je_the_sugar_monopoly = {
+    group = je_group_foreign_affairs
+    icon = "gfx/interface/icons/event_icons/event_advantage.dds"
+
+    is_shown_when_inactive = {
+        always = yes
+    }
+
+    immediate = {
+        add_to_global_variable_list = {
+            name = countries_je_the_sugar_monopoly
+            target = ROOT
+        }
+        set_variable = {
+            name = var_count_states_the_sugar_monopoly
+            value = kmpmp_sv_count_states_the_sugar_monopoly
+        }
+    }
+
+    on_monthly_pulse = {
+        effect = {
+            set_variable = {
+                name = var_count_states_the_sugar_monopoly
+                value = kmpmp_sv_count_states_the_sugar_monopoly
+            }
+            
+            if = { # owner of every state
+                limit = { 
+                    var:var_count_states_the_sugar_monopoly >= 7
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            exists = global_var:var_owner_states_the_sugar_monopoly
+                        }
+                    }
+                    set_global_variable = {
+                        name = var_owner_states_the_sugar_monopoly
+                        value = ROOT
+                    }
+                    add_modifier = {
+                        name = kmpmp_the_sugar_monopoly_domination
+                    }
+                }
+            }
+            else_if = { # we have an owner of every state
+                limit = {
+                    exists = global_var:var_owner_states_the_sugar_monopoly
+                }
+                if = { # not longer owner of every state - remove buff
+                    limit = {
+                        ROOT = global_var:var_owner_states_the_sugar_monopoly
+                    }
+                    remove_global_variable = var_owner_states_the_sugar_monopoly
+                    remove_modifier = kmpmp_the_sugar_monopoly_domination
+                }
+                else_if = { # someone owns all states
+                    limit = {
+                        NOT = {
+                            has_modifier = kmpmp_the_sugar_monopoly_domination_negative
+                        }
+                    }
+                    add_modifier = {
+                        name = kmpmp_the_sugar_monopoly_domination_negative
+                    }
+                    trigger_event = {
+                        id = kmpmp_ev_regional_je.1
+                        popup = yes
+                    }
+                }
+            }
+            else_if = { # we have no owner of every state - remove debuf
+                limit = {
+                    NOT = {
+                        exists = global_var:var_owner_states_the_sugar_monopoly
+                    }
+                    has_modifier = kmpmp_the_sugar_monopoly_domination_negative
+                }
+                remove_modifier = kmpmp_the_sugar_monopoly_domination_negative
+            }
+    
+            if = { # owns the most states
+                limit = {
+                    var:var_count_states_the_sugar_monopoly >= 4
+                    NOT = { # no one has all
+                        exists = global_var:var_owner_states_the_sugar_monopoly
+                    }
+                    # since we have a total of 7 states we don't need to check most
+                    # NOT = { # no one has more or equal states
+                    #     any_in_global_list = {
+                    #         variable = countries_je_the_sugar_monopoly
+                    #         exists = THIS
+                    #         NOT = {
+                    #             THIS = ROOT
+                    #         }
+                    #         var:var_count_states_the_sugar_monopoly >= ROOT.var:var_count_states_the_sugar_monopoly
+                    #     }
+                    # }
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            has_modifier = kmpmp_the_sugar_monopoly_hegemony
+                        }
+                    }
+                    add_modifier = {
+                        name = kmpmp_the_sugar_monopoly_hegemony
+                    }
+                }
+            }
+            else_if = { # we don't own most states - remove buff
+                limit = {
+                    has_modifier = kmpmp_the_sugar_monopoly_hegemony
+                }
+                remove_modifier = kmpmp_the_sugar_monopoly_hegemony
+            }
+        }
+    }
+}

@@ -8,6 +8,9 @@
 		}
 	}
 	state_modifiers = {
+		level_scaled = {
+			state_migration_pull_mult = 0.2
+		}
 		workforce_scaled = {
 			state_infrastructure_add = 50
 		}
@@ -25,7 +28,7 @@
 		level_scaled = {
 			building_employment_clerks_add = 1000
 			building_employment_machinists_add = 1500
-			building_employment_capitalists_add = 250
+			building_employment_bureaucrats_add = 250
 		}
 	}
 }
@@ -37,6 +40,12 @@ pm_canals_mint = {
 			country_prestige_add = 70
 			country_convoys_capacity_mult = 0.1
 			country_minting_add = 1000
+		}
+	}
+
+	state_modifiers = {
+		level_scaled = {
+			state_migration_pull_mult = 0.2
 		}
 	}
 
@@ -52,7 +61,7 @@ pm_canals_mint = {
 		level_scaled = {
 			building_employment_clerks_add = 1000
 			building_employment_machinists_add = 1000
-			building_employment_capitalists_add = 250
+			building_employment_bureaucrats_add = 250
 		}
 	}
 }
@@ -67,6 +76,9 @@ pm_canals_eletric = {
 		}
 	}
 	state_modifiers = {
+		level_scaled = {
+			state_migration_pull_mult = 0.2
+		}
 		unscaled = {
 			state_infrastructure_add = 50
 		}
@@ -84,7 +96,7 @@ pm_canals_eletric = {
 		level_scaled = {
 			building_employment_clerks_add = 1000
 			building_employment_machinists_add = 2000
-			building_employment_capitalists_add = 300
+			building_employment_bureaucrats_add = 300
 		}
 	}
 }
@@ -99,6 +111,9 @@ pm_canals_oil = {
 		}
 	}
 	state_modifiers = {
+		level_scaled = {
+			state_migration_pull_mult = 0.2
+		}
 		unscaled = {
 			state_infrastructure_add = 50
 		}
@@ -116,12 +131,18 @@ pm_canals_oil = {
 		level_scaled = {
 			building_employment_clerks_add = 1500
 			building_employment_machinists_add = 3500
-			building_employment_capitalists_add = 500
+			building_employment_bureaucrats_add = 500
 		}
 	}
 }
 pm_government_run_building_canals = {
 	texture = "gfx/interface/icons/production_method_icons/government_run.dds"	
+	
+	state_modifiers = {
+		level_scaled = {
+			state_migration_pull_mult = 0.2
+		}
+	}
 	
 	building_modifiers = { 
 		level_scaled = {

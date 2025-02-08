@@ -1,0 +1,160 @@
+﻿namespace = kmpmp_formation
+
+# Parthia
+kmpmp_formation.1 = {
+	type = country_event
+	placement = ROOT
+
+	title = kmpmp_formation.1.t
+	desc = kmpmp_formation.1.d
+	flavor = kmpmp_formation.1.f
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	duration = 3
+
+	trigger = {
+		c:P01 ?= THIS
+		NOT = { has_global_variable = has_formed_p01 }
+	}
+
+	immediate = {
+		set_global_variable = has_formed_p01
+		save_scope_as = formation_country
+		ruler = { save_scope_as = ruler_scope }
+		every_country = {
+			limit = {
+				has_diplomatic_relevance = ROOT
+			}
+			post_notification = unification_notification_one_culture
+		}
+	}
+
+	option = {
+		name = kmpmp_formation.1.a
+		default_option = yes
+		add_modifier = {
+			name = unification_prestige
+			months = very_long_modifier_time
+		}
+		add_modifier = {
+			name = kmpmp_parthian_empire
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_PUNJAB }
+			}
+			s:STATE_PUNJAB = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_SINDH }
+			}
+			s:STATE_SINDH = {
+				add_claim = ROOT
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = kmpmp_formation.1.b
+		add_modifier = {
+			name = unification_prestige
+			months = very_long_modifier_time
+		}
+		add_modifier = {
+			name = kmpmp_parthian_empire
+		}
+
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_PUNJAB }
+			}
+			s:STATE_PUNJAB = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_SINDH }
+			}
+			s:STATE_SINDH = {
+				add_claim = ROOT
+			}
+		}
+		every_scope_state = {
+			convert_population = {
+				target = rel:zoroastrian
+				value = 0.6
+			}
+		}
+		set_state_religion = rel:zoroastrian
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Latin Empire
+kmpmp_formation.2 = {
+	type = country_event
+	placement = ROOT
+
+	title = kmpmp_formation.2.t
+	desc = kmpmp_formation.2.d
+	flavor = kmpmp_formation.2.f
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	duration = 3
+
+	trigger = {
+		c:LTN ?= THIS
+		NOT = { has_global_variable = has_formed_ltn }
+	}
+
+	immediate = {
+		set_global_variable = has_formed_ltn
+		save_scope_as = formation_country
+		ruler = { save_scope_as = ruler_scope }
+		every_country = {
+			limit = {
+				has_diplomatic_relevance = ROOT
+			}
+			post_notification = unification_notification_generic
+		}
+	}
+
+	option = {
+		name = kmpmp_formation.2.a
+		default_option = yes
+		add_modifier = {
+			name = unification_prestige
+			months = very_long_modifier_time
+		}
+		
+		kmpmp_unification_claims_effect_ltn = yes
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

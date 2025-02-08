@@ -4,7 +4,7 @@
  kmpmp_annex_any_subject_action_name:0 "$kmpmp_annex_any_subject$"
  kmpmp_annex_any_subject_action_notification_name:0 "$kmpmp_annex_any_subject$"
  kmpmp_annex_any_subject_action_notification_desc:0 "$kmpmp_annex_any_subject_desc$"
- kmpmp_annex_any_subject_trigger_event_description:0 "Löst das Ereignis #v $kmpmp_ev_annex_any_subject.1.t$#! aus\nfügt zusätzlich [concept_infamy] für die Annektion hinzu"
+ kmpmp_annex_any_subject_trigger_event_description:0 "Löst das Ereignis #v $kmpmp_ev_annex_any_subject.1.t$#! aus\nFügt zusätzlich #variable [SCOPE.ScriptValue('kmpmp_sv_infamy_war_goal_annex_country')|D]#! [concept_infamy] für die Annektion hinzu"
 
  kmpmp_ev_annex_any_subject.1.t:0 "Erzwungene Annektion"
  kmpmp_ev_annex_any_subject.1.d:0 "Schnellere Eingliederung"

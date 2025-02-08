@@ -1,0 +1,76 @@
+﻿# REGARDING BRAZIL: There are several varying estimates for Brazil's population overall in the 1830s. There's no good censuses for 1836 specifically, and provincial censuses are all over the place in terms of quality and distance in time from 1836. Everything will be drawn from estimates of estimates and probably have some issues with accuracy. I can do nothing but apologize, and encourage students of history to go forth and write a book I can steal data from in the future.
+
+POPS = {
+	# kmpmp add more pops *10
+	s:STATE_ANTOFAGASTA = {
+		region_state:BOL = {
+			create_pop = {
+				culture = south_andean
+				size = 395964 #43996
+			}
+			create_pop = {
+				culture = aimara
+				size = 577800 #64200
+			}
+			create_pop = {
+				culture = afro_caribeno
+				size = 5400 #600
+			}
+			create_pop = {
+				culture = quechua
+				size = 30600 #3400
+			}
+		}
+	}
+	# kmpmp add more pops *1.5
+	s:STATE_LA_PAZ = {
+		region_state:BOL = {
+			create_pop = {
+				culture = south_andean
+				size = 110396  #220792
+			}
+			create_pop = {
+				culture = quechua
+				size = 159000 #318000
+			}
+			create_pop = {
+				culture = aimara
+				size = 134002 #268004
+			}
+			create_pop = {
+				culture = amazonian
+				size = 23500 #47000
+			}
+			create_pop = {
+				culture = afro_caribeno	# Yungas Afro-Bolivians
+				size = 1600 #3200
+			}
+		}
+	}
+	# kmpmp double the pops
+	s:STATE_LIMA = {
+		region_state:NPU = {
+			create_pop = {
+				culture = south_andean
+				size = 24800 #248000
+			}
+			create_pop = {
+				culture = quechua
+				size = 21200 #212000
+			}
+			create_pop = {
+				culture = afro_caribeno
+				size = 2190 #21900
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = afro_caribeno
+				size = 620 #6200
+			}
+			create_pop = {
+				culture = amazonian
+				size = 1600 #16000
+			}
+		}
+	}
+}

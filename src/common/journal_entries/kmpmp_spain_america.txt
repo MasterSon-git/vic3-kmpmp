@@ -1,0 +1,42 @@
+﻿je_spain_regain_influence_in_america = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	group = je_group_historical_content
+	possible = { # added in history\global
+	}
+
+	complete = {
+		c:UCA ?= {
+			relations:root >= relations_threshold:cordial
+		}
+	}
+
+	on_complete = {
+		custom_tooltip = {
+			text = je_spain_regain_influence_in_america_complete_tt
+			set_variable = has_completed_je_spain_regain_influence_in_america
+		}
+
+		create_diplomatic_pact = {
+			country = c:UCA
+			type = protectorate
+		}
+	}
+
+	fail = {
+		OR = {
+			NOT = {
+				exists = c:UCA
+			}
+
+			c:UCA ?= {
+				is_subject = yes
+				NOT = {
+					is_subject_of = ROOT
+				}	
+			}
+		}
+    }
+
+    on_fail = {
+    }
+}

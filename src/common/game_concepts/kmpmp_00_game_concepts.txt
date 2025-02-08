@@ -1,0 +1,2 @@
+﻿# TODO: hmm? why not defined in vanilla but throws errors on hovering country context menues
+concept_trade = {}

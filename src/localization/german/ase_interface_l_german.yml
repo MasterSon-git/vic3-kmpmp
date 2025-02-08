@@ -1,0 +1,104 @@
+﻿l_german:
+ ASE_STOCKPILE_WORD:0 "Warenlager"
+ ASE_INPUT_WORD:0 "Eingang"
+ ASE_OUTPUT_WORD:0 "Ausgang"
+ ASE_SAVING_WORD:0 "Einkauf"
+ ASE_SPENDING_WORD:0 "Verkauf"
+
+ concept_ase_mod_description:0 "Anbeeld's Stockpile Economy"
+ concept_ase_mod_description_desc:0 "Anbeeld's Stockpile Economy is a mod that makes it possible to [Concept('concept_ase_market_stockpile', 'Stockpile')] all types of [Concept('concept_good', 'Goods')], both for players and for AI."
+
+ concept_ase_market_stockpile:0 "Markt Warenlager"
+ concept_ase_market_stockpile_desc:0 "Das #bold Lagern#! von [Concept('concept_good', '$concept_goods$')] bedeuted eine [Concept('concept_ase_stockpile_reserve', 'Reserve')] davon anzulegen, diese [Concept('concept_good', '$concept_goods$')] werden vom Staat automatisch auf dem [concept_market] [Concept('concept_ase_stockpile_transfer', 'eingekauft')] wenn der [concept_market_price] unterhalb des [concept_ase_stockpile_price_target] liegt.\n\nWenn der [concept_market_price] über dem [concept_ase_stockpile_price_target] liegt, werden die #bold Lager#! automatisch [Concept('concept_good', '$concept_goods$')] an den [concept_market] verkaufen bis der [concept_ase_stockpile_price_target] erreicht ist. Was bedeuted, dass durch den [Concept('concept_ase_stockpile_transfer', 'Verkauf')] der [concept_market_price] nicht höher steigen wird.\n\n#bold Lager#! werden auf [Concept('concept_state', 'Staats')]-Basis verwaltet. Wenn ein [concept_country] einen [Concept('concept_state', 'Staat')] verliert, so verliert es dort auch das gesamte #bold Lager#!.\n\nIn [Concept('concept_market', '$concept_markets$')] mit mehreren Mitgliedern werden die Lager von jedem [concept_country] mit den anderen geteilt, wobei die [concept_ase_stockpile_policy] vom [concept_market_owner] gesteuert wird. Mitgleider können nur dem #bold Lagern#! von [Concept('concept_good', '$concept_goods$')] auf Grundlage der Bedingugnen die vom [concept_market_owner] festgelegt sind zustimmen oder diese ablehnen."
+ 
+ concept_ase_country_stockpile:0 "Landes Warenlager"
+ concept_ase_country_stockpile_desc:0 "Die Menge von [Concept('concept_good', '$concept_goods$')] welche in deinem [concept_country] [Concept('concept_ase_market_stockpile', 'gelagert')] sind im Vergleich zu dem gesamten [concept_ase_market_stockpile]. Markt-[concept_junior_partner] haben eine begrenzte [concept_ase_stockpile_capacity] auf dem [concept_market] dieser wird durch [concept_market_share] des [Concept('concept_country', 'Landes')] bestimmt.\n\nDen [concept_market] zu verlassen bedeuted den Zugang zum geteilten [concept_ase_market_stockpile] zu verlieren, allerdings bleiben die #bold Landes Warenlager#! dabei erhalten."
+
+ concept_ase_state_stockpile:0 "Staats Warenlager"
+ concept_ase_state_stockpile_desc:0 "Die Menge von [Concept('concept_good', '$concept_goods$')] welche in einem bestimmten [concept_state] [Concept('concept_ase_market_stockpile', 'gelagert')] sind im Vergleich zu dem gesamten [concept_ase_country_stockpile].\n\nDen [concept_state] zu verlieren bedeuted das man den Zugang zu dem #bold Staats Warenlager#! verliert."
+ 
+ concept_ase_stockpile_transfer:0 "Warenlager Transfer"
+ concept_ase_stockpile_transfer_desc:0 "Eine Änderung in der [concept_ase_stockpile_reserve], entweder #bold Einkaufen#! was bedeuted das [Concept('concept_ase_market_stockpile', 'Lager')] mit [Concept('concept_good', '$concept_goods$')] zu füllen, oder #bold Verkaufen#! was bedeutet [Concept('concept_good', '$concept_goods$')] auf dem [concept_market] anzubieten um den [concept_market_price] zu kontollieren.\n\nIn [Concept('concept_market', 'Märkten')] mit mehreren Mitgliedern werden #bold Einkäufe#! auf alle [Concept('concept_country', 'Länder')] im [concept_market] basierend auf ihrem [concept_market_share] aufgeteilt, während #bold Verkäufe#! proportional zur Größe des [concept_ase_country_stockpile] aufgeteilt werden."
+ 
+ concept_ase_stockpile_reserve:0 "Warenlager Reserve"
+ concept_ase_stockpile_reserve_desc:0 "Die Menge an eingelagerten [Concept('concept_good', '$concept_goods$')] in einem [Concept('concept_ase_market_stockpile', 'Warenlager')] des [Concept('concept_market', 'Markts')], eines [Concept('concept_country', 'Landes')] oder eines [concept_state], diese können immer verwendet werden um zu verhindern, dass die [Concept('concept_market_price', '$concept_market_prices$')] zu hoch steigen wenn die Nachfrage das Angebot übersteigt.\n\n#bold Reserven#! können nicht größer als #bold 200%#! der maximal verfügbaren [concept_ase_stockpile_capacity] sein, der Überschuss jeder [concept_good] wird nach einiger Zeit verloren sein."
+ 
+ concept_ase_stockpile_policy:0 "Lager Richtlinien"
+ concept_ase_stockpile_policy_desc:0 "Eine Kombination verschieder [Concept('concept_ase_market_stockpile', 'Warenlager')] Richtlinien: erlaubt [Concept('concept_ase_stockpile_transfer', 'Transfers')], maximale [Concept('concept_ase_stockpile_capacity', 'Lagerkapazität')], [Concept('concept_ase_stockpile_price_target', 'Preiziele')], [concept_state] Lager Prioritäten usw."
+ 
+ concept_ase_stockpile_capacity:0 "Lagerkapazität"
+ concept_ase_stockpile_capacity_desc:0 "Die [Concept('concept_ase_stockpile_reserve', 'Reserve')] von [Concept('concept_good', '$concept_goods$')] die in einem [Concept('concept_ase_market_stockpile', 'Lager')] des [Concept('concept_country', 'Landes')] eingelagert werden können. Diese basiert auf dem #bold Markt Volumen#! der [concept_good], diese ergibt sich aus #bold 25% der #![concept_sell_orders]#bold  + 75% der #![concept_buy_orders], multipliziert mit einer bestimmten Menge an #bold Monaten#! die durch den [concept_market_owner] festgelgt wurde.\n\nWenn die #bold Kapazität#! auf #bold 6 Monate#! eingestellt wurde, lagert das [concept_ase_market_stockpile] die Menge an [Concept('concept_good', '$concept_goods$')] die auf dem [concept_market] innerhalb von #bold 6 Monaten#! verbraucht werden.\n\nDas bedeutet, dass die #bold Lagerkapazität#! nicht nur ein willkürlicher Wert ist, sondern vielmehr ein Hinweis darauf, wie wichtig die [Concept('concept_good', '$concept_goods$')] für den [concept_market] sind."
+ 
+ concept_ase_stockpile_price_target:0 "Lager Preisziel"
+ concept_ase_stockpile_price_target_desc:0 "Der [concept_market_price] den das [concept_ase_market_stockpile] versucht zu halten wenn ein [Concept('concept_ase_stockpile_transfer', 'Transfer')] stattfindet.\n\n[Concept('concept_ase_stockpile_transfer', 'Einkauf')] beginnt wenn der [Concept('concept_market_price', 'Preis')] unter das #bold Einkaufspreisziel#! fällt, [Concept('concept_ase_stockpile_transfer', 'Verkauf')] beginnt wenn der [Concept('concept_market_price', 'Preis')] über das #bold Verkaufspreisziel#! steigt. In beiden Fällen versucht das [Concept('concept_ase_market_stockpile', 'Lager')] die benötigte Menge an [Concept('concept_good', '$concept_goods$')] zu kaufen oder zu verkaufen damit der [Concept('concept_market_price', 'Preis')] das #bold Preisziel#! erreicht."
+
+ ASE_STOCKPILE_EXISTING_RESERVE:0 "[Concept('concept_ase_market_stockpile', 'Lager')] in [Goods.GetMarket.GetName] beinhaltet [Multiply_CFixedPoint(GuiScope.SetRoot(Goods.GetMarket.GetOwner.MakeScope).ScriptValue(Concatenate('ase_stockpile_market_reserve_', Goods.GetKey)), '(CFixedPoint)10')|Dv] [Goods.GetName]"
+ ASE_STOCKPILE_ONGOING_TRANSFER_SAVING:0 "$ASE_STOCKPILE_EXISTING_RESERVE$\nAktueller [Concept('concept_ase_stockpile_transfer', 'Transfer')] entpricht [Multiply_CFixedPoint(GuiScope.SetRoot(Goods.GetMarket.GetOwner.MakeScope).ScriptValue(Concatenate('ase_stockpile_market_transfer_', Goods.GetKey)), '(CFixedPoint)0.1')|=+D] pro Woche"
+ ASE_STOCKPILE_ONGOING_TRANSFER_SPENDING:0 "$ASE_STOCKPILE_EXISTING_RESERVE$\nAktueller [Concept('concept_ase_stockpile_transfer', 'Transfer')] entspricht [Multiply_CFixedPoint(GuiScope.SetRoot(Goods.GetMarket.GetOwner.MakeScope).ScriptValue(Concatenate('ase_stockpile_market_transfer_', Goods.GetKey)), '(CFixedPoint)0.1')|=+D] pro Woche"
+ ASE_STOCKPILE_NO_ONGOING_TRANSFER:0 "$ASE_STOCKPILE_EXISTING_RESERVE$\nAktuell findet kein [Concept('concept_ase_stockpile_transfer', 'Transfer')] statt"
+
+ ASE_MARKET_STOCKPILE:0 "[concept_ase_market_stockpile]"
+ ASE_COUNTRY_STOCKPILE:0 "[concept_ase_country_stockpile]"
+ ASE_STATE_STOCKPILE:0 "[concept_ase_state_stockpile]"
+
+ ASE_STOCKPILE_STATES_IN_MARKET:0 "[Concept('concept_state', 'Staaten')] im [Goods.GetMarket.GetName] mit [Concept('concept_ase_market_stockpile', 'Warenlager')] für [Goods.GetName]"
+ ASE_STOCKPILE_SHOW_STATES_IN_COUNTRY:0 "#bold #underline Zeige nur Staaten in unserem Land#!#!"
+ ASE_STOCKPILE_STATES_IN_COUNTRY:0 "[Concept('concept_state', 'Staaten')] in [GetPlayer.GetName] mit [Concept('concept_ase_market_stockpile', 'Warenlager')] für [Goods.GetName]"
+ ASE_STOCKPILE_COUNTRIES_IN_MARKET:0 "[Concept('concept_country', 'Länder')] im [Goods.GetMarket.GetName] mit [Concept('concept_ase_market_stockpile', 'Warenlager')] für [Goods.GetName]"
+
+ ASE_STOCKPILE_SECTION_GOODS_POLICY:0 "[Concept('concept_ase_stockpile_policy', 'Warenlager für')] [Goods.GetName]"
+ ASE_STOCKPILE_SECTION_DEFAULT_POLICY:0 "[Concept('concept_ase_stockpile_policy', 'Standard Lager Richtlinien')]"
+ ASE_STOCKPILE_SECTION_STATE_POLICY:0 "[Concept('concept_ase_stockpile_policy', 'Warenlager in')] [GoodsStatePanel.GetGoods.GetState.GetName]"
+
+ ASE_STOCKPILE_TRANSFERS:0 "[Concept('concept_ase_stockpile_transfer', 'Transfers')]"
+ ASE_STOCKPILE_TRANSFERS_BOTH:0 "Setze [Concept('concept_ase_stockpile_transfer', 'Warenlager Transfers')] auf [Concept('concept_ase_stockpile_transfer', 'Einkauf und Verkauf')]"
+ ASE_STOCKPILE_TRANSFERS_SAVING:0 "Setze [Concept('concept_ase_stockpile_transfer', 'Warenlager Transfers')] auf nur [Concept('concept_ase_stockpile_transfer', 'Einkauf')]"
+ ASE_STOCKPILE_TRANSFERS_SPENDING:0 "Setze [Concept('concept_ase_stockpile_transfer', 'Warenlager Transfers')] auf nur [Concept('concept_ase_stockpile_transfer', 'Verkauf')]"
+ ASE_STOCKPILE_TRANSFERS_NONE:0 "Setze [Concept('concept_ase_stockpile_transfer', 'Warenlager Transfers')] auf [Concept('concept_ase_stockpile_transfer', 'Keine')]"
+ ASE_STOCKPILE_TRANSFERS_BOTH_TOOLTIP:0 "Erlaube [Concept('concept_ase_stockpile_transfer', 'Einkauf und Verkauf')] von [Goods.GetName] für [Concept('concept_ase_market_stockpile', 'Warenlager')] in [GetPlayer.GetName]"
+ ASE_STOCKPILE_TRANSFERS_SAVING_TOOLTIP:0 "Erlaube nur [Concept('concept_ase_stockpile_transfer', 'Einkauf')] von [Goods.GetName] für [Concept('concept_ase_market_stockpile', 'Warenlager')] in [GetPlayer.GetName]"
+ ASE_STOCKPILE_TRANSFERS_SPENDING_TOOLTIP:0 "Erlaube nur [Concept('concept_ase_stockpile_transfer', 'Verkauf')] von [Goods.GetName] für [Concept('concept_ase_market_stockpile', 'Warenlager')] in [GetPlayer.GetName]"
+ ASE_STOCKPILE_TRANSFERS_NONE_TOOLTIP:0 "Verbiete [Concept('concept_ase_stockpile_transfer', 'Einkauf und Verkauf')] von [Goods.GetName] für [Concept('concept_ase_market_stockpile', 'Warenlager')] in [GetPlayer.GetName]"
+
+ ASE_STOCKPILE_NOT_OWNER:0 "@red_cross! [concept_ase_market_stockpile] im [Goods.GetMarket.GetName] werden durch [Goods.GetMarket.GetOwner.GetName] gesteuert.\n\nAls Markt-[concept_junior_partner], bist du darauf begrenzt dem [Concept('concept_ase_stockpile_transfer', 'Transfer')] von [Goods.GetName] unter diesen Bedingungen zuzustimmen oder abzulehnen durch Anpassung der [Concept('concept_ase_stockpile_transfer', 'Warenlager Transfers')]."
+
+ ASE_STOCKPILE_CAPACITY:0 "[Concept('concept_ase_stockpile_capacity', 'Kapazität')]"
+ ASE_STOCKPILE_CAPACITY_MONTHS:0 " Monate"
+ ASE_STOCKPILE_CAPACITY_LOWEST:0 "@red_cross! [concept_ase_stockpile_capacity] kann nicht weiter verringert werden"
+ ASE_STOCKPILE_CAPACITY_LOWER:0 "Verringert die [concept_ase_stockpile_capacity] um #variable 3 Monate#!"
+ ASE_STOCKPILE_CAPACITY_HIGHEST:0 "@red_cross! [concept_ase_stockpile_capacity] kann nicht weiter erhöht werden"
+ ASE_STOCKPILE_CAPACITY_HIGHER:0 "Erhöht die [concept_ase_stockpile_capacity] um #variable 3 Monate#!"
+
+ ASE_STOCKPILE_COUNTRY_PRICE_TARGET_SAVING:0 "[Concept('concept_ase_stockpile_price_target', 'Einkaufs-Preisziel')]"
+ ASE_STOCKPILE_COUNTRY_PRICE_TARGET_SAVING_LOWEST:0 "@red_cross! [concept_ase_stockpile_price_target] kann nicht weiter verringert werden"
+ ASE_STOCKPILE_COUNTRY_PRICE_TARGET_SAVING_LOWER:0 "Verringert das [concept_ase_stockpile_price_target] um #variable 5%#!"
+ ASE_STOCKPILE_COUNTRY_PRICE_TARGET_SAVING_HIGHEST:0 "@red_cross! [concept_ase_stockpile_price_target] kann nicht weiter erhöht werden"
+ ASE_STOCKPILE_COUNTRY_PRICE_TARGET_SAVING_HIGHER:0 "Erhöht das [concept_ase_stockpile_price_target] um #variable 5%#!"
+
+ ASE_STOCKPILE_COUNTRY_PRICE_TARGET_SPENDING:0 "[Concept('concept_ase_stockpile_price_target', 'Verkaufs-Preisziel')]"
+ ASE_STOCKPILE_COUNTRY_PRICE_TARGET_SPENDING_LOWEST:0 "@red_cross! [concept_ase_stockpile_price_target] kann nicht weiter verringert werden"
+ ASE_STOCKPILE_COUNTRY_PRICE_TARGET_SPENDING_LOWER:0 "Verringert das [concept_ase_stockpile_price_target] um #variable 5%#!"
+ ASE_STOCKPILE_COUNTRY_PRICE_TARGET_SPENDING_HIGHEST:0 "@red_cross! [concept_ase_stockpile_price_target] kann nicht weiter erhöht werden"
+ ASE_STOCKPILE_COUNTRY_PRICE_TARGET_SPENDING_HIGHER:0 "Erhöht das [concept_ase_stockpile_price_target] um #variable 5%#!"
+
+ ASE_STOCKPILE_NONE:0 "#variable Keine#!"
+ ASE_STOCKPILE_NONE_TOOLTIP:0 "@red_cross! [Goods.GetMarket.GetOwner.GetName], Besitzer des [Goods.GetMarket.GetName], hat sich gegen das [Concept('concept_ase_market_stockpile', 'Lagern')] von [Goods.GetName] entschieden"
+
+ ASE_STOCKPILE_RESET_SPECIFIC:0 "@[Goods.GetKey]! Reset"
+ ASE_STOCKPILE_RESET_SPECIFIC_TOOLTIP:0 "Setze die Einstellung für [Goods.GetName] auf #bold Standard#! zurück"
+ ASE_STOCKPILE_RESET_ALL_GOODS:0 "Alle Reset"
+ ASE_STOCKPILE_RESET_ALL_GOODS_TOOLTIP:0 "Setze die Einstellung für alle [Concept('concept_good', '$concept_goods$')] auf #bold Standard#! zurück"
+ ASE_STOCKPILE_RESET_CONFIRM:0 "#r #bold Sind Sie sicher?#!#!"
+ ASE_STOCKPILE_RESET_STATE_SPECIFIC_TOOLTIP:0 "Setze alle Einstellungen für [Goods.GetName] in [GoodsStatePanel.GetGoods.GetState.GetName] auf #bold Standard#! zurück"
+ ASE_STOCKPILE_RESET_STATE_ALL_GOODS_TOOLTIP:0 "Setze alle Einstellungen für alle [Concept('concept_good', '$concept_goods$')] die in [GoodsStatePanel.GetGoods.GetState.GetName] geändert wurden auf #bold Standard#! zurück"
+
+ ASE_STOCKPILE_ONLY_FOR_SPECIFIC:0 "#gold Nur für#! @[Goods.GetKey]!"
+ ASE_STOCKPILE_ONLY_FOR_SPECIFIC_TOOLTIP:0 "Wirkt sich nur auf [Concept('concept_ase_market_stockpile', 'Lager')] von [Goods.GetName] in [GoodsStatePanel.GetGoods.GetState.GetName] aus"
+ ASE_STOCKPILE_FOR_ALL_GOODS:0 "#gold Standard#!"
+ ASE_STOCKPILE_FOR_ALL_GOODS_TOOLTIP:0 "Wirkt sich auf alle [Concept('concept_ase_market_stockpile', 'Lager')] von [Concept('concept_good', '$concept_goods$')] in [GoodsStatePanel.GetGoods.GetState.GetName] aus"
+
+ ASE_STOCKPILE_PRIORITY:0 "Priorität"
+ ASE_STOCKPILE_PRIORITY_TOOLTIP:0 "Priorisiert [GoodsStatePanel.GetGoods.GetState.GetName] für [Concept('concept_ase_stockpile_transfer', 'Einkaufs Transfers')] von [Goods.GetName], erhöht den Anteil von [Concept('concept_good', '$concept_goods$')] die es im Vergleich zu anderen [Concept('concept_state', 'Staaten')] erhält.\n\nWenn die Spieleinstellung #bold Staats Warenlager#! unter #bold 100%#! ist, wird der [concept_state] für [Concept('concept_ase_stockpile_transfer', 'Einkaufs-Transfers')] vor anderen unabhängig des BIP Anteils berücksichtigt.\n\n[concept_capital_state] sind standardmäßig priorisiert."
+ 
+ ase_remove_everything_related_to_stockpiling:0 "[Concept('concept_ase_mod_description', 'ASE')] | Entferne alles im Bezug auf Warenlager"
+ ase_remove_everything_related_to_stockpiling_desc:0 "Diese Entscheidung wird benötigt, falls du ASE aus dieser Spielrunde entfernen möchtest, andernfalls werden Probleme auftreten. Du musst danach das Spiel beenden und die Mod deaktivieren."

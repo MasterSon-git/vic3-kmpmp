@@ -1,0 +1,10 @@
+﻿l_german:
+ je_united_scandinavia: "Vereinigtes $SCA$"
+ je_united_scandinavia_reason: "Nachdem wir $SCA$ geformt haben sollten wir unseren Einfluss auf die nordischen Staaten ausweiten."
+ je_united_scandinavia_possible_tt: "$SCA$ von [ROOT.GetCountry.GetName] geformt."
+ je_united_scandinavia_invalid_tt: "$SCA$ von einem anderen Land geformt."
+ je_baltic_empire: "Baltisches Reich"
+ je_baltic_empire_reason: "Die $STATE_BALTIC_SEA$ ist unser natürlicher Einflussbereich."
+ je_baltic_empire_possible_tt: "[concept_journal_entry] $je_united_scandinavia$ abgeschlossen."
+ je_baltic_empire_maintain: "Erhaltung des Baltischen Reiches"
+ je_baltic_empire_maintain_reason: "Erhaltung des Baltischen Reiches"

@@ -1,0 +1,30 @@
+﻿l_german:
+ kmpmp_spain_a_mutually_beneficial_deal: "Ein für beide Seiten vorteilhafter Deal"
+
+ je_spain_regain_influence_in_america: "Einfluss in Amerika zurückgewinnen"
+ je_spain_regain_influence_in_america_reason: "Wenn wir in Amerika wieder an Einfluss gewinnen, bekommen wir vielleicht „$kmpmp_spain_a_mutually_beneficial_deal$“."
+ je_spain_regain_influence_in_america_complete_tt: "Schaltet die Entscheidung „$kmpmp_spain_a_mutually_beneficial_deal$“ frei"
+ has_completed_je_spain_regain_influence_in_america_tt: "[concept_journal_entry] '$je_spain_regain_influence_in_america$' abgeschlossen"
+
+ kmpmp_spain_a_mutually_beneficial_deal_decision: "$kmpmp_spain_a_mutually_beneficial_deal$"
+ kmpmp_spain_a_mutually_beneficial_deal_decision_desc: "Mal sehen, was Mexiko von unseren Ambitionen hält."
+ kmpmp_spain_a_mutually_beneficial_deal_decision_tooltip: ""
+
+ kmpmp_ev_spain_america.1.t: "$kmpmp_spain_a_mutually_beneficial_deal$"
+ kmpmp_ev_spain_america.1.d: "[SCOPE.sCountry('event_actor_country').GetName] hat Ambitionen in Amerika"
+ kmpmp_ev_spain_america.1.f: "Alte spanische Kolonialansprüche scheinen wieder aufzutauchen. Wir sollten ihren Diplomaten eine klare Botschaft senden."
+ kmpmp_ev_spain_america.1.a: "Viva La Mexico!"
+ kmpmp_ev_spain_america.1.b: "Eine Kooperation könnte für uns von Vorteil sein"
+ kmpmp_ev_spain_america.1.b.tt: "$kmpmp_ev_spain_america.2.t$"
+ kmpmp_ev_spain_america.1.b.tt2: "Frage [SCOPE.sCountry('event_actor_country').GetName] ihrem [concept_power_bloc] beizutreten."
+ kmpmp_ev_spain_america.1.c: "Sie sind unsere wahren Oberherren"
+ kmpmp_ev_spain_america.1.c.tt: "Rückkehr zum spanischen Reich"
+
+ kmpmp_ev_spain_america.2.t: "Wirtschaftliche und politische Zusammenarbeit"
+ kmpmp_ev_spain_america.2.d: "[SCOPE.sCountry('mexico_scope').GetName] bietet „$kmpmp_spain_a_mutually_beneficial_deal$“"
+ kmpmp_ev_spain_america.2.f: "Die Ausweitung unseres Einflusses in Amerika könnte sich für uns langfristig auszahlen."
+ kmpmp_ev_spain_america.2.a: "Wir heissen [SCOPE.sCountry('mexico_scope').GetName] herzlich willkommen"
+ kmpmp_ev_spain_america.2.b: "Ich sehe keinen Vorteil für uns"
+
+ kmpmp_mexico_spain_cooperation: "Spanische Zusammenarbeit"
+ kmpmp_mexico_part_of_the_spanish_empire: "Teil des spanischen Reiches"

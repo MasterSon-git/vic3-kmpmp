@@ -17,6 +17,7 @@ krakatoa.1 = { #krakatoa erupts and you're the owner
 	flavor = krakatoa.1.f
 
 	trigger = {
+		game_date >= 1850.1.1
 		NOT = { has_variable = mega_eruption }
 		NOT = { global_var:number_of_mega_eruptions > 3 }
 		NOT = { has_global_variable = krakatoa_var }
@@ -46,7 +47,8 @@ krakatoa.1 = { #krakatoa erupts and you're the owner
 		}
 		every_country = {
 			limit = {
-				is_player = yes
+				# kmpmp event should also be triggered if no player is in the region
+				# is_player = yes
 				any_scope_state = {
 					is_coastal = yes
 					OR = {
@@ -58,7 +60,9 @@ krakatoa.1 = { #krakatoa erupts and you're the owner
 						region = sr:region_oceania
 						region = sr:region_zanj
 						region = sr:region_southern_africa
-						region = sr:region_south_india
+						region = sr:region_bombay
+						region = sr:region_madras
+						region = sr:region_bengal
 					}
 				}
 			}
@@ -109,5 +113,71 @@ krakatoa.1 = { #krakatoa erupts and you're the owner
 		add_journal_entry = {	
 			type = je_krakatoa
 		}
+	}
+}
+
+krakatoa.2 = { #global tsunamis
+	type = country_event
+	placement = scope:tsunami_state
+	
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	title = krakatoa.2.t
+	desc = krakatoa.2.d
+	flavor = krakatoa.2.f
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				is_coastal = yes
+				OR = {
+					region = sr:region_ethiopia
+					region = sr:region_indochina
+					region = sr:region_indonesia
+					region = sr:region_south_china
+					region = sr:region_japan
+					region = sr:region_oceania
+					region = sr:region_zanj
+					region = sr:region_southern_africa
+					region = sr:region_bombay
+					region = sr:region_madras
+					region = sr:region_bengal
+				}
+			}
+			save_scope_as = tsunami_state
+		}
+
+		# kmpmp make sure krakatoa_tsunami_effect is executed just once
+		if = {
+			limit = {
+				NOT = {
+					exists = global_var:kmpmp_krakatoa_tsunami_effect_executed
+				}
+			}
+
+			set_global_variable = {
+				name = kmpmp_krakatoa_tsunami_effect_executed
+				years = 1
+			}
+
+			krakatoa_tsunami_effect = yes
+		}
+		
+		# vanilla
+		# krakatoa_tsunami_effect = yes
+	}
+
+	duration = 3
+
+	option = { #this is a tragedy
+		name = krakatoa.2.a
+		default_option = yes
+		custom_tooltip = krakatoa_tsunami_tt
 	}
 }

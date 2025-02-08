@@ -26,20 +26,40 @@ GGGG_mo_firearms = {
     group   = GGGG_mog_guns
     
     possible = {
-        market ?= {
-            mg:small_arms ?= {
-                market_goods_sell_orders > 0
+        trigger_if = { # force enable firearms on game start
+            limit = {
+                game_date < 1836.1.2
+            }
+            # market goods can't be checked on game start, so check if we have a building for small_arms
+            any_scope_building = {
+                is_building_type = building_arms_industry
+                level > 0
+            }
+        }
+        trigger_else = {
+            market ?= {
+                mg:small_arms ?= {
+                    market_goods_sell_orders > 0
+                }
             }
         }
     }
     
     can_be_turned_off = {
-        scope:military_formation = {
-            NOR = {
-                has_mobilization_option = mobilization_option:GGGG_mo_percussion_caps
-                has_mobilization_option = mobilization_option:GGGG_mo_rifling
-                has_mobilization_option = mobilization_option:GGGG_mo_breechblocks
-                has_mobilization_option = mobilization_option:GGGG_mo_bolt_actions
+        trigger_if = { # force enable firearms on game start
+            limit = {
+                game_date < 1836.1.2
+            }
+            always = no
+        }
+        trigger_else = {
+            scope:military_formation = {
+                NOR = {
+                    has_mobilization_option = mobilization_option:GGGG_mo_percussion_caps
+                    has_mobilization_option = mobilization_option:GGGG_mo_rifling
+                    has_mobilization_option = mobilization_option:GGGG_mo_breechblocks
+                    has_mobilization_option = mobilization_option:GGGG_mo_bolt_actions
+                }
             }
         }
     }

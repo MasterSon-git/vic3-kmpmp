@@ -1,0 +1,13 @@
+﻿GLOBAL = {
+    # add states for je_master_of_mediterranean_sea
+    kmpmp_update_global_list_states_je_master_of_mediterranean_sea = yes
+
+    # add state for je_leader_of_latin_america
+    kmpmp_update_global_list_states_je_leader_of_latin_america = yes
+
+    # add states for je_ruler_of_the_east
+    kmpmp_update_global_list_states_je_ruler_of_the_east = yes
+
+    # add states for je_the_sugar_monopoly
+    kmpmp_update_global_list_states_je_the_sugar_monopoly = yes
+}

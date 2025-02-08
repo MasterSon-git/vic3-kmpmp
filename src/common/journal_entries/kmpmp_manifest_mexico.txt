@@ -1,0 +1,546 @@
+﻿kmpmp_je_successor_of_gran_colombia = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	group = je_group_historical_content
+
+	is_shown_when_inactive = {
+		c:MEX ?= ROOT
+	}
+
+	complete = {
+		any_scope_state = {
+			state_region = s:STATE_GUATEMALA
+			owner = ROOT
+			is_incorporated = yes
+		}
+		state_region_owned_and_incorporated = {
+			STATE_REGION = STATE_SAN_SALVADOR
+		}
+		state_region_owned_and_incorporated = {
+			STATE_REGION = STATE_HONDURAS
+		}
+		state_region_owned_and_incorporated = {
+			STATE_REGION = STATE_NICARAGUA
+		}
+		state_region_owned_and_incorporated = {
+			STATE_REGION = STATE_COSTA_RICA
+		}
+	}
+
+	on_complete = {
+		if = {
+			limit = {
+				NOT = {
+					has_claim = s:STATE_PANAMA
+				}
+			}
+			s:STATE_PANAMA = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_claim = s:STATE_CUNDINAMARCA
+				}
+			}
+			s:STATE_CUNDINAMARCA = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_claim = s:STATE_GUAVIARE
+				}
+			}
+			s:STATE_GUAVIARE = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_claim = s:STATE_CAUCA
+				}
+			}
+			s:STATE_CAUCA = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_claim = s:STATE_ECUADOR
+				}
+			}
+			s:STATE_ECUADOR = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_claim = s:STATE_PASTAZA
+				}
+			}
+			s:STATE_PASTAZA = {
+				add_claim = ROOT
+			}
+		}
+		set_variable = kmpmp_successor_of_gran_colombia_comp
+
+        # temporary fix kmpmp_je_a_true_gran_colombia is new and not loaded in active session 
+        # can be removed next season
+        hidden_effect = {
+            if = {
+                limit = {
+                    NOT = {
+                        OR = {
+                            has_journal_entry = kmpmp_je_a_true_gran_colombia
+                            has_inactive_journal_entry = kmpmp_je_a_true_gran_colombia
+                        }
+                    }
+                }
+                add_journal_entry = {
+                    type = kmpmp_je_a_true_gran_colombia
+                }
+            }
+        }
+	}
+}
+
+kmpmp_je_a_true_gran_colombia = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	group = je_group_historical_content
+
+	is_shown_when_inactive = {
+		has_variable = kmpmp_successor_of_gran_colombia_comp
+	}
+
+	complete = {
+		calc_true_if = {
+			amount >= 4
+			state_region_owned_and_incorporated = {
+				STATE_REGION = STATE_PANAMA
+			}
+			state_region_owned_and_incorporated = {
+				STATE_REGION = STATE_CUNDINAMARCA
+			}
+			state_region_owned_and_incorporated = {
+				STATE_REGION = STATE_GUAVIARE
+			}
+			state_region_owned_and_incorporated = {
+				STATE_REGION = STATE_CAUCA
+			}
+			state_region_owned_and_incorporated = {
+				STATE_REGION = STATE_ECUADOR
+			}
+			state_region_owned_and_incorporated = {
+				STATE_REGION = STATE_PASTAZA
+			}
+		}
+	}
+
+	on_complete = {
+		set_variable = kmpmp_je_a_true_gran_colombia_comp
+		add_loyalists = {
+			value = 0.05
+		}
+		add_modifier = {
+			name = kmpmp_glory_in_latin_america
+			years = 5
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_claim = s:STATE_CAJAMARCA
+				}
+			}
+			s:STATE_CAJAMARCA = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_claim = s:STATE_AREQUIPA
+				}
+			}
+			s:STATE_AREQUIPA = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_claim = s:STATE_LIMA
+				}
+			}
+			s:STATE_LIMA = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_claim = s:STATE_ICA
+				}
+			}
+			s:STATE_ICA = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_claim = s:STATE_LA_PAZ
+				}
+			}
+			s:STATE_LA_PAZ = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_claim = s:STATE_TARAPACA
+				}
+			}
+			s:STATE_TARAPACA = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_claim = s:STATE_POTOSI
+				}
+			}
+			s:STATE_POTOSI = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_claim = s:STATE_ANTOFAGASTA
+				}
+			}
+			s:STATE_ANTOFAGASTA = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_claim = s:STATE_SANTA_CRUZ
+				}
+			}
+			s:STATE_SANTA_CRUZ = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_claim = s:STATE_JUJUY
+				}
+			}
+			s:STATE_JUJUY = {
+				add_claim = ROOT
+			}
+		}
+
+        # temporary fix kmpmp_je_united_states_of_latin_america is new and not loaded in active session 
+        # can be removed next season
+        hidden_effect = {
+            if = {
+                limit = {
+                    NOT = {
+                        OR = {
+                            has_journal_entry = kmpmp_je_united_states_of_latin_america
+                            has_inactive_journal_entry = kmpmp_je_united_states_of_latin_america
+                        }
+                    }
+                }
+                add_journal_entry = {
+                    type = kmpmp_je_united_states_of_latin_america
+                }
+            }
+        }
+	}
+}
+
+kmpmp_je_united_states_of_latin_america = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	group = je_group_historical_content
+
+	is_shown_when_inactive = {
+		has_variable = kmpmp_je_a_true_gran_colombia_comp
+	}
+
+	complete = {
+		calc_true_if = {
+			amount >= 5
+			state_region_owned_and_incorporated = {
+				STATE_REGION = STATE_CAJAMARCA
+			}
+			state_region_owned_and_incorporated = {
+				STATE_REGION = STATE_LIMA
+			}
+			state_region_owned_and_incorporated = {
+				STATE_REGION = STATE_ICA
+			}
+			state_region_owned_and_incorporated = {
+				STATE_REGION = STATE_LA_PAZ
+			}
+			state_region_owned_and_incorporated = {
+				STATE_REGION = STATE_TARAPACA
+			}
+			state_region_owned_and_incorporated = {
+				STATE_REGION = STATE_POTOSI
+			}
+			state_region_owned_and_incorporated = {
+				STATE_REGION = STATE_ANTOFAGASTA
+			}
+			state_region_owned_and_incorporated = {
+				STATE_REGION = STATE_SANTA_CRUZ
+			}
+			state_region_owned_and_incorporated = {
+				STATE_REGION = STATE_AREQUIPA
+			}
+		}
+	}
+
+	on_complete = {
+		add_modifier = kmpmp_united_states_of_latin_america
+		add_loyalists = {
+			value = 0.1
+		}
+		# actually not used
+		# set_variable = kmpmp_je_united_states_of_latin_america_comp
+	}
+}
+
+kmpmp_je_manifest_mexico = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	group = je_group_historical_content
+	#can_deactivate = yes   # if we are using this and add modifier in modifiers_while_active, the modifier is doubled on reactivation
+	can_revolution_inherit = yes
+    
+	is_shown_when_inactive = {
+		c:MEX ?= ROOT
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					has_modifier = kmpmp_manifest_mexico
+				}
+			}
+			add_modifier = {
+				name = kmpmp_manifest_mexico
+			}
+		}
+	}
+
+	complete = {
+		year > 1860
+	}
+
+	on_complete = {
+		if = {
+			limit = {
+				has_modifier = kmpmp_manifest_mexico
+			}
+			remove_modifier = kmpmp_manifest_mexico
+		}
+		set_variable = kmpmp_je_manifest_mexico_comp
+
+        # temporary fix kmpmp_je_consolidate_california is new and not loaded in active session 
+        # can be removed next season
+        hidden_effect = {
+            if = {
+                limit = {
+                    NOT = {
+                        OR = {
+                            has_journal_entry = kmpmp_je_consolidate_california
+                            has_inactive_journal_entry = kmpmp_je_consolidate_california
+                        }
+                    }
+                }
+                add_journal_entry = {
+                    type = kmpmp_je_consolidate_california
+                }
+            }
+        }
+	}
+
+	fail = {
+		OR = {
+			NOT = {
+				owns_entire_state_region = STATE_CALIFORNIA
+			}
+			s:STATE_CALIFORNIA = {
+				any_scope_state = {
+					is_incorporated = no
+				}
+			}
+			has_subject_relation_with = c:USA
+			is_in_customs_union_with = c:USA
+			is_in_same_power_bloc = c:USA
+		}
+	}
+
+	on_fail = {
+		if = {
+			limit = {
+				has_modifier = kmpmp_manifest_mexico
+			}
+			remove_modifier = kmpmp_manifest_mexico
+		}
+
+        hidden_effect = {
+            add_journal_entry = {
+                type = kmpmp_je_manifest_mexico_fail
+            }
+        }
+	}
+}
+
+kmpmp_je_manifest_mexico_fail = {
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+    group = je_group_historical_content
+    #can_deactivate = yes   # if we are using this and add modifier in modifiers_while_active, the modifier is doubled on reactivation
+    can_revolution_inherit = yes
+
+    complete = {
+        owns_entire_state_region = STATE_CALIFORNIA
+        s:STATE_CALIFORNIA = {
+            any_scope_state = {
+                is_incorporated = yes
+            }
+        }
+        NOT = {
+            has_subject_relation_with = c:USA
+            is_in_customs_union_with = c:USA
+            is_in_same_power_bloc = c:USA
+        }
+    }
+
+    on_complete = {
+        add_modifier = {
+            name = kmpmp_manifest_mexico
+        }
+        hidden_effect = {
+            add_journal_entry = {
+                type = kmpmp_je_manifest_mexico
+            }
+        }
+    }
+
+    invalid = {
+        year > 1860
+    }
+}
+
+kmpmp_je_consolidate_california = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	group = je_group_historical_content
+
+	is_shown_when_inactive = {
+		has_variable = kmpmp_je_manifest_mexico_comp
+	}
+
+	possible = {
+		owns_entire_state_region = STATE_CALIFORNIA
+		owns_entire_state_region = STATE_TEXAS
+		owns_entire_state_region = STATE_ARIZONA
+		owns_entire_state_region = STATE_NEW_MEXICO
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					has_claim = s:STATE_CALIFORNIA
+				}
+			}
+			s:STATE_CALIFORNIA = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_claim = s:STATE_TEXAS
+				}
+			}
+			s:STATE_TEXAS = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_claim = s:STATE_ARIZONA
+				}
+			}
+			s:STATE_ARIZONA = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_claim = s:STATE_NEW_MEXICO
+				}
+			}
+			s:STATE_NEW_MEXICO = {
+				add_claim = ROOT
+			}
+		}
+	}
+
+	complete = {
+		owns_entire_state_region = STATE_OREGON
+		owns_entire_state_region = STATE_WASHINGTON
+		owns_entire_state_region = STATE_IDAHO
+		owns_entire_state_region = STATE_MONTANA
+		owns_entire_state_region = STATE_WYOMING
+		owns_entire_state_region = STATE_UTAH
+		owns_entire_state_region = STATE_COLORADO
+		owns_entire_state_region = STATE_OKLAHOMA
+	}
+
+	on_complete = {
+		s:STATE_OREGON = {
+			add_homeland = cu:mexican
+		}
+		s:STATE_WASHINGTON = {
+			add_homeland = cu:mexican
+		}
+		s:STATE_IDAHO = {
+			add_homeland = cu:mexican
+		}
+		s:STATE_MONTANA = {
+			add_homeland = cu:mexican
+		}
+		s:STATE_WYOMING = {
+			add_homeland = cu:mexican
+		}
+		s:STATE_UTAH = {
+			add_homeland = cu:mexican
+		}
+		s:STATE_COLORADO = {
+			add_homeland = cu:mexican
+		}
+		s:STATE_OKLAHOMA = {
+			add_homeland = cu:mexican
+		}
+		add_loyalists = {
+			value = 0.1
+		}
+	}
+}

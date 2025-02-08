@@ -1,8 +1,119 @@
-﻿on_monthly_pulse_country = {
+﻿# Root = Country
+on_country_formed = {
     on_actions = {
-        buff_nation_effect_for_formables
-        buff_nation_effect_for_unification
-        player_boost_effect_state_unincorporated_education_access
+        kmpmp_new_formables
+    }
+}
+
+kmpmp_new_formables = {
+    effect = {
+        if = {
+            limit = {
+                c:P01 ?= ROOT
+            }
+            trigger_event = {
+                id = kmpmp_formation.1
+                popup = yes
+            }
+
+            # add addtional states to state list of parthia
+            if = {
+                limit = {
+                    state_region_owned_and_incorporated = { STATE_REGION = STATE_BASRA }
+                }
+                add_to_global_variable_list = {
+                    name = states_p01
+                    target = s:STATE_BASRA
+                }
+            }
+            if = {
+                limit = {
+                    state_region_owned_and_incorporated = { STATE_REGION = STATE_ARMENIA }
+                }
+                add_to_global_variable_list = {
+                    name = states_p01
+                    target = s:STATE_ARMENIA
+                }
+            }
+            if = {
+                limit = {
+                    state_region_owned_and_incorporated = { STATE_REGION = STATE_DIYARBAKIR }
+                }
+                add_to_global_variable_list = {
+                    name = states_p01
+                    target = s:STATE_DIYARBAKIR
+                }
+            }
+            if = {
+                limit = {
+                    state_region_owned_and_incorporated = { STATE_REGION = STATE_ERZURUM }
+                }
+                add_to_global_variable_list = {
+                    name = states_p01
+                    target = s:STATE_ERZURUM
+                }
+            }
+            if = {
+                limit = {
+                    state_region_owned_and_incorporated = { STATE_REGION = STATE_DEIR_EZ_ZOR }
+                }
+                add_to_global_variable_list = {
+                    name = states_p01
+                    target = s:STATE_DEIR_EZ_ZOR
+                }
+            }
+            if = {
+                limit = {
+                    state_region_owned_and_incorporated = { STATE_REGION = STATE_MOSUL }
+                }
+                add_to_global_variable_list = {
+                    name = states_p01
+                    target = s:STATE_MOSUL
+                }
+            }            
+        }
+        else_if = {
+            limit = {
+                c:LTN ?= ROOT
+            }
+            trigger_event = {
+                id = kmpmp_formation.2
+                popup = yes
+            }
+        }
+    }
+}
+
+# Root = Country
+on_monthly_pulse_country = {
+    on_actions = {
+        kmpmp_update_nation_buffs_action
+        kmpmp_update_united_country_buff_action
+        kmpmp_update_global_lists_action
+    }
+}
+
+kmpmp_update_nation_buffs_action = {
+    effect = {
+        kmpmp_update_nation_buffs = yes
+    }
+}
+
+kmpmp_update_united_country_buff_action = {
+    effect = {
+        kmpmp_update_united_country_buff = yes
+    }
+}
+
+# used to update global lists for save games where history is not executed again
+kmpmp_update_global_lists_action = {
+    effect = {
+        if = { # only one country should update the lists, so we take gbr
+            limit = {
+                c:GBR ?= ROOT
+            }
+            kmpmp_update_global_lists = yes
+        }
     }
 }
 
@@ -15,128 +126,16 @@ on_war_end = {
     }
 }
 
-buff_nation_effect_for_unification = {
-    effect = {
-        if = {
-            limit = {
-                exists = c:ITA
-                owner = c:ITA
-            }
-            if = {
-                limit = {
-                    NOT = {
-                        has_modifier = kmpmp_buff_medium_nation
-                    }
-                }
-                add_modifier = {
-                    name = kmpmp_buff_medium_nation
-                }
-            }
-            if = {
-                limit = {
-                    has_modifier = kmpmp_buff_small_nation
-                }
-                remove_modifier = kmpmp_buff_small_nation
-            }
-        }
-
-        if = {
-            limit = {
-                exists = c:SCA
-                owner = c:SCA
-            }
-            if = {
-                limit = {
-                    NOT = {
-                        has_modifier = kmpmp_buff_medium_nation
-                    }
-                }
-                add_modifier = {
-                    name = kmpmp_buff_medium_nation
-                }
-            }
-            if = {
-                limit = {
-                    has_modifier = kmpmp_buff_small_nation
-                }
-                remove_modifier = kmpmp_buff_small_nation
-            }
-        }
-    }
-}
-
-buff_nation_effect_for_formables = {
-    effect = {
-        if = {
-            limit = {
-                exists = c:IBE
-                owner = c:IBE
-            }
-            if = {
-                limit = {
-                    NOT = {
-                        has_modifier = kmpmp_buff_medium_nation
-                    }
-                }
-                add_modifier = {
-                    name = kmpmp_buff_medium_nation
-                }
-            }
-            if = {
-                limit = {
-                    has_modifier = kmpmp_buff_small_nation
-                }
-                remove_modifier = kmpmp_buff_small_nation
-            }
-        }
-        if = {
-            limit = {
-                exists = c:UNL
-                owner = c:UNL
-            }
-            if = {
-                limit = {
-                    NOT = {
-                        has_modifier = kmpmp_buff_small_nation
-                    }
-                }
-                add_modifier = {
-                    name = kmpmp_buff_small_nation
-                }
-            }
-        }
-    }
-}
-
-player_boost_effect_state_unincorporated_education_access = {
-    effect = {
-        if = {
-            limit = {
-                has_modifier = kmpmp_player_boost_imperialism_oversea_empire
-            }
-            every_scope_state = {
-                limit = {
-                    is_incorporated = no
-                }
-                add_modifier = {
-                    name = kmpmp_player_boost_imperialism_oversea_empire_state_unincorporated_education_access
-                    days = 30
-                }
-            }
-        }
-    }
-}
-
 kmpmp_remove_war_modifiers = {
     effect = {
         if = {
             limit = {
                 OR = {
-                    scope:actor = {
+                    scope:actor ?= {
                         has_modifier = kmpmp_retake_whats_rightfully_german
                         save_temporary_scope_as = country_with_modifier_kmpmp_retake_whats_rightfully_german
                     }
-                    scope:target = {
+                    scope:target ?= {
                         has_modifier = kmpmp_retake_whats_rightfully_german
                         save_temporary_scope_as = country_with_modifier_kmpmp_retake_whats_rightfully_german
                     }
@@ -152,3 +151,4 @@ kmpmp_remove_war_modifiers = {
         }
     }
 }
+

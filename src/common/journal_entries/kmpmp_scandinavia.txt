@@ -1,0 +1,125 @@
+﻿je_united_scandinavia = {
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+    group = je_group_historical_content
+
+    is_shown_when_inactive = {
+        OR = {
+            country_has_primary_culture = cu:swedish
+            country_has_primary_culture = cu:danish
+            country_has_primary_culture = cu:norwegian
+            # country_has_primary_culture = cu:icelandic
+        }
+    }
+
+    possible = {
+        custom_tooltip = {
+            text = je_united_scandinavia_possible_tt
+            c:SCA ?= ROOT
+            has_global_variable = has_formed_sca
+        }
+    }
+
+    complete = {
+        kmpmp_owns_all_sca_states = yes
+    }
+
+    on_complete = {
+        set_global_variable = je_united_scandinavia_completed
+
+        if = {
+            limit = {
+                NOT = {
+                    has_modifier = kmpmp_greater_scandinavia
+                }
+            }
+            add_modifier = {
+                name = kmpmp_greater_scandinavia
+            }
+        }
+    }
+
+    invalid = {
+        custom_tooltip = {
+            text = je_united_scandinavia_invalid_tt
+            NOT = {
+                c:SCA ?= ROOT
+            }
+            has_global_variable = has_formed_sca
+        }
+    }
+}
+
+je_baltic_empire = {
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+    group = je_group_historical_content
+
+    is_shown_when_inactive = {
+        c:SCA ?= ROOT
+    }
+
+    possible = {
+        custom_tooltip = {
+            text = je_baltic_empire_possible_tt
+            has_global_variable = je_united_scandinavia_completed
+        }
+    }
+
+    complete = {
+        owns_entire_state_region = STATE_INGRIA
+        owns_entire_state_region = STATE_KOLA
+        owns_entire_state_region = STATE_POMERANIA
+        owns_entire_state_region = STATE_KAUNAS
+        owns_entire_state_region = STATE_RIGA # South Livonia
+        owns_entire_state_region = STATE_TARTU # North Livonia
+        owns_entire_state_region = STATE_TALINN # Revel
+        owns_entire_state_region = STATE_WEST_PRUSSIA
+    }
+
+    on_complete = {
+        if = {
+            limit = {
+                NOT = {
+                    has_modifier = kmpmp_baltic_empire
+                }
+            }
+            add_modifier = {
+                name = kmpmp_baltic_empire
+            }
+        }
+
+        add_journal_entry = {
+            type = je_baltic_empire_maintain
+        }
+    }
+}
+
+je_baltic_empire_maintain = {
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+    group = je_group_historical_content
+
+    fail = {
+        NOT = {
+            owns_entire_state_region = STATE_INGRIA
+            owns_entire_state_region = STATE_KOLA
+            owns_entire_state_region = STATE_POMERANIA
+            owns_entire_state_region = STATE_KAUNAS
+            owns_entire_state_region = STATE_RIGA # South Livonia
+            owns_entire_state_region = STATE_TARTU # North Livonia
+            owns_entire_state_region = STATE_TALINN # Revel
+            owns_entire_state_region = STATE_WEST_PRUSSIA
+        }
+    }
+
+    on_fail = {
+        if = {
+            limit = {
+                has_modifier = kmpmp_baltic_empire
+            }
+            remove_modifier = kmpmp_baltic_empire
+        }
+
+        add_journal_entry = {
+            type = je_baltic_empire
+        }
+    }
+}

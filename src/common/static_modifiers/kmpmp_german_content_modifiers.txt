@@ -1,0 +1,14 @@
+﻿kmpmp_german_fate_in_the_east_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+
+    # +25% TP for Agriculture and Ranches
+    building_group_bg_agriculture_throughput_add = 0.25
+    building_group_bg_ranching_throughput_add = 0.25
+    # +15% TP for logging camps
+    building_group_bg_logging_throughput_add = 0.15
+    # +10% TP for all mines and oil rigs
+    building_group_bg_mining_throughput_add = 0.1
+    building_group_bg_oil_extraction_throughput_add = 0.1
+    # +2.5% pop growth
+    state_birth_rate_mult = 0.025
+}

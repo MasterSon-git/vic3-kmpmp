@@ -1,0 +1,49 @@
+﻿kmpmp_the_reichsland_buff = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    country_loan_interest_rate_mult = -0.15
+}
+
+kmpmp_the_reichsland_training_buff = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    building_training_rate_mult = 0.2
+}
+
+kmpmp_industrial_heartland_lost = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    country_company_construction_efficiency_bonus_add = -0.10
+	country_company_throughput_bonus_add = -0.05
+}
+
+kmpmp_historical_border_buff = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    country_legitimacy_base_add = 5
+    country_minting_mult = 0.05
+    state_birth_rate_mult = 0.006
+}
+
+kmpmp_humiliated_by_the_germans = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    state_tax_waste_add = 0.03
+    country_legitimacy_base_add = -3
+    interest_group_ig_armed_forces_approval_add = -1
+}
+
+kmpmp_natural_borders_buff = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    unit_army_defense_mult = 0.10
+    state_birth_rate_mult = 0.018
+    country_legitimacy_base_add = 5
+}
+
+kmpmp_victory_for_the_masses_buff = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    country_influence_mult = 0.25
+    country_loan_interest_rate_mult = -0.20
+    power_bloc_mandate_progress_mult = 0.20
+    # kmpmp
+    country_loyalism_increases_full_acceptance_mult = 0.2
+    country_loyalism_increases_second_rate_citizen_mult = 0.2
+    country_loyalism_increases_open_prejudice_mult = 0.2
+    country_loyalism_increases_cultural_erasure_mult = 0.2
+    country_loyalism_increases_violent_hostility_mult = 0.2
+}

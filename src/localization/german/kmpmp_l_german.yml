@@ -1,5 +1,6 @@
 ﻿l_german:
  kmpmp_japan_buff_start:0 "Der Weg zum Westen"
+ kmpmp_japan_buff_start_decaying:0 "Geist von Shiroyama"
  kmpmp_japan_buff_meiji_complete:0 "Reich der aufgehenden Sonne"
 
  kmpmp_ev_japan_buff.1.t:0 "$kmpmp_japan_buff_start$"
@@ -19,57 +20,6 @@
 
  kmpmp_buff_small_nation:0 "Kleine Nation buff"
  kmpmp_buff_medium_nation:0 "Mittlere Nation buff"
-
- kmpmp_player_boost_adjustment:0 "$kmpmp_player_boost_description$ Anpassung"
-
- kmpmp_player_boost_art_of_deal:0 "Die Kunst des Deals"
- kmpmp_player_boost_imperialism_oversea_empire:0 "Imperialistisches Übersee Imperium"
- kmpmp_player_boost_imperialism_oversea_empire_state_unincorporated_education_access:0 "$kmpmp_player_boost_imperialism_oversea_empire$"
- kmpmp_player_boost_military_industrial_complex:0 "Miltärisch Industrieller Komplex"
- kmpmp_player_boost_state_capitalism:0 "Staatskapitalismus"
- kmpmp_player_boost_autarky:0 "Wirtschaftliche Unabhängigkeit"
- kmpmp_player_boost_social_welfare_state:0 "Sozial- und Wohlfahrtsstaat"
- kmpmp_player_boost_corporative_socialism:0 "Korporativer Sozialismus"
- kmpmp_player_boost_military_police_state:0 "Militärischer Polizei Staat"
- kmpmp_player_boost_tycoon_capitalism:0 "Tycoon Kapitalismus"
-
- kmpmp_player_boost_description:0 "Staatsausrichtung"
-
- kmpmp_player_boost_art_of_deal_decision:0 "$kmpmp_player_boost_art_of_deal$"
- kmpmp_player_boost_art_of_deal_decision_desc:0 "$kmpmp_player_boost_description$"
- kmpmp_player_boost_art_of_deal_decision_tooltip:0 ""
-
- kmpmp_player_boost_imperialism_oversea_empire_decision:0 "$kmpmp_player_boost_imperialism_oversea_empire$"
- kmpmp_player_boost_imperialism_oversea_empire_decision_desc:0 "$kmpmp_player_boost_description$"
- kmpmp_player_boost_imperialism_oversea_empire_decision_tooltip:0 ""
-
- kmpmp_player_boost_military_industrial_complex_decision:0 "$kmpmp_player_boost_military_industrial_complex$"
- kmpmp_player_boost_military_industrial_complex_decision_desc:0 "$kmpmp_player_boost_description$"
- kmpmp_player_boost_military_industrial_complex_decision_tooltip:0 ""
-
- kmpmp_player_boost_state_capitalism_decision:0 "$kmpmp_player_boost_state_capitalism$"
- kmpmp_player_boost_state_capitalism_decision_desc:0 "$kmpmp_player_boost_description$"
- kmpmp_player_boost_state_capitalism_decision_tooltip:0 ""
-
- kmpmp_player_boost_autarky_decision:0 "$kmpmp_player_boost_autarky$"
- kmpmp_player_boost_autarky_decision_desc:0 "$kmpmp_player_boost_description$"
- kmpmp_player_boost_autarky_decision_tooltip:0 ""
-
- kmpmp_player_boost_social_welfare_state_decision:0 "$kmpmp_player_boost_social_welfare_state$"
- kmpmp_player_boost_social_welfare_state_decision_desc:0 "$kmpmp_player_boost_description$"
- kmpmp_player_boost_social_welfare_state_decision_tooltip:0 ""
-
- kmpmp_player_boost_corporative_socialism_decision:0 "$kmpmp_player_boost_corporative_socialism$"
- kmpmp_player_boost_corporative_socialism_decision_desc:0 "$kmpmp_player_boost_description$"
- kmpmp_player_boost_corporative_socialism_decision_tooltip:0 ""
-
- kmpmp_player_boost_military_police_state_decision:0 "$kmpmp_player_boost_military_police_state$"
- kmpmp_player_boost_military_police_state_decision_desc:0 "$kmpmp_player_boost_description$"
- kmpmp_player_boost_military_police_state_decision_tooltip:0 ""
- 
- kmpmp_player_boost_tycoon_capitalism_decision:0 "$kmpmp_player_boost_tycoon_capitalism$"
- kmpmp_player_boost_tycoon_capitalism_decision_desc:0 "$kmpmp_player_boost_description$"
- kmpmp_player_boost_tycoon_capitalism_decision_tooltip:0 ""
 
  kmpmp_mo_utility_gear:0 "Gebrauchsausrüstung"
  kmpmp_mo_utility_gear_desc:0 "Gebrauchsausrüstung" 
@@ -94,17 +44,14 @@
  kmpmp_turn_your_eye_on_the_south:0 "Ein Auge auf den Süden werfen"
  kmpmp_turn_your_eye_on_the_south_desc:0 "Ein Auge auf den Süden werfen"
  kmpmp_retake_whats_rightfully_german:0 "Spezialmilitäroperation beim Franzosen"
- kmpmp_lion_of_the_north:0 "Löwe des Nordens"
- kmpmp_risorgimento:0 "Risorgimento buff"
- kmpmp_kingdom_of_the_three_crowns:0 "Königreich der drei Kronen"
+
  je_empire_of_the_three_crowns:0 "Königreich der drei Kronen"
  je_empire_of_the_three_crowns_reason:0 "Der Balkan gehört uns!"
- 
- kmpmp_reino_unido:0 "Reino unido"
+
  kmpmp_reino_unido_begin:0 "$kmpmp_reino_unido$ beginnen"
  kmpmp_reino_unido_begin_desc:0 "Startet die Vereinigung '$kmpmp_reino_unido$' zwischen $BRZ$ und $POR$"
  je_reino_unido:0 "$kmpmp_reino_unido$"
- je_reino_unido_reason:0 "Unify the crowns"
+ je_reino_unido_reason:0 "Die Kronen vereinigen"
  je_reino_unido_fail_trigger_desc:0 "$IBE$ [concept_country] wurde gegründet"
  je_reino_unido_protectorate:0 "Macht sie zu unserem Protektorat"
  je_reino_unido_protectorate_reason:0 "Protektorats Status erzwingen"
@@ -113,9 +60,6 @@
 #  je_reino_unido_por_reason:0 "Vereint die Kronen"
 #  je_reino_unido_brz:0 "$kmpmp_reino_unido$"
 #  je_reino_unido_brz_reason:0 "Vereint die Kronen"
- 
- kmpmp_united_iberia:0 "Vereintes Iberien"
- kmpmp_united_netherlands:0 "Vereinigte Niederlande"
 
  kmpmp_austrian_hungarian_agreement:0 "Das österreichisch-ungarische Abkommen"
  kmpmp_austrian_hungarian_agreement_desc:0 "$kmpmp_austrian_hungarian_agreement$"
@@ -123,19 +67,26 @@
 
  kmpmp_austrian_the_great_reform:0 "Die große Reform"
 
- kmpmp_mexico_integrate_the_mesoamericans:0 "Integrieren der Mesoamerikaner"
- kmpmp_mexico_integrate_the_mesoamericans_desc:0 "$kmpmp_mexico_integrate_the_mesoamericans$"
- kmpmp_mexico_integrate_the_mesoamericans_tooltip:0 ""
+ kmpmp_integrate_the_mesoamericans:0 "Integrieren der Mesoamerikaner"
+ kmpmp_integrate_the_mesoamericans_desc:0 "$kmpmp_integrate_the_mesoamericans$"
+ kmpmp_integrate_the_mesoamericans_tooltip:0 ""
+ kmpmp_integrate_mesoamericans_positive:0 "$kmpmp_integrate_the_mesoamericans$"
+ kmpmp_integrate_mesoamericans_negative:0 "$kmpmp_integrate_the_mesoamericans$"
 
+ kmpmp_mexico_integrate_the_mesoamericans:0 "Integrieren der Mesoamerikaner"
+ kmpmp_mexico_integrate_the_mesoamericans_desc:0 "$kmpmp_integrate_the_mesoamericans$"
+ kmpmp_mexico_integrate_the_mesoamericans_tooltip:0 ""
  kmpmp_mexico_defend_the_homeland:0 "Verteidigt das Vaterland"
- kmpmp_mexico_integrate_mesoamericans_positive:0 "$kmpmp_mexico_integrate_the_mesoamericans$"
- kmpmp_mexico_integrate_mesoamericans_negative:0 "$kmpmp_mexico_integrate_the_mesoamericans$"
+ kmpmp_united_states_of_latin_america:0 "Vereinige die Staaten Südamerikas!"
+ kmpmp_glory_in_latin_america:0 "Siegreich in Südamerika"
+
 
  kmpmp_italy_risorgimento_buff:0 "Italien Risorgimento Buff"
 
  kmpmp_sick_man_of_europe_buff_1:0 "$sick_man_of_europe$ Buff"
  kmpmp_sick_man_of_europe_buff_2:0 "$kmpmp_sick_man_of_europe_buff_1$"
  kmpmp_sick_man_of_europe_restored_fame:0 "Wiederhergestellte Ehre"
+ kmpmp_sick_man_of_europe_failed:0 "Ein wenig Ehre"
  kmpmp_ottoman_path_to_westernization:0 "Weg zum Westen"
  kmpmp_ottoman_leader_of_islam:0 "Anführer des Islam"
  kmpmp_ottoman_reform_goes_on:0 "Die Reformen gehen weiter"
@@ -146,3 +97,54 @@
  sick_man.4.a:0 "$kmpmp_ottoman_path_to_westernization$"
  sick_man.4.b:0 "$kmpmp_ottoman_leader_of_islam$"
  sick_man.4.c:0 "$kmpmp_ottoman_reform_goes_on$"
+
+ zoroastrian:0 "Zoroastrian"
+ je_unite_the_homeland_per:0 "Verreinige die Heimat"
+ je_unite_the_homeland_per_reason:0 "Verreinige die Heimat"
+ kmpmp_ev_persia.1.t:0 "Das $kmpmp_parthian_empire$ wurde gegründet"
+ kmpmp_ev_persia.1.d:0 "Die Leute feiern die Vereinigung"
+ kmpmp_ev_persia.1.f:0 "Die Leute feiern die Vereinigung"
+ kmpmp_ev_persia.1.a:0 "Hooray"
+
+ kmpmp_manifest_mexico:0 "Manifest Mexico"
+ kmpmp_je_manifest_mexico:0 "Manifest Mexico"
+ kmpmp_je_manifest_mexico_reason:0 "Halte $STATE_CALIFORNIA$ um den "$kmpmp_manifest_mexico$-Buff" zu erhalten."
+ kmpmp_je_manifest_mexico_tooltip:0 "Aktiviert den "$kmpmp_manifest_mexico$-Buff""
+ kmpmp_je_manifest_mexico_fail:0 "Manifest Mexico wiederherstellen"
+ kmpmp_je_manifest_mexico_fail_reason:0 "Halte $STATE_CALIFORNIA$ um den "$kmpmp_manifest_mexico$-Buff" zu erhalten."
+ kmpmp_je_manifest_mexico_fail_tooltip:0 "Aktiviert den "$kmpmp_manifest_mexico$-Buff""
+
+ # Nachfolger von Großkolumbien
+ kmpmp_je_successor_of_gran_colombia: "Nachfolger von Großkolumbien"
+ kmpmp_je_successor_of_gran_colombia_reason: "Mexiko strebt danach, sich als Nachfolger von Großkolumbien zu etablieren, indem es Mittelamerika unter seine Herrschaft vereint."
+
+ # Ein Wahres Großkolumbien
+ kmpmp_je_a_true_gran_colombia: "Ein Wahres Großkolumbien"
+ kmpmp_je_a_true_gran_colombia_reason: "Nachdem Mexiko sich als Erbe von Großkolumbien etabliert hat, strebt es nun danach, die restlichen verlorenen Ländereien zurückzufordern."
+
+ # Vereinigte Staaten von Lateinamerika
+ kmpmp_je_united_states_of_latin_america: "Vereinigte Staaten von Lateinamerika"
+ kmpmp_je_united_states_of_latin_america_reason: "Nachdem Großkolumbien gefestigt wurde, strebt Mexiko nun danach, ganz Lateinamerika unter einem Banner zu vereinen."
+
+ # Kalifornien Konsolidieren
+ kmpmp_je_consolidate_california: "Kalifornien Konsolidieren"
+ kmpmp_je_consolidate_california_reason: "Mexiko hat sich vorgenommen, die Kontrolle über den Südwesten der Vereinigten Staaten zu konsolidieren."
+
+ kmpmp_pm_extensive_tank_production:0 "Erhöhte Panzer Produktion"
+ kmpmp_pm_focus_tank_production:0 "Fokus auf Panzer Produktion"
+ kmpmp_pm_prioritize_tank_production:0 "Priorisieren der Panzer Produktion"
+
+ kmpmp_grow_some_balls:0 "Git Gud"
+ kmpmp_je_a_question_of_honor:0 "Eine Frage der Ehre"
+ kmpmp_je_a_question_of_honor_reason:0 "Eine Frage der Ehre"
+
+ kmpmp_arabia:0 "Arabien"
+ kmpmp_united_arabia:0 "Vereintes Arabien"
+
+ kmpmp_average_sol_one_below_root_tt:0 "Durchschnitts-[concept_sol] liegt #b eins#! unter unserem"
+ was_target_of_mass_migration_tt:0 "Hatte keine Auswanderungswelle nach Amerika in den letzten 10 Jahren"
+
+ kmpmp_character_abdication_legitimacy:0 "Abgedankt"
+ kmpmp_character_resign_from_office_legitimacy:0 "Amtsrücktritt"
+ kmpmp_no_loyalists_from_capitulate_to_revolution:0 "Keine Loyalisten für 50 Jahre"
+

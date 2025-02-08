@@ -1,0 +1,9 @@
+﻿military_artillery_fort_buster_generic_diorama_entity = {
+	entity = "military_artillery_siege_generic_entity"
+
+	group = "artillery"
+	
+	trigger = {
+		scope:combat_unit_type ?= unit_type:combat_unit_type_fort_buster_artillery
+	}
+}

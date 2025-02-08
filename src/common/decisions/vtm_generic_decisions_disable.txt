@@ -51,10 +51,7 @@ prussia_form_ngf = {
 			filter = {
 				country_has_primary_culture = cu:north_german
 				OR = {
-					has_diplomatic_pact = {
-						who = c:PRU
-						type = customs_union
-					}
+					is_in_customs_union_with = c:PRU
 					is_subject_of = c:PRU
 				}
 
@@ -104,10 +101,7 @@ prussia_form_ngf = {
 					country_has_primary_culture = cu:north_german
 				}		
 				OR = {
-					has_diplomatic_pact = {
-						who = c:PRU
-						type = customs_union
-					}
+					is_in_customs_union_with = c:PRU
 					is_subject_of = c:PRU
 					AND = {
 						relations:root > relations_threshold:neutral
@@ -121,7 +115,18 @@ prussia_form_ngf = {
 		}
 		root = {
 			change_tag = NGF
-		}		
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_modifier = kmpmp_ger_buff_ngf_formed_modifier
+				}
+			}
+			add_modifier = {
+				name = kmpmp_ger_buff_ngf_formed_modifier
+				years = 10
+			}
+		}
 		remove_global_variable = aggressive_austria_var
 	}
 

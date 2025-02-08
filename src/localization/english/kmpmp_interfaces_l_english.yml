@@ -1,0 +1,7 @@
+﻿l_english:
+ KMPMP_PRESTIGE_HEADER: "[concept_prestige]"
+ KMPMP_ZERO_BASED: "Zero based"
+ KMPMP_WAR_SUPPORT_FROM_POWER_BLOC_PRINCIPLES:0 "Support from [Concept('concept_power_bloc_principle', '$concept_power_bloc_principles$')]"
+
+ combat_unit_type_fort_buster_artillery: "Fort Buster Artillery"
+ combat_unit_type_fort_buster_artillery_desc: "Using superior firepower to ensure destruction of enemy fortifications."

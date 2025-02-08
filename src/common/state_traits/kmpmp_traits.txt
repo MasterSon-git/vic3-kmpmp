@@ -1,0 +1,9 @@
+﻿state_trait_caribbean_sea = {
+    icon = "gfx/interface/icons/state_trait_icons/tropical_climate.dds"
+
+    # add 10% Sugar and Tabak plantation TP
+    modifier = {
+        building_sugar_plantation_throughput_add = 0.1
+        building_tobacco_plantation_throughput_add = 0.1
+    }
+}

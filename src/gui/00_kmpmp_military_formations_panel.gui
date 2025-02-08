@@ -1,0 +1,108 @@
+types military_formation_panel_types
+{
+    type military_formation_mobilize_button = widget {
+
+		block "size" {
+			size = { 260 80 }
+		}
+
+		# Mobilize this army button
+		button = {
+			visible = "[Not(MilitaryFormation.IsMobilized)]"
+			using = default_button_action
+			using = commander_mobilize_button_sound
+			parentanchor = right|vcenter
+			# this didn't work Not(GetVariableSystem.Exists('kmpmp_block_mobilization'))
+			# maybe we have the wrong context and need to get player
+			enabled = "[And(IsValid( MilitaryFormation.Mobilize ), Not(GetVariableSystem.Exists('kmpmp_block_mobilization')) )]"
+			onclick = "[Execute( MilitaryFormation.Mobilize )]"
+			tooltip = "MOBILIZE_ARMY_TOOLTIP"
+			using = tooltip_above
+
+			block "button_size" {
+				size = { 80% 75% }
+			}
+
+			textbox = {
+				parentanchor = center
+				text = "MOBILIZE_ARMY"
+				autoresize = yes
+				align = nobaseline
+
+				block "text_position" {}
+				
+				block "fontsize" {
+					using = fontsize_large
+				}
+			}
+		}
+
+		### IS MOBILIZING
+		is_mobilizing_progressbar = {
+
+			blockoverride "text_position" {
+				position = { 8 0 }
+			}
+		}
+
+		### IS MOBILIZED
+		widget = {
+			visible = "[MilitaryFormation.IsFullyMobilized]"
+			parentanchor = right|vcenter
+
+			block "button_size" {
+				size = { 80% 75% }
+			}
+
+			background = {
+				using = paper_bg
+			}
+
+			textbox = {
+				parentanchor = center
+				text = "MILITARY_FORMATION_IS_FULLY_MOBILIZED"
+				tooltip = "MILITARY_FORMATION_MOBILIZED_TOOLTIP"
+				autoresize = yes
+				align = nobaseline
+				fontsize_min = 12
+				elide = right
+				max_width = 140
+				position = { 10 -1 }
+
+				block "text_position" {}
+
+				block "fontsize" {
+					using = fontsize_large
+				}
+			}
+
+			icon = {
+				using = highlighted_square_selection
+			}
+		}
+
+		icon_with_background_big = {
+			parentanchor = vcenter
+
+			block "mobilization_icon_size" {
+				size = { 80 80 }
+			}
+		}
+
+		# Demobilize button
+		button_icon_cancel = {
+			visible = "[MilitaryFormation.IsMobilized]"
+			clicksound = "event:/SFX/UI/Military/demobilize_army"
+			parentanchor = left|vcenter
+			enabled = "[IsValid( MilitaryFormation.Demobilize )]"
+			onclick = "[PopupManager.AskConfirmation( MilitaryFormation.Demobilize )]"
+			tooltip = "DEMOBILIZE_ARMY_TOOLTIP"
+			using = close_button_sound
+			using = tooltip_above
+			
+			block "mobilization_icon_size" {
+				size = { 70 70 }
+			}
+		}
+	}
+}

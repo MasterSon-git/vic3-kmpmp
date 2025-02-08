@@ -1,0 +1,45 @@
+﻿ig_trait_asceticism = {
+	icon = "gfx/interface/icons/ig_trait_icons/be_fruitful_and_multiply.dds"
+	min_approval = loyal
+	
+	modifier = {
+		state_radicals_from_political_movements_mult = -0.15
+		# kmpmp
+		country_radicalism_increases_full_acceptance_mult = -0.15
+		country_radicalism_increases_second_rate_citizen_mult = -0.15
+		country_radicalism_increases_open_prejudice_mult = -0.15
+		country_radicalism_increases_cultural_erasure_mult = -0.15
+		country_radicalism_increases_violent_hostility_mult = -0.15
+		state_birth_rate_mult = 0.01 #kmpmp
+	}
+}
+
+ig_trait_da_wat = {
+	icon = "gfx/interface/icons/ig_trait_icons/be_fruitful_and_multiply.dds"
+	min_approval = loyal
+	
+	modifier = {
+		state_conversion_mult = 0.2
+		state_education_access_add = 0.05 #kmpmp
+	}
+}
+
+ig_trait_secular_shrine_theory = {
+	icon = "gfx/interface/icons/ig_trait_icons/divine_right.dds"
+	min_approval = happy
+	
+	modifier = {
+		state_birth_rate_mult = 0.025 #kmpmp
+		state_conversion_mult = 0.20 #0.15
+	}
+}
+
+ig_trait_work_ethic = {
+	icon = "gfx/interface/icons/ig_trait_icons/job_creators.dds"
+	min_approval = loyal
+	
+	modifier = {
+		country_company_throughput_bonus_add = 0.05
+		state_mortality_mult = -0.025
+	}
+}

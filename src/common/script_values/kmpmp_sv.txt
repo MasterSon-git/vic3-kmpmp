@@ -1,0 +1,37 @@
+﻿kmpmp_average_sol_add_one = {
+    value = average_sol
+    add = 1
+}
+
+kmpmp_enemy_occupation_incorporated_states = {
+    value = 0
+    every_scope_state = {
+        limit = {
+            is_incorporated = yes
+            controller != owner
+        }
+        add = 1
+    }
+    divide = num_incorporated_states
+}
+
+kmpmp_turmoil_incorporated_states = {
+    value = 0
+
+    add = {
+        every_scope_state = {
+            limit = {
+                is_incorporated = yes
+            }
+            add = turmoil
+        }
+        divide = num_incorporated_states
+
+        desc = "KMPMP_TURMOIL_INCORPORATED_STATES"
+    }
+}
+
+kmpmp_gdp_per_capita = {
+    value = gdp
+    divide = total_population
+}

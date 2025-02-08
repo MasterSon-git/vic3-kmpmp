@@ -1,0 +1,10 @@
+﻿kmpmp_aus_buff_habsburg_legacy_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+
+    # -15% radicals from Movements
+    state_radicals_from_political_movements_mult = -0.15
+    # +5 Legitimacy
+    country_legitimacy_base_add = 5
+    # +5% authority
+    country_authority_mult = 0.05
+}

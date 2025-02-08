@@ -1,0 +1,43 @@
+﻿kmpmp_japan_buff_start = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    country_law_enactment_success_add = 0.15
+    country_law_enactment_time_mult = -0.15
+    building_university_throughput_add = 0.3
+    country_minting_add = 30000
+}
+
+kmpmp_japan_buff_start_decaying = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    country_prestige_mult = 0.5
+}
+
+kmpmp_japan_buff_meiji_complete = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    country_tech_spread_mult = 0.15
+    country_infamy_generation_mult = -0.1
+    country_infamy_decay_mult = 0.15
+    unit_offense_mult = 0.2
+    unit_defense_mult = 0.2
+    unit_occupation_mult = 0.3
+}
+
+kmpmp_grow_some_balls = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+
+    state_tax_waste_add = 0.1
+    
+    country_radicalism_increases_full_acceptance_mult = 0.1
+    country_radicalism_increases_second_rate_citizen_mult = 0.1
+    country_radicalism_increases_open_prejudice_mult = 0.1
+    country_radicalism_increases_cultural_erasure_mult = 0.1
+    country_radicalism_increases_violent_hostility_mult = 0.1
+
+    country_loyalism_increases_full_acceptance_mult = -0.1
+    country_loyalism_increases_second_rate_citizen_mult = -0.1
+    country_loyalism_increases_open_prejudice_mult = -0.1
+    country_loyalism_increases_cultural_erasure_mult = -0.1
+    country_loyalism_increases_violent_hostility_mult = -0.1
+    
+    country_legitimacy_base_add = -15
+    interest_group_approval_add = -2
+}

@@ -1,0 +1,48 @@
+types TooltipTypes
+{
+    type FancyTooltip_ListOf_StateRegion = FancyTooltipWidgetType {
+		blockoverride "text" {
+			#text = "DATA_STATE_REGION_NAME_TOOLTIP"
+            raw_text = "text - schnulli"
+		}
+
+		blockoverride "name" {
+			# raw_text = "[StateRegion.GetNameNoFormatting]"
+            #raw_text = "name - schnulli [Scope.GetFlagName('list_name')]"
+            raw_text = "name - schnulli"
+		}
+
+		blockoverride "type" {
+			# text = "TOOLTIP_TYPE_STATE_REGION"
+		}
+
+        blockoverride "tooltip_content_after" {
+            DefaultTooltipTextBox = {
+                raw_text = "tooltip_content_after"
+            }
+
+            flowcontainer = {
+                direction = vertical
+
+                datamodel = "[GetGlobalList('states_sca')]"
+                datacontext = "[Scope.AccessStateRegion]"
+                
+                DefaultTooltipTextBox = {
+                    raw_text = "items:"
+                }
+
+                item = {
+                    flowcontainer = {
+                        DefaultTooltipTextBox = {
+                            text = "[Scope.AccessStateRegion.GetNameNoFormatting]"
+                        }
+                        DefaultTooltipTextBox = {
+                            text = "[StateRegion.GetNameNoFormatting]"
+                        }
+                    }
+                    
+                }
+            }
+        }
+	}
+}

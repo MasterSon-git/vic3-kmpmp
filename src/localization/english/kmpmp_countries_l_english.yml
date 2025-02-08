@@ -1,3 +1,13 @@
 ﻿l_english:
  dyn_c_three-crowns:0 "Three-Crowns"
  dyn_c_three-crowns_adj:0 "Three-Crowns"
+ P01: "Parthia"
+ P01_ADJ: "Parthian"
+ dyn_c_parthian_empire_name: "Parthian Empire"
+ dyn_c_parthian_empire_adj: "Parthian Empire"
+
+ LTN: "Latin Empire"
+ LTN_ADJ: "Latin Empire"
+
+ dyn_c_gran_colombia: "Greater Colombia"
+ dyn_c_gran_colombia_adj: "Great Colombian"

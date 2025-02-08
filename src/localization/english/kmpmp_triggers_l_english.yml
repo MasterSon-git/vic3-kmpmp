@@ -1,2 +1,32 @@
 ﻿l_english:
  TRIGGER_MILITARY_FORMATION_NUM_UNITS_GREATER_OR_EQUAL: "Number of military units in formation is greater or equal than $TARGET_VALUE|0v$"
+
+#  TRIGGER_ANY_IN_GLOBAL_LIST_ALL: "All:"
+#  DATA_STATE_REGION_NAME_FORMAT: "#tooltippable_name #tooltip:$TAG$,DATA_STATE_REGION_NAME_TOOLTIP,StateRegionTooltip $NAME$#!#!"
+#  TRIGGER_ANY_IN_GLOBAL_LIST_ALL: "#tooltippable_name #tooltip:[GetPlayer.GetTooltipTag],EMPTY_STRING,ListOfStateRegionTooltip $NAME$#!#!"
+
+ TRIGGER_ANY_IN_GLOBAL_LIST_COUNT: "$PARAMETERS$ $FILTER$:"
+ TRIGGER_ANY_SCOPE_STATE_ALL_IN_STATE_REGION: "All [Concept('concept_state', '$concept_states$')] in [concept_state_region] [STATE_REGION.GetName]"
+ TRIGGER_ANY_SCOPE_STATE_ALL_IN_STATE_REGION_NOT: "No [concept_state] in [concept_state_region] [STATE_REGION.GetName]"
+ TRIGGER_ANY_SCOPE_BUILDING_COUNT_IN_STATE: "$PARAMETERS$ buildings fullfill these conditions in this state:"
+
+ owns_or_has_subject_entire_state_region_tooltip: "Entire [concept_state_region] [THIS.GetStateRegion.GetName] is owned or subjected by [SCOPE.GetRootScope.GetCountry.GetName]"
+ state_region_owned_tooltip: "Entire [concept_state_region] [THIS.GetStateRegion.GetName] is owned by [SCOPE.GetRootScope.GetCountry.GetName]"
+ state_region_owned_and_incorporated_tooltip: "Entire [concept_state_region] [SCOPE.sStateRegion('state_region_to_check').GetName] is owned and incorporated by [SCOPE.GetRootScope.GetCountry.GetName]"
+
+ TRIGGER_KMPMP_TURMOIL_INCORPORATED_STATES_GREATER_OR_EQUAL_TOOLTIP: "$KMPMP_TURMOIL_INCORPORATED_STATES$ is greater or equal to $TARGET_VALUE|%0v$"
+ kmpmp_law_council_republic_ideology_tooltip: "Any [concept_interest_group] [concept_leader] except [GetInterestGroupVariant('ig_trade_unions', GetPlayer).GetNameWithCountryVariant] has [concept_ideology]:\n[GetIdeology('ideology_anarchist').GetName], [GetIdeology('ideology_communist').GetName] or [GetIdeology('ideology_vanguardist').GetName]"
+
+ kmpmp_owns_entire_state_region_and_is_incorporated_tt: "Entire [concept_state_region] is owned and incorporated by [SCOPE.GetRootScope.GetCountry.GetName]"
+
+#  experimental - may be removed
+#  kmpmp_state_owner_root_tt: "[SCOPE.GetRootScope.GetState.GetName] - test - end"
+#  kmpmp_owns_all_states_in_state_region_tt: "[THIS.GetStateRegion.GetName]"
+
+
+# prepared for cooltip
+#  kmpmp_owns_all_sca_states_tooltip: "HIER #tooltippable_name #tooltip:[GetPlayer.GetTooltipTag],DATA_TEST_TOOLTIP,ListOfStateRegionTooltip $NAME$#!#!"
+ kmpmp_owns_all_sca_states_tooltip: "Owns all Scandinavian States"
+ 
+#  DATA_STATE_REGION_NAME_TOOLTIP:1 "#title States in [StateRegion.GetName] ([concept_state_region])#!\n[StateRegion.GetStatesDesc]\n[concept_state_region_desc]"
+#  DATA_TEST_TOOLTIP: "a test string"

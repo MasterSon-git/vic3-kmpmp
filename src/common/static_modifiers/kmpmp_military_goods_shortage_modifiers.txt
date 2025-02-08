@@ -1,0 +1,192 @@
+﻿# Small Arms
+kmpmp_shortage_of_small_arms_low = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+
+    building_training_rate_mult = -0.1
+}
+
+kmpmp_shortage_of_small_arms_medium = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+
+    building_training_rate_mult = -0.15
+}
+
+kmpmp_shortage_of_small_arms_high = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+
+    building_training_rate_mult = -0.3
+}
+
+# Ammo
+kmpmp_shortage_of_ammo_low = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+
+    unit_recovery_rate_add = -0.1
+}
+
+kmpmp_shortage_of_ammo_medium = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+
+    unit_recovery_rate_add = -0.2
+}
+
+kmpmp_shortage_of_ammo_high = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+
+    unit_recovery_rate_add = -0.35
+}
+
+# Cannons
+kmpmp_shortage_of_artillery_low = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+    
+    unit_combat_unit_type_cannon_artillery_offense_mult = -0.05
+    unit_combat_unit_type_mobile_artillery_offense_mult = -0.05
+    unit_combat_unit_type_shrapnel_artillery_offense_mult = -0.05
+    unit_combat_unit_type_siege_artillery_offense_mult = -0.05
+    unit_combat_unit_type_fort_buster_artillery_offense_mult = -0.05
+}
+
+kmpmp_shortage_of_artillery_medium = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+    
+    unit_combat_unit_type_cannon_artillery_offense_mult = -0.1
+    unit_combat_unit_type_mobile_artillery_offense_mult = -0.1
+    unit_combat_unit_type_shrapnel_artillery_offense_mult = -0.1
+    unit_combat_unit_type_siege_artillery_offense_mult = -0.1
+    unit_combat_unit_type_fort_buster_artillery_offense_mult = -0.1
+}
+
+kmpmp_shortage_of_artillery_high = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+    
+    unit_combat_unit_type_cannon_artillery_offense_mult = -0.25
+    unit_combat_unit_type_mobile_artillery_offense_mult = -0.25
+    unit_combat_unit_type_shrapnel_artillery_offense_mult = -0.25
+    unit_combat_unit_type_siege_artillery_offense_mult = -0.25
+    unit_combat_unit_type_fort_buster_artillery_offense_mult = -0.25
+}
+
+# Radios
+kmpmp_shortage_of_radios_medium = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+
+    unit_combat_unit_type_squad_infantry_offense_mult = -0.1
+    unit_combat_unit_type_mechanized_infantry_offense_mult = -0.1
+
+    unit_combat_unit_type_siege_artillery_offense_mult = -0.1
+    unit_combat_unit_type_fort_buster_artillery_offense_mult = -0.1
+
+    unit_combat_unit_type_heavy_tank_offense_mult = -0.1
+    unit_combat_unit_type_light_tanks_offense_mult = -0.1
+    
+    unit_combat_unit_type_scout_cruiser_offense_mult = -0.1
+    unit_combat_unit_type_scout_cruiser_defense_mult = -0.1
+    unit_combat_unit_type_dreadnought_offense_mult = -0.1
+    unit_combat_unit_type_dreadnought_defense_mult = -0.1
+    unit_combat_unit_type_battleship_offense_mult = -0.1
+    unit_combat_unit_type_battleship_defense_mult = -0.1
+    unit_combat_unit_type_carrier_offense_mult = -0.1
+    unit_combat_unit_type_carrier_defense_mult = -0.1
+}
+
+kmpmp_shortage_of_radios_high = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+
+    unit_combat_unit_type_squad_infantry_offense_mult = -0.2
+    unit_combat_unit_type_mechanized_infantry_offense_mult = -0.2
+
+    unit_combat_unit_type_siege_artillery_offense_mult = -0.2
+    unit_combat_unit_type_fort_buster_artillery_offense_mult = -0.2
+
+    unit_combat_unit_type_heavy_tank_offense_mult = -0.2
+    unit_combat_unit_type_light_tanks_offense_mult = -0.2
+    
+    unit_combat_unit_type_scout_cruiser_offense_mult = -0.25
+    unit_combat_unit_type_scout_cruiser_defense_mult = -0.25
+    unit_combat_unit_type_dreadnought_offense_mult = -0.25
+    unit_combat_unit_type_dreadnought_defense_mult = -0.25
+    unit_combat_unit_type_battleship_offense_mult = -0.25
+    unit_combat_unit_type_battleship_defense_mult = -0.25
+    unit_combat_unit_type_carrier_offense_mult = -0.25
+    unit_combat_unit_type_carrier_defense_mult = -0.25
+}
+
+kmpmp_shortage_of_radios_cheese = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+
+    unit_combat_unit_type_squad_infantry_offense_add = -50
+    unit_combat_unit_type_squad_infantry_defense_add = -50
+    unit_combat_unit_type_mechanized_infantry_offense_add = -50
+    unit_combat_unit_type_mechanized_infantry_defense_add = -50
+
+    unit_combat_unit_type_siege_artillery_offense_add = -50
+    unit_combat_unit_type_siege_artillery_defense_add = -50
+    unit_combat_unit_type_fort_buster_artillery_offense_add = -50
+    unit_combat_unit_type_fort_buster_artillery_defense_add = -50
+
+    unit_combat_unit_type_heavy_tank_offense_add = -50
+    unit_combat_unit_type_heavy_tank_defense_add = -50
+    unit_combat_unit_type_light_tanks_offense_add = -50
+    unit_combat_unit_type_light_tanks_defense_add = -50
+    
+    unit_combat_unit_type_scout_cruiser_offense_add = -50
+    unit_combat_unit_type_scout_cruiser_defense_add = -50
+    unit_combat_unit_type_dreadnought_offense_add = -50
+    unit_combat_unit_type_dreadnought_defense_add = -50
+    unit_combat_unit_type_battleship_offense_add = -50
+    unit_combat_unit_type_battleship_defense_add = -50
+    unit_combat_unit_type_carrier_offense_add = -50
+    unit_combat_unit_type_carrier_defense_add = -50
+}
+
+# Tanks
+kmpmp_shortage_of_tanks_low = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+
+    unit_combat_unit_type_mechanized_infantry_offense_add = -5
+    unit_combat_unit_type_mechanized_infantry_defense_add = -5
+
+    unit_combat_unit_type_heavy_tank_offense_add = -5
+    unit_combat_unit_type_heavy_tank_defense_add = -5
+    unit_combat_unit_type_light_tanks_offense_add = -5
+    unit_combat_unit_type_light_tanks_defense_add = -5
+}
+
+kmpmp_shortage_of_tanks_medium = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+
+    unit_combat_unit_type_mechanized_infantry_offense_add = -10
+    unit_combat_unit_type_mechanized_infantry_defense_add = -10
+
+    unit_combat_unit_type_heavy_tank_offense_add = -10
+    unit_combat_unit_type_heavy_tank_defense_add = -10
+    unit_combat_unit_type_light_tanks_offense_add = -10
+    unit_combat_unit_type_light_tanks_defense_add = -10
+}
+
+kmpmp_shortage_of_tanks_high = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+
+    unit_combat_unit_type_mechanized_infantry_offense_add = -15
+    unit_combat_unit_type_mechanized_infantry_defense_add = -15
+
+    unit_combat_unit_type_heavy_tank_offense_add = -15
+    unit_combat_unit_type_heavy_tank_defense_add = -15
+    unit_combat_unit_type_light_tanks_offense_add = -15
+    unit_combat_unit_type_light_tanks_defense_add = -15
+}
+
+# Airplanes
+kmpmp_shortage_of_airplanes_medium = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+
+    unit_combat_unit_type_carrier_offense_add = -5
+}
+
+kmpmp_shortage_of_airplanes_high = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+
+    unit_combat_unit_type_carrier_offense_add = -15
+}
+

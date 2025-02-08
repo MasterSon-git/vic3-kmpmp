@@ -1,5 +1,149 @@
-﻿######QWF
+﻿### ERA 1
+
+standing_army = {
+	# Unlocks Barracks building
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/standing_army.dds"
+	category = military
+    
+    modifier = {
+		state_fae_building_forts_max_level_add = 1
+	}
+	
+	ai_weight = {
+		value = 3 # Very important tech in general
+	}
+}
+
+napoleonic_warfare = {
+	# Unlocks Mobile Artillery PM in Barracks
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/napoleonic_warfare.dds"
+	category = military
+	
+	modifier = {
+		state_fae_building_forts_max_level_add = 1
+	}
+
+	unlocking_technologies = {
+		line_infantry
+		artillery
+	}
+	
+	ai_weight = {
+		value = 1.5 # Important tech in general
+		
+		if = {
+			limit = { has_journal_entry = je_sick_man_army }
+			add = 100
+		}
+	}
+}
+
+paddle_steamer = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/paddle_steamer.dds"
+	category = military
+
+	modifier = {
+		unit_navy_offense_mult = 0.1
+		unit_navy_defense_mult = 0.1
+		country_max_declared_interests_add = 1
+	}
+
+	unlocking_technologies = {
+		admiralty
+	}
+
+	ai_weight = {
+		value = 1
+
+		# Important for naval powers
+		if = {
+			limit = { navy_size >= 20 }
+			add = 0.5
+		}
+	}
+}
+
+### ERA 2
+
+field_works = {
+	# Increases defense
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/field_works.dds"
+	category = military
+	
+	modifier = {
+		# defensive bonus, either directly to army or (ideally) a fortifications bonus, if we get forts
+		# Lower kill rate?
+		unit_army_defense_mult = 0.1
+		
+		state_fae_building_forts_max_level_add = 1
+	}
+	
+	unlocking_technologies = {
+		napoleonic_warfare
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+screw_frigate = {
+	# Unlocks Complex Shipbuilding PM in Shipyards
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/screw_frigate.dds"
+	category = military
+
+	modifier = {
+		country_max_declared_interests_add = 1
+		# ship go faster
+	}
+
+	unlocking_technologies = {
+		paddle_steamer
+	}
+
+	ai_weight = {
+		value = 1
+
+		# Important for naval powers
+		if = {
+			limit = { navy_size >= 20 }
+			add = 0.5
+		}
+	}
+}
+
 ### ERA 3
+
+electric_telegraph = {
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/electrical_telegraph.dds"
+	category = military
+	
+	modifier = {
+		country_war_exhaustion_casualties_mult = -0.25
+		country_radicals_from_conquest_mult = -0.05 #kmpmp
+	}
+	
+	unlocking_technologies = {	
+		logistics
+	}
+	
+	ai_weight = {
+		value = 1
+
+		if = {
+			limit = {
+				has_strategy = ai_strategy_unify_germany
+			}
+			add = 8
+		}
+	}
+}
 
 military_statistics = {
 	era = era_3
@@ -9,6 +153,7 @@ military_statistics = {
 	modifier = {
 		military_formation_organization_gain_mult = 0.2
 		country_institution_qwf_conscription_max_investment_add = 1
+		country_radicals_from_conquest_mult = -0.05 #kmpmp
 	}
 	
 	unlocking_technologies = {	
@@ -21,7 +166,130 @@ military_statistics = {
 	}
 }
 
+
+breech_loading_artillery = {
+	# Unlocks Breech Loading Artillery Production PM in Arms Industries
+	# Unlocks Breech Loading Artillery PM in Barracks
+	# Unlocks Railway Guns PM in Railways
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/breech_loading_artillery.dds"
+	category = military
+	
+	modifier = {
+		state_fae_building_forts_max_level_add = 2
+	}
+
+	unlocking_technologies = {	
+		rifling
+		shell_gun
+	}
+	
+	ai_weight = {
+		value = 1.5 # Important tech in general
+
+		if = {
+			limit = {
+				has_strategy = ai_strategy_unify_germany
+			}
+			add = 8
+		}
+	}
+}
+
+self_propelled_torpedoes = {
+	# Unlocks Torpedo Boat PM in Naval Base
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/self_propelled_torpedoes.dds"
+	category = military
+
+	modifier = {
+		country_max_declared_interests_add = 2
+	}
+
+	unlocking_technologies = {
+		ironclad_tech
+		jeune_ecole
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+monitor_tech = {
+	# Unlocks Monitors PM in Naval Base
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/monitor_tech.dds"
+	category = military
+
+	modifier = {
+		# increased offense and defense.
+		country_max_declared_interests_add = 2
+	}
+
+	unlocking_technologies = {
+		ironclad_tech
+	}
+
+	ai_weight = {
+		value = 1
+
+		# Important for naval powers
+		if = {
+			limit = { navy_size >= 20 }
+			add = 0.5
+		}
+	}
+}
+
+ironclad_tech = {
+	# Unlocks Metal Shipbuilding PM in Shipyards
+	# Unlocks Ironclads PM in Naval Base
+	# Unlocks Steam Trawlers PM in Fishing Wharves
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/ironclad_tech.dds"
+	category = military
+
+	modifier = {
+		country_max_declared_interests_add = 2
+	}
+
+	unlocking_technologies = {
+		screw_frigate
+	}
+
+	ai_weight = {
+		value = 1
+
+		# Very Important for naval powers
+		if = {
+			limit = { navy_size >= 20 }
+			add = 2
+		}
+	}
+}
+
 ### ERA 4
+
+war_propaganda = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/war_propaganda.dds"
+	category = military
+
+	modifier = {
+		unit_morale_loss_mult = -0.05
+		state_conscription_rate_mult = 0.2
+		country_radicals_from_conquest_mult = -0.05 #kmpmp
+	}
+	
+	unlocking_technologies = {	
+		enlistment_offices
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
 
 wargaming = {
 	# Unlocks Siege Artillery PM in Barracks
@@ -43,91 +311,6 @@ wargaming = {
 		value = 1
 	}
 }
-######FAE
-standing_army = {
-	# Unlocks Barracks building
-	era = era_1
-	texture = "gfx/interface/icons/invention_icons/standing_army.dds"
-	category = military
-    
-    modifier = {
-		state_FAE_building_forts_max_level_add = 1
-	}
-	
-	ai_weight = {
-		value = 3 # Very important tech in general
-	}
-}
-
-napoleonic_warfare = {
-	# Unlocks Mobile Artillery PM in Barracks
-	era = era_1
-	texture = "gfx/interface/icons/invention_icons/napoleonic_warfare.dds"
-	category = military
-	
-	unlocking_technologies = {
-		line_infantry
-		artillery
-	}
-	
-	modifier = {
-		state_FAE_building_forts_max_level_add = 1
-	}
-	
-	ai_weight = {
-		value = 1.5 # Important tech in general
-		
-		if = {
-			limit = { has_journal_entry = je_sick_man_army }
-			add = 5
-		}
-	}
-}
-
-field_works = {
-	# Increases defense
-	era = era_2
-	texture = "gfx/interface/icons/invention_icons/field_works.dds"
-	category = military
-	
-	modifier = {
-		# defensive bonus, either directly to army or (ideally) a fortifications bonus, if we get forts
-		# Lower kill rate?
-		unit_army_defense_mult = 0.1
-		
-		state_FAE_building_forts_max_level_add = 1
-	}
-	
-	unlocking_technologies = {
-		napoleonic_warfare
-	}
-	
-	ai_weight = {
-		value = 1
-	}
-}
-
-breech_loading_artillery = {
-	# Unlocks Breech Loading Artillery Production PM in Arms Industries
-	# Unlocks Breech Loading Artillery PM in Barracks
-	# Unlocks Railway Guns PM in Railways
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/breech_loading_artillery.dds"
-	category = military
-	
-	unlocking_technologies = {	
-		rifling
-		shell_gun
-	}
-	
-	modifier = {
-		state_FAE_building_forts_max_level_add = 2
-	}
-	
-	ai_weight = {
-		value = 1.5 # Important tech in general
-	}
-}
 
 defense_in_depth = {
 	# Increases defense
@@ -137,21 +320,82 @@ defense_in_depth = {
 	category = military
 	
 	modifier = {
-		unit_morale_loss_mult = -0.05
+		# kmpmp? unit_morale_loss_mult = -0.05
 		# defensive bonus, either to the army or ideally to fortifications
 		unit_army_defense_mult = 0.1
 		
-		state_FAE_building_forts_max_level_add = 2
+		state_fae_building_forts_max_level_add = 2
 	}
 	
 	unlocking_technologies = {	
 		trench_works
+		handcranked_machine_gun
 	}
 	
 	ai_weight = {
 		value = 1
 	}
 }
+
+submarine = {
+	# Unlocks Submarine PM on Naval Bases
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/submarine.dds"
+	category = military
+
+	modifier = {
+		# inproved disruption of supply lines, improved evasion, improved [something naval and dickish]
+		country_max_declared_interests_add = 2
+	}
+
+	unlocking_technologies = {
+		self_propelled_torpedoes
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+destroyer = {
+	# Unlocks Destroyer PM on Naval Bases
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/destroyers.dds"
+	category = military
+
+	modifier = {
+		country_max_declared_interests_add = 2
+	}
+
+	unlocking_technologies = {
+		monitor_tech
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+sea_lane_strategies = {
+	# Unlocks Sea Lane Strategies PM in Naval Bases
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/sea_lane_strategies.dds"
+	category = military
+
+	modifier = {
+		state_building_naval_base_max_level_add = 10
+		country_max_declared_interests_add  = 2
+	}
+
+	unlocking_technologies = {
+		jeune_ecole
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+### ERA 5
 
 concrete_fortifications = {
 	# Increases defense
@@ -160,12 +404,12 @@ concrete_fortifications = {
 	category = military
 	
 	modifier = {
-		unit_morale_loss_mult = -0.05
+		# kmpmp? unit_morale_loss_mult = -0.05
 		# build the maginot line and be completely unstoppable, forever, especially if you're France
 		# bonus to general defensiveness or specifically to forts if they become a thing
 		unit_army_defense_mult = 0.1
 		
-		state_FAE_building_forts_max_level_add = 3
+		state_fae_building_forts_max_level_add = 3
 	}
 	
 	unlocking_technologies = {	

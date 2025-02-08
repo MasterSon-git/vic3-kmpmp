@@ -1,0 +1,34 @@
+﻿# kmpmp TODO: check if we need to add them in interest_groups, like it's done for kmpmp_ig_trait_made_in_germany
+
+kmpmp_ig_trait_battotai = {
+	icon = "gfx/interface/icons/ig_trait_icons/patriotic_fervor.dds"
+	min_approval = loyal
+	
+	modifier = {
+		unit_offense_mult = 0.125
+		unit_defense_mult = 0.125
+        unit_morale_damage_mult = 0.025
+        unit_recovery_rate_add = -0.05
+	}
+}
+
+kmpmp_ig_trait_banzai = {
+	icon = "gfx/interface/icons/ig_trait_icons/veteran_consultation.dds"
+	min_approval = happy
+	
+	modifier = {
+		country_military_tech_research_speed_mult = 0.1
+        country_radicals_from_conquest_mult = -0.1
+	}
+}
+
+kmpmp_ig_trait_army_with_a_state = {
+	icon = "gfx/interface/icons/ig_trait_icons/patriotic_fervor.dds"
+	min_approval = loyal
+	
+	modifier = {
+		unit_offense_mult = 0.1
+		unit_defense_mult = 0.1	
+		country_military_goods_cost_mult = -0.025
+	}
+}

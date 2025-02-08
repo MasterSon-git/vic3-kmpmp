@@ -1,0 +1,56 @@
+﻿kmpmp_give_claims_for_italy_unification = {
+	every_state = {
+		limit = {
+			NOT = { owner = ROOT }
+			OR = {
+				state_region = s:STATE_RHONE
+				state_region = s:STATE_PROVENCE
+				state_region = s:STATE_PELOPONNESE
+				state_region = s:STATE_ATTICA
+				state_region = s:STATE_CRETE
+				state_region = s:STATE_THESSALIA
+				state_region = s:STATE_MACEDONIA
+				state_region = s:STATE_ALBANIA
+				state_region = s:STATE_CORSICA
+			}
+		}
+		
+		state_region = { add_claim = ROOT }
+	}
+}
+
+kmpmp_unification_claims_effect_ltn = {
+	if = {
+		limit = {
+			any_in_global_list = {
+				variable = states_ltn
+
+				any_scope_state = {
+					# is_homeland_of_country_cultures = ROOT
+					NOT = { owner = ROOT }
+					NOT = { has_claim_by = ROOT }
+				}
+			}
+		}
+
+		every_in_global_list = {
+			variable = states_ltn
+	
+			if = {
+				limit = {
+					any_scope_state = {
+						# is_homeland_of_country_cultures = ROOT
+						NOT = { owner = ROOT }
+						NOT = { has_claim_by = ROOT }
+					}
+				}
+				add_claim = ROOT
+			}
+		}
+	}
+	else = {
+		add_loyalists = {
+			value = 0.05
+		}
+	}
+}

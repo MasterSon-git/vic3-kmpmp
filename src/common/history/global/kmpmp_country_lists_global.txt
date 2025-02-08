@@ -1,0 +1,3 @@
+﻿GLOBAL = {
+    kmpmp_update_global_lists = yes
+}

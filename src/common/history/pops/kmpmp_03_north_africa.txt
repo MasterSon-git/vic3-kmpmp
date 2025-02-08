@@ -1,0 +1,31 @@
+﻿POPS = {
+	# kmpmp double the pops
+	s:STATE_UPPER_EGYPT = {
+		region_state:EGY = {
+			create_pop = {
+				culture = misri
+				size = 349025
+			}
+			create_pop = {
+				culture = misri
+				religion = oriental_orthodox
+				size = 37215
+			}
+			create_pop = {
+				culture = turkish
+				pop_type = aristocrats
+				size = 1001
+			}
+			create_pop = {
+				culture = turkish
+				pop_type = bureaucrats
+				size = 402
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = sudanese
+				size = 4102
+			}
+		}
+	}
+}

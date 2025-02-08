@@ -9,10 +9,10 @@
     
     building_modifiers = {
         workforce_scaled = {
-            goods_input_wood_add  = 50
-            goods_input_tools_add = 1
+            goods_input_wood_add  = 55 #50
+            goods_input_tools_add = 1.1 #1
             
-            unit_FAE_entrenchment_add = 1
+            unit_fae_entrenchment_add = 1
         }
     }
     
@@ -34,12 +34,12 @@ FAE_pm_stone_iron = {
     
     building_modifiers = {
         workforce_scaled = {
-            goods_input_iron_add  = 50
-            goods_input_tools_add = 2
+            goods_input_iron_add  = 55 #50
+            goods_input_tools_add = 2.2 #2
             
-            unit_defense_add = 1
+            unit_defense_add = 0.9 #1
             
-            unit_FAE_entrenchment_add = 2
+            unit_fae_entrenchment_add = 2
         }
         
         level_scaled = {
@@ -65,12 +65,12 @@ FAE_pm_steel_concrete = {
     
     building_modifiers = {
         workforce_scaled = {
-            goods_input_steel_add = 50
-            goods_input_tools_add = 5
+            goods_input_steel_add = 55 #50
+            goods_input_tools_add = 5.5 #5
             
-            unit_defense_add = 2
+            unit_defense_add = 1.8 #2
             
-            unit_FAE_entrenchment_add = 3
+            unit_fae_entrenchment_add = 3
         }
         
         level_scaled = {

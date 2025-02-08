@@ -1,0 +1,149 @@
+﻿# this is used to make changes to the game state if we add new features while loading old saves
+
+on_monthly_pulse_country = {
+    on_actions = {
+        kmpmp_add_china_buff_je_action
+        kmpmp_add_mexico_je_action
+        kmpmp_add_ig_trait_army_with_a_state_action
+        kmpmp_add_german_fate_in_the_east_je_action
+        kmpmp_add_je_adriatic_empire_action
+    }
+}
+
+# add the journal entry for china buff, since this is a new je it won't be considered in active save games
+# can be removed next season
+kmpmp_add_china_buff_je_action = {
+    effect = {
+        if = {
+            limit = {
+                global_var:kmpmp_china_is_player ?= no
+
+                NOT = {
+                    has_journal_entry = kmpmp_china_buff_je
+                }
+        
+                OR = {
+                    any_primary_culture = {
+                        has_discrimination_trait = han_chinese
+                    }
+                    country_has_primary_culture = cu:yi
+                    country_has_primary_culture = cu:manchu
+                }
+                OR = {
+                    capital.region = sr:region_north_china
+                    capital.region = sr:region_south_china
+                    capital.region = sr:region_manchuria
+                    capital.region = sr:region_central_asia
+                    capital.region = sr:region_himalayas
+                }
+            }
+
+            add_journal_entry = {
+                type = kmpmp_china_buff_je
+            }
+        }
+    }
+}
+
+# add mexicos new journal entries
+# can be removed next season
+kmpmp_add_mexico_je_action = {
+    effect = {
+        if = {
+            limit = {
+                c:MEX ?= ROOT
+            }
+
+            if = {
+                limit = {
+                    NOT = {
+                        has_variable = kmpmp_successor_of_gran_colombia_comp
+                    }
+                    NOT = {
+                        OR = {
+                            has_journal_entry = kmpmp_je_successor_of_gran_colombia
+                            has_inactive_journal_entry = kmpmp_je_successor_of_gran_colombia
+                        }
+                    }
+                }
+                add_journal_entry = {
+                    type = kmpmp_je_successor_of_gran_colombia
+                }
+            }
+        }
+    }
+}
+
+# change german armed forces ig trait
+# can be removed next season
+kmpmp_add_ig_trait_army_with_a_state_action = {
+    effect = {
+        if = {
+            limit = {
+                OR = {
+                    c:PRU ?= ROOT
+                    c:NGF ?= ROOT
+                    c:GER ?= ROOT
+                }
+            }
+
+            ig:ig_armed_forces = {
+                set_ig_trait = ig_trait:kmpmp_ig_trait_army_with_a_state
+            }
+        }
+    }
+}
+
+# add new je once, since we are mid session
+# can be removed next season
+kmpmp_add_german_fate_in_the_east_je_action = {
+    effect = {
+        if = {
+            limit = {
+                NOT = {
+                    has_journal_entry = je_german_fate_in_the_east
+                    has_global_variable = je_german_fate_in_the_east_completed
+                }
+                OR = {
+                    c:PRU ?= ROOT
+                    c:NGF ?= ROOT
+                    c:GER ?= ROOT
+                }
+            }
+            add_journal_entry = {
+                type = je_german_fate_in_the_east
+            }
+        }
+    }
+}
+
+# add new je once, since we are mid session
+# can be removed next season
+kmpmp_add_je_adriatic_empire_action = {
+    effect = {
+        if = {
+            limit = {
+                NOR = {
+                    has_journal_entry = je_adriatic_empire
+                    has_journal_entry = je_adriatic_empire_maintain
+                }
+                has_technology_researched = pan-nationalism
+                # has italian prime pop, is austria, is ottoman empire (or follow state)
+                OR = {
+                    any_primary_culture = {
+                        OR = {
+                            cu:north_italian = THIS
+                            cu:south_italian = THIS
+                        }
+                    }
+                    c:AUS = ROOT
+                    c:TUR = ROOT
+                    was_formed_from = TUR
+                }
+            }
+            add_journal_entry = {
+                type = je_adriatic_empire
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+﻿kmpmp_je_military_goods_shortage = {
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+	group = je_group_foreign_affairs
+
+    possible = { # added through on_actions
+
+    }
+
+    invalid = { # je should be silently closed, so use invalid trigger
+        is_diplomatic_play_committed_participant = no
+    }
+
+    on_invalid = {
+        # remove shortage modifiers
+        # should be removed from je if it's invalidated
+    }
+
+    on_weekly_pulse = {
+        effect = {
+            kmpmp_apply_military_goods_shortage_modifiers = {
+                TARGET = scope:journal_entry
+            }
+        }
+    }
+
+    # in testing phase...
+    # status_desc = {
+    #     first_valid = {
+    #         triggered_desc = {
+	# 			desc = kmpmp_je_military_goods_shortage_status_no_shortage
+	# 			trigger = {
+	# 				kmpmp_has_any_military_goods_shortage = no
+	# 			}
+	# 		}
+    #         triggered_desc = {
+	# 			desc = kmpmp_je_military_goods_shortage_status_has_shortage
+	# 			# trigger = {
+	# 			# 	kmpmp_has_any_military_goods_shortage = yes
+	# 			# }
+	# 		}
+    #     }
+    # }
+
+    weight = 200
+    should_be_pinned_by_default = yes
+}
