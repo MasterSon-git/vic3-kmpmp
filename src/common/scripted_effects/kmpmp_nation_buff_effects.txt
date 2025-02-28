@@ -95,6 +95,14 @@
         add_modifier = {
             name = kmpmp_debuff_global_empire
         }
+
+        # remove massive empire debuff
+        if = {
+            limit = {
+                has_modifier = kmpmp_debuff_massive_empire
+            }
+            remove_modifier = kmpmp_debuff_massive_empire
+        }
     }
 
     # japan - has special logic
