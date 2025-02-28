@@ -369,35 +369,35 @@ law_council_republic = {
 	can_enact = {
 		NOT = { has_government_type = gov_chartered_company }
 
-		# kmpmp
-		OR = {
-			custom_description = {
-				text = kmpmp_turmoil_incorporated_states_greater_or_equal_tooltip
-				object = 0.2
-				kmpmp_turmoil_incorporated_states >= 0.2
-			}
+		# kmpmp - removed due to task #447
+		# OR = {
+		# 	custom_description = {
+		# 		text = kmpmp_turmoil_incorporated_states_greater_or_equal_tooltip
+		# 		object = 0.2
+		# 		kmpmp_turmoil_incorporated_states >= 0.2
+		# 	}
 
-			AND = {
-				ig:ig_trade_unions ?= {
-					ig_clout >= 0.2
-				}
-				custom_tooltip = {
-					text = kmpmp_law_council_republic_ideology_tooltip
-					any_interest_group = {
-						NOT = {
-							is_interest_group_type = ig_trade_unions
-						}
-						leader = {
-							OR = {
-								has_ideology = ideology:ideology_anarchist
-								has_ideology = ideology:ideology_communist
-								has_ideology = ideology:ideology_vanguardist
-							}
-						}
-					}
-				}
-			}
-		}
+		# 	AND = {
+		# 		ig:ig_trade_unions ?= {
+		# 			ig_clout >= 0.2
+		# 		}
+		# 		custom_tooltip = {
+		# 			text = kmpmp_law_council_republic_ideology_tooltip
+		# 			any_interest_group = {
+		# 				NOT = {
+		# 					is_interest_group_type = ig_trade_unions
+		# 				}
+		# 				leader = {
+		# 					OR = {
+		# 						has_ideology = ideology:ideology_anarchist
+		# 						has_ideology = ideology:ideology_communist
+		# 						has_ideology = ideology:ideology_vanguardist
+		# 					}
+		# 				}
+		# 			}
+		# 		}
+		# 	}
+		# }
 	}
 	
 	on_activate = {		
