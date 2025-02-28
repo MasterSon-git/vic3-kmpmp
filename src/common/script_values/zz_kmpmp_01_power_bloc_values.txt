@@ -344,6 +344,17 @@ power_bloc_mandate_progress_by_rank = {
         }
     }
 
+    # kmpmp
+    if = {
+        limit = {
+            has_modifier = kmpmp_player_boost_expand_influence
+        }
+        add = {
+            value = 3
+            desc = "KMPMP_POWER_BLOC_MANDATE_PROGRESS_FROM_PLAYER_BOOST_EXPAND_INFLUENCE"
+        }
+    }
+
 	if = {
 		limit = {
 			power_bloc_great_power_non_leader_members > 0

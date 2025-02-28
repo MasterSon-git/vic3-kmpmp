@@ -279,7 +279,7 @@ principle_vassalization_2 = {
 	
 	member_modifier = {
 		# Modifiers from previous level(s)
-		country_authority_per_subject_add = 25
+		country_authority_per_subject_add = 20 #25
 		
 		# Subjects pay more to overlord
 		country_subject_income_transfer_mult = 0.25
@@ -296,7 +296,7 @@ principle_vassalization_3 = {
 
 	member_modifier = {
 		# Modifiers from previous level(s)
-		country_authority_per_subject_add = 25
+		country_authority_per_subject_add = 20 #25
 		country_subject_income_transfer_mult = 0.25
 		
 		# Can use decrees on subjects

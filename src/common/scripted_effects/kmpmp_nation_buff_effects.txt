@@ -28,7 +28,9 @@
                 has_modifier = kmpmp_buff_small_nation
             }
         }
-        add_modifier = kmpmp_buff_small_nation
+        add_modifier = {
+            name = kmpmp_buff_small_nation
+        }
     }
 
     # update medium nation
@@ -47,7 +49,9 @@
                 has_modifier = kmpmp_buff_medium_nation
             }
         }
-        add_modifier = kmpmp_buff_medium_nation
+        add_modifier = {
+            name = kmpmp_buff_medium_nation
+        }
 
         # remove small nation buff
         if = {
@@ -64,7 +68,7 @@
             OR = {
                 c:AUS ?= this    # austria
                 c:FRA ?= this    # france
-                c:GBR ?= this    # great britain
+                # c:GBR ?= this    # great britain
                 c:RUS ?= this    # russia
                 # c:USA ?= this    # usa
                 # c:PRU ?= this    # prussia
@@ -75,7 +79,22 @@
                 has_modifier = kmpmp_debuff_massive_empire
             }
         }
-        add_modifier = kmpmp_debuff_massive_empire
+        add_modifier = {
+            name = kmpmp_debuff_massive_empire
+        }
+    }
+
+    # update global empire
+    if = {
+        limit = {
+            c:GBR ?= this
+            NOT = {
+                has_modifier = kmpmp_debuff_global_empire
+            }
+        }
+        add_modifier = {
+            name = kmpmp_debuff_global_empire
+        }
     }
 
     # japan - has special logic
@@ -93,7 +112,9 @@
                     has_global_variable = meiji_restoration_complete
                 }
             }
-            add_modifier = kmpmp_buff_small_nation
+            add_modifier = {
+                name = kmpmp_buff_small_nation
+            }
         }
         else_if = { # medium nation buff
             limit = {
@@ -105,7 +126,9 @@
                     has_global_variable = meiji_restoration_complete
                 }
             }
-            add_modifier = kmpmp_buff_medium_nation
+            add_modifier = {
+                name = kmpmp_buff_medium_nation
+            }
 
             if = {
                 limit = {

@@ -5,3 +5,5 @@
 
  combat_unit_type_fort_buster_artillery: "Bunkerbrecher Artillerie"
  combat_unit_type_fort_buster_artillery_desc: "Setzt überlegene Feuerkraft zur Zerstörung feindlicher Befestigungen ein."
+
+ kmpmp_power_bloc_mandate_progress_by_player_boost_expand_influence_tooltip: "+3 [concept_power_bloc_mandate_progress]"
