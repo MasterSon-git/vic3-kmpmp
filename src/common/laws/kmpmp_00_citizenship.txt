@@ -24,7 +24,7 @@
 		country_acceptance_culture_base_add = 0
 
 		# kmpmp
-        state_birth_rate_mult = 0.09 #kmpmp
+        state_birth_rate_mult = 0.08 #kmpmp
 	}
 	
 	acceptance_modifier = {

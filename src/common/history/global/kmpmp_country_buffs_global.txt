@@ -48,7 +48,7 @@
                 c:FRA ?= this    # france
                 c:GBR ?= this    # great britain
                 c:RUS ?= this    # russia
-                c:USA ?= this    # usa
+                # c:USA ?= this    # usa
                 # c:PRU ?= this    # prussia
             }
         }
