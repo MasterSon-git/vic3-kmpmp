@@ -19,7 +19,13 @@
  kmpmp_fix_japan_buff_meiji_complete_not_triggered_decision_tooltip:0 "Löst das Ereignis zum hinzufügen der Japan buffs für das abschliessen der Meiji Restauration aus."
 
  kmpmp_buff_small_nation:0 "Kleine Nation buff"
+ kmpmp_buff_small_nation_desc:0 "In kleinen Nationen ist man sehr flexibel."
  kmpmp_buff_medium_nation:0 "Mittlere Nation buff"
+ kmpmp_buff_medium_nation_desc:0 "Mittelgroße Nationen bieten viele Möglichkeiten."
+ kmpmp_debuff_massive_empire:0 "Riesiges Reich"
+ kmpmp_debuff_massive_empire_desc:0 "Ein riesiges Reich indem es schwierig ist den Überblick zu behalten."
+ kmpmp_debuff_global_empire:0 "Globales Reich"
+ kmpmp_debuff_global_empire_desc:0 "Ein globales Reich welches sehr schwer zu verwalten ist.
 
  kmpmp_mo_utility_gear:0 "Gebrauchsausrüstung"
  kmpmp_mo_utility_gear_desc:0 "Gebrauchsausrüstung" 
@@ -35,9 +41,6 @@
  mobilization_option_mass_assault_desc:0 "Massenangriff"
  mobilization_option_military_playbooks:0 "Militär Anweisungen"
  mobilization_option_military_playbooks_desc:0 "Militär Anweisungen"
-
- kmpmp_debuff_massive_empire:0 "Riesiges Reich"
- kmpmp_debuff_massive_empire_desc:0 "Ein riesiges Reich indem es schwierig ist den Überblick zu behalten."
  
  kmpmp_emser_depeche:0 "Emser Depeche"
  kmpmp_emser_depeche_desc:0 "Angriffsvorteil gegen die Franzosen"

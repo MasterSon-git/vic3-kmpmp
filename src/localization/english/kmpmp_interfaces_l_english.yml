@@ -5,3 +5,5 @@
 
  combat_unit_type_fort_buster_artillery: "Fort Buster Artillery"
  combat_unit_type_fort_buster_artillery_desc: "Using superior firepower to ensure destruction of enemy fortifications."
+
+ kmpmp_power_bloc_mandate_progress_by_player_boost_expand_influence_tooltip: "+3 [concept_power_bloc_mandate_progress]"
