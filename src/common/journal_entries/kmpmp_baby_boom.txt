@@ -25,11 +25,14 @@
         }
     }
 
-    possible = {
-        has_technology_researched = pharmaceuticals
-    }
+    # due to a bug, now it's always possible
+    # we had an issue when complete is true before possible that the je completes without applying the effect
+    # possible = {
+    #     has_technology_researched = pharmaceuticals
+    # }
 
     complete = {
+        has_technology_researched = pharmaceuticals
         average_sol >= 10
     }
 
