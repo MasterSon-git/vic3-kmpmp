@@ -1,0 +1,17 @@
+﻿AMZ = {
+    # kmpmp due to merged cultures, we need to use the vanilla states instead of the culture
+    # use_culture_states = yes
+
+    states = {
+        STATE_MATO_GROSSO
+        STATE_AMAZONAS
+        STATE_GUAYANA
+        STATE_BOLIVAR
+        STATE_GUAVIARE
+        STATE_PASTAZA
+        STATE_ACRE
+        STATE_LA_PAZ
+    }
+
+    ai_will_do = { always = no }
+}
