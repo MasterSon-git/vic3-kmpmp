@@ -150,11 +150,14 @@ kmpmp_ev_spain_america.1 = {
             annex = c:UCA
         }
 
-        # Mexico becomes a dominion of Spain
-        scope:event_actor_country = {
-            create_diplomatic_pact = {
-                country = ROOT
-                type = dominion
+        # Mexico becomes a protectorate of Spain
+        custom_tooltip = { # custom tooltip otherwise it looks like spain becomes protectorate of mexico. BUG
+            text = kmpmp_ev_spain_america.1.c.tt2
+            scope:event_actor_country = {
+                create_diplomatic_pact = {
+                    country = ROOT
+                    type = protectorate
+                }
             }
         }
         
@@ -219,7 +222,7 @@ kmpmp_ev_spain_america.2 = {
             }
         }
 
-        # Spain turns Central America into a Dominion
+        # Spain turns Central America into a Puppet
         if = {
             limit = {
                 exists = c:UCA
@@ -232,7 +235,7 @@ kmpmp_ev_spain_america.2 = {
             }
             create_diplomatic_pact = {
                 country = c:UCA
-                type = dominion
+                type = puppet
             }
         }
     }
