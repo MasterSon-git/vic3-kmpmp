@@ -41,3 +41,6 @@
  country_institution_size_change_speed_institution_home_affairs_mult_desc:0 "How fast you change the size of [GetInstitutionType('institution_home_affairs').GetName]"
  country_institution_cost_institution_home_affairs_mult:0 "@bur![Nbsp][concept_bureaucracy] Cost of [GetInstitutionType('institution_home_affairs').GetName]"
  country_institution_cost_institution_home_affairs_mult_desc:0 "An increase or reduction to the @bur![Nbsp][concept_bureaucracy] cost of bringing [GetInstitutionType('institution_home_affairs').GetName] to the citizens"
+
+ country_kmpmp_war_support_from_power_bloc_principles_add: "[concept_war_support] from [Concept('concept_power_bloc_principle', '$concept_power_bloc_principles$')]"
+ country_kmpmp_war_support_from_power_bloc_principles_add_desc: "A bonus or penalty to [concept_war_support] reducing the weekly [concept_war_exhaustion]"

@@ -19,7 +19,7 @@ war_exhaustion = {
 	value = war_support_from_lobby_clout
 	save_temporary_value_as = temp_war_support_from_lobby_clout
 	# kmpmp
-	value = kmpmp_war_support_from_power_bloc_principles
+	value = modifier:country_kmpmp_war_support_from_power_bloc_principles_add
 	save_temporary_value_as = temp_kmpmp_war_support_from_power_bloc_principles
 	# end save temp values
 
@@ -151,9 +151,9 @@ war_exhaustion = {
 
 	# kmpmp
 	if = {
-		limit = { scope:temp_kmpmp_war_support_from_power_bloc_principles <= -0.01 }
+		limit = { scope:temp_kmpmp_war_support_from_power_bloc_principles >= 0.01 }
 		add = {
-			add = scope:temp_kmpmp_war_support_from_power_bloc_principles
+			subtract = scope:temp_kmpmp_war_support_from_power_bloc_principles
 			desc = "KMPMP_WAR_SUPPORT_FROM_POWER_BLOC_PRINCIPLES"
 		}
 	}
@@ -164,4 +164,5 @@ war_exhaustion = {
 	}
 
 	max = define:NWar|WAR_EXHAUSTION_MAX
+	min = 0 # kmpmp no additions to war support
 }
