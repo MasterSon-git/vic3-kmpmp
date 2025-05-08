@@ -1,0 +1,7 @@
+﻿kmpmp_age_of_warfare = {
+    default = kmpmp_age_of_warfare_player
+
+    kmpmp_age_of_warfare_none = {}
+    kmpmp_age_of_warfare_player = {}
+    kmpmp_age_of_warfare_all = {}
+}

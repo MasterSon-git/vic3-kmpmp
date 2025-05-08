@@ -1,0 +1,8 @@
+﻿GLOBAL = {
+    every_country = {
+        trigger_event = {
+            id = kmpmp_ev_apply_game_rules.1
+            days = 1
+        }
+    }
+}

@@ -1,0 +1,14 @@
+﻿l_english:
+ rule_kmpmp_age_of_warfare: "Age of Warfare"
+
+ setting_kmpmp_age_of_warfare_none: "Disabled"
+ setting_kmpmp_age_of_warfare_none_desc: ""
+
+ setting_kmpmp_age_of_warfare_player: "Player only"
+ setting_kmpmp_age_of_warfare_player_desc: "Applies a 30 years decaying modifier to all #b players#!:\n$kmpmp_age_of_warfare_modifier_rule_desc$"
+
+ setting_kmpmp_age_of_warfare_all: "Everyone"
+ setting_kmpmp_age_of_warfare_all_desc: "Applies a 30 years decaying modifier to #b everyone#!:\n$kmpmp_age_of_warfare_modifier_rule_desc$"
+
+ kmpmp_age_of_warfare_modifier: "Age of Warfare"
+ kmpmp_age_of_warfare_modifier_rule_desc: "+ 60% [GetGoods('ammunition').GetTextIcon] [GetGoods('artillery').GetTextIcon] [GetGoods('small_arms').GetTextIcon] throughput to war industries\n- 30% $building_mobilization_cost_mult$\n- 15% [GetGoods('ammunition').GetTextIcon] [GetGoods('artillery').GetTextIcon] [GetGoods('small_arms').GetTextIcon] input"
