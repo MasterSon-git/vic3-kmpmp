@@ -1,5 +1,7 @@
 ﻿NEconomy = {
 	DECLARE_BANKRUPTCY_PENALTY_DURATION_YEARS = 4 #10		# How many years does it take for penalties from declaring bankruptcy to fully decay
+
+	CREDIT_RATIO_MAX_OVERRUN = 0.1 #0.01 			# Countries can accumulate this percentage more of a debt "hole" than their credit limit when in default
 }
 
 NDiplomacy = {
