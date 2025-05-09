@@ -1,0 +1,7 @@
+﻿l_english:
+ kmpmp_je_ottoman_medium_nation: "A Proud Nation"
+ kmpmp_je_ottoman_medium_nation_reason: "The strength of our nation affects our capabilities."
+
+ kmpmp_complete_je_ottoman_medium_nation_button: "We are ready"
+ kmpmp_complete_je_ottoman_medium_nation_button_desc: "Our time has come, we are ready to compete with the other powers."
+ kmpmp_complete_je_ottoman_medium_nation_button_effect_tt: "Completes the [concept_journal_entry] $kmpmp_je_ottoman_medium_nation$"
