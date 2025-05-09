@@ -1,4 +1,13 @@
-﻿country_kmpmp_war_support_from_power_bloc_principles_add = {
+﻿country_kmpmp_power_bloc_mandate_progress_add = {
+	decimals = 0
+	color = good
+	percent = no
+	game_data = {
+		ai_value = 0
+	}
+}
+
+country_kmpmp_war_support_from_power_bloc_principles_add = {
 	decimals = 2
 	color = good
 	percent = no
