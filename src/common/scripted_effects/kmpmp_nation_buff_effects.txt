@@ -5,7 +5,7 @@
             OR = {
                 c:SAR ?= this    # sardinien piemont
                 c:SIC ?= this    # two sicilies
-                c:TUR ?= this    # ottomans
+                #c:TUR ?= this    # ottomans
                 c:BEL ?= this    # belgium
                 c:NET ?= this    # netherlands
                 c:SWE ?= this    # sweden
@@ -159,6 +159,42 @@
                     has_modifier = kmpmp_buff_medium_nation
                 }
                 remove_modifier = kmpmp_buff_medium_nation
+            }
+
+            if = {
+                limit = {
+                    has_modifier = kmpmp_buff_small_nation
+                }
+                remove_modifier = kmpmp_buff_small_nation
+            }
+        }
+    }
+
+    # ottoman - has special logic
+    if = {
+        limit = {
+            c:TUR ?= this
+        }
+        if = { # small nation buff
+            limit = {
+                NOT = {
+                    has_modifier = kmpmp_buff_small_nation
+                    has_variable = kmpmp_je_ottoman_medium_nation_completed
+                }
+            }
+            add_modifier = {
+                name = kmpmp_buff_small_nation
+            }
+        }
+        else_if = { # medium nation buff
+            limit = {
+                NOT = {
+                    has_modifier = kmpmp_buff_medium_nation
+                }
+                has_variable = kmpmp_je_ottoman_medium_nation_completed
+            }
+            add_modifier = {
+                name = kmpmp_buff_medium_nation
             }
 
             if = {
