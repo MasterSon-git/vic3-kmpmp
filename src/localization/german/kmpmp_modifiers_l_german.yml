@@ -44,3 +44,6 @@
 
  country_kmpmp_war_support_from_power_bloc_principles_add: "[concept_war_support] von [Concept('concept_power_bloc_principle', '$concept_power_bloc_principles$')]"
  country_kmpmp_war_support_from_power_bloc_principles_add_desc: "Ein Bonus oder Abzug auf den [Concept('concept_war_support', '$concept_war_support$n'] der die wöchentliche [concept_war_exhaustion] reduziert"
+
+ country_kmpmp_power_bloc_mandate_progress_add: "[concept_power_bloc_mandate_progress]"
+ country_kmpmp_power_bloc_mandate_progress_add_desc: "Ein Bonus oder Abzug auf den [concept_power_bloc_mandate_progress]"

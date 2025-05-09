@@ -2,3 +2,4 @@
  KMPMP_TURMOIL_INCORPORATED_STATES: "[concept_turmoil] in [Concept('concept_incorporated_state', '$concept_incorporated_states$')]"
  KMPMP_POWER_BLOC_MANDATE_PROGRESS_JAPAN: "Japan ist [concept_power_bloc_leader]"
  KMPMP_POWER_BLOC_MANDATE_PROGRESS_FROM_PLAYER_BOOST_EXPAND_INFLUENCE: "Von Staatsausrichtung"
+ KMPMP_POWER_BLOC_MANDATE_PROGRESS_FROM_COUNTRY_MODIFIER: "Von Landesmodifikatoren"

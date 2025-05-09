@@ -41,6 +41,7 @@ kmpmp_buff_medium_nation = {
     building_mobilization_cost_mult = -0.025
     state_building_barracks_max_level_add = 5
     country_authority_mult = 0.1
+    country_kmpmp_power_bloc_mandate_progress_add = 4
 }
 
 kmpmp_debuff_massive_empire = {
