@@ -1,0 +1,8 @@
+﻿l_english:
+ rule_kmpmp_trade_states_relations: "$trade_states$ Relations"
+
+ setting_kmpmp_trade_states_relations_ignore: "Ignore"
+ setting_kmpmp_trade_states_relations_ignore_desc: "Relations to target country are ignored."
+
+ setting_kmpmp_trade_states_relations_vanilla: "Vanilla"
+ setting_kmpmp_trade_states_relations_vanilla_desc: "Vanilla behavior, relations to target country must be at least $relations_neutral$."
