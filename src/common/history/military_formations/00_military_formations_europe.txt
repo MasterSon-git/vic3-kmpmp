@@ -2911,7 +2911,7 @@
 			combat_unit = { # Desiree, Camilla, Euridice
 				type = unit_type:combat_unit_type_frigate
 				state_region = s:STATE_SVEALAND
-				count = 3
+				count = 5 #3
 			}
 
 			combat_unit = { # Galathea, Josephine
@@ -3868,7 +3868,7 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_frigate
 				state_region = s:STATE_ESTREMADURA
-				count = 1
+				count = 4 #1
 			}
 
 			combat_unit = {
@@ -4086,7 +4086,7 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_frigate
 				state_region = s:STATE_GALICIA
-				count = 2
+				count = 3 #2
 			}
 
 			combat_unit = {
