@@ -54,14 +54,9 @@ kmpmp_debuff_massive_empire = {
     country_military_wages_mult = 0.05
 }
 
+# actually added as decaying debuff over 50 years
 kmpmp_debuff_global_empire = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
-    country_military_goods_cost_mult = 0.1
-    unit_offense_mult = -0.05
-    unit_defense_mult = -0.05
-    goods_input_artillery_mult = 0.05
-    goods_input_small_arms_mult = 0.05
-    country_military_wages_mult = 0.05
 
     # -10% gov tp
     building_government_administration_throughput_add = -0.1

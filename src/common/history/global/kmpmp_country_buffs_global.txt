@@ -46,7 +46,7 @@
             OR = {
                 c:AUS ?= this    # austria
                 c:FRA ?= this    # france
-                # c:GBR ?= this    # great britain
+                c:GBR ?= this    # great britain
                 c:RUS ?= this    # russia
                 # c:USA ?= this    # usa
                 # c:PRU ?= this    # prussia
@@ -61,6 +61,8 @@
     c:GBR ?= {
         add_modifier = {
             name = kmpmp_debuff_global_empire
+            years = 50
+            is_decaying = yes
         }
     }
 }

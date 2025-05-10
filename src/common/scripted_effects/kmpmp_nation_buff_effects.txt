@@ -68,7 +68,7 @@
             OR = {
                 c:AUS ?= this    # austria
                 c:FRA ?= this    # france
-                # c:GBR ?= this    # great britain
+                c:GBR ?= this    # great britain
                 c:RUS ?= this    # russia
                 # c:USA ?= this    # usa
                 # c:PRU ?= this    # prussia
@@ -81,27 +81,6 @@
         }
         add_modifier = {
             name = kmpmp_debuff_massive_empire
-        }
-    }
-
-    # update global empire
-    if = {
-        limit = {
-            c:GBR ?= this
-            NOT = {
-                has_modifier = kmpmp_debuff_global_empire
-            }
-        }
-        add_modifier = {
-            name = kmpmp_debuff_global_empire
-        }
-
-        # remove massive empire debuff
-        if = {
-            limit = {
-                has_modifier = kmpmp_debuff_massive_empire
-            }
-            remove_modifier = kmpmp_debuff_massive_empire
         }
     }
 
