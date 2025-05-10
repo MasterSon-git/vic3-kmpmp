@@ -46,6 +46,7 @@ kmpmp_buff_medium_nation = {
 
 kmpmp_debuff_massive_empire = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+
     country_military_goods_cost_mult = 0.05
     unit_offense_mult = -0.05
     unit_defense_mult = -0.05
@@ -54,8 +55,36 @@ kmpmp_debuff_massive_empire = {
     country_military_wages_mult = 0.05
 }
 
-# actually added as decaying debuff over 50 years
+# still implemented to support older save games
+# but it's no longer used and can be removed in the future
 kmpmp_debuff_global_empire = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+
+    country_military_goods_cost_mult = 0.05
+    unit_offense_mult = -0.05
+    unit_defense_mult = -0.05
+    goods_input_artillery_mult = 0.05
+    goods_input_small_arms_mult = 0.05
+    country_military_wages_mult = 0.05
+
+    # -10% gov tp
+    building_government_administration_throughput_add = -0.1
+    # -15% uni tp
+    building_university_throughput_add = -0.15
+    # -15% Migration attraction
+    state_migration_pull_mult = -0.15
+    # -15% qualifications
+    state_pop_qualifications_mult = -0.15
+    # -10% construction eff
+    state_construction_mult = -0.1
+    # +1 expected Min Sol
+    state_lower_strata_expected_sol_add = 1
+	state_middle_strata_expected_sol_add = 1
+	state_upper_strata_expected_sol_add = 1
+}
+
+# actually added as decaying debuff over 50 years
+kmpmp_debuff_global_empire_decaying = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
 
     # -10% gov tp

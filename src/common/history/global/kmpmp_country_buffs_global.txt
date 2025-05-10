@@ -60,7 +60,7 @@
     # debuff global empire
     c:GBR ?= {
         add_modifier = {
-            name = kmpmp_debuff_global_empire
+            name = kmpmp_debuff_global_empire_decaying
             years = 50
             is_decaying = yes
         }

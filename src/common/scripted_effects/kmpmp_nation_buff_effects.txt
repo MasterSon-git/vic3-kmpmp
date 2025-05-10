@@ -68,7 +68,7 @@
             OR = {
                 c:AUS ?= this    # austria
                 c:FRA ?= this    # france
-                c:GBR ?= this    # great britain
+                # c:GBR ?= this    # great britain
                 c:RUS ?= this    # russia
                 # c:USA ?= this    # usa
                 # c:PRU ?= this    # prussia
@@ -81,6 +81,34 @@
         }
         add_modifier = {
             name = kmpmp_debuff_massive_empire
+        }
+    }
+
+    # gb - has special logic
+    if = {
+        limit = {
+            c:GBR ?= this
+        }
+        if = { # remove accidentially added kmpmp_debuff_global_empire after mod update
+            limit = {
+                has_modifier = kmpmp_debuff_global_empire
+                has_modifier = kmpmp_debuff_massive_empire
+            }
+            remove_modifier = kmpmp_debuff_global_empire
+        }
+        # since we may have game saves using the kmpmp_debuff_massive_empire modifier
+        # instead of the kmpmp_debuff_massive_empire_decaying modifier
+        # we only add kmpmp_debuff_global_empire if kmpmp_debuff_massive_empire is not present
+        if = {
+            limit = {
+                NOT = {
+                    has_modifier = kmpmp_debuff_global_empire
+                    has_modifier = kmpmp_debuff_massive_empire
+                }
+            }
+            add_modifier = {
+                name = kmpmp_debuff_global_empire
+            }
         }
     }
 

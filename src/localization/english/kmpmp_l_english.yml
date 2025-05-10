@@ -26,6 +26,8 @@
  kmpmp_debuff_massive_empire_desc:0 "A massive empire that makes it difficult to keep track of."
  kmpmp_debuff_global_empire:0 "Global Empire"
  kmpmp_debuff_global_empire_desc:0 "A global empire that is very difficult to manage."
+ kmpmp_debuff_global_empire_decaying:0 "Global Empire"
+ kmpmp_debuff_global_empire_decaying_desc:0 "A global empire that is very difficult to manage."
 
  kmpmp_mo_utility_gear:0 "Utility Gear"
  kmpmp_mo_utility_gear_desc:0 "Utility Gear" 
