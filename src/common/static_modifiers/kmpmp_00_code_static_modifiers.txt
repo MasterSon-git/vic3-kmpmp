@@ -110,6 +110,15 @@ government_owned_debt = {
 	country_government_dividends_waste_add = 0.5 #1
 }
 
+# Scales with total army power projection of a country
+country_army_power_projection = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	# kmpmp - we are trying to reduce the prestige bump from army projection if armies gets mobilized
+	# this value seems to work quite well
+	country_prestige_from_army_power_projection_mult = -0.0002
+}
+
+# Scales with total navy power projection of a country
 country_navy_power_projection = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
 	country_max_declared_interests_add = 0.0015 #0.01
