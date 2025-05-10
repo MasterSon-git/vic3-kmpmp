@@ -94,11 +94,45 @@
 	accept_effect = {
 		if = {
 			limit = { exists = scope:first_state }
-			scope:first_state = { set_state_owner = scope:target_country }
+			scope:first_state = { 
+				set_state_owner = scope:target_country
+				# kmpmp
+				every_neighbouring_state = {
+					limit = {
+						owner != root
+						owner != scope:target_country
+						NOT = {
+							scope:target_country = {
+								has_truce_with = PREV.owner
+							}
+						}
+					}
+					scope:target_country = {
+						create_unidirectional_truce = { country = PREV.owner months = 6 }
+					}
+				}
+			}
 		}
 		if = {
 			limit = { exists = scope:second_state }
-			scope:second_state = { set_state_owner = root }
+			scope:second_state = {
+				set_state_owner = root
+				# kmpmp
+				every_neighbouring_state = {
+					limit = {
+						owner != root
+						owner != scope:target_country
+						NOT = {
+							root = {
+								has_truce_with = PREV.owner
+							}
+						}
+					}
+					root = {
+						create_unidirectional_truce = { country = PREV.owner months = 6 }
+					}
+				}
+			}
 		}		
 	}
 	
