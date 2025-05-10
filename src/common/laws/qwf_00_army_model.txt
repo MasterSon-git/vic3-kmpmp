@@ -84,7 +84,7 @@ law_professional_army = {
 		country_officers_pol_str_mult = 2
 		country_soldiers_pol_str_mult = 0.50
 		state_building_barracks_max_level_add = 100
-		state_building_conscription_center_max_level_add = 65 #50
+		state_building_conscription_center_max_level_add = 55 #50
 		unit_experience_gain_mult = 0.35 #1.0
 		country_institution_qwf_conscription_max_investment_add = 3
 	}
@@ -170,7 +170,7 @@ law_national_militia = {
 	institution_modifier = {
 		state_conscription_rate_add = 0.005
 		unit_army_offense_mult = 0.01
-		unit_army_defense_mult = 0.01
+		unit_army_defense_mult = 0.04
 		unit_supply_consumption_mult = -0.02
 	}
 	
@@ -184,7 +184,7 @@ law_national_militia = {
 		state_building_conscription_center_max_level_add = 100
 		# kmpmp
 		building_training_rate_mult = 0.35
-		country_military_goods_cost_mult = -0.05
+		country_military_goods_cost_mult = -0.1
 		unit_experience_gain_mult = 0.05
 		country_institution_qwf_conscription_max_investment_add = 3
 	}
@@ -241,7 +241,7 @@ law_mass_conscription = {
 	
 	institution = institution_qwf_conscription
 	institution_modifier = {
-		state_conscription_rate_add = 0.008
+		state_conscription_rate_add = 0.01
 		unit_army_offense_mult = 0.02
 		unit_army_defense_mult = 0.02
 	}
@@ -249,10 +249,10 @@ law_mass_conscription = {
 	modifier = {
 		unit_morale_loss_mult = 0.05
 		state_conscription_rate_add = 0.04 #0.03
-		building_training_rate_mult = 0.85 #1
+		building_training_rate_mult = 0.9 #1
 		country_officers_pol_str_mult = 1.5
 		country_soldiers_pol_str_mult = 1
-		state_building_barracks_max_level_add = 100
+		state_building_barracks_max_level_add = 120 #100
 		state_building_conscription_center_max_level_add = 100
 		# kmpmp
 		unit_experience_gain_mult = -0.1
