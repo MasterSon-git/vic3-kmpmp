@@ -15,3 +15,15 @@
 
     ai_will_do = { always = no }
 }
+
+CHE = {
+    # kmpmp due to merged cultures, we need to use the vanilla states instead of the culture
+    # use_culture_states = yes
+    
+    states = {
+        STATE_ARKANSAS
+        STATE_OKLAHOMA
+    }
+
+	ai_will_do = { always = no }
+}
