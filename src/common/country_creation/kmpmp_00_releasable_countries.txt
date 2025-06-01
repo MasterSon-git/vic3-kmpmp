@@ -19,11 +19,29 @@
 CHE = {
     # kmpmp due to merged cultures, we need to use the vanilla states instead of the culture
     # use_culture_states = yes
-    
+
     states = {
         STATE_ARKANSAS
         STATE_OKLAHOMA
     }
 
-	ai_will_do = { always = no }
+    ai_will_do = { always = no }
+}
+
+EGY = {
+    # kmpmp due to merged cultures, we need to use the vanilla states instead of the culture
+    # use_culture_states = yes
+
+    states = {
+        STATE_SINAI
+        STATE_EGYPTIAN_DESERT
+        STATE_MATRUH
+        STATE_MIDDLE_EGYPT
+        STATE_LOWER_EGYPT
+        STATE_UPPER_EGYPT
+    }
+
+    required_num_states = 3
+
+    ai_will_do = { always = no }
 }
