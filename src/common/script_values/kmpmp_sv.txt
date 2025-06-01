@@ -5,14 +5,20 @@
 
 kmpmp_enemy_occupation_incorporated_states = {
     value = 0
-    every_scope_state = {
-        limit = {
-            is_incorporated = yes
-            controller != owner
+    add = {
+        every_scope_state = {
+            limit = {
+                is_incorporated = yes
+                controller != owner
+            }
+            add = 1
         }
-        add = 1
+        divide = num_incorporated_states
+
+        # add a description here to suppress errors in script value war_exhaustion
+        # error: Building Script Value Description using unsupported features near  file: common/script_values/zz_kmpmp_war_exhaustion_values.txt line: 5
+        desc = "KMPMP_ENEMY_OCCUPATION_INCORPORATED_STATES"
     }
-    divide = num_incorporated_states
 }
 
 kmpmp_turmoil_incorporated_states = {
