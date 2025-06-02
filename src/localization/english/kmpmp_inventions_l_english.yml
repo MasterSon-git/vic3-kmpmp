@@ -1,0 +1,48 @@
+﻿l_english:
+
+ # Military
+ KMPMP_BATTLE_SIZE_LESSONS_FROM_THE_GREAT_WAR: "Limited by [concept_technology] $kmpmp_lessons_from_the_great_war$"
+ kmpmp_lessons_from_the_great_war: "Lessons from the Great War"
+ kmpmp_lessons_from_the_great_war_desc: "wip"
+
+ kmpmp_anti_tank_defences: "Anti Tank Defences"
+ kmpmp_anti_tank_defences_desc: "wip"
+
+ kmpmp_combined_arms_strategy: "Combined Arms Strategy"
+ kmpmp_combined_arms_strategy_desc: "wip"
+
+ kmpmp_interwar_tanks: "Interwar Tanks"
+ kmpmp_interwar_tanks_desc: "wip"
+
+ kmpmp_rocket_technology: "Rocket Technology"
+ kmpmp_rocket_technology_desc: "wip"
+
+ kmpmp_rocket_artillery: "Rocket Artillery"
+ kmpmp_rocket_artillery_desc: "wip"
+
+ kmpmp_interwar_mechanized_infantry: "Interwar Mechanized Infantry"
+ kmpmp_interwar_mechanized_infantry_desc: "wip"
+
+ kmpmp_blitzkrieg: "Blitzkrieg"
+ kmpmp_blitzkrieg_desc: "wip"
+
+ kmpmp_super_heavy_battleship: "Super Heavy Battleship"
+ kmpmp_super_heavy_battleship_desc: "wip"
+
+ kmpmp_long_range_submarines: "Long-Range Submarines"
+ kmpmp_long_range_submarines_desc: "wip"
+
+ kmpmp_heavy_cruiser: "Heavy Cruiser"
+ kmpmp_heavy_cruiser_desc: "wip"
+
+ kmpmp_anti_submarine_warfare: "Anti Submarine Warfare"
+ kmpmp_anti_submarine_warfare_desc: "wip"
+
+ kmpmp_interwar_carrier: "Interwar Carrier"
+ kmpmp_interwar_carrier_desc: "wip"
+
+ kmpmp_international_tradehubs: "International Tradehubs"
+ kmpmp_international_tradehubs_desc: "wip"
+
+ kmpmp_deepsea_dockyards: "Deepsea Dockyards"
+ kmpmp_deepsea_dockyards_desc: "wip"
