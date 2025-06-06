@@ -6,17 +6,17 @@ kmpmp_modern_farming = {
     category = production
 
     unlocking_technologies = {
-		nitrogen_fixation
+        nitrogen_fixation
         mechanized_farming
-	}
+    }
 
     modifier = {
         building_group_bg_plantations_throughput_add = 0.10
         building_group_bg_agriculture_throughput_add = 0.15
         state_harvest_condition_flood_impact_mult = -0.20
-		state_harvest_condition_wildfire_impact_mult = -0.20
-		state_harvest_condition_extreme_winds_impact_mult = -0.20
-		state_harvest_condition_drought_impact_mult= -0.20
+        state_harvest_condition_wildfire_impact_mult = -0.20
+        state_harvest_condition_extreme_winds_impact_mult = -0.20
+        state_harvest_condition_drought_impact_mult= -0.20
     }
 
     ai_weight = {
@@ -31,10 +31,10 @@ kmpmp_elastan = {
 
     unlocking_technologies = {
         art_silk
-	}
+    }
 
     modifier = {
-		building_chemical_plants_throughput_add = 0.10
+        building_chemical_plants_throughput_add = 0.10
     }
 
     ai_weight = {
@@ -45,17 +45,17 @@ kmpmp_elastan = {
 ### ERA 6
 
 kmpmp_modern_communication = {
-    era = era_6
+    era = era_kmpmp_6
     texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
     category = production
 
     unlocking_technologies = {
         radio
         electric_railway
-	}
+    }
 
     modifier = {
-		building_railway_throughput_add = 0.10
+        building_railway_throughput_add = 0.10
         building_electrics_industry_throughput_add = 0.1
     }
 
@@ -65,7 +65,7 @@ kmpmp_modern_communication = {
 }
 
 kmpmp_modern_drilling = {
-    era = era_6
+    era = era_kmpmp_6
     texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
     category = production
 
@@ -73,10 +73,10 @@ kmpmp_modern_drilling = {
         compression_ignition
         electrical_capacitors
         oil_turbine
-	}
+    }
 
     modifier = {
-		building_group_bg_oil_extraction_throughput_add = 0.15
+        building_group_bg_oil_extraction_throughput_add = 0.15
     }
 
     ai_weight = {
@@ -85,17 +85,17 @@ kmpmp_modern_drilling = {
 }
 
 kmpmp_modern_foodproduction = {
-    era = era_6
+    era = era_kmpmp_6
     texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
     category = production
 
     unlocking_technologies = {
         dough_rollers
         flash_freezing
-	}
+    }
 
     modifier = {
-		building_livestock_ranch_throughput_add = 0.20
+        building_livestock_ranch_throughput_add = 0.20
         building_food_industry_throughput_add = 0.1
     }
 

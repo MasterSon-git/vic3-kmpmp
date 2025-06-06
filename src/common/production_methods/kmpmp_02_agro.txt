@@ -10,7 +10,7 @@
 		}
 
 		level_scaled = {
-			building_employment_laborers_add = -1700 #1400
+			building_employment_laborers_add = -1700 #-1400
 		}
 	}
 

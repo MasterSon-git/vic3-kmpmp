@@ -7,15 +7,15 @@ flash_freezing = {
 	texture = "gfx/interface/icons/invention_icons/flash_freezing.dds"
 	category = production
 
-    modifier = {
+	modifier = {
 			building_fishing_wharf_throughput_add = 0.05 #kmpmp
-            building_group_bg_whaling_throughput_add = 0.05 #kmpmp
+			building_group_bg_whaling_throughput_add = 0.05 #kmpmp
 	}
-	
+
 	unlocking_technologies = {
 		pasteurization
 	}
-	
+
 	ai_weight = {
 		value = 1
 	}
