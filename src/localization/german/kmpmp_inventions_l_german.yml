@@ -63,8 +63,8 @@
  kmpmp_Filmworks: "Filmwerke"
  kkmpmp_Filmworks_desc: "Filmstudios als kulturelle Zentren prägen das kollektive Bewusstsein und formen Ideale."
 
- kmpmp_highway: "Autobahnen"
- kmpmp_highway_desc: "Ein nationales Autobahnnetz revolutioniert den Waren- und Personenverkehr."
+ kmpmp_highways: "Autobahnen"
+ kmpmp_highways_desc: "Ein nationales Autobahnnetz revolutioniert den Waren- und Personenverkehr."
 
  # ÄRA 6 Technik Produktion
  kmpmp_cinema: "Kino"

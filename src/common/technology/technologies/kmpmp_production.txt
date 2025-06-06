@@ -137,8 +137,7 @@ kmpmp_cinema = {
 
     modifier = {
         building_electrics_industry_throughput_add = 0.1
-        country_kmpmp_war_support_tec_add = 0.2
-        country_convoys_capacity_mult = 0.2
+        country_kmpmp_war_support_from_tec_add = 0.2
     }
 
     ai_weight = {
