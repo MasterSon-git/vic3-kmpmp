@@ -96,7 +96,6 @@ kmpmp_combined_arms_strategy = {
 }
 
 kmpmp_interwar_tanks = {
-    # TODO:
     # unlock units
     # Interwar Heavy Tank (Unit)
     # Interwar Light Tank (Unit)
@@ -159,7 +158,6 @@ kmpmp_rocket_artillery = {
 }
 
 kmpmp_interwar_mechanized_infantry = {
-    # TODO:
     # unlocks unit
     # Interwar Infantry (Unit)
 
@@ -198,6 +196,9 @@ kmpmp_blitzkrieg = {
         # + 5% Army Off Def
         unit_army_defense_mult = 0.05
         unit_army_offense_mult = 0.05
+
+        # +5 Off interwar mechanized infantry
+        unit_combat_unit_type_interwar_mechanized_infantry_offense_add = 5
     }
 
     unlocking_technologies = {
@@ -211,7 +212,6 @@ kmpmp_blitzkrieg = {
 }
 
 kmpmp_super_heavy_battleship = {
-    # TODO:
     # unlock unit
     # Bismarck Class Battleship (Unit)
 
@@ -232,7 +232,6 @@ kmpmp_super_heavy_battleship = {
 }
 
 kmpmp_long_range_submarines = {
-    # TODO:
     # unlock unit
     # Long Range Submarine (Unit)
 
@@ -255,7 +254,6 @@ kmpmp_long_range_submarines = {
 }
 
 kmpmp_heavy_cruiser = {
-    # TODO:
     # unlocks unit
     # Heavy Cruiser (Unit)
 
@@ -276,7 +274,6 @@ kmpmp_heavy_cruiser = {
 }
 
 kmpmp_anti_submarine_warfare = {
-    # TODO:
     # unlocks unit
     # Anti Submarine Destroyer (Unit)
 
@@ -298,7 +295,6 @@ kmpmp_anti_submarine_warfare = {
 }
 
 kmpmp_interwar_carrier = {
-    # TODO:
     # unlocks unit
     # Interwar Carrier (Unit)
 

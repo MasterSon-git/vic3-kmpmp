@@ -3,7 +3,31 @@
  KMPMP_ZERO_BASED: "Zero based"
  KMPMP_WAR_SUPPORT_FROM_POWER_BLOC_PRINCIPLES:0 "Support from [Concept('concept_power_bloc_principle', '$concept_power_bloc_principles$')]"
 
+ combat_unit_type_interwar_mechanized_infantry: "Panzergrenadiers"
+ combat_unit_type_interwar_mechanized_infantry_desc: "wip"
+
  combat_unit_type_fort_buster_artillery: "Fort Buster Artillery"
  combat_unit_type_fort_buster_artillery_desc: "Using superior firepower to ensure destruction of enemy fortifications."
+
+ combat_unit_type_interwar_heavy_tank: "Interwar Heavy Tank"
+ combat_unit_type_interwar_heavy_tank_desc: "wip"
+
+ combat_unit_type_interwar_light_tanks: "Interwar Light Tanks"
+ combat_unit_type_interwar_light_tanks_desc: "wip"
+
+ combat_unit_type_battleship_bismarck_class: "Bismarck Class Battleship"
+ combat_unit_type_battleship_bismarck_class_desc: "wip"
+
+ combat_unit_type_heavy_cruiser: "Heavy Cruiser"
+ combat_unit_type_heavy_cruiser_desc: "wip"
+
+ combat_unit_type_long_range_submarine: "Long Range Submarine"
+ combat_unit_type_long_range_submarine_desc: "wip"
+
+ combat_unit_type_anti_submarine_destroyer: "Anti Submarine Destroyer"
+ combat_unit_type_anti_submarine_destroyer_desc: "wip"
+
+ combat_unit_type_interwar_carrier: "Interwar Carrier"
+ combat_unit_type_interwar_carrier_desc: "wip"
 
  kmpmp_power_bloc_mandate_progress_by_player_boost_expand_influence_tooltip: "+3 [concept_power_bloc_mandate_progress]"
