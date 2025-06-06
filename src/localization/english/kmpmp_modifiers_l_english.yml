@@ -141,6 +141,7 @@
 
  country_kmpmp_war_support_from_power_bloc_principles_add: "[concept_war_support] from [Concept('concept_power_bloc_principle', '$concept_power_bloc_principles$')]"
  country_kmpmp_war_support_from_power_bloc_principles_add_desc: "A bonus or penalty to [concept_war_support] reducing the weekly [concept_war_exhaustion]"
+ country_kmpmp_war_support_tec_add_desc: "A bonus or penalty to [concept_war_support] reducing the weekly [concept_war_exhaustion]"
 
  country_kmpmp_power_bloc_mandate_progress_add: "[concept_power_bloc_mandate_progress]"
  country_kmpmp_power_bloc_mandate_progress_add_desc: "A bonus or penalty to [concept_power_bloc_mandate_progress]"

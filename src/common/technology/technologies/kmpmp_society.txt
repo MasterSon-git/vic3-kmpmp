@@ -22,7 +22,7 @@ kmpmp_highways = {
 	}
 }
 
-kmpmp_cinema = {
+kmpmp_Filmworks = {
 	era = era_kmpmp_6
 	texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
 	category = society
@@ -64,3 +64,63 @@ kmpmp_vaccination_campagns = {
 	}
 }
 
+kmpmp_abolish_the_gold_standard = {
+	era = era_kmpmp_6
+	texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
+	category = society
+
+	modifier = {
+		building_cash_reserves_mult = 0.75
+	}
+
+	unlocking_technologies = {
+		macroeconomics
+		modern_financial_instruments
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+kmpmp_public_flights = {
+	era = era_kmpmp_6
+	texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
+	category = society
+
+	modifier = {
+		state_infrastructure_mult = 0.1
+		building_railway_throughput_add = 0.10
+		building_war_machine_industry_throughput_add = 0.1
+	}
+
+	unlocking_technologies = {
+		zeppelins
+		paved_roads
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+kmpmp_globalism = {
+	era = era_kmpmp_6
+	texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
+	category = society
+
+	modifier = {
+		country_max_companies_add = 1
+		country_trade_route_competitiveness_mult = 0.25
+	
+	}
+
+	unlocking_technologies = {
+		multilateral_alliances
+		modern_financial_instruments
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
