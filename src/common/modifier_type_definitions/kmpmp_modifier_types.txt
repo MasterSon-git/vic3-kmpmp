@@ -25,18 +25,18 @@ state_engineers_investment_pool_efficiency_mult = {
 	}
 }
 
-unit_combat_unit_type_light_tanks_offense_mult = {
+state_zoroastrian_standard_of_living_add = {
+	decimals = 1
 	color = good
-	percent = yes
-	decimals = 0
 	game_data = {
 		ai_value = 0
 	}
 }
 
-state_zoroastrian_standard_of_living_add = {
-	decimals = 1
+country_kmpmp_war_support_from_tec_add = {
+	decimals = 2
 	color = good
+	percent = no
 	game_data = {
 		ai_value = 0
 	}

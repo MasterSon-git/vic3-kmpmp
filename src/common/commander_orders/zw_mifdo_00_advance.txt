@@ -187,6 +187,12 @@ advance_heavy_barrage = {
                       value >= 0.2
                    }
                 }
+                commander_military_formation ?= { # kmpmp
+                   formation_army_unit_type_fraction = {
+                      target = unit_type:combat_unit_type_interwar_heavy_tank
+                      value >= 0.2
+                   }
+                }
             }
         }
     }
@@ -255,6 +261,13 @@ advance_cavalry_assualt = {
                       value >= 0.3
                    }
                 }
+                # kmpmp
+                commander_military_formation ?= {
+                   formation_army_unit_type_fraction = {
+                      target = unit_type:combat_unit_type_interwar_light_tanks
+                      value >= 0.3
+                   }
+                }
             }
         }
     }
@@ -294,9 +307,16 @@ advance_tank_assualt = {
                 has_role = general
             }
             commander_military_formation ?= {
-                formation_army_unit_type_fraction = {
-                    target = unit_type:combat_unit_type_heavy_tank
-                    value >= 0.3
+                OR = {
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_heavy_tank
+                        value >= 0.3
+                    }
+                    # kmpmp
+                    formation_army_unit_type_fraction = {
+                        target = unit_type:combat_unit_type_interwar_heavy_tank
+                        value >= 0.3
+                    }
                 }
             }
         }

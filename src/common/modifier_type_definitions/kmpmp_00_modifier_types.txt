@@ -34,6 +34,54 @@ state_pollution_reduction_health_mult = {
 	}
 }
 
+unit_combat_unit_type_squad_infantry_offense_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}
+
+unit_combat_unit_type_mechanized_infantry_defense_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}
+
+unit_combat_unit_type_mechanized_infantry_offense_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}
+
+# kmpmp
+unit_combat_unit_type_interwar_mechanized_infantry_defense_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}
+
+# kmpmp
+unit_combat_unit_type_interwar_mechanized_infantry_offense_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}
+
+# kmpmp
 unit_combat_unit_type_fort_buster_artillery_defense_mult = {
 	decimals = 0
 	color = good
@@ -43,6 +91,7 @@ unit_combat_unit_type_fort_buster_artillery_defense_mult = {
 	}
 }
 
+# kmpmp
 unit_combat_unit_type_fort_buster_artillery_offense_mult = {
 	decimals = 0
 	color = good
@@ -61,7 +110,8 @@ unit_combat_unit_type_heavy_tank_defense_mult = {
 	}
 }
 
-unit_combat_unit_type_squad_infantry_offense_mult = {
+# kmpmp
+unit_combat_unit_type_interwar_heavy_tank_defense_mult = {
 	decimals = 0
 	color = good
 	percent = yes
@@ -70,10 +120,49 @@ unit_combat_unit_type_squad_infantry_offense_mult = {
 	}
 }
 
-unit_combat_unit_type_mechanized_infantry_offense_mult = {
+# kmpmp
+unit_combat_unit_type_interwar_heavy_tank_offense_mult = {
 	decimals = 0
 	color = good
 	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}
+
+unit_combat_unit_type_light_tanks_defense_mult = {
+	color = good
+	percent = yes
+	decimals = 0
+	game_data = {
+		ai_value = 0
+	}
+}
+
+unit_combat_unit_type_light_tanks_offense_mult = {
+	color = good
+	percent = yes
+	decimals = 0
+	game_data = {
+		ai_value = 0
+	}
+}
+
+# kmpmp
+unit_combat_unit_type_interwar_light_tanks_defense_mult = {
+	color = good
+	percent = yes
+	decimals = 0
+	game_data = {
+		ai_value = 0
+	}
+}
+
+# kmpmp
+unit_combat_unit_type_interwar_light_tanks_offense_mult = {
+	color = good
+	percent = yes
+	decimals = 0
 	game_data = {
 		ai_value = 0
 	}
@@ -89,6 +178,26 @@ unit_combat_unit_type_scout_cruiser_offense_mult = {
 }
 
 unit_combat_unit_type_scout_cruiser_defense_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}
+
+# kmpmp
+unit_combat_unit_type_heavy_cruiser_offense_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}
+
+# kmpmp
+unit_combat_unit_type_heavy_cruiser_defense_mult = {
 	decimals = 0
 	color = good
 	percent = yes
@@ -133,7 +242,67 @@ unit_combat_unit_type_battleship_defense_mult = {
 	}
 }
 
+# kmpmp
+unit_combat_unit_type_battleship_bismarck_class_offense_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}
+
+# kmpmp
+unit_combat_unit_type_battleship_bismarck_class_defense_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}
+
+# kmpmp
+unit_combat_unit_type_long_range_submarine_offense_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}
+
+# kmpmp
+unit_combat_unit_type_long_range_submarine_defense_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}
+
 unit_combat_unit_type_carrier_defense_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}
+
+# kmpmp
+unit_combat_unit_type_interwar_carrier_offense_mult = {
+	decimals = 0
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}
+
+# kmpmp
+unit_combat_unit_type_interwar_carrier_defense_mult = {
 	decimals = 0
 	color = good
 	percent = yes
@@ -158,6 +327,24 @@ unit_combat_unit_type_mechanized_infantry_defense_add = {
 	}
 }
 
+# kmpmp
+unit_combat_unit_type_interwar_mechanized_infantry_offense_add = {
+	decimals = 0
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+# kmpmp
+unit_combat_unit_type_interwar_mechanized_infantry_defense_add = {
+	decimals = 0
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
 unit_combat_unit_type_siege_artillery_offense_add = {
 	decimals = 0
 	color = good
@@ -174,6 +361,7 @@ unit_combat_unit_type_siege_artillery_defense_add = {
 	}
 }
 
+# kmpmp
 unit_combat_unit_type_fort_buster_artillery_offense_add = {
 	decimals = 0
 	color = good
@@ -182,6 +370,7 @@ unit_combat_unit_type_fort_buster_artillery_offense_add = {
 	}
 }
 
+# kmpmp
 unit_combat_unit_type_fort_buster_artillery_defense_add = {
 	decimals = 0
 	color = good
@@ -206,6 +395,24 @@ unit_combat_unit_type_heavy_tank_defense_add = {
 	}
 }
 
+# kmpmp
+unit_combat_unit_type_interwar_heavy_tank_offense_add = {
+	decimals = 0
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+# kmpmp
+unit_combat_unit_type_interwar_heavy_tank_defense_add = {
+	decimals = 0
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
 unit_combat_unit_type_light_tanks_offense_add = {
 	decimals = 0
 	color = good
@@ -222,6 +429,24 @@ unit_combat_unit_type_light_tanks_defense_add = {
 	}
 }
 
+# kmpmp
+unit_combat_unit_type_interwar_light_tanks_offense_add = {
+	decimals = 0
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+# kmpmp
+unit_combat_unit_type_interwar_light_tanks_defense_add = {
+	decimals = 0
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
 unit_combat_unit_type_scout_cruiser_offense_add = {
 	decimals = 0
 	color = good
@@ -231,6 +456,24 @@ unit_combat_unit_type_scout_cruiser_offense_add = {
 }
 
 unit_combat_unit_type_scout_cruiser_defense_add = {
+	decimals = 0
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+# kmpmp
+unit_combat_unit_type_heavy_cruiser_offense_add = {
+	decimals = 0
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+# kmpmp
+unit_combat_unit_type_heavy_cruiser_defense_add = {
 	decimals = 0
 	color = good
 	game_data = {
@@ -270,6 +513,42 @@ unit_combat_unit_type_battleship_defense_add = {
 	}
 }
 
+# kmpmp
+unit_combat_unit_type_battleship_bismarck_class_offense_add = {
+	decimals = 0
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+# kmpmp
+unit_combat_unit_type_battleship_bismarck_class_defense_add = {
+	decimals = 0
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+# kmpmp
+unit_combat_unit_type_long_range_submarine_offense_add = {
+	decimals = 0
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+# kmpmp
+unit_combat_unit_type_long_range_submarine_defense_add = {
+	decimals = 0
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
 unit_combat_unit_type_carrier_offense_add = {
 	decimals = 0
 	color = good
@@ -279,6 +558,24 @@ unit_combat_unit_type_carrier_offense_add = {
 }
 
 unit_combat_unit_type_carrier_defense_add = {
+	decimals = 0
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+# kmpmp
+unit_combat_unit_type_interwar_carrier_offense_add = {
+	decimals = 0
+	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+# kmpmp
+unit_combat_unit_type_interwar_carrier_defense_add = {
 	decimals = 0
 	color = good
 	game_data = {

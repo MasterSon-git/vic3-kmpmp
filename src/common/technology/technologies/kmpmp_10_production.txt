@@ -1,0 +1,26 @@
+﻿### ERA 5
+
+flash_freezing = {
+	# Unlocks Refrigerated Rail Cars PM in Livestock Ranches
+	# Unlocks Flash Freezing PM in Fishing Wharfs
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/flash_freezing.dds"
+	category = production
+
+	modifier = {
+			building_fishing_wharf_throughput_add = 0.05 #kmpmp
+			building_group_bg_whaling_throughput_add = 0.05 #kmpmp
+	}
+
+	unlocking_technologies = {
+		pasteurization
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+
+
+### ERA 6

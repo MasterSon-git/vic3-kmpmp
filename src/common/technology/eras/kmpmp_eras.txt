@@ -1,0 +1,3 @@
+﻿era_kmpmp_6 = {
+    technology_cost = 20000
+}

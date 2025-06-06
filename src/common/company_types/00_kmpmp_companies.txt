@@ -983,6 +983,7 @@ company_mitsubishi = {
 		unit_navy_offense_mult = 0.1
 		unit_navy_defense_mult = 0.1
 		unit_combat_unit_type_carrier_offense_mult = 0.1
+		unit_combat_unit_type_interwar_carrier_offense_mult = 0.1
 	}
 
 	ai_weight = {
@@ -1513,7 +1514,8 @@ company_skoda = {
         building_sulfur_mine_throughput_add = 0.1
         unit_combat_unit_type_shrapnel_artillery_offense_mult = 0.05
         unit_combat_unit_type_siege_artillery_offense_mult = 0.15
-        unit_combat_unit_type_heavy_tank_offense_mult = 0.10
+        unit_combat_unit_type_heavy_tank_offense_mult = 0.1
+		unit_combat_unit_type_interwar_heavy_tank_offense_mult = 0.1
     }
 
     ai_weight = {
@@ -2126,6 +2128,7 @@ company_fcm = {
 		unit_navy_offense_mult = 0.05
 		unit_combat_unit_type_heavy_tank_offense_mult = 0.1
 		unit_navy_defense_mult = 0.05
+		unit_combat_unit_type_interwar_heavy_tank_offense_mult = 0.1
 	}
 
 	ai_weight = {
@@ -2183,6 +2186,7 @@ company_rheinmetall = {
 		unit_combat_unit_type_siege_artillery_offense_mult = 0.1
 		unit_combat_unit_type_shrapnel_artillery_offense_mult = 0.1
 		unit_combat_unit_type_heavy_tank_offense_mult = 0.05
+		unit_combat_unit_type_interwar_heavy_tank_offense_mult = 0.05
 		unit_army_defense_mult = 0.05
 	}
 
@@ -2232,6 +2236,7 @@ company_schichau = {
 		unit_navy_offense_mult = 0.05
 		unit_navy_defense_mult = 0.05
 		unit_combat_unit_type_submarine_offense_mult = 0.1
+		unit_combat_unit_type_long_range_submarine_offense_mult = 0.1
 	}
 
 	ai_weight = {
@@ -2413,6 +2418,7 @@ company_armstrong_whitworth = {
 
 	prosperity_modifier = {
 		unit_combat_unit_type_carrier_offense_mult = 0.15
+		unit_combat_unit_type_interwar_carrier_offense_mult = 0.15
 		unit_navy_defense_mult = 0.1
 		unit_navy_offense_mult = 0.1
 	}
@@ -2669,6 +2675,7 @@ company_fiat = {
 		unit_army_offense_mult = 0.05
 		unit_army_defense_mult = 0.05 #kmpmp
 		unit_combat_unit_type_light_tanks_offense_mult = 0.1 #kmpmp
+		unit_combat_unit_type_interwar_light_tanks_offense_mult = 0.1 #kmpmp
 	}
 
 	ai_weight = {

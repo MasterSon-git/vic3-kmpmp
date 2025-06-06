@@ -81,9 +81,16 @@ interception_carrier_assualt = {
 				has_role = admiral
 			}
 			commander_military_formation ?= {
-				formation_navy_unit_type_fraction = {
-					target = unit_type:combat_unit_type_carrier
-					value >= 0.4
+				OR = {
+					formation_navy_unit_type_fraction = {
+						target = unit_type:combat_unit_type_carrier
+						value >= 0.4
+					}
+					# kmpmp
+					formation_navy_unit_type_fraction = {
+						target = unit_type:combat_unit_type_interwar_carrier
+						value >= 0.4
+					}
 				}
 			}
 		}

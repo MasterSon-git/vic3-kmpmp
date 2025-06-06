@@ -47,3 +47,6 @@
 
  country_kmpmp_power_bloc_mandate_progress_add: "[concept_power_bloc_mandate_progress]"
  country_kmpmp_power_bloc_mandate_progress_add_desc: "Ein Bonus oder Abzug auf den [concept_power_bloc_mandate_progress]"
+
+ country_kmpmp_war_support_from_tec_add: "Ein Bonus der die wöchentliche [concept_war_exhaustion] reduziert"
+
