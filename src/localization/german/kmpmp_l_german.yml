@@ -41,6 +41,15 @@
  mobilization_option_superior_firepower_desc:0 "èberlegene feuerkraft"
  mobilization_option_mass_assault:0 "Massenangriff"
  mobilization_option_mass_assault_desc:0 "Massenangriff"
+
+ mobilization_option_rocket_artillery: "Raketenartillerie"
+ mobilization_option_rocket_artillery_desc: "Raketenartillerie"
+ mobilization_option_close_air_support: "Luftnahunterstützung"
+ mobilization_option_close_air_support_desc: "Luftnahunterstützung"
+ mobilization_option_fighter_planes: "Jagdflugzeuge"
+ mobilization_option_fighter_planes_desc: "Jagdflugzeuge"
+ mobilization_option_tactical_bombers: "Taktische Bomber"
+ mobilization_option_tactical_bombers_desc: "Taktische Bomber"
  mobilization_option_military_playbooks:0 "Militär Anweisungen"
  mobilization_option_military_playbooks_desc:0 "Militär Anweisungen"
  
