@@ -32,3 +32,12 @@ state_zoroastrian_standard_of_living_add = {
 		ai_value = 0
 	}
 }
+
+country_kmpmp_war_support_from_tec_add = {
+	decimals = 2
+	color = good
+	percent = no
+	game_data = {
+		ai_value = 0
+	}
+}

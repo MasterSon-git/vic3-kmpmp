@@ -103,3 +103,45 @@ kmpmp_modern_foodproduction = {
         value = 1
     }
 }
+
+kmpmp_modern_Infrastructure = {
+    era = era_kmpmp_6
+    texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
+    category = production
+
+    unlocking_technologies = {
+        electric_railway
+        compression_ignition
+        arc_welding
+    }
+
+    modifier = {
+        building_railway_throughput_add = 0.15
+        building_motor_industry_throughput_add = 0.15
+        building_government_administration_throughput_add = 0.10
+    }
+
+    ai_weight = {
+        value = 1
+    }
+}
+
+kmpmp_cinema = {
+    era = era_kmpmp_6
+    texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
+    category = production
+
+    unlocking_technologies = {
+        radio
+    }
+
+    modifier = {
+        building_electrics_industry_throughput_add = 0.1
+        country_kmpmp_war_support_from_tec_add = 0.2
+    }
+
+    ai_weight = {
+        value = 1
+    }
+}
+

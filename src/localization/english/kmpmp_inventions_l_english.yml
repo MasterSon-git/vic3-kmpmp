@@ -3,46 +3,98 @@
  # Military
  KMPMP_BATTLE_SIZE_LESSONS_FROM_THE_GREAT_WAR: "Limited by [concept_technology] $kmpmp_lessons_from_the_great_war$"
  kmpmp_lessons_from_the_great_war: "Lessons from the Great War"
- kmpmp_lessons_from_the_great_war_desc: "wip"
+ kmpmp_lessons_from_the_great_war_desc: "The horrors and strategies of the Great War continue to shape our military doctrine."
 
  kmpmp_anti_tank_defences: "Anti Tank Defences"
- kmpmp_anti_tank_defences_desc: "wip"
+ kmpmp_anti_tank_defences_desc: "Specialized fortifications and weapons designed to halt enemy armored advances."
 
  kmpmp_combined_arms_strategy: "Combined Arms Strategy"
- kmpmp_combined_arms_strategy_desc: "wip"
+ kmpmp_combined_arms_strategy_desc: "Coordinated use of infantry, armor, and artillery to enhance battlefield effectiveness."
 
  kmpmp_interwar_tanks: "Interwar Tanks"
- kmpmp_interwar_tanks_desc: "wip"
+ kmpmp_interwar_tanks_desc: "Tank designs developed between the wars that offer improved mobility and firepower."
 
  kmpmp_rocket_technology: "Rocket Technology"
- kmpmp_rocket_technology_desc: "wip"
+ kmpmp_rocket_technology_desc: "Rockets introduce a new era in warfare, offering both tactical and strategic capabilities."
 
  kmpmp_rocket_artillery: "Rocket Artillery"
- kmpmp_rocket_artillery_desc: "wip"
+ kmpmp_rocket_artillery_desc: "Rapid-fire rocket systems provide mobile fire support across vast distances."
 
  kmpmp_interwar_mechanized_infantry: "Interwar Mechanized Infantry"
- kmpmp_interwar_mechanized_infantry_desc: "wip"
+ kmpmp_interwar_mechanized_infantry_desc: "Mechanized units offer increased speed and protection for infantry forces."
 
  kmpmp_blitzkrieg: "Blitzkrieg"
- kmpmp_blitzkrieg_desc: "wip"
+ kmpmp_blitzkrieg_desc: "A doctrine of rapid, concentrated attacks to overwhelm the enemy."
 
  kmpmp_super_heavy_battleship: "Super Heavy Battleship"
- kmpmp_super_heavy_battleship_desc: "wip"
+ kmpmp_super_heavy_battleship_desc: "Massive warships with unparalleled firepower dominate the seas."
 
  kmpmp_long_range_submarines: "Long-Range Submarines"
- kmpmp_long_range_submarines_desc: "wip"
+ kmpmp_long_range_submarines_desc: "Extended-range submarines enable naval operations far from home ports."
 
  kmpmp_heavy_cruiser: "Heavy Cruiser"
- kmpmp_heavy_cruiser_desc: "wip"
+ kmpmp_heavy_cruiser_desc: "Versatile warships with strong armor and powerful weaponry."
 
  kmpmp_anti_submarine_warfare: "Anti Submarine Warfare"
- kmpmp_anti_submarine_warfare_desc: "wip"
+ kmpmp_anti_submarine_warfare_desc: "Techniques and tools to detect and destroy enemy submarines."
 
  kmpmp_interwar_carrier: "Interwar Carrier"
- kmpmp_interwar_carrier_desc: "wip"
+ kmpmp_interwar_carrier_desc: "Early aircraft carriers mark the rise of naval air power."
 
  kmpmp_international_tradehubs: "International Tradehubs"
- kmpmp_international_tradehubs_desc: "wip"
+ kmpmp_international_tradehubs_desc: "Global exchange centers enhance international trade and economic stability."
 
  kmpmp_deepsea_dockyards: "Deepsea Dockyards"
- kmpmp_deepsea_dockyards_desc: "wip"
+ kmpmp_deepsea_dockyards_desc: "Large-scale shipyards support the construction and repair of major oceanic vessels."
+
+ # ERA 6 Tec Society
+
+ kmpmp_globalism: "Globalism"
+ kmpmp_globalism_desc: "International interconnectedness and shared markets drive cooperation—and dependency."
+
+ kmpmp_public_flights: "Public flights"
+ kmpmp_public_flights_desc: "Affordable air travel connects the world like never before."
+
+ kmpmp_abolish_the_gold_standard: "Abolish the gold standard"
+ kmpmp_abolish_the_gold_standard_desc: "Removing the gold standard allows more flexible monetary and economic policy."
+
+ kmpmp_vaccination_campagns: "Vaccination campaigns"
+ kmpmp_vaccination_campagns_desc: "Widespread vaccination efforts combat disease and improve public health."
+
+ kmpmp_Filmworks: "Filmworks"
+ kkmpmp_Filmworks_desc: "Film studios become cultural powerhouses shaping collective identity and ideals."
+
+ kmpmp_highway: "Highways"
+ kmpmp_highway_desc: "A national highway network revolutionizes transportation and logistics."
+
+ #ERA 6 Tec Production
+
+ kmpmp_cinema: "Cinema"
+ kmpmp_cinema_desc: "Cinemas spread culture and serve as a tool for entertainment and propaganda."
+
+ kmpmp_modern_Infrastructure: "Modern Infrastructure"
+ kmpmp_modern_Infrastructure_desc: "Modern construction and transport projects form the backbone of society."
+
+ kmpmp_modern_foodproduction: "Modern Foodproduction"
+ kmpmp_modern_foodproduction_desc: "Mechanized and automated food systems increase efficiency and reliability."
+
+ kmpmp_modern_drilling: "Modern Drilling"
+ kmpmp_modern_drilling_desc: "New drilling techniques unlock deeper resources to meet energy demands."
+
+ kmpmp_modern_communication: "Modern Communication"
+ kmpmp_modern_communication_desc: "Fast, global communication technologies connect people and markets."
+
+ kmpmp_elastan: "Elastan"
+ kmpmp_elastan_desc: "Elastan revolutionizes textiles—stretchy, durable, and versatile."
+
+ kmpmp_modern_farming: "Modern Farming"
+ kmpmp_modern_farming_desc: "Farming merges technology, chemistry, and knowledge to boost yields."
+
+
+
+
+
+
+
+
+
