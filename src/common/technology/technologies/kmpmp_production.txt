@@ -104,7 +104,7 @@ kmpmp_modern_foodproduction = {
     }
 }
 
-kmpmp_modern_Infrastructure = {
+kmpmp_modern_infrastructure = {
     era = era_kmpmp_6
     texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
     category = production

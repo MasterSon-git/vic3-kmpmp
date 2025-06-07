@@ -61,19 +61,19 @@
  kmpmp_vaccination_campagns: "Vaccination campaigns"
  kmpmp_vaccination_campagns_desc: "Widespread vaccination efforts combat disease and improve public health."
 
- kmpmp_Filmworks: "Filmworks"
- kkmpmp_Filmworks_desc: "Film studios become cultural powerhouses shaping collective identity and ideals."
+ kmpmp_filmworks: "Filmworks"
+ kmpmp_filmworks_desc: "Film studios become cultural powerhouses shaping collective identity and ideals."
 
- kmpmp_highway: "Highways"
- kmpmp_highway_desc: "A national highway network revolutionizes transportation and logistics."
+ kmpmp_highways: "Highways"
+ kmpmp_highways_desc: "A national highway network revolutionizes transportation and logistics."
 
  #ERA 6 Tec Production
 
  kmpmp_cinema: "Cinema"
  kmpmp_cinema_desc: "Cinemas spread culture and serve as a tool for entertainment and propaganda."
 
- kmpmp_modern_Infrastructure: "Modern Infrastructure"
- kmpmp_modern_Infrastructure_desc: "Modern construction and transport projects form the backbone of society."
+ kmpmp_modern_infrastructure: "Modern Infrastructure"
+ kmpmp_modern_infrastructure_desc: "Modern construction and transport projects form the backbone of society."
 
  kmpmp_modern_foodproduction: "Modern Foodproduction"
  kmpmp_modern_foodproduction_desc: "Mechanized and automated food systems increase efficiency and reliability."

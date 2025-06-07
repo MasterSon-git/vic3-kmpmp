@@ -22,7 +22,7 @@ kmpmp_highways = {
 	}
 }
 
-kmpmp_Filmworks = {
+kmpmp_filmworks = {
 	era = era_kmpmp_6
 	texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
 	category = society

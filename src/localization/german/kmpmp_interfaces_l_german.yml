@@ -2,6 +2,7 @@
  KMPMP_PRESTIGE_HEADER: "[concept_prestige]"
  KMPMP_ZERO_BASED: "Basis Null"
  KMPMP_WAR_SUPPORT_FROM_POWER_BLOC_PRINCIPLES:0 "Unterstützung von [Concept('concept_power_bloc_principle', '$concept_power_bloc_principles$')]"
+ KMPMP_WAR_SUPPORT_FROM_TEC:0 "Support from [Concept('concept_technology', '$concept_technologies$')]"
 
  combat_unit_type_fort_buster_artillery: "Bunkerbrecher Artillerie"
  combat_unit_type_fort_buster_artillery_desc: "Setzt überlegene Feuerkraft zur Zerstörung feindlicher Befestigungen ein."

@@ -60,8 +60,8 @@
  kmpmp_vaccination_campagns: "Impfkampagnen"
  kmpmp_vaccination_campagns_desc: "Breit angelegte Impfkampagnen bekämpfen Krankheiten und verbessern die öffentliche Gesundheit."
 
- kmpmp_Filmworks: "Filmwerke"
- kkmpmp_Filmworks_desc: "Filmstudios als kulturelle Zentren prägen das kollektive Bewusstsein und formen Ideale."
+ kmpmp_filmworks: "Filmwerke"
+ kmpmp_filmworks_desc: "Filmstudios als kulturelle Zentren prägen das kollektive Bewusstsein und formen Ideale."
 
  kmpmp_highways: "Autobahnen"
  kmpmp_highways_desc: "Ein nationales Autobahnnetz revolutioniert den Waren- und Personenverkehr."
@@ -70,8 +70,8 @@
  kmpmp_cinema: "Kino"
  kmpmp_cinema_desc: "Kinos verbreiten kulturelle Inhalte und dienen als Plattform für Unterhaltung und Propaganda."
 
- kmpmp_modern_Infrastructure: "Moderne Infrastruktur"
- kmpmp_modern_Infrastructure_desc: "Neue Bau- und Verkehrsprojekte bilden das Rückgrat einer modernen Gesellschaft."
+ kmpmp_modern_infrastructure: "Moderne Infrastruktur"
+ kmpmp_modern_infrastructure_desc: "Neue Bau- und Verkehrsprojekte bilden das Rückgrat einer modernen Gesellschaft."
 
  kmpmp_modern_foodproduction: "Moderne Nahrungsmittelproduktion"
  kmpmp_modern_foodproduction_desc: "Mechanisierte und automatisierte Landwirtschaft steigert Effizienz und Versorgungssicherheit."

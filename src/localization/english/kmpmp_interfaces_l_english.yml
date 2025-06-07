@@ -2,7 +2,7 @@
  KMPMP_PRESTIGE_HEADER: "[concept_prestige]"
  KMPMP_ZERO_BASED: "Zero based"
  KMPMP_WAR_SUPPORT_FROM_POWER_BLOC_PRINCIPLES:0 "Support from [Concept('concept_power_bloc_principle', '$concept_power_bloc_principles$')]"
- KMPMP_WAR_SUPPORT_FROM_TEC:0 "Support from [concept_war_support] reducing the weekly [concept_war_exhaustion]"
+ KMPMP_WAR_SUPPORT_FROM_TEC:0 "Support from [Concept('concept_technology', '$concept_technologies$')]"
 
  combat_unit_type_interwar_mechanized_infantry: "Panzergrenadiers"
  combat_unit_type_interwar_mechanized_infantry_desc: "wip"

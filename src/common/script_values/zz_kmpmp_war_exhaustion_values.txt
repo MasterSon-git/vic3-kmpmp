@@ -164,7 +164,7 @@ war_exhaustion = {
 		limit = { scope:temp_kmpmp_war_support_from_tec >= 0.01 }
 		add = {
 			subtract = scope:temp_kmpmp_war_support_from_tec
-			desc = "KMPMP_WAR_SUPPORT_FROM_tec"
+			desc = "KMPMP_WAR_SUPPORT_FROM_TEC"
 		}
 	}
 
