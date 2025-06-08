@@ -350,4 +350,5 @@ kmpmp_player_boost_expand_influence = {
     state_construction_mult = 0.1
     # -10% infamy decay
     country_infamy_decay_mult = -0.1
+    country_leverage_generation_mult = 0.30
 }
