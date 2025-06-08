@@ -1,0 +1,329 @@
+﻿### ERA 5
+
+kmpmp_international_tradehubs = {
+    era = era_5
+    texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
+    category = military
+
+    modifier = {
+        state_building_port_max_level_add = 2
+    }
+
+    unlocking_technologies = {
+        concrete_dockyards
+    }
+
+    ai_weight = {
+        value = 1
+    }
+}
+
+### ERA 6
+
+kmpmp_lessons_from_the_great_war = {
+    # -50% battlesize
+
+    era = era_kmpmp_6
+    texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
+    category = military
+
+    modifier = {
+        # +10% recovery rate
+        unit_recovery_rate_add = 0.1
+        # 5% Off / Def Army/Navy
+        unit_offense_mult = 0.05
+        unit_defense_mult = 0.05
+        # General advancement Speed +2
+        character_advancement_speed_add = 2
+    }
+
+    unlocking_technologies = {
+        mobile_armor
+        chemical_warfare
+    }
+
+    ai_weight = {
+        value = 1
+    }
+}
+
+kmpmp_anti_tank_defences = {
+    era = era_kmpmp_6
+    texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
+    category = military
+
+    modifier = {
+        # +2 Fortification lvl
+        state_fae_building_forts_max_level_add = 2
+        # +5% Army Def
+        unit_army_defense_mult = 0.05
+    }
+
+    unlocking_technologies = {
+        concrete_fortifications
+        kmpmp_lessons_from_the_great_war
+    }
+
+    ai_weight = {
+        value = 1
+    }
+}
+
+kmpmp_combined_arms_strategy = {
+    # unlocks mobilization options
+    # Close Air Support
+    # Air superiority
+    # Tactical Bombers
+
+    era = era_kmpmp_6
+    texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
+    category = military
+
+    modifier = {
+    }
+
+    unlocking_technologies = {
+        military_aviation
+        kmpmp_lessons_from_the_great_war
+    }
+
+    ai_weight = {
+        value = 1
+    }
+}
+
+kmpmp_interwar_tanks = {
+    # unlock units
+    # Interwar Heavy Tank (Unit)
+    # Interwar Light Tank (Unit)
+
+    era = era_kmpmp_6
+    texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
+    category = military
+
+    modifier = {
+    }
+
+    unlocking_technologies = {
+        mobile_armor
+        kmpmp_lessons_from_the_great_war
+    }
+
+    ai_weight = {
+        value = 1
+    }
+}
+
+kmpmp_rocket_technology = {
+    era = era_kmpmp_6
+    texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
+    category = military
+
+    modifier = {
+        unit_fae_siege_add = 1
+    }
+
+    unlocking_technologies = {
+        military_aviation
+        chemical_warfare
+    }
+
+    ai_weight = {
+        value = 1
+    }
+}
+
+kmpmp_rocket_artillery = {
+    # unlocks mobilizations option
+    # Rocket Artillery
+
+    era = era_kmpmp_6
+    texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
+    category = military
+
+    modifier = {
+    }
+
+    unlocking_technologies = {
+        kmpmp_rocket_technology
+    }
+
+    ai_weight = {
+        value = 1
+    }
+}
+
+kmpmp_interwar_mechanized_infantry = {
+    # unlocks unit
+    # Interwar Infantry (Unit)
+
+    era = era_kmpmp_6
+    texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
+    category = military
+
+    modifier = {
+    }
+
+    unlocking_technologies = {
+        nco_training
+        kmpmp_lessons_from_the_great_war
+    }
+
+    ai_weight = {
+        value = 1
+    }
+}
+
+kmpmp_blitzkrieg = {
+    era = era_kmpmp_6
+    texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
+    category = military
+
+    modifier = {
+        # +30% battle occupation
+        unit_occupation_mult = 0.3
+
+        # General Advancement Speed +1
+        character_advancement_speed_add = 1
+
+        # Formation Speed 30%
+        military_formation_movement_speed_mult = 0.3
+
+        # + 5% Army Off Def
+        unit_army_defense_mult = 0.05
+        unit_army_offense_mult = 0.05
+
+        # +5 Off interwar mechanized infantry
+        unit_combat_unit_type_interwar_mechanized_infantry_offense_add = 5
+    }
+
+    unlocking_technologies = {
+        stormtroopers
+        kmpmp_lessons_from_the_great_war
+    }
+
+    ai_weight = {
+        value = 1
+    }
+}
+
+kmpmp_super_heavy_battleship = {
+    # unlock unit
+    # Bismarck Class Battleship (Unit)
+
+    era = era_kmpmp_6
+    texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
+    category = military
+
+    modifier = {
+    }
+
+    unlocking_technologies = {
+        battleship_tech
+    }
+
+    ai_weight = {
+        value = 1
+    }
+}
+
+kmpmp_long_range_submarines = {
+    # unlock unit
+    # Long Range Submarine (Unit)
+
+    era = era_kmpmp_6
+    texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
+    category = military
+
+    modifier = {
+        # +1 Interest
+        country_max_declared_interests_add = 1
+    }
+
+    unlocking_technologies = {
+        submarine
+    }
+
+    ai_weight = {
+        value = 1
+    }
+}
+
+kmpmp_heavy_cruiser = {
+    # unlocks unit
+    # Heavy Cruiser (Unit)
+
+    era = era_kmpmp_6
+    texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
+    category = military
+
+    modifier = {
+    }
+
+    unlocking_technologies = {
+        battlefleet_tactics
+    }
+
+    ai_weight = {
+        value = 1
+    }
+}
+
+kmpmp_anti_submarine_warfare = {
+    # unlocks unit
+    # Anti Submarine Destroyer (Unit)
+
+    era = era_kmpmp_6
+    texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
+    category = military
+
+    modifier = {
+    }
+
+    unlocking_technologies = {
+        battlefleet_tactics
+        destroyer
+    }
+
+    ai_weight = {
+        value = 1
+    }
+}
+
+kmpmp_interwar_carrier = {
+    # unlocks unit
+    # Interwar Carrier (Unit)
+
+    era = era_kmpmp_6
+    texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
+    category = military
+
+    modifier = {
+    }
+
+    unlocking_technologies = {
+        carrier_tech
+    }
+
+    ai_weight = {
+        value = 1
+    }
+}
+
+kmpmp_deepsea_dockyards = {
+    era = era_kmpmp_6
+    texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
+    category = military
+
+    modifier = {
+        state_building_port_max_level_add = 4
+    }
+
+    unlocking_technologies = {
+        kmpmp_international_tradehubs
+    }
+
+    ai_weight = {
+        value = 1
+    }
+}

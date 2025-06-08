@@ -21,6 +21,8 @@ war_exhaustion = {
 	# kmpmp
 	value = modifier:country_kmpmp_war_support_from_power_bloc_principles_add
 	save_temporary_value_as = temp_kmpmp_war_support_from_power_bloc_principles
+	value = modifier:country_kmpmp_war_support_from_tec_add
+	save_temporary_value_as = temp_kmpmp_war_support_from_tec
 	# end save temp values
 
 	# reset the calculation to the base
@@ -158,6 +160,14 @@ war_exhaustion = {
 		}
 	}
 	
+	if = {
+		limit = { scope:temp_kmpmp_war_support_from_tec >= 0.01 }
+		add = {
+			subtract = scope:temp_kmpmp_war_support_from_tec
+			desc = "KMPMP_WAR_SUPPORT_FROM_TEC"
+		}
+	}
+
 	add = {
 		add = "additional_war_exhaustion(scope:war.diplomatic_play)"
 		desc = "WAR_EXHAUSTION_FROM_EVENTS"

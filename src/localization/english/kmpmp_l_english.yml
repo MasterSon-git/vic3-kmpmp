@@ -33,6 +33,7 @@
  kmpmp_mo_utility_gear_desc:0 "Utility Gear" 
  kmpmp_mog_doctrines:0 "Doctrines"
  kmpmp_mog_doctrines_desc:0 "Doctrines"
+
  mobilization_option_school_of_defence:0 "School of defence"
  mobilization_option_school_of_defence_desc:0 "School of defence"
  mobilization_option_grand_battleplan:0 "Grand Battleplan"
@@ -41,6 +42,15 @@
  mobilization_option_superior_firepower_desc:0 "Superior Firepower"
  mobilization_option_mass_assault:0 "Mass assault"
  mobilization_option_mass_assault_desc:0 "Mass assault"
+
+ mobilization_option_rocket_artillery: "Rocket Artillery"
+ mobilization_option_rocket_artillery_desc: "Rocket Artillery"
+ mobilization_option_close_air_support: "Close Air Support"
+ mobilization_option_close_air_support_desc: "Close Air Support"
+ mobilization_option_fighter_planes: "Fighter Planes"
+ mobilization_option_fighter_planes_desc: "Fighter Planes"
+ mobilization_option_tactical_bombers: "Tactical Bombers"
+ mobilization_option_tactical_bombers_desc: "Tactical Bombers"
  mobilization_option_military_playbooks:0 "Military Playbook"
  mobilization_option_military_playbooks_desc:0 "Military Playbook"
  

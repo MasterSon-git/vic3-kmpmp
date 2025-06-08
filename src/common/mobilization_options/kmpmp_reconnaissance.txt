@@ -1,5 +1,5 @@
-﻿mobilization_option_rocket_artillery = {
-	texture = "gfx/interface/icons/mobilization_options/rocket_artillery.dds"
+﻿mobilization_option_close_air_support = {
+	texture = "gfx/interface/icons/mobilization_options/close_air_support.dds"
 	possible = {
 		# TODO:
 		always = no
@@ -24,7 +24,7 @@
 		}
 	}
 	unlocking_technologies = {
-		kmpmp_rocket_artillery
+		kmpmp_combined_arms_strategy
 	}
 	upkeep_modifier = {
 		# TODO:
@@ -35,17 +35,14 @@
 	ai_weight = {
 		value = 1
 	}
-	group = special_weapons
+	group = reconnaissance
 }
 
-mobilization_option_military_playbooks = {
-	texture = "gfx/interface/icons/military_icons/military_formation.dds"
+mobilization_option_fighter_planes = {
+	texture = "gfx/interface/icons/mobilization_options/fighter_planes.dds"
 	possible = {
-		market ?= {
-			mg:paper ?= {
-				market_goods_sell_orders > 0
-			}
-		}
+		# TODO:
+		always = no
 	}
 	on_activate_while_mobilized = {
 		custom_tooltip = {
@@ -67,16 +64,56 @@ mobilization_option_military_playbooks = {
 		}
 	}
 	unlocking_technologies = {
-		line_infantry
+		kmpmp_combined_arms_strategy
 	}
 	upkeep_modifier = {
-		goods_input_paper_add = 3
+		# TODO:
 	}
 	unit_modifier = {
-		unit_experience_gain_mult = 0.5
+		# TODO:
 	}
 	ai_weight = {
 		value = 1
 	}
-	group = special_weapons
+	group = reconnaissance
+}
+
+mobilization_option_tactical_bombers = {
+	texture = "gfx/interface/icons/mobilization_options/tactical_bombers.dds"
+	possible = {
+		# TODO:
+		always = no
+	}
+	on_activate_while_mobilized = {
+		custom_tooltip = {
+			text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
+			add_organization = {
+				value = organization
+				multiply = -0.5
+			}
+		}
+	}
+	
+	on_deactivate = {
+		custom_tooltip = {
+			text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
+			add_organization = {
+				value = organization
+				multiply = -0.5
+			}
+		}
+	}
+	unlocking_technologies = {
+		kmpmp_combined_arms_strategy
+	}
+	upkeep_modifier = {
+		# TODO:
+	}
+	unit_modifier = {
+		# TODO:
+	}
+	ai_weight = {
+		value = 1
+	}
+	group = reconnaissance
 }

@@ -42,6 +42,9 @@
  country_institution_cost_institution_home_affairs_mult:0 "@bur![concept_bureaucracy]-Kosten durch „[GetInstitutionType('institution_home_affairs').GetName]“"
  country_institution_cost_institution_home_affairs_mult_desc:0 "Eine Erhöhung oder Verringerung der @bur![Nbsp][concept_bureaucracy]-Kosten, um den Bürgern „[GetInstitutionType('institution_home_affairs').GetName]“ zur Verfügung zu stellen"
 
+ country_kmpmp_war_support_from_tec_add: "[concept_war_support] durch [concept_technology]"
+ country_kmpmp_war_support_from_tec_add_desc: "Ein Bonus oder Abzug auf den [Concept('concept_war_support', '$concept_war_support$n'] der die wöchentliche [concept_war_exhaustion] reduziert"
+
  country_kmpmp_war_support_from_power_bloc_principles_add: "[concept_war_support] von [Concept('concept_power_bloc_principle', '$concept_power_bloc_principles$')]"
  country_kmpmp_war_support_from_power_bloc_principles_add_desc: "Ein Bonus oder Abzug auf den [Concept('concept_war_support', '$concept_war_support$n'] der die wöchentliche [concept_war_exhaustion] reduziert"
 
