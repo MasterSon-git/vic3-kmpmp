@@ -28,10 +28,13 @@ kmpmp_lessons_from_the_great_war = {
     category = military
 
     modifier = {
-        # +2 Fortification lvl
-        state_fae_building_forts_max_level_add = 2
-        # +5% Army Def
-        unit_army_offense_mult = 0.05
+        # +10% recovery rate
+        unit_recovery_rate_add = 0.1
+        # 5% Off / Def Army/Navy
+        unit_offense_mult = 0.05
+        unit_defense_mult = 0.05
+        # General advancement Speed +2
+        character_advancement_speed_add = 2
     }
 
     unlocking_technologies = {
@@ -50,15 +53,10 @@ kmpmp_anti_tank_defences = {
     category = military
 
     modifier = {
-        # +10% recovery rate
-        unit_recovery_rate_add = 0.1
-
-        # 5% Off / Def Army/Navy
-        unit_offense_mult = 0.05
-        unit_defense_mult = 0.05
-
-        # General advancement Speed +2
-        character_advancement_speed_add = 2
+        # +2 Fortification lvl
+        state_fae_building_forts_max_level_add = 2
+        # +5% Army Def
+        unit_army_defense_mult = 0.05
     }
 
     unlocking_technologies = {
