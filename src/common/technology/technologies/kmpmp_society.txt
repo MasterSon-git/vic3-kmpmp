@@ -112,7 +112,7 @@ kmpmp_globalism = {
 	modifier = {
 		country_max_companies_add = 1
 		country_trade_route_competitiveness_mult = 0.25
-	
+		country_convoys_capacity_mult = 0.1
 	}
 
 	unlocking_technologies = {
