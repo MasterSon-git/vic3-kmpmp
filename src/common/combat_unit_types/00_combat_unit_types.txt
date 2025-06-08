@@ -381,21 +381,19 @@ combat_unit_type_interwar_mechanized_infantry = {
     }
 
     upkeep_modifier = {
-        # TODO:
         goods_input_small_arms_add = 3
         goods_input_ammunition_add = 3
-        goods_input_oil_add = 1
-        goods_input_radios_add = 1
+        goods_input_oil_add = 2
+        goods_input_radios_add = 2
         goods_input_tanks_add = 1
     }
     
     battle_modifier = {
-        # TODO:
-        unit_offense_add = 50
-        unit_defense_add = 60
-        unit_morale_loss_add = 4
+        unit_offense_add = 60
+        unit_defense_add = 70
+        unit_morale_loss_add = 2
         unit_devastation_mult = 0.1
-        unit_recovery_rate_add = 0.1
+        unit_recovery_rate_add = 0.15
     }
 
 	unlocking_technologies = { kmpmp_interwar_mechanized_infantry }
@@ -789,24 +787,22 @@ combat_unit_type_interwar_heavy_tank = {
     }
     
     upkeep_modifier = {
-        # TODO:
-        goods_input_tanks_add = 3
-        goods_input_artillery_add = 4
-		goods_input_ammunition_add = 4
-        goods_input_radios_add = 1
-        goods_input_oil_add = 3
+        goods_input_tanks_add = 5
+        goods_input_artillery_add = 5
+		goods_input_ammunition_add = 5
+        goods_input_radios_add = 2
+        goods_input_oil_add = 5
     }
 
     battle_modifier = {
-        # TODO:
-        unit_offense_add = 70
-        unit_defense_add = 35
-        unit_morale_loss_add = 4
-        unit_kill_rate_add = 0.35 #0.25
-        unit_morale_damage_mult = 0.15
-        unit_devastation_mult = 0.2
+        unit_offense_add = 95
+        unit_defense_add = 40
+        unit_morale_loss_add = 3
+        unit_kill_rate_add = 0.4
+        unit_morale_damage_mult = 0.2
+        unit_devastation_mult = 0.25
 
-        unit_fae_siege_add = 10
+        unit_fae_siege_add = 12
     }
 
     formation_modifier = {
@@ -1142,24 +1138,22 @@ combat_unit_type_interwar_light_tanks = {
     }
     
     upkeep_modifier = {
-        # TODO:
-        goods_input_tanks_add = 2
-        goods_input_artillery_add = 2
-        goods_input_oil_add = 2
-        goods_input_ammunition_add = 2
+        goods_input_tanks_add = 3
+        goods_input_artillery_add = 3
+        goods_input_oil_add = 3
+        goods_input_ammunition_add = 3
         goods_input_radios_add = 2
     }
 
     battle_modifier = {
-        # TODO:
-        unit_offense_add = 60 #45
-        unit_defense_add = 45
-        unit_morale_loss_add = 6 #4
-        unit_devastation_mult = 0.1
+        unit_offense_add = 75
+        unit_defense_add = 60
+        unit_morale_loss_add = 5
+        unit_devastation_mult = 0.15
         unit_recovery_rate_add = -0.10 #kmpmp
-        unit_occupation_mult = 0.3
+        unit_occupation_mult = 0.35
 
-        unit_fae_siege_add = 8
+        unit_fae_siege_add = 10
     }
 
     formation_modifier = {
