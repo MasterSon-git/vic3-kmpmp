@@ -1,9 +1,6 @@
 ﻿mobilization_option_rocket_artillery = {
 	texture = "gfx/interface/icons/mobilization_options/rocket_artillery.dds"
-	possible = {
-		# TODO:
-		always = no
-	}
+
 	on_activate_while_mobilized = {
 		custom_tooltip = {
 			text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
@@ -27,10 +24,23 @@
 		kmpmp_rocket_artillery
 	}
 	upkeep_modifier = {
-		# TODO:
+		goods_input_artillery_add = 6
 	}
 	unit_modifier = {
-		# TODO:
+		# +2 Siege Ability
+		unit_fae_siege_add = 2
+		# +15 flat Off / Def
+		unit_offense_add = 15
+		unit_defense_add = 15
+		# -80% Battle Occupation
+		unit_occupation_mult = -0.8
+		# -2 Front Advancement Speed
+		character_advancement_speed_add = -2 # TODO: test - it's not a unit modifier
+		# unit_advancement_speed_mult = -0.15
+		# +20% devastation
+		unit_devastation_mult = 0.2
+		# +5% Killrate
+		unit_kill_rate_add = 0.05
 	}
 	ai_weight = {
 		value = 1
