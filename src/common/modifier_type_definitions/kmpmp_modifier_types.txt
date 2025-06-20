@@ -41,3 +41,12 @@ country_kmpmp_war_support_from_tec_add = {
 		ai_value = 0
 	}
 }
+
+country_kmpmp_land_battle_size_mult = {
+	decimals = 2
+	color = neutral
+	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}

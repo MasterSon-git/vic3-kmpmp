@@ -161,6 +161,5 @@
  country_kmpmp_power_bloc_mandate_progress_add: "[concept_power_bloc_mandate_progress]"
  country_kmpmp_power_bloc_mandate_progress_add_desc: "A bonus or penalty to [concept_power_bloc_mandate_progress]"
 
- country_kmpmp_war_support_tec_add: "A bonus reducing the weekly [concept_war_exhaustion]"
-
-
+ country_kmpmp_land_battle_size_mult: "Land battle size"
+ country_kmpmp_land_battle_size_mult_desc: "An increase or decrease to the land battle size"
