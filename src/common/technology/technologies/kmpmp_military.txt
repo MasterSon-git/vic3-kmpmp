@@ -35,6 +35,9 @@ kmpmp_lessons_from_the_great_war = {
         unit_defense_mult = 0.05
         # General advancement Speed +2
         character_advancement_speed_add = 2
+
+        # kmpmp fake modifier
+        country_kmpmp_land_battle_size_mult = -0.5
     }
 
     unlocking_technologies = {
