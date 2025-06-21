@@ -8,13 +8,19 @@ FAE_WEAK_FORT_MIN_BONUS = 0.25
 FAE_STRONG_FORT_BONUS_THRESHOLD  = 0.8
 FAE_PARTIAL_FORT_BONUS_THRESHOLD = 0.55
 
+# kmpmp !!!ATTENTION!!! reorder units in scripted effect FAE_se_calculate_siege by siege value
 # Siege values - keep values set in mob. options & unit types up to date
+FAE_siege_rocket_artillery = 2 # kmpmp
 FAE_siege_combat_engies = 4
 FAE_siege_light_tank    = 8
+FAE_siege_interwar_light_tank = 10 # kmpmp
 
 FAE_siege_heavy_tank    = 10
-FAE_siege_fort_arty     = 18 #kmpmp
+FAE_siege_interwar_heavy_tank = 12 # kmpmp
+FAE_siege_fort_arty     = 18 # kmpmp
 FAE_siege_siege_arty    = 6
 FAE_siege_shrapnel_arty = 4
 FAE_siege_mobile_arty   = 3
 FAE_siege_cannon_arty   = 2
+
+FAE_siege_rocket_technology = 1 # kmpmp

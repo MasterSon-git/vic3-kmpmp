@@ -1,0 +1,126 @@
+﻿###ERA 6
+
+kmpmp_highways = {
+	era = era_kmpmp_6
+	texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
+	category = society
+
+	modifier = {
+		country_military_goods_cost_mult = -0.05
+		state_infrastructure_from_automobiles_consumption_add = 0.5
+		state_infrastructure_from_population_max_add = 40
+		market_land_trade_capacity_add = 400
+		state_infrastructure_from_population_add = 1
+	}
+
+	unlocking_technologies = {
+		paved_roads
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+kmpmp_filmworks = {
+	era = era_kmpmp_6
+	texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
+	category = society
+
+	modifier = {
+		country_radicals_from_conquest_mult = -0.05
+		country_infamy_decay_mult = 0.10
+		state_assimilation_mult = 0.50
+		state_conversion_mult = 0.50
+	}
+
+	unlocking_technologies = {
+		behaviorism
+		mass_propaganda
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+kmpmp_vaccination_campagns = {
+	era = era_kmpmp_6
+	texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
+	category = society
+
+	modifier = {
+		country_institution_cost_institution_health_system_mult = -0.10
+		state_mortality_mult = -0.05
+	}
+
+	unlocking_technologies = {
+		antibiotics
+		mass_propaganda
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+kmpmp_abolish_the_gold_standard = {
+	era = era_kmpmp_6
+	texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
+	category = society
+
+	modifier = {
+		building_cash_reserves_mult = 0.75
+	}
+
+	unlocking_technologies = {
+		macroeconomics
+		modern_financial_instruments
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+kmpmp_public_flights = {
+	era = era_kmpmp_6
+	texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
+	category = society
+
+	modifier = {
+		state_infrastructure_mult = 0.1
+		building_railway_throughput_add = 0.10
+		building_war_machine_industry_throughput_add = 0.1
+	}
+
+	unlocking_technologies = {
+		zeppelins
+		paved_roads
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}
+
+kmpmp_globalism = {
+	era = era_kmpmp_6
+	texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
+	category = society
+
+	modifier = {
+		country_max_companies_add = 1
+		country_trade_route_competitiveness_mult = 0.25
+		country_convoys_capacity_mult = 0.1
+	}
+
+	unlocking_technologies = {
+		multilateral_alliances
+		modern_financial_instruments
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}

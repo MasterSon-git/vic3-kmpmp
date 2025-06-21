@@ -1,0 +1,89 @@
+﻿l_german:
+
+ # Militär
+ KMPMP_BATTLE_SIZE_LESSONS_FROM_THE_GREAT_WAR: "Begrenzt durch [concept_technology] $kmpmp_lessons_from_the_great_war$"
+ kmpmp_lessons_from_the_great_war: "Lehren aus dem Großen Krieg"
+ kmpmp_lessons_from_the_great_war_desc: "Die Schrecken und Strategien des Großen Krieges prägen unsere militärischen Entscheidungen bis heute."
+ 
+ kmpmp_anti_tank_defences: "Panzerabwehrsysteme"
+ kmpmp_anti_tank_defences_desc: "Spezialisierte Befestigungen und Waffen zur Abwehr feindlicher Panzerangriffe."
+
+ kmpmp_combined_arms_strategy: "Kombinierte Waffenstrategie"
+ kmpmp_combined_arms_strategy_desc: "Die koordinierte Zusammenarbeit von Infanterie, Panzer und Artillerie erhöht die Schlagkraft unserer Armeen."
+
+ kmpmp_interwar_tanks: "Zwischenkriegs-Panzer"
+ kmpmp_interwar_tanks_desc: "Neue Panzermodelle aus der Zwischenkriegszeit verbessern Mobilität und Feuerkraft auf dem Schlachtfeld."
+
+ kmpmp_rocket_technology: "Raketentechnologie"
+ kmpmp_rocket_technology_desc: "Raketen eröffnen neue Dimensionen in der Kriegsführung sowohl strategisch als auch taktisch."
+
+ kmpmp_rocket_artillery: "Raketenartillerie"
+ kmpmp_rocket_artillery_desc: "Schnellfeuer-Raketensysteme bieten flexible Feuerunterstützung gegen weit entfernte Ziele."
+
+ kmpmp_interwar_mechanized_infantry: "Zwischenkriegs-mechanisierte Infanterie"
+ kmpmp_interwar_mechanized_infantry_desc: "Mechanisierte Infanterieeinheiten ermöglichen eine schnellere Truppenbewegung unter Schutz."
+
+ kmpmp_blitzkrieg: "Blitzkrieg"
+ kmpmp_blitzkrieg_desc: "Durch schnelles, konzentriertes Vorrücken wird der Feind überrascht und überrannt."
+
+ kmpmp_super_heavy_battleship: "Superschlachtschiff"
+ kmpmp_super_heavy_battleship_desc: "Massive Kriegsschiffe mit überlegener Feuerkraft dominieren die See."
+
+ kmpmp_long_range_submarines: "Langstrecken-U-Boote"
+ kmpmp_long_range_submarines_desc: "U-Boote mit größerer Reichweite erweitern unsere maritimen Operationsgebiete."
+
+ kmpmp_heavy_cruiser: "Schwerer Kreuzer"
+ kmpmp_heavy_cruiser_desc: "Schwere Kreuzer sind vielseitige Kriegsschiffe mit starker Panzerung und Feuerkraft."
+
+ kmpmp_anti_submarine_warfare: "U-Boot-Abwehr"
+ kmpmp_anti_submarine_warfare_desc: "Neue Taktiken und Technologien zur Bekämpfung feindlicher U-Boote."
+
+ kmpmp_interwar_carrier: "Zwischenkriegs-Flugzeugträger"
+ kmpmp_interwar_carrier_desc: "Flugzeugträger der Zwischenkriegszeit markieren den Beginn der maritimen Luftherrschaft."
+
+ kmpmp_international_tradehubs: "Internationale Handelszentren"
+ kmpmp_international_tradehubs_desc: "Globale Umschlagzentren fördern den internationalen Handel und wirtschaftliche Stabilität."
+
+ kmpmp_deepsea_dockyards: "Tiefsee-Werften"
+ kmpmp_deepsea_dockyards_desc: "Großwerften ermöglichen den Bau und die Wartung von Hochseeflotte und Transportschiffen."
+
+ # ÄRA 6 Technik Gesellschaft
+ kmpmp_globalism: "Globalismus"
+ kmpmp_globalism_desc: "Internationale Verflechtungen und gemeinsame Märkte fördern weltweite Zusammenarbeit und Abhängigkeiten."
+
+ kmpmp_public_flights: "Öffentliche Flugreisen"
+ kmpmp_public_flights_desc: "Der Luftverkehr wird erschwinglich und verbindet die Welt wie nie zuvor."
+
+ kmpmp_abolish_the_gold_standard: "Abschaffung des Goldstandards"
+ kmpmp_abolish_the_gold_standard_desc: "Die Abschaffung des Goldstandards erlaubt eine flexiblere Währungs- und Wirtschaftspolitik."
+
+ kmpmp_vaccination_campagns: "Impfkampagnen"
+ kmpmp_vaccination_campagns_desc: "Breit angelegte Impfkampagnen bekämpfen Krankheiten und verbessern die öffentliche Gesundheit."
+
+ kmpmp_filmworks: "Filmwerke"
+ kmpmp_filmworks_desc: "Filmstudios als kulturelle Zentren prägen das kollektive Bewusstsein und formen Ideale."
+
+ kmpmp_highways: "Autobahnen"
+ kmpmp_highways_desc: "Ein nationales Autobahnnetz revolutioniert den Waren- und Personenverkehr."
+
+ # ÄRA 6 Technik Produktion
+ kmpmp_cinema: "Kino"
+ kmpmp_cinema_desc: "Kinos verbreiten kulturelle Inhalte und dienen als Plattform für Unterhaltung und Propaganda."
+
+ kmpmp_modern_infrastructure: "Moderne Infrastruktur"
+ kmpmp_modern_infrastructure_desc: "Neue Bau- und Verkehrsprojekte bilden das Rückgrat einer modernen Gesellschaft."
+
+ kmpmp_modern_foodproduction: "Moderne Nahrungsmittelproduktion"
+ kmpmp_modern_foodproduction_desc: "Mechanisierte und automatisierte Landwirtschaft steigert Effizienz und Versorgungssicherheit."
+
+ kmpmp_modern_drilling: "Moderne Bohrtechnik"
+ kmpmp_modern_drilling_desc: "Neue Bohrmethoden erschließen tiefere Lagerstätten und sichern den Energiebedarf der Zukunft."
+
+ kmpmp_modern_communication: "Moderne Kommunikation"
+ kmpmp_modern_communication_desc: "Schnelle, globale Kommunikationstechnologien vernetzen Menschen und Märkte."
+
+ kmpmp_elastan: "Elastan"
+ kmpmp_elastan_desc: "Elastan revolutioniert Textilien elastisch, haltbar und vielseitig einsetzbar."
+
+ kmpmp_modern_farming: "Moderne Landwirtschaft"
+ kmpmp_modern_farming_desc: "Moderne Landwirtschaft vereint Technik, Chemie und Wissen zur Steigerung der Ernteerträge."

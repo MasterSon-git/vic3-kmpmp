@@ -104,15 +104,19 @@
     
     FAE_txt_battles: "Zu Beginn jeder [concept_battle], die in einem [concept_state] mit einem $FAE_txt_forts$-[concept_building] stattfindet, wird der Gesamtwert von $FAE_txt_siege$ und $FAE_txt_entrench$ aus der Anzahl von [Concept('concept_unit', '$concept_units$')] im Kampf auf der angreifenden bzw. verteidigenden Seite berechnet."
     
-    FAE_txt_siege_stats:   "Die $FAE_txt_siege$ pro [Concept('concept_unit', '$concept_unit$')] wird berechnet aus:\n$FAE_txt_siege_stats_1$\n$FAE_txt_siege_stats_2$\n$FAE_txt_siege_stats_3$\n$FAE_txt_siege_stats_4_1$\n$FAE_txt_siege_stats_4$\n$FAE_txt_siege_stats_5$\n$FAE_txt_siege_stats_6$\n$FAE_txt_siege_stats_7$"
+    FAE_txt_siege_stats:   "Die $FAE_txt_siege$ pro [Concept('concept_unit', '$concept_unit$')] wird berechnet aus:\n$FAE_txt_siege_stats_1$\n$FAE_txt_siege_stats_1_1$\n$FAE_txt_siege_stats_2$\n$FAE_txt_siege_stats_2_1$\n$FAE_txt_siege_stats_3$\n$FAE_txt_siege_stats_3_1$\n$FAE_txt_siege_stats_4_1$\n$FAE_txt_siege_stats_4$\n$FAE_txt_siege_stats_5$\n$FAE_txt_siege_stats_6$\n$FAE_txt_siege_stats_7$\n$FAE_txt_siege_stats_8$"
     FAE_txt_siege_stats_1: "#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_combat_engies')]#! wenn die [concept_military_formation] die [GetMobilizationOption('FAE_mo_combat_engineers').GetName] [concept_mobilization_option] aktiviert hat"
+    FAE_txt_siege_stats_1_1: "#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_rocket_artillery')]#! wenn die [concept_military_formation] die [GetMobilizationOption('mobilization_option_rocket_artillery').GetName] [concept_mobilization_option] aktiviert hat"
     FAE_txt_siege_stats_2: "#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_heavy_tank')]#! für [Concept('concept_combat_unit_type', '$concept_unit$')]-[GetCombatUnitType('combat_unit_type_heavy_tank').GetName]"
+    FAE_txt_siege_stats_2_1: "#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_interwar_heavy_tank')]#! für [Concept('concept_combat_unit_type', '$concept_unit$')]-[GetCombatUnitType('combat_unit_type_interwar_heavy_tank').GetName]"
     FAE_txt_siege_stats_3: "#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_light_tank')]#! für [Concept('concept_combat_unit_type', '$concept_unit$')]-[GetCombatUnitType('combat_unit_type_light_tanks').GetName]"
+    FAE_txt_siege_stats_3_1: "#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_interwar_light_tank')]#! für [Concept('concept_combat_unit_type', '$concept_unit$')]-[GetCombatUnitType('combat_unit_type_interwar_light_tanks').GetName]"
     FAE_txt_siege_stats_4_1: "#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_fort_arty')]#! für [Concept('concept_combat_unit_type', '$concept_unit$')]-[GetCombatUnitType('combat_unit_type_fort_buster_artillery').GetName]"
     FAE_txt_siege_stats_4: "#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_siege_arty')]#! für [Concept('concept_combat_unit_type', '$concept_unit$')]-[GetCombatUnitType('combat_unit_type_siege_artillery').GetName]"
     FAE_txt_siege_stats_5: "#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_shrapnel_arty')]#! für [Concept('concept_combat_unit_type', '$concept_unit$')]-[GetCombatUnitType('combat_unit_type_shrapnel_artillery').GetName]"
     FAE_txt_siege_stats_6: "#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_mobile_arty')]#! für [Concept('concept_combat_unit_type', '$concept_unit$')]-[GetCombatUnitType('combat_unit_type_mobile_artillery').GetName]"
     FAE_txt_siege_stats_7: "#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_cannon_arty')]#! für [Concept('concept_combat_unit_type', '$concept_unit$')]-[GetCombatUnitType('combat_unit_type_cannon_artillery').GetName]"
+    FAE_txt_siege_stats_8: "#p +[GetPlayer.MakeScope.ScriptValue('FAE_siege_rocket_technology')]#! nach erforschen von [GetTechnology('kmpmp_rocket_technology').GetName]"
     
     FAE_txt_min_fort_bonus: "#p [Multiply_CFixedPoint(GetPlayer.MakeScope.ScriptValue('FAE_WEAK_FORT_MIN_BONUS'), '(CFixedPoint)100')]%#!"
     

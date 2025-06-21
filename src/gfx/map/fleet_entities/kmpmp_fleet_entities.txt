@@ -1,0 +1,39 @@
+﻿military_navy_battleship_bismarck_class_generic_diorama_entity = {
+	entity = "military_navy_battleship_generic_entity"
+	
+	trigger = {
+		scope:combat_unit_type = unit_type:combat_unit_type_battleship_bismarck_class
+	}
+}
+
+military_navy_heavycruiser_generic_diorama_entity = {
+	entity = "military_navy_scoutcruiser_generic_entity"
+	
+	trigger = {
+		scope:combat_unit_type = unit_type:combat_unit_type_heavy_cruiser
+	}
+}
+
+military_navy_long_range_submarine_generic_diorama_entity = {
+	entity = "military_navy_submarine_generic_entity"
+	
+	trigger = {
+		scope:combat_unit_type = unit_type:combat_unit_type_long_range_submarine
+	}
+}
+
+military_navy_anti_submarine_destroyer_generic_diorama_entity = {
+	entity = "military_navy_destroyer_generic_entity"
+	
+	trigger = {
+		scope:combat_unit_type = unit_type:combat_unit_type_anti_submarine_destroyer
+	}
+}
+
+military_navy_interwar_carrier_generic_diorama_entity = {
+	entity = "military_navy_carrier_generic_entity"
+	
+	trigger = {
+		scope:combat_unit_type = unit_type:combat_unit_type_interwar_carrier
+	}
+}

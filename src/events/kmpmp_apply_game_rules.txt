@@ -1,0 +1,29 @@
+﻿namespace = kmpmp_ev_apply_game_rules
+
+kmpmp_ev_apply_game_rules.1 = {
+    type = country_event
+    hidden = yes
+
+    trigger = {
+        # Fired by history global
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                OR = {
+                    has_game_rule = kmpmp_age_of_warfare_all
+                    AND = {
+                        has_game_rule = kmpmp_age_of_warfare_player
+                        is_player = yes
+                    }
+                }
+            }
+            add_modifier = {
+                name = kmpmp_age_of_warfare_modifier
+                years = 30
+                is_decaying = yes
+            }
+        }
+    }
+}

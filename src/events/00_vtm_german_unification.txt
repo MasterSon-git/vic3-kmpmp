@@ -774,7 +774,7 @@ german_unification.101 = {
 		scope:sgf_unifier_god = {
 			create_diplomatic_pact = {
 				country = ROOT
-				type = dominion
+				type = puppet
 			}
 			trigger_event = { id = sgf_aus.6 days = 7 popup = yes }
 		}

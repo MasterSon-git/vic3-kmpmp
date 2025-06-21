@@ -1,16 +1,25 @@
-﻿state_engineers_investment_pool_efficiency_mult = {
+﻿country_kmpmp_power_bloc_mandate_progress_add = {
 	decimals = 0
 	color = good
-	percent = yes
+	percent = no
 	game_data = {
 		ai_value = 0
 	}
 }
 
-unit_combat_unit_type_light_tanks_offense_mult = {
+country_kmpmp_war_support_from_power_bloc_principles_add = {
+	decimals = 2
+	color = good
+	percent = no
+	game_data = {
+		ai_value = 0
+	}
+}
+
+state_engineers_investment_pool_efficiency_mult = {
+	decimals = 0
 	color = good
 	percent = yes
-	decimals = 0
 	game_data = {
 		ai_value = 0
 	}
@@ -19,6 +28,24 @@ unit_combat_unit_type_light_tanks_offense_mult = {
 state_zoroastrian_standard_of_living_add = {
 	decimals = 1
 	color = good
+	game_data = {
+		ai_value = 0
+	}
+}
+
+country_kmpmp_war_support_from_tec_add = {
+	decimals = 2
+	color = good
+	percent = no
+	game_data = {
+		ai_value = 0
+	}
+}
+
+country_kmpmp_land_battle_size_mult = {
+	decimals = 2
+	color = neutral
+	percent = yes
 	game_data = {
 		ai_value = 0
 	}

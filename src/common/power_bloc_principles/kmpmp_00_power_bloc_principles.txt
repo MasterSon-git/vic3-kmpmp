@@ -279,7 +279,7 @@ principle_vassalization_2 = {
 	
 	member_modifier = {
 		# Modifiers from previous level(s)
-		country_authority_per_subject_add = 25
+		country_authority_per_subject_add = 20 #25
 		
 		# Subjects pay more to overlord
 		country_subject_income_transfer_mult = 0.25
@@ -296,7 +296,7 @@ principle_vassalization_3 = {
 
 	member_modifier = {
 		# Modifiers from previous level(s)
-		country_authority_per_subject_add = 25
+		country_authority_per_subject_add = 20 #25
 		country_subject_income_transfer_mult = 0.25
 		
 		# Can use decrees on subjects
@@ -464,11 +464,12 @@ principle_defensive_cooperation_2 = {
 	icon = "gfx/interface/icons/principles_icons/defensive_coorperation.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_2.dds"
 
+	# kmpmp
 	member_modifier = {
-		# kmpmp
 		country_institution_size_change_speed_institution_qwf_conscription_mult = 0.4
 		country_institution_cost_institution_qwf_conscription_mult = -0.25
 		country_military_wages_mult = -0.1
+		country_kmpmp_war_support_from_power_bloc_principles_add = 0.5
 	}
 
 	power_bloc_modifier = {
@@ -502,6 +503,7 @@ principle_defensive_cooperation_3 = {
 		country_military_wages_mult = -0.1
 		building_mobilization_cost_mult = -0.05
 		country_military_goods_cost_mult = -0.05 #kmpmp
+		country_kmpmp_war_support_from_power_bloc_principles_add = 1.0
 	}
 
 	power_bloc_modifier = {
@@ -528,6 +530,8 @@ principle_aggressive_coordination_1 = {
 	member_modifier = {
 		# Reduces maneuver cost for picking wargoals during Diplomatic Play
 		country_initiator_war_goal_maneuver_cost_mult = -0.3
+		# kmpmp
+		country_kmpmp_war_support_from_power_bloc_principles_add = 0.75
 	}
 	
 	ai_weight = {
@@ -569,6 +573,9 @@ principle_aggressive_coordination_2 = {
 		
 		# Reduces war exhaustion from casualties, propaganda!
 		country_war_exhaustion_casualties_mult = -0.25 #-0.15
+
+		# kmpmp
+		country_kmpmp_war_support_from_power_bloc_principles_add = 1.0
 	}
 	
 	ai_weight = {
@@ -589,6 +596,8 @@ principle_aggressive_coordination_3 = {
 		# Modifiers from previous level(s)
 		country_initiator_war_goal_maneuver_cost_mult = -0.3
 		country_war_exhaustion_casualties_mult = -0.25 #-0.15
+		# kmpmp
+		country_kmpmp_war_support_from_power_bloc_principles_add = 1.0
 	
 		# Countries forced to join diplomatic plays of members, other countries are not happy about this threat
 		country_join_power_bloc_member_in_plays_bool = yes

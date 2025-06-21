@@ -452,6 +452,7 @@ camera = {
 	modifier = {
 		country_prestige_mult = 0.05
 		country_infamy_generation_mult = -0.05 #kmpmp
+		country_leverage_resistance_mult = -0.25
 	}
 	
 	unlocking_technologies = {
@@ -627,6 +628,7 @@ film = {
 	modifier = {
 		country_prestige_mult = 0.05
 		country_infamy_generation_mult = -0.05 #kmpmp
+		country_leverage_resistance_mult = -0.25
 	}
 	
 	unlocking_technologies = {

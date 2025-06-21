@@ -1,5 +1,7 @@
 ﻿NEconomy = {
 	DECLARE_BANKRUPTCY_PENALTY_DURATION_YEARS = 4 #10		# How many years does it take for penalties from declaring bankruptcy to fully decay
+
+	CREDIT_RATIO_MAX_OVERRUN = 0.1 #0.01 			# Countries can accumulate this percentage more of a debt "hole" than their credit limit when in default
 }
 
 NDiplomacy = {
@@ -38,4 +40,9 @@ NCountry = {
 NPowerBlocs = {
 	COUNTRY_POPULATION_LEVERAGE_RESISTANCE_MODIFIER_DIVISOR = 1200000 	#1000000 	# Population divided by this is multiplied by country_leverage_resistance_per_population to give a certain amount of leverage per million people
 	COUNTRY_POPULATION_LEVERAGE_RESISTANCE_MODIFIER_MAX_MULTIPLIER = 100	# Max multiplier given by population. With the value above at 1 000 000, this means the cap for leverage resistance is at 100 000 000.
+}
+
+NPops = {
+	ASSIMILATION_RATE = 0.004 #0.002					# Percentage of pops who will Assimilate into a different Culture each month, if eligible
+	CONVERSION_RATE = 0.004 #0.002						# Percentage of pops who will Convert into a different Religion each month, if eligible
 }

@@ -1,0 +1,14 @@
+﻿kmpmp_age_of_warfare = {
+    default = kmpmp_age_of_warfare_player
+
+    kmpmp_age_of_warfare_none = {}
+    kmpmp_age_of_warfare_player = {}
+    kmpmp_age_of_warfare_all = {}
+}
+
+kmpmp_trade_states_relations = {
+    default = kmpmp_trade_states_relations_ignore
+    
+    kmpmp_trade_states_relations_ignore = {}
+    kmpmp_trade_states_relations_vanilla = {}
+}

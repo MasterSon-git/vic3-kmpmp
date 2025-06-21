@@ -5,7 +5,7 @@
             OR = {
                 c:SAR ?= this    # sardinien piemont
                 c:SIC ?= this    # two sicilies
-                c:TUR ?= this    # ottomans
+                #c:TUR ?= this    # ottomans
                 c:BEL ?= this    # belgium
                 c:NET ?= this    # netherlands
                 c:SWE ?= this    # sweden
@@ -28,7 +28,9 @@
                 has_modifier = kmpmp_buff_small_nation
             }
         }
-        add_modifier = kmpmp_buff_small_nation
+        add_modifier = {
+            name = kmpmp_buff_small_nation
+        }
     }
 
     # update medium nation
@@ -47,7 +49,9 @@
                 has_modifier = kmpmp_buff_medium_nation
             }
         }
-        add_modifier = kmpmp_buff_medium_nation
+        add_modifier = {
+            name = kmpmp_buff_medium_nation
+        }
 
         # remove small nation buff
         if = {
@@ -64,9 +68,9 @@
             OR = {
                 c:AUS ?= this    # austria
                 c:FRA ?= this    # france
-                c:GBR ?= this    # great britain
+                # c:GBR ?= this    # great britain
                 c:RUS ?= this    # russia
-                c:USA ?= this    # usa
+                # c:USA ?= this    # usa
                 # c:PRU ?= this    # prussia
                 c:NGF ?= this    # north german federation
                 c:GER ?= this    # germany
@@ -75,7 +79,37 @@
                 has_modifier = kmpmp_debuff_massive_empire
             }
         }
-        add_modifier = kmpmp_debuff_massive_empire
+        add_modifier = {
+            name = kmpmp_debuff_massive_empire
+        }
+    }
+
+    # gb - has special logic
+    if = {
+        limit = {
+            c:GBR ?= this
+        }
+        if = { # remove accidentially added kmpmp_debuff_global_empire after mod update
+            limit = {
+                has_modifier = kmpmp_debuff_global_empire
+                has_modifier = kmpmp_debuff_massive_empire
+            }
+            remove_modifier = kmpmp_debuff_global_empire
+        }
+        # since we may have game saves using the kmpmp_debuff_massive_empire modifier
+        # instead of the kmpmp_debuff_massive_empire_decaying modifier
+        # we only add kmpmp_debuff_global_empire if kmpmp_debuff_massive_empire is not present
+        if = {
+            limit = {
+                NOT = {
+                    has_modifier = kmpmp_debuff_global_empire
+                    has_modifier = kmpmp_debuff_massive_empire
+                }
+            }
+            add_modifier = {
+                name = kmpmp_debuff_global_empire
+            }
+        }
     }
 
     # japan - has special logic
@@ -93,7 +127,9 @@
                     has_global_variable = meiji_restoration_complete
                 }
             }
-            add_modifier = kmpmp_buff_small_nation
+            add_modifier = {
+                name = kmpmp_buff_small_nation
+            }
         }
         else_if = { # medium nation buff
             limit = {
@@ -105,7 +141,9 @@
                     has_global_variable = meiji_restoration_complete
                 }
             }
-            add_modifier = kmpmp_buff_medium_nation
+            add_modifier = {
+                name = kmpmp_buff_medium_nation
+            }
 
             if = {
                 limit = {
@@ -128,6 +166,42 @@
                     has_modifier = kmpmp_buff_medium_nation
                 }
                 remove_modifier = kmpmp_buff_medium_nation
+            }
+
+            if = {
+                limit = {
+                    has_modifier = kmpmp_buff_small_nation
+                }
+                remove_modifier = kmpmp_buff_small_nation
+            }
+        }
+    }
+
+    # ottoman - has special logic
+    if = {
+        limit = {
+            c:TUR ?= this
+        }
+        if = { # small nation buff
+            limit = {
+                NOT = {
+                    has_modifier = kmpmp_buff_small_nation
+                    has_variable = kmpmp_je_ottoman_medium_nation_completed
+                }
+            }
+            add_modifier = {
+                name = kmpmp_buff_small_nation
+            }
+        }
+        else_if = { # medium nation buff
+            limit = {
+                NOT = {
+                    has_modifier = kmpmp_buff_medium_nation
+                }
+                has_variable = kmpmp_je_ottoman_medium_nation_completed
+            }
+            add_modifier = {
+                name = kmpmp_buff_medium_nation
             }
 
             if = {

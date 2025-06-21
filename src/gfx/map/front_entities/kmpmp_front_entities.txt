@@ -1,0 +1,104 @@
+﻿military_artillery_fort_buster_generic_diorama_entity = {
+	entity = "military_artillery_siege_generic_entity"
+
+	group = "artillery"
+	
+	trigger = {
+		scope:combat_unit_type ?= unit_type:combat_unit_type_fort_buster_artillery
+	}
+}
+
+military_interwar_tank_heavy_generic_diorama_entity = {
+	entity = "military_tank_heavy_generic_entity"
+
+	group = "artillery"
+	
+	trigger = {
+		scope:combat_unit_type = unit_type:combat_unit_type_interwar_heavy_tank
+	}
+}
+
+military_interwar_tank_light_generic_diorama_entity = {
+	entity = "military_tank_light_generic_entity"
+
+	group = "cavalry"
+	
+	trigger = {
+		scope:combat_unit_type = unit_type:combat_unit_type_interwar_light_tanks
+	}
+}
+
+military_barricade_interwar_mechanized_01_diorama_entity = {
+	entity = "military_barricade_mechanized_01_entity"
+
+	group = "barricade"
+	
+	trigger = {
+		scope:combat_unit_type = unit_type:combat_unit_type_interwar_mechanized_infantry
+	}
+}
+
+military_infantry_european_interwar_mechanized_diorama_entity = {
+	entity = "military_infantry_european_mechanized_entity"
+
+	group = "infantry"
+	
+	trigger = {
+		scope:culture = {
+			has_culture_graphics = european
+		}
+		scope:combat_unit_type = unit_type:combat_unit_type_interwar_mechanized_infantry
+	}
+}
+
+military_infantry_african_interwar_mechanized_diorama_entity = {
+	entity = "military_infantry_african_mechanized_entity"
+
+	group = "infantry"
+	
+	trigger = {
+		scope:culture = {
+			has_culture_graphics = african
+		}
+		scope:combat_unit_type = unit_type:combat_unit_type_interwar_mechanized_infantry
+	}
+}
+
+military_infantry_arabic_interwar_mechanized_diorama_entity = {
+	entity = "military_infantry_arabic_mechanized_entity"
+
+	group = "infantry"
+	
+	trigger = {
+		scope:culture = {
+			has_culture_graphics = arabic
+		}
+		scope:combat_unit_type = unit_type:combat_unit_type_interwar_mechanized_infantry
+	}
+}
+
+military_infantry_eastasian_interwar_mechanized_diorama_entity = {
+	entity = "military_infantry_eastasian_mechanized_entity"
+
+	group = "infantry"
+	
+	trigger = {
+		scope:culture = {
+			has_culture_graphics = east_asian
+		}
+		scope:combat_unit_type = unit_type:combat_unit_type_interwar_mechanized_infantry
+	}
+}
+
+military_infantry_southasian_interwar_mechanized_diorama_entity = {
+	entity = "military_infantry_southasian_mechanized_entity"
+
+	group = "infantry"
+	
+	trigger = {
+		scope:culture = {
+			has_culture_graphics = south_asian
+		}
+		scope:combat_unit_type = unit_type:combat_unit_type_interwar_mechanized_infantry
+	}
+}

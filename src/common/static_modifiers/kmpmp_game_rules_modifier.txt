@@ -1,0 +1,16 @@
+﻿kmpmp_age_of_warfare_modifier = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+
+    # +60% TP auf War industry (ammo, cannons, small arms)
+    building_arms_industry_throughput_add = 0.6
+    building_artillery_foundries_throughput_add = 0.6
+    building_munition_plants_throughput_add = 0.6
+    # -30% mob good req
+    building_mobilization_cost_mult = -0.3
+    # -15% small arms input
+    goods_input_small_arms_mult = -0.15
+    # -15% ammo input
+    goods_input_ammunition_mult = -0.15
+    # -15% cannon input
+    goods_input_artillery_mult = -0.15
+}

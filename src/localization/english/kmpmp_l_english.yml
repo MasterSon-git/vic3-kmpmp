@@ -19,12 +19,21 @@
  kmpmp_fix_japan_buff_meiji_complete_not_triggered_decision_tooltip:0 "Triggers the event to add the Japan buffs for completing Meiji Restauration."
 
  kmpmp_buff_small_nation:0 "Small Nation buff"
+ kmpmp_buff_small_nation_desc:0 "In small nations you are very flexible."
  kmpmp_buff_medium_nation:0 "Medium Nation buff"
+ kmpmp_buff_medium_nation_desc:0 "Medium-sized nations offer many opportunities."
+ kmpmp_debuff_massive_empire:0 "Massive Empire"
+ kmpmp_debuff_massive_empire_desc:0 "A massive empire that makes it difficult to keep track of."
+ kmpmp_debuff_global_empire:0 "Global Empire"
+ kmpmp_debuff_global_empire_desc:0 "A global empire that is very difficult to manage."
+ kmpmp_debuff_global_empire_decaying:0 "Global Empire"
+ kmpmp_debuff_global_empire_decaying_desc:0 "A global empire that is very difficult to manage."
 
  kmpmp_mo_utility_gear:0 "Utility Gear"
  kmpmp_mo_utility_gear_desc:0 "Utility Gear" 
  kmpmp_mog_doctrines:0 "Doctrines"
  kmpmp_mog_doctrines_desc:0 "Doctrines"
+
  mobilization_option_school_of_defence:0 "School of defence"
  mobilization_option_school_of_defence_desc:0 "School of defence"
  mobilization_option_grand_battleplan:0 "Grand Battleplan"
@@ -33,11 +42,17 @@
  mobilization_option_superior_firepower_desc:0 "Superior Firepower"
  mobilization_option_mass_assault:0 "Mass assault"
  mobilization_option_mass_assault_desc:0 "Mass assault"
+
+ mobilization_option_rocket_artillery: "Rocket Artillery"
+ mobilization_option_rocket_artillery_desc: "Rocket Artillery"
+ mobilization_option_close_air_support: "Close Air Support"
+ mobilization_option_close_air_support_desc: "Close Air Support"
+ mobilization_option_fighter_planes: "Fighter Planes"
+ mobilization_option_fighter_planes_desc: "Fighter Planes"
+ mobilization_option_tactical_bombers: "Tactical Bombers"
+ mobilization_option_tactical_bombers_desc: "Tactical Bombers"
  mobilization_option_military_playbooks:0 "Military Playbook"
  mobilization_option_military_playbooks_desc:0 "Military Playbook"
-
- kmpmp_debuff_massive_empire:0 "Massive Emprire"
- kmpmp_debuff_massive_empire_desc:0 "A massive empire is har to keep track off."
  
  kmpmp_emser_depeche:0 "Emser Depeche"
  kmpmp_emser_depeche_desc:0 "Attack on France"

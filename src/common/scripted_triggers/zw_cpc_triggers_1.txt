@@ -47,7 +47,7 @@
 	# case 3: investment in foreign countries (manufacture, agro, resource, infrastructure)
 	trigger_if = {
 		limit = {
-			scope:investor_country = {
+			scope:investor_country ?= {
 				has_variable = zw_var_no_foreign_private_investment_manufacture #
 			}
 		}
@@ -104,7 +104,7 @@ zw_autonom_investment_trigger_agro = {
 	# case 3: investment in foreign countries (manufacture, agro, resource, infrastructure)
 	trigger_if = {
 		limit = {
-			scope:investor_country = {
+			scope:investor_country ?= {
 				has_variable = zw_var_no_foreign_private_investment_agro #
 			}
 		}
@@ -161,7 +161,7 @@ zw_autonom_investment_trigger_resource = {
 	# case 3: investment in foreign countries (manufacture, agro, resource, infrastructure)
 	trigger_if = {
 		limit = {
-			scope:investor_country = {
+			scope:investor_country ?= {
 				has_variable = zw_var_no_foreign_private_investment_resource #
 			}
 		}
@@ -218,7 +218,7 @@ zw_autonom_investment_trigger_power = {
 	# case 3: investment in foreign countries (manufacture, agro, resource, infrastructure)
 	trigger_if = {
 		limit = {
-			scope:investor_country = {
+			scope:investor_country ?= {
 				has_variable = zw_var_no_foreign_private_investment_infrastructure #
 			}
 		}
@@ -275,7 +275,7 @@ zw_autonom_investment_trigger_railway = {
 	# case 3: investment in foreign countries (manufacture, agro, resource, infrastructure)
 	trigger_if = {
 		limit = {
-			scope:investor_country = {
+			scope:investor_country ?= {
 				has_variable = zw_var_no_foreign_private_investment_infrastructure #
 			}
 		}

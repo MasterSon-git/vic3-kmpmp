@@ -234,8 +234,8 @@ decree_promote_national_values = {
 		}	
 	}
 	modifier = {
-		state_assimilation_mult = 1.25 #1
-		state_conversion_mult = 1.25 #1
+		state_assimilation_mult = 2 #1
+		state_conversion_mult = 2 #1
 		# kmpmp
 		state_loyalism_increases_full_acceptance_mult = 0.25
 		state_loyalism_increases_second_rate_citizen_mult = 0.25

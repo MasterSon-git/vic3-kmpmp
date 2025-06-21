@@ -65,4 +65,10 @@
         }
         remove_modifier = kmpmp_player_boost_unite_the_workers_of_the_world
     }
+    if = {
+        limit = {
+            has_modifier = kmpmp_player_boost_expand_influence
+        }
+        remove_modifier = kmpmp_player_boost_expand_influence
+    }
 }

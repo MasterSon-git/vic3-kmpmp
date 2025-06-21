@@ -19,6 +19,7 @@
  kmpmp_ev_spain_america.1.b.tt2: "Frage [SCOPE.sCountry('event_actor_country').GetName] ihrem [concept_power_bloc] beizutreten."
  kmpmp_ev_spain_america.1.c: "Sie sind unsere wahren Oberherren"
  kmpmp_ev_spain_america.1.c.tt: "Rückkehr zum spanischen Reich"
+ kmpmp_ev_spain_america.1.c.tt2: "[ROOT.GetCountry.GetAltName('NOM')] wird ein [concept_protectorate] [SCOPE.sCountry('event_actor_country').GetAltName('VON')]"
 
  kmpmp_ev_spain_america.2.t: "Wirtschaftliche und politische Zusammenarbeit"
  kmpmp_ev_spain_america.2.d: "[SCOPE.sCountry('mexico_scope').GetName] bietet „$kmpmp_spain_a_mutually_beneficial_deal$“"

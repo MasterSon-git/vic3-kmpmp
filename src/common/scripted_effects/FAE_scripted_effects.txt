@@ -17,33 +17,124 @@ FAE_se_calculate_siege = {
                 }
             }
         }
-        
-        # Add siege from combat engineers
+
+        # kmpmp add siege from tech
         if = {
             limit = {
                 owner = {
-                    any_military_formation = {
-                        has_mobilization_option = mobilization_option:FAE_mo_combat_engineers
-                        any_combat_unit = {
-                            this = scope:current_unit
-                        }
-                    }
+                    has_technology_researched = kmpmp_rocket_technology
                 }
             }
             change_local_variable = {
                 name = total_siege
-                add  = FAE_siege_combat_engies
+                add  = FAE_siege_rocket_technology
             }
         }
+        
+        if = {
+            limit = {
+                owner = {
+                    any_military_formation = {
+                        OR = {
+                            has_mobilization_option = mobilization_option:FAE_mo_combat_engineers
+                            has_mobilization_option = mobilization_option:mobilization_option_rocket_artillery
+                        }
+                        any_combat_unit = {
+                            this = scope:current_unit
+                        }
+                        save_temporary_scope_as = current_military_formation
+                    }
+                }
+            }
+        }
+
+        if = {
+            limit = {
+                exists = scope:current_military_formation
+            }
+
+            scope:current_military_formation = {
+                # Add siege from combat engineers
+                if = {
+                    limit = {
+                        has_mobilization_option = mobilization_option:FAE_mo_combat_engineers
+                    }
+                    ROOT = {
+                        change_local_variable = {
+                            name = total_siege
+                            add  = FAE_siege_combat_engies
+                        }
+                    }
+                }
+
+                # kmpmp add siege from mobilization_option_rocket_artillery
+                if = {
+                    limit = {
+                        has_mobilization_option = mobilization_option:mobilization_option_rocket_artillery
+                    }
+                    ROOT = {
+                        change_local_variable = {
+                            name = total_siege
+                            add  = FAE_siege_rocket_artillery
+                        }
+                    }
+                }
+            }
+        }
+
+        # # Add siege from combat engineers
+        # if = {
+        #     limit = {
+        #         owner = {
+        #             any_military_formation = {
+        #                 has_mobilization_option = mobilization_option:FAE_mo_combat_engineers
+        #                 any_combat_unit = {
+        #                     this = scope:current_unit
+        #                 }
+        #             }
+        #         }
+        #     }
+        #     change_local_variable = {
+        #         name = total_siege
+        #         add  = FAE_siege_combat_engies
+        #     }
+        # }
+
+        # # kmpmp add siege from mobilization_option_rocket_artillery
+        # if = {
+        #     limit = {
+        #         owner = {
+        #             any_military_formation = {
+        #                 has_mobilization_option = mobilization_option:mobilization_option_rocket_artillery
+        #                 any_combat_unit = {
+        #                     this = scope:current_unit
+        #                 }
+        #             }
+        #         }
+        #     }
+        #     change_local_variable = {
+        #         name = total_siege
+        #         add  = FAE_siege_rocket_artillery
+        #     }
+        # }
         
         # Add siege from unit type
         if = {
             limit = {
-                has_unit_type = unit_type:combat_unit_type_light_tanks
+                has_unit_type = unit_type:combat_unit_type_fort_buster_artillery
             }
             change_local_variable = {
                 name = total_siege
-                add  = FAE_siege_light_tank
+                add  = FAE_siege_fort_arty
+            }
+        }
+        else_if = {
+            limit = {
+                has_unit_type = unit_type:combat_unit_type_interwar_heavy_tank
+            }
+            change_local_variable = {
+                name = total_siege
+                add  = FAE_siege_interwar_heavy_tank
             }
         }
         else_if = {
@@ -57,11 +148,20 @@ FAE_se_calculate_siege = {
         }
         else_if = {
             limit = {
-                has_unit_type = unit_type:combat_unit_type_fort_buster_artillery
+                has_unit_type = unit_type:combat_unit_type_interwar_light_tanks
             }
             change_local_variable = {
                 name = total_siege
-                add  = FAE_siege_fort_arty
+                add  = FAE_siege_interwar_light_tank
+            }
+        }
+        else_if = {
+            limit = {
+                has_unit_type = unit_type:combat_unit_type_light_tanks
+            }
+            change_local_variable = {
+                name = total_siege
+                add  = FAE_siege_light_tank
             }
         }
         else_if = {

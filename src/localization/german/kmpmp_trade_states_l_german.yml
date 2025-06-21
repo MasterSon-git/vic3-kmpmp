@@ -1,0 +1,8 @@
+﻿l_german:
+ rule_kmpmp_trade_states_relations: "$trade_states$ Beziehung"
+
+ setting_kmpmp_trade_states_relations_ignore: "Ignorieren"
+ setting_kmpmp_trade_states_relations_ignore_desc: "Beziehung zu Zielland werden ignoriert."
+
+ setting_kmpmp_trade_states_relations_vanilla: "Vanilla"
+ setting_kmpmp_trade_states_relations_vanilla_desc: "Vanilla verhalten, Beziehung zu Zielland müssen mindestens $relations_neutral$ sein."

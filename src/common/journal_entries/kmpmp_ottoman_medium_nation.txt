@@ -1,0 +1,48 @@
+﻿kmpmp_je_ottoman_medium_nation = {
+    icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+    group = je_group_historical_content
+    
+    transferable = no
+
+    is_shown_when_inactive = {
+        c:TUR ?= ROOT
+    }
+
+    possible = {
+        custom_tooltip = {
+            text = finished_sick_man_tt
+            has_variable = sick_man_complete
+        }
+    }
+
+    complete = {
+        OR = {
+            year > 1886
+            hidden_trigger = {
+                has_variable = kmpmp_je_ottoman_medium_nation_completed
+            }
+        }
+    }
+
+    on_complete = {
+        set_variable = kmpmp_je_ottoman_medium_nation_completed
+
+        if = {
+            limit = {
+                has_modifier = kmpmp_buff_small_nation
+            }
+            remove_modifier = kmpmp_buff_small_nation
+        }
+
+        if = {
+            limit = {
+                NOT = {
+                    has_modifier = kmpmp_buff_medium_nation
+                }
+            }
+            add_modifier = kmpmp_buff_medium_nation
+        }
+    }
+
+    scripted_button = kmpmp_complete_je_ottoman_medium_nation_button
+}

@@ -1,5 +1,5 @@
 ﻿kmpmp_je_baby_boom = {
-    # Sweden, Portugal, Bolivia, Netherlands, Brazil add babyboom JE
+    # Sweden, Portugal, Netherlands, Bolivia, Brazil, Mexico add babyboom JE
     # req: has invented pharmaceuticals, has SOL of 10 avg on nation
     # grants: 10% birthrate for 10 years
 
@@ -11,21 +11,28 @@
             has_variable = kmpmp_je_baby_boom_completed
         }
         OR = {
-            c:SWE ?= ROOT
-            # c:SCA ?= ROOT
-            c:POR ?= ROOT
-            c:NET ?= ROOT
-            # c:UNL ?= ROOT
-            c:BOL ?= ROOT
-            c:BRZ ?= ROOT
+            c:SWE ?= ROOT # sweden
+            c:SCA ?= ROOT # scandinavia
+            c:POR ?= ROOT # portugal
+            c:NET ?= ROOT # netherlands
+            c:UNL ?= ROOT # united netherlands
+            c:BOL ?= ROOT # bolivia
+            c:FND ?= ROOT # federation des andes
+			c:PEU ?= ROOT # peru
+			c:PBC ?= ROOT # peru-bolivia
+            c:BRZ ?= ROOT # brazil
+            c:MEX ?= ROOT # mexico
         }
     }
 
-    possible = {
-        has_technology_researched = pharmaceuticals
-    }
+    # due to a bug, now it's always possible
+    # we had an issue when complete is true before possible that the je completes without applying the effect
+    # possible = {
+    #     has_technology_researched = pharmaceuticals
+    # }
 
     complete = {
+        has_technology_researched = pharmaceuticals
         average_sol >= 10
     }
 
@@ -34,7 +41,7 @@
 
         add_modifier = {
             name = kmpmp_baby_boom_modifier
-            years = 10
+            years = 5 #10
         }
     }
 

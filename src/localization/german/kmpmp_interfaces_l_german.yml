@@ -2,6 +2,33 @@
  KMPMP_PRESTIGE_HEADER: "[concept_prestige]"
  KMPMP_ZERO_BASED: "Basis Null"
  KMPMP_WAR_SUPPORT_FROM_POWER_BLOC_PRINCIPLES:0 "Unterstützung von [Concept('concept_power_bloc_principle', '$concept_power_bloc_principles$')]"
+ KMPMP_WAR_SUPPORT_FROM_TEC:0 "Support from [Concept('concept_technology', '$concept_technologies$')]"
+
+ combat_unit_type_interwar_mechanized_infantry: "Panzergrenadiere"
+ combat_unit_type_interwar_mechanized_infantry_desc: "Infanterie, die in leicht gepanzerten Fahrzeugen transportiert wird und Mobilität mit koordiniertem Panzereinsatz verbindet."
 
  combat_unit_type_fort_buster_artillery: "Bunkerbrecher Artillerie"
- combat_unit_type_fort_buster_artillery_desc: "Setzt überlegene Feuerkraft zur Zerstörung feindlicher Befestigungen ein."
+ combat_unit_type_fort_buster_artillery_desc: "Spezialisiert auf die Zerstörung feindlicher Befestigungen durch konzentrierten Beschuss mit großkalibriger Artillerie."
+
+ combat_unit_type_interwar_heavy_tank: "Durchbruchswagen"
+ combat_unit_type_interwar_heavy_tank_desc: "Frühe schwere Panzer mit starker Panzerung und Bewaffnung, entwickelt zum Durchbruch befestigter Stellungen."
+
+ combat_unit_type_interwar_light_tanks: "Spähpanzer"
+ combat_unit_type_interwar_light_tanks_desc: "Schnelle, leicht gepanzerte Fahrzeuge zur Aufklärung und für Flankenoperationen."
+
+ combat_unit_type_battleship_bismarck_class: "Schlachtschiff der Bismarck-Klasse"
+ combat_unit_type_battleship_bismarck_class_desc: "Ein mächtiges Schlachtschiff mit schwerer Panzerung und weitreichenden Geschützen, gebaut zur Vorherrschaft auf See."
+
+ combat_unit_type_heavy_cruiser: "Schwerer Kreuzer"
+ combat_unit_type_heavy_cruiser_desc: "Ein ausgewogener Kriegsschiffstyp mit starker Bewaffnung und Panzerung, geeignet für selbstständige Einsätze oder Flottenunterstützung."
+
+ combat_unit_type_long_range_submarine: "Langstrecken-U-Boot"
+ combat_unit_type_long_range_submarine_desc: "Für ausgedehnte Operationen konzipiert, können diese U-Boote feindliche Schifffahrtsrouten weit entfernt vom Heimathafen angreifen."
+
+ combat_unit_type_anti_submarine_destroyer: "U-Jagd-Zerstörer"
+ combat_unit_type_anti_submarine_destroyer_desc: "Mit Sonar und Wasserbomben ausgestattet, um feindliche U-Boote aufzuspüren und zu bekämpfen."
+
+ combat_unit_type_interwar_carrier: "Flottenflugzeugträger"
+ combat_unit_type_interwar_carrier_desc: "Als Großkampfschiffe konzipiert, ermöglichen sie den Start zahlreicher Flugzeuge für offensive Operationen auf See."
+
+ kmpmp_power_bloc_mandate_progress_by_player_boost_expand_influence_tooltip: "+3 [concept_power_bloc_mandate_progress]"
