@@ -1,0 +1,31 @@
+﻿@third = @[1/3]
+
+# austrian crown
+sub_AUS_tc_crown = {
+	colored_emblem = {
+		texture = "ce_crown_aus.dds"
+		color1 = "golden"
+		color2 = "azure"
+		color3 = "white"
+	}
+}
+
+# hungarian crown
+sub_HUN_tc_crown = {
+	colored_emblem = {
+		texture = "ce_crown_hun.dds"
+		color1 = "golden"
+		color2 = "blue"
+		color3 = "red"
+	}
+}
+
+# croatian crown
+sub_CRO_tc_crown = {
+	colored_emblem = {
+		texture = "ce_crown_cro.dds"
+		color1 = "golden"
+		color2 = "blue"
+		color3 = "red"
+	}
+}

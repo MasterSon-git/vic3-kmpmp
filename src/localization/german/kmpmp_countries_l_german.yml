@@ -1,4 +1,13 @@
 ﻿l_german:
+ dyn_c_three-crowns:0 "Drei Kronen"
+ dyn_c_three-crowns_adj:0 "$dyn_c_three-crowns$
+ dyn_c_three-crowns_NOM:0 "der $dyn_c_three-crowns$"
+ dyn_c_three-crowns_GEN:0 "der $dyn_c_three-crowns$"
+ dyn_c_three-crowns_DAT:0 "den $dyn_c_three-crowns$"
+ dyn_c_three-crowns_AKK:0 "die $dyn_c_three-crowns$"
+ dyn_c_three-crowns_VON:0 "von den $dyn_c_three-crowns$"
+ dyn_c_three-crowns_IN:0 "in $dyn_c_three-crowns$"
+ dyn_c_three-crowns_NACH:0 "nach $dyn_c_three-crowns$"
  P01:0 "Parther"
  P01_ADJ:0 "Parthisch"
  P01_NOM:0 "Parther"

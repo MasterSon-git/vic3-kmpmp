@@ -1,0 +1,3 @@
+﻿colors = {
+    three_crowns_red = rgb { 175 17 17 }
+}
