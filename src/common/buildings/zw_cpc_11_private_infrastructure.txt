@@ -1,5 +1,44 @@
 ﻿############ PRIVATE INFRASTRUCTURE
 
+building_port = {
+	building_group = bg_private_infrastructure
+	city_type = port
+	icon = "gfx/interface/icons/building_icons/building_port.dds"
+
+	port = yes
+
+	unlocking_technologies = { navigation }
+
+	production_method_groups = {
+		pmg_base_building_port
+	}
+
+	required_construction = construction_cost_medium
+
+	terrain_manipulator = urban_port
+
+	potential = {
+		is_coastal = yes
+	}
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+
+	can_build_government = {
+		zw_trigger_gov_investment = {
+			building_1 = building_port
+			bgs_1 = industry
+		}
+	}
+
+	can_build_private = {
+		zw_trigger_autonom_investment_infrastructure = {
+			building_1 = building_port
+		}
+	}
+}
+
 building_railway = {
 	building_group = bg_private_infrastructure	
 	icon = "gfx/interface/icons/building_icons/building_railway.dds"
@@ -139,24 +178,60 @@ building_railway = {
 		}
 	}
 	
-	should_auto_expand = {
-		zw_building_railway_auto_expand_trigger = yes
-	}
 	ownership_type = self
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_railways.dds"
 
+	should_auto_expand = { 
+		zw_trigger_auto_expand_building_railway = yes
+	}
+
 	can_build_government = {
-		zw_gov_investment_trigger = {
+		zw_trigger_gov_investment = {
 			building_1 = building_railway
 			bgs_1 = industry
 		}
 	}
 
 	can_build_private = {
-		zw_autonom_investment_trigger_railway = {
+		zw_trigger_autonom_investment_infrastructure_railway = {
 			building_1 = building_railway
-			var_disallowed_building = building_railway
+		}
+	}
+}
+
+building_trade_center = {
+	building_group = bg_trade
+	city_type = city
+	levels_per_mesh = 10
+
+	lens = infrastructure
+
+	required_construction = construction_cost_very_low
+
+	icon = "gfx/interface/icons/building_icons/building_trade_center.dds"
+
+	production_method_groups = {
+		pmg_base_building_trade_center
+		pmg_trade_quantity_trade_center
+	}
+
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+
+	can_build_government = {
+		trade_center_construction_allowed = yes
+		zw_trigger_gov_investment = {
+			building_1 = building_trade_center
+			bgs_1 = industry
+		}
+	}
+
+	can_build_private = {
+		trade_center_construction_allowed = yes
+		zw_trigger_autonom_investment_infrastructure = {
+			building_1 = building_trade_center
 		}
 	}
 }
