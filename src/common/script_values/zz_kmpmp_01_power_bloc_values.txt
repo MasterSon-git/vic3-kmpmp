@@ -67,7 +67,7 @@ power_bloc_leverage_gain = {
 	}
 	if = {
 		limit = {
-			has_treaty_port_in_country = scope:target
+			has_treaty_port_in_market = scope:target.market
 		}
 		add = {
 			value = 200

@@ -1,4 +1,5 @@
 ﻿l_german:
- TRANSFER_RESULT_FORMATION: "[SelectLocalization(StagedFormation.HasValidFormation, 'TRANSFER_RESULT_HAS_FORMATION', 'TRANSFER_RESULT_NO_FORMATION')]"
  GOODS_PRICE_DESC_FIXED: "Die Ware „[GOODS.GetTextIcon][GOODS.GetName]“ hat einen Festpreis von @money![GOODS.GetBasePrice|1v], der sich nie ändern wird."
  SET_DECREE_IN_STATE_TOOLTIP: "#header „[DecreeType.GetName]“ in [State.GetName] erteilen#!\n$DESC$"
+ # this is new in 1.9.* test this
+ #SET_DECREE_IN_STATE_TOOLTIP: "#header „[Decree.GetName|U]“ in „[State.GetName|U]“ erteilen#!\n$TOOLTIP_DELIMITER$\n$DESC$"

@@ -45,18 +45,19 @@
 	
 	state_market_access_price_impact = 0.65 #0.75
 	
-	country_company_throughput_bonus_add = 0.25
+	country_company_throughput_bonus_add = 0.2
 	country_company_construction_efficiency_bonus_add = 0.5
 	
 	country_max_weekly_construction_progress_add = 10
-	
-	country_free_trade_routes_add = 5
 	
 	military_formation_organization_gain_add = 0.5 # 200 days to get max organization
 	
 	state_urbanization_per_level_add = 100
 	
 	unit_experience_gain_add = 0.5
+
+	state_trade_advantage_from_capacity_add = 0.0005
+	state_max_trade_advantage_from_capacity_add = 0.2
 }
 
 in_default = {
@@ -93,6 +94,7 @@ unincorporated_state = {
 	building_group_bg_government_throughput_add = -0.1
 	building_group_bg_military_throughput_add = -0.1		
 	state_market_access_price_impact = -0.05 #-0.1
+	state_construction_mult = -0.33
 }
 
 # Excess AUT reduces enactment time by -25% at 2x production to usage

@@ -15,9 +15,9 @@
 	
 	institution = institution_home_affairs
 	institution_modifier = {
-		country_suppression_attraction_mult = -0.075 #-0.05
-		country_bolster_attraction_mult = 0.075 #kmpmp
-		political_movement_radicalism_add = -0.1
+		country_suppression_attraction_factor = -0.075 #-0.05
+		country_bolster_attraction_factor = 0.075 #kmpmp
+		political_movement_radicalism_add = -0.1 #-0.05
 		# kmpmp
 		# - no longer supported with 1.8: 
 		# state_radicals_from_discrimination_mult = -0.05

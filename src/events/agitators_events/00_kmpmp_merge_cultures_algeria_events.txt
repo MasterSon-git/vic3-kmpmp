@@ -67,7 +67,7 @@ algeria_events.1 = {
 		ig:ig_armed_forces = {
 			add_modifier = {
 				name = vanquished_barbary
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		add_loyalists = {
@@ -120,7 +120,7 @@ algeria_events.1 = {
 			}
 			add_modifier = {
 				name = algerian_migration
-				months = long_modifier_time
+				days = long_modifier_time
 			}
 		}
 		random_scope_state = {
@@ -129,7 +129,7 @@ algeria_events.1 = {
 			}
 			add_modifier = {
 				name = algerian_migration
-				months = long_modifier_time
+				days = long_modifier_time
 			}
 		}
 		random_scope_state = {
@@ -138,7 +138,7 @@ algeria_events.1 = {
 			}
 			add_modifier = {
 				name = algerian_migration
-				months = long_modifier_time
+				days = long_modifier_time
 			}
 		}
 		s:STATE_EAST_SAHARA = {
@@ -504,7 +504,7 @@ algeria_events.8 = {
 		}
 		add_modifier = {
 			name = barbary_pirates_modifier	
-			months = very_long_modifier_time
+			days = very_long_modifier_time
 		}
 		s:STATE_EAST_SAHARA = {
 			add_claim = c:ALD
@@ -554,7 +554,7 @@ algeria_events.8 = {
 		}
 		add_modifier = {
 			name = barbary_pirates_modifier	
-			months = very_long_modifier_time
+			days = very_long_modifier_time
 		}
 		add_loyalists = {
 			value = 0.2
@@ -623,7 +623,7 @@ algeria_events.8 = {
 		# remove_primary_culture = cu:maghrebi
 		add_modifier = {
 			name = barbary_pirates_modifier
-			months = very_long_modifier_time
+			days = very_long_modifier_time
 		}
 		s:STATE_TUNISIA = {
 			add_claim = c:ALD
@@ -652,7 +652,7 @@ algeria_events.8 = {
 		ruler = {
 			add_modifier = {
 				name = modern_jugurtha	
-				months = long_modifier_time
+				days = long_modifier_time
 			}
 		}
 		add_loyalists = {

@@ -15,9 +15,9 @@ prussia_form_ngf = {
 				NOT = { exists = c:GER }
 			}
 			AND = {
-			exists = c:PRU
-			THIS = c:PRU
-			has_global_variable = aggressive_austria_var
+				exists = c:PRU
+				THIS = c:PRU
+				has_global_variable = aggressive_austria_var
 			}
 		}
 		# NOT = {
@@ -131,6 +131,6 @@ prussia_form_ngf = {
 	}
 
 	ai_chance = {
-		base = 10
+		value = 10
 	}
 }

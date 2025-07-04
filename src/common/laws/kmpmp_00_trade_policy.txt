@@ -9,22 +9,16 @@
 		international_trade
 	}
 
-	tariff_modifier_no_priority = {
-		tariff_import_add = 0.15
-		tariff_export_add = 0.05
-	}
-
-	tariff_modifier_export_priority = {
-		tariff_import_add = 0.45
-	}
-
-	tariff_modifier_import_priority = {
-		tariff_export_add = 0.15
-	}
-
 	modifier = {
-		country_trade_route_cost_mult = -0.25
-		country_trade_route_quantity_mult = 0.25
+		state_tariff_import_add = 0.50
+		state_tariff_export_add = 0.20
+		state_subvention_export_add = 0.50
+		state_subvention_import_add = 0.20
+		state_import_advantage_mult = -0.25
+		state_export_advantage_mult = 0.25
+		# kmpmp TODO
+		# country_trade_route_cost_mult = -0.25
+		# country_trade_route_quantity_mult = 0.25
 	}
 
 	# Don't change back to mercantilism once we have protectionism or free trade
@@ -64,22 +58,13 @@ law_protectionism = {
 		stock_exchange
 	}
 
-	tariff_modifier_no_priority = {
-		tariff_export_add = 0.10
-		tariff_import_add = 0.10
-	}
-
-	tariff_modifier_export_priority = {
-		tariff_import_add = 0.30
-	}
-
-	tariff_modifier_import_priority = {
-		tariff_export_add = 0.30
-	}
-
 	modifier = {
+		state_tariff_import_add = 0.50
+		state_tariff_export_add = 0.50
+		state_subvention_export_add = 0.50
+		state_subvention_import_add = 0.50
 		country_leverage_resistance_mult = 0.25
-		country_max_companies_add = 1 #kmpmp
+		# country_max_companies_add = 1 #kmpmp
 	}
 
 	ai_enact_weight_modifier = { #Petitions
@@ -112,7 +97,7 @@ law_free_trade = {
 	}	
 	
 	unlocking_technologies = {
-		stock_exchange
+		international_trade
 	}
 	
 	on_enact = {
@@ -127,9 +112,13 @@ law_free_trade = {
 	}
 	
 	modifier = {
-		country_trade_route_competitiveness_mult = 0.5
-		country_trade_route_quantity_mult = 0.5
-		# country_trade_route_cost_mult = -0.5 # kmpmp TODO: still valid to remove this?
+		state_subvention_export_add = 0.50
+		state_subvention_import_add = 0.50
+		state_trade_advantage_mult = 0.25
+		# TODO:
+		# country_trade_route_competitiveness_mult = 0.5
+		# country_trade_route_quantity_mult = 0.5
+		# # country_trade_route_cost_mult = -0.5 # kmpmp TODO: still valid to remove this?
 		country_leverage_resistance_mult = -0.25
 	}
 

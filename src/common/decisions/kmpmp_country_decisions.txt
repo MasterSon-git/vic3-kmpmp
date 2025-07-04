@@ -293,6 +293,6 @@ kmpmp_reino_unido_begin = {
 	}
 
 	ai_chance = {
-        base = 0	
+        value = 0
     }
 }

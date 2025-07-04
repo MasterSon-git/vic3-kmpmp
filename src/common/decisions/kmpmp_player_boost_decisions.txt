@@ -21,7 +21,7 @@
     }
 
     ai_chance = {
-        base = 0	
+        value = 0	
     }
 }
 
@@ -48,7 +48,7 @@ kmpmp_player_boost_imperialism_oversea_empire_decision = {
     }
 
     ai_chance = {
-        base = 0	
+        value = 0	
     }
 }
 
@@ -85,7 +85,7 @@ kmpmp_player_boost_military_industrial_complex_decision = {
     }
 
     ai_chance = {
-        base = 0	
+        value = 0	
     }
 }
 
@@ -112,7 +112,7 @@ kmpmp_player_boost_state_capitalism_decision = {
     }
 
     ai_chance = {
-        base = 0	
+        value = 0	
     }
 }
 
@@ -139,7 +139,7 @@ kmpmp_player_boost_autarky_decision = {
     }
 
     ai_chance = {
-        base = 0	
+        value = 0	
     }
 }
 
@@ -171,7 +171,7 @@ kmpmp_player_boost_social_welfare_state_decision = {
     }
 
     ai_chance = {
-        base = 0	
+        value = 0	
     }
 }
 
@@ -203,7 +203,7 @@ kmpmp_player_boost_corporative_socialism_decision = {
     }
 
     ai_chance = {
-        base = 0	
+        value = 0	
     }
 }
 
@@ -235,7 +235,7 @@ kmpmp_player_boost_military_police_state_decision = {
     }
 
     ai_chance = {
-        base = 0	
+        value = 0	
     }
 }
 
@@ -267,7 +267,7 @@ kmpmp_player_boost_tycoon_capitalism_decision = {
     }
 
     ai_chance = {
-        base = 0	
+        value = 0	
     }
 }
 
@@ -315,7 +315,7 @@ kmpmp_player_boost_rhine_capitalism_decision = {
     }
 
     ai_chance = {
-        base = 0	
+        value = 0	
     }
 }
 
@@ -354,7 +354,7 @@ kmpmp_player_boost_unite_the_workers_of_the_world_decision = {
     }
 
     ai_chance = {
-        base = 0	
+        value = 0	
     }
 }
 
@@ -386,6 +386,6 @@ kmpmp_player_boost_expand_influence_decision = {
     }
 
     ai_chance = {
-        base = 0	
+        value = 0	
     }
 }

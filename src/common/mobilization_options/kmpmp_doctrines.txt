@@ -3,7 +3,7 @@
 	possible = {
 		market ?= {
 			mg:paper ?= {
-				market_goods_sell_orders > 0
+				has_potential_supply = yes
 			}
 		}
 	}
@@ -30,7 +30,7 @@ mobilization_option_grand_battleplan = {
 	possible = {
 		market ?= {
 			mg:paper ?= {
-				market_goods_sell_orders > 0
+				has_potential_supply = yes
 			}
 		}
 	}
@@ -57,7 +57,7 @@ mobilization_option_superior_firepower = {
 	possible = {
 		market ?= {
 			mg:ammunition ?= {
-				market_goods_sell_orders > 0
+				has_potential_supply = yes
 			}
 		}
 	}
@@ -84,7 +84,7 @@ mobilization_option_mass_assault = {
 	possible = {
 		market ?= {
 			mg:paper ?= {
-				market_goods_sell_orders > 0
+				has_potential_supply = yes
 			}
 		}
 	}

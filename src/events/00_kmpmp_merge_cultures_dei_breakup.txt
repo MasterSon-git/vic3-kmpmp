@@ -20,7 +20,7 @@ dei_breakup.1 = {
 	
 	duration = 3
 	
-	cooldown = { months = very_long_modifier_time }
+	cooldown = { days = very_long_modifier_time }
 
 	trigger = {
 		c:DEI ?= this
@@ -187,7 +187,7 @@ alk_breakup.1 = {
 	
 	duration = 3
 	
-	cooldown = { months = very_long_modifier_time }
+	cooldown = { days = very_long_modifier_time }
 
 	trigger = {
 		c:ALK ?= this
@@ -363,7 +363,7 @@ alk_breakup.1 = {
 		custom_tooltip = alaskan_declaration_of_independence_tt
 		add_modifier = {
 			name = modifier_alyaska_republic
-			months = long_modifier_time
+			days = long_modifier_time
 		}
 		ig:ig_industrialists = {
 			remove_ideology = ideology_colonialist
@@ -431,11 +431,42 @@ alk_breakup.1 = {
 			limit = {
 				exists = c:ATB
 			}
-			set_country_type = recognized
-			play_as = c:ATB
-			c:ATB ?= {
-				annex = c:ALK
+			custom_tooltip = {
+				text = inherit_characters_from_athabaska_tt
+				every_scope_character = { # Culls Russian IG leaders
+					limit = {
+						has_role = politician
+					}
+					kill_character = {
+						hidden = yes
+					}
+				}
+				c:ATB = {
+					every_scope_character = { # Replaces them with Athabaskan IG leaders
+						transfer_character = c:ALK
+						if = {
+							limit = {
+								has_role = politician
+							}
+							set_as_interest_group_leader = yes
+						}
+					}
+				}
+				ruler = {
+					exile_character = yes
+				}
+				ordered_scope_character = { # Promotes the most influential Athabaskan IG leader to ruler
+					limit = {
+						has_role = politician
+					}
+					order_by = this.interest_group.ig_clout
+					set_character_as_ruler = yes
+				}
+				annex = c:ATB
 			}
+			change_tag = ATB
+			add_primary_culture = cu:cherokee #cu:athabaskan
+			set_country_type = recognized
 		}
 		else = {
 			change_tag = ATB

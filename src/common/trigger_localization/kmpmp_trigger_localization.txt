@@ -1,7 +1,8 @@
-﻿any_scope_state_all_in_state_region = {
-    global = TRIGGER_ANY_SCOPE_STATE_ALL_IN_STATE_REGION
-    global_not = TRIGGER_ANY_SCOPE_STATE_ALL_IN_STATE_REGION_NOT
-}
+﻿# added in vanilla
+# any_scope_state_all_in_state_region = {
+#     global = TRIGGER_ANY_SCOPE_STATE_ALL_IN_STATE_REGION
+#     global_not = TRIGGER_ANY_SCOPE_STATE_ALL_IN_STATE_REGION_NOT
+# }
 
 any_scope_building_count_in_state = {
     global = TRIGGER_ANY_SCOPE_BUILDING_COUNT_IN_STATE

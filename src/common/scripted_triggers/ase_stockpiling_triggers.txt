@@ -68,7 +68,7 @@ ase_can_market_stockpile_goods = {
     mg:$goods$ = {
         OR = {
             market_goods_buy_orders > 0
-            market_goods_sell_orders > 0
+            has_potential_supply = yes
         }
     }
 }

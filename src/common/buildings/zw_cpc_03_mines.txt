@@ -20,13 +20,12 @@
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
 
 	can_build_private = {
-		zw_autonom_investment_trigger_resource = {
+		zw_trigger_autonom_investment_resource = {
 			building_1 = building_coal_mine
-			var_disallowed_building = mines
 		}
 	}
 }
- 
+
 building_iron_mine = {
 	building_group = bg_iron_mining
 	icon = "gfx/interface/icons/building_icons/iron_mine.dds"
@@ -34,7 +33,7 @@ building_iron_mine = {
 	levels_per_mesh = 5
 	required_construction = construction_cost_medium
 	terrain_manipulator = mining
-	
+
 	unlocking_technologies = {
 		shaft_mining
 	}
@@ -50,9 +49,8 @@ building_iron_mine = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
 
 	can_build_private = {
-		zw_autonom_investment_trigger_resource = {
+		zw_trigger_autonom_investment_resource = {
 			building_1 = building_iron_mine
-			var_disallowed_building = mines
 		}
 	}
  }
@@ -79,9 +77,8 @@ building_lead_mine = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
 
 	can_build_private = {
-		zw_autonom_investment_trigger_resource = {
+		zw_trigger_autonom_investment_resource = {
 			building_1 = building_lead_mine
-			var_disallowed_building = mines
 		}
 	}
  }
@@ -108,13 +105,12 @@ building_sulfur_mine = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
 
 	can_build_private = {
-		zw_autonom_investment_trigger_resource = {
+		zw_trigger_autonom_investment_resource = {
 			building_1 = building_sulfur_mine
-			var_disallowed_building = mines
 		}
 	}
  }
- 
+
 building_gold_mine = {
 	building_group = bg_gold_mining
 	icon = "gfx/interface/icons/building_icons/gold_mine.dds"
@@ -122,11 +118,11 @@ building_gold_mine = {
 	levels_per_mesh = 5
 	required_construction = construction_cost_medium
 	terrain_manipulator = mining
-	
+
 	unlocking_technologies = {
 		prospecting
 	}
-	
+
 	ai_value = 5000 # Gold mines are very nice for minting revenue and guaranteed profits
 	ai_nationalization_desire = 1.0 # AI should be keen on nationalizing these
 
@@ -141,10 +137,8 @@ building_gold_mine = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_mining.dds"
 
 	can_build_private = {
-		zw_autonom_investment_trigger_resource = {
+		zw_trigger_autonom_investment_resource = {
 			building_1 = building_gold_mine
-			var_disallowed_building = mines
 		}
 	}
 }
-

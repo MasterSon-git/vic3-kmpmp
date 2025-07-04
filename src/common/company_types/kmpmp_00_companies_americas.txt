@@ -1,0 +1,520 @@
+﻿# Fundidora de Fierro y Acero de Monterrey, S.A.
+company_fundidora_monterrey = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/fundidora_monterrey.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_RIO_GRANDE }
+
+	building_types = {
+		building_steel_mills
+		building_coal_mine
+	}
+
+	extension_building_types = {
+		building_iron_mine
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_steel
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_mexico
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_RIO_GRANDE
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_RIO_GRANDE
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_steel_mills
+				level >= 5
+			}
+		}
+		has_technology_researched = bessemer_process
+	}
+
+	prosperity_modifier = {
+		building_railway_throughput_add = 0.15 #0.05
+		building_iron_mine_throughput_add = 0.1
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_RIO_GRANDE
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_steel_mills = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_RIO_GRANDE
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Compañía Mexicana de Petróleo El Águila SA
+company_el_aguila = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/el_aguila.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	
+	flavored_company = yes
+	
+	building_types = {
+		building_oil_rig
+		building_lead_mine #kmpmp
+		building_dye_plantation #kmpmp
+	}
+
+    extension_building_types = {
+		building_power_plant
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_mexico
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				region = sr:region_mexico
+			}
+		}
+	}	
+	
+	possible = {
+		has_technology_researched = pumpjacks
+		any_scope_state = {
+			region = sr:region_mexico
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_oil_rig
+				level >= 5
+			}
+			is_coastal = yes
+		}
+	}
+	
+	prosperity_modifier = {
+		building_glassworks_throughput_add = 0.1 #kmpmp
+		country_convoys_capacity_mult = 0.2 #0.15
+		interest_group_ig_industrialists_approval_add = 3
+	}
+
+	ai_will_do = {
+		has_technology_researched = pumpjacks
+		any_scope_state = {
+			region = sr:region_mexico
+			is_incorporated = yes
+			is_coastal = yes
+			has_potential_resource = bg_oil_extraction
+		}
+	}
+
+	ai_construction_targets = {
+		building_oil_rig = {
+			level = 5
+			state_trigger = {
+				region = sr:region_mexico
+				is_incorporated = yes
+				is_coastal = yes
+			}
+		}
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Compañía de Salitres y Ferrocarril de Antofagasta
+company_csfa = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/bolivia_csfa.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_ANTOFAGASTA }
+
+	building_types = {
+		building_sulfur_mine
+		building_railway
+	}
+
+	extension_building_types = {
+		building_iron_mine
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_andes
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ANTOFAGASTA
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = railways
+		any_scope_state = {
+			state_region = s:STATE_ANTOFAGASTA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_sulfur_mine
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		state_infrastructure_mult = 0.1 #0.05
+		interest_group_ig_industrialists_approval_add = 3
+	}
+
+    ai_will_do = {
+		has_technology_researched = railways
+		any_scope_state = {
+			state_region = s:STATE_ANTOFAGASTA
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_sulfur_mine = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_ANTOFAGASTA
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Bunge & Born
+company_bunge_born = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/argentina_bunge_y_born.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
+
+	flavored_company = yes
+
+	building_types = {
+		building_wheat_farm
+		building_maize_farm
+		building_food_industry
+	}
+
+	extension_building_types = {
+		building_chemical_plants
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_groceries
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_la_plata
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				region = sr:region_la_plata
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			region = sr:region_la_plata
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_wheat_farm
+					is_building_type = building_maize_farm
+				}
+				level >= 5
+			}
+			count >= 3
+		}
+	}
+
+	prosperity_modifier = {
+		building_livestock_ranch_throughput_add = 0.1
+        # interest_group_ig_rural_folk_pop_attraction_mult = 0.2
+		building_tooling_workshops_throughput_add = 0.15 #0.1
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			region = sr:region_la_plata
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_wheat_farm = {
+			level = 5
+			state_trigger = {
+				region = sr:region_la_plata
+				is_incorporated = yes
+			}
+		}
+		building_maize_farm = {
+			level = 5
+			state_trigger = {
+				region = sr:region_la_plata
+				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# La Rosada
+company_la_rosada = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/paraguay_la_rosada.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_BAJO_PARAGUAY }
+
+	building_types = {
+		building_steel_mills
+		building_arms_industry
+		building_artillery_foundries
+	}
+
+	extension_building_types = {
+		building_iron_mine
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_steel
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_la_plata
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BAJO_PARAGUAY
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = shell_gun
+		any_scope_state = {
+			state_region = s:STATE_BAJO_PARAGUAY
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_arms_industry
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		unit_defense_mult = 0.05
+		building_iron_mine_throughput_add = 0.15 #0.1
+	}
+
+    ai_will_do = {
+		has_technology_researched = shell_gun
+		any_scope_state = {
+			state_region = s:STATE_BAJO_PARAGUAY
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_arms_industry = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_BAJO_PARAGUAY
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Peruvian Amazon Company
+company_peruvian_amazon = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/peru_peruvian_amazon_company.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_PASTAZA }
+
+	building_types = {
+		building_rubber_plantation
+		building_tooling_workshops # kmpmp
+	}
+
+    extension_building_types = {
+		building_logging_camp
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_andes
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_PASTAZA
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = rubber_mastication
+		any_scope_state = {
+			state_region = s:STATE_PASTAZA
+			any_scope_building = {
+				is_building_type = building_rubber_plantation
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		state_loyalists_from_political_movements_mult = 0.1
+		# building_group_bg_rubber_mortality_mult = 0.1
+		# kmpmp
+		country_loyalism_increases_full_acceptance_mult = 0.1
+		country_loyalism_increases_second_rate_citizen_mult = 0.1
+		country_loyalism_increases_open_prejudice_mult = 0.1
+		country_loyalism_increases_cultural_erasure_mult = 0.1
+		country_loyalism_increases_violent_hostility_mult = 0.1
+
+		building_steel_mills_throughput_add = 0.1
+	}
+
+	ai_will_do = {
+		has_technology_researched = rubber_mastication
+		any_scope_state = {
+			state_region = s:STATE_PASTAZA
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_rubber_plantation = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_PASTAZA
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Kablin Irmãos & Cia.
+company_kablin = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/brazil_kablin_irmaos_and_cia.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
+	
+	flavored_company = yes
+	
+	building_types = {
+		building_paper_mills
+		building_logging_camp
+	}
+
+	extension_building_types = {
+		building_sulfur_mine
+	}
+
+	possible_prestige_goods = {
+		prestige_good_rosewood
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_brazil
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				region = sr:region_brazil
+			}
+		}
+	}		
+	
+	possible = {
+		has_technology_researched = mechanical_tools
+		any_scope_state = {
+			region = sr:region_brazil
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_paper_mills
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_arts_academy_throughput_add = 0.2 #kmpmp
+		building_tooling_workshops_throughput_add = 0.1
+		state_infrastructure_from_population_max_add = 15
+	}
+
+	ai_will_do = {
+		has_technology_researched = mechanical_tools
+		any_scope_state = {
+			region = sr:region_brazil
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_paper_mills = {
+			level = 5
+			state_trigger = {
+				region = sr:region_brazil
+				is_incorporated = yes
+			}
+		}
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}

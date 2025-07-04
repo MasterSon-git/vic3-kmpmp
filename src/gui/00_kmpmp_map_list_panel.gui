@@ -1,0 +1,632 @@
+# COPY-PASTED FOR NOW
+@panel_width_minus_10 = 530			# used to be 450
+@panel_width = 540  				# used to be 460
+@panel_width_half = 270				# used to be 230
+@panel_width_plus_10 = 550  		# used to be 470
+@panel_width_plus_14 = 554			# used to be 474
+@panel_width_plus_14_half = 277		# used to be 237
+@panel_width_plus_20 = 560			# used to be 480
+@panel_width_plus_30 = 570			# used to be 490
+@panel_width_plus_70 = 610			# used to be 530
+
+types map_list_panel_types {
+	
+	type construction_interaction_item_condensed = map_list_panel_item_interaction {
+		# this is very expensive for big countries like China
+		max_update_rate = 32
+
+		blockoverride "name_button_visibility" {
+			visible = yes
+		}
+
+		blockoverride "name_button_size" {
+			size = { 120 40 }
+		}
+
+		blockoverride "name_button_properties" {
+
+			datacontext = "[MapListOption.AccessBuildingData.AccessState]"
+
+			onmousehierarchyenter = "[AccessHighlightManager.HighlightState(State.Self)]"
+			onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+
+			datacontext = "[MapListOption.AccessBuildingData.AccessBuilding]"
+			onclick = "[InformationPanelBar.OpenBuildingDetailsPanel(Building.AccessSelf)]"
+			enabled = "[Building.IsValid]"
+			onrightclick = "[RightClickMenuManager.ShowForBuilding(Building.AccessSelf)]"
+
+			tooltipwidget = {
+				FancyTooltip_Building = {}
+			}
+
+			hbox = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+
+				margin = {10 0}
+				spacing = 5
+
+				textbox = {
+					text = "STATE_NAME_WITH_FOREIGN_FLAG_NO_FORMAT"
+
+					layoutpolicy_horizontal = expanding
+					align = nobaseline
+					elide = right
+					fontsize_min = 12
+				}
+
+				icon = {
+					visible = "[And(State.IsUnincorporated, Not(State.IsIncorporating))]"
+					size = { 25 25 }
+					texture = "gfx/interface/icons/state_status_icons/unincorporated_state.dds"
+				}
+			}		
+			
+		}
+
+		blockoverride "values" {
+
+			flowcontainer = {
+				parentanchor = vcenter
+				direction = vertical
+				datacontext = "[MapListOption.AccessBuildingData.AccessBuilding]"
+				margin_right = 5
+				margin_left = 7
+				margin_bottom = 3
+				using = building_size_tooltip_with_ownership
+				using = tooltip_above
+
+				textbox = {
+					size = { 58 23 }
+					align = nobaseline
+					text = "BUILDING_SIZE"
+					elide = right
+					using = building_size_choose_alpha
+					fontsize_min = 12
+				}
+
+				widget = {
+					size = { 58 5 }
+					visible = "[And(Building.IsActive, NotEqualTo_CFixedPoint(Building.GetEmploymentPercentage, '(CFixedPoint)1'))]"
+
+					default_progressbar_horizontal = {
+						tooltip = "TOOLTIP_BUILDING_EMPLOYMENT"
+						size = { 58 2 }
+						parentanchor = bottom
+
+						blockoverride "values" {
+							value = "[FixedPointToFloat(Building.GetEmploymentPercentage)]"
+							min = 0
+							max = 1
+						}
+					}
+				}
+			}
+
+			### kmpmp SETTING - JOBSEEKERS
+			container = {
+				datacontext = "[MapListOption.GetBuildingData.GetState]"
+				visible = "[GetVariableSystem.HasValue('show_jobseekers', 'true')]"
+				parentanchor = vcenter
+
+				### SETTING - JOBSEEKERS
+				textbox = {
+					# datacontext = "[MapListOption.GetBuildingData.GetState]"
+					margin = { 5 0 }
+					# size = { 85 25 }
+					size = { 100 25 }
+					align = right|nobaseline
+					text = "MAP_LIST_STATE_AVAILABLE_LABOR"
+					parentanchor = vcenter
+					elide = right
+					tooltip = "STATE_AVAILABLE_LABOR_TOOLTIP"
+					# visible = "[GetVariableSystem.HasValue('show_jobseekers', 'true')]"
+				}
+
+				button_icon_round_action = {
+					visible = "[GreaterThanOrEqualTo_int64(State.GetNumUnemployedWorkingAdults, '(int64)1499')]"
+					raw_tooltip = "[concept_unemployed]: #variable [State.GetNumUnemployedWorkingAdults|D]#!"
+					parentanchor = left|vcenter
+
+					blockoverride "size" {
+						size = { 25 25 }
+					}
+
+					block "onclick" {
+						onclick = "[GetVariableSystem.Set('show_jobseekers', 'false')]"
+						onclick = "[GetVariableSystem.Set('show_unemployed', 'true')]"
+						onclick = "[GetVariableSystem.Set('hide_peasants', 'true')]"
+					}
+
+					blockoverride "icon" {
+						texture = "gfx/interface/buttons/button_icons/unemployed.dds"
+					}
+				}
+			}
+
+			### kmpmp SETTING - PEASANTS
+			container = {
+				datacontext = "[MapListOption.GetBuildingData.GetState]"
+				visible = "[Not(GetVariableSystem.HasValue('hide_peasants', 'true'))]"
+				parentanchor = vcenter
+
+				### SETTING - PEASANTS
+				textbox = {
+					# datacontext = "[MapListOption.GetBuildingData.GetState]"
+					margin = { 5 0 }
+					# size = { 85 25 }
+					size = { 100 25 }
+					align = right|nobaseline
+					text = "[State.GetNumSubsistenceWorkingAdults|Dv] [SelectLocalization(State.HasInsufficientQualificationsForAvailablePositions, '@red_cross!', '@green_checkmark!')]"
+					parentanchor = vcenter
+					elide = right
+					tooltip = "STATE_AVAILABLE_LABOR_TOOLTIP"
+					# visible = "[Not(GetVariableSystem.HasValue('hide_peasants', 'true'))]"
+				}
+
+				button_icon_round_action = {
+					visible = "[GreaterThanOrEqualTo_int64(State.GetNumUnemployedWorkingAdults, '(int64)1499')]"
+					raw_tooltip = "[concept_unemployed]: #variable [State.GetNumUnemployedWorkingAdults|D]#!"
+					parentanchor = left|vcenter
+
+					blockoverride "size" {
+						size = { 25 25 }
+					}
+
+					block "onclick" {
+						onclick = "[GetVariableSystem.Set('show_jobseekers', 'false')]"
+						onclick = "[GetVariableSystem.Set('show_unemployed', 'true')]"
+						onclick = "[GetVariableSystem.Set('hide_peasants', 'true')]"
+					}
+
+					blockoverride "icon" {
+						texture = "gfx/interface/buttons/button_icons/unemployed.dds"
+					}
+				}
+			}
+
+			### SETTING - UNEMPLOYED
+			textbox = {
+				datacontext = "[MapListOption.GetBuildingData.GetState]"
+				margin = { 5 0 }
+				# size = { 85 25 }
+				size = { 100 25 }
+				align = right|nobaseline
+				raw_text = "#variable [State.GetNumUnemployedWorkingAdults|D]#! [SelectLocalization(State.HasInsufficientQualificationsForAvailablePositions, '@red_cross!', '@green_checkmark!')]"
+				parentanchor = vcenter
+				elide = right
+				tooltip = "STATE_AVAILABLE_LABOR_TOOLTIP"
+				visible = "[GetVariableSystem.HasValue('show_unemployed', 'true')]"
+			}
+
+			textbox = {
+				margin = { 5 0 }
+				margin_right = 5
+				size = { 60 25 }
+				align = right|nobaseline
+				datacontext = "[MapListOption.GetBuildingData.GetState]"
+				raw_text = "#v [State.GetInfrastructureBalance|0+=]#!"
+				tooltip = "STATE_INFRASTRUCTURE_DESC"
+				parentanchor = vcenter
+				elide = right
+				visible = "[Not(MapListOption.GetBuildingData.GetBuilding.GetBuildingType.IsMilitaryBuilding)]"
+			}
+
+			widget = {
+				# size = { 105 25 }
+				size = { 90 25 }
+				visible = "[MapListOption.GetBuildingData.GetBuilding.GetBuildingType.IsMilitaryBuilding]"
+				parentanchor = vcenter
+				textbox = {
+					margin = { 5 0 }
+					# size = { 105 25 }
+					size = { 90 25 }
+					align = right|nobaseline
+					datacontext = "[MapListOption.AccessBuildingData.AccessBuilding]"
+					datacontext = "[MapListOption.AccessBuildingData.GetMilitaryFormation]"
+					text = "UNITS_PROVIDED_FROM_BUILDING"
+					tooltip = "UNITS_PROVIDED_FROM_BUILDING_TOOLTIP"
+					parentanchor = vcenter
+					elide = right
+					visible = "[NotZero(Building.GetExpansionLevel)]"
+					alpha = "[TransparentIfZero_int32(Building.GetNumActiveUnitsProvidedToFormation(MilitaryFormation.Self))]"
+				}
+
+				textbox = {
+					margin = { 5 0 }
+					# size = { 105 25 }
+					size = { 90 25 }
+					align = right|nobaseline
+					datacontext = "[MapListOption.AccessBuildingData.AccessBuilding]"
+					datacontext = "[MapListOption.AccessBuildingData.GetMilitaryFormation]"
+					text = "NOT_AVAILABLE"
+					parentanchor = vcenter
+					elide = right
+					visible = "[IsZero(Building.GetExpansionLevel)]"
+					alpha = "[TransparentIfTrue('(bool)yes')]"
+				}
+			}
+
+			flowcontainer = {
+				visible = "[Not(MapListOption.GetBuildingData.GetBuilding.GetBuildingType.IsMilitaryBuilding)]"
+				parentanchor = vcenter
+
+				productivity_or_other_information = {
+					blockoverride "productivity_info_datacontext" {
+						datacontext = "[MapListOption.GetBuildingData.GetBuilding]"
+						datacontext = "[Building.GetState]"
+					}
+
+					blockoverride "productivity_info_text_style" {
+						# size = { 70 25 }
+						size = { 65 25 }
+						margin = { 5 0 }
+						margin_right = 10
+						align = right|nobaseline
+						parentanchor = vcenter
+					}
+				}
+
+				# EVERYTHING EXCEPT TRADE CENTERS
+				textbox = {
+					visible = "[Not(ObjectsEqual(Building.GetBuildingType, GetBuildingType('building_trade_center').Self))]"
+					margin = { 5 0 }
+					margin_right = 10
+					# size = { 80 25 }
+					size = { 70 25 }
+					align = right|nobaseline
+					datacontext = "[MapListOption.GetBuildingData.GetBuilding]"
+					raw_text = "#v [Building.GetBuildingType.GetExpansionRevenueImpact(Building.Self, Building.GetState)|K+=]#!"
+					tooltip = "[Building.GetBuildingType.GetExpansionRevenueImpactDesc(Building.Self, Building.GetState)]"
+					parentanchor = vcenter
+					elide = right
+				}
+
+				# TRADE CENTERS
+				textbox = {
+					visible = "[ObjectsEqual(Building.GetBuildingType, GetBuildingType('building_trade_center').Self)]"
+					margin = { 5 0 }
+					margin_right = 10
+					# size = { 80 25 }
+					size = { 70 25 }
+					align = right|nobaseline
+					datacontext = "[MapListOption.GetBuildingData.GetBuilding]"
+					datacontext = "[MapListOption.GetBuildingData.GetBuilding.GetState]"
+					raw_text = "TRADE_POTENTIAL_VALUE"
+					tooltip = "TRADE_POTENTIAL_TOOLTIP"
+					parentanchor = vcenter
+					elide = right
+				}
+			}
+
+
+			textbox = {
+				margin = { 5 0 }
+				margin_right = 5
+				size = { 105 25 }
+				align = right|nobaseline
+				datacontext = "[MapListOption.GetBuildingData.GetBuilding]"
+				raw_text = "#v [Building.GetState.GetStateRegion.GetStrategicRegion.GetName]#!"
+				parentanchor = vcenter
+				elide = right
+				visible = "[MapListOption.GetBuildingData.GetBuilding.GetBuildingType.IsMilitaryBuilding]"
+			}
+		}
+	}
+
+	type construction_headers_condensed = flowcontainer {
+		parentanchor = hcenter
+		sort_button = {
+			align = hcenter|nobaseline
+			text = "BUILDING_MAP_LIST_PANEL_STATE_HEADER"
+			tooltip = "BUILDING_MAP_LIST_PANEL_STATE_HEADER_TOOLTIP"
+			size = { 120 20 }
+			onclick = "[MapListPanel.Sort('state')]"
+		}
+
+		sort_button = {
+			align = hcenter|nobaseline
+			tooltip = "BUILDING_LEVEL_HEADER_TOOLTIP"
+			size = { 70 20 }
+			onclick = "[MapListPanel.Sort('size')]"
+			icon = {
+				texture = "gfx/interface/buttons/sort_button_icons/sort_icon_size.dds"
+				size = { 25 25 }
+				parentanchor = center
+				alwaystransparent = yes
+			}
+		}
+
+		### SETTING - JOBSEEKERS
+		sort_button = {
+			align = hcenter|nobaseline
+			text = "BUILDING_MAP_LIST_PANEL_AVAILABLE_LABOR_HEADER"
+			tooltip = "BUILDING_MAP_LIST_PANEL_AVAILABLE_LABOR_HEADER_TOOLTIP"
+			# size = { 85 20 }
+			size = { 100 20 }
+			onclick = "[MapListPanel.Sort('jobseekers')]"
+			visible = "[GetVariableSystem.HasValue('show_jobseekers', 'true')]"
+		}
+
+		### SETTING - PEASANTS
+		sort_button = {
+			align = hcenter|nobaseline
+			text = "peasants_no_icon"
+			# size = { 85 20 }
+			size = { 100 20 }
+			onclick = "[MapListPanel.Sort('peasants')]"
+			visible = "[Not(GetVariableSystem.HasValue('hide_peasants', 'true'))]"
+		}
+
+		### SETTING - UNEMPLOYED
+		sort_button = {
+			align = hcenter|nobaseline
+			text = "concept_unemployed"
+			# size = { 85 20 }
+			size = { 100 20 }
+			onclick = "[MapListPanel.Sort('unemployed')]"
+			visible = "[GetVariableSystem.HasValue('show_unemployed', 'true')]"
+		}
+
+		sort_button = {
+			align = hcenter|nobaseline
+			tooltip = "BUILDING_MAP_LIST_PANEL_INFRASTRUCTURE_HEADER_TOOLTIP"
+			size = { 60 20 }
+			onclick = "[MapListPanel.Sort('infrastructure_balance')]"
+			visible = "[Not(MapListBuildingPanel.GetBuildingType.IsMilitaryBuilding)]"
+
+			icon = {
+				texture = "gfx/interface/icons/state_status_icons/state_infrastructure.dds"
+				size = { 25 25 }
+				parentanchor = center
+				alwaystransparent = yes
+			}
+		}
+
+		sort_button = {
+			align = hcenter|nobaseline
+			text = "concept_units_short"
+			# size = { 105 20 }
+			size = { 90 20 }
+			visible = "[MapListBuildingPanel.GetBuildingType.IsMilitaryBuilding]"
+			onclick = "[MapListPanel.Sort('units')]"
+		}
+
+		flowcontainer = {
+			visible = "[Not(MapListBuildingPanel.GetBuildingType.IsMilitaryBuilding)]"
+
+			sort_button = {
+				visible = "[And(Not(ObjectsEqual(MapListBuildingPanel.GetBuildingType, GetBuildingType('building_government_administration').Self)), Not(ObjectsEqual(MapListBuildingPanel.GetBuildingType, GetBuildingType('building_trade_center').Self)))]"
+				
+				align = hcenter|nobaseline
+				tooltip = "BUILDING_PROFITABILITY_HEADER_TOOLTIP"
+				# size = { 70 20 }
+				size = { 65 20 }
+				onclick = "[MapListPanel.Sort('profitability')]"
+				
+				icon = {
+					texture = "gfx/interface/buttons/sort_button_icons/sort_icon_profitability.dds"
+					size = { 25 25 }
+					parentanchor = center
+					alwaystransparent = yes
+				}
+			}
+
+			sort_button = {
+				align = hcenter|nobaseline
+				text = "concept_tax"
+				tooltip = "BUILDING_TAXATION_CAPACITY_HEADER_TOOLTIP"
+				# size = { 70 20 }
+				size = { 65 20 }
+				onclick = "[MapListPanel.Sort('tax_capacity_balance')]"
+				visible = "[ObjectsEqual(MapListBuildingPanel.GetBuildingType, GetBuildingType('building_government_administration').Self)]"
+			}
+			
+			sort_button = {
+				align = hcenter|nobaseline
+				
+				icon = {
+					texture = "gfx/interface/icons/state_status_icons/trade_capacity.dds"
+					size = { 25 25 }
+					parentanchor = center
+					alwaystransparent = yes
+				}
+
+				tooltip = "TRADE_CAPACITY_EXPLAINER"
+				# size = { 70 20 }
+				size = { 65 20 }
+				onclick = "[MapListPanel.Sort('trade_capacity_balance')]"
+				visible = "[ObjectsEqual(MapListBuildingPanel.GetBuildingType, GetBuildingType('building_trade_center').Self)]"
+			}			
+			
+			sort_button = {
+				visible = "[Not(ObjectsEqual(MapListBuildingPanel.GetBuildingType, GetBuildingType('building_trade_center').Self))]"
+				align = hcenter|nobaseline
+				# text = "BUILDING_MAP_LIST_PANEL_PROFIT_IMPACT_HEADER"
+				tooltip = "BUILDING_MAP_LIST_PANEL_PROFIT_IMPACT_TOOLTIP"
+				# size = { 80 20 }
+				size = { 70 20 }
+				onclick = "[MapListPanel.Sort('profit_impact')]"
+				# kmpmp
+				icon = {
+					texture = "gfx/interface/buttons/sort_button_icons/sort_icon_progress.dds"
+					size = { 25 25 }
+					parentanchor = center
+					alwaystransparent = yes
+				}
+			}
+
+			sort_button = {
+				visible = "[ObjectsEqual(MapListBuildingPanel.GetBuildingType, GetBuildingType('building_trade_center').Self)]"
+				align = hcenter|nobaseline
+				
+				icon = {
+					texture = "gfx/interface/icons/trade_icons/trade_potential.dds"
+					size = { 25 25 }
+					parentanchor = center
+					alwaystransparent = yes
+				}				
+				
+				tooltip = "TRADE_POTENTIAL_EXPLAINER"
+				# size = { 80 20 }
+				size = { 70 20 }
+				onclick = "[MapListPanel.Sort('trade_potential')]"
+			}
+		}
+
+		sort_button = {
+			align = hcenter|nobaseline
+			text = "[concept_hq]"
+			size = { 105 20 }
+			onclick = "[MapListPanel.Sort('strategic_region')]"
+			visible = "[MapListBuildingPanel.GetBuildingType.IsMilitaryBuilding]"
+		}
+
+		sort_button = {
+			align = hcenter|nobaseline
+			tooltip = "BUILDING_MAP_LIST_PANEL_STATUS_HEADER_TOOLTIP"
+			size = { 55 20 }
+			onclick = "[MapListPanel.Sort('status')]"
+			icon = {
+				texture = "gfx/interface/buttons/sort_button_icons/sort_icon_status.dds"
+				size = { 25 25 }
+				parentanchor = center
+				alwaystransparent = yes
+			}
+		}
+	}	
+
+	### DECREES
+	type decree_map_list_panel = map_list_panel {
+		name = "decree_map_list_panel"
+
+		blockoverride "headers" {
+			sort_button = {
+				# size = { 415 30 }
+				size = { 345 30 }
+				align = hcenter|nobaseline
+				text = "DECREE_LIST_PANEL_STATE_HEADER"
+				tooltip = "DECREE_LIST_PANEL_STATE_HEADER_TOOLTIP"
+				onclick = "[MapListPanel.Sort('state')]"
+			}
+
+			sort_button = {
+				visible = yes
+				size = { 70 30 }
+				align = hcenter|nobaseline
+				text = "POPULATION"
+				# kmpmp didn't work in context of decree
+				# onclick = "[MapListPanel.Sort('population')]" 
+			}
+
+			sort_button = {
+				visible = yes
+				size = { 70 30 }
+				align = hcenter|nobaseline
+				text = "DECREE_LIST_PANEL_COST_HEADER"
+				tooltip = "DECREE_LIST_PANEL_COST_HEADER_TOOLTIP"
+				onclick = "[MapListPanel.Sort('cost')]"
+			}
+
+			sort_button = {
+				size = { 55 20 }
+				tooltip = "DECREE_MAP_LIST_PANEL_STATUS_HEADER_TOOLTIP"
+				onclick = "[MapListPanel.Sort('status')]"
+				icon = {
+					texture = "gfx/interface/buttons/sort_button_icons/sort_icon_status.dds"
+					size = { 25 25 }
+					parentanchor = center
+					alwaystransparent = yes
+				}
+			}
+		}
+
+		blockoverride "item" {
+			item = {
+				map_list_panel_item_interaction = {
+					blockoverride "name_button_visibility" {
+						visible = yes
+					}
+
+					blockoverride "name_button_size" {
+						# size = { 215 40 }
+						size = { 345 40 }
+					}
+
+					blockoverride "name_button_properties" {
+
+						datacontext = "[MapListOption.GetDecreeData.GetState]"
+
+						onmousehierarchyenter = "[AccessHighlightManager.HighlightState(State.Self)]"
+						onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+
+						onclick = "[InformationPanelBar.OpenStatePanel(State.AccessSelf)]"
+						onrightclick = "[RightClickMenuManager.ShowForState(State.AccessSelf)]"
+						
+						tooltipwidget = {
+							FancyTooltip_State = {}
+						}
+
+						textbox = {
+							visible = "[Not(And(State.IsUnincorporated, Not(State.IsIncorporating)))]"
+							margin = { 10 0 }
+							# size = { 210 25 }
+							size = { 340 25 }
+							align = nobaseline
+							text = "[State.GetNameNoFormatting]"
+							parentanchor = vcenter
+							elide = right
+							fontsize_min = 12
+						}
+
+						textbox = {
+							visible = "[And(State.IsUnincorporated, Not(State.IsIncorporating))]"
+							margin = { 10 0 }
+							# size = { 190 25 }
+							size = { 320 25 }
+							align = nobaseline
+							text = "[State.GetNameNoFormatting]"
+							parentanchor = vcenter
+							elide = right
+							fontsize_min = 12
+						}
+
+						icon = {
+							visible = "[And(State.IsUnincorporated, Not(State.IsIncorporating))]"
+							parentanchor = right|vcenter
+							position = { -10 0 }
+							size = { 25 25 }
+							texture = "gfx/interface/icons/state_status_icons/unincorporated_state.dds"
+						}
+					}
+
+					blockoverride "values" {
+						textbox = {
+							datacontext = "[MapListOption.GetDecreeData.GetState]"
+							parentanchor = right|vcenter
+							text = "[State.GetPopulationSize|Kv]"
+							tooltip = "TOOLTIP_STATE_POPULATION"
+							align = right|nobaseline
+							size = { 70 30 }
+							margin_left = 10
+							elide = right
+							fontsize_min = 12
+						}
+
+						textbox = {
+							parentanchor = right|vcenter
+							#"[ObjectsEqual(MapListDecreePanel.GetDecreeType, GetDecreeType('decree_road_maintenance'))]"
+							text = "MAP_LIST_DECREE_COST"
+							# size = { 270 30 }
+							size = { 70 30 }
+							align = right|nobaseline
+							margin_right = 10
+							elide = right
+							fontsize_min = 12
+						}
+					}
+				}
+			}
+		}
+	}
+}

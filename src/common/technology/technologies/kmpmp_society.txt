@@ -9,7 +9,8 @@ kmpmp_highways = {
 		country_military_goods_cost_mult = -0.05
 		state_infrastructure_from_automobiles_consumption_add = 0.5
 		state_infrastructure_from_population_max_add = 40
-		market_land_trade_capacity_add = 400
+		# market_land_trade_capacity_add = 400
+		state_trade_capacity_add = 40
 		state_infrastructure_from_population_add = 1
 	}
 
@@ -91,7 +92,7 @@ kmpmp_public_flights = {
 	modifier = {
 		state_infrastructure_mult = 0.1
 		building_railway_throughput_add = 0.10
-		building_war_machine_industry_throughput_add = 0.1
+		building_automotive_industry_throughput_add = 0.1
 	}
 
 	unlocking_technologies = {
@@ -111,7 +112,7 @@ kmpmp_globalism = {
 
 	modifier = {
 		country_max_companies_add = 1
-		country_trade_route_competitiveness_mult = 0.25
+		state_trade_capacity_mult = 0.25
 		country_convoys_capacity_mult = 0.1
 	}
 

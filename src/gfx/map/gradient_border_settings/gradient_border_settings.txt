@@ -1,9 +1,9 @@
-﻿@zoom_step_flatmap_far = 	16 							# the furthest zoom out
-@zoom_step_flatmap = 		4 							# zoom step where the paper map kicks in
-@zoom_step_mid = 			3 							# introduce some colour
-@zoom_step_near = 			2							# close zoom
-@zoom_step_ultra_near = 	1							# absolutely closest zoom
-@zoom_step_2 = 				0							# absolutely closest zoom
+﻿@zoom_step_flatmap_far = 	16 #17 							# the furthest zoom out
+@zoom_step_flatmap = 		4 #10 							# zoom step where the paper map kicks in
+@zoom_step_mid = 			3 #9 							# introduce some colour
+@zoom_step_near = 			2 #6							# close zoom
+@zoom_step_ultra_near = 	1 #5							# absolutely closest zoom
+@zoom_step_2 = 				0 #2							# absolutely closest zoom
 
 @color_multi = 	0.5										# Color brightness
 

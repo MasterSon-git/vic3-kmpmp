@@ -37,7 +37,7 @@ STATE_OMAN = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 20
+        undiscovered_amount = 30
     }
     naval_exit_id = 3048
 }
@@ -83,7 +83,7 @@ STATE_YEMEN = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 20
+        undiscovered_amount = 30
     }
     naval_exit_id = 3047
 }
@@ -173,7 +173,7 @@ STATE_PALESTINE = {
     capped_resources = {
         bg_coal_mining = 20 #kmpmp
         bg_iron_mining = 24
-        bg_logging = 10 #8 #5
+        bg_logging = 10 #5
         bg_fishing = 4
     }
     naval_exit_id = 3034

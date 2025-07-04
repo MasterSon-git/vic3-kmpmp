@@ -17,15 +17,6 @@
 			country_has_primary_culture = cu:norwegian
 			# country_has_primary_culture = cu:icelandic
 		}	
-		any_country = {
-			OR = {
-				country_has_primary_culture = cu:swedish
-				country_has_primary_culture = cu:danish
-				country_has_primary_culture = cu:norwegian
-				# country_has_primary_culture = cu:icelandic
-			}	
-			has_technology_researched = nationalism	
-		}
 		OR = {
 			owns_entire_state_region = STATE_ZEALAND
 
@@ -39,6 +30,37 @@
 			c:FIN ?= {
 				is_direct_subject_of = ROOT
 			}
+		}
+	}
+
+	max_num_formation_candidates = 3
+	can_be_formation_candidate = {
+		country_rank >= rank_value:minor_power
+		any_country = {
+			filter = {
+				OR = {
+					country_has_primary_culture = cu:swedish
+					country_has_primary_culture = cu:danish
+					country_has_primary_culture = cu:norwegian
+					# country_has_primary_culture = cu:icelandic
+				}
+				OR = {
+					owns_entire_state_region = STATE_ZEALAND
+
+					AND = {
+						owns_entire_state_region = STATE_ALAND
+						owns_entire_state_region = STATE_UUSIMAA
+						owns_entire_state_region = STATE_OSTROBOTHNIA
+						owns_entire_state_region = STATE_OULU
+					}
+
+					c:FIN ?= {
+						is_direct_subject_of = ROOT
+					}
+				}
+			}
+			has_technology_researched = nationalism
+			percent = 1
 		}
 	}
 }

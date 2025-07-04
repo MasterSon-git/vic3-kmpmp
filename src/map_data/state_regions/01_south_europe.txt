@@ -16,7 +16,7 @@
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 5
+        undiscovered_amount = 20
     }
 }
 
@@ -422,7 +422,7 @@ STATE_NAVARRA = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 25 #10
+        undiscovered_amount = 30
     }
     naval_exit_id = 3029
 }
@@ -489,7 +489,7 @@ STATE_ANDALUSIA = {
     farm = "x3C4E5B"
     mine = "xD06000"
     wood = "x801020"
-    arable_land = 95 #65 #40
+    arable_land = 95 #40
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_vineyard_plantations" }
     capped_resources = {
         bg_iron_mining = 30
@@ -550,7 +550,7 @@ STATE_VALENCIA = {
         bg_iron_mining = 30
         bg_lead_mining = 30
         bg_sulfur_mining = 20 #kmpmp
-        bg_logging = 10 #kmpmp
+        bg_logging = 10 #5
         bg_fishing = 10
     }
     naval_exit_id = 3032
@@ -740,7 +740,7 @@ STATE_ALBANIA = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 5
+        undiscovered_amount = 20
     }
     naval_exit_id = 3033
 }

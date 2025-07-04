@@ -42,13 +42,19 @@ pedro.7 = {
 		scope:new_brz_monarch_scope = {
 			add_modifier = {
 				name = brz_new_monarch_popular
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 			if = {
 				limit = {
 					has_ideology = ideology:ideology_abolitionist
 				}
 				set_ideology = ideology:ideology_humanitarian_royalist
+			}
+		}
+		scope:new_brz_monarch_scope.interest_group ?= {
+			add_modifier = {
+				name = brz_new_monarch_popular_ig
+				days = normal_modifier_time
 			}
 		}
 		every_country = {

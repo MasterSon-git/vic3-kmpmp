@@ -5,7 +5,5 @@
 	#local = yes
 	tradeable = no #kmpmp
 
-	prestige_factor = 5
-
 	consumption_tax_cost = 200
 }

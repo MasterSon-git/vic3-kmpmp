@@ -6,8 +6,9 @@
 #  TRIGGER_ANY_IN_GLOBAL_LIST_ALL: "#tooltippable_name #tooltip:[GetPlayer.GetTooltipTag],EMPTY_STRING,ListOfStateRegionTooltip $NAME$#!#!"
 
  TRIGGER_ANY_IN_GLOBAL_LIST_COUNT: "$PARAMETERS$ $FILTER$:"
- TRIGGER_ANY_SCOPE_STATE_ALL_IN_STATE_REGION: "All [Concept('concept_state', '$concept_states$')] in [concept_state_region] [STATE_REGION.GetName]"
- TRIGGER_ANY_SCOPE_STATE_ALL_IN_STATE_REGION_NOT: "No [concept_state] in [concept_state_region] [STATE_REGION.GetName]"
+# added in vanilla 
+# TRIGGER_ANY_SCOPE_STATE_ALL_IN_STATE_REGION: "All [Concept('concept_state', '$concept_states$')] in [concept_state_region] [STATE_REGION.GetName]"
+# TRIGGER_ANY_SCOPE_STATE_ALL_IN_STATE_REGION_NOT: "No [concept_state] in [concept_state_region] [STATE_REGION.GetName]"
  TRIGGER_ANY_SCOPE_BUILDING_COUNT_IN_STATE: "$PARAMETERS$ buildings fullfill these conditions in this state:"
 
  owns_or_has_subject_entire_state_region_tooltip: "Entire [concept_state_region] [THIS.GetStateRegion.GetName] is owned or subjected by [SCOPE.GetRootScope.GetCountry.GetName]"
