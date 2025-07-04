@@ -23,13 +23,24 @@
 	
 	possible = {
 		# Might have these despite low relations due to a forced pact
-		NOT = { has_diplomatic_pact = { who = scope:target_country type = trade_agreement } }	
+		NOT = {
+			any_scope_treaty = {
+				binds = scope:target_country
+				any_scope_article = {
+					has_type = trade_privilege
+				}
+			}
+		}
 
 		# You cannot embargo somebody who has secured foreign investment rights in your country
-		NOT = { has_diplomatic_pact = { who = scope:target_country type = foreign_investment_rights } }
-
-		# You cannot embargo somebody with whom you have foreign investment agreements
-		NOT = { has_diplomatic_pact = { who = scope:target_country type = foreign_investment_agreement } }
+		NOT = {
+			any_scope_treaty = {
+				binds = scope:target_country
+				any_scope_article = {
+					has_type = foreign_investment_rights
+				}
+			}
+		}
 
 		# Might be disallowed by power bloc
 		NOT = {
@@ -147,7 +158,7 @@
 
 		requirement_to_maintain = {
 			trigger = {
-				NOT = { scope:target_country = { has_treaty_port_in_country = root } }
+				NOT = { scope:target_country = { has_treaty_port_in_market = root.market } }
 			}
 		}
 
@@ -155,27 +166,16 @@
 			trigger = {
 				NOT = { 
 					scope:target_country = { 
-						has_diplomatic_pact = {
-							who = root
-							type = foreign_investment_rights
+						any_scope_treaty = {
+							binds = root
+							any_scope_article = {
+								has_type = foreign_investment_rights
+							}
 						}
-					} 
+					}
 				}
 			}
 		}
-
-		requirement_to_maintain = {
-			trigger = {
-				NOT = { 
-					scope:target_country = { 
-						has_diplomatic_pact = {
-							who = root
-							type = foreign_investment_agreement
-						}
-					} 
-				}
-			}
-		}			
 		
 		manual_break_effect = {
 			add_lobby_appeasement_from_diplomacy_unidirectional = { 
@@ -243,7 +243,7 @@
 		}
 	
 		will_propose = { 
-			"scope:target_country.num_mutual_trade_route_levels_with_country(root)" > 0
+			"scope:target_country.mutual_trade_value_with_country(root)" > 0
 			NOT = {
 				has_attitude = {
 					who = scope:target_country

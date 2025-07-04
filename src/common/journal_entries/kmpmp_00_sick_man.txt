@@ -1,7 +1,7 @@
 ﻿je_sick_man_main = {
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
-	group = je_group_historical_content
+	group = je_group_tanzimat
 
 	complete = {
 		scope:journal_entry = {
@@ -44,6 +44,7 @@
 				years = 20
 			}
 		}
+
 	}
 
 	current_value = {
@@ -224,7 +225,7 @@
 je_sick_man_education = {
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-	group = je_group_historical_content
+	group = je_group_tanzimat
 
 	complete = {
 		any_scope_building = {

@@ -7,7 +7,8 @@
     unit_navy_defense_mult = 0.1
     unit_navy_offense_mult = 0.1
     # +20% Traderoute Volume
-    country_trade_route_quantity_mult = 0.2
+    #country_trade_route_quantity_mult = 0.2
+    state_trade_quantity_mult = 0.2
     # +10% Tradecenter TP
     building_trade_center_throughput_add = 0.1
     # +10% Port TP

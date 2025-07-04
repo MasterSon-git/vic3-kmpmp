@@ -5,6 +5,8 @@ company_rubber_corporation_indochina = {
 
 	flavored_company = yes
 
+	preferred_headquarters = { STATE_MALAYA }
+
 	building_types = {
 		building_rubber_plantation
 	}
@@ -37,6 +39,22 @@ company_rubber_corporation_indochina = {
 		building_trade_center_throughput_add = 0.05
 	}
 
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_MALAYA
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_rubber_plantation = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_MALAYA
+			}
+		}
+	}
+
 	ai_weight = {
 		value = 3 # Higher base value for flavored companies
 	}
@@ -48,6 +66,8 @@ company_taiwanese_tea = {
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
 
 	flavored_company = yes
+
+	preferred_headquarters = { STATE_FORMOSA }
 
 	building_types = {
 		building_tea_plantation
@@ -81,6 +101,22 @@ company_taiwanese_tea = {
 		country_consumption_tax_cost_mult = -0.2
 	}
 
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_FORMOSA
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_tea_plantation = {
+			level = 10
+			state_trigger = {
+				state_region = s:STATE_FORMOSA
+			}
+		}
+	}
+
 	ai_weight = {
 		value = 3 # Higher base value for flavored companies
 	}
@@ -92,6 +128,8 @@ company_imperial_porcelan_company = {
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
 	flavored_company = yes
+
+	preferred_headquarters = { STATE_INGRIA }
 
 	building_types = {
 		building_glassworks
@@ -119,7 +157,7 @@ company_imperial_porcelan_company = {
 					is_building_type = building_glassworks
 					is_building_type = building_lead_mine
 				}
-				level >= 3
+				level >= 5
 			}
 		}
 	}
@@ -135,6 +173,28 @@ company_imperial_porcelan_company = {
 		country_radicalism_increases_violent_hostility_mult = -0.1
 	}
 
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_INGRIA
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_glassworks = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_INGRIA
+			}
+		}
+		building_lead_mine = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_INGRIA
+			}
+		}
+	}
+
 	ai_weight = {
 		value = 3 # Higher base value for flavored companies
 	}
@@ -146,6 +206,8 @@ company_heineken_international = {
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
 	flavored_company = yes
+
+	preferred_headquarters = { STATE_HOLLAND }
 
 	building_types = {
 		building_textile_mills
@@ -179,7 +241,7 @@ company_heineken_international = {
 					is_building_type = building_textile_mills
 					is_building_type = building_glassworks
 				}
-				level >= 3
+				level >= 5
 			}
 		}
 	}
@@ -188,6 +250,38 @@ company_heineken_international = {
 		building_paper_mills_throughput_add = 0.1
 		building_sulfur_mine_throughput_add = 0.1
 		country_tech_spread_mult = 0.05
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_HOLLAND
+				state_region = s:STATE_GELRE
+			}
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_textile_mills = {
+			level = 5
+			state_trigger = {
+				OR = {
+					state_region = s:STATE_HOLLAND
+					state_region = s:STATE_GELRE
+				}
+			}
+		}
+		building_glassworks = {
+			level = 5
+			state_trigger = {
+				OR = {
+					state_region = s:STATE_HOLLAND
+					state_region = s:STATE_GELRE
+				}
+				is_incorporated = yes
+			}
+		}
 	}
 
 	ai_weight = {
@@ -202,6 +296,8 @@ company_shell = {
 
 	flavored_company = yes
 
+	preferred_headquarters = { STATE_HOLLAND STATE_FRIESLAND }
+
 	building_types = {
 		building_oil_rig
 		building_synthetics_plants
@@ -213,6 +309,7 @@ company_shell = {
 	}
 	
 	possible = {
+		has_technology_researched = pumpjacks
 		any_scope_state = {
 			OR = {
 				state_region = s:STATE_HOLLAND
@@ -231,6 +328,30 @@ company_shell = {
 		building_power_plant_throughput_add = 0.05
 	}
 
+	ai_will_do = {
+		has_technology_researched = pumpjacks
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_HOLLAND
+				state_region = s:STATE_FRIESLAND
+			}
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_oil_rig = {
+			level = 5
+			state_trigger = {
+				OR = {
+					state_region = s:STATE_HOLLAND
+					state_region = s:STATE_FRIESLAND
+				}
+				is_incorporated = yes
+			}
+		}
+	}
+
 	ai_weight = {
 		value = 3 # Higher base value for flavored companies
 	}
@@ -242,6 +363,8 @@ company_persian_luxury_goods = {
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
 	flavored_company = yes
+
+	preferred_headquarters = { STATE_IRAKAJEMI }
 
 	building_types = {
 		building_textile_mills
@@ -266,7 +389,7 @@ company_persian_luxury_goods = {
 					is_building_type = building_textile_mills
 					is_building_type = building_furniture_manufacturies
 				}
-				level >= 3
+				level >= 5
 			}
 		}
 	}
@@ -276,16 +399,36 @@ company_persian_luxury_goods = {
 		building_rubber_plantation_throughput_add = 0.2
 	}
 
+	ai_will_do = {
+		any_scope_state = {
+			region = sr:region_persia
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_textile_mills = {
+			level = 5
+			state_trigger = {
+				region = sr:region_persia
+				is_incorporated = yes
+			}
+		}
+	}
+
 	ai_weight = {
 		value = 3 # Higher base value for flavored companies
 	}
 }
+
 # Korea Tungsten Company
 company_korean_tungsten_company = {
 	icon = "gfx/interface/icons/company_icons/korean_tungsten_company.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 
 	flavored_company = yes
+
+	preferred_headquarters = { STATE_SEOUL }
 
 	building_types = {
 		building_tooling_workshops
@@ -315,7 +458,7 @@ company_korean_tungsten_company = {
 					is_building_type = building_iron_mine
 					is_building_type = building_lead_mine
 				}
-				level >= 3
+				level >= 5
 				count = 3
 			}
 		}
@@ -326,10 +469,39 @@ company_korean_tungsten_company = {
 		building_military_shipyards_throughput_add = 0.10
 	}
 
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_SEOUL
+		 	is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_tooling_workshops = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_SEOUL
+			}
+		}
+		building_iron_mine = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_SEOUL
+			}
+		}
+		building_lead_mine = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_SEOUL
+			}
+		}
+	}
+
 	ai_weight = {
 		value = 3 # Higher base value for flavored companies
 	}
 }
+
 # Imperial Arsenal Japan
 company_imperial_arsenal_japan = {
 	icon = "gfx/interface/icons/company_icons/imperial_arsenal_japan.dds"
@@ -337,9 +509,11 @@ company_imperial_arsenal_japan = {
 
 	flavored_company = yes
 
+	preferred_headquarters = { STATE_TOHOKU }
+
 	building_types = {
 		building_arms_industry
-		building_war_machine_industry
+		building_automotive_industry
 		building_steel_mills
 	}
 
@@ -374,10 +548,27 @@ company_imperial_arsenal_japan = {
 		unit_combat_unit_type_interwar_light_tanks_offense_mult = 0.2
 	}
 
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_TOHOKU
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_arms_industry = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_TOHOKU
+			}
+		}
+	}
+
 	ai_weight = {
 		value = 3 # Higher base value for flavored companies
 	}
 }
+
 # Genda Shigyo
 company_genda_shigyo = {
 	icon = "gfx/interface/icons/company_icons/genda_shigyo.dds"
@@ -385,14 +576,18 @@ company_genda_shigyo = {
 
 	flavored_company = yes
 
+	preferred_headquarters = { STATE_CHUGOKU }
+
 	building_types = {
 		building_paper_mills
 		building_logging_camp
 		building_sulfur_mine
 	}
+
 	potential = {
 		has_interest_marker_in_region = region_japan
 	}
+
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
@@ -400,6 +595,7 @@ company_genda_shigyo = {
 			}
 		}
 	}
+
 	possible = {
 		any_scope_state = {
 			state_region = s:STATE_CHUGOKU
@@ -410,9 +606,26 @@ company_genda_shigyo = {
 			}
 		}
 	}
+
 	prosperity_modifier = {
 		building_cotton_plantation_throughput_add = 0.10
 		building_synthetics_plants_throughput_add = 0.15
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_CHUGOKU
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_paper_mills = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_CHUGOKU
+			}
+		}
 	}
 
 	ai_weight = {

@@ -2,6 +2,8 @@
     icon = "gfx/interface/icons/company_icons/basic_arts.dds"
     background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
     
+    flavored_company = no
+
     uses_dynamic_naming = no
     
     building_types = {
@@ -12,7 +14,7 @@
         any_scope_state = {
             is_incorporated = yes
             any_scope_building = {
-                is_building_type = building_motor_industry
+                is_building_type = building_arts_academy
                 level >= 5
             }
         }
@@ -22,12 +24,24 @@
         building_power_plant_throughput_add = 0.1
         building_tooling_workshops_throughput_add = 0.1
     }
+
+    ai_will_do = {
+        any_scope_state = {
+            is_incorporated = yes
+            any_scope_building = {
+                is_building_type = building_arts_academy
+                level >= 5
+            }
+        }
+    }
 }
 
 company_basic_furniture = {
     icon = "gfx/interface/icons/company_icons/basic_furniture.dds"
     background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
     
+    flavored_company = no
+
     uses_dynamic_naming = no
     
     building_types = {
@@ -48,5 +62,15 @@ company_basic_furniture = {
     prosperity_modifier = {
         building_paper_mills_throughput_add = 0.1
         building_tooling_workshops_throughput_add = 0.1
+    }
+
+    ai_will_do = {
+        any_scope_state = {
+            is_incorporated = yes
+            any_scope_building = {
+                is_building_type = building_furniture_manufacturies
+                level >= 5
+            }
+        }
     }
 }

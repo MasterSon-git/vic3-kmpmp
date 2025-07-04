@@ -65,7 +65,7 @@ brazilian_minors.2 = {
 			}
 			add_modifier = {
 				name = crushing_the_cabaganem_modifier
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 			add_radicals_in_state = {
 				value = medium_radicals

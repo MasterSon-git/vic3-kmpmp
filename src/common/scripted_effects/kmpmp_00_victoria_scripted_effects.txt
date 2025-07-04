@@ -133,7 +133,7 @@
 		remove_ruling_interest_group = yes
 		add_modifier = {
 			name = modifier_revolution_defeated_light
-			months = normal_modifier_time
+			days = normal_modifier_time
 			is_decaying = yes
 		}
 	}
@@ -147,7 +147,7 @@
 		}
 		add_modifier = {
 			name = modifier_revolution_victorious_light
-			months = normal_modifier_time
+			days = normal_modifier_time
 			is_decaying = yes
 		}
 		if = {

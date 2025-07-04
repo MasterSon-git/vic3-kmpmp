@@ -2,7 +2,7 @@
 je_the_algerian_departements = {
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
-	group = je_group_historical_content
+	group = je_group_france_expansion
 
 	immediate = {
 		random_scope_state = {
@@ -80,11 +80,11 @@ je_the_algerian_departements = {
 					}
 				}
 			}
-			AND = {
-				# cultural_acceptance_base = { target = cu:maghrebi value >= acceptance_status_4 }
-				# cultural_acceptance_base = { target = cu:berber value >= acceptance_status_4 }
-				cultural_acceptance_base = { target = cu:misri value >= acceptance_status_4 }
-			}
+			# AND = {
+			# 	cultural_acceptance_base = { target = cu:maghrebi value >= acceptance_status_4 }
+			# 	cultural_acceptance_base = { target = cu:berber value >= acceptance_status_4 }
+			# }
+			cultural_acceptance_base = { target = cu:misri value >= acceptance_status_4 }
 		}
 	}
 
@@ -106,6 +106,56 @@ je_the_algerian_departements = {
 		random_events = {
 			90 = 0 
 			10 = algeria_events.6
+		}
+		effect = {
+			if = {
+				limit = {
+					is_ai = yes
+				}
+
+				if = {
+					limit = {
+						any_scope_state = {
+							is_incorporated = no
+							OR = {
+								state_region = s:STATE_ALGIERS
+								state_region = s:STATE_ORAN
+								state_region = s:STATE_CONSTANTINE
+							}
+						}
+					}
+					every_scope_state = {
+						limit = {
+							is_incorporated = no
+							OR = {
+								state_region = s:STATE_ALGIERS
+								state_region = s:STATE_ORAN
+								state_region = s:STATE_CONSTANTINE
+							}
+						}
+
+						if = {
+							limit = {
+								NOT = { has_variable = algerian_department_incorporation_timer }
+								NOT = { has_variable = is_incorporating_algerian_department }
+							}
+							set_variable = is_incorporating_algerian_department
+							set_variable = {
+								name = algerian_department_incorporation_timer
+								days = very_long_modifier_time
+							}
+						}
+						else_if = {
+							limit = {
+								NOT = { has_variable = algerian_department_incorporation_timer }
+								has_variable = is_incorporating_algerian_department
+							}
+							set_state_type = incorporated
+							remove_variable = is_incorporating_algerian_department
+						}
+					}
+				}
+			}
 		}
 	}
 

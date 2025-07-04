@@ -6,7 +6,8 @@ kmpmp_international_tradehubs = {
     category = military
 
     modifier = {
-        state_building_port_max_level_add = 2
+        # state_building_port_max_level_add = 2
+        building_port_throughput_add = 0.1
     }
 
     unlocking_technologies = {
@@ -319,7 +320,8 @@ kmpmp_deepsea_dockyards = {
     category = military
 
     modifier = {
-        state_building_port_max_level_add = 4
+        # state_building_port_max_level_add = 4
+        building_port_throughput_add = 0.1
     }
 
     unlocking_technologies = {

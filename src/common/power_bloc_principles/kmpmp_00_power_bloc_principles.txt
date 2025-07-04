@@ -86,12 +86,15 @@ principle_internal_trade_1 = {
 	background = "gfx/interface/icons/principles_icons/principle_tier_1.dds"
 	
 	member_modifier = {
-		# Members get a bonus to Company throughput
-		country_company_throughput_bonus_add = 0.1
-		unit_convoy_defense_mult = 0.05 #kmpmp
-		building_group_bg_manufacturing_throughput_add = 0.15 #kmpmp
 		# More convoy going to the market owner, effect scaling upwards with principle levels
 		country_convoy_contribution_to_market_owner_add = 0.2
+
+		# Members get a bonus to infrastructure
+		state_infrastructure_mult = 0.1
+
+		# kmpmp
+		unit_convoy_defense_mult = 0.05
+		building_group_bg_manufacturing_throughput_add = 0.15
 	}
 	
 	ai_weight = {
@@ -122,15 +125,14 @@ principle_internal_trade_2 = {
 
 	member_modifier = {
 		# Modifiers from previous level(s)
-		country_company_throughput_bonus_add = 0.1
-		unit_convoy_defense_mult = 0.10 #kmpmp
-		building_group_bg_manufacturing_throughput_add = 0.15 #kmpmp
-		country_convoy_contribution_to_market_owner_add = 0.3
-	
-		# Members get increased tariffs from countries outside the Power Bloc and infrastructure
-		tariff_import_outside_power_bloc_mult = 0.2
-		tariff_export_outside_power_bloc_mult = 0.2
 		state_infrastructure_mult = 0.1
+		country_convoy_contribution_to_market_owner_add = 0.3
+		# kmpmp
+		unit_convoy_defense_mult = 0.10
+		building_group_bg_manufacturing_throughput_add = 0.15
+	
+		# Company building throughput bonus
+		country_company_throughput_bonus_add = 0.05
 	}
 	
 	ai_weight = {
@@ -144,13 +146,12 @@ principle_internal_trade_3 = {
 
 	member_modifier = {
 		# Modifiers from previous level(s)
-		country_company_throughput_bonus_add = 0.1
-		country_convoy_contribution_to_market_owner_add = 0.4
-		tariff_import_outside_power_bloc_mult = 0.2
-		tariff_export_outside_power_bloc_mult = 0.2
 		state_infrastructure_mult = 0.1
-		unit_convoy_defense_mult = 0.15 #kmpmp
-		building_group_bg_manufacturing_throughput_add = 0.15 #kmpmp
+		country_convoy_contribution_to_market_owner_add = 0.4
+		country_company_throughput_bonus_add = 0.05
+		# kmpmp
+		unit_convoy_defense_mult = 0.15
+		building_group_bg_manufacturing_throughput_add = 0.15
 		
 		# Cheaper port connections
 		country_port_connection_cost_mult = -0.25
@@ -172,13 +173,16 @@ principle_market_unification_1 = {
 	}
 
 	member_modifier = {
-		# Members get a bonus to company throughput
-		country_company_throughput_bonus_add = 0.1
+		# Members get a bonus to infrastructure
+		state_infrastructure_mult = 0.1
 	}
 
 	power_bloc_modifier = {
 		# Members cannot enable Embargos with each other
 		power_bloc_disallow_embargo_bool = yes
+
+		# Members get increased Trade Advantage for goods produced/consumed in the same Power Bloc
+		power_bloc_trade_advantage_add = 100
 	}
 	
 	ai_weight = {
@@ -197,17 +201,12 @@ principle_market_unification_2 = {
 
 	member_modifier = {
 		# Modifiers from previous level(s)
-		country_company_throughput_bonus_add = 0.1
-		
-		# Members get increased tariffs from countries outside the Power Bloc and infrastructure
-		tariff_import_outside_power_bloc_mult = 0.2
-		tariff_export_outside_power_bloc_mult = 0.2
 		state_infrastructure_mult = 0.1
 	}
 
 	power_bloc_modifier = {
-		# Members cannot enable Embargos with each other
-		power_bloc_disallow_embargo_bool = yes
+		# Members are permanently part of the same Customs Union
+		power_bloc_customs_union_bool = yes
 	}
 	
 	ai_weight = {
@@ -221,15 +220,14 @@ principle_market_unification_3 = {
 
 	member_modifier = {
 		# Modifiers from previous level(s)
-		country_company_throughput_bonus_add = 0.1
-		tariff_import_outside_power_bloc_mult = 0.2
-		tariff_export_outside_power_bloc_mult = 0.2
 		state_infrastructure_mult = 0.1
-		country_convoy_contribution_to_market_owner_add = 0.4
+
+		# More convoy going to the market owner
+		country_convoy_contribution_to_market_owner_add = 0.2
 	}
 
 	power_bloc_modifier = {
-		# Members are permanently part of the same Customs Union
+		# Modifiers from previous level(s)
 		power_bloc_customs_union_bool = yes
 	}
 	
@@ -252,7 +250,7 @@ principle_vassalization_1 = {
 
 	member_modifier = {
 		# Each subject increases authority
-		country_authority_per_subject_add = 12.5 #25
+		country_authority_per_subject_add = 10
 	}
 	
 	ai_weight = {
@@ -279,7 +277,7 @@ principle_vassalization_2 = {
 	
 	member_modifier = {
 		# Modifiers from previous level(s)
-		country_authority_per_subject_add = 20 #25
+		country_authority_per_subject_add = 15
 		
 		# Subjects pay more to overlord
 		country_subject_income_transfer_mult = 0.25
@@ -296,7 +294,7 @@ principle_vassalization_3 = {
 
 	member_modifier = {
 		# Modifiers from previous level(s)
-		country_authority_per_subject_add = 20 #25
+		country_authority_per_subject_add = 20
 		country_subject_income_transfer_mult = 0.25
 		
 		# Can use decrees on subjects
@@ -402,7 +400,7 @@ principle_advanced_research_3 = {
 		country_ahead_of_time_research_penalty_mult = -0.05
 
 		# Increase Country max innovation
-		country_weekly_innovation_max_add = 4 #10
+		country_weekly_innovation_max_add = 4 #5
 	}
 	
 	ai_weight = {
@@ -420,8 +418,8 @@ principle_defensive_cooperation_1 = {
 		has_dlc_feature = power_bloc_features
 	}
 
+	# kmpmp
 	member_modifier = {
-		# kmpmp
 		country_institution_size_change_speed_institution_qwf_conscription_mult = 0.25
 		country_institution_cost_institution_qwf_conscription_mult = -0.1
 	}
@@ -502,7 +500,7 @@ principle_defensive_cooperation_3 = {
 		country_institution_cost_institution_qwf_conscription_mult = -0.5
 		country_military_wages_mult = -0.1
 		building_mobilization_cost_mult = -0.05
-		country_military_goods_cost_mult = -0.05 #kmpmp
+		country_military_goods_cost_mult = -0.05
 		country_kmpmp_war_support_from_power_bloc_principles_add = 1.0
 	}
 
@@ -619,21 +617,16 @@ principle_external_trade_1 = {
 	icon = "gfx/interface/icons/principles_icons/external_trade.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_1.dds"
 
-	power_bloc_modifier = {
-		# Trade routes cost much less BUR inside the bloc
-		power_bloc_trade_route_cost_mult = -0.75
-	}
-
 	member_modifier = {
-		# Trade routes cost less BUR outside the bloc
-		country_trade_route_cost_mult = -0.25
-		
-		# Increased trade route competetiveness
-		country_trade_route_competitiveness_mult = 0.25
+		# Increased trade capacity
+		state_trade_capacity_mult = 0.25
+
+		# Increased trade advantage with world market
+		state_trade_advantage_mult = 0.25
 
 		# kmpmp
 		country_convoys_capacity_mult = 0.1
-		building_group_bg_manufacturing_throughput_add = 0.15 #kmpmp
+		building_group_bg_manufacturing_throughput_add = 0.15
 	}
 	
 	ai_weight = {
@@ -642,12 +635,6 @@ principle_external_trade_1 = {
 		if = {
 			limit = { has_law = law_type:law_free_trade }
 			add = 100
-		}	
-			
-		add = {
-			value = num_trade_routes
-			multiply = 5
-			max = 100
 		}
 
 		if = {
@@ -669,23 +656,20 @@ principle_external_trade_1 = {
 principle_external_trade_2 = {
 	icon = "gfx/interface/icons/principles_icons/external_trade.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_2.dds"
-	
-	power_bloc_modifier = {
-		# Modifiers from previous level(s)
-		power_bloc_trade_route_cost_mult = -0.75
-		
-		# Also unlocks a PM that grants Trade Centers Influence, checked with trigger on PM
-	}
 
 	member_modifier = {
 		# Modifiers from previous level(s)
-		country_trade_route_cost_mult = -0.25
-		country_trade_route_competitiveness_mult = 0.25
-
+		state_trade_capacity_mult = 0.25
+		state_trade_advantage_mult = 0.25
 		# kmpmp
 		country_convoys_capacity_mult = 0.1
-		market_land_trade_capacity_add = 400
-		building_group_bg_manufacturing_throughput_add = 0.15 #kmpmp
+		building_group_bg_manufacturing_throughput_add = 0.15
+
+		# Also unlocks a PM that grants Trade Centers Influence, checked with trigger on PM
+
+		# kmpmp
+		# market_land_trade_capacity_add = 400
+		state_trade_capacity_add = 40
 	}
 	
 	ai_weight = {
@@ -697,26 +681,24 @@ principle_external_trade_3 = {
 	icon = "gfx/interface/icons/principles_icons/external_trade.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_3.dds"
 	
-	power_bloc_modifier = {
-		# Modifiers from previous level(s)
-		power_bloc_trade_route_cost_mult = -0.75
-	
-		# Also unlocks a PM that grants Trade Centers Influence, checked with trigger on PM (from level 2)
-	}
-	
 	member_modifier = {
 		# Modifiers from previous level(s)
-		country_trade_route_cost_mult = -0.25
-		country_trade_route_competitiveness_mult = 0.25
-		
-		# Allows members to set up trade routes without diplomatic interests there
-		country_allow_trade_routes_without_interest_bool = yes
-
+		state_trade_capacity_mult = 0.25
+		state_trade_advantage_mult = 0.25
 		# kmpmp
 		country_convoys_capacity_mult = 0.1
-		market_land_trade_capacity_add = 400
-		country_trade_route_quantity_mult = 0.3
-		building_group_bg_manufacturing_throughput_add = 0.15 #kmpmp
+		building_group_bg_manufacturing_throughput_add = 0.15
+		# market_land_trade_capacity_add = 400
+		state_trade_capacity_add = 40
+
+		# Also unlocks a PM that grants Trade Centers Influence, checked with trigger on PM (from level 2)
+
+		# Members no longer get a penalty to Trade Advantage due to lack of interests
+		country_no_advantage_loss_from_lack_of_interest_bool = yes
+
+		# kmpmp
+		# country_trade_route_quantity_mult = 0.3
+		state_trade_quantity_mult = 0.3
 	}
 
 	ai_weight = {
@@ -784,7 +766,7 @@ principle_food_standardization_3 = {
 	member_modifier = {
 		# Modifiers from previous level(s)
 		building_group_bg_agriculture_throughput_add = 0.20 #0.1
-		state_mortality_mult = -0.075 # -0.1
+		state_mortality_mult = -0.075 #-0.1
 		
 		# Higher SoL
 		state_standard_of_living_add = 1
@@ -960,8 +942,8 @@ principle_transport_2 = {
 		state_infrastructure_from_population_mult = 0.33
 		state_infrastructure_from_population_max_mult = 0.33 
 		
-		# Members have increased convoy capacity
-		country_convoys_capacity_mult = 0.2
+		# Members have increased port throughput
+		building_port_throughput_add = 0.2
 
 		#kmpmp
 		state_pollution_reduction_health_mult = -0.05
@@ -979,19 +961,21 @@ principle_transport_3 = {
 
 	member_modifier = {
 		# Modifiers from previous level(s)
-		country_convoys_capacity_mult = 0.2
+		building_port_throughput_add = 0.2
 		state_infrastructure_from_population_mult = 0.33
 		state_infrastructure_from_population_max_mult = 0.33 
-		state_market_access_price_impact = 0.05 #kmpmp
-
 		#kmpmp
 		state_pollution_reduction_health_mult = -0.1
 		state_infrastructure_mult = 0.05
-		
-		# Increased land trade capacity
-		market_land_trade_capacity_add = 200 #50
+
+		# Members get an increase to max EoS bonus
+		building_economy_of_scale_level_cap_add = 10
 		
 		# Unlocks a set of PMs for Railways
+
+		# kmpmp
+		state_market_access_price_impact = 0.05
+		state_trade_capacity_add = 20
 	}
 	
 	ai_weight = {
@@ -1011,7 +995,7 @@ principle_military_industry_1 = {
 
 	member_modifier = {
 		# Members get increased military industry throughput
-		building_war_machine_industry_throughput_add = 0.1
+		building_automotive_industry_throughput_add = 0.1
 		building_arms_industry_throughput_add = 0.1
 		building_artillery_foundries_throughput_add = 0.1
 		building_military_shipyards_throughput_add = 0.1
@@ -1058,11 +1042,10 @@ principle_military_industry_2 = {
 	
 	member_modifier = {
 		# Modifiers from previous level(s)
-		building_war_machine_industry_throughput_add = 0.1
+		building_automotive_industry_throughput_add = 0.1
 		building_arms_industry_throughput_add = 0.1
 		building_artillery_foundries_throughput_add = 0.1
 		building_military_shipyards_throughput_add = 0.1
-
 		# kmpmp
 		building_munition_plants_throughput_add = 0.1
 		
@@ -1081,15 +1064,13 @@ principle_military_industry_3 = {
 	
 	member_modifier = {
 		# Modifiers from previous level(s)	
-		building_war_machine_industry_throughput_add = 0.1
+		building_automotive_industry_throughput_add = 0.1
 		building_arms_industry_throughput_add = 0.1
 		building_artillery_foundries_throughput_add = 0.1
 		building_military_shipyards_throughput_add = 0.1
-
+		country_military_goods_cost_mult = -0.15
 		# kmpmp
 		building_munition_plants_throughput_add = 0.1
-
-		country_military_goods_cost_mult = -0.15
 		
 		# Supply routes use less convoys
 		character_supply_route_cost_mult = -0.33
@@ -1196,6 +1177,8 @@ principle_colonial_offices_3 = {
 		# Modifiers from previous level(s)	
 		state_colony_growth_creation_factor = 0.05
 		country_infamy_generation_against_unrecognized_mult = -0.05
+
+		# kmpmp
 		country_authority_add = 25
 	}		
 
@@ -1476,15 +1459,10 @@ principle_divine_economics_1 = {
 		has_dlc_feature = power_bloc_features
 	}
 
-	power_bloc_modifier = {
-		# Increased trade route competitiveness for PB trade routes
-		power_bloc_religion_trade_route_competitiveness_mult = 0.5
-
-		# kmpmp
-		power_bloc_religion_trade_route_quantity_mult = 0.15
-	}
-	
 	member_modifier = {
+		# Increased trade route advantage with same religion countries
+		state_trade_advantage_same_religion_add = 50
+
 		# Higher subject payments from other religions
 		country_subject_income_transfer_heathen_mult = 0.5		
 	}
@@ -1504,17 +1482,10 @@ principle_divine_economics_1 = {
 principle_divine_economics_2 = {
 	icon = "gfx/interface/icons/principles_icons/divine_economy.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_2.dds"
-
-	power_bloc_modifier = {
-		# Modifiers from previous level(s)		
-		power_bloc_religion_trade_route_competitiveness_mult = 0.5
-
-		# kmpmp
-		power_bloc_religion_trade_route_quantity_mult = 0.15
-	}
 	
 	member_modifier = {
 		# Modifiers from previous level(s)		
+		state_trade_advantage_same_religion_add = 50
 		country_subject_income_transfer_heathen_mult = 0.5
 
 		# New PM for Financial Districts/Manor Houses unlocked via trigger
@@ -1529,16 +1500,9 @@ principle_divine_economics_3 = {
 	icon = "gfx/interface/icons/principles_icons/divine_economy.dds"
 	background = "gfx/interface/icons/principles_icons/principle_tier_3.dds"
 	
-	power_bloc_modifier = {
-		# Modifiers from previous level(s)		
-		power_bloc_religion_trade_route_competitiveness_mult = 0.5
-
-		# kmpmp
-		power_bloc_religion_trade_route_quantity_mult = 0.15
-	}
-	
 	member_modifier = {
 		# Modifiers from previous level(s)		
+		state_trade_advantage_same_religion_add = 50
 		country_subject_income_transfer_heathen_mult = 0.5		
 	
 		# Higher wages for state religion pops
@@ -1734,7 +1698,6 @@ principle_sacred_civics_2 = {
 		country_reduced_liberty_desire_same_religion_bool = yes
 
 		# kmpmp
-		power_bloc_religion_subject_income_transfer_mult = 0.5
 		state_radicalism_increases_full_acceptance_mult = -0.075
 		state_radicalism_increases_second_rate_citizen_mult = -0.075
 		state_radicalism_increases_open_prejudice_mult = -0.075
@@ -1757,8 +1720,6 @@ principle_sacred_civics_3 = {
 		country_reduced_liberty_desire_same_religion_bool = yes
 
 		# kmpmp
-		power_bloc_religion_subject_income_transfer_mult = 0.5
-		country_infamy_generation_heathen_mult = -0.3
 		state_radicalism_increases_full_acceptance_mult = -0.15
 		state_radicalism_increases_second_rate_citizen_mult = -0.15
 		state_radicalism_increases_open_prejudice_mult = -0.15
@@ -1860,6 +1821,73 @@ principle_ideological_truth_3 = {
 		country_radicalism_increases_cultural_erasure_mult = -0.1
 		country_radicalism_increases_violent_hostility_mult = -0.1
 		political_movement_radicalism_add = -0.3
+	}
+
+	ai_weight = {
+		value = 1000 # AI prefers upgrading groups it has already picked to unlocking new ones
+	}
+}
+
+
+### Companies
+
+principle_companies_1 = {
+	icon = "gfx/interface/icons/principles_icons/companies.dds"
+	background = "gfx/interface/icons/principles_icons/principle_tier_1.dds"
+
+	visible = {
+		has_dlc_feature = mp1_charter_companies
+	}
+
+	member_modifier = {
+		country_company_throughput_bonus_add = 0.1
+	}
+
+	ai_weight = {
+		value = 100
+
+		if = {
+			limit = {
+				ig:ig_industrialists ?= { is_in_government = yes }
+			}
+			add = 100
+		}
+
+		if = {
+			limit = { has_strategy = ai_strategy_economic_imperialism }
+			multiply = 1.5
+		}
+	}
+}
+
+principle_companies_2 = {
+	icon = "gfx/interface/icons/principles_icons/companies.dds"
+	background = "gfx/interface/icons/principles_icons/principle_tier_2.dds"
+
+	member_modifier = {
+		# Modifiers from previous level(s)
+		country_company_throughput_bonus_add = 0.1
+
+		# Adds one free company charter
+		country_free_charters_add = 1
+	}
+
+	ai_weight = {
+		value = 1000 # AI prefers upgrading groups it has already picked to unlocking new ones
+	}
+}
+
+principle_companies_3 = {
+	icon = "gfx/interface/icons/principles_icons/companies.dds"
+	background = "gfx/interface/icons/principles_icons/principle_tier_3.dds"
+
+	member_modifier = {
+		# Modifiers from previous level(s)
+		country_company_throughput_bonus_add = 0.1
+		country_free_charters_add = 1
+
+		# Adds one company slot
+		country_max_companies_add = 1
 	}
 
 	ai_weight = {

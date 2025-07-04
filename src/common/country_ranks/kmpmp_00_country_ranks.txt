@@ -29,6 +29,7 @@ great_power = {
 	valid_country_types = {
 		recognized
 		colonial
+		company
 	}
 	
 	modifier = {
@@ -37,8 +38,10 @@ great_power = {
 		country_max_declared_interests_add = 10 #6
 		country_loan_interest_rate_mult = -0.5
 		country_agitator_slots_add = 2
+		country_support_independence_weekly_liberty_desire_add = 0.1
 		state_migration_pull_mult = 0.25
 		country_leverage_resistance_add = 1000
+		country_free_charters_add = 1
 	}
 }
 
@@ -59,6 +62,7 @@ major_power = {
 	valid_country_types = {
 		recognized
 		colonial
+		company
 	}
 	
 	modifier = {
@@ -67,6 +71,7 @@ major_power = {
 		country_max_declared_interests_add = 6 #3
 		country_loan_interest_rate_mult = -0.25
 		country_agitator_slots_add = 2
+		country_support_independence_weekly_liberty_desire_add = 0.05
 		state_migration_pull_mult = 0.10
 		country_leverage_resistance_add = 750
 	}
@@ -84,6 +89,7 @@ minor_power = {
 	valid_country_types = {
 		recognized
 		colonial
+		company
 	}
 	
 	modifier = {
@@ -91,6 +97,7 @@ minor_power = {
 		country_diplomatic_play_maneuvers_add = 60
 		country_max_declared_interests_add = 4 #1
 		country_agitator_slots_add = 1
+		country_support_independence_weekly_liberty_desire_add = 0.03
 		country_leverage_resistance_add = 500
 	}
 }
@@ -105,6 +112,7 @@ insignificant_power = {
 	valid_country_types = {
 		recognized
 		colonial
+		company
 	}
 	
 	modifier = {
@@ -112,6 +120,7 @@ insignificant_power = {
 		country_diplomatic_play_maneuvers_add = 50
 		country_loan_interest_rate_mult = 0.25
 		state_migration_pull_mult = -0.25
+		country_support_independence_weekly_liberty_desire_add = 0.01
 		country_agitator_slots_add = 1
 		country_max_declared_interests_add = 2 # kmpmp
 		country_leverage_resistance_add = 250
@@ -145,6 +154,7 @@ unrecognized_major_power = {
 		country_tech_spread_mult = -0.1 #-0.15
 		country_loan_interest_rate_mult = 0.5
 		country_agitator_slots_add = 2
+		country_support_independence_weekly_liberty_desire_add = 0.05
 		country_leverage_resistance_add = 750
 	}
 }
@@ -175,6 +185,7 @@ unrecognized_regional_power = {
 		country_loan_interest_rate_mult = 0.75
 		state_migration_pull_mult = -0.25
 		country_agitator_slots_add = 1
+		country_support_independence_weekly_liberty_desire_add = 0.03
 		country_leverage_resistance_add = 500
 	}
 }
@@ -199,12 +210,12 @@ unrecognized_power = {
 		country_tech_spread_mult = -0.125 #-0.25
 		country_loan_interest_rate_mult = 1.0
 		country_agitator_slots_add = 1
+		country_support_independence_weekly_liberty_desire_add = 0.01
 		state_migration_pull_mult = -0.5
 		country_leverage_resistance_add = 250
 	}
 
 }
-
 ###################
 ## DECENTRALIZED ##
 ###################
@@ -219,6 +230,6 @@ decentralized_power = {
 	
 	modifier = {
 		country_diplomatic_play_maneuvers_add = 30
-		#building_throughput_add = -0.40
+		# building_throughput_add = -0.40
 	}
 }

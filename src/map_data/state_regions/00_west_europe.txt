@@ -176,7 +176,7 @@ STATE_NORTHERN_NORWAY = {
     arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
         bg_iron_mining = 25 #18
-        bg_sulfur_mining = 30 #25 #20
+        bg_sulfur_mining = 30 #20
         bg_logging = 6
         bg_whaling = 15 #10
         bg_fishing = 10
@@ -286,7 +286,7 @@ STATE_LANCASHIRE = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 5
+        undiscovered_amount = 20
     }
     naval_exit_id = 3030
 }
@@ -395,7 +395,7 @@ STATE_EAST_ANGLIA = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 5
+        undiscovered_amount = 20
     }
     naval_exit_id = 3028
 }
@@ -882,7 +882,7 @@ STATE_FRIESLAND = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 30
+        undiscovered_amount = 60
     }
     naval_exit_id = 3027
 }
@@ -1086,7 +1086,7 @@ STATE_ELBE = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 30
+        undiscovered_amount = 60
     }
     naval_exit_id = 3027
 }
@@ -1291,7 +1291,7 @@ STATE_HANNOVER = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 30
+        undiscovered_amount = 60
     }
     naval_exit_id = 3027
 }
@@ -1360,7 +1360,7 @@ STATE_SAXONY = {
     farm = "xD0C021"
     mine = "x917939"
     wood = "x31E0C0"
-    arable_land = 140 #115 #100
+    arable_land = 140 #100
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" "bg_vineyard_plantations" }
     capped_resources = {
         bg_coal_mining = 80
@@ -1421,8 +1421,8 @@ STATE_RUHR = {
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_coal_mining = 55
-        bg_iron_mining = 35 #20 #10
-        bg_logging = 15 #9 #4
+        bg_iron_mining = 35 #10
+        bg_logging = 15 #4
     }
 }
 

@@ -1,5 +1,4 @@
 ﻿l_english:
- TRANSFER_RESULT_FORMATION: "[SelectLocalization(StagedFormation.HasValidFormation, 'TRANSFER_RESULT_HAS_FORMATION', 'TRANSFER_RESULT_NO_FORMATION')]"
  GOODS_PRICE_DESC_FIXED:0 "[GOODS.GetTextIcon][GOODS.GetName] has a fixed price of @money![GOODS.GetBasePrice|1v] that will never change."
  CIVIL_WAR_MAX_UNSUPPORTED_PROGRESS:0 "This revolution cannot sustain progress above [Multiply_CFixedPoint('(CFixedPoint)$PROGRESS_LIMIT$','(CFixedPoint)100')|0v] because the [concept_political_movement] lacks support from an [concept_interest_group]."
  CIVIL_WAR_PROGRESS_AT_MAX_PROGRESS:1 "#header Weekly Progress\n$TOOLTIP_DELIMITER$\n[concept_revolution] is at current maximum progress of #tooltippable #tooltip:$BREAKDOWN_TAG$ [Multiply_CFixedPoint('(CFixedPoint)$MAX_PROGRESS$','(CFixedPoint)100')|0]#!#!"

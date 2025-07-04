@@ -68,3 +68,21 @@ is_island = {
         count < 2
     }
 }
+
+# root - country
+kmpmp_is_chinese_country = {
+    OR = {
+        any_primary_culture = {
+            has_discrimination_trait = han_chinese
+        }
+        country_has_primary_culture = cu:yi
+        country_has_primary_culture = cu:manchu
+    }
+    OR = {
+        capital.region = sr:region_north_china
+        capital.region = sr:region_south_china
+        capital.region = sr:region_manchuria
+        capital.region = sr:region_central_asia
+        capital.region = sr:region_himalayas
+    }
+}

@@ -62,7 +62,7 @@ GGGG_mo_canned_rations = {
         }
         market ?= {
             mg:groceries ?= {
-                market_goods_sell_orders > 0
+                has_potential_supply = yes
             }
         }
     }
@@ -135,13 +135,13 @@ GGGG_mo_refrigerated_rations = {
         }
         market ?= {
             mg:fruit ?= {
-                market_goods_sell_orders > 0
+                has_potential_supply = yes
             }
             mg:meat ?= {
-                market_goods_sell_orders > 0
+                has_potential_supply = yes
             }
             mg:electricity ?= {
-                market_goods_sell_orders > 0
+                has_potential_supply = yes
             }
         }
     }

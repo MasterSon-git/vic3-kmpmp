@@ -45,7 +45,7 @@ sgf_aus.6 = {
 		name = sgf_aus.6.a
 		add_modifier = {
 			name = aus_unified_sgf
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 	}
 }

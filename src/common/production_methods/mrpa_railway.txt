@@ -49,7 +49,7 @@ pm_steam_trains = {
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_infrastructure_add = 25
+			state_infrastructure_add = 30
 			state_pollution_generation_add = 20
 		}
 		unscaled = {
@@ -72,9 +72,9 @@ pm_steam_trains_principle_transport_3 = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_engines_add = 6 # 300
-			goods_input_coal_add = 6 # 150
-			goods_output_transportation_add = 30 # 750
+			goods_input_engines_add = 6 # 360
+			goods_input_coal_add = 6 # 180
+			goods_output_transportation_add = 55 # 1650
 		}
 		level_scaled = {
 			building_employment_laborers_add = 2500
@@ -85,18 +85,14 @@ pm_steam_trains_principle_transport_3 = {
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_infrastructure_add = 30
+			state_infrastructure_add = 40
 			state_pollution_generation_add = 25
+		}
+		level_scaled = {
+			state_trade_capacity_add = 1
 		}
 		unscaled = {
 			state_market_access_price_impact = 0.05
-		}
-	}
-
-	# kmpmp
-	country_modifiers = {
-		level_scaled = {
-			market_land_trade_capacity_add = 1
 		}
 	}
 }
@@ -124,7 +120,7 @@ pm_electric_trains = {
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_infrastructure_add = 30
+			state_infrastructure_add = 40
 		}
 		unscaled = {
 			state_market_access_price_impact = 0.1
@@ -148,9 +144,9 @@ pm_electric_trains_principle_transport_3 = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_engines_add = 6 # 300
-			goods_input_electricity_add = 12 # 300
-			goods_output_transportation_add = 45 # 1050
+			goods_input_engines_add = 6 # 360
+			goods_input_electricity_add = 12 # 360
+			goods_output_transportation_add = 70 # 2100
 		}
 		level_scaled = {
 			building_employment_laborers_add = 2000
@@ -161,17 +157,13 @@ pm_electric_trains_principle_transport_3 = {
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_infrastructure_add = 40
+			state_infrastructure_add = 50
+		}
+		level_scaled = {
+			state_trade_capacity_add = 2
 		}
 		unscaled = {
 			state_market_access_price_impact = 0.1
-		}
-	}
-
-	# kmpmp
-	country_modifiers = {
-		level_scaled = {
-			market_land_trade_capacity_add = 2
 		}
 	}
 
@@ -201,7 +193,7 @@ pm_diesel_trains = {
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_infrastructure_add = 40
+			state_infrastructure_add = 50
 			state_pollution_generation_add = 15
 		}
 		unscaled = {
@@ -224,9 +216,9 @@ pm_diesel_trains_principle_transport_3 = {
 
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_engines_add = 6 # 300
-			goods_input_oil_add = 10 # 400
-			goods_output_transportation_add = 55 # 1200
+			goods_input_engines_add = 6 # 360
+			goods_input_oil_add = 12 # 480
+			goods_output_transportation_add = 90 # 2700
 		}
 		level_scaled = {
 			building_employment_laborers_add = 1500
@@ -237,18 +229,14 @@ pm_diesel_trains_principle_transport_3 = {
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_infrastructure_add = 55
+			state_infrastructure_add = 60
 			state_pollution_generation_add = 20
+		}
+		level_scaled = {
+			state_trade_capacity_add = 3
 		}
 		unscaled = {
 			state_market_access_price_impact = 0.15
-		}
-	}
-
-	# kmpmp
-	country_modifiers = {
-		level_scaled = {
-			market_land_trade_capacity_add = 3
 		}
 	}
 }
@@ -306,6 +294,7 @@ pm_electric_passenger_carriages = {
 			building_employment_clerks_add = 750
 		}
 	}			
+	#required_input_goods = electricity
 }
 
 pm_narrow_gauge_railway = {
@@ -329,6 +318,7 @@ pm_narrow_gauge_railway = {
 
 pm_standard_gauge_railway = {
 	texture = "gfx/interface/icons/production_method_icons/gauges_standard.dds"
+	
 }
 
 pm_broad_gauge_railway = {
@@ -345,7 +335,7 @@ pm_broad_gauge_railway = {
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_infrastructure_add = 5
+			state_infrastructure_add = 10
 		}
 	}
 }
@@ -369,9 +359,10 @@ pm_electrified_railway = {
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_infrastructure_add = 10
+			state_infrastructure_add = 20
 		}
 	}
+	#required_input_goods = electricity
 }
 
 pm_auto_disabled_building_railway = {
@@ -403,6 +394,7 @@ pm_watertube_boiler_building_railway = {
 		}
 
 		level_scaled = {
+			state_infrastructure_add = 5
 			building_employment_laborers_add = -1500
 		}
 	}
@@ -433,6 +425,7 @@ pm_rotary_valve_engine_building_railway = {
 		}
 
 		level_scaled = {
+			state_infrastructure_add = 5
 			building_employment_laborers_add = -2000
 		}
 	}
@@ -441,11 +434,6 @@ pm_rotary_valve_engine_building_railway = {
 
 pm_steam_donkey_building_railway = {
 	texture = "gfx/interface/icons/production_method_icons/steam_donkey.dds"
-	state_modifiers = {
-		workforce_scaled = {
-			state_pollution_generation_add = 15
-		}
-	}
 		
 	unlocking_technologies = {
 		steam_donkey
@@ -453,6 +441,12 @@ pm_steam_donkey_building_railway = {
 	
 	disallowing_laws = {
 		law_industry_banned
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 15
+		}
 	}
 		
 	building_modifiers = {
@@ -463,6 +457,7 @@ pm_steam_donkey_building_railway = {
 		}
 
 		level_scaled = {
+			state_infrastructure_add = 10
 			building_employment_laborers_add = -2000
 			building_employment_machinists_add = -500
 		}

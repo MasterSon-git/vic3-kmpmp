@@ -39,7 +39,7 @@ meiji.2 = {
         default_option = yes
         add_modifier = {
             name = japan_military_reward
-            months = normal_modifier_time
+            days = normal_modifier_time
         }
         if = {
             limit = {
@@ -86,14 +86,14 @@ meiji.2 = {
         name = meiji.2.b
         add_modifier = {
             name = japan_diplomatic_reward
-            months = normal_modifier_time
+            days = normal_modifier_time
         }
     }
     option = {
         name = meiji.2.c
         add_modifier = {
             name = japan_production_reward
-            months = normal_modifier_time
+            days = normal_modifier_time
         }
     }
 }

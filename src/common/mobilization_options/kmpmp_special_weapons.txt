@@ -53,7 +53,7 @@ mobilization_option_military_playbooks = {
 	possible = {
 		market ?= {
 			mg:paper ?= {
-				market_goods_sell_orders > 0
+				has_potential_supply = yes
 			}
 		}
 	}
