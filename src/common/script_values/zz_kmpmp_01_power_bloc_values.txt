@@ -326,26 +326,6 @@ power_bloc_mandate_progress_by_rank = {
 	# kmpmp
 	if = {
 		limit = {
-			power_bloc_leader ?= c:JAP
-		}
-		add = {
-			value = 5
-			desc = "KMPMP_POWER_BLOC_MANDATE_PROGRESS_JAPAN"
-		}
-	}
-	# kmpmp
-	if = {
-		limit = {
-			has_modifier = kmpmp_player_boost_expand_influence
-		}
-		add = {
-			value = 3
-			desc = "KMPMP_POWER_BLOC_MANDATE_PROGRESS_FROM_PLAYER_BOOST_EXPAND_INFLUENCE"
-		}
-	}
-	# kmpmp
-	if = {
-		limit = {
             power_bloc_leader ?= {
                 modifier:country_kmpmp_power_bloc_mandate_progress_add > 0
             }

@@ -343,7 +343,7 @@ kmpmp_player_boost_expand_influence = {
 
     # Buffs:
     # +3 Mandateprogress
-    # shown as tooltip in decision - calculated in script_values
+    country_kmpmp_power_bloc_mandate_progress_add = 3
     # +800 Influence
     country_influence_add = 800
     # +10% construction eff

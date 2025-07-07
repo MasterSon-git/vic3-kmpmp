@@ -7093,6 +7093,82 @@ right_click_menu = {
 	name = "treaty_draft_bind_period_menu"
 	parentanchor = bottom
 
+	# kmpmp adjustable binding period
+	blockoverride "fixed_top" {
+		flowcontainer = {
+			parentanchor = hcenter|top
+			margin = { 8 15 }
+
+			button_select_arrow = {
+				size = { 18 18 }
+				mirror = horizontal
+				parentanchor = vcenter
+				using = decrease_button_sound
+				using = tooltip_above
+
+				enabled = "[GreaterThan_int32(TreatyDraft.GetBindingDays, '(int32)1095')]"
+
+				block "tooltip_left_arrow" {
+					tooltip = "kmpmp_treaty_adjust_binding_days_tt"
+				}
+
+				block "onclick_prev"
+				{
+					click_modifiers = {
+						ondefault = "[TreatyDraft.SetBindingDays(Subtract_int32(TreatyDraft.GetBindingDays, '(int32)365'))]"
+						onshift = "[TreatyDraft.SetBindingDays(Subtract_int32(TreatyDraft.GetBindingDays, Min_int32('(int32)1825', Subtract_int32(TreatyDraft.GetBindingDays, '(int32)1095'))))]"
+						onctrl = "[TreatyDraft.SetBindingDays(Subtract_int32(TreatyDraft.GetBindingDays, Min_int32('(int32)3650', Subtract_int32(TreatyDraft.GetBindingDays, '(int32)1095'))))]"
+						onalt = "[TreatyDraft.SetBindingDays(Subtract_int32(TreatyDraft.GetBindingDays, Min_int32('(int32)7300', Subtract_int32(TreatyDraft.GetBindingDays, '(int32)1095'))))]"
+					}
+				}
+			}
+
+			### BINDING PERIOD
+			textbox = {
+				visible = "[NotZero(TreatyDraft.GetBindingDays)]"
+				align = center|nobaseline
+				size = { 80 25 }
+				using = elide_fontsize_min
+				text = "[TreatyDraft.GetBindingPeriodFormatted]"
+			}
+
+			### BINDING PERIOD - NONE SET YET
+			textbox = {
+				visible = "[IsZero(TreatyDraft.GetBindingDays)]"
+				align = center|nobaseline
+				size = { 80 25 }
+				using = elide_fontsize_min
+				text = "[TreatyDraft.GetBindingPeriodFormatted]"
+			}
+
+			button_select_arrow = {
+				size = { 18 18 }
+				parentanchor = vcenter
+				using = increase_button_sound
+				using = tooltip_above
+
+				enabled = "[LessThan_int32(TreatyDraft.GetBindingDays, '(int32)36135')]"
+
+				block "tooltip_right_arrow" {
+					tooltip = "kmpmp_treaty_adjust_binding_days_tt"
+				}
+
+				block "onclick_next"
+				{
+					click_modifiers = {
+						ondefault = "[TreatyDraft.SetBindingDays(Add_int32(TreatyDraft.GetBindingDays, '(int32)365'))]"
+						onshift = "[TreatyDraft.SetBindingDays(Add_int32(TreatyDraft.GetBindingDays, Min_int32('(int32)1825', Subtract_int32('(int32)36135', TreatyDraft.GetBindingDays))))]"
+						onctrl = "[TreatyDraft.SetBindingDays(Add_int32(TreatyDraft.GetBindingDays, Min_int32('(int32)3650', Subtract_int32('(int32)36135', TreatyDraft.GetBindingDays))))]"
+						onalt = "[TreatyDraft.SetBindingDays(Add_int32(TreatyDraft.GetBindingDays, Min_int32('(int32)7300', Subtract_int32('(int32)36135', TreatyDraft.GetBindingDays))))]"
+					}
+				}
+			}
+		}
+	}
+
+	# kmpmp disable autoresize for internal flowcontainer only
+	blockoverride "resizeparent_without_fixed_bottom" {	}
+
 	blockoverride "title_text" {
 		text = "SELECT_BINDING_PERIOD"
 	}

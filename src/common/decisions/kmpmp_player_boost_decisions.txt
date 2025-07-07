@@ -377,9 +377,6 @@ kmpmp_player_boost_expand_influence_decision = {
             years = 15
         }
         remove_player_boost_modifiers = yes
-        custom_tooltip = {
-            text = kmpmp_power_bloc_mandate_progress_by_player_boost_expand_influence_tooltip
-        }
         add_modifier = {
             name = kmpmp_player_boost_expand_influence
         }

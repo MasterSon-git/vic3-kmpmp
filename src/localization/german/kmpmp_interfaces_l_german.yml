@@ -31,4 +31,4 @@
  combat_unit_type_interwar_carrier: "Flottenflugzeugträger"
  combat_unit_type_interwar_carrier_desc: "Als Großkampfschiffe konzipiert, ermöglichen sie den Start zahlreicher Flugzeuge für offensive Operationen auf See."
 
- kmpmp_power_bloc_mandate_progress_by_player_boost_expand_influence_tooltip: "+3 [concept_power_bloc_mandate_progress]"
+ kmpmp_treaty_adjust_binding_days_tt:0 "Passt die Bindungsdauer des Vertrags an, jedoch nicht unter #v 3 Jahre#! und nicht über #v 99 Jahre#!.\n\n• Klick (#white 1 Jahr#!)\n• $SHORTCUT_KEY_MOD_shift$Klick (#white 5 Jahre#!)\n• $SHORTCUT_KEY_MOD_ctrl$Klick (#white 10 Jahre#!)\n• $SHORTCUT_KEY_MOD_alt$Klick (#white 20 Jahre#!)"
