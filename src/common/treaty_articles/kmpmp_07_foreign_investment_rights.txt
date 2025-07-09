@@ -1,6 +1,6 @@
 ﻿foreign_investment_rights = {
 	kind = directed
-	cost = 25
+	cost = 100 #25
 
 	relations_progress_per_day = 0.5
 	relations_improvement_max = 50
@@ -22,6 +22,8 @@
 
 	source_modifier = {
 		country_treaty_leverage_generation_add = 300
+		# kmpmp
+		country_influence_add = -100
 	}
 
 	visible = {
@@ -68,6 +70,16 @@
 				country_rank >= scope:other_country.country_rank
 			}
 		}
+
+		# kmpmp - check other country has influence to maintain
+		# commented since you can offer 
+		# trigger_if = {
+		# 	limit = {
+		# 		influence < 25
+		# 	}
+		# 	influence >= 25
+		# }
+
 		# kmpmp - investment rights with chinese countries is not allowed for players
 		trigger_if = {
 			limit = {

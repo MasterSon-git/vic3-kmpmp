@@ -106,6 +106,13 @@ legislative_efficiency = {
 	country_military_goods_cost_mult = -0.1
 }
 
+# Insufficient DIP reduces prestige by up to 50% at 2x usage to production
+diplomatic_overreach = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	country_prestige_mult = -0.5
+	# kmpmp TODO: additional debuff
+}
+
 # Scales by the amount of debt owed to government owned buildings (ie; government self owned debt)
 government_owned_debt = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds

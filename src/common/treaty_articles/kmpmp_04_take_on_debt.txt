@@ -1,6 +1,6 @@
 ﻿take_on_debt = {
 	kind = directed
-	cost = 0
+	cost = 125 #0
 
 	icon = "gfx/interface/icons/diplomatic_treaties_articles_icons/take_on_debt_treaties.dds"
 

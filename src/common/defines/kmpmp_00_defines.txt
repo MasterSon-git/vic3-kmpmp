@@ -1,4 +1,8 @@
-﻿NEconomy = {
+﻿NPolitics = {
+	LAW_ENACTMENT_LAW_COMMITMENT_EFFECT = 0.1 #0.15
+}
+
+NEconomy = {
 	DECLARE_BANKRUPTCY_PENALTY_DURATION_YEARS = 4 #10		# How many years does it take for penalties from declaring bankruptcy to fully decay
 
 	CREDIT_RATIO_MAX_OVERRUN = 0.1 #0.01 			# Countries can accumulate this percentage more of a debt "hole" than their credit limit when in default
@@ -6,7 +10,6 @@
 
 NDiplomacy = {
 	WAR_GOAL_INFAMY_CONQUER_STATE = 4.0 #5.0
-	WAR_GOAL_INFAMY_MAKE_PROTECTORATE = 1.5 #2.0
 	WAR_GOAL_INFAMY_FORCE_NATIONALIZATION = 0.15 #5.0
 
 	# kmpmp TEST
