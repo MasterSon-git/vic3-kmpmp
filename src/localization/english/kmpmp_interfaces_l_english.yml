@@ -32,3 +32,6 @@
  combat_unit_type_interwar_carrier_desc: "Purpose-built capital ships capable of launching a large number of aircraft for offensive operations at sea."
 
  kmpmp_treaty_adjust_binding_days_tt:0 "Adjusts the treaty binding duration, but not below #v 3 Years#! and not above #v 99 Years#!.\n\n• Click (#white 1 Year#!)\n• $SHORTCUT_KEY_MOD_shift$Click (#white 5 Years#!)\n• $SHORTCUT_KEY_MOD_ctrl$Click (#white 10 Years#!)\n• $SHORTCUT_KEY_MOD_alt$Click (#white 20 Years#!)"
+
+ #KMPMP_SGUI_DIPLOMATIC_PLAY_DECLARE_NEUTRALITY_WARNING: "#title #r Warning#!#! [ROOT.GetCountry.GetNameNoFlag] has [SCOPE.sTreatyArticle('treaty_article').GetNameNoIcon] with [SCOPE.sCountry('other').GetNameNoFlag]"
+ KMPMP_SGUI_DIPLOMATIC_PLAY_DECLARE_NEUTRALITY_WARNING: "$WARNING$[ROOT.GetCountry.GetNameNoFlag] has [SCOPE.sTreatyArticle('treaty_article').GetNameNoIcon] with [SCOPE.sCountry('other').GetNameNoFlag]"
