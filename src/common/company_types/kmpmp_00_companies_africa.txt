@@ -57,7 +57,7 @@ company_misr = {
 		building_dye_plantation_throughput_add = 0.1
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		has_technology_researched = corporate_charters
 		any_scope_state = {
 			state_region = s:STATE_LOWER_EGYPT
@@ -92,7 +92,7 @@ company_egyptian_rail = {
 		building_opium_plantation # kmpmp
 	}
 
-    extension_building_types = {
+	extension_building_types = {
 		building_motor_industry
 	}
 
@@ -114,14 +114,14 @@ company_egyptian_rail = {
 	}
 
 	prosperity_modifier = {
-        state_infrastructure_from_population_max_add = 20
+		state_infrastructure_from_population_max_add = 20
 		state_trade_capacity_mult = 0.1
         # kmpmp
 		# market_land_trade_capacity_add = 150 # no longer supported - use state_trade_capacity_add ?
 		building_group_bg_plantations_throughput_add = 0.1
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		has_technology_researched = corporate_charters
 		any_scope_state = {
 			region = sr:region_nile_basin

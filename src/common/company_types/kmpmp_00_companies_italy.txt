@@ -2,38 +2,45 @@
 company_ilva = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/ilva.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
-	
+
 	flavored_company = yes
 
 	preferred_headquarters = { STATE_PIEDMONT }
-	
-	building_types = {  
+
+	building_types = {
 		building_steel_mills
 		building_iron_mine
 		building_railway # kmpmp
 	}
 
-    extension_building_types = {
+	extension_building_types = {
 		building_coal_mine
 	}
 
 	possible_prestige_goods = {
 		prestige_good_generic_steel
 	}
-	
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_steel_complete_tt
+			has_variable = prestige_good_generic_steel_var
+		}
+	}
+
 	potential = {
 		has_interest_marker_in_region = region_italy
 	}
-	
+
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
 				state_region = s:STATE_PIEDMONT
 			}
 		}
-	}	
-	
-	possible = { 
+	}
+
+	possible = {
 		has_technology_researched = arc_welding
 		any_scope_state = {
 			state_region = s:STATE_PIEDMONT
@@ -44,7 +51,7 @@ company_ilva = {
 			}
 		}
 	}
-	
+
 	prosperity_modifier = {
 		building_railway_throughput_add = 0.1
 		building_artillery_foundries_throughput_add = 0.05
@@ -65,7 +72,7 @@ company_ilva = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
 		value = 3 # Higher base value for flavored companies
 	}
@@ -88,11 +95,18 @@ company_ansaldo = {
 
 	extension_building_types = {
 		building_power_plant
-        building_munition_plants # kmpmp
+		building_munition_plants # kmpmp
 	}
 
 	possible_prestige_goods = {
 		prestige_good_generic_steel
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_steel_complete_tt
+			has_variable = prestige_good_generic_steel_var
+		}
 	}
 
 	potential = {
@@ -125,13 +139,13 @@ company_ansaldo = {
 
 	prosperity_modifier = {
 		# unit_navy_offense_mult = 0.05
-        # unit_army_offense_mult = 0.05
-        # kmpmp
-        unit_defense_mult = 0.1
-        unit_offense_mult = 0.1
+		# unit_army_offense_mult = 0.05
+		# kmpmp
+		unit_defense_mult = 0.1
+		unit_offense_mult = 0.1
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		any_scope_state = {
 			state_region = s:STATE_PIEDMONT
 			is_incorporated = yes
@@ -218,7 +232,7 @@ company_ricordi = {
 		building_sulfur_mine_throughput_add = 0.1
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		any_scope_state = {
 			state_region = s:STATE_LOMBARDY
 			is_incorporated = yes
@@ -297,7 +311,7 @@ company_fiat = {
 		unit_combat_unit_type_interwar_light_tanks_offense_mult = 0.1 #kmpmp
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		has_technology_researched = railways
 		any_scope_state = {
 			state_region = s:STATE_PIEDMONT
@@ -377,7 +391,7 @@ company_stt = {
 		country_convoys_capacity_mult = 0.1 #0.05
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		has_technology_researched = gantry_cranes
 		any_scope_state = {
 			state_region = s:STATE_ISTRIA

@@ -6,7 +6,8 @@
 # min_commander_rank_random / max_commander_rank_random = min/max ranks when auto-generating commander rank
 # possible = {} must evaluate to true for rank to be able to be assigned
 # can_colonize = whether a country of this rank can colonize
-# diplo_pact_cost = Diplomatic pacts with country of this rank have their cost multiplied by 1 + this amount
+# diplo_pact_cost = Diplomatic pacts with country of this rank have their cost multiplied by this amount - 1
+# treaty_article_cost = Treaty articles with country of this rank have their cost multiplied by this amount - 1
 
 ################
 ## RECOGNIZED ##
@@ -15,14 +16,15 @@
 great_power = {
 	rank_value = 7
 	icon_index = 4
-	
+
 	enforce_subject_rank_check = yes
-	
+
 	diplo_pact_cost = 2.0
-	
+	treaty_article_cost = 2.0
+
 	prestige_average_threshold = 5.0
 	prestige_relative_threshold = 0.75
-	
+
 	infamy_aggressor_scaling = 0.20
 	infamy_target_scaling = 0.20
 
@@ -31,7 +33,7 @@ great_power = {
 		colonial
 		company
 	}
-	
+
 	modifier = {
 		country_influence_add = 1000
 		country_diplomatic_play_maneuvers_add = 100
@@ -48,14 +50,15 @@ great_power = {
 major_power = {
 	rank_value = 6
 	icon_index = 3
-	
+
 	enforce_subject_rank_check = yes
-	
+
 	diplo_pact_cost = 1.5
-	
+	treaty_article_cost = 1.5
+
 	prestige_average_threshold = 2.5
 	prestige_relative_threshold = 0.5
-	
+
 	infamy_aggressor_scaling = 0.10
 	infamy_target_scaling = 0.10
 
@@ -64,7 +67,7 @@ major_power = {
 		colonial
 		company
 	}
-	
+
 	modifier = {
 		country_influence_add = 750
 		country_diplomatic_play_maneuvers_add = 75
@@ -80,18 +83,18 @@ major_power = {
 minor_power = {
 	rank_value = 4
 	icon_index = 2
-	
+
 	enforce_subject_rank_check = yes
 
 	prestige_average_threshold = 0.6
 	prestige_relative_threshold = 0.15
-	
+
 	valid_country_types = {
 		recognized
 		colonial
 		company
 	}
-	
+
 	modifier = {
 		country_influence_add = 600
 		country_diplomatic_play_maneuvers_add = 60
@@ -108,13 +111,13 @@ insignificant_power = {
 
 	infamy_aggressor_scaling = -0.10
 	infamy_target_scaling = -0.10
-	
+
 	valid_country_types = {
 		recognized
 		colonial
 		company
 	}
-	
+
 	modifier = {
 		country_influence_add = 500
 		country_diplomatic_play_maneuvers_add = 50
@@ -166,6 +169,7 @@ unrecognized_regional_power = {
 	enforce_subject_rank_check = yes
 
 	diplo_pact_cost = 0.75
+	treaty_article_cost = 0.75
 
 	prestige_average_threshold = 0.6
 	prestige_relative_threshold = 0.15
@@ -196,6 +200,7 @@ unrecognized_power = {
 	icon_index = 1
 
 	diplo_pact_cost = 0.5
+	treaty_article_cost = 0.5
 
 	infamy_aggressor_scaling = 0.30
 	infamy_target_scaling = -0.50
@@ -223,11 +228,11 @@ unrecognized_power = {
 decentralized_power = {
 	rank_value = 0
 	icon_index = 1
-	
+
 	valid_country_types = {
 		decentralized
 	}
-	
+
 	modifier = {
 		country_diplomatic_play_maneuvers_add = 30
 		# building_throughput_add = -0.40

@@ -23,7 +23,7 @@
 		}
 		NOR = {
 			has_law = law_type:law_closed_borders
-			has_law = law_type:law_isolationism
+			has_law_or_variant = law_type:law_isolationism
 		}
 	}
 
@@ -181,7 +181,7 @@
 			text = sa_migration_completion_tt
 			trigger_if = {
 				limit = { exists = var:south_america_incorporated_population }
-				var:south_america_incorporated_population >= var:south_america_migration_goal 
+				var:south_america_incorporated_population >= var:south_america_migration_goal
 				var:south_america_incorporated_population > 0
 				var:south_america_migration_goal > 0
 			}
@@ -241,7 +241,7 @@ je_central_america_migration = {
 		}
 		NOR = {
 			has_law = law_type:law_closed_borders
-			has_law = law_type:law_isolationism
+			has_law_or_variant = law_type:law_isolationism
 		}
 	}
 
@@ -471,7 +471,7 @@ je_american_west_migration = {
 		}
 		NOR = {
 			has_law = law_type:law_closed_borders
-			has_law = law_type:law_isolationism
+			has_law_or_variant = law_type:law_isolationism
 		}
 	}
 
@@ -649,7 +649,7 @@ je_american_west_migration = {
 	}
 
 	invalid = {
-		OR = { 
+		OR = {
 			has_variable = cancel_sa_migration_var
 			NOT = {
 				any_scope_state = {

@@ -18,6 +18,17 @@ company_rheinmetall = {
 		building_steel_mills
 	}
 
+	possible_prestige_goods = {
+		prestige_good_generic_artillery
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_artillery_complete_tt
+			has_variable = prestige_good_generic_artillery_var
+		}
+	}
+
 	potential = {
 		has_interest_marker_in_region = region_north_germany
 	}
@@ -164,7 +175,7 @@ company_schichau = {
 		unit_combat_unit_type_long_range_submarine_offense_mult = 0.1 # kmpmp
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		has_technology_researched = railways
 		any_scope_state = {
 			state_region = s:STATE_WEST_PRUSSIA
@@ -230,12 +241,12 @@ company_siemens_and_halske = {
 
 	prosperity_modifier = {
 		building_power_plant_throughput_add = 0.15
-        # kmpmp
+		# kmpmp
 		building_motor_industry_throughput_add = 0.1
 		building_steel_mills_throughput_add = 0.05
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		has_technology_researched = electric_telegraph
 		any_scope_state = {
 			state_region = s:STATE_BRANDENBURG
@@ -285,6 +296,8 @@ company_prussian_state_railways = {
 			OR = {
 				region = sr:region_north_germany
 				region = sr:region_south_germany
+				region = sr:region_rhine
+				region = sr:region_poland
 			}
 			is_incorporated = yes
 			any_scope_building = {
@@ -297,17 +310,19 @@ company_prussian_state_railways = {
 
 	prosperity_modifier = {
 		military_formation_movement_speed_mult = 0.1
-        # kmpmp
+		# kmpmp
 		building_coal_mine_throughput_add = 0.05
 		building_iron_mine_throughput_add = 0.05
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		has_technology_researched = railways
 		any_scope_state = {
 			OR = {
 				region = sr:region_north_germany
 				region = sr:region_south_germany
+				region = sr:region_rhine
+				region = sr:region_poland
 			}
 			is_incorporated = yes
 		}
@@ -320,6 +335,8 @@ company_prussian_state_railways = {
 				OR = {
 					region = sr:region_north_germany
 					region = sr:region_south_germany
+					region = sr:region_rhine
+					region = sr:region_poland
 				}
 				is_incorporated = yes
 			}
@@ -385,7 +402,7 @@ company_basf = {
 		building_sulfur_mine_throughput_add = 0.05 # kmpmp
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		has_technology_researched = aniline
 		any_scope_state = {
 			state_region = s:STATE_BADEN

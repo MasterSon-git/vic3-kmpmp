@@ -42,12 +42,12 @@ company_ccci = {
 	}
 
 	prosperity_modifier = {
-        # country_prestige_mult = 0.15
+		# country_prestige_mult = 0.15
 		building_furniture_manufacturies_throughput_add = 0.15
 		building_group_bg_rubber_mortality_mult = 0.1 #0.2
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		OR = {
 			any_subject_or_below = {
 				any_scope_state = {
@@ -126,7 +126,7 @@ company_franco_belge = {
 		building_lead_mine_throughput_add = 0.1 # kmpmp
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		any_scope_state = {
 			OR = {
 				state_region = s:STATE_WALLONIA
@@ -158,34 +158,34 @@ company_franco_belge = {
 company_nederlandse_petroleum = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/maatschappij.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
-	
+
 	flavored_company = yes
-	
-	building_types = {    
+
+	building_types = {
 		building_oil_rig
 		building_rubber_plantation # kmpmp
 	}
 
-    extension_building_types = {
+	extension_building_types = {
 		building_power_plant
 	}
-    
+
 	potential = {
 		country_has_primary_culture = cu:dutch
-	}	
-	
+	}
+
 	possible = {
 		has_technology_researched = pumpjacks
 		any_scope_state = {
 			region = sr:region_indonesia
 			is_incorporated = yes
 			any_scope_building = {
-                is_building_type = building_oil_rig
-				level >= 5 
+				is_building_type = building_oil_rig
+				level >= 5
 			}
 		}
 	}
-	
+
 	prosperity_modifier = {
 		state_colony_growth_speed_mult = 0.1
 		# kmpmp
@@ -194,7 +194,7 @@ company_nederlandse_petroleum = {
 		building_sulfur_mine_throughput_add = 0.1
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		has_technology_researched = pumpjacks
 		any_scope_state = {
 			region = sr:region_indonesia
@@ -212,7 +212,7 @@ company_nederlandse_petroleum = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
 		value = 3 # Higher base value for flavored companies
 	}
@@ -222,12 +222,12 @@ company_nederlandse_petroleum = {
 company_philips = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/philips.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
-	
+
 	flavored_company = yes
 
 	preferred_headquarters = { STATE_HOLLAND STATE_GELRE }
-	
-	building_types = {  
+
+	building_types = {
 		building_electrics_industry
 	}
 
@@ -235,11 +235,15 @@ company_philips = {
 		building_power_plant
 		building_motor_industry
 	}
-	
+
+	possible_prestige_goods = {
+		prestige_good_philips_chapel_radio
+	}
+
 	potential = {
 		has_interest_marker_in_region = region_rhine
 	}
-	
+
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
@@ -249,8 +253,8 @@ company_philips = {
 				}
 			}
 		}
-	}		
-	
+	}
+
 	possible = {
 		has_technology_researched = telephone
 		any_scope_state = {
@@ -265,14 +269,14 @@ company_philips = {
 			}
 		}
 	}
-	
+
 	prosperity_modifier = {
 		building_power_plant_throughput_add = 0.05 #kmpmp
 		country_weekly_innovation_mult = 0.05
 		country_weekly_innovation_max_add = 15
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		has_technology_researched = telephone
 		any_scope_state = {
 			OR = {
@@ -295,7 +299,7 @@ company_philips = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
 		value = 3 # Higher base value for flavored companies
 	}
@@ -305,12 +309,12 @@ company_philips = {
 company_ericsson = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/ericsson.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
-	
+
 	flavored_company = yes
 
 	preferred_headquarters = { STATE_SVEALAND }
-	
-	building_types = {  
+
+	building_types = {
 		building_electrics_industry
 	}
 
@@ -321,19 +325,19 @@ company_ericsson = {
 	possible_prestige_goods = {
 		prestige_good_ericsson_apparatus
 	}
-	
+
 	potential = {
 		has_interest_marker_in_region = region_baltic
 	}
-	
+
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
-				state_region = s:STATE_SVEALAND		
+				state_region = s:STATE_SVEALAND
 			}
 		}
-	}		
-	
+	}
+
 	possible = {
 		has_technology_researched = telephone
 		any_scope_state = {
@@ -345,13 +349,13 @@ company_ericsson = {
 			}
 		}
 	}
-	
+
 	prosperity_modifier = {
 		country_weekly_innovation_mult = 0.15 #0.1
 		state_education_access_wealth_add = 0.01 #0.005
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		has_technology_researched = telephone
 		any_scope_state = {
 			state_region = s:STATE_SVEALAND
@@ -367,7 +371,7 @@ company_ericsson = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
 		value = 3 # Higher base value for flavored companies
 	}
@@ -387,7 +391,7 @@ company_lkab = {
 		building_coal_mine # kmpmp
 	}
 
-    extension_building_types = {
+	extension_building_types = {
 		building_steel_mills
 	}
 
@@ -424,7 +428,7 @@ company_lkab = {
 		building_iron_mine_throughput_add = 0.2
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		has_technology_researched = open_hearth_process
 		any_scope_state = {
 			state_region = s:STATE_NORRLAND
@@ -499,7 +503,7 @@ company_aker_mek = {
 		building_fishing_wharf_throughput_add = 0.15 #0.05
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		has_technology_researched = gantry_cranes
 		any_scope_state = {
 			state_region = s:STATE_EASTERN_NORWAY
@@ -540,6 +544,17 @@ company_nokia = {
 		building_electrics_industry
 	}
 
+	possible_prestige_goods = {
+		prestige_good_generic_paper
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_paper_complete_tt
+			has_variable = prestige_good_generic_paper_var
+		}
+	}
+
 	potential = {
 		has_interest_marker_in_region = region_finland
 	}
@@ -566,13 +581,13 @@ company_nokia = {
 
 	prosperity_modifier = {
 		building_electrics_industry_throughput_add = 0.1
-        # building_synthetics_plants_throughput_add = 0.05
-        # kmpmp
+		# building_synthetics_plants_throughput_add = 0.05
+		# kmpmp
 		building_furniture_manufacturies_throughput_add = 0.05
-        building_university_throughput_add = 0.05
+		building_university_throughput_add = 0.05
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		has_technology_researched = atmospheric_engine
 		any_scope_state = {
 			state_region = s:STATE_UUSIMAA
@@ -638,12 +653,12 @@ company_ursus = {
 
 	prosperity_modifier = {
 		building_wheat_farm_throughput_add = 0.2
-        # kmpmp
-        building_rye_farm_throughput_add = 0.2
+		# kmpmp
+		building_rye_farm_throughput_add = 0.2
 		building_food_industry_throughput_add = 0.1
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		has_technology_researched = combustion_engine
 		any_scope_state = {
 			state_region = s:STATE_GREATER_POLAND
@@ -686,6 +701,13 @@ company_lilpop = {
 
 	possible_prestige_goods = {
 		prestige_good_generic_steel
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_steel_complete_tt
+			has_variable = prestige_good_generic_steel_var
+		}
 	}
 
 	potential = {
@@ -770,8 +792,19 @@ company_mozambique_company = {
 		building_tobacco_plantation # kmpmp
 	}
 
-    extension_building_types = {
+	extension_building_types = {
 		building_logging_camp
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_grain
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_grain_complete_tt
+			has_variable = prestige_good_generic_grain_var
+		}
 	}
 
 	potential = {
@@ -801,7 +834,7 @@ company_mozambique_company = {
 		state_colony_growth_creation_factor = 0.1
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		has_technology_researched = mutual_funds
 		any_scope_state = {
 			OR = {
@@ -865,6 +898,13 @@ company_espana_industrial = {
 		prestige_good_generic_clothes
 	}
 
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_clothes_complete_tt
+			has_variable = prestige_good_generic_clothes_var
+		}
+	}
+
 	potential = {
 		has_interest_marker_in_region = region_iberia
 	}
@@ -891,13 +931,13 @@ company_espana_industrial = {
 
 	prosperity_modifier = {
 		country_weekly_innovation_mult = 0.15
-        # kmpmp
+		# kmpmp
 		building_silk_plantation_throughput_add = 0.15
 		building_dye_plantation_throughput_add = 0.05
 		building_synthetics_plants_throughput_add = 0.05
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		has_technology_researched = cotton_gin
 		any_scope_state = {
 			state_region = s:STATE_CATALONIA
@@ -936,6 +976,17 @@ company_trubia = {
 	extension_building_types = {
 		building_munition_plants
 		building_explosives_factory
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_artillery
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_artillery_complete_tt
+			has_variable = prestige_good_generic_artillery_var
+		}
 	}
 
 	potential = {
@@ -1008,6 +1059,17 @@ company_zastava = {
 		building_artillery_foundries
 	}
 
+	possible_prestige_goods = {
+		prestige_good_generic_small_arms
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_small_arms_complete_tt
+			has_variable = prestige_good_generic_small_arms_var
+		}
+	}
+
 	potential = {
 		has_interest_marker_in_region = region_balkans
 	}
@@ -1035,11 +1097,11 @@ company_zastava = {
 	prosperity_modifier = {
 		unit_defense_mult = 0.1 #0.05
 		unit_recovery_rate_add = 0.1 #0.05
-        # kmpmp
+		# kmpmp
 		building_iron_mine_throughput_add = 0.05
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		has_technology_researched = gunsmithing
 		any_scope_state = {
 			state_region = s:STATE_NORTHERN_SERBIA
@@ -1083,6 +1145,13 @@ company_chr_hansens = {
 		prestige_good_generic_groceries
 	}
 
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_groceries_complete_tt
+			has_variable = prestige_good_generic_groceries_var
+		}
+	}
+
 	potential = {
 		has_interest_marker_in_region = region_baltic
 	}
@@ -1112,11 +1181,11 @@ company_chr_hansens = {
 	prosperity_modifier = {
 		building_livestock_ranch_throughput_add = 0.1
 		building_fishing_wharf_throughput_add = 0.1
-        # kmpmp
+		# kmpmp
 		building_group_bg_agriculture_throughput_add = 0.15
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		any_scope_state = {
 			state_region = s:STATE_ZEALAND
 			is_incorporated = yes
@@ -1156,10 +1225,21 @@ company_ap_moller = {
 		building_port
 	}
 
-    extension_building_types = {
+	extension_building_types = {
 		building_shipyards
-        building_military_shipyards # kmpmp
+		building_military_shipyards # kmpmp
 		building_logging_camp
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_merchant_marine
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_merchant_marine_complete_tt
+			has_variable = prestige_good_generic_merchant_marine_var
+		}
 	}
 
 	potential = {
@@ -1188,12 +1268,12 @@ company_ap_moller = {
 	prosperity_modifier = {
 		country_convoys_capacity_mult = 0.2
 		interest_group_ig_industrialists_pop_attraction_mult = 0.1
-        # kmpmp
+		# kmpmp
 		unit_navy_offense_mult = 0.05
 		unit_navy_defense_mult = 0.05
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		any_scope_state = {
 			state_region = s:STATE_ZEALAND
 			is_incorporated = yes
@@ -1227,7 +1307,7 @@ company_cfr = {
 		building_livestock_ranch # kmpmp
 	}
 
-    extension_building_types = {
+	extension_building_types = {
 		building_motor_industry
 	}
 
@@ -1252,11 +1332,11 @@ company_cfr = {
 
 	prosperity_modifier = {
 		state_infrastructure_mult = 0.1 #0.05
-        state_trade_capacity_mult = 0.15
+		state_trade_capacity_mult = 0.15
 		# market_land_trade_capacity_add = 150
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		has_technology_researched = railways
 		any_scope_state = {
 			state_region = {

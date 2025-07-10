@@ -90,6 +90,8 @@
 						OR = {
 							c:DEI ?= this
 							c:ALK ?= this
+							c:HBC ?= this
+							is_country_type = company
 						}
 					}
 				}
@@ -98,7 +100,7 @@
 
 				set_ig_trait = ig_trait:ig_trait_tax_avoidance
 				set_ig_trait = ig_trait:ig_trait_engines_of_progress
-				set_ig_trait = ig_trait:ig_trait_job_creators				
+				set_ig_trait = ig_trait:ig_trait_job_creators
 			}
 			# kmpmp Germany
 			else_if = {
@@ -127,7 +129,7 @@
 		rule = {
 			trigger = {
 				c:BIC ?= this
-				any_primary_culture = { 
+				any_primary_culture = {
 					cu:british = this
 				}
 			}
@@ -179,7 +181,10 @@
 					is_pop_type = engineers
 				}
 				value = 50
-				add = this.standard_of_living
+				add = {
+					value = this.standard_of_living
+					multiply = 2
+				}
 			}
 		}
 
@@ -190,7 +195,10 @@
 					is_pop_type = shopkeepers
 				}
 				value = 50
-				add = this.standard_of_living
+				add = {
+					value = this.standard_of_living
+					multiply = 2
+				}
 			}
 		}
 		if = {
@@ -214,7 +222,7 @@
 				value = 250
 			}
 		}
-		
+
 		if = {
 			limit = {
 				owner = {
@@ -296,7 +304,7 @@
 				min = 0
 			}
 		}
-		
+
 		if = {
 			limit = {
 				scope:interest_group = {
@@ -448,7 +456,7 @@
 
 	female_agitator_chance = {
 		value = 0.025
-		
+
 		if = {
 			limit = {
 				owner = {
@@ -459,8 +467,8 @@
 			add = {
 				value = 0.025
 			}
-		}	
-		
+		}
+
 		if = {
 			limit = {
 				owner = {
@@ -483,7 +491,7 @@
 			add = {
 				value = 0.025
 			}
-		}		
+		}
 	}
 
 	# The chance that a commander belonging to this IG takes over leadership when it changes

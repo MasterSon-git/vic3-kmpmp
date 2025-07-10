@@ -126,6 +126,9 @@
                 }
             }
         }
+        scope:input = {
+            NOT = { this = law_type:law_traditionalism }
+        }
     }
 
     on_entry_into_force = {
@@ -306,6 +309,10 @@
 		inherent_accept_score = {
 			value = 0
 
+            scope:article.input_law = {
+                save_temporary_scope_as = input
+            }
+
             if = {
                 limit = {
                     scope:source_country ?= this
@@ -318,9 +325,16 @@
                     }
                 }
 
+				scope:source_country = {
+					save_temporary_scope_as = target
+				}
+				scope:target_country = {
+					save_temporary_scope_as = actor
+				}
+
                 add = {
                     desc = "DIPLOMATIC_ACCEPTANCE_BASE_ADDITIONAL"
-                    value = -30
+                    value = -100
 
                     if = {
                         limit = {
@@ -336,6 +350,45 @@
                             value = -300
                         }
                     }
+
+                    if = { # Governance Principles
+                        limit = {
+                            scope:article.input_law = {
+                                is_same_law_group_as = law_type:law_monarchy
+                            }
+                        }
+                        add = -100
+                    }
+
+                    if = { # Distribution of Power
+                        limit = {
+                            scope:article.input_law = {
+                                is_same_law_group_as = law_type:law_autocracy
+                            }
+                        }
+                        add = -50
+                    }
+
+                    if = {
+                        limit = {
+                            scope:article.input_law = {
+                                OR = {
+                                    this = law_type:law_traditionalism
+                                    this = law_type:law_peasant_levies
+                                    this = law_type:law_extraction_economy
+                                    this = law_type:law_no_schools
+                                    this = law_type:law_no_health_system
+                                    this = law_type:law_no_home_affairs
+                                    this = law_type:law_serfdom
+                                    this = law_type:law_no_police
+                                    this = law_type:law_debt_slavery
+                                    this = law_type:law_consumption_based_taxation
+                                    this = law_type:law_no_social_security
+                                }
+                            }
+                        }
+                        value = -1000
+                    }
                 }
 
 				if = {
@@ -345,6 +398,27 @@
 					add = {
 						desc = "law_isolationism"
 						add = -100
+					}
+				}
+
+				if = {
+					limit = {
+						country_rank >= scope:target_country.country_rank
+					}
+
+					add = {
+						desc = "DIPLOMATIC_ACCEPTANCE_RANK"
+						value = -300
+					}
+				}
+				else = {
+					add = {
+						desc = "DIPLOMATIC_ACCEPTANCE_RANK"
+						add = scope:target_country.country_rank
+						subtract = country_rank
+						multiply = 10
+						min = 0
+						max = 50
 					}
 				}
 
@@ -369,7 +443,7 @@
                     }
                     add = {
                         desc = "DIPLOMATIC_ACCEPTANCE_ANTI_SLAVERY"
-                        value = 15
+                        value = 25
                     }
                 }
 
@@ -380,7 +454,7 @@
                     }
                     add = {
                         desc = "communist_solidarity"
-                        value = 15
+                        value = 25
                     }
                 }
             }
@@ -395,6 +469,13 @@
                         }
                     }
                 }
+
+				scope:source_country = {
+					save_temporary_scope_as = actor
+				}
+				scope:target_country = {
+					save_temporary_scope_as = target
+				}
 
                 add = {
                     desc = "DIPLOMATIC_ACCEPTANCE_BASE_ADDITIONAL"
@@ -428,7 +509,7 @@
                     }
                     add = {
                         desc = "DIPLOMATIC_ACCEPTANCE_ANTI_SLAVERY"
-                        value = 15
+                        value = 25
                     }
                 }
 
@@ -439,7 +520,7 @@
                     }
                     add = {
                         desc = "DIPLOMATIC_ACCEPTANCE_ECONOMIC_IMPERIALISM"
-                        value = 15
+                        value = 25
                     }
                 }
 
@@ -450,7 +531,7 @@
                     }
                     add = {
                         desc = "communist_solidarity"
-                        value = 15
+                        value = 25
                     }
                 }
 
@@ -579,14 +660,20 @@
 	}
 
 	wargoal = {
-		execution_priority = 60
+		execution_priority = 21
 		contestion_type = control_target_country_capital
 
 		maneuvers = {
-			value = 2.5
+			value = 0
+
+			add = {
+				desc = "MANEUVERS_BASE_VALUE"
+				value = 2.5
+			}
 
 			scope:target_country = {
 				multiply = {
+					desc = "MANEUVERS_TARGET_COUNTRY_POPULATION_FACTOR"
 					value = total_population
 					divide = define:NDiplomacy|SWAY_OFFER_WARGOAL_MANEUVERS_COST_POPULATION_SCALING_FACTOR
 					multiply = define:NDiplomacy|SWAY_OFFER_WARGOAL_MANEUVERS_COST_POPULATION_SCALING_MULTIPLIER
@@ -596,10 +683,16 @@
 		}
 
 		infamy = {
-			value = 0.5
+			value = 0
+
+			add = {
+				desc = "INFAMY_BASE_VALUE"
+				value = 0.5
+			}
 
 			scope:target_country = {
 				multiply = {
+					desc = "INFAMY_TARGET_COUNTRY_POPULATION_FACTOR"
 					value = total_population
 					divide = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_FACTOR
 					multiply = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER

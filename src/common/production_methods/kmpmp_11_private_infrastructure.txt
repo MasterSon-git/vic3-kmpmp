@@ -1,8 +1,8 @@
 ﻿pm_basic_port = {
 	texture = "gfx/interface/icons/production_method_icons/basic_port.dds"
-	
+
 	building_modifiers = {
-		workforce_scaled = {	
+		workforce_scaled = {
 			goods_input_clippers_add = 5 # 300
 			goods_output_merchant_marine_add = 10 # 500
 		}
@@ -20,13 +20,14 @@
 	}
 	state_modifiers = {
 		unscaled = {
+			# kmpmp
 			state_market_access_price_impact = 0.05
 		}
 		workforce_scaled = {
-			state_infrastructure_add = 5
+			state_infrastructure_add = 3
 		}
 	}
-}		
+}
 
 pm_industrial_port = {
 	texture = "gfx/interface/icons/production_method_icons/industrial_port.dds"
@@ -36,7 +37,7 @@ pm_industrial_port = {
 	}
 
 	building_modifiers = {
-		workforce_scaled = {	
+		workforce_scaled = {
 			goods_input_steamers_add = 5 # 350
 			goods_input_coal_add = 5 # 150
 			goods_output_merchant_marine_add = 20 # 1000
@@ -56,12 +57,13 @@ pm_industrial_port = {
 	}
 	state_modifiers = {
 		unscaled = {
+			# kmpmp
 			state_market_access_price_impact = 0.05
 		}
 		workforce_scaled = {
-			state_infrastructure_add = 7.5
+			state_infrastructure_add = 4
 		}
-	}	
+	}
 }
 
 pm_modern_port = {
@@ -69,9 +71,9 @@ pm_modern_port = {
 	unlocking_technologies = {
 		concrete_dockyards
 	}
-	
+
 	building_modifiers = {
-		workforce_scaled = {	
+		workforce_scaled = {
 			goods_input_steamers_add = 5 # 350
 			goods_input_oil_add = 10 # 400
 			goods_output_merchant_marine_add = 30 # 1500
@@ -92,10 +94,11 @@ pm_modern_port = {
 	}
 	state_modifiers = {
 		unscaled = {
+			# kmpmp
 			state_market_access_price_impact = 0.05
 		}
 		workforce_scaled = {
-			state_infrastructure_add = 10
+			state_infrastructure_add = 5
 		}
 	}
 }

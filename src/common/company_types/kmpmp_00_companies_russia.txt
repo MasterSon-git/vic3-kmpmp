@@ -14,6 +14,7 @@ company_vodka_monopoly = {
 
 	extension_building_types = {
 		building_wheat_farm
+		building_rye_farm
 	}
 
 	possible_prestige_goods = {
@@ -46,7 +47,7 @@ company_vodka_monopoly = {
 		unit_morale_loss_mult = -0.2
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		NOT = { has_law = law_type:law_laissez_faire }
 		any_scope_state = {
 			OR = {
@@ -92,6 +93,17 @@ company_putilov_company = {
 		building_munition_plants
 	}
 
+	possible_prestige_goods = {
+		prestige_good_generic_artillery
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_artillery_complete_tt
+			has_variable = prestige_good_generic_artillery_var
+		}
+	}
+
 	potential = {
 		has_interest_marker_in_region = region_russia
 	}
@@ -123,12 +135,12 @@ company_putilov_company = {
 	prosperity_modifier = {
 		building_railway_throughput_add = 0.1
 		state_infrastructure_mult = 0.05
-        # kmpmp
+		# kmpmp
 		unit_navy_offense_mult = 0.05
 		unit_navy_defense_mult = 0.05
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		has_technology_researched = railways
 		any_scope_state = {
 			state_region = s:STATE_INGRIA
@@ -207,7 +219,7 @@ company_branobel = {
 	}
 
 	prosperity_modifier = {
-        # state_migration_pull_mult = 0.1
+		# state_migration_pull_mult = 0.1
 		building_lead_mine_throughput_add = 0.05 # kmpmp
 		building_sulfur_mine_throughput_add = 0.05 # kmpmp
 		building_railway_throughput_add = 0.05
@@ -238,12 +250,12 @@ company_branobel = {
 company_izhevsk_arms_plant = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/russian_izhevsk_arms_plant.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
-	
+
 	flavored_company = yes
 
 	preferred_headquarters = { STATE_PERM }
-	
-	building_types = {  
+
+	building_types = {
 		building_arms_industry
 		building_munition_plants
 	}
@@ -252,20 +264,31 @@ company_izhevsk_arms_plant = {
 		building_artillery_foundries
 		building_steel_mills
 	}
-	
+
+	possible_prestige_goods = {
+		prestige_good_generic_small_arms
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_small_arms_complete_tt
+			has_variable = prestige_good_generic_small_arms_var
+		}
+	}
+
 	potential = {
 		has_interest_marker_in_region = region_west_siberia
 	}
-	
+
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
 				state_region = s:STATE_PERM
 			}
 		}
-	}			
-	
-	possible = { 
+	}
+
+	possible = {
 		has_technology_researched = rifling # corresponds roughly with the Izhevsk plant's incorporation as a private commercial enterprise, and not a state arsenal.
 		any_scope_state = {
 			state_region = s:STATE_PERM
@@ -276,16 +299,16 @@ company_izhevsk_arms_plant = {
 			}
 		}
 	}
-	
+
 	prosperity_modifier = {
 		building_arms_industry_throughput_add = 0.1
 		building_artillery_foundries_throughput_add = 0.1
-        # kmpmp
+		# kmpmp
 		building_automotive_industry_throughput_add = 0.1
 		unit_army_defense_mult = 0.05
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		has_technology_researched = rifling
 		any_scope_state = {
 			state_region = s:STATE_PERM
@@ -300,7 +323,7 @@ company_izhevsk_arms_plant = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
 		value = 3 # Higher base value for flavored companies
 	}
@@ -325,6 +348,13 @@ company_savva_morozov = {
 
 	possible_prestige_goods = {
 		prestige_good_generic_clothes
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_clothes_complete_tt
+			has_variable = prestige_good_generic_clothes_var
+		}
 	}
 
 	potential = {
@@ -354,13 +384,13 @@ company_savva_morozov = {
 	prosperity_modifier = {
 		# country_prestige_mult = 0.1
 		# interest_group_ig_industrialists_pop_attraction_mult = 0.1
-        # kmpmp
-        building_livestock_ranch_throughput_add = 0.1
+		# kmpmp
+		building_livestock_ranch_throughput_add = 0.1
 		building_logging_camp_throughput_add = 0.1
 		building_tooling_workshops_throughput_add = 0.1
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		has_technology_researched = joint_stock_companies
 		any_scope_state = {
 			state_region = s:STATE_MOSCOW

@@ -20,6 +20,13 @@ company_fundidora_monterrey = {
 		prestige_good_generic_steel
 	}
 
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_steel_complete_tt
+			has_variable = prestige_good_generic_steel_var
+		}
+	}
+
 	potential = {
 		has_interest_marker_in_region = region_mexico
 	}
@@ -74,31 +81,31 @@ company_fundidora_monterrey = {
 company_el_aguila = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/el_aguila.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
-	
+
 	flavored_company = yes
-	
+
 	building_types = {
 		building_oil_rig
 		building_lead_mine #kmpmp
 		building_dye_plantation #kmpmp
 	}
 
-    extension_building_types = {
+	extension_building_types = {
 		building_power_plant
 	}
-	
+
 	potential = {
 		has_interest_marker_in_region = region_mexico
 	}
-	
+
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
 				region = sr:region_mexico
 			}
 		}
-	}	
-	
+	}
+
 	possible = {
 		has_technology_researched = pumpjacks
 		any_scope_state = {
@@ -111,7 +118,7 @@ company_el_aguila = {
 			is_coastal = yes
 		}
 	}
-	
+
 	prosperity_modifier = {
 		building_glassworks_throughput_add = 0.1 #kmpmp
 		country_convoys_capacity_mult = 0.2 #0.15
@@ -138,7 +145,7 @@ company_el_aguila = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
 		value = 3 # Higher base value for flavored companies
 	}
@@ -191,7 +198,7 @@ company_csfa = {
 		interest_group_ig_industrialists_approval_add = 3
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		has_technology_researched = railways
 		any_scope_state = {
 			state_region = s:STATE_ANTOFAGASTA
@@ -234,6 +241,13 @@ company_bunge_born = {
 		prestige_good_generic_groceries
 	}
 
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_groceries_complete_tt
+			has_variable = prestige_good_generic_groceries_var
+		}
+	}
+
 	potential = {
 		has_interest_marker_in_region = region_la_plata
 	}
@@ -262,9 +276,9 @@ company_bunge_born = {
 	}
 
 	prosperity_modifier = {
-		building_livestock_ranch_throughput_add = 0.1
-        # interest_group_ig_rural_folk_pop_attraction_mult = 0.2
+		# interest_group_ig_rural_folk_pop_attraction_mult = 0.2
 		building_tooling_workshops_throughput_add = 0.15 #0.1
+		building_livestock_ranch_throughput_add = 0.1 # kmpmp
 	}
 
 	ai_will_do = {
@@ -319,6 +333,13 @@ company_la_rosada = {
 		prestige_good_generic_steel
 	}
 
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_steel_complete_tt
+			has_variable = prestige_good_generic_steel_var
+		}
+	}
+
 	potential = {
 		has_interest_marker_in_region = region_la_plata
 	}
@@ -348,7 +369,7 @@ company_la_rosada = {
 		building_iron_mine_throughput_add = 0.15 #0.1
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		has_technology_researched = shell_gun
 		any_scope_state = {
 			state_region = s:STATE_BAJO_PARAGUAY
@@ -384,7 +405,7 @@ company_peruvian_amazon = {
 		building_tooling_workshops # kmpmp
 	}
 
-    extension_building_types = {
+	extension_building_types = {
 		building_logging_camp
 	}
 
@@ -450,9 +471,9 @@ company_peruvian_amazon = {
 company_kablin = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/brazil_kablin_irmaos_and_cia.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
-	
+
 	flavored_company = yes
-	
+
 	building_types = {
 		building_paper_mills
 		building_logging_camp
@@ -465,19 +486,19 @@ company_kablin = {
 	possible_prestige_goods = {
 		prestige_good_rosewood
 	}
-	
+
 	potential = {
 		has_interest_marker_in_region = region_brazil
 	}
-	
+
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
 				region = sr:region_brazil
 			}
 		}
-	}		
-	
+	}
+
 	possible = {
 		has_technology_researched = mechanical_tools
 		any_scope_state = {
@@ -489,7 +510,7 @@ company_kablin = {
 			}
 		}
 	}
-	
+
 	prosperity_modifier = {
 		building_arts_academy_throughput_add = 0.2 #kmpmp
 		building_tooling_workshops_throughput_add = 0.1
@@ -513,7 +534,7 @@ company_kablin = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
 		value = 3 # Higher base value for flavored companies
 	}

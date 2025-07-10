@@ -200,6 +200,9 @@ types goods_state_panel_types
 								visible = "[Goods.IsTradeable]"
 								autoresize = yes
 								align = nobaseline
+								using = elide_fontsize_min
+								max_width = 120
+								multiline = yes
 								text = "BUDGET_TARIFFS"
 							}
 							
@@ -214,6 +217,8 @@ types goods_state_panel_types
 							textbox = {
 								layoutpolicy_horizontal = expanding
 								align = right|nobaseline
+								using = elide_fontsize_min
+								multiline = yes
 								text = "BUDGET_CONSUMPTION_TAXES"
 							}
 							

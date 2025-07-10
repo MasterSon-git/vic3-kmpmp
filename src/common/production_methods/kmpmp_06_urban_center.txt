@@ -61,12 +61,12 @@ pm_film_art = {
 
 	building_modifiers = {
 
-		workforce_scaled = { # 690 profit
+		workforce_scaled = { # 1000 profit
 			goods_input_tools_add = 10 # 400
 			goods_input_paper_add = 15 # 450
-			goods_input_electricity_add = 2 # 60
+			goods_input_electricity_add = 5 # 150
 
-			goods_output_fine_art_add = 8 # 1600
+			goods_output_fine_art_add = 10 # 2000
 		}
 	}
 
@@ -77,11 +77,11 @@ pm_principle_freedom_of_movement_3 = {
 	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
 
 	is_hidden_when_unavailable = yes
-	
+
 	unlocking_principles = {
-		principle_freedom_of_movement_3 
+		principle_freedom_of_movement_3
 	}
-	
+
 	state_modifiers = {
 		unscaled = {
 			state_migration_pull_mult = 0.1 #0.2

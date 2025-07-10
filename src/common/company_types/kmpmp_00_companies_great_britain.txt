@@ -53,7 +53,7 @@ company_armstrong_whitworth = {
 		unit_navy_offense_mult = 0.1 # kmpmp
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		has_technology_researched = ironclad_tech
 		has_technology_researched = gantry_cranes
 		any_scope_state = {
@@ -127,11 +127,11 @@ company_john_brown = {
 	prosperity_modifier = {
 		country_prestige_mult = 0.05
 		country_convoys_capacity_mult = 0.1
-        # kmpmp
+		# kmpmp
 		building_motor_industry_throughput_add = 0.05
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		has_technology_researched = steelworking
 		has_technology_researched = hydraulic_cranes
 		any_scope_state = {

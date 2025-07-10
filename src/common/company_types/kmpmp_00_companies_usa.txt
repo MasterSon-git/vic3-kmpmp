@@ -42,7 +42,7 @@ company_standard_oil = {
 		building_railway_throughput_add = 0.1 #0.2
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		has_technology_researched = pumpjacks
 		any_scope_state = {
 			region = sr:region_the_midwest
@@ -129,7 +129,7 @@ company_united_fruit = {
 		building_cotton_plantation_throughput_add = 0.1
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		OR = {
 			any_scope_state = {
 				OR = {
@@ -225,7 +225,7 @@ company_ford_motor = {
 		building_automotive_industry_throughput_add = 0.1 #0.05
 	}
 
-    ai_will_do = {
+	ai_will_do = {
 		has_technology_researched = combustion_engine
 		any_scope_state = {
 			state_region = s:STATE_MICHIGAN
