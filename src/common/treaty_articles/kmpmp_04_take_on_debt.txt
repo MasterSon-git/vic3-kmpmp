@@ -23,24 +23,6 @@
 	}
 
 	can_ratify = {
-		# kmpmp - check target country is not in cooldown list
-		scope:source_country = {
-			custom_tooltip = {
-				text = kmpmp_take_on_debt_possbile_tt
-				OR = {
-					NOT = {
-						has_variable_list = kmpmp_take_on_debt_cooldown_list
-					}
-					NOT = {
-						is_target_in_variable_list = {
-							name = kmpmp_take_on_debt_cooldown_list
-							target = scope:target_country
-						}
-					}
-				}
-			}
-		}
-
 		scope:target_country = {
 			scaled_debt > 0
 		}
@@ -69,38 +51,6 @@
 			}
 			target_country = {
 				save_scope_as = debt_giver
-			}
-
-			# kmpmp - add countries in cooldown list on both sides
-			# so they can't take over the debts from each other to improve relations quickly
-			source_country = {
-				add_to_variable_list = {
-					name = kmpmp_take_on_debt_cooldown_list
-					target = scope:debt_taker
-				}
-			}
-			target_country = {
-				add_to_variable_list = {
-					name = kmpmp_take_on_debt_cooldown_list
-					target = scope:debt_giver
-				}
-			}
-			# kmpmp - remove from cooldown list after 6 months
-			hidden_effect = {
-				source_country = {
-					save_scope_as = take_on_debt_initiator
-					trigger_event = {
-						id = kmpmp_ev_take_on_debt.1
-						months = 6
-					}
-				}
-				target_country = {
-					save_scope_as = take_on_debt_target
-					trigger_event = {
-						id = kmpmp_ev_take_on_debt.1
-						months = 6
-					}
-				}
 			}
 
 			source_country = {

@@ -66,7 +66,7 @@
 	
 	pact = {
 		cost = 100
-		forced_duration = 84 #12
+		forced_duration = 60 #12
 	
 		is_hostile = yes
 		is_embargo = yes		

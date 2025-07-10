@@ -63,7 +63,7 @@
 		is_hostile = yes
 		is_rivalry = yes		
 		is_two_sided_pact = no
-		forced_duration = 84 #12
+		forced_duration = 60 #12
 		
 		relations_progress_per_day = -1 # At -100, -1 relations
 		relations_improvement_min = -20

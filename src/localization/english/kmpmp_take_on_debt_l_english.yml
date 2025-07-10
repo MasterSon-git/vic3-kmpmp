@@ -1,2 +1,0 @@
-﻿l_english:
- kmpmp_take_on_debt_possbile_tt: "Not has taken debt cooldown with [SCOPE.sCountry('target_country').GetName]"

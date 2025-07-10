@@ -34,3 +34,5 @@
  kmpmp_treaty_adjust_binding_days_tt:0 "Passt die Bindungsdauer des Vertrags an, jedoch nicht unter #v 3 Jahre#! und nicht über #v 99 Jahre#!.\n\n• Klick (#white 1 Jahr#!)\n• $SHORTCUT_KEY_MOD_shift$Klick (#white 5 Jahre#!)\n• $SHORTCUT_KEY_MOD_ctrl$Klick (#white 10 Jahre#!)\n• $SHORTCUT_KEY_MOD_alt$Klick (#white 20 Jahre#!)"
 
  KMPMP_SGUI_DIPLOMATIC_PLAY_DECLARE_NEUTRALITY_WARNING: "$WARNING$[ROOT.GetCountry.GetNameNoFlag] hat [SCOPE.sTreatyArticle('treaty_article').GetNameNoIcon] mit [SCOPE.sCountry('other').GetNameNoFlag]"
+
+ kmpmp_redeem_obligation_possbile_tt: "Hat keinen $redeem_obligation$ Cooldown mit [SCOPE.sCountry('target_country').GetName]"

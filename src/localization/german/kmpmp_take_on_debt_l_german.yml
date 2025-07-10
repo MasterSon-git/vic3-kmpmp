@@ -1,2 +1,0 @@
-﻿l_german:
- kmpmp_take_on_debt_possbile_tt: "Hat keinen Schuldenübernahme Cooldown mit [SCOPE.sCountry('target_country').GetName]"

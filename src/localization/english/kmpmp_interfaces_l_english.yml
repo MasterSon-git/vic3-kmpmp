@@ -35,3 +35,5 @@
 
  #KMPMP_SGUI_DIPLOMATIC_PLAY_DECLARE_NEUTRALITY_WARNING: "#title #r Warning#!#! [ROOT.GetCountry.GetNameNoFlag] has [SCOPE.sTreatyArticle('treaty_article').GetNameNoIcon] with [SCOPE.sCountry('other').GetNameNoFlag]"
  KMPMP_SGUI_DIPLOMATIC_PLAY_DECLARE_NEUTRALITY_WARNING: "$WARNING$[ROOT.GetCountry.GetNameNoFlag] has [SCOPE.sTreatyArticle('treaty_article').GetNameNoIcon] with [SCOPE.sCountry('other').GetNameNoFlag]"
+
+ kmpmp_redeem_obligation_possbile_tt: "Not has $redeem_obligation$ cooldown with [SCOPE.sCountry('target_country').GetName]"
