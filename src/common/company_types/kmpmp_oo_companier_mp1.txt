@@ -1,0 +1,83 @@
+﻿# Compañía Sansinena de Carnes Congeladas / La Negra
+company_compania_sansinena_de_carnes_congeladas = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_compania_sansinena_de_carnes_congeladas.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_BUENOS_AIRES }
+
+	building_types = {
+		building_livestock_ranch
+		building_food_industry
+	}
+
+	extension_building_types = {
+		building_port
+        building_wheat_farm
+        building_maize_farm
+        building_rye_farm
+	}
+
+	possible_prestige_goods = {
+		prestige_good_river_plate_beef
+	}
+
+	potential = {
+		has_dlc_feature = mp1_content
+		has_interest_marker_in_region = region_la_plata
+	}
+
+	attainable = {
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_BUENOS_AIRES
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_food_industry
+				level >= 5
+			}
+		}
+		any_scope_state = {
+			region = sr:region_la_plata
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_livestock_ranch
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		state_trade_advantage_mult = 0.1
+		building_port_throughput_add = 0.1
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_BUENOS_AIRES
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_food_industry = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_BUENOS_AIRES
+			}
+		}
+		building_livestock_ranch = {
+			level = 5
+			state_trigger = {
+				region = sr:region_la_plata
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
