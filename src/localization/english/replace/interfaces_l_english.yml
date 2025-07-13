@@ -9,3 +9,5 @@
  
  # kmpmp show warning in tooltip if you'd like to declare neutrality where initiator is ally or target is ally/defense pact
  DECLARE_NEUTRALITY_DIPLOMATIC_PLAY_TOOLTIP:0 "Declare yourself to be neutral in this [concept_diplomatic_play][ConcatIfNeitherEmpty(DiplomaticPlay.GetDeclareNeutralityValidTooltip(GetPlayer),'\n\n')][ConcatIfNeitherEmpty('\n\n', GetScriptedGui('kmpmp_sgui_diplomatic_play_declare_neutrality_warning').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('diplomatic_play', DiplomaticPlay.MakeScope).End))]"
+
+ DIPLOMATIC_DEMAND_PROPOSAL_DESC: "[COUNTRY.GetName] demands '[WAR_GOAL.GetName]'[AddTextIf(And(WAR_GOAL.HoldsArticle, WAR_GOAL.GetArticleDraft.HasType('law_commitment')), Concatenate(' ', WAR_GOAL.GetArticleDraft.GetLawType.GetName))] from us. Accepting will cede the demanded [concept_war_goal] and create a [concept_truce] for #v 5#! years.\n\n@warning! If we refuse, they will start a [concept_diplomatic_play] against us which may escalate into a [concept_war]."

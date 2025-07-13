@@ -17,3 +17,5 @@
  kmpmp_owns_entire_state_region_and_is_incorporated_tt: "Gesamte [concept_state_region] im Besitz und inkorporiert durch [SCOPE.GetRootScope.GetCountry.GetName]"
  
  kmpmp_owns_all_sca_states_tooltip: "Besitzt alle Skandinavischen Staaten"
+
+ kmpmp_war_support_lower_or_equal_than_tt: "Die [SCOPE.sCountry('target_country').GetAdjectiveNoFormatting|l]e [concept_war_support] ist kleiner oder gleich [SCOPE.GetValue('target_value')|0v]"

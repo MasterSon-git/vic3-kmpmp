@@ -6680,8 +6680,10 @@ right_click_menu = {
 				visible = "[And( DiplomaticPlay.IsTarget(GetPlayer), Not( IsValid( DiplomaticPlay.SwitchSide( GetPlayer ))))]"
 				blockoverride "properties" {
 					onclick = "[PopupManager.AskConfirmation(DiplomaticPlay.Yield(GetPlayer))]"
-					tooltip = "YIELD_DIPLOMATIC_PLAY_TOOLTIP"
-					enabled = "[DiplomaticPlay.CanYield(GetPlayer)]"
+					# tooltip = "YIELD_DIPLOMATIC_PLAY_TOOLTIP"
+					tooltip = "[SelectLocalization(Not(DiplomaticPlay.CanYield(GetPlayer)), 'YIELD_DIPLOMATIC_PLAY_TOOLTIP', GetScriptedGui('kmpmp_sgui_diplomatic_play_can_give_in').IsValidTooltip(GuiScope.SetRoot(DiplomaticPlay.MakeScope).AddScope('country', GetPlayer.MakeScope).End))]"
+					# enabled = "[DiplomaticPlay.CanYield(GetPlayer)]"
+					enabled = "[And(DiplomaticPlay.CanYield(GetPlayer), GetScriptedGui('kmpmp_sgui_diplomatic_play_can_give_in').IsValid(GuiScope.SetRoot(DiplomaticPlay.MakeScope).AddScope('country', GetPlayer.MakeScope).End))]"
 				}
 
 				blockoverride "texture" {

@@ -1,0 +1,159 @@
+types wargoal_types
+{
+    ### WARGOAL
+	type wargoal_item = container {
+		parentanchor = hcenter
+		onmousehierarchyenter = "[WarGoal.ShowHighlight]"
+		onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+		alwaystransparent = no
+
+		block "war_goal_tooltip" {
+			tooltipwidget = {
+				RegularTooltip_WarGoal = {}
+			}
+		}
+
+		### PRESSED
+		container = {
+			visible = "[WarGoal.IsPressedInShownPeaceDeal( GetPlayer )]"
+			minimumsize = { 220 62 }
+			maximumsize = { 220 -1 }
+
+			background = {
+				using = entry_bg
+				visible = "[Not(IsValid( WarGoal.ToggleIsPressedInPotentialPeaceDeal( GetPlayer.Self ) ))]"
+			}
+
+			button = {
+				enabled = "[WarGoal.IsValid]"
+				onclick = "[Execute( WarGoal.ToggleIsPressedInPotentialPeaceDeal( GetPlayer.Self ) )]"
+                # kmpmp onclick
+				# actually we don't know how to track pressed/unpressed war goals
+                # onclick = "[GetScriptedGui('kmpmp_sgui_diplomatic_play_toggle_pressed_war_goal_in_list').Execute(GuiScope.SetRoot(WarGoal.GetWar.GetDiplomaticPlay.MakeScope).AddScope('war_goal', MakeScopeValue(WarGoal.GetType.GetName)).End)]"
+				visible = "[IsValid( WarGoal.ToggleIsPressedInPotentialPeaceDeal( GetPlayer.Self ) )]"
+				using = default_button
+				size = { 100% 100% }
+
+				icon = {
+					visible = no
+					#todo add the below visible state instead when PRCAL-17690 is done:
+		 			#visible = "[WarGoal.IsBeingHighlighted]"
+		  			using = highlighted_square_selection
+		  		}
+			}
+
+			flowcontainer = {
+				direction = vertical
+				margin_top = 5
+				margin_bottom = 5
+				parentanchor = center
+
+				flowcontainer = {
+					spacing = 10
+					parentanchor = hcenter
+
+					tiny_flag_no_interact = {
+						parentanchor = vcenter
+						datacontext = "[WarGoal.GetHolder]"
+						blockoverride "tooltip" {}
+					}
+
+					icon = {
+						parentanchor = vcenter
+						size = { 30 30 }
+						texture = "[WarGoal.GetTexture]"
+					}
+
+					tiny_flag_no_interact = {
+						parentanchor = vcenter
+						datacontext = "[WarGoal.GetTarget]"
+						blockoverride "tooltip" {}
+					}
+				}
+
+				textbox = {
+					parentanchor = hcenter
+					minimumsize = { 190 -1 }
+					maximumsize = { 190 -1 }
+					align = hcenter|nobaseline
+					multiline = yes
+					autoresize = yes
+					text = "[WarGoal.GetName]"
+				}
+			}
+		}
+
+		### UNPRESSED
+		container = {
+			visible = "[Not(WarGoal.IsPressedInShownPeaceDeal( GetPlayer ))]"
+			minimumsize = { 220 55 }
+			maximumsize = { 220 -1 }
+			alpha = 0.75
+
+			background = {
+				using = entry_bg
+				visible = "[Not(IsValid( WarGoal.ToggleIsPressedInPotentialPeaceDeal( GetPlayer.Self) ))]"
+			}
+
+			button = {
+				enabled = "[WarGoal.IsValid]"
+				onclick = "[Execute( WarGoal.ToggleIsPressedInPotentialPeaceDeal( GetPlayer.Self ) )]"
+                # kmpmp onclick
+				# actually we don't know how to track pressed/unpressed war goals
+                # onclick = "[GetScriptedGui('kmpmp_sgui_diplomatic_play_toggle_pressed_war_goal_in_list').Execute(GuiScope.SetRoot(WarGoal.GetWar.GetDiplomaticPlay.MakeScope).AddScope('war_goal', MakeScopeValue(WarGoal.GetType.GetName)).End)]"
+				visible = "[IsValid( WarGoal.ToggleIsPressedInPotentialPeaceDeal( GetPlayer.Self ) )]"
+				using = default_button
+				size = { 100% 100% }
+
+				icon = {
+					visible = no
+					#todo add the below visible state instead when PRCAL-17690 is done:
+		 			#visible = "[WarGoal.IsBeingHighlighted]"
+		  			using = highlighted_square_selection
+		  		}
+			}
+
+			flowcontainer = {
+				direction = vertical
+				margin_top = 5
+				margin_bottom = 5
+				parentanchor = center
+
+				flowcontainer = {
+					spacing = 10
+					parentanchor = hcenter
+
+					tiny_flag_no_interact = {
+						parentanchor = vcenter
+						datacontext = "[WarGoal.GetHolder]"
+						blockoverride "tooltip" {}
+					}
+
+					icon = {
+						parentanchor = vcenter
+						size = { 30 30 }
+						texture = "[WarGoal.GetTexture]"
+					}
+
+					tiny_flag_no_interact = {
+						parentanchor = vcenter
+						datacontext = "[WarGoal.GetTarget]"
+						blockoverride "tooltip" {}
+					}
+				}
+
+				textbox = {
+					parentanchor = hcenter
+					minimumsize = { 190 -1 }
+					maximumsize = { 190 -1 }
+					align = hcenter|nobaseline
+					multiline = yes
+					autoresize = yes
+					text = "[WarGoal.GetName]"
+				}
+			}
+		}
+
+		wargoal_checkmark = {}
+	}
+}

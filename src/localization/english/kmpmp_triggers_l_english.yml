@@ -31,3 +31,5 @@
  
 #  DATA_STATE_REGION_NAME_TOOLTIP:1 "#title States in [StateRegion.GetName] ([concept_state_region])#!\n[StateRegion.GetStatesDesc]\n[concept_state_region_desc]"
 #  DATA_TEST_TOOLTIP: "a test string"
+
+ kmpmp_war_support_lower_or_equal_than_tt: "[SCOPE.sCountry('target_country').GetAdjectiveNoFormatting] [concept_war_support] is lower or equal than [SCOPE.GetValue('target_value')|0v]"

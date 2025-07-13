@@ -86,3 +86,21 @@ kmpmp_is_chinese_country = {
         capital.region = sr:region_himalayas
     }
 }
+
+# root - war to check war exhaustion against scope:target_country
+# scope:target_country - comparison country
+# TARGET_VALUE - comparison value
+kmpmp_war_support_lower_or_equal_than = {
+    save_temporary_scope_value_as = {
+        name = target_value
+        value = $TARGET_VALUE$
+    }
+    custom_tooltip = {
+        text = kmpmp_war_support_lower_or_equal_than_tt
+
+        has_war_support = {
+            target = scope:target_country
+            value <= scope:target_value
+        }
+    }
+}
