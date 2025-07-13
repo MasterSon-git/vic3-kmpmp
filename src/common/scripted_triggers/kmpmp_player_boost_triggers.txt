@@ -1,9 +1,15 @@
 ﻿kmpmp_player_boost_can_take_unite_the_workers_of_the_world = {
     exists = ig:ig_trade_unions
-        
+    
     ig:ig_trade_unions = {
         ig_clout >= 0.2
     }
+
+    kmpmp_player_boost_can_maintain_unite_the_workers_of_the_world = yes
+}
+
+kmpmp_player_boost_can_maintain_unite_the_workers_of_the_world = {
+    exists = ig:ig_trade_unions
 
     has_law = law_type:law_council_republic
 
@@ -18,5 +24,13 @@
         has_law = law_type:law_census_voting
         has_law = law_type:law_universal_suffrage
         has_law = law_type:law_single_party_state
+    }
+
+    NOT = {
+        any_scope_treaty = {
+            any_scope_article = {
+                has_type = alliance
+            }
+        }
     }
 }

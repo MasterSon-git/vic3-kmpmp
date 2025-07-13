@@ -15,6 +15,7 @@
  kmpmp_player_boost_rhine_capitalism:0 "Rheinkapitalismus"
  kmpmp_player_boost_unite_the_workers_of_the_world:0 "Vereint die Arbeiter der Welt"
  kmpmp_player_boost_expand_influence:0 "Einflussreicher Staat"
+ kmpmp_player_boost_arsenal_of_democrazy:0 "Bollwerk der Demokratie"
 
  kmpmp_player_boost_description:0 "Staatsausrichtung"
 
@@ -65,6 +66,10 @@
  kmpmp_player_boost_expand_influence_decision:0 "$kmpmp_player_boost_expand_influence$"
  kmpmp_player_boost_expand_influence_decision_desc:0 "$kmpmp_player_boost_description$"
  kmpmp_player_boost_expand_influence_decision_tooltip:0 ""
+
+ kmpmp_player_boost_arsenal_of_democrazy_decision:0 "$kmpmp_player_boost_arsenal_of_democrazy$"
+ kmpmp_player_boost_arsenal_of_democrazy_decision_desc:0 "$kmpmp_player_boost_description$"
+ kmpmp_player_boost_arsenal_of_democrazy_decision_tooltip:0 ""
 
  # notifications
  kmpmp_player_boost_notification_group:0 "$kmpmp_player_boost_description$"

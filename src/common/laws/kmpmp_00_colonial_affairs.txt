@@ -120,7 +120,7 @@ law_colonial_resettlement = {
 
 	#kmpmp
 	institution_modifier = {
-		state_unincorporated_education_access_add = 0.03 # this is actually a fake modifier... think about it, how to apply this on unincorprated states
+		state_kmpmp_unincorporated_education_access_add = 0.03 # this is actually a fake modifier... think about it, how to apply this on unincorprated states
 		building_group_bg_manufacturing_unincorporated_throughput_add = 0.02
 	}
 

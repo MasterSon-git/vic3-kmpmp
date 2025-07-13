@@ -12,8 +12,11 @@
  building_group_bg_owner_buildings_tax_mult:0 "$bg_owner_buildings$-Steuereinkommen"
  building_group_bg_owner_buildings_tax_mult_desc:0 "Ein Bonus oder Abzug auf das Steuereinkommen durch $bg_owner_buildings$"
 
- state_unincorporated_education_access_add:0 "Bildungszugang in [Concept('concept_unincorporated_state','$concept_unincorporated_states$')]"
- state_unincorporated_education_access_add_desc:0 "Ein Bonus oder Abzug auf den Bildungszugang von Pops in [Concept('concept_unincorporated_state','$concept_unincorporated_states$')]."
+ state_kmpmp_unincorporated_education_access_add:0 "Bildungszugang in [Concept('concept_unincorporated_state','$concept_unincorporated_states$')]"
+ state_kmpmp_unincorporated_education_access_add_desc:0 "Ein Bonus oder Abzug auf den Bildungszugang von Pops in [Concept('concept_unincorporated_state','$concept_unincorporated_states$')]."
+
+ state_kmpmp_unincorporated_construction_mult: "$state_construction_mult$ in [Concept('concept_unincorporated_state','$concept_unincorporated_states$')]"
+ state_kmpmp_unincorporated_construction_mult_desc: "Ein Bonus oder Abzug auf den wöchentlichen [concept_construction]-Fortschritt in einem [Concept('concept_unincorporated_state','$concept_unincorporated_states$')]."
 
  unit_combat_unit_type_squad_infantry_offense_mult: "$combat_unit_type_squad_infantry$ $unit_offense_mult$"
  unit_combat_unit_type_squad_infantry_offense_mult_desc: "$combat_unit_type_squad_infantry$ $unit_offense_mult$"

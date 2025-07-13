@@ -3,6 +3,7 @@ on_monthly_pulse_country = {
     on_actions = {
         kmpmp_player_boost_remove_invalid
         kmpmp_player_boost_effect_state_unincorporated_education_access
+        kmpmp_player_boost_effect_state_unincorporated_construction_mult
     }
 }
 
@@ -10,7 +11,8 @@ kmpmp_player_boost_effect_state_unincorporated_education_access = {
     effect = {
         if = {
             limit = {
-                has_modifier = kmpmp_player_boost_imperialism_oversea_empire
+                #has_modifier = kmpmp_player_boost_imperialism_oversea_empire
+                modifier:state_kmpmp_unincorporated_education_access_add >= 0.01
             }
             every_scope_state = {
                 limit = {
@@ -19,18 +21,40 @@ kmpmp_player_boost_effect_state_unincorporated_education_access = {
                 add_modifier = {
                     name = kmpmp_player_boost_imperialism_oversea_empire_state_unincorporated_education_access
                     days = 30
+                    multiplier = modifier:state_kmpmp_unincorporated_education_access_add
                 }
             }
         }
     }
 }
 
+kmpmp_player_boost_effect_state_unincorporated_construction_mult = {
+    effect = {
+        if = {
+            limit = {
+                modifier:state_kmpmp_unincorporated_construction_mult >= 0.01
+            }
+            every_scope_state = {
+                limit = {
+                    is_incorporated = no
+                }
+                add_modifier = {
+                    name = kmpmp_player_boost_imperialism_oversea_empire_state_unincorporated_construction_mult
+                    days = 30
+                    multiplier = modifier:state_kmpmp_unincorporated_construction_mult
+                }
+            }
+        }
+    }
+}
+
+
 kmpmp_player_boost_remove_invalid = {
     effect = {
         if = {
             limit = {
                 has_modifier = kmpmp_player_boost_unite_the_workers_of_the_world
-                kmpmp_player_boost_can_take_unite_the_workers_of_the_world = no
+                kmpmp_player_boost_can_maintain_unite_the_workers_of_the_world = no
             }
             remove_modifier = kmpmp_player_boost_adjustment
             remove_player_boost_modifiers = yes
