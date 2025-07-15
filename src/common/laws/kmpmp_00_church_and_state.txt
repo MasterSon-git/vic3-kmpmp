@@ -214,11 +214,11 @@ law_state_atheism = {
 	modifier = {
 		interest_group_ig_devout_pol_str_mult = -0.5
 		state_conversion_mult = 0.25
-		country_authority_add = 200
+		country_authority_add = 300 #200
 
-		country_acceptance_state_religion_add = 25 #15
+		country_acceptance_state_religion_add = 30 #15
 		country_acceptance_shared_religious_trait_add = 0
-		country_acceptance_religion_base_add = -10
+		country_acceptance_religion_base_add = -15 #-10
 
 		country_allow_conversion_violent_hostility_bool = yes
 		country_allow_conversion_cultural_erasure_bool = yes

@@ -28,7 +28,7 @@
 		building_nationalization_cost_mult = 1.0
 		building_nationalization_investment_return_add = 0.1
 		country_leverage_resistance_mult = 0.25
-		state_market_access_price_impact = -0.05 #-0.15
+		state_market_access_price_impact = -0.1 #-0.15
 		country_disable_nationalization_without_compensation_bool = yes
 	}
 	
@@ -136,10 +136,10 @@ law_agrarianism = {
 	}
 
 	modifier = {
-		state_aristocrats_investment_pool_efficiency_mult = 0.9 #0.5
-		state_clergymen_investment_pool_efficiency_mult = 0.75 #0.5
+		state_aristocrats_investment_pool_efficiency_mult = 0.8 #0.5
+		state_clergymen_investment_pool_efficiency_mult = 0.8 #0.5
 		state_farmers_investment_pool_efficiency_mult = 0.5
-		state_capitalists_investment_pool_efficiency_mult = -0.25
+		state_capitalists_investment_pool_efficiency_mult = -0.2 #-0.25
 		country_private_construction_allocation_mult = 0.5
 		building_nationalization_investment_return_add = 0.5
 		country_government_dividends_reinvestment_add = 0.5
@@ -272,16 +272,14 @@ law_industry_banned = {
 		building_group_bg_plantations_throughput_add = 0.2 #0.1
 		state_expected_sol_mult = -0.1
 		interest_group_ig_rural_folk_pol_str_mult = 0.5
-		state_aristocrats_investment_pool_efficiency_mult = 0.5 # kmpmp
 		state_aristocrats_investment_pool_contribution_add = 0.25
 		country_private_construction_allocation_mult = 0.5
 		country_production_tech_research_speed_mult = -0.1 #-0.25
 		country_production_tech_spread_mult = -0.1 #-0.25
 		building_nationalization_investment_return_add = 0.5
-		country_government_dividends_reinvestment_add = 0.3 #0.25
+		country_government_dividends_reinvestment_add = 0.25
 		country_government_dividends_efficiency_add = 0.5 #0.3
 		# state_peasants_education_access_add = -0.10
-		state_pollution_reduction_health_mult = -0.1 #kmpmp
 		country_disable_nationalization_without_compensation_bool = yes
 		country_economic_dependence_on_overlord_add = -0.5
 		country_free_charters_add = 1
@@ -326,9 +324,9 @@ law_laissez_faire = {
 	
 	modifier = {
 		country_loan_interest_rate_mult = -0.3 #-0.25
-		state_shopkeepers_investment_pool_efficiency_mult = 0.3 #0.25
-		state_capitalists_investment_pool_efficiency_mult = 0.3 #0.25
-		country_private_construction_allocation_mult = 0.70 #0.75
+		state_shopkeepers_investment_pool_efficiency_mult = 0.25
+		state_capitalists_investment_pool_efficiency_mult = 0.25
+		country_private_construction_allocation_mult = 0.75
 		country_government_dividends_reinvestment_add = 1.0
 		country_free_charters_add = 2
 		country_disable_nationalization_bool = yes
@@ -414,8 +412,9 @@ law_cooperative_ownership = {
 		building_group_bg_private_infrastructure_allowed_collectivization_add = 1.0
 		building_group_bg_arts_allowed_collectivization_add = 1.0
 
-		building_group_bg_manufacturing_throughput_add = 0.20 #kmpmp
-		building_group_bg_mining_throughput_add = 0.20 #kmpmp
+		# kmpmp
+		building_group_bg_manufacturing_throughput_add = 0.1
+		building_group_bg_mining_throughput_add = 0.1
 
 		country_foreign_collectivization_bool = yes
 	}
@@ -501,14 +500,15 @@ law_command_economy = {
 		country_bureaucrats_pol_str_mult = 0.25
 		building_nationalization_cost_mult = -0.5
 		building_nationalization_radicals_mult = -0.75
-		country_government_dividends_efficiency_add = 0.4
+		country_government_dividends_efficiency_add = 0.35 #0.4
 		country_private_construction_allocation_mult = 0.1
 		country_free_charters_add = 1
 		
 		country_leverage_resistance_mult = 0.25
-		building_throughput_add = -0.3 #kmpmp
-		country_bureaucracy_mult = -0.1 #kmpmp
-		country_military_goods_cost_mult = 0.05 #kmpmp
+
+		# kmpmp
+		building_throughput_add = -0.25
+		country_bureaucracy_mult = -0.1
 
 		country_disable_privatization_bool = yes
 	}

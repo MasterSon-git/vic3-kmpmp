@@ -35,7 +35,7 @@ law_monarchy = {
 		country_legitimacy_ideological_incoherence_mult = 0.1
 		country_aristocrats_pol_str_mult = 0.15 #0.25
 		country_authority_add = 200
-		#kmppmp
+		# kmppmp
 		interest_group_ig_armed_forces_pol_str_mult = 0.10
 	}
 
@@ -163,8 +163,10 @@ law_presidential_republic = {
 	modifier = {
 		country_legitimacy_headofstate_add = 15 #10
 		country_legitimacy_govt_total_votes_add = 10
-		country_legitimacy_ideological_incoherence_mult = 0.2
+		country_legitimacy_ideological_incoherence_mult = 0.15 #0.2
 		country_authority_add = 150 #100
+		# kmpmp
+		state_migration_pull_mult = 0.05
 	}
 
 	on_activate = {
@@ -413,15 +415,15 @@ law_theocracy = {
 
 	modifier = {
 		country_legitimacy_headofstate_add = 25 #20
-		country_legitimacy_ideological_incoherence_mult = 0.1
-		interest_group_ig_devout_pol_str_mult = 0.25
+		# country_legitimacy_ideological_incoherence_mult = 0.1
+		# interest_group_ig_devout_pol_str_mult = 0.25
 		country_authority_add = 250 #200
 		# kmpmp
 		country_radicalism_increases_full_acceptance_mult = -0.1
-		country_radicalism_increases_second_rate_citizen_mult = -0.25
+		country_radicalism_increases_second_rate_citizen_mult = -0.2
 		# kmpmp
-		country_loyalism_increases_full_acceptance_mult = 0.05
-		country_loyalism_increases_second_rate_citizen_mult = 0.25
+		country_loyalism_increases_full_acceptance_mult = 0.1
+		country_loyalism_increases_second_rate_citizen_mult = 0.2
 	}
 
 	ai_will_do = {
@@ -496,36 +498,6 @@ law_council_republic = {
 
 	can_enact = {
 		NOT = { has_government_type = gov_chartered_company }
-
-		# kmpmp - removed due to task #447
-		# OR = {
-		# 	custom_description = {
-		# 		text = kmpmp_turmoil_incorporated_states_greater_or_equal_tooltip
-		# 		object = 0.2
-		# 		kmpmp_turmoil_incorporated_states >= 0.2
-		# 	}
-
-		# 	AND = {
-		# 		ig:ig_trade_unions ?= {
-		# 			ig_clout >= 0.2
-		# 		}
-		# 		custom_tooltip = {
-		# 			text = kmpmp_law_council_republic_ideology_tooltip
-		# 			any_interest_group = {
-		# 				NOT = {
-		# 					is_interest_group_type = ig_trade_unions
-		# 				}
-		# 				leader = {
-		# 					OR = {
-		# 						has_ideology = ideology:ideology_anarchist
-		# 						has_ideology = ideology:ideology_communist
-		# 						has_ideology = ideology:ideology_vanguardist
-		# 					}
-		# 				}
-		# 			}
-		# 		}
-		# 	}
-		# }
 	}
 
 	on_activate = {
@@ -596,7 +568,7 @@ law_council_republic = {
 		country_legitimacy_ideological_incoherence_mult = -0.1
 		interest_group_ig_trade_unions_pol_str_mult = 0.25
 		# kmpmp
-		country_authority_add = 150
+		country_authority_add = 100
 		tax_dividends_add = 0.05
 		state_decree_cost_mult = -0.05
 	}

@@ -12,3 +12,10 @@ kmpmp_trade_states_relations = {
     kmpmp_trade_states_relations_ignore = {}
     kmpmp_trade_states_relations_vanilla = {}
 }
+
+kmpmp_law_multicultural = {
+    default = kmpmp_law_multicultural_standard
+
+    kmpmp_law_multicultural_standard = {}
+    kmpmp_law_multicultural_banned = {}
+}
