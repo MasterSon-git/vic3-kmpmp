@@ -1,0 +1,324 @@
+﻿# state_bureaucrats_investment_pool_contribution_add={
+# 	decimals=0
+# 	color=good
+# 	percent=yes
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }
+
+# state_bureaucrats_investment_pool_efficiency_mult={
+# 	decimals=0
+# 	color=good
+# 	percent=yes
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }
+
+# power_bloc_members_auto_help_against_revolutions_bool={
+# 	decimals=1
+# 	color=good
+# 	boolean=yes
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }
+
+# forced_privatization_subject_action_bool={
+# 	decimals=1
+# 	color=good
+# 	boolean=yes
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }
+
+# country_can_declare_holy_wars_bool={
+# 	decimals=1
+# 	color=good
+# 	boolean=yes
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }
+
+# power_bloc_allow_foreign_investment_all_rank_bool={
+# 	decimals=1
+# 	color=good
+# 	boolean=yes
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }
+
+# country_can_impose_same_lawgroup_economy_in_power_bloc_bool={
+# 	decimals=1
+# 	color=good
+# 	boolean=yes
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }
+
+# country_can_impose_same_lawgroup_home_affairs_in_power_bloc_bool={
+# 	decimals=1
+# 	color=good
+# 	boolean=yes
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }
+
+# country_can_impose_same_lawgroup_welfare_in_power_bloc_bool={
+# 	decimals=1
+# 	color=good
+# 	boolean=yes
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }
+
+# country_force_privatization_bool={
+# 	decimals=1
+# 	color=good
+# 	boolean=yes
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }
+
+# mandate_progress_from_cohesion_mult={
+# 	decimals=0
+# 	color=good
+# 	percent=yes
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }
+
+# mandate_progress_from_members_mult={
+# 	decimals=0
+# 	color=good
+# 	percent=yes
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }
+
+# power_bloc_cohesion_per_member_add={
+# 	decimals=1
+# 	color=good
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }
+
+power_bloc_free_mandates_from_reform={
+	decimals=0
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+# country_influence_per_subject_add={
+# 	decimals=0
+# 	color=good
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }
+
+# country_legitimacy_per_power_bloc_member_add={
+# 	decimals=0
+# 	color=good
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }
+
+# country_influence_from_bloc_members_add={
+# 	decimals=0
+# 	color=good
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }
+
+# country_trade_from_bloc_members_mult={
+# 	decimals=1
+# 	percent=yes
+# 	color=good
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }
+
+# country_trade_from_bloc_members_mult_max={
+# 	decimals=0
+# 	percent=yes
+# 	color=good
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }
+
+# country_interest_from_gold_reserves_bool={
+# 	decimals=1
+# 	color=good
+# 	boolean=yes
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }
+
+# country_minting_from_bloc_members_mult={
+# 	decimals=1
+# 	color=good
+# 	percent=yes
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }
+
+# country_minting_from_bloc_members_mult_max={
+# 	decimals=1
+# 	color=good
+# 	percent=yes
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }
+
+# country_bureaucracy_from_bloc_members_mult={
+# 	decimals=1
+# 	color=good
+# 	percent=yes
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }
+
+# country_interest_rate_from_bloc_members_mult={
+# 	decimals=2
+# 	color=bad
+# 	percent=yes
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }
+
+# country_interest_rate_from_bloc_members_mult_max={
+# 	decimals=1
+# 	color=bad
+# 	percent=yes
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }
+
+# country_mapi_per_leader_subject_mult={
+# 	decimals=2
+# 	color=neutral
+# 	percent=yes
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }
+
+# country_mapi_per_leader_subject_mult_max={
+# 	decimals=0
+# 	color=neutral
+# 	percent=yes
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }
+
+# building_training_rate_per_subject_mult={
+# 	decimals=1
+# 	color=good
+# 	percent=yes
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }
+
+# kates_country_authority_add={
+# 	decimals=1
+# 	color=good
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }
+
+# country_authority_per_manor_house_max={
+# 	decimals=0
+# 	color=good
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }
+
+# country_influence_add={
+# 	decimals=1
+# 	color=good
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }
+
+# country_convoys_per_leader_subject_mult={
+# 	decimals=0
+# 	color=good
+# 	percent=yes
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }
+
+# country_convoys_per_leader_subject_mult_max={
+# 	decimals=0
+# 	color=good
+# 	percent=yes
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }
+
+# country_institution_cost_institution_home_affairs_mult={
+# 	decimals=0
+# 	color=bad
+# 	percent=yes
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }
+
+# country_institution_size_change_speed_institution_home_affairs_mult={
+# 	decimals=0
+# 	color=good
+# 	percent=yes
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }
+
+# country_institution_cost_institution_social_security_mult={
+# 	decimals=0
+# 	color=bad
+# 	percent=yes
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }
+
+# country_institution_size_change_speed_institution_social_security_mult={
+# 	decimals=0
+# 	color=good
+# 	percent=yes
+# 	game_data={
+# 		ai_value=0
+# 	}
+# }

@@ -1,0 +1,104 @@
+﻿# kates_influence_per_subject_modifier = {
+# 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+# 	country_influence_add = 1
+# }
+
+# kates_minting_per_bloc_member_modifier = {
+# 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+# 	country_minting_mult = 1
+# }
+
+# kates_training_rate_per_subject_modifier = {
+# 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+# 	building_training_rate_mult = 1
+# }
+
+# kates_legitimacy_per_bloc_member_modifier = {
+# 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+# 	country_legitimacy_base_add = 1
+# }
+
+# kates_influence_per_bloc_member_modifier = {
+# 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+# 	country_influence_add = 1
+# }
+
+# kates_interest_rate_power_bloc_member_modifier = {
+# 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+# 	country_loan_interest_rate_mult = 1
+# }
+
+kates_free_mandates_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	power_bloc_free_mandates_from_reform = 1
+}
+
+# trade_league_vanilla_modifier = {
+# 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
+# 	power_bloc_cohesion_per_member_add = -0.5
+# }
+
+# sovereign_empire_vanilla_modifier = {
+# 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
+# 	power_bloc_cohesion_per_member_add = -1.5
+# }
+
+# sovereign_empire_leviathan_modifier = {
+# 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
+# 	power_bloc_cohesion_per_member_add = -1
+# 	power_bloc_leader_can_make_subjects_bool = yes
+# 	power_bloc_invite_acceptance_great_power_add = -5
+# 	power_bloc_invite_acceptance_major_power_add = -10
+# 	power_bloc_invite_acceptance_unrecognized_major_power_add = -10
+# 	power_bloc_invite_acceptance_add = -30
+# }
+
+# ideological_union_vanilla_modifier = {
+# 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
+# 	power_bloc_cohesion_per_member_add = -1
+# }
+
+# military_treaty_organization_vanilla_modifier = {
+# 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
+# 	power_bloc_cohesion_per_member_add = -1
+# }
+
+# religious_vanilla_modifier = {
+# 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
+# 	power_bloc_cohesion_per_member_add = -1
+# }
+
+kates_temp_influence_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_influence_add = 100000
+}
+
+# kates_convoys_per_leader_subject_modifier = {
+# 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+# 	country_convoys_capacity_mult = 1
+# }
+
+# kates_authority_per_manor_house_modifier = {
+# 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+# 	country_authority_add = 1
+# }
+
+# kates_gold_reserve_interest_modifier = {
+# 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+# 	country_tax_income_add = 1
+# }
+
+# kates_bureaucracy_per_member_modifier = {
+# 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+# 	country_bureaucracy_mult = 1
+# }
+
+# kates_mapi_per_leader_subject_modifier = {
+# 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+# 	state_market_access_price_impact = 1
+# }
+
+# kates_trade_per_bloc_member_modifier = {
+# 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+# 	state_trade_quantity_mult = 1
+# }

@@ -1,0 +1,439 @@
+﻿l_german:
+    # PRESTIGE_THREE_TIMES_POSSIBLE:0 "[ROOT.GetCountry.GetName] muss das Dreifache an [concept_prestige] haben wie [SCOPE.sCountry('target_country').GetName] #bold #red ([ROOT.GetCountry.GetPrestige]#!/#v [SCOPE.sCountry('target_country').MakeScope.ScriptValue('kates_prestige_value_3x_target')| +]#!#!)#!"
+    # POWER_BLOC_EXISTING_PRINCIPLE_LEVELS:0 "#tooltippable;tooltip:[ROOT.GetCountry.GetTooltipTag],POWER_BLOC_EXISTING_PRINCIPLE_LEVELS_TT Abnehmender Ertrag#!"
+    # POWER_BLOC_EXISTING_PRINCIPLE_LEVELS_TT:0 "Die Kosten für neue [Concept('concept_power_bloc_mandate', 'Mandate')] steigen multiplikativ um [GetPlayer.MakeScope.ScriptValue('power_bloc_diminishing_return_exponent_base_tooltip')| %0] für jede bereits genutzte [Concept('concept_power_bloc_principle', 'Prinzipienebene')] oder verfügbare [concept_power_bloc_mandate].\n\nAktuelle Kostensteigerung: [GetPlayer.MakeScope.ScriptValue('power_bloc_diminishing_modifier_tooltip')| -%0]"
+    # POWER_BLOC_VALUE_PER_MEMBER:0 "#tooltippable;tooltip:[ROOT.GetCountry.GetTooltipTag],POWER_BLOC_VALUE_PER_MEMBER_TT Mandatsfortschritt durch Mitglieder#!"
+    # POWER_BLOC_VALUE_PER_MEMBER_TT:0 "[concept_power_bloc_mandate_progress] wird durch die Quadratwurzel des gesamten [Concept('concept_rank', 'Rangwerts')] aller [concept_power_bloc] Mitglieder erhöht."
+    # POWER_BLOC_VALUE_PER_COHESION:0 "#tooltippable;tooltip:[ROOT.GetCountry.GetTooltipTag],POWER_BLOC_VALUE_PER_COHESION_TT Mandatsfortschritt durch Kohäsion#!"
+    # POWER_BLOC_VALUE_PER_COHESION_TT:0 "[concept_power_bloc_mandate_progress] wird um bis zu 10 erhöht, skaliert mit dem Quadrat des aktuellen [Concept('concept_power_bloc_cohesion', 'Kohäsionswerts')]."
+    # POWER_BLOC_LOW_MEMBER_PENALTY:0 "#tooltippable;tooltip:[ROOT.GetCountry.GetTooltipTag],POWER_BLOC_LOW_MEMBER_PENALTY_TT Strafe für niedrige Mitgliederzahl#!"
+    # POWER_BLOC_LOW_MEMBER_PENALTY_TT:0 "Eine Strafe für [Concept('concept_power_bloc', 'Machtblöcke')] mit einer niedrigen Mitgliederzahl, die [concept_power_bloc_mandate_progress] um 10% für jedes Mitglied unter 8 reduziert."
+    POWER_BLOC_REFORMED_MANDATES: "#tooltippable;tooltip:[ROOT.GetCountry.GetTooltipTag],POWER_BLOC_REFORMED_MANDATES_TT Reformierter Machtblock#!"
+    POWER_BLOC_REFORMED_MANDATES_TT: "Du hast kürzlich deinen [concept_power_bloc] reformiert und hast Anspruch auf #variable [ROOT.Var('saved_mandates').GetValue]#! freie Mandate."
+    # POWER_BLOC_FREE_FOUNDING_MANDATES: "#tooltippable;tooltip:[ROOT.GetCountry.GetTooltipTag],POWER_BLOC_FREE_FOUNDING_MANDATES_TT Freie Gründungsmandate#!"
+    # POWER_BLOC_FREE_FOUNDING_MANDATES_TT: "Da dein [concept_power_bloc] neu gegründet wurde, hast du Anspruch auf [GetPlayer.MakeScope.ScriptValue('power_bloc_free_founding_mandates')] freie Mandate."
+    # POWER_BLOC_MAX_MANDATES_RULE: "#tooltippable;tooltip:[ROOT.GetCountry.GetTooltipTag],POWER_BLOC_MAX_MANDATES_RULE_TT Maximale gespeicherte Mandate#!"
+    # POWER_BLOC_MAX_MANDATES_RULE_TT: "Du hast dein maximales Limit an gespeicherten Mandaten von [GetPlayer.MakeScope.ScriptValue('power_bloc_max_mandates_rule_value')] erreicht."
+    
+    # MANDATE_PROGRESS_AI_FREEZE: "#tooltippable;tooltip:[ROOT.GetCountry.GetTooltipTag],MANDATE_PROGRESS_AI_FREEZE_TT Mandatsfortschritt KI eingefroren#!"
+    # MANDATE_PROGRESS_AI_FREEZE_TT: "Der Mandatsfortschritt der KI wird eingefroren, sobald sie alle potenziellen Prinzipienstufen genutzt hat, um zu verhindern, dass sie deaktivierte Prinzipienslots nutzen kann."
+    # MANDATE_MULTIPLIER_VANILLA: "#tooltippable;tooltip:[ROOT.GetCountry.GetTooltipTag],MANDATE_MULTIPLIER_VANILLA_TT Mandatsfortschritt durch Kohäsionsmultiplikator#!"
+    # MANDATE_MULTIPLIER_VANILLA_TT: "Aktueller Wert: [GetPlayer.MakeScope.ScriptValue('power_bloc_vanilla_cohesion_mandate_modifier')| +%0]"
+    # POWER_BLOC_MANDATE_PROGRESS_MULTIPLIER_RULE: "#tooltippable;tooltip:[ROOT.GetCountry.GetTooltipTag],POWER_BLOC_MANDATE_PROGRESS_MULTIPLIER_RULE_TT Mandatsfortschritt Modifikator-Regel#!"
+    # POWER_BLOC_MANDATE_PROGRESS_MULTIPLIER_RULE_TT: "Eingestellt auf: [GetPlayer.MakeScope.ScriptValue('power_bloc_mandate_progress_rule_value')| %0]"
+
+
+    concept_power_blocs_expanded: "Erweiterte Machtblöcke"
+    concept_power_blocs_expanded_desc: "Eine Mod von Kate the Sibyl, die [concept_power_bloc]-Funktionen erweitert."
+
+    # rule_kates_power_bloc_rule_enable_new_principles: "[Concept('concept_power_blocs_expanded', 'PBE')] - Neue Prinzipien aktivieren"
+    # rule_kates_power_bloc_rule_enable_new_cohesion: "[Concept('concept_power_blocs_expanded', 'PBE')] - Geringere Kohäsionsstrafen für Mitglieder aktivieren"
+    # rule_kates_power_bloc_rule_enable_mandate_progress: "[Concept('concept_power_blocs_expanded', 'PBE')] - Überarbeiteten Mandatsfortschritt aktivieren"
+    rule_kates_power_bloc_rule_enable_identity_switch: "[Concept('concept_power_blocs_expanded', 'PBE')] - Identitätswechsel von Machtblöcken aktivieren"
+    # rule_kates_power_bloc_rule_diplo_action_changes: "[Concept('concept_power_blocs_expanded', 'PBE')] - Änderungen an diplomatischen Aktionen aktivieren"
+    # rule_kates_power_bloc_rule_holy_wars_gp: "[Concept('concept_power_blocs_expanded', 'PBE')] - Heilige Kriege gegen Großmächte erlauben"
+    # rule_kates_power_bloc_rule_mandate_cost_growth: "[Concept('concept_power_blocs_expanded', 'PBE')] - Wachstum der Mandatskosten"
+    # rule_kates_power_bloc_rule_mandate_progress_speed: "[Concept('concept_power_blocs_expanded', 'PBE')] - Geschwindigkeit des Mandatsfortschritts"
+    # rule_kates_power_bloc_rule_principle_slots: "[Concept('concept_power_blocs_expanded', 'PBE')] - Prinzipien-Slots"
+    # rule_kates_power_bloc_rule_max_saved_mandates: "[Concept('concept_power_blocs_expanded', 'PBE')] - Maximale gespeicherte Mandate"
+    # rule_kates_power_bloc_rule_free_founding_mandates: "[Concept('concept_power_blocs_expanded', 'PBE')] - Zusätzliche Gründungsmandate kostenlos"
+
+
+    # setting_kates_power_bloc_rule_enable_new_principles_enabled: "Aktiviert #f (Standard)#!"
+    # setting_kates_power_bloc_rule_enable_new_principles_disabled: "Deaktiviert #f (Vanilla)#!"
+    # setting_kates_power_bloc_rule_enable_new_principles_enabled_desc: "Aktiviert die neuen Prinzipiengruppen, die mit der Mod hinzugefügt wurden"
+    # setting_kates_power_bloc_rule_enable_new_principles_disabled_desc: "$setting_kates_power_bloc_rule_enable_new_principles_enabled_desc$"
+
+    # setting_kates_power_bloc_rule_enable_new_cohesion_enabled: "Aktiviert #f (Standard)#!"
+    # setting_kates_power_bloc_rule_enable_new_cohesion_disabled: "Deaktiviert #f (Vanilla)#!"
+    # setting_kates_power_bloc_rule_enable_new_cohesion_enabled_desc: "Reduziert die Auswirkungen der Kohäsion auf [Concept('concept_power_bloc_member', 'Machtblock-Mitglieder')]"
+    # setting_kates_power_bloc_rule_enable_new_cohesion_disabled_desc: "$setting_kates_power_bloc_rule_enable_new_cohesion_enabled_desc$"
+
+    # setting_kates_power_bloc_rule_enable_mandate_progress_enabled: "Aktiviert #f (Standard)#!"
+    # setting_kates_power_bloc_rule_enable_mandate_progress_disabled: "Deaktiviert #f (Vanilla)#!"
+    # setting_kates_power_bloc_rule_enable_mandate_progress_enabled_desc: "Überarbeitet die Berechnung des Mandatsfortschritts"
+    # setting_kates_power_bloc_rule_enable_mandate_progress_disabled_desc: "$setting_kates_power_bloc_rule_enable_mandate_progress_enabled_desc$"
+
+    setting_kates_power_bloc_rule_enable_identity_switch_enabled: "Aktiviert #f (Standard)#!"
+    setting_kates_power_bloc_rule_enable_identity_switch_disabled: "Deaktiviert #f (Vanilla)#!"
+    setting_kates_power_bloc_rule_enable_identity_switch_enabled_desc: "Ermöglicht es dir, deine [concept_power_bloc_identity] neu auszuwählen, ohne deinen [concept_power_bloc] aufzulösen"
+    setting_kates_power_bloc_rule_enable_identity_switch_disabled_desc: "$setting_kates_power_bloc_rule_enable_identity_switch_enabled_desc$"
+
+    # setting_kates_power_bloc_rule_diplo_action_changes_enabled: "Aktiviert #f (Standard)#!"
+    # setting_kates_power_bloc_rule_diplo_action_changes_disabled: "Deaktiviert #f (Vanilla)#!"
+    # setting_kates_power_bloc_rule_diplo_action_changes_enabled_desc: "Anpassungen an den Bedingungen und Auswirkungen von [Concept('concept_diplomatic_action', 'Diplomatischen Aktionen')], die durch [Concept('concept_power_bloc', 'Machtblöcke')] freigeschaltet werden"
+    # setting_kates_power_bloc_rule_diplo_action_changes_disabled_desc: "$setting_kates_power_bloc_rule_diplo_action_changes_enabled_desc$"
+
+    # setting_kates_power_bloc_rule_holy_wars_gp_enabled: "Aktiviert #f (Standard)#!"
+    # setting_kates_power_bloc_rule_holy_wars_gp_disabled: "Deaktiviert #f (Vanilla)#!"
+    # setting_kates_power_bloc_rule_holy_wars_gp_enabled_desc: "Ermöglicht die neue Heilige Kriege-Aktion gegen Großmächte\n\n#f Hat keine Wirkung, wenn Neue Prinzipien deaktiviert sind#!"
+    # setting_kates_power_bloc_rule_holy_wars_gp_disabled_desc: "$setting_kates_power_bloc_rule_holy_wars_gp_enabled_desc$"
+
+
+    # setting_kates_power_bloc_rule_mandate_cost_growth_0: "0%"
+    # setting_kates_power_bloc_rule_mandate_cost_growth_3: "3%"
+    # setting_kates_power_bloc_rule_mandate_cost_growth_6: "6% #f (Default)#!"
+    # setting_kates_power_bloc_rule_mandate_cost_growth_9: "9%"
+    # setting_kates_power_bloc_rule_mandate_cost_growth_12: "12%"
+    # setting_kates_power_bloc_rule_mandate_cost_growth_0_desc: "Erhöht die Kosten für neu erhaltene Mandate um diesen multiplikativen Betrag pro bereits erhaltenem Mandat\n\n#f Hat keine Wirkung, wenn Neuer Mandatsfortschritt deaktiviert ist#!"
+    # setting_kates_power_bloc_rule_mandate_cost_growth_3_desc: "$setting_kates_power_bloc_rule_mandate_cost_growth_0_desc$"
+    # setting_kates_power_bloc_rule_mandate_cost_growth_6_desc: "$setting_kates_power_bloc_rule_mandate_cost_growth_0_desc$"
+    # setting_kates_power_bloc_rule_mandate_cost_growth_9_desc: "$setting_kates_power_bloc_rule_mandate_cost_growth_0_desc$"
+    # setting_kates_power_bloc_rule_mandate_cost_growth_12_desc: "$setting_kates_power_bloc_rule_mandate_cost_growth_0_desc$"
+
+    # setting_kates_power_bloc_rule_mandate_progress_speed_50: "50%"
+    # setting_kates_power_bloc_rule_mandate_progress_speed_75: "75%"
+    # setting_kates_power_bloc_rule_mandate_progress_speed_100: "100% #f (Default)#!"
+    # setting_kates_power_bloc_rule_mandate_progress_speed_150: "150%"
+    # setting_kates_power_bloc_rule_mandate_progress_speed_200: "200%"
+    # setting_kates_power_bloc_rule_mandate_progress_speed_50_desc: "Erhöht die Geschwindigkeit, mit der neue Mandate verdient werden"
+    # setting_kates_power_bloc_rule_mandate_progress_speed_75_desc: "$setting_kates_power_bloc_rule_mandate_progress_speed_50_desc$"
+    # setting_kates_power_bloc_rule_mandate_progress_speed_100_desc: "$setting_kates_power_bloc_rule_mandate_progress_speed_50_desc$"
+    # setting_kates_power_bloc_rule_mandate_progress_speed_150_desc: "$setting_kates_power_bloc_rule_mandate_progress_speed_50_desc$"
+    # setting_kates_power_bloc_rule_mandate_progress_speed_200_desc: "$setting_kates_power_bloc_rule_mandate_progress_speed_50_desc$"
+
+
+    # setting_kates_power_bloc_rule_principle_slots_4: "4 #f (Vanilla)#!"
+    # setting_kates_power_bloc_rule_principle_slots_6: "6"
+    # setting_kates_power_bloc_rule_principle_slots_8: "8 #f (Default)#!"
+    # setting_kates_power_bloc_rule_principle_slots_10: "10"
+    # setting_kates_power_bloc_rule_principle_slots_12: "12"
+    # setting_kates_power_bloc_rule_principle_slots_4_desc: "Anzahl der verfügbaren Prinzipien-Slots in deinem [concept_power_bloc]"
+    # setting_kates_power_bloc_rule_principle_slots_6_desc: "$setting_kates_power_bloc_rule_principle_slots_4_desc$"
+    # setting_kates_power_bloc_rule_principle_slots_8_desc: "$setting_kates_power_bloc_rule_principle_slots_4_desc$"
+    # setting_kates_power_bloc_rule_principle_slots_10_desc: "$setting_kates_power_bloc_rule_principle_slots_4_desc$"
+    # setting_kates_power_bloc_rule_principle_slots_12_desc: "$setting_kates_power_bloc_rule_principle_slots_4_desc$"
+
+    # setting_kates_power_bloc_rule_max_saved_mandates_3: "3 #f (Vanilla)#!"
+    # setting_kates_power_bloc_rule_max_saved_mandates_6: "6"
+    # setting_kates_power_bloc_rule_max_saved_mandates_9: "9 #f (Default)#!"
+    # setting_kates_power_bloc_rule_max_saved_mandates_12: "12"
+    # setting_kates_power_bloc_rule_max_saved_mandates_15: "15"
+    # setting_kates_power_bloc_rule_max_saved_mandates_3_desc: "Maximale Anzahl nicht ausgegebener Mandate, die du ansparen kannst"
+    # setting_kates_power_bloc_rule_max_saved_mandates_6_desc: "$setting_kates_power_bloc_rule_max_saved_mandates_3_desc$"
+    # setting_kates_power_bloc_rule_max_saved_mandates_9_desc: "$setting_kates_power_bloc_rule_max_saved_mandates_3_desc$"
+    # setting_kates_power_bloc_rule_max_saved_mandates_12_desc: "$setting_kates_power_bloc_rule_max_saved_mandates_3_desc$"
+    # setting_kates_power_bloc_rule_max_saved_mandates_15_desc: "$setting_kates_power_bloc_rule_max_saved_mandates_3_desc$"
+
+    # setting_kates_power_bloc_rule_free_founding_mandates_0: "0 #f (Vanilla)#!"
+    # setting_kates_power_bloc_rule_free_founding_mandates_1: "1 #f (Default)#!"
+    # setting_kates_power_bloc_rule_free_founding_mandates_2: "2"
+    # setting_kates_power_bloc_rule_free_founding_mandates_0_desc: "Nach der Gründung eines [concept_power_bloc] erhältst du so viele kostenlose Mandate"
+    # setting_kates_power_bloc_rule_free_founding_mandates_1_desc: "$setting_kates_power_bloc_rule_free_founding_mandates_0_desc$"
+    # setting_kates_power_bloc_rule_free_founding_mandates_2_desc: "$setting_kates_power_bloc_rule_free_founding_mandates_0_desc$"
+
+    SWITCH_POWER_BLOC_IDENTITY: "Identität wechseln"
+    SWITCH_POWER_BLOC_IDENTITY_TT: "Ermöglicht es dir, die Identität des [GetPlayer.GetPowerBloc.GetName] neu auszuwählen."
+    POWER_BLOC_RESELECT_IDENTITY_TITLE: "Neue Identität auswählen"
+
+    # pmg_entrenched_building_manor_house: "Etablierter Adel"
+    # pm_manor_house_entrenched_no_effect: "Keine Wirkung"
+    # pm_manor_house_entrenched_interests_3: "Etablierter Adel"
+
+    saved_mandate: "[GetPlayer.MakeScope.ScriptValue('power_bloc_identity_change_mandates_tt')]"
+    saved_mandate_tt: "Die Hälfte deiner aktuell gewählten Prinzipien (abgerundet) sowie deine derzeit verfügbaren Mandate und alle kostenlosen Mandate, auf die du Anspruch hast, bis zu [GetPlayer.MakeScope.ScriptValue('power_bloc_preserved_principles_switch_tt')]."
+    power_bloc_confirm_switch_identity: "Bist du sicher, dass du zu dieser Identität wechseln möchtest?"
+    power_bloc_confirm_switch_identity_tt: "Du wirst #tooltippable;tooltip:[ROOT.GetCountry.GetTooltipTag],saved_mandate_tt $saved_mandate$#! Mandate zu Beginn der nächsten Woche erhalten.\n\nDu behältst alle [Concept('concept_power_bloc_member', 'Machtblock-Mitglieder')], allerdings wird der Einfluss auf Nicht-Mitglieder zurückgesetzt und der Einflussvorteil gegenüber Mitgliedern um 70 % reduziert.\n\nDie Kohäsion wird auf 0 gesetzt und du verlierst 30 [concept_relations] mit allen Mitgliedern. Alle Untertanen erhalten 30 [concept_liberty_desire]."
+    FORM_POWER_BLOC_CONFIRM_REFORM_BUTTON_TOOLTIP: "Als dieser [concept_power_bloc] reformieren."
+    REFORM_THIS_POWER_BLOC: "Als dieser [concept_power_bloc] reformieren."
+
+    # trade_league_vanilla_modifier: "Kohäsionsmodifikator"
+
+    # sovereign_empire_vanilla_modifier: "$trade_league_vanilla_modifier$"
+    # ideological_union_vanilla_modifier: "$trade_league_vanilla_modifier$"
+    # military_treaty_organization_vanilla_modifier: "$trade_league_vanilla_modifier$"
+    # religious_vanilla_modifier: "$trade_league_vanilla_modifier$"
+    # sovereign_empire_leviathan_modifier: "$principle_group_leviathan$"
+
+    # holy_war_action:0 "Heiligen Krieg erklären"
+    # holy_war_action_action_name:0 "Heiligen Krieg erklären"
+    # holy_war_action_desc:0 "Diese [concept_diplomatic_action] ermöglicht es dem Initiator, ein diplomatisches Manöver für einen Heiligen Krieg zu starten. Alle Länder mit derselben [concept_state_religion] wie das Ziel oder der Initiator haben die Möglichkeit, sich anzuschließen."
+    # holy_war_action_action_notification_name:0 "[INITIATOR_COUNTRY.GetAdjective] Heiliger Krieg"
+    # holy_war_action_action_notification_desc:0 "[INITIATOR_COUNTRY.GetName] hat einen Heiligen Krieg gegen uns erklärt."
+
+    # dp_holy_war: "Heiliger Krieg"
+    # holy_wars.1.t: "[SCOPE.sC('initiator_country').GetNameNoFormatting] erklärt Heiligen Krieg"
+    # holy_wars.1.d: "Die religiösen Führer von [SCOPE.sC('initiator_country').GetAdjective] haben einen Heiligen Krieg gegen uns ausgerufen und bereiten eine Invasion vor. Wir haben [GetPlayer.GetStateReligion.GetName]-Länder auf der ganzen Welt um Hilfe gebeten, während [SCOPE.sC('initiator_country').GetNameNoFormatting] versucht, [SCOPE.sC('initiator_country').GetStateReligion.GetName]-Länder für ihre Sache zu gewinnen."
+    # holy_wars.1.f: ""
+    # holy_wars.2.t: "[SCOPE.sC('initiator_country').GetNameNoFormatting] erklärt Heiligen Krieg gegen [SCOPE.sC('target_country').GetNameNoFormatting]"
+    # holy_wars.2.d: "Die religiösen Führer von [SCOPE.sC('initiator_country').GetAdjective] haben einen Heiligen Krieg gegen [SCOPE.sC('target_country').GetName] ausgerufen und bereiten eine Invasion vor. [SCOPE.sC('target_country').GetNameNoFormatting] hat [SCOPE.sC('target_country').GetStateReligion.GetName]-Länder auf der ganzen Welt um Hilfe gebeten, während [SCOPE.sC('initiator_country').GetNameNoFormatting] ebenfalls versucht, [SCOPE.sC('initiator_country').GetStateReligion.GetName]-Länder für ihre Sache zu gewinnen."
+    # holy_wars.1a: "Wir werden siegen."
+    # holy_wars.2a: "Wir werden die Sache der [SCOPE.sC('target_country').GetStateReligion.GetName] verteidigen."
+    # holy_wars.3a: "Wir werden für die Sache der [SCOPE.sC('initiator_country').GetStateReligion.GetName] kämpfen."
+    # holy_wars.2b: "Sie sind auf sich allein gestellt."
+
+
+    # power_bloc_members_auto_help_against_revolutions_bool: "Beteiligung an Kämpfen gegen Mitgliederrevolutionen"
+    # power_bloc_members_auto_help_against_revolutions_bool_desc: "Alle [Concept('concept_power_bloc_member', 'Machtblock-Mitglieder')] treten automatisch anderen Mitgliedern bei, um sie gegen [Concept('concept_revolution', 'Revolutionen')] zu verteidigen."
+    # country_can_declare_holy_wars_bool: "Kann Heilige Kriege erklären"
+    # country_can_declare_holy_wars_bool_desc: "Der [concept_power_bloc_leader] erhält Zugang zur diplomatischen Aktion Heiligen Krieg erklären [concept_diplomatic_action]"
+    # country_can_impose_same_lawgroup_economy_in_power_bloc_bool: "#b Durchsetzen#! der gleichen [GetLawGroup('lawgroup_economic_system').GetName] [concept_law] für $concept_power_bloc_members_short$"
+    # country_can_impose_same_lawgroup_economy_in_power_bloc_bool_desc: "Erlaubt es, die gleiche [concept_law] wie die eigene in der Gruppe [GetLawGroup('lawgroup_economic_system').GetName] für andere [Concept('concept_power_bloc_member','$concept_power_bloc_members_short$')] #b durchzusetzen#!"
+    # country_can_impose_same_lawgroup_home_affairs_in_power_bloc_bool: "#b Durchsetzen#! der gleichen [GetLawGroup('lawgroup_internal_security').GetName] [concept_law] für $concept_power_bloc_members_short$"
+    # country_can_impose_same_lawgroup_home_affairs_in_power_bloc_bool_desc: "Erlaubt es, die gleiche [concept_law] wie die eigene in der Gruppe [GetLawGroup('lawgroup_internal_security').GetName] für andere [Concept('concept_power_bloc_member','$concept_power_bloc_members_short$')] #b durchzusetzen#!"
+    # country_can_impose_same_lawgroup_welfare_in_power_bloc_bool: "#b Durchsetzen#! der gleichen [GetLawGroup('lawgroup_welfare').GetName] [concept_law] für $concept_power_bloc_members_short$"
+    # country_can_impose_same_lawgroup_welfare_in_power_bloc_bool_desc: "Erlaubt es, die gleiche [concept_law] wie die eigene in der Gruppe [GetLawGroup('lawgroup_welfare').GetName] für andere [Concept('concept_power_bloc_member','$concept_power_bloc_members_short$')] #b durchzusetzen#!"
+    # mandate_progress_from_cohesion_mult: "Mandatsfortschritt durch Kohäsion"
+    # mandate_progress_from_cohesion_mult_desc: "Eine Erhöhung oder Reduzierung des Mandatsfortschritts durch Kohäsion."
+    # mandate_progress_from_members_mult: "Mandatsfortschritt durch Mitglieder"
+    # mandate_progress_from_members_mult_desc: "Eine Erhöhung oder Reduzierung des Mandatsfortschritts durch Mitglieder."
+
+    # country_institution_cost_institution_home_affairs_mult: "@bur![Nbsp][concept_bureaucracy] Kosten für [GetInstitutionType('institution_home_affairs').GetName]"
+    # country_institution_cost_institution_home_affairs_mult_desc: "Eine Erhöhung oder Reduzierung der @bur![Nbsp][concept_bureaucracy]-Kosten für die Bereitstellung von [GetInstitutionType('institution_home_affairs').GetName] für die Bürger"
+    # country_institution_size_change_speed_institution_home_affairs_mult: "Änderungsgeschwindigkeit der Institutionengröße für [GetInstitutionType('institution_home_affairs').GetName]"
+    # country_institution_size_change_speed_institution_home_affairs_mult_desc: "Wie schnell sich die Größe von [GetInstitutionType('institution_home_affairs').GetName] ändert"
+    # country_institution_cost_institution_social_security_mult: "@bur![Nbsp][concept_bureaucracy] Kosten für [GetInstitutionType('institution_social_security').GetName]"
+    # country_institution_cost_institution_social_security_mult_desc: "Eine Erhöhung oder Reduzierung der @bur![Nbsp][concept_bureaucracy]-Kosten für die Bereitstellung von [GetInstitutionType('institution_social_security').GetName] für die Bürger"
+    # country_institution_size_change_speed_institution_social_security_mult: "Änderungsgeschwindigkeit der Institutionengröße für [GetInstitutionType('institution_social_security').GetName]"
+    # country_institution_size_change_speed_institution_social_security_mult_desc: "Wie schnell sich die Größe von [GetInstitutionType('institution_social_security').GetName] ändert"
+    # country_influence_per_subject_add: "@inf![Nbsp][concept_influence] pro [concept_subject]"
+    # country_influence_per_subject_add_desc: "Die Menge an @inf![Nbsp][concept_influence], die je nach Anzahl der [Concept('concept_subject', '$concept_subjects$')] skaliert wird"
+    # country_influence_per_subject: "$country_influence_per_subject_add$"
+    # country_influence_per_subject_desc: "$country_influence_per_subject_add_desc$"
+    # country_minting_from_bloc_members_mult_max: "Maximales $country_minting_from_bloc_members_mult$"
+    # country_minting_from_bloc_members_mult_max_desc: "Eine Erhöhung oder Reduzierung des maximalen Effekts von $country_minting_from_bloc_members_mult$."
+    # country_minting_from_bloc_members_mult: "[concept_budget_minting] pro unabhängigen [concept_power_bloc_member]"
+    # country_minting_from_bloc_members_mult_desc: "Eine Erhöhung oder Reduzierung des [concept_budget_minting], die je nach Anzahl der [Concept('concept_power_bloc_member', 'Machtblock-Mitglieder')] skaliert wird, die keine [Concept('concept_subject', '$concept_subjects$')] sind."
+    # building_training_rate_per_subject_mult: "[concept_training_rate] pro [concept_subject]"
+    # building_training_rate_per_subject_mult_desc: "Eine Erhöhung oder Reduzierung der [concept_training_rate], die je nach Anzahl der [Concept('concept_subject', '$concept_subjects$')] skaliert wird."
+    # country_legitimacy_per_power_bloc_member_add: "@legitimacy_icon![Nbsp][concept_legitimacy] pro unabhängigen [concept_power_bloc_member]"
+    # country_legitimacy_per_power_bloc_member_add_desc: "Die Menge an @legitimacy_icon![Nbsp][concept_legitimacy], die je nach Anzahl der [Concept('concept_power_bloc_member', 'Machtblock-Mitglieder')] skaliert wird, die keine [Concept('concept_subject', '$concept_subjects$')] sind."
+    # country_influence_from_bloc_members_add: "@inf![Nbsp][concept_influence] pro unabhängigen [concept_power_bloc_member]"
+    # country_influence_from_bloc_members_add_desc: "Die Menge an @inf![Nbsp][concept_influence], die je nach Anzahl der [Concept('concept_power_bloc_member', 'Machtblock-Mitglieder')] skaliert wird, die keine [Concept('concept_subject', '$concept_subjects$')] sind."
+    power_bloc_free_mandates_from_reform: "Kostenlose Mandate"
+    power_bloc_free_mandates_from_reform_desc: "Kostenlose Mandate, die nach der Reform eines [concept_power_bloc] gewährt werden"
+    # power_bloc_allow_foreign_investment_all_rank_bool: "[concept_foreign_investment_rights] für alle [Concept('concept_power_bloc_member', 'Machtblock-Mitglieder')]"
+    # power_bloc_allow_foreign_investment_all_rank_bool_desc: "Länder innerhalb desselben [concept_power_bloc] haben gegenseitige [concept_foreign_investment_rights] mit anderen [Concept('concept_power_bloc_member', 'Machtblock-Mitgliedern')]."
+    # kates_foreign_investment_agreement: "Deregulierung"
+    # kates_foreign_investment_agreement_desc: "$power_bloc_allow_foreign_investment_all_rank_bool_desc$"
+    # kates_foreign_investment_agreement_pact_desc: "Als Mitglied des [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetPowerBloc.GetName] hat [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] gegenseitige [concept_foreign_investment_rights] mit allen anderen [Concept('concept_power_bloc_member', 'Machtblock-Mitgliedern')]."
+    kates_free_mandates_modifier: "Kostenlose Mandate"
+    # kates_influence_per_subject_modifier: "Vasallisierung"
+    # kates_minting_per_bloc_member_modifier: "Währungsunion"
+    # kates_training_rate_per_subject_modifier: "Koloniale Arbeitskraft"
+    # kates_legitimacy_per_bloc_member_modifier: "Direkte Aufsicht"
+    # kates_influence_per_bloc_member_modifier: "Ummah"
+
+    # principle_group_deregulation: "Deregulierung"
+    # principle_group_deregulation_desc: "Die [GetInterestGroupVariant('ig_industrialists',GetPlayer).GetName] koordinieren ihre Bemühungen, um [Concept('concept_privatize', 'Privatisierung')] und [concept_foreign_investment_rights] sicherzustellen."
+
+    # principle_group_unified_bond_market: "Vereinheitlichter Anleihemarkt"
+    # principle_group_unified_bond_market_desc: "Umfassende Koordination der Staatskassen ermöglicht niedrigere [Concept('concept_budget_interest', 'Zinssätze')] und fördert die Marktflexibilität."
+
+    # principle_group_collective_bargaining_power: "Kollektive Verhandlungsmacht"
+    # principle_group_collective_bargaining_power_desc: "Die vereinte wirtschaftliche Macht des [concept_power_bloc] verhandelt als Kollektiv vorteilhafte [Concept('concept_trade_route', 'Handelsabkommen')]."
+
+    # principle_group_development_fund: "Entwicklungsfonds"
+    # principle_group_development_fund_desc: "Der [concept_power_bloc_leader] finanziert [Concept('concept_construction', 'Bauprojekte')] in den [Concept('concept_power_bloc_member', 'Machtblock-Mitgliedern')]."
+
+    # principle_group_antitrust_commission: "Kartellkommission"
+    # principle_group_antitrust_commission_desc: "Gesetze zur Zerschlagung von Monopolen schwächen die Macht der [GetInterestGroupVariant('ig_industrialists',GetPlayer).GetName] und fördern wettbewerbsfähigere [Concept('concept_company', 'Unternehmen')]."
+
+    # principle_group_currency_union: "Währungsunion"
+    # principle_group_currency_union_desc: "Die Einführung der Währung des [Concept('concept_power_bloc_leader', 'Machtblockführers')] stärkt dessen [Concept('concept_budget_minting', 'Zentralbank')], verringert jedoch die wirtschaftlichen Steuerungsmöglichkeiten der [Concept('concept_power_bloc_member', 'Machtblock-Mitglieder')]."
+
+    # principle_group_economic_imperialism: "Ökonomischer Imperialismus"
+    # principle_group_economic_imperialism_desc: "Extraktive Wirtschaftspolitik sichert die Kontrolle des [Concept('concept_power_bloc_leader', 'Machtblockführers')] über die Wirtschaft seiner [Concept('concept_subject', 'Untertanen')]."
+
+    # principle_group_leviathan: "Leviathan"
+    # principle_group_leviathan_desc: "Der Einfluss des [Concept('concept_power_bloc_leader', 'Machtblockführers')] auf seine [Concept('concept_power_bloc_member', 'Machtblock-Mitglieder')] ist so allumfassend, dass er ihre Souveränität im Laufe der Zeit untergräbt."
+
+    # principle_group_imperial_prerogative: "Imperiale Vorrechte"
+    # principle_group_imperial_prerogative_desc: "Das Recht der Starken, über die Schwachen zu herrschen, wird kodifiziert und durchgesetzt."
+
+    # principle_group_colonial_manpower: "Koloniale Arbeitskraft"
+    # principle_group_colonial_manpower_desc: "Der [concept_power_bloc_leader] genießt die Möglichkeit, Soldaten aus einem weitläufigen Imperium einzusetzen."
+
+    # principle_group_settlement_drive: "Siedlungsoffensive"
+    # principle_group_settlement_drive_desc: "Bestrebungen zur [Concept('concept_colonial_growth', 'Kolonisation')] werden unter einem internationalen Rahmen gefördert und ausgeweitet."
+
+    # principle_group_pax_imperia: "Pax Imperia"
+    # principle_group_pax_imperia_desc: "Die Macht des Imperiums, wenn sie zur Durchsetzung von Frieden und Zusammenarbeit genutzt wird, ist eine stabilisierende Kraft auf der Weltbühne."
+
+    # principle_group_entrenched_elite: "Etablierter Adel"
+    # principle_group_entrenched_elite_desc: "Die Macht der [GetInterestGroupVariant('ig_landowners',GetPlayer).GetName] wird gefestigt und erweitert im Interesse der Stabilität."
+
+    # principle_group_status_quo: "Status Quo"
+    # principle_group_status_quo_desc: "Die [Concept('concept_power_bloc_member', 'Machtblock-Mitglieder')] stimmen zu, ihre Bemühungen zu koordinieren, um dem gefährlichen Radikalismus der [Concept('concept_revolution', 'Revolutionen')] entgegenzuwirken."
+
+    # principle_group_economic_consensus: "Wirtschaftlicher Konsens"
+    # principle_group_economic_consensus_desc: "Die Zusammenarbeit der Staaten hängt nicht nur von ideologischen Prinzipien, sondern auch von einem koordinierten System wirtschaftlicher Abhängigkeiten ab."
+
+    # principle_group_direct_oversight: "Direkte Aufsicht"
+    # principle_group_direct_oversight_desc: "Die Autorität des [Concept('concept_power_bloc_leader', 'Machtblockführers')] in Rechtsangelegenheiten ist absolut."
+
+    # principle_group_international_criminal_court: "Internationaler Strafgerichtshof"
+    # principle_group_international_criminal_court_desc: "Ein zentraler internationaler Gerichtshof überwacht Angelegenheiten von Rechten, Freiheiten und Gesetzmäßigkeit und verleiht der Institution große Legitimität."
+
+    # principle_group_righteous_cause: "Gerechte Sache"
+    # principle_group_righteous_cause_desc: "Der [concept_power_bloc] setzt sich für Stabilität und ideologische Reinheit ein, eine gerechte Sache, für die gerechte, ehrenhafte Kriege geführt werden."
+
+    # principle_group_conventions_of_war: "Kriegsvereinbarungen"
+    # principle_group_conventions_of_war_desc: "Internationale Vereinbarungen zu den humanitären Anliegen im Krieg begrenzen zivile Verluste."
+
+    # principle_group_logistics_network: "Logistiknetzwerk"
+    # principle_group_logistics_network_desc: "Ein umfangreiches [Concept('concept_supply', 'Versorgungsnetzwerk')], das von den [Concept('concept_power_bloc_member', 'Machtblock-Mitgliedern')] koordiniert wird, stellt sicher, dass logistische Bedürfnisse erfüllt werden."
+
+    # principle_group_your_country_needs_you: "Dein Land braucht dich!"
+    # principle_group_your_country_needs_you_desc: "Prägnante Bildsprache vermittelt den Einwohnern der [Concept('concept_power_bloc_member', 'Machtblock-Mitglieder')] die Notwendigkeit, sich [Concept('concept_training_rate', 'zu verpflichten')] und ihrem Land zu dienen."
+
+    # principle_group_chivalrous_pursuit: "Ritterliches Streben"
+    # principle_group_chivalrous_pursuit_desc: "Krieg ist von Natur aus eine ehrenhafte Angelegenheit, und die [GetInterestGroupVariant('ig_armed_forces',GetPlayer).GetName] sind die ehrenhaftesten von allen."
+
+    # principle_group_wonder_weapons: "Wunderwaffen"
+    # principle_group_wonder_weapons_desc: "Kriege werden im Labor gewonnen, und die nächste Generation von Waffen muss durch koordinierte Forschungsbemühungen entwickelt werden."
+
+    # principle_group_joint_training_exercises: "Gemeinsame Trainingseinsätze"
+    # principle_group_joint_training_exercises_desc: "Internationale Trainingseinsätze gewährleisten die Einsatzbereitschaft der Armeen der [Concept('concept_power_bloc_member', 'Machtblock-Mitglieder')] in Kriegszeiten."
+
+    # principle_group_holy_wars: "Heilige Kriege"
+    # principle_group_holy_wars_desc: "Der [concept_power_bloc_leader], als religiöse Autorität, erklärt Krieg, um Heiden und Ungläubige zu bekehren."
+
+    # principle_group_propaganda: "Propaganda"
+    # principle_group_propaganda_desc: "Die [Concept('concept_power_bloc_cohesion', 'Kohäsion des Machtblocks')] wird durch die koordinierte Darstellung der supranationalen Struktur als inhärent gerechtfertigt gestärkt."
+
+    # principle_group_unity: "Einheit"
+    # principle_group_unity_desc: "Die [Concept('concept_power_bloc_cohesion', 'Kohäsion des Machtblocks')] wird durch Bemühungen zur Koordination und zum Kompromiss zwischen den konkurrierenden Bedürfnissen seiner [Concept('concept_power_bloc_member', 'Mitglieder')] gestärkt."
+
+    # principle_group_champion_the_true_faith: "Die wahre Religion vertreten"
+    # principle_group_champion_the_true_faith_desc: "Die Welt sollte [GetPlayer.GetStateReligion.GetName] sein, und die [GetInterestGroupVariant('ig_devout',GetPlayer).GetName] müssen Gehör finden."
+
+    # principle_group_henotheism: "Henotheismus"
+    # principle_group_henotheism_desc: "Anhänger anderer Religionen erhalten ein gewisses Maß an Religionsfreiheit."
+
+    # principle_group_organised_religion: "Organisierte Religion"
+    # principle_group_organised_religion_desc: "Die [concept_bureaucracy] der [GetInterestGroupVariant('ig_devout',GetPlayer).GetName] ist in ihrer Effizienz unübertroffen."
+
+    # principle_group_alms_for_the_poor: "Almosen für die Armen"
+    # principle_group_alms_for_the_poor_desc: "Wohltätige Spenden lindern das Leid der Bedürftigen und sind die Pflicht eines jeden gläubigen Bürgers."
+
+    # principle_group_ummah: "Ummah"
+    # principle_group_ummah_desc: "Durch die Ausrichtung an der globalen religiösen Gemeinschaft werden alle [GetPlayer.GetStateReligion.GetName]-Nationen aufblühen."
+
+    # principle_deregulation_1_desc: "$principle_group_deregulation_desc$"
+    # principle_deregulation_2_desc: "$principle_group_deregulation_desc$"
+    # principle_deregulation_3_desc: "$principle_group_deregulation_desc$"
+
+    # principle_unified_bond_market_1_desc: "$principle_group_unified_bond_market_desc$" 
+    # principle_unified_bond_market_2_desc: "$principle_group_unified_bond_market_desc$"
+    # principle_unified_bond_market_3_desc: "$principle_group_unified_bond_market_desc$"
+
+    # principle_collective_bargaining_power_1_desc: "$principle_group_collective_bargaining_power_desc$" 
+    # principle_collective_bargaining_power_2_desc: "$principle_group_collective_bargaining_power_desc$"
+    # principle_collective_bargaining_power_3_desc: "$principle_group_collective_bargaining_power_desc$"
+
+    # principle_development_fund_1_desc: "$principle_group_development_fund_desc$" 
+    # principle_development_fund_2_desc: "$principle_group_development_fund_desc$"
+    # principle_development_fund_3_desc: "$principle_group_development_fund_desc$"
+
+    # principle_antitrust_commission_1_desc: "$principle_group_antitrust_commission_desc$" 
+    # principle_antitrust_commission_2_desc: "$principle_group_antitrust_commission_desc$"
+    # principle_antitrust_commission_3_desc: "$principle_group_antitrust_commission_desc$"
+
+    # principle_currency_union_1_desc: "$principle_group_currency_union_desc$" 
+    # principle_currency_union_2_desc: "$principle_group_currency_union_desc$"
+    # principle_currency_union_3_desc: "$principle_group_currency_union_desc$"
+
+    # principle_economic_imperialism_1_desc: "$principle_group_economic_imperialism_desc$" 
+    # principle_economic_imperialism_2_desc: "$principle_group_economic_imperialism_desc$"
+    # principle_economic_imperialism_3_desc: "$principle_group_economic_imperialism_desc$"
+
+    # principle_leviathan_1_desc: "$principle_group_leviathan_desc$" 
+    # principle_leviathan_2_desc: "$principle_group_leviathan_desc$"
+    # principle_leviathan_3_desc: "$principle_group_leviathan_desc$"
+
+    # principle_imperial_prerogative_1_desc: "$principle_group_imperial_prerogative_desc$" 
+    # principle_imperial_prerogative_2_desc: "$principle_group_imperial_prerogative_desc$"
+    # principle_imperial_prerogative_3_desc: "$principle_group_imperial_prerogative_desc$"
+
+    # principle_colonial_manpower_1_desc: "$principle_group_colonial_manpower_desc$" 
+    # principle_colonial_manpower_2_desc: "$principle_group_colonial_manpower_desc$"
+    # principle_colonial_manpower_3_desc: "$principle_group_colonial_manpower_desc$"
+
+    # principle_settlement_drive_1_desc: "$principle_group_settlement_drive_desc$" 
+    # principle_settlement_drive_2_desc: "$principle_group_settlement_drive_desc$"
+    # principle_settlement_drive_3_desc: "$principle_group_settlement_drive_desc$"
+
+    # principle_pax_imperia_1_desc: "$principle_group_pax_imperia_desc$" 
+    # principle_pax_imperia_2_desc: "$principle_group_pax_imperia_desc$"
+    # principle_pax_imperia_3_desc: "$principle_group_pax_imperia_desc$"
+
+    # principle_entrenched_elite_1_desc: "$principle_group_entrenched_elite_desc$" 
+    # principle_entrenched_elite_2_desc: "$principle_group_entrenched_elite_desc$"
+    # principle_entrenched_elite_3_desc: "$principle_group_entrenched_elite_desc$"
+
+    # principle_status_quo_1_desc: "$principle_group_status_quo_desc$" 
+    # principle_status_quo_2_desc: "$principle_group_status_quo_desc$"
+    # principle_status_quo_3_desc: "$principle_group_status_quo_desc$"
+
+    # principle_economic_consensus_1_desc: "$principle_group_economic_consensus_desc$" 
+    # principle_economic_consensus_2_desc: "$principle_group_economic_consensus_desc$"
+    # principle_economic_consensus_3_desc: "$principle_group_economic_consensus_desc$"
+
+    # principle_direct_oversight_1_desc: "$principle_group_direct_oversight_desc$" 
+    # principle_direct_oversight_2_desc: "$principle_group_direct_oversight_desc$"
+    # principle_direct_oversight_3_desc: "$principle_group_direct_oversight_desc$"
+
+    # principle_international_criminal_court_1_desc: "$principle_group_international_criminal_court_desc$" 
+    # principle_international_criminal_court_2_desc: "$principle_group_international_criminal_court_desc$"
+    # principle_international_criminal_court_3_desc: "$principle_group_international_criminal_court_desc$"
+
+    # principle_righteous_cause_1_desc: "$principle_group_righteous_cause_desc$" 
+    # principle_righteous_cause_2_desc: "$principle_group_righteous_cause_desc$"
+    # principle_righteous_cause_3_desc: "$principle_group_righteous_cause_desc$"
+
+    # principle_conventions_of_war_1_desc: "$principle_group_conventions_of_war_desc$" 
+    # principle_conventions_of_war_2_desc: "$principle_group_conventions_of_war_desc$"
+    # principle_conventions_of_war_3_desc: "$principle_group_conventions_of_war_desc$"
+
+    # principle_logistics_network_1_desc: "$principle_group_logistics_network_desc$" 
+    # principle_logistics_network_2_desc: "$principle_group_logistics_network_desc$"
+    # principle_logistics_network_3_desc: "$principle_group_logistics_network_desc$"
+
+    # principle_your_country_needs_you_1_desc: "$principle_group_your_country_needs_you_desc$" 
+    # principle_your_country_needs_you_2_desc: "$principle_group_your_country_needs_you_desc$"
+    # principle_your_country_needs_you_3_desc: "$principle_group_your_country_needs_you_desc$"
+
+    # principle_chivalrous_pursuit_1_desc: "$principle_group_chivalrous_pursuit_desc$" 
+    # principle_chivalrous_pursuit_2_desc: "$principle_group_chivalrous_pursuit_desc$"
+    # principle_chivalrous_pursuit_3_desc: "$principle_group_chivalrous_pursuit_desc$"
+
+    # principle_wonder_weapons_1_desc: "$principle_group_wonder_weapons_desc$" 
+    # principle_wonder_weapons_2_desc: "$principle_group_wonder_weapons_desc$"
+    # principle_wonder_weapons_3_desc: "$principle_group_wonder_weapons_desc$"
+
+    # principle_joint_training_exercises_1_desc: "$principle_group_joint_training_exercises_desc$" 
+    # principle_joint_training_exercises_2_desc: "$principle_group_joint_training_exercises_desc$"
+    # principle_joint_training_exercises_3_desc: "$principle_group_joint_training_exercises_desc$"
+
+    # principle_holy_wars_1_desc: "$principle_group_holy_wars_desc$" 
+    # principle_holy_wars_2_desc: "$principle_group_holy_wars_desc$"
+    # principle_holy_wars_3_desc: "$principle_group_holy_wars_desc$"
+
+    # principle_champion_the_true_faith_1_desc: "$principle_group_champion_the_true_faith_desc$" 
+    # principle_champion_the_true_faith_2_desc: "$principle_group_champion_the_true_faith_desc$"
+    # principle_champion_the_true_faith_3_desc: "$principle_group_champion_the_true_faith_desc$"
+
+    # principle_henotheism_1_desc: "$principle_group_henotheism_desc$" 
+    # principle_henotheism_2_desc: "$principle_group_henotheism_desc$"
+    # principle_henotheism_3_desc: "$principle_group_henotheism_desc$"
+
+    # principle_organised_religion_1_desc: "$principle_group_organised_religion_desc$" 
+    # principle_organised_religion_2_desc: "$principle_group_organised_religion_desc$"
+    # principle_organised_religion_3_desc: "$principle_group_organised_religion_desc$"
+
+    # principle_alms_for_the_poor_1_desc: "$principle_group_alms_for_the_poor_desc$" 
+    # principle_alms_for_the_poor_2_desc: "$principle_group_alms_for_the_poor_desc$"
+    # principle_alms_for_the_poor_3_desc: "$principle_group_alms_for_the_poor_desc$"
+
+    # principle_ummah_1_desc: "$principle_group_ummah_desc$" 
+    # principle_ummah_2_desc: "$principle_group_ummah_desc$"
+    # principle_ummah_3_desc: "$principle_group_ummah_desc$"
+
+    # principle_propaganda_1_desc: "$principle_group_propaganda_desc$" 
+    # principle_propaganda_2_desc: "$principle_group_propaganda_desc$"
+    # principle_propaganda_3_desc: "$principle_group_propaganda_desc$"
+
+    # principle_unity_1_desc: "$principle_group_unity_desc$" 
+    # principle_unity_2_desc: "$principle_group_unity_desc$"
+    # principle_unity_3_desc: "$principle_group_unity_desc$"

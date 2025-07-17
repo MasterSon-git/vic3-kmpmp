@@ -86,6 +86,98 @@ company_sao_paulo_railway = {
 	}
 }
 
+# Companhia Fiação e Tecidos de Pernambuco
+company_pernambuco_textiles = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/brazil_companhia_fiacai_e_tecidos_de_pernambuco.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_PERNAMBUCO }
+
+	building_types = {
+		building_cotton_plantation #kmpmp
+		building_sugar_plantation #kmpmp
+		#building_textile_mills
+	}
+
+	extension_building_types = {
+		building_textile_mills #kmpmp
+		building_livestock_ranch
+		building_dye_plantation #kmpmp
+		building_rubber_plantation #kmpmp
+	}
+
+	#possible_prestige_goods = {
+	#	prestige_good_generic_clothes
+	#}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_clothes_complete_tt
+			has_variable = prestige_good_generic_clothes_var
+		}
+	}
+
+	potential = {
+		has_dlc_feature = rp1_content
+		has_interest_marker_in_region = region_brazil
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_PERNAMBUCO
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_PERNAMBUCO
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_sugar_plantation
+					is_building_type = building_cotton_plantation
+				}	
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_cotton_plantation_throughput_add = 0.1
+		building_rubber_plantation_throughput_add = 0.10 #0.05 
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_PERNAMBUCO
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_sugar_plantation = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_PERNAMBUCO
+			}
+		}
+		building_cotton_plantation = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_PERNAMBUCO
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
 # Amadeo Rossi SA
 company_rossi = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/brazil_amadeo_rossi.dds"
@@ -332,7 +424,7 @@ company_argentinian_wine = {
 		building_livestock_ranch
 		building_coffee_plantation
 		building_tea_plantation
-		building_tabacco_plantation
+		building_tobacco_plantation
 		building_motor_industry
 	}
 
@@ -457,97 +549,6 @@ company_estaleiro_maua = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_RIO_DE_JANEIRO
-			}
-		}
-	}
-
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}
-}
-
-# Companhia Fiação e Tecidos de Pernambuco
-company_pernambuco_textiles = {
-	icon = "gfx/interface/icons/company_icons/historical_company_icons/brazil_companhia_fiacai_e_tecidos_de_pernambuco.dds"
-	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
-
-	flavored_company = yes
-
-	preferred_headquarters = { STATE_PERNAMBUCO }
-
-	building_types = {
-		building_cotton_plantation #kmpmp
-		building_sugar_plantation #kmpmp
-		#building_textile_mills
-	}
-
-	extension_building_types = {
-		building_textile_mills #kmpmp
-		building_livestock_ranch
-		building_dye_plantation #kmpmp
-		building_rubber_plantation #kmpmp
-	}
-
-	#possible_prestige_goods = {
-	#	prestige_good_generic_clothes
-	#}
-
-	prestige_goods_trigger = {
-		custom_tooltip = {
-			text = je_prestige_goods_clothes_complete_tt
-			has_variable = prestige_good_generic_clothes_var
-		}
-	}
-
-	potential = {
-		has_dlc_feature = rp1_content
-		has_interest_marker_in_region = region_brazil
-	}
-
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = s:STATE_PERNAMBUCO
-			}
-		}
-	}
-
-	possible = {
-		any_scope_state = {
-			state_region = s:STATE_PERNAMBUCO
-			is_incorporated = yes
-			any_scope_building = {
-				OR = {
-					is_building_type = building_sugar_plantation
-					iis_building_type = building_cotton_plantation
-				}	
-				level >= 5
-			}
-		}
-	}
-
-	prosperity_modifier = {
-		building_cotton_plantation_throughput_add = 0.1
-		building_rubber_plantation_throughput_add = 0.10 #0.05 
-	}
-
-	ai_will_do = {
-		any_scope_state = {
-			state_region = s:STATE_PERNAMBUCO
-			is_incorporated = yes
-		}
-	}
-
-	ai_construction_targets = {
-			building_sugar_plantation = {
-			level = 5
-			state_trigger = {
-				state_region = s:STATE_PERNAMBUCO
-			}
-			building_cotton_plantation = {
-			level = 5
-			state_trigger = {
-				state_region = s:STATE_PERNAMBUCO
 			}
 		}
 	}

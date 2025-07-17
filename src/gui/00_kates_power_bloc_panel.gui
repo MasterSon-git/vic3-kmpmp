@@ -1,0 +1,615 @@
+# COPY-PASTED FOR NOW
+@panel_width_minus_20 = 520
+@panel_width_minus_10 = 530			# used to be 450
+@panel_width = 540  				# used to be 460
+@panel_width_half = 270				# used to be 230
+@panel_width_plus_10 = 550  		# used to be 470
+@panel_width_plus_14 = 554			# used to be 474
+@panel_width_plus_14_half = 277		# used to be 237
+@panel_width_plus_20 = 560			# used to be 480
+@panel_width_plus_30 = 570			# used to be 490
+@panel_width_plus_70 = 610			# used to be 530
+
+@grid_spacing = 15
+
+types power_bloc_panel_types
+{
+	type power_bloc_panel = default_block_window_two_lines {
+		name = "power_bloc_panel"
+		datacontext = "[PowerBlocPanel.GetSelectedPowerBloc]"
+
+		blockoverride "animation_state_block" {
+			state = {
+				name = _show
+				start_sound = {
+					soundeffect = "event:/SFX/UI/SideBar/powerbloc"
+				}
+			}
+
+			state = {
+				name = _hide
+				start_sound = {
+					soundeffect = "event:/SFX/UI/SideBar/powerbloc_stop"
+				}
+			}
+		}
+
+		blockoverride "window_header_name"
+		{
+			text = "POWER_BLOC_PANEL_HEADER"
+		}
+
+		blockoverride "window_header_name_line_two" 
+		{
+			text = "POWER_BLOC_SUBHEADER"
+		}
+
+		blockoverride "map_modes_button" {
+			map_modes_single_button_minimized = {
+				datacontext = "[PowerBlocPanel.GetMapModeList]"
+				using = map_modes_button_position
+			}
+		}
+
+		blockoverride "edit_visibility" {
+			visible = "[And(HasDlcFeature('power_bloc_features'), PowerBloc.IsLeader( GetPlayer.Self ))]"
+			tooltip = "EDIT"
+		}
+
+		blockoverride "edit_properties" {
+			onclick = "[PopupManager.ShowPowerBlocCustomizationPopup(PowerBloc.Self)]"
+			onclick = "[GetVariableSystem.Set('emblem_and_colors_tab', 'true')]"
+			onclick = "[GetVariableSystem.Set('statue_tab', 'false')]"
+		}
+
+		blockoverride "fixed_top"
+		{
+			tab_buttons =
+			{
+				visible = "[PowerBlocPanel.IsPowerBlocSelected]"
+				datacontext = "[PowerBlocPanel.GetSelectedPowerBloc]"
+
+				blockoverride "first_button"
+				{
+					text = "POWER_BLOC_TAB_OVERVIEW"
+				}
+				blockoverride "first_button_tooltip"
+				{
+					tooltip = "POWER_BLOC_TAB_OVERVIEW"
+				}
+				blockoverride "first_button_click"
+				{
+					onclick = "[InformationPanel.SelectTab('default')]"
+				}
+				blockoverride "first_button_visibility"
+				{
+					visible = "[InformationPanel.IsTabSelected('default')]"
+				}
+				blockoverride "first_button_visibility_checked"
+				{
+					visible = "[Not( InformationPanel.IsTabSelected('default') )]"
+				}
+				blockoverride "first_button_selected"
+				{
+					text = "POWER_BLOC_TAB_OVERVIEW"
+				}
+
+				blockoverride "second_button"
+				{
+					text = "POWER_BLOC_TAB_MEMBERS"
+				}
+				blockoverride "second_button_tooltip"
+				{
+					tooltip = "POWER_BLOC_TAB_MEMBERS"
+				}
+				blockoverride "second_button_click"
+				{
+					onclick = "[InformationPanel.SelectTab('members')]"
+				}
+				blockoverride "second_button_visibility"
+				{
+					visible = "[And(InformationPanel.IsTabSelected('members'), PowerBlocPanel.IsPowerBlocSelected)]"
+				}
+				blockoverride "second_button_visibility_checked"
+				{
+					visible = "[And(Not( InformationPanel.IsTabSelected('members') ), PowerBlocPanel.IsPowerBlocSelected)]"
+				}
+				blockoverride "second_button_selected"
+				{
+					text = "POWER_BLOC_TAB_MEMBERS"
+				}
+
+				blockoverride "third_button"
+				{
+					text = "POWER_BLOC_TAB_ALL_POWER_BLOCS"
+				}
+				blockoverride "third_button_click"
+				{
+					onclick = "[InformationPanel.SelectTab('all_power_blocs')]"
+				}
+				blockoverride "third_button_visibility"
+				{
+					visible = "[And(InformationPanel.IsTabSelected('all_power_blocs'), PowerBlocPanel.IsPowerBlocSelected)]"
+				}
+				blockoverride "third_button_visibility_checked"
+				{
+					visible = "[And(Not( InformationPanel.IsTabSelected('all_power_blocs') ), PowerBlocPanel.IsPowerBlocSelected)]"
+				}
+				blockoverride "third_button_selected"
+				{
+					raw_text = "POWER_BLOC_TAB_ALL_POWER_BLOCS"
+				}
+
+				blockoverride "fourth_button"
+				{
+					text = "POWER_BLOC_TAB_MODIFIERS"
+				}
+				blockoverride "fourth_button_click"
+				{
+					onclick = "[InformationPanel.SelectTab('modifiers')]"
+				}
+				blockoverride "fourth_button_visibility"
+				{
+					visible = "[And(InformationPanel.IsTabSelected('modifiers'), PowerBlocPanel.IsPowerBlocSelected)]"
+				}
+				blockoverride "fourth_button_visibility_checked"
+				{
+					visible = "[And(Not( InformationPanel.IsTabSelected('modifiers') ), PowerBlocPanel.IsPowerBlocSelected)]"
+				}
+				blockoverride "fourth_button_selected"
+				{
+					raw_text = "POWER_BLOC_TAB_MODIFIERS"
+				}
+
+				blockoverride "fifth_button"
+				{
+					raw_text = "DEBUG"
+				}
+				blockoverride "fifth_button_click"
+				{
+					onclick = "[InformationPanel.SelectTab('debug')]"
+				}
+				blockoverride "fifth_button_visibility"
+				{
+					visible = "[And(InDebugMode, InformationPanel.IsTabSelected('debug'))]"
+				}
+				blockoverride "fifth_button_visibility_checked"
+				{
+					visible = "[And(InDebugMode, Not(InformationPanel.IsTabSelected('debug')))]"
+				}
+				blockoverride "fifth_button_selected"
+				{
+					raw_text = "DEBUG"
+				}
+			}
+		}
+
+		blockoverride "scrollarea_content"
+		{
+			container = {
+				visible = "[PowerBlocPanel.IsPowerBlocSelected]"
+				parentanchor = hcenter
+
+				state = {
+					name = _show
+					on_start = "[PowerBlocPanel.GetMapModeList.SelectByKey('mm_power_bloc_leverage')]"
+				}
+
+				power_bloc_panel_overview_tab = {
+					visible = "[InformationPanel.IsTabSelected('default')]"
+					using = default_content_fade
+				}
+
+				power_bloc_panel_members_tab = {
+					visible = "[InformationPanel.IsTabSelected('members')]"
+				}
+
+				power_bloc_panel_all_power_blocs = {
+					visible = "[InformationPanel.IsTabSelected('all_power_blocs')]"
+				}
+
+				modifier_list = {
+					visible = "[InformationPanel.IsTabSelected('modifiers')]"
+					using = default_content_fade
+
+					modifier_list_content = {
+						datacontext = "[PowerBloc.GetLeaderModifier]"
+						blockoverride "header" {
+							text = "POWER_BLOC_PANEL_LEADER_MODIFIER_ENTRIES"
+						}
+					}
+
+					modifier_list_content = {
+						datacontext = "[PowerBloc.GetNonLeaderModifier]"
+						blockoverride "header" {
+							text = "POWER_BLOC_PANEL_NON_LEADER_MODIFIER_ENTRIES"
+						}
+					}
+				}
+
+				power_bloc_debug_info = {
+					visible = "[InformationPanel.IsTabSelected('debug')]"
+					using = default_content_fade
+				}
+			}
+
+			container = {
+				visible = "[Not(PowerBlocPanel.IsPowerBlocSelected)]"
+				parentanchor = hcenter
+				
+				state = {
+					name = _show
+					on_start = "[PowerBlocPanel.GetMapModeList.SelectByKey('mm_power_blocs')]"
+				}
+
+				power_bloc_panel_all_power_blocs = {}
+			}
+		}
+
+		blockoverride "fixed_bottom" {
+			flowcontainer = {
+				visible = "[Or(PowerBloc.IsMember(GetPlayer.Self), Not(GetPlayer.GetPowerBloc.IsMember(GetPlayer.Self)))]"
+				direction = vertical
+				spacing = 5
+
+				divider_clean = {
+					size = { @panel_width_plus_14 4 }
+				}
+
+				background = {
+					using = dark_area
+				}
+
+				widget = {
+					size = { 5 5 }
+				}
+
+				flowcontainer = {
+					visible = "[And(And(Not(GetPlayer.IsInPowerBloc), Not(InformationPanel.IsTabSelected('all_power_blocs'))), PowerBlocPanel.IsPowerBlocSelected)]"
+					parentanchor = hcenter
+					direction = vertical
+
+					# Button to request to join the power bloc
+					button = {
+						visible = "[And(Not(PowerBloc.HasPendingRequestToJoinFromCountry(GetPlayer.Self)), Not(PowerBloc.HasPendingInvitationForCountry(GetPlayer.Self)))]"
+						datacontext = "[PowerBloc.GetRequestToJoin(GetPlayer.Self)]"
+						using = default_button_action
+						size = { @panel_width 50 }
+
+						onclick = "[DiplomaticAction.ExecuteWithConfirmation]"
+						enabled = "[IsValid(DiplomaticAction.ExecuteAction)]"
+
+						tooltipwidget = {
+							FancyTooltip_DiplomaticActionWithTargetCountry = {
+								datacontext = "[PowerBloc.GetLeader]"
+							}
+						}
+
+						flowcontainer = {
+							parentanchor = center
+							spacing = 5
+
+							icon = {
+								parentanchor = vcenter
+								size = { 35 35 }
+								texture = "gfx/interface/icons/lens_toolbar_icons/invite_to_power_bloc.dds"
+							}
+
+							textbox = {
+								parentanchor = vcenter
+								autoresize = yes
+								align = nobaseline
+								max_width = 450
+								elide = right
+								fontsize_min = 12
+								text = "REQUEST_TO_JOIN"
+							}
+						}
+
+						diplomatic_action_acceptance_icon = {
+							parentanchor = vcenter|right
+							position = { -10 0 }
+						}
+					}
+
+					# Button to open the confirmation popup for an invitation from the power bloc if any
+					button = {
+						visible = "[PowerBloc.HasPendingInvitationForCountry(GetPlayer.Self)]"
+						using = default_button_action
+						size = { @panel_width 50 }
+
+						onclick = "[PowerBloc.OpenPendingInvitationForCountry(GetPlayer.Self)]"
+						tooltip = "ANSWER_INVITATION_TOOLTIP"
+
+						flowcontainer = {
+							parentanchor = center
+							spacing = 5
+
+							icon = {
+								parentanchor = vcenter
+								size = { 35 35 }
+								texture = "gfx/interface/icons/lens_toolbar_icons/invite_to_power_bloc.dds"
+							}
+
+							textbox = {
+								parentanchor = vcenter
+								autoresize = yes
+								align = nobaseline
+								max_width = 450
+								elide = right
+								fontsize_min = 12
+								text = "ANSWER_INVITATION"
+							}
+						}
+
+						icon = {
+							size = { 100% 100% }
+							using = ui_event_glow_animation_looping
+						}
+					}
+
+					# "Request to join is sent" widget
+					widget = {
+						visible = "[PowerBloc.HasPendingRequestToJoinFromCountry(GetPlayer.Self)]"
+						size = { @panel_width 50 }
+
+						background = {
+							using = paper_bg
+						}
+
+						flowcontainer = {
+							parentanchor = center
+							spacing = 5
+
+							icon = {
+								parentanchor = vcenter
+								size = { 35 35 }
+								texture = "gfx/interface/icons/lens_toolbar_icons/invite_to_power_bloc.dds"
+							}
+
+							textbox = {
+								parentanchor = vcenter
+								autoresize = yes
+								align = nobaseline
+								max_width = 450
+								elide = right
+								fontsize_min = 12
+								text = "REQUEST_SENT"
+							}
+						}
+
+						icon = {
+							using = highlighted_square_selection
+						}
+					}
+				}
+
+				widget = {
+					parentanchor = hcenter
+					size = { @panel_width 50 }
+
+					# Formation button
+					button = {
+						name = "tutorial_highlight_form_a_power_bloc_button"
+						using = default_button_primary_big
+						parentanchor = center
+						size = { 540 50 }
+						using = fontsize_large
+						visible = "[Not( GetPlayer.IsInPowerBloc )]"
+						onclick = "[InformationPanelBar.OpenPowerBlocFormationPanel]"
+						enabled = yes
+						using = default_content_fade
+
+						flowcontainer = {
+							parentanchor = center
+
+							textbox = {
+								parentanchor = vcenter
+								autoresize = yes
+								align = center|nobaseline
+								text = "FORM_POWER_BLOC"
+							}
+						}
+					}
+
+					flowcontainer = {
+						spacing = 10
+						visible = "[PowerBloc.IsLeader( GetPlayer.Self )]"
+						
+						# Leave button for Leader
+						button = {
+							using = default_button_action
+							size = { 100 50 }
+							using = fontsize_large
+							onclick = "[PopupManager.AskConfirmationWithSound(GetPlayer.LeavePowerBloc, 'event:/SFX/UI/SubjectInteractions/power_bloc_leave')]"
+							enabled = "[IsValid(GetPlayer.LeavePowerBloc)]"
+							visible = "[GetScriptedGui('kates_power_bloc_rule_enable_identity_switch_gui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							tooltip = "TOOLTIP_LEAVE_POWER_BLOC"
+							using = tooltip_above
+							using = default_content_fade
+
+							flowcontainer = {
+								parentanchor = center
+
+								textbox = {
+									parentanchor = vcenter
+									autoresize = yes
+									align = center|nobaseline
+									text = "LEAVE_POWER_BLOC"
+								}
+							}
+						}
+
+						# Switch Identity button
+						button = {
+							using = default_button_action
+							size = { 210 50 }
+							using = fontsize_large
+							onclick = "[InformationPanelBar.OpenPowerBlocFormationPanel]"
+							enabled = "[IsValid(GetPlayer.LeavePowerBloc)]"
+							visible = "[GetScriptedGui('kates_power_bloc_rule_enable_identity_switch_gui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							tooltip = "SWITCH_POWER_BLOC_IDENTITY_TT"
+							using = tooltip_above
+							using = default_content_fade
+
+							flowcontainer = {
+								parentanchor = center
+
+								textbox = {
+									parentanchor = vcenter
+									autoresize = yes
+									align = center|nobaseline
+									text = "SWITCH_POWER_BLOC_IDENTITY"
+								}
+							}
+						}
+
+						# Invite Countries button
+						button = {
+							using = default_button_map_interaction
+							size = { 210 50 }
+							using = fontsize_large
+							onclick = "[PowerBlocPanel.OnClickInviteCountries]"
+							visible = "[GetScriptedGui('kates_power_bloc_rule_enable_identity_switch_gui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+							enabled = yes
+
+							flowcontainer = {
+								parentanchor = center
+
+								textbox = {
+									parentanchor = vcenter
+									autoresize = yes
+									align = center|nobaseline
+									text = "INVITE_TO_BLOC"
+								}
+							}
+
+							action_selection_number = {
+								tooltip = "POWER_BLOC_INVITABLE_COUNTRIES_TOOLTIP"
+								using = tooltip_above
+
+								blockoverride "fontsize" {
+									using = fontsize_large
+								}
+
+								blockoverride "text" {
+									raw_text = "[PowerBlocPanel.GetNumInvitableCountries|+]"
+								}
+
+								blockoverride "position" {
+									position = { -7 3 }
+								}
+
+								blockoverride "background" {
+									background = {
+										using = blurry_dark_background
+										margin = { 5 5 }
+									}
+								}
+							}
+						}
+
+						# Leave button for Leader (Reform disabled)
+						button = {
+							using = default_button_action
+							size = { 150 50 }
+							using = fontsize_large
+							onclick = "[PopupManager.AskConfirmationWithSound(GetPlayer.LeavePowerBloc, 'event:/SFX/UI/SubjectInteractions/power_bloc_leave')]"
+							visible = "[Not(GetScriptedGui('kates_power_bloc_rule_enable_identity_switch_gui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
+							enabled = "[IsValid(GetPlayer.LeavePowerBloc)]"
+							tooltip = "TOOLTIP_LEAVE_POWER_BLOC"
+							using = tooltip_above
+							using = default_content_fade
+
+							flowcontainer = {
+								parentanchor = center
+
+								textbox = {
+									parentanchor = vcenter
+									autoresize = yes
+									align = center|nobaseline
+									text = "LEAVE_POWER_BLOC"
+								}
+							}
+						}
+
+						# Invite Countries button (Reform disabled)
+						button = {
+							using = default_button_map_interaction
+							size = { 380 50 }
+							using = fontsize_large
+							onclick = "[PowerBlocPanel.OnClickInviteCountries]"
+							visible = "[Not(GetScriptedGui('kates_power_bloc_rule_enable_identity_switch_gui').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
+							enabled = yes
+
+							flowcontainer = {
+								parentanchor = center
+
+								textbox = {
+									parentanchor = vcenter
+									autoresize = yes
+									align = center|nobaseline
+									text = "INVITE_TO_BLOC"
+								}
+							}
+
+							action_selection_number = {
+								tooltip = "POWER_BLOC_INVITABLE_COUNTRIES_TOOLTIP"
+								using = tooltip_above
+
+								blockoverride "fontsize" {
+									using = fontsize_large
+								}
+
+								blockoverride "text" {
+									raw_text = "[PowerBlocPanel.GetNumInvitableCountries|+]"
+								}
+
+								blockoverride "position" {
+									position = { -7 3 }
+								}
+
+								blockoverride "background" {
+									background = {
+										using = blurry_dark_background
+										margin = { 5 5 }
+									}
+								}
+							}
+						}
+					}
+
+					# Leave button
+					button = {
+						visible = "[And(Not(PowerBloc.IsLeader(GetPlayer.Self)), GetPlayer.IsInPowerBloc)]"
+						using = default_button_action
+						parentanchor = center
+						size = { 520 50 }
+						using = fontsize_large
+						onclick = "[PopupManager.AskConfirmationWithSound(GetPlayer.LeavePowerBloc, 'event:/SFX/UI/SubjectInteractions/power_bloc_leave')]"
+						enabled = "[IsValid(GetPlayer.LeavePowerBloc)]"
+						tooltip = "TOOLTIP_LEAVE_POWER_BLOC"
+						using = default_content_fade
+
+						flowcontainer = {
+							parentanchor = center
+
+							textbox = {
+								parentanchor = vcenter
+								autoresize = yes
+								align = center|nobaseline
+								text = "LEAVE_POWER_BLOC"
+							}
+						}
+					}
+				}
+
+				widget = {
+					size = { 5 5 }
+				}
+			}
+		}
+
+		blockoverride "bottom_spacing" {}
+	}
+}
