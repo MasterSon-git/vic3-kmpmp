@@ -63,8 +63,9 @@ pm_power_bloc_statue_ideological_union = {
 
 	country_modifiers = {
 		workforce_scaled = {
-			country_influence_add = 5
 			country_prestige_add = 3
+			# kmpmp
+			country_influence_add = 7
 		}
 	}
 
@@ -73,7 +74,8 @@ pm_power_bloc_statue_ideological_union = {
 			#state_pop_pol_str_mult = 0.25
 			# kmpmp
 			state_tax_capacity_mult = 0.15
-			building_government_administration_throughput_add = 0.15
+			state_tax_collection_mult = 0.05
+			building_government_administration_throughput_add = 0.1
 		}
 	}
 
@@ -95,13 +97,7 @@ pm_power_bloc_statue_military_treaty = {
 		workforce_scaled = {
 			state_conscription_rate_mult = 0.25
 			# kmpmp
-			state_birth_rate_mult = 0.0105
-			# kmpmp
-			country_radicalism_increases_full_acceptance_mult = -0.15
-			country_radicalism_increases_second_rate_citizen_mult = -0.15
-			country_radicalism_increases_open_prejudice_mult = -0.15
-			country_radicalism_increases_cultural_erasure_mult = -0.15
-			country_radicalism_increases_violent_hostility_mult = -0.15
+			state_birth_rate_mult = 0.01
 		}
 	}
 
@@ -132,11 +128,6 @@ pm_power_bloc_statue_trade_league = {
 			# state_infrastructure_from_population_mult = 0.1
 			state_loyalists_from_political_movements_mult = 0.1
 			# kmpmp
-			country_loyalism_increases_full_acceptance_mult = 0.1
-			country_loyalism_increases_second_rate_citizen_mult = 0.1
-			country_loyalism_increases_open_prejudice_mult = 0.1
-			country_loyalism_increases_cultural_erasure_mult = 0.1
-			country_loyalism_increases_violent_hostility_mult = 0.1
 			state_infrastructure_mult = 0.1
 		}
 	}
@@ -166,12 +157,7 @@ pm_power_bloc_statue_religious = {
 			state_conversion_mult = 1 #0.25
 			state_turmoil_effects_mult = -0.1
 			# kmpmp
-			state_education_access_add = 0.05
-			country_loyalism_increases_full_acceptance_mult = 0.05
-			country_loyalism_increases_second_rate_citizen_mult = 0.25
-			# kmpmp
-			country_radicalism_increases_full_acceptance_mult = -0.05
-			country_radicalism_increases_second_rate_citizen_mult = -0.25
+			state_education_access_add = 0.01
 		}
 	}
 
