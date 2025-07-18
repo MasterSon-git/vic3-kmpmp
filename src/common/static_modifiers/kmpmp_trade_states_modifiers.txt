@@ -1,0 +1,4 @@
+﻿kmpmp_trade_states_influcence_cost = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    country_influence_add = -150
+}

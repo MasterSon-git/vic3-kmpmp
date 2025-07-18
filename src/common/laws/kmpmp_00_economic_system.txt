@@ -507,6 +507,7 @@ law_command_economy = {
 		country_leverage_resistance_mult = 0.25
 
 		# kmpmp
+		state_tax_capacity_mult = 0.25
 		building_throughput_add = -0.25
 		country_bureaucracy_mult = -0.1
 
