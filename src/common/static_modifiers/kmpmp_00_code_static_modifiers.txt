@@ -113,6 +113,16 @@ diplomatic_overreach = {
 	# kmpmp TODO: additional debuff
 }
 
+# Scales with devastation level
+state_region_devastation = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	state_infrastructure_mult = -1.0
+	state_mortality_mult = 1.0 #2.0
+	state_migration_pull_mult = -2.0
+	state_construction_mult = -0.5 #-1.0
+	building_throughput_add = -0.5
+}
+
 # Scales by the amount of debt owed to government owned buildings (ie; government self owned debt)
 government_owned_debt = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds

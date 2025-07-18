@@ -33,3 +33,8 @@ prestige_good_generic_kmpmp_premium_oil = {
 	prestige_bonus = 0.1
 	texture = "gfx/interface/icons/goods_icons/prestige_goods/baku_oil_prestige.dds"
 }
+
+prestige_good_kmpmp_russia_porcelain = {
+	base_good = porcelain
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/meissen_porcelain_prestige.dds"
