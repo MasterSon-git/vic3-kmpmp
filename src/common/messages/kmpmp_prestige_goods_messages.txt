@@ -4,3 +4,17 @@
 
 	notification_type = toast
 }
+
+prestige_good_generic_kmpmp_premium_silk_unlocked = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/company.dds"
+
+	notification_type = toast
+}
+
+prestige_good_generic_kmpmp_premium_oil_unlocked = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/company.dds"
+
+	notification_type = toast
+}

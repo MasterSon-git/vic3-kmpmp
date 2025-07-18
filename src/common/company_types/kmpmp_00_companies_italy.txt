@@ -197,6 +197,11 @@ company_ricordi = {
 		building_vineyard_plantation
 	}
 
+	# kmpmp
+	possible_prestige_goods = {
+		prestige_good_kmpmp_italian_art
+	}
+
 	potential = {
 		has_interest_marker_in_region = region_italy
 	}
@@ -221,7 +226,7 @@ company_ricordi = {
 	}
 
 	prosperity_modifier = {
-		# country_prestige_mult = 0.15
+		country_prestige_mult = 0.15
 		state_loyalists_from_political_movements_mult = 0.15 #0.05
 		# kmpmp
 		country_loyalism_increases_full_acceptance_mult = 0.15

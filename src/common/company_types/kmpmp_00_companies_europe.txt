@@ -1433,19 +1433,44 @@ company_zastava = {
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
-				state_region = s:STATE_NORTHERN_SERBIA
+				# state_region = s:STATE_NORTHERN_SERBIA
+				state_region = {
+					is_homeland = cu:serb
+				}
 			}
 		}
 	}
 
 	possible = {
 		has_technology_researched = rifling #gunsmithing
-		any_scope_state = {
-			state_region = s:STATE_NORTHERN_SERBIA
-			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_arms_industry
-				level >= 5
+		# any_scope_state = {
+		# 	state_region = s:STATE_NORTHERN_SERBIA
+		# 	is_incorporated = yes
+		# 	any_scope_building = {
+		# 		is_building_type = building_arms_industry
+		# 		level >= 5
+		# 	}
+		# }
+		# kmpmp
+		if = {
+			limit = {
+				country_has_primary_culture = cu:turkish
+			}
+			any_scope_state = {
+				is_incorporated = yes
+				state_region = {
+					is_homeland = cu:serb
+				}
+				count >= 4
+			}
+		}
+		else = {
+			any_scope_state = {
+				is_incorporated = yes
+				state_region = {
+					is_homeland = cu:serb
+				}
+				count >= 8
 			}
 		}
 	}
@@ -1461,19 +1486,41 @@ company_zastava = {
 
 	ai_will_do = {
 		has_technology_researched = rifling #gunsmithing
-		any_scope_state = {
-			state_region = s:STATE_NORTHERN_SERBIA
-			is_incorporated = yes
+		# any_scope_state = {
+		# 	state_region = s:STATE_NORTHERN_SERBIA
+		# 	is_incorporated = yes
+		# }
+
+		if = {
+			limit = {
+				country_has_primary_culture = cu:turkish
+			}
+			any_scope_state = {
+				is_incorporated = yes
+				state_region = {
+					is_homeland = cu:serb
+				}
+				count >= 4
+			}
+		}
+		else = {
+			any_scope_state = {
+				is_incorporated = yes
+				state_region = {
+					is_homeland = cu:serb
+				}
+				count >= 8
+			}
 		}
 	}
 
 	ai_construction_targets = {
-		building_arms_industry = {
-			level = 5
-			state_trigger = {
-				state_region = s:STATE_NORTHERN_SERBIA
-			}
-		}
+		# building_arms_industry = {
+		# 	level = 5
+		# 	state_trigger = {
+		# 		state_region = s:STATE_NORTHERN_SERBIA
+		# 	}
+		# }
 	}
 
 	ai_weight = {
@@ -1673,8 +1720,19 @@ company_cfr = {
 		building_synthetics_plants #kmpmp
 	}
 
+	possible_prestige_goods = {
+		prestige_good_generic_kmpmp_premium_silk
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_good_generic_kmpmp_premium_silk_complete_tt
+			has_variable = prestige_good_generic_kmpmp_premium_silk_var
+		}
+	}
+
 	potential = {
-		country_has_primary_culture = cu:romanian
+		# country_has_primary_culture = cu:romanian
 	}
 
 	possible = {
@@ -1688,14 +1746,13 @@ company_cfr = {
 				is_building_type = building_railway
 				level >= 5
 			}
-			count >= 2
+			count >= 4 #2
 		}
 	}
 
 	prosperity_modifier = {
 		state_infrastructure_mult = 0.1 #0.05
 		state_trade_capacity_mult = 0.15
-		# market_land_trade_capacity_add = 150
 	}
 
 	ai_will_do = {
@@ -1743,6 +1800,17 @@ company_romanian_star = {
 		building_power_plant
 	}
 
+	possible_prestige_goods = {
+		prestige_good_generic_kmpmp_premium_oil
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_good_generic_kmpmp_premium_oil_complete_tt
+			has_variable = prestige_good_generic_kmpmp_premium_oil_var
+		}
+	}
+
 	potential = {
 		has_interest_marker_in_region = region_danubia
 	}
@@ -1765,6 +1833,18 @@ company_romanian_star = {
 				level >= 5
 			}
 		}
+		# kmpmp
+		any_scope_state = {
+			state_region = {
+				is_homeland = cu:romanian
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_railway
+				level >= 5
+			}
+			count >= 4
+		}
 	}
 
 	prosperity_modifier = {
@@ -1777,13 +1857,30 @@ company_romanian_star = {
 			state_region = s:STATE_WALLACHIA
 			is_incorporated = yes
 		}
+		# kmpmp
+		any_scope_state = {
+			state_region = {
+				is_homeland = cu:romanian
+			}
+			is_incorporated = yes
+			count >= 4
+		}
 	}
 
 	ai_construction_targets = {
-		building_railway = {
+		building_oil_rig = { #building_railway = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_WALLACHIA
+			}
+		}
+		# kmpmp
+		building_railway = {
+			level = 5
+			state_trigger = {
+				state_region = {
+					is_homeland = cu:romanian
+				}
 			}
 		}
 	}
