@@ -148,13 +148,13 @@ company_allatini_mills = {
 
 	building_types = {
 		building_wheat_farm
-		# building_rye_farm
-		building_vineyard_plantation #kmpmp
+		building_rye_farm
 		building_tea_plantation #kmpmp
 	}
 
 	extension_building_types = {
 		building_food_industry
+		building_vineyard_plantation #kmpmp
 	}
 
 	possible_prestige_goods = {
@@ -211,7 +211,7 @@ company_allatini_mills = {
 		country_loyalism_increases_open_prejudice_mult = 0.1
 		country_loyalism_increases_cultural_erasure_mult = 0.1
 		country_loyalism_increases_violent_hostility_mult = 0.1
-		state_birth_rate_mult = 0.018 #kmpmp
+		state_birth_rate_mult = 0.02 #kmpmp #0.018
 	}
 
 	ai_will_do = {
@@ -497,7 +497,7 @@ company_imperial_tobacco = {
 	}
 
 	extension_building_types = {
-		building_opium_plantation
+		building_synthetics_plants
 	}
 
 	potential = {

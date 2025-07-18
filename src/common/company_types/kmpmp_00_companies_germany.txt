@@ -16,6 +16,7 @@ company_rheinmetall = {
 	extension_building_types = {
 		building_motor_industry
 		building_steel_mills
+		building_coal_mine #kmpmp
 	}
 
 	possible_prestige_goods = {
@@ -142,6 +143,7 @@ company_schichau = {
 	extension_building_types = {
 		building_railway
 		building_steel_mills
+		building_power_plant #kmpmp
 	}
 
 	potential = {
@@ -309,10 +311,11 @@ company_prussian_state_railways = {
 	}
 
 	prosperity_modifier = {
-		military_formation_movement_speed_mult = 0.1
+		military_formation_movement_speed_mult = 0.2 #0.1
 		# kmpmp
-		building_coal_mine_throughput_add = 0.05
-		building_iron_mine_throughput_add = 0.05
+		building_coal_mine_throughput_add = 0.10 #0.05
+		building_iron_mine_throughput_add = 0.10 #0.05
+		building_sulfur_mine_throughput_add = 0.05
 	}
 
 	ai_will_do = {
