@@ -164,5 +164,8 @@
  country_kmpmp_power_bloc_mandate_progress_add: "[concept_power_bloc_mandate_progress]"
  country_kmpmp_power_bloc_mandate_progress_add_desc: "Ein Bonus oder Abzug auf den [concept_power_bloc_mandate_progress]"
 
+ country_kmpmp_power_bloc_mandate_progress_mult: "[concept_power_bloc_mandate_progress]"
+ country_kmpmp_power_bloc_mandate_progress_mult_desc: "Ein Bonus oder Abzug auf den [concept_power_bloc_mandate_progress]"
+
  country_kmpmp_land_battle_size_mult: "Schlachtfeldgröße an Land"
  country_kmpmp_land_battle_size_mult_desc: "Eine Erhöhung or Verminderung der Schlachtfeldgröße an Land"

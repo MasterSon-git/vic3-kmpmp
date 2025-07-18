@@ -94,7 +94,7 @@ unincorporated_state = {
 	building_group_bg_government_throughput_add = -0.1
 	building_group_bg_military_throughput_add = -0.1		
 	state_market_access_price_impact = -0.05 #-0.1
-	state_construction_mult = -0.33
+	state_construction_mult = -0.30 #-0.33
 }
 
 # Excess AUT reduces enactment time by -25% at 2x production to usage
@@ -106,11 +106,24 @@ legislative_efficiency = {
 	country_military_goods_cost_mult = -0.1
 }
 
+# Insufficent AUT reduces opposition Interest Groups' Approval by -10 at 2x usage to production
+political_dysfunction = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	#country_opposition_ig_approval_add = -10
+	#state_radicals_from_political_movements_mult = 0.20
+	#kmpmp
+	building_training_rate_mult = -0.4
+	country_military_goods_cost_mult = 0.2
+	state_tax_waste_add = 0.1
+}
+
 # Insufficient DIP reduces prestige by up to 50% at 2x usage to production
 diplomatic_overreach = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
 	country_prestige_mult = -0.5
-	# kmpmp TODO: additional debuff
+	country_infamy_decay_mult = -0.5
+	country_weekly_innovation_mult = -0.3
+	country_kmpmp_power_bloc_mandate_progress_mult = -0.3
 }
 
 # Scales with devastation level
