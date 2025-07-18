@@ -333,7 +333,7 @@ company_estanifera_llallagua = {
 	}
 }
 
-# Córdoba Central Railway
+# Córdoba Central Railway "Ferrocarril Central Córdoba"
 company_cordoba_railway = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/argentina_cordoba_cenral_railway.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
@@ -344,7 +344,6 @@ company_cordoba_railway = {
 
 	building_types = {
 		building_railway
-		building_steel_mills # kmpmp
 	}
 
 	extension_building_types = {
@@ -386,6 +385,7 @@ company_cordoba_railway = {
 	prosperity_modifier = {
 		building_wheat_farm_throughput_add = 0.1
 		building_livestock_ranch_throughput_add = 0.1 #0.05
+		building_motor_industry_throughput_add = 0.1
 	}
 
 	ai_will_do = {

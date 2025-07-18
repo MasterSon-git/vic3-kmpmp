@@ -656,6 +656,7 @@ company_john_holt = {
 				is_building_type = building_rubber_plantation
 				level >= 5
 			}
+			count >= 6
 		}
 	}
 

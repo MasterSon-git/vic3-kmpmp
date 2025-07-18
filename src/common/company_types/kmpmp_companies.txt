@@ -684,3 +684,108 @@ company_genda_shigyo = {
 		value = 3 # Higher base value for flavored companies
 	}
 }
+
+# La Plata Mining
+company_la_plata_mining = {
+	icon = "gfx/interface/icons/company_icons/custom_companies_placeholder.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_LOS_RIOS }
+
+	building_types = {
+		building_sulfur_mine
+	}
+
+	extension_building_types = {
+		building_chemical_plants
+		building_munition_plants
+		building_lead_mine
+		building_iron_mine
+	}
+
+	possible_prestige_goods = {
+		prestige_good_kmpmp_la_plata_sulfur
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_la_plata
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			OR = {
+				any_scope_state = {
+					OR = {
+						state_region = s:STATE_LOS_RIOS
+						state_region = s:STATE_ARAUCANIA
+						state_region = s:STATE_PATAGONIA
+					}
+					count >= 3
+				}
+
+				AND = {
+					c:ARG = {
+						is_direct_subject_of = root
+						has_diplomatic_pact = { who = root type = puppet }
+					}
+					c:CHL = {
+						is_direct_subject_of = root
+						has_diplomatic_pact = { who = root type = puppet }
+					}
+				}
+			}
+		}
+	}
+
+	possible = {
+		OR = {
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_LOS_RIOS
+					state_region = s:STATE_ARAUCANIA
+					state_region = s:STATE_PATAGONIA
+				}
+				is_incorporated = yes
+				count >= 3
+			}
+
+			AND = {
+				c:ARG = {
+					is_direct_subject_of = root
+					has_diplomatic_pact = { who = root type = puppet }
+				}
+				c:CHL = {
+					is_direct_subject_of = root
+					has_diplomatic_pact = { who = root type = puppet }
+				}
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_group_bg_agriculture_throughput_add = 0.1
+		building_synthetics_plants_throughput_add = 0.1
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_CHUGOKU
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_paper_mills = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_CHUGOKU
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}

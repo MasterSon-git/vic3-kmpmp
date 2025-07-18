@@ -10,6 +10,12 @@ prestige_good_kmpmp_italian_art = {
     texture = "gfx/interface/icons/goods_icons/fine_art.dds"
 }
 
+prestige_good_kmpmp_la_plata_sulfur = {
+    base_good = sulfur
+    prestige_bonus = 0.1
+    texture = "gfx/interface/icons/goods_icons/prestige_goods/sicilian_sulfur_prestige.dds"
+}
+
 prestige_good_generic_kmpmp_premium_engines = {
     base_good = engines
     prestige_bonus = 0.1
