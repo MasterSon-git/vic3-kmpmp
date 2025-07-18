@@ -43,7 +43,7 @@ kates_power_bloc_rule_enable_identity_switch_gui = {
     }
 
     effect = {
-        remove_variable = null
+        # remove_variable = null
     }
 }
 

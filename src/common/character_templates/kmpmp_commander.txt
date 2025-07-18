@@ -1,0 +1,28 @@
+﻿net_general_frederik = {
+	first_name = "Hendrik"
+	last_name = "Frederik"
+	historical = no
+	culture = cu:dutch
+	female = no
+	ideology = ideology_traditionalist
+	commander_rank = default
+	interest_group = ig_landowners
+	birth_date = 1797.1.1
+	traits = {
+		trench_rat
+        basic_defensive_strategist
+        meticulous
+	}
+	commander_usage = {
+		country_trigger = {
+			OR = {
+				c:NET ?= this
+				c:UNL ?= this
+			}
+		}
+		role = general
+		earliest_usage_date = 1836.1.1
+		latest_usage_date = 1850.1.1
+		chance = 50
+	}
+}

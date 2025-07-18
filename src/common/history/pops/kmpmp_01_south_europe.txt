@@ -1,0 +1,11 @@
+﻿POPS = {
+    # kmpmp double the pops
+    s:STATE_ALENTEJO = {
+		region_state:POR = {
+			create_pop = {
+				culture = portuguese
+				size = 372508
+			}
+		}
+	}
+}

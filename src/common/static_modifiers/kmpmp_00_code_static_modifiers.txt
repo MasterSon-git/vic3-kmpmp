@@ -133,6 +133,14 @@ country_navy_power_projection = {
 	country_max_declared_interests_add = 0.0015 #0.01
 }
 
+country_humiliated = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	country_prestige_mult = -0.25
+	country_leverage_generation_mult = -0.25
+	# kmpmp
+	country_influence_mult = -0.25
+}
+
 weak_power_bloc = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
 	power_bloc_cohesion_mult = -0.25 #-0.5

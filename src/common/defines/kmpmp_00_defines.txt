@@ -3,6 +3,8 @@
 }
 
 NEconomy = {
+	ECONOMY_OF_SCALE_NATIONALIZED_FRACTION_MULT = 0.25 #0.5	# Non-government building economy of scale modifier if multiplied by (1 - the fraction of nationalized levels * this)
+
 	DECLARE_BANKRUPTCY_PENALTY_DURATION_YEARS = 4 #10		# How many years does it take for penalties from declaring bankruptcy to fully decay
 
 	CREDIT_RATIO_MAX_OVERRUN = 0.1 #0.01 			# Countries can accumulate this percentage more of a debt "hole" than their credit limit when in default
@@ -24,6 +26,8 @@ NCharacter = {
 NWar = {
 	WAR_EXHAUSTION_KIA_FACTOR =  1.65 #kmpmp #4.0 # Scaled by casualties compared to total manpower
 
+	NAVAL_INVASION_PREPARATION_DURATION_DAYS = 30 #14 						# How many days should pass since the first army arrived to the naval invasion front to start advancing it without the sea node being blocked by enemy fleet
+
 	STATE_CONQUEST_HOMELAND_AND_CLAIM_RADICALIZATION = 0.0 #0.1
 	STATE_CONQUEST_HOMELAND_OR_CLAIM_RADICALIZATION = 0.0 #0.3
 }
@@ -41,6 +45,7 @@ NCountry = {
 }
 
 NPowerBlocs = {
+	POWER_STRUGGLE_DURATION_SUCCESS_MONTHS = 36 #12 	# Power struggle succeeds after this months
 	COUNTRY_POPULATION_LEVERAGE_RESISTANCE_MODIFIER_DIVISOR = 1200000 	#1000000 	# Population divided by this is multiplied by country_leverage_resistance_per_population to give a certain amount of leverage per million people
 	COUNTRY_POPULATION_LEVERAGE_RESISTANCE_MODIFIER_MAX_MULTIPLIER = 100	# Max multiplier given by population. With the value above at 1 000 000, this means the cap for leverage resistance is at 100 000 000.
 }

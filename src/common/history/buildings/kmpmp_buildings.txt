@@ -357,6 +357,32 @@
             }
         }
     }
+    s:STATE_IRAKAJEMI = {
+		region_state:PER = {
+            create_building = {
+                building = "building_logging_camp"
+                add_ownership = {
+                    country= {
+                        country = "c:PER"
+                        levels = 1
+                    }
+                }
+                reserves = 1
+                activate_production_methods = { "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts"  }
+            }
+            create_building = {
+                building = "building_paper_mills"
+                add_ownership = {
+                    country= {
+                        country = "c:PER"
+                        levels = 1
+                    }
+                }
+                reserves = 1
+                activate_production_methods={ "pm_pulp_pressing" "pm_automation_disabled"  }
+            }
+        }
+    }
     s:STATE_TABRIZ = {
         region_state:PER = {
             create_building = {
@@ -370,31 +396,31 @@
                 reserves = 1
                 activate_production_methods = { "pm_simple_organization" }
             }
-            create_building={
-                building="building_logging_camp"
-                add_ownership={
-                    building={
-                        type="building_financial_district"
-                        country="c:PER"
-                        levels=3 #1
-                        region="STATE_TABRIZ"
+            create_building = {
+                building = "building_logging_camp"
+                add_ownership = {
+                    building = {
+                        type = "building_financial_district"
+                        country = "c:PER"
+                        levels = 3 #1
+                        region = "STATE_TABRIZ"
                     }
                 }
-                reserves=1
-                activate_production_methods={ "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts"  }
+                reserves = 1
+                activate_production_methods = { "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts"  }
             }
-            create_building={
-                building="building_tooling_workshops"
-                add_ownership={
-                    building={
+            create_building = {
+                building = "building_tooling_workshops"
+                add_ownership = {
+                    building = {
                         type="building_tooling_workshops"
                         country = "c:PER"
                         levels = 1
                         region = "STATE_TABRIZ"
                     }
                 }
-                reserves=1
-                activate_production_methods={ "pm_pig_iron" "pm_automation_disabled"  }
+                reserves = 1
+                activate_production_methods = { "pm_pig_iron" "pm_automation_disabled"  }
             }
             create_building = {
                 building = "building_iron_mine"
@@ -407,16 +433,27 @@
                 reserves = 1
                 activate_production_methods = { "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
             }
-            create_building={
-                building="building_construction_sector"
-                add_ownership={
-                    country={
-                        country="c:PER"
-                        levels=2
+            create_building = {
+                building = "building_construction_sector"
+                add_ownership = {
+                    country = {
+                        country = "c:PER"
+                        levels = 2
                     }
                 }
-                reserves=1
-                activate_production_methods={ "pm_iron_frame_buildings" }
+                reserves = 1
+                activate_production_methods = { "pm_iron_frame_buildings" }
+            }
+            create_building = {
+                building = "building_paper_mills"
+                add_ownership = {
+                    country = {
+                        country = "c:PER"
+                        levels = 1
+                    }
+                }
+                reserves = 1
+                activate_production_methods={ "pm_pulp_pressing" "pm_automation_disabled"  }
             }
         }
     }

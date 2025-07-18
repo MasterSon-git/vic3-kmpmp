@@ -1,5 +1,5 @@
 ﻿DIPLOMACY = {
-	c:RUS= {
+	c:RUS = {
 		create_bidirectional_truce = {
 			country = c:PER
 			months = 12
@@ -8,10 +8,27 @@
 }
 
 DIPLOMACY = {
-	c:FRA= {
+	c:FRA = {
 		create_bidirectional_truce = {
 			country = c:SAR
 			months = 12
 		}
+		create_bidirectional_truce = {
+			country = c:SPA
+			months = 24
+		}
 	}	
+}
+
+DIPLOMACY = {
+	c:POR = {
+		create_bidirectional_truce = {
+			country = c:SPA
+			months = 60
+		}
+		create_bidirectional_truce = {
+			country = c:BRZ
+			months = 84
+		}
+	}
 }
