@@ -22,6 +22,12 @@ prestige_good_kmpmp_potosi_lead = {
     texture = "gfx/interface/icons/goods_icons/lead.dds"
 }
 
+prestige_good_kmpmp_korean_lead = {
+    base_good = lead
+    prestige_bonus = 0.1
+    texture = "gfx/interface/icons/goods_icons/lead.dds"
+}
+
 prestige_good_generic_kmpmp_premium_engines = {
     base_good = engines
     prestige_bonus = 0.1
