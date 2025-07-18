@@ -1,0 +1,6 @@
+﻿prestige_good_generic_kmpmp_premium_engines_unlocked = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/company.dds"
+
+	notification_type = toast
+}

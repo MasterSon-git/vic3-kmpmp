@@ -56,7 +56,7 @@ company_fundidora_monterrey = {
 	prosperity_modifier = {
 		building_railway_throughput_add = 0.05
 		building_iron_mine_throughput_add = 0.10
-		building_coal_mine = 0.05 #kmpmp
+		building_coal_mine_throughput_add = 0.05 #kmpmp
 	}
 
 	ai_will_do = {
@@ -374,8 +374,8 @@ company_peruvian_amazon = {
 	prosperity_modifier = {
 		state_loyalists_from_political_movements_mult = 0.1
 		building_group_bg_rubber_mortality_mult = 0.1
-		building_rubber_plantation_thoughput_add = 0.10 #kmpmp
-		building_group_bg_plantation_throughput_add = 0.10 #kmpmp
+		building_rubber_plantation_throughput_add = 0.10 #kmpmp
+		building_group_bg_plantations_throughput_add = 0.10 #kmpmp
 	}
 
 	ai_will_do = {
@@ -593,6 +593,109 @@ company_caribbean_petroleum = {
 		interest_group_ig_industrialists_approval_add = 3
 	}
 	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Panama Canal Company
+company_panama_company = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/panama_company.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_PANAMA }
+
+	building_types = {
+		building_trade_center
+		building_port
+	}
+
+	extension_building_types = {
+		building_shipyards
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_merchant_marine
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_merchant_marine_complete_tt
+			has_variable = prestige_good_generic_merchant_marine_var
+		}
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_central_america
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_PANAMA
+			}
+		}
+	}
+
+	possible = {
+		NOT = { # kmpmp company can only be established by one country
+			any_country = {
+				exists = owning_company
+				owning_company = {
+					is_company_type = company_type:company_panama_company
+				}
+			}
+		}
+		any_scope_state = {
+			state_region = s:STATE_PANAMA
+			any_scope_building = {
+				is_building_type = building_panama_canal
+				occupancy >= 0.5
+			}
+		}
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_trade_center
+					is_building_type = building_port
+				}
+				level >= 5
+			}
+		}
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_PANAMA
+			any_scope_building = {
+				is_building_type = building_panama_canal
+			}
+		}
+	}
+
+	ai_construction_targets = {
+		building_trade_center = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_PANAMA
+			}
+		}
+		building_port = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_PANAMA
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		state_trade_advantage_mult = 0.25
+		country_tax_income_add = 50000
+		country_max_companies_add = 1
+	}
+
 	ai_weight = {
 		value = 3 # Higher base value for flavored companies
 	}

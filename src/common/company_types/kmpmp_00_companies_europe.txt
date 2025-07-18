@@ -45,7 +45,7 @@ company_ccci = {
 		country_prestige_mult = 0.15
 		building_furniture_manufacturies_throughput_add = 0.10 #0.15
 		building_group_bg_rubber_mortality_mult = 0.1 #0.2
-		building_textile_mills = 0.1 #kmpmp
+		building_textile_mills_throughput_add = 0.1 #kmpmp
 	}
 
 	ai_will_do = {
@@ -298,6 +298,97 @@ company_philips = {
 					state_region = s:STATE_GELRE
 				}
 				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Basileiades
+company_basileiades = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/basileiades.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_ATTICA }
+
+	building_types = {
+		building_motor_industry
+		building_shipyards
+	}
+
+	extension_building_types = {
+		building_military_shipyards
+	}
+
+	# kmpmp
+	possible_prestige_goods = {
+		prestige_good_generic_kmpmp_premium_engines
+	}
+
+	# kmpmp
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_good_generic_kmpmp_premium_engines_complete_tt
+			has_variable = prestige_good_generic_kmpmp_premium_engines_var
+		}
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_balkans
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_PELOPONNESE #s:STATE_ATTICA
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = railways
+		any_scope_state = {
+			state_region = s:STATE_PELOPONNESE #s:STATE_ATTICA
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_motor_industry
+					is_building_type = building_shipyards
+				}
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		country_convoys_capacity_mult = 0.2
+		state_infrastructure_mult = 0.05
+	}
+
+	ai_will_do = {
+		has_technology_researched = railways
+		any_scope_state = {
+			state_region = s:STATE_ATTICA
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_motor_industry = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_ATTICA
+			}
+		}
+		building_shipyards = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_ATTICA
 			}
 		}
 	}
