@@ -38,10 +38,16 @@ company_mitsui = {
 
 	possible = {
 		has_technology_researched = cotton_gin
-		custom_tooltip = {
-			text = is_meiji_japan
-			has_variable = meiji_restoration_complete
+		OR = {
+			custom_tooltip = {
+				text = is_meiji_japan
+				has_variable = meiji_restoration_complete
+			}
+			NOT = {
+				is_country_type = unrecognized
+				}
 		}
+
 		any_scope_state = {
 			state_region = s:STATE_KANSAI
 			is_incorporated = yes
@@ -191,21 +197,25 @@ company_mitsubishi = {
 		building_motor_industry
 		building_port
 		building_iron_mine
+		building_logging_camp #kmpmp
+		building_military_shipyards #kmpmp
+		building_synthetics_plants #kmpmp
 	}
 
 	possible_prestige_goods = {
 		prestige_good_washi_paper
 	}
 
-	potential = {
-		country_has_primary_culture = cu:japanese
-	}
-
 	possible = {
 		has_technology_researched = ironclad_tech
-		custom_tooltip = {
-			text = is_meiji_japan
-			has_variable = meiji_restoration_complete
+		OR = {
+			custom_tooltip = {
+				text = is_meiji_japan
+				has_variable = meiji_restoration_complete
+			}
+			NOT = {
+				is_country_type = unrecognized
+				}
 		}
 		any_scope_state = {
 			state_region = s:STATE_CHUGOKU

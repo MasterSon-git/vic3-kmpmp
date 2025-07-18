@@ -330,6 +330,11 @@ company_sunhwaguk = {
 	extension_building_types = {
 		building_food_industry
 		building_chemical_plants
+		building_vineyard_plantation #kmpmp
+		building_opium_plantation #kmpmp
+		building_coffee_plantation #kmpmp
+		building_tea_plantation #kmpmp
+		building_cotton_plantation #kmpmp
 	}
 
 	possible_prestige_goods = {
@@ -356,7 +361,7 @@ company_sunhwaguk = {
 	}
 
 	possible = {
-		has_technology_researched = central_planning
+		has_technology_researched = mutual_funds #central_planning
 		any_scope_state = {
 			state_region = {
 				is_homeland = cu:korean
@@ -371,6 +376,7 @@ company_sunhwaguk = {
 
 	prosperity_modifier = {
 		country_tech_spread_mult = 0.2 #0.1
+		building_group_bg_plantations_throughput_add = 0.1 #kmpmp
 	}
 
 	ai_will_do = {
@@ -551,6 +557,74 @@ company_imperial_tobacco = {
 	}
 }
 
+# San Miguel
+company_san_miguel = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/manila_la_fabrica_de_cerveza_san_miguel.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
+
+	flavored_company = yes
+
+	building_types = {
+		building_food_industry
+	}
+
+	extension_building_types = {
+		building_wheat_farm
+		building_maize_farm
+		building_rye_farm
+		building_millet_farm
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_groceries
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_groceries_complete_tt
+			has_variable = prestige_good_generic_groceries_var
+		}
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_indonesia
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				region = sr:region_indonesia
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = mutual_funds #corporate_charters
+		owns_or_has_subject_entire_state_region_and_is_incorporated = { STATE_REGION = s:STATE_LUZON }
+		owns_or_has_subject_entire_state_region_and_is_incorporated = { STATE_REGION = s:STATE_VISAYAS }
+		owns_or_has_subject_entire_state_region_and_is_incorporated = { STATE_REGION = s:STATE_MINDANAO }	
+	}
+
+
+	prosperity_modifier = {
+		state_radicals_from_political_movements_mult = -0.1
+		state_birth_rate_mult = 0.06 #kmpmp
+		state_mortality_mult = 0.02 #kmpmp
+	}
+
+	ai_will_do = {
+		has_technology_researched = mutual_funds
+		any_scope_state = {
+			region = sr:region_indonesia
+			is_incorporated = yes
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
 # B.Grimm
 company_b_grimm = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/thailand_b_grimm.dds"
@@ -568,6 +642,9 @@ company_b_grimm = {
 
 	extension_building_types = {
 		building_chemical_plants
+		building_wheat_farm
+		building_rye_farm
+		building_millet_farm
 	}
 
 	possible_prestige_goods = {
@@ -608,10 +685,10 @@ company_b_grimm = {
 	}
 
 	prosperity_modifier = {
-		# state_infrastructure_from_population_mult = 0.1
-		state_infrastructure_mult = 0.1 # kmpmp
-		country_tech_spread_mult = 0.05 # kmpmp
+		state_infrastructure_from_population_mult = 0.1
 		building_food_industry_throughput_add = 0.1
+		building_livestock_ranch_throughput_add = 0.1 #kmpmp
+		building_fishing_wharf_throughput_add = 0.1 #kmpmp
 	}
 
 	ai_will_do = {

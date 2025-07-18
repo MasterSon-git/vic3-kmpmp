@@ -12,6 +12,7 @@
  TRIGGER_ANY_SCOPE_BUILDING_COUNT_IN_STATE: "$PARAMETERS$ buildings fullfill these conditions in this state:"
 
  owns_or_has_subject_entire_state_region_tooltip: "Entire [concept_state_region] [THIS.GetStateRegion.GetName] is owned or subjected by [SCOPE.GetRootScope.GetCountry.GetName]"
+ owns_or_has_subject_entire_state_region_and_is_incorporated_tooltip: "Entire [concept_state_region] [THIS.GetStateRegion.GetName] is owned or subjected by [SCOPE.GetRootScope.GetCountry.GetName] and incorporated"
  state_region_owned_tooltip: "Entire [concept_state_region] [THIS.GetStateRegion.GetName] is owned by [SCOPE.GetRootScope.GetCountry.GetName]"
  state_region_owned_and_incorporated_tooltip: "Entire [concept_state_region] [SCOPE.sStateRegion('state_region_to_check').GetName] is owned and incorporated by [SCOPE.GetRootScope.GetCountry.GetName]"
 

@@ -45,6 +45,7 @@ company_vodka_monopoly = {
 		country_radicalism_increases_cultural_erasure_mult = -0.2
 		country_radicalism_increases_violent_hostility_mult = -0.2
 		unit_morale_loss_mult = -0.2
+		state_birth_rate_mult = 0.02
 	}
 
 	ai_will_do = {
@@ -383,11 +384,12 @@ company_savva_morozov = {
 
 	prosperity_modifier = {
 		# country_prestige_mult = 0.1
-		# interest_group_ig_industrialists_pop_attraction_mult = 0.1
+		interest_group_ig_industrialists_pop_attraction_mult = 0.1
 		# kmpmp
 		building_livestock_ranch_throughput_add = 0.1
 		building_logging_camp_throughput_add = 0.1
 		building_tooling_workshops_throughput_add = 0.1
+		building_furniture_manufacturies_throughput_add = 0.1
 	}
 
 	ai_will_do = {

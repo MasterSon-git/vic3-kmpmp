@@ -18,6 +18,26 @@ owns_or_has_subject_entire_state_region = {
 }
 
 # root - country
+# STATE_REGION - <s:STATE_***>
+owns_or_has_subject_entire_state_region_and_is_incorporated = {
+    $STATE_REGION$ = {
+        custom_tooltip = {
+            text = owns_or_has_subject_entire_state_region_and_is_incorporated_tooltip
+            any_scope_state = {
+                OR = {
+                    owner = root
+                    owner = {
+                        is_subject_of = root
+                    }
+                }
+                is_incorporated = yes
+                count = all
+            }
+        }
+    }
+}
+
+# root - country
 # this - STATE_REGION
 state_region_owned = {
     custom_tooltip = {
