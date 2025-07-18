@@ -1,6 +1,6 @@
 ﻿law_commitment = {
     kind = directed
-    cost = 250 #25
+    cost = 150 #25
 
     # kmpmp - no relation changes
     # relations_progress_per_day = 0.5

@@ -82,10 +82,6 @@ company_taiwanese_tea = {
 		has_interest_marker_in_region = region_south_china
 	}
 
-	potential = {
-		has_interest_marker_in_region = region_south_china
-	}
-
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
