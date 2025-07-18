@@ -11,21 +11,22 @@
 
 kmpmp_break_truce_penalties_multiplier = {
 	value = 1
-	if = {
-		limit = {
-			# why isn't this working??
-			# has_diplomatic_pact = {
-			# 	who = scope:target_country
-			# 	type = humiliation
-			# 	is_initiator = no
-			# }
+	# kmpmp - actually always 1
+	# if = {
+	# 	limit = {
+	# 		# why isn't this working??
+	# 		# has_diplomatic_pact = {
+	# 		# 	who = scope:target_country
+	# 		# 	type = humiliation
+	# 		# 	is_initiator = no
+	# 		# }
 
-			# so we use this check...
-			any_scope_diplomatic_pact = {
-				is_diplomatic_action_type = humiliation
-				first_country = scope:target_country
-			}
-		}
-		add = 0.25
-	}
+	# 		# so we use this check...
+	# 		any_scope_diplomatic_pact = {
+	# 			is_diplomatic_action_type = humiliation
+	# 			first_country = scope:target_country
+	# 		}
+	# 	}
+	# 	add = 0.25
+	# }
 }

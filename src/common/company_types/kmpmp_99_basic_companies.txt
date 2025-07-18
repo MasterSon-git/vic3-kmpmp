@@ -1089,9 +1089,9 @@ company_basic_steel = {
 	}
 
 	extension_building_types = {
-		#kmpmp
 		building_iron_mine
 		building_coal_mine
+		# kmpmp
 		building_motor_industry
 		building_artillery_foundries
 		building_arms_industry
@@ -1107,11 +1107,6 @@ company_basic_steel = {
 			text = je_prestige_goods_steel_complete_tt
 			has_variable = prestige_good_generic_steel_var
 		}
-	}
-
-	extension_building_types = {
-		building_iron_mine
-		building_coal_mine
 	}
 
 	possible = {

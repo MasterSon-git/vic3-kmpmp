@@ -102,7 +102,9 @@ company_egyptian_rail = {
 
 	possible = {
 		has_technology_researched = corporate_charters
-		country_has_primary_culture = cu:arabic
+		any_primary_culture = { # kmpmp
+			has_culture_graphics = arabic
+		}
 		any_scope_state = {
 			region = sr:region_nile_basin
 			is_incorporated = yes

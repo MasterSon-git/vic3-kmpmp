@@ -1452,7 +1452,7 @@ company_zastava = {
 		# 	}
 		# }
 		# kmpmp
-		if = {
+		trigger_if = {
 			limit = {
 				country_has_primary_culture = cu:turkish
 			}
@@ -1464,7 +1464,7 @@ company_zastava = {
 				count >= 4
 			}
 		}
-		else = {
+		trigger_else = {
 			any_scope_state = {
 				is_incorporated = yes
 				state_region = {
@@ -1491,7 +1491,7 @@ company_zastava = {
 		# 	is_incorporated = yes
 		# }
 
-		if = {
+		trigger_if = {
 			limit = {
 				country_has_primary_culture = cu:turkish
 			}
@@ -1503,7 +1503,7 @@ company_zastava = {
 				count >= 4
 			}
 		}
-		else = {
+		trigger_else = {
 			any_scope_state = {
 				is_incorporated = yes
 				state_region = {
