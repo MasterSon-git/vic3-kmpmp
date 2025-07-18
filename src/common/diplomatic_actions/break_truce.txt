@@ -61,23 +61,52 @@
 				target = scope:target_country
 			}
 		}
+		
 		add_radicals = {
 			value = {
-				add = 0.075
+				add = 0.1
 				multiply = kmpmp_break_truce_penalties_multiplier
 			}
 		}
+
+		# kmpmp primary cultures from target_country gets more radical
+		# removed for now
+		# scope:target_country = {
+		# 	every_primary_culture = {
+		# 		limit = {
+		# 			save_temporary_scope_as = target_county_primary_culture
+
+		# 			NOT = {
+		# 				ROOT = {
+		# 					country_has_primary_culture = scope:target_county_primary_culture
+		# 				}
+		# 			}
+		# 		}
+				
+		# 		ROOT = {
+		# 			add_radicals = {
+		# 				culture = scope:target_county_primary_culture
+		# 				value = {
+		# 					add = 0.1
+		# 					multiply = kmpmp_break_truce_penalties_multiplier
+		# 				}
+		# 			}
+		# 		}
+		# 	}
+		# }
+
 		add_modifier = {
 			name = kmpmp_break_truce_penalties_modifier
 			years = 5
 			multiplier = kmpmp_break_truce_penalties_multiplier
 		}
-		add_modifier = {
-			name = kmpmp_break_truce_penalties_decaying_modifier
-			years = 5
-			is_decaying = yes
-			multiplier = kmpmp_break_truce_penalties_multiplier
-		}
+		# kmpmp actually no more decaying debuffs, but modifier still exists
+		# add_modifier = {
+		# 	name = kmpmp_break_truce_penalties_decaying_modifier
+		# 	years = 5
+		# 	is_decaying = yes
+		# 	multiplier = kmpmp_break_truce_penalties_multiplier
+		# }
 	}
 
 	ai = {

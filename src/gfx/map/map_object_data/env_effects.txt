@@ -71,15 +71,6 @@ object={
 	count=0
 }
 object={
-	name="env_rough_water"
-	clamp_to_water_level=yes
-	render_under_water=yes
-	generated_content=no
-	layer="environmental_effects"
-	entity="env_rough_water"
-	count=0
-}
-object={
 	name="env_sandstorm_obj"
 	clamp_to_water_level=no
 	render_under_water=no

@@ -12,8 +12,11 @@
  building_group_bg_owner_buildings_tax_mult:0 "$bg_owner_buildings$ Tax Income"
  building_group_bg_owner_buildings_tax_mult_desc:0 "A bonus or penalty to tax income from $bg_owner_buildings$"
 
- state_unincorporated_education_access_add:0 "Education Access in [Concept('concept_unincorporated_state','$concept_unincorporated_states$')]"
- state_unincorporated_education_access_add_desc:0 "A bonus or penalty to education access for pops in [Concept('concept_unincorporated_state','$concept_unincorporated_states$')]"
+ state_kmpmp_unincorporated_education_access_add:0 "Education Access in [Concept('concept_unincorporated_state','$concept_unincorporated_states$')]"
+ state_kmpmp_unincorporated_education_access_add_desc:0 "A bonus or penalty to education access for pops in [Concept('concept_unincorporated_state','$concept_unincorporated_states$')]"
+
+ state_kmpmp_unincorporated_construction_mult: "$state_construction_mult$ in [Concept('concept_unincorporated_state','$concept_unincorporated_states$')]"
+ state_kmpmp_unincorporated_construction_mult_desc: "A bonus or penalty to the weekly [concept_construction] progress in an [Concept('concept_unincorporated_state','$concept_unincorporated_states$')]"
 
  unit_combat_unit_type_squad_infantry_offense_mult: "$combat_unit_type_squad_infantry$ $unit_offense_mult$"
  unit_combat_unit_type_squad_infantry_offense_mult_desc: "$combat_unit_type_squad_infantry$ $unit_offense_mult$"
@@ -160,6 +163,9 @@
 
  country_kmpmp_power_bloc_mandate_progress_add: "[concept_power_bloc_mandate_progress]"
  country_kmpmp_power_bloc_mandate_progress_add_desc: "A bonus or penalty to [concept_power_bloc_mandate_progress]"
+
+ country_kmpmp_power_bloc_mandate_progress_mult: "[concept_power_bloc_mandate_progress]"
+ country_kmpmp_power_bloc_mandate_progress_mult_desc: "A bonus or penalty to [concept_power_bloc_mandate_progress]"
 
  country_kmpmp_land_battle_size_mult: "Land battle size"
  country_kmpmp_land_battle_size_mult_desc: "An increase or decrease to the land battle size"

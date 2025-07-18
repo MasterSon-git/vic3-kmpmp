@@ -33,9 +33,14 @@ types pinnable_outliner_types {
 						margin_right = 7
 						margin_left = 3
 
-						tiny_flag = {
+						tiny_flag_no_interact = {
 							parentanchor = vcenter
 							datacontext = "[Market.GetOwner]"
+
+							blockoverride "tooltip" {}
+							blockoverride "is_player_glow" {
+								visible = no
+							}
 						}
 					}
 
@@ -224,7 +229,7 @@ types pinnable_outliner_types {
 		}
 
 		blockoverride "onclick" {
-			onclick = "[InformationPanelBar.OpenMarketPanel( Market.AccessSelf )]"
+			onclick = "[InformationPanelBar.OpenMarketPanel( Market.Self )]"
 		}
 
 		blockoverride "onhover" {

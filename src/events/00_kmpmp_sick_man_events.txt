@@ -119,7 +119,7 @@ sick_man.2 = {
 		}
 		add_modifier = {
 			name = ottoman_army_reform
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 	}
 	option = {
@@ -164,7 +164,7 @@ sick_man.2 = {
 		}
 		add_modifier = {
 			name = ottoman_urbanization
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 	}
 	option = {
@@ -174,7 +174,7 @@ sick_man.2 = {
 		}
 		add_modifier = {
 			name = ottoman_education
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 	}
 	option = {
@@ -184,7 +184,7 @@ sick_man.2 = {
 		}
 		add_modifier = {
 			name = ottoman_bureaucracy
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 	}
 }

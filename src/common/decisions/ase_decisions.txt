@@ -11,6 +11,6 @@ ase_remove_everything_related_to_stockpiling = {
     }
     
     ai_chance = {
-        base = 0
+        value = 0
     }
 }

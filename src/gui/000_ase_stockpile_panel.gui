@@ -546,7 +546,7 @@ types stockpile
                     tooltip = "ASE_STOCKPILE_TRANSFERS_BOTH_TOOLTIP"
 
                     blockoverride "button_texture" {
-                        texture = "gfx/interface/icons/trade_icons/unfocused.dds"
+                        texture = "gfx/interface/icons/trade_icons/trade_potential.dds"
                     }
                     blockoverride "click" {
                         onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
@@ -1389,7 +1389,7 @@ types stockpile
                 tooltip = "ASE_STOCKPILE_TRANSFERS_BOTH_TOOLTIP"
 
                 blockoverride "button_texture" {
-                    texture = "gfx/interface/icons/trade_icons/unfocused.dds"
+                    texture = "gfx/interface/icons/trade_icons/trade_potential.dds"
                 }
                 blockoverride "click" {
                     enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(GoodsStatePanel.GetGoods.GetState.MakeScope).End)]"
@@ -1481,7 +1481,7 @@ types stockpile
                 tooltip = "ASE_STOCKPILE_TRANSFERS_BOTH_TOOLTIP"
 
                 blockoverride "button_texture" {
-                    texture = "gfx/interface/icons/trade_icons/unfocused.dds"
+                    texture = "gfx/interface/icons/trade_icons/trade_potential.dds"
                 }
                 blockoverride "click" {
                     enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot(GoodsStatePanel.GetGoods.GetState.MakeScope).End)]"

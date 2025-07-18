@@ -93,12 +93,15 @@ NCamera = {
 NCities = {
 	RESIDENTIAL_CHANGE_DELAY = 10.0 #5.0			# Time between updating the residential buildings of a city ( + 0-1 second for some random variance )
 
+	CITY_VFX_MAX_ENTITIES = 64 #128				# The limit of how many VFX instances can exist at the same time
 	CITY_VFX_ZOOM_CUTOFF = 25 #250				# zoom at which we hide all city VFXes
 	CITY_PARTICLES_ZOOM_CUTOFF = 20 #200		# zoom at which we hide all city particle effects (for example chimney smoke)
 }
 
 NRoutes = {
 	ROUTE_ENTITIES_CUTOFF = 25 #250				# zoom at which we hide all route entities
+	NAVAL_ENTITIES_CUTOFF = 65 #650				# Distance to camera at which naval route entities hide
+	AIR_ENTITIES_CUTOFF = 45 #450				# Zoom at which air route entities hide
 }
 
 NProvinceHighlight = {

@@ -11,7 +11,7 @@ building_coffee_plantation = {
 
 	city_type = farm
 	levels_per_mesh = 5
-	
+
 	production_method_groups = {
 		pmg_base_building_coffee_plantation
 		pmg_train_automation_building_coffee_plantation
@@ -21,16 +21,15 @@ building_coffee_plantation = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_plantations.dds"
 
 	can_build_government = {
-		zw_gov_investment_trigger = {
+		zw_trigger_gov_investment = {
 			building_1 = building_coffee_plantation
 			bgs_1 = agriculture
 		}
 	}
 
 	can_build_private = {
-		zw_autonom_investment_trigger_agro = {
+		zw_trigger_autonom_investment_agro = {
 			building_1 = building_coffee_plantation
-			var_disallowed_building = plantations
 		}
 	}
 }
@@ -62,7 +61,7 @@ building_cotton_plantation = {
 			limit = {
 				owner = {
 					has_journal_entry = je_british_dictate_plantations
-					var:dictate_plantation_type = 4
+					var:dictate_plantation_type ?= 4
 				}
 			}
 			add = 2000
@@ -70,16 +69,15 @@ building_cotton_plantation = {
 	}
 
 	can_build_government = {
-		zw_gov_investment_trigger = {
+		zw_trigger_gov_investment = {
 			building_1 = building_cotton_plantation
 			bgs_1 = agriculture
 		}
 	}
 
 	can_build_private = {
-		zw_autonom_investment_trigger_agro = {
+		zw_trigger_autonom_investment_agro = {
 			building_1 = building_cotton_plantation
-			var_disallowed_building = plantations
 		}
 	}
 }
@@ -95,7 +93,7 @@ building_dye_plantation = {
 
 	city_type = farm
 	levels_per_mesh = 5
-	
+
 	production_method_groups = {
 		pmg_base_building_dye_plantation
 		pmg_train_automation_building_dye_plantation
@@ -111,7 +109,7 @@ building_dye_plantation = {
 			limit = {
 				owner = {
 					has_journal_entry = je_british_dictate_plantations
-					var:dictate_plantation_type = 3
+					var:dictate_plantation_type ?= 3
 				}
 			}
 			add = 2000
@@ -119,16 +117,15 @@ building_dye_plantation = {
 	}
 
 	can_build_government = {
-		zw_gov_investment_trigger = {
+		zw_trigger_gov_investment = {
 			building_1 = building_dye_plantation
 			bgs_1 = agriculture
 		}
 	}
 
 	can_build_private = {
-		zw_autonom_investment_trigger_agro = {
+		zw_trigger_autonom_investment_agro = {
 			building_1 = building_dye_plantation
-			var_disallowed_building = plantations
 		}
 	}
 }
@@ -144,15 +141,15 @@ building_opium_plantation = {
 
 	city_type = farm
 	levels_per_mesh = 5
-	
+
 	production_method_groups = {
 		pmg_base_building_opium_plantation
 		pmg_train_automation_building_opium_plantation
 	}
-	
+
 	can_build_government = {
 		owner = { NOT = { is_banning_goods = g:opium } }
-		zw_gov_investment_trigger = {
+		zw_trigger_gov_investment = {
 			building_1 = building_opium_plantation
 			bgs_1 = agriculture
 		}
@@ -160,9 +157,8 @@ building_opium_plantation = {
 
 	can_build_private = {
 		owner = { NOT = { is_banning_goods = g:opium } }
-		zw_autonom_investment_trigger_agro = {
+		zw_trigger_autonom_investment_agro = {
 			building_1 = building_opium_plantation
-			var_disallowed_building = plantations
 		}
 	}
 	ownership_type = self
@@ -176,7 +172,7 @@ building_opium_plantation = {
 			limit = {
 				owner = {
 					has_journal_entry = je_british_dictate_plantations
-					var:dictate_plantation_type = 1
+					var:dictate_plantation_type ?= 1
 				}
 			}
 			add = 2000
@@ -195,7 +191,7 @@ building_tea_plantation = {
 
 	city_type = farm
 	levels_per_mesh = 5
-	
+
 	production_method_groups = {
 		pmg_base_building_tea_plantation
 		pmg_train_automation_building_tea_plantation
@@ -211,7 +207,7 @@ building_tea_plantation = {
 			limit = {
 				owner = {
 					has_journal_entry = je_british_dictate_plantations
-					var:dictate_plantation_type = 2
+					var:dictate_plantation_type ?= 2
 				}
 			}
 			add = 2000
@@ -219,16 +215,15 @@ building_tea_plantation = {
 	}
 
 	can_build_government = {
-		zw_gov_investment_trigger = {
+		zw_trigger_gov_investment = {
 			building_1 = building_tea_plantation
 			bgs_1 = agriculture
 		}
 	}
 
 	can_build_private = {
-		zw_autonom_investment_trigger_agro = {
+		zw_trigger_autonom_investment_agro = {
 			building_1 = building_tea_plantation
-			var_disallowed_building = plantations
 		}
 	}
 }
@@ -244,7 +239,7 @@ building_tobacco_plantation = {
 
 	city_type = farm
 	levels_per_mesh = 5
-	
+
 	production_method_groups = {
 		pmg_base_building_tobacco_plantation
 		pmg_train_automation_building_tobacco_plantation
@@ -260,7 +255,7 @@ building_tobacco_plantation = {
 			limit = {
 				owner = {
 					has_journal_entry = je_british_dictate_plantations
-					var:dictate_plantation_type = 5
+					var:dictate_plantation_type ?= 5
 				}
 			}
 			add = 2000
@@ -268,16 +263,15 @@ building_tobacco_plantation = {
 	}
 
 	can_build_government = {
-		zw_gov_investment_trigger = {
+		zw_trigger_gov_investment = {
 			building_1 = building_tobacco_plantation
 			bgs_1 = agriculture
 		}
 	}
 
 	can_build_private = {
-		zw_autonom_investment_trigger_agro = {
+		zw_trigger_autonom_investment_agro = {
 			building_1 = building_tobacco_plantation
-			var_disallowed_building = plantations
 		}
 	}
 }
@@ -290,7 +284,7 @@ building_sugar_plantation = {
 	unlocking_technologies = {
 		enclosure
 	}
-	
+
 	city_type = farm
 	levels_per_mesh = 5
 
@@ -303,16 +297,15 @@ building_sugar_plantation = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_plantations.dds"
 
 	can_build_government = {
-		zw_gov_investment_trigger = {
+		zw_trigger_gov_investment = {
 			building_1 = building_sugar_plantation
 			bgs_1 = agriculture
 		}
 	}
 
 	can_build_private = {
-		zw_autonom_investment_trigger_agro = {
+		zw_trigger_autonom_investment_agro = {
 			building_1 = building_sugar_plantation
-			var_disallowed_building = plantations
 		}
 	}
 }
@@ -328,7 +321,7 @@ building_banana_plantation = {
 
 	city_type = farm
 	levels_per_mesh = 5
-	
+
 	production_method_groups = {
 		pmg_base_building_banana_plantation
 		pmg_train_automation_building_banana_plantation
@@ -338,16 +331,15 @@ building_banana_plantation = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_plantations.dds"
 
 	can_build_government = {
-		zw_gov_investment_trigger = {
+		zw_trigger_gov_investment = {
 			building_1 = building_banana_plantation
 			bgs_1 = agriculture
 		}
 	}
 
 	can_build_private = {
-		zw_autonom_investment_trigger_agro = {
+		zw_trigger_autonom_investment_agro = {
 			building_1 = building_banana_plantation
-			var_disallowed_building = plantations
 		}
 	}
 }
@@ -373,16 +365,15 @@ building_silk_plantation = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_plantations.dds"
 
 	can_build_government = {
-		zw_gov_investment_trigger = {
+		zw_trigger_gov_investment = {
 			building_1 = building_silk_plantation
 			bgs_1 = agriculture
 		}
 	}
 
 	can_build_private = {
-		zw_autonom_investment_trigger_agro = {
+		zw_trigger_autonom_investment_agro = {
 			building_1 = building_silk_plantation
-			var_disallowed_building = plantations
 		}
 	}
 }
@@ -398,7 +389,7 @@ building_vineyard_plantation = {
 
 	city_type = farm
 	levels_per_mesh = 5
-	
+
 	production_method_groups = {
 		pmg_base_building_vineyard_plantation
 		pmg_train_automation_building_vineyard_plantation
@@ -408,16 +399,15 @@ building_vineyard_plantation = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_plantations.dds"
 
 	can_build_government = {
-		zw_gov_investment_trigger = {
+		zw_trigger_gov_investment = {
 			building_1 = building_vineyard_plantation
 			bgs_1 = agriculture
 		}
 	}
 
 	can_build_private = {
-		zw_autonom_investment_trigger_agro = {
+		zw_trigger_autonom_investment_agro = {
 			building_1 = building_vineyard_plantation
-			var_disallowed_building = plantations
 		}
 	}
 }

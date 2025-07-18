@@ -1,38 +1,68 @@
 
 template goods_list_item {
 	widget = {
-		size = { 55 55 }
 		block "goods_list_item_datacontext" {}
 		parentanchor = vcenter
+		
+		block "widget_size" {
+			size = { 55 55 }
+		}
 
-		tooltipwidget = {
-			FancyTooltip_Goods = {}
+		block "goods_list_item_icon_tooltip" {
+			tooltipwidget = {
+				FancyTooltip_Goods = {}
+			}
 		}
 		
 		icon = {
 			texture = "gfx/interface/market_view/trade_good_list_bg.dds"
-			position = { 25 0 }
-			size = { 190 46 }
+			block "goods_list_item_background_position" {
+				position = { 25 0 }
+			}
+
+			block "goods_list_item_background_size" {
+				size = { 190 46 }
+			}
+
 			parentanchor = vcenter
 			color = "[Goods.GetCategoryColor]"
 		}
 
 		icon = {
 			texture = "gfx/interface/market_view/trade_good_icon_bg.dds"
-			size = { 55 55 }
 			color = "[Goods.GetCategoryColor]"
+			
+			block "bg_size" {
+				size = { 55 55 }
+			}
 			
 			icon = {
 				texture = "[Goods.GetTexture]"
 				size = { 40 40 }
 				parentanchor = center
 			}
+
 			icon = {
-				size = { 25 25 }
 				visible = "[Goods.HasGoodsShortage]"
-				texture = "gfx/interface/icons/generic_icons/goods_shortage.dds"
 				tooltip = "GOODS_SHORTAGE_TOOLTIP"
+				
+				size = { 25 25 }
+				texture = "gfx/interface/icons/generic_icons/goods_shortage.dds"
 				parentanchor = bottom
+			}
+
+			cannot_be_trade_icon = {}
+
+			icon = {
+				size = { 100% 100% }
+				texture = "gfx/interface/icons/goods_icons/prestige_goods/trade_good_icon_prestige_frame.dds"
+				visible = "[Goods.IsPrestigeGoods]"
+			}
+
+			icon = {
+				size = { 100% 100% }
+				texture = "gfx/interface/icons/goods_icons/prestige_goods/trade_good_icon_prestige_ribbon.dds"
+				visible = "[Goods.IsPrestigeGoods]"
 			}
 
 			stockpile_market_panel_icon = {}

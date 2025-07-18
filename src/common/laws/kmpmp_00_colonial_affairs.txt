@@ -2,11 +2,19 @@
 	group = lawgroup_colonization
 
 	can_enact = {
-		any_scope_state = {
-			is_homeland_of_country_cultures = ROOT
-			any_neighbouring_state = {
-				owner = {
-					is_country_type = decentralized
+		OR = {
+			AND = {
+				is_country_type = colonial
+				any_decentralized_country = {
+					is_adjacent_to_country = root
+				}
+			}
+			any_scope_state = {
+				is_homeland_of_country_cultures = ROOT
+				any_neighbouring_state = {
+					owner = {
+						is_country_type = decentralized
+					}
 				}
 			}
 		}
@@ -21,14 +29,15 @@
 	}
 	
 	modifier = {
-		state_migration_pull_unincorporated_mult = 1 #0.5
+		state_migration_pull_unincorporated_mult = 0.5
 	}
 	
 	institution = institution_colonial_affairs
 
-	#kmpmp
+	# kmpmp
 	institution_modifier = {
 		state_migration_pull_unincorporated_mult = 0.05
+		state_colony_growth_creation_factor = 0.1
 	}
 
 	can_impose = {
@@ -110,10 +119,11 @@ law_colonial_resettlement = {
 	
 	institution = institution_colonial_affairs
 
-	#kmpmp
+	# kmpmp
 	institution_modifier = {
-		state_unincorporated_education_access_add = 0.03 # this is actually a fake modifier... think about it, how to apply this on unincorprated states
+		state_kmpmp_unincorporated_education_access_add = 0.04
 		building_group_bg_manufacturing_unincorporated_throughput_add = 0.02
+		state_infrastructure_mult = 0.03
 	}
 
 	can_impose = {
@@ -202,12 +212,14 @@ law_colonial_exploitation = {
 	
 	institution = institution_colonial_affairs 
 
-	#kmpmp
+	# kmpmp
 	institution_modifier = {
 		building_group_bg_agriculture_unincorporated_throughput_add = 0.03
 		building_group_bg_plantations_unincorporated_throughput_add = 0.03
 		building_group_bg_rubber_unincorporated_throughput_add = 0.03
 		building_group_bg_mining_unincorporated_throughput_add = 0.03
+		building_group_bg_oil_extraction_unincorporated_throughput_add = 0.03
+		building_group_bg_logging_unincorporated_throughput_add = 0.03
 	}
 
 	can_impose = {

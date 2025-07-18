@@ -53,13 +53,17 @@
                         NOR = {
                             is_subject_of = scope:this_country # Don't build on borders with subjects
                             is_in_same_power_bloc = scope:this_country # Not scared of power bloc partners
-                            has_diplomatic_pact = { # Not scared of allies
-                                who  = scope:this_country
-                                type = alliance
+                            any_scope_treaty = { # Not scared of allies
+                                binds  = scope:this_country
+                                any_scope_article = {
+                                    has_type = alliance
+                                }
                             }
-                            has_diplomatic_pact = { # Not scared of defensive partners
-                                who  = scope:this_country
-                                type = defensive_pact
+                            any_scope_treaty = { # Not scared of defensive partners
+                                binds  = scope:this_country
+                                any_scope_article = {
+                                    has_type = defensive_pact
+                                }
                             }
                         }
                     }

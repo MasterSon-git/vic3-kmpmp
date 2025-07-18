@@ -11,12 +11,18 @@
 	}
 
 	leader_modifier = {
-		country_trade_route_quantity_mult = 0.1
-		tax_dividends_add = 0.05 #kmpmp
+		state_trade_capacity_mult = 0.25
+		# kmpmp
+		building_group_bg_manufacturing_throughput_add = 0.05
 	}
 	
 	non_leader_modifier = {
 		country_convoy_contribution_to_market_owner_add = 0.2
+	}
+
+	# kmpmp
+	member_modifier = {
+		tax_dividends_add = 0.05
 	}
 
 	can_leave = {
@@ -32,7 +38,7 @@
 	}
 	
 	possible = {
-		# NOT = { has_law = law_type:law_isolationism } # No longer needed since Isolationism is a blocker for forming any Power Bloc, but in case that changes, uncomment this
+		# NOT = { has_law_or_variant = law_type:law_isolationism } # No longer needed since Isolationism is a blocker for forming any Power Bloc, but in case that changes, uncomment this
 	}
 
 	icon = "gfx/interface/icons/central_identity_pillars_icons/trade_league.dds"
@@ -177,8 +183,7 @@ identity_sovereign_empire = {
 	}
 
 	leader_modifier = {
-		# kmpmp
-		#country_liberty_desire_of_subjects_add = -0.05
+		# country_liberty_desire_of_subjects_add = -0.05
 	}
 
 	non_leader_modifier = {
@@ -496,10 +501,9 @@ identity_military_treaty_organization = {
 	member_modifier = {
 		building_training_rate_mult = 0.2
 		# kmpmp
-		country_loan_interest_rate_mult = -0.1
-		unit_recovery_rate_add = 0.1
+		country_loan_interest_rate_mult = -0.05
+		unit_recovery_rate_add = 0.2
 		interest_group_ig_armed_forces_pol_str_mult = 0.1
-
 	}
 	
 	possible = {
@@ -674,9 +678,9 @@ identity_religious = {
 	member_modifier = {
 		state_conversion_mult = 0.50 #0.33
 		interest_group_ig_devout_pol_str_mult = 0.25
+		state_birth_rate_mult = 0.05
 		# kmpmp
-		state_mortality_mult = -0.02
-		country_military_goods_cost_mult = -0.05
+		country_military_goods_cost_mult = -0.025
 	}
 
 	can_leave = {

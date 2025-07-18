@@ -2,98 +2,502 @@
 
 # Reforms complete!
 meiji.2 = {
-    type = country_event
-    placement = root
-    title = meiji.2.t
-    desc = meiji.2.d
-    flavor = meiji.2.f
+	type = country_event
+	placement = root
+	title = meiji.2.t
+	desc = meiji.2.d
+	flavor = meiji.2.f
 
-    duration = 3
+	duration = 3
 
-    icon = "gfx/interface/icons/event_icons/event_scales.dds"
-    event_image = {
-        video = "asia_confucianism_shinto"
-    }
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+	event_image = {
+		video = "asia_confucianism_shinto"
+	}
 
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-    trigger = {
-        # triggered by meiji restoration JE
-    }
+	trigger = {
+		# triggered by meiji restoration JE
+	}
 
-    immediate = {
-        ruler = {
-            save_scope_as = meiji_ruler
-        }
-        set_global_variable = meiji_restoration_complete
+	immediate = {
+		ruler = {
+			save_scope_as = meiji_ruler
+		}
+		set_global_variable = meiji_restoration_complete
 
-        trigger_event = { # kmpmp
-            id = kmpmp_ev_japan_buff.2
-            days = 7
-            popup = yes
-        }
-    }
+		trigger_event = { # kmpmp
+			id = kmpmp_ev_japan_buff.2
+			days = 7
+			popup = yes
+		}
+	}
 
-    option = {
-        name = meiji.2.a
-        default_option = yes
-        add_modifier = {
-            name = japan_military_reward
-            months = normal_modifier_time
-        }
-        if = {
-            limit = {
-                NOT = { owns_entire_state_region = STATE_BUSAN }
-            }
-            s:STATE_BUSAN = {
-                add_claim = ROOT
-            }
-        }
-        if = {
-            limit = {
-                NOT = { owns_entire_state_region = STATE_SEOUL }
-            }
-            s:STATE_SEOUL = {
-                add_claim = ROOT
-            }
-        }
-        if = {
-            limit = {
-                NOT = { owns_entire_state_region = STATE_SARIWON }
-            }
-            s:STATE_SARIWON = {
-                add_claim = ROOT
-            }
-        }
-        if = {
-            limit = {
-                NOT = { owns_entire_state_region = STATE_PYONGYANG }
-            }
-            s:STATE_PYONGYANG = {
-                add_claim = ROOT
-            }
-        }
-        if = {
-            limit = {
-                NOT = { owns_entire_state_region = STATE_YANGHO }
-            }
-            s:STATE_YANGHO = {
-                add_claim = ROOT
-            }
-        }
-    }
-    option = {
-        name = meiji.2.b
-        add_modifier = {
-            name = japan_diplomatic_reward
-            months = normal_modifier_time
-        }
-    }
-    option = {
-        name = meiji.2.c
-        add_modifier = {
-            name = japan_production_reward
-            months = normal_modifier_time
-        }
-    }
+	option = {
+		name = meiji.2.a
+		default_option = yes
+		add_modifier = {
+			name = japan_military_reward
+			days = normal_modifier_time
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_BUSAN }
+			}
+			s:STATE_BUSAN = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_SEOUL }
+			}
+			s:STATE_SEOUL = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_SARIWON }
+			}
+			s:STATE_SARIWON = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_PYONGYANG }
+			}
+			s:STATE_PYONGYANG = {
+				add_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_YANGHO }
+			}
+			s:STATE_YANGHO = {
+				add_claim = ROOT
+			}
+		}
+	}
+	option = {
+		name = meiji.2.b
+		add_modifier = {
+			name = japan_diplomatic_reward
+			days = normal_modifier_time
+		}
+	}
+	option = {
+		name = meiji.2.c
+		add_modifier = {
+			name = japan_production_reward
+			days = normal_modifier_time
+		}
+	}
+}
+
+# Western military advisors
+meiji.4 = {
+	type = country_event
+	placement = root
+	title = meiji.4.t
+	desc = meiji.4.d
+	flavor = meiji.4.f
+
+	duration = 3
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	event_image = {
+		video = "asia_westerners_arriving"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	trigger = {
+		# kmpmp
+		NOT = {
+			has_variable = kmpmp_japan_used_western_military_consultant
+		}
+		NOT = {	has_modifier = western_military_consultant }
+		OR = {
+			AND = {
+				has_law_or_variant = law_type:law_isolationism
+				OR = {
+					is_enacting_law = law_type:law_mercantilism
+					is_enacting_law = law_type:law_agrarianism
+					is_enacting_law = law_type:law_free_trade
+					is_enacting_law = law_type:law_command_economy
+				}
+			}
+			AND = {
+				has_journal_entry = je_meiji_diplomacy
+				OR = {
+					NOT = { has_law_or_variant = law_type:law_isolationism }
+					is_enacting_law = law_type:law_mercantilism
+					is_enacting_law = law_type:law_agrarianism
+					is_enacting_law = law_type:law_free_trade
+					is_enacting_law = law_type:law_command_economy
+				}
+				enacting_any_law = no
+			}
+		}
+		any_country = {
+			country_rank >= rank_value:major_power
+			relations:root >= relations_threshold:neutral
+			relations:root >= 0
+			NOT = { is_owed_obligation_by = ROOT }
+			NOT = { has_war_with = ROOT }
+			any_scope_character = {
+				has_role = general
+				is_busy = no
+			}
+		}
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				country_rank >= rank_value:major_power
+				relations:root >= relations_threshold:neutral
+				NOT = { is_owed_obligation_by = ROOT }
+				NOT = { has_war_with = ROOT }
+				any_scope_character = {
+					has_role = general
+					is_busy = no
+				}
+			}
+			save_scope_as = military_consultant_country
+			random_scope_character = {
+				limit = {
+					has_role = general
+					is_busy = no
+				}
+				save_scope_as = military_consultant_general
+			}
+		}
+	}
+
+	option = {
+		name = meiji.4.a
+		default_option = yes
+		set_owes_obligation_to = {
+			country = scope:military_consultant_country
+			setting = yes
+		}
+		add_modifier = {
+			name = western_military_consultant
+			days = normal_modifier_time
+		}
+		if = {
+			limit = {
+				has_law_or_variant = law_type:law_isolationism
+				OR = {
+					is_enacting_law = law_type:law_mercantilism
+					is_enacting_law = law_type:law_protectionism
+					is_enacting_law = law_type:law_free_trade
+				}
+			}
+			add_enactment_modifier = {
+				name = ending_isolation
+			}
+		}
+		# kmpmp
+		set_variable = kmpmp_japan_used_western_military_consultant
+	}
+	option = {
+		name = meiji.4.b
+		change_relations = {
+			country = scope:military_consultant_country
+			value = -20
+		}
+		if = {
+			limit = {
+				has_law_or_variant = law_type:law_isolationism
+				OR = {
+					is_enacting_law = law_type:law_mercantilism
+					is_enacting_law = law_type:law_protectionism
+					is_enacting_law = law_type:law_free_trade
+				}
+			}
+			add_enactment_modifier = {
+				name = ending_isolation
+			}
+		}
+	}
+}
+
+# Embassy to the West
+meiji.5 = {
+	type = country_event
+	placement = root
+	title = meiji.5.t
+	desc = meiji.5.d
+	flavor = meiji.5.f
+
+	duration = 3
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+	event_image = {
+		video = "asia_westerners_arriving"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	cooldown = { days = normal_modifier_time }
+
+	trigger = {
+		NOT = { has_modifier = japan_society_tech_modifier }
+		OR = {
+			AND = {
+				has_law_or_variant = law_type:law_isolationism
+				OR = {
+					is_enacting_law = law_type:law_mercantilism
+					is_enacting_law = law_type:law_agrarianism
+					is_enacting_law = law_type:law_free_trade
+					is_enacting_law = law_type:law_command_economy
+				}
+			}
+			AND = {
+				has_journal_entry = je_meiji_diplomacy
+				OR = {
+					NOT = { has_law_or_variant = law_type:law_isolationism }
+					is_enacting_law = law_type:law_mercantilism
+					is_enacting_law = law_type:law_agrarianism
+					is_enacting_law = law_type:law_free_trade
+					is_enacting_law = law_type:law_command_economy
+				}
+				enacting_any_law = no
+			}
+		}
+		any_country = {
+			country_rank = rank_value:great_power
+			relations:root >= relations_threshold:neutral
+			NOT = { has_war_with = ROOT }
+			NOT = { is_owed_obligation_by = ROOT }
+		}
+	}
+	immediate = {
+		random_country = {
+			limit = {
+				country_rank = rank_value:great_power
+				relations:root >= relations_threshold:neutral
+				NOT = { has_war_with = ROOT }
+				NOT = { is_owed_obligation_by = ROOT }
+			}
+			save_scope_as = japan_embassy_country
+			random_interest_group = {
+				limit = {
+					is_in_government = yes
+				}
+				leader = {
+					save_scope_as = japan_embassy_politician
+				}
+			}
+		}
+	}
+
+	option = { # greatly improve relations for a obligation
+		name = meiji.5.a
+		default_option = yes
+		set_owes_obligation_to = {
+			country = scope:japan_embassy_country
+			setting = yes
+		}
+		change_relations = {
+			country = scope:japan_embassy_country
+			value = 50
+		}
+		if = {
+			limit = {
+				has_law_or_variant = law_type:law_isolationism
+				OR = {
+					is_enacting_law = law_type:law_mercantilism
+					is_enacting_law = law_type:law_protectionism
+					is_enacting_law = law_type:law_free_trade
+				}
+			}
+			add_enactment_modifier = {
+				name = ending_isolation
+			}
+		}
+	}
+	option = { # society tech spread for a obligation
+		name = meiji.5.b
+		# kmpmp
+		trigger = {
+			NOT = {
+				has_variable = kmpmp_japan_used_japan_society_tech_modifier
+			}
+		}
+		set_owes_obligation_to = {
+			country = scope:japan_embassy_country
+			setting = yes
+		}
+		add_modifier = {
+			name = japan_society_tech_modifier
+			days = normal_modifier_time
+		}
+		if = {
+			limit = {
+				has_law_or_variant = law_type:law_isolationism
+				OR = {
+					is_enacting_law = law_type:law_mercantilism
+					is_enacting_law = law_type:law_protectionism
+					is_enacting_law = law_type:law_free_trade
+				}
+			}
+			add_enactment_modifier = {
+				name = ending_isolation
+			}
+		}
+		# kmpmp
+		set_variable = kmpmp_japan_used_japan_society_tech_modifier
+	}
+	option = { # we don't want anything from them
+		name = meiji.5.c
+		change_relations = {
+			country = scope:japan_embassy_country
+			value = -20
+		}
+		if = {
+			limit = {
+				has_law_or_variant = law_type:law_isolationism
+				OR = {
+					is_enacting_law = law_type:law_mercantilism
+					is_enacting_law = law_type:law_protectionism
+					is_enacting_law = law_type:law_free_trade
+				}
+			}
+			add_enactment_modifier = {
+				name = ending_isolation
+			}
+		}
+	}
+}
+
+# Foreign Investment
+meiji.6 = {
+	type = country_event
+	placement = root
+	title = meiji.6.t
+	desc = meiji.6.d
+	flavor = meiji.6.f
+
+	duration = 3
+
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	trigger = {
+		# kmpmp
+		NOT = {
+			has_variable = kmpmp_japan_used_japan_production_tech_modifier
+		}
+		NOT = { has_modifier = japan_production_tech_modifier }
+		OR = {
+			AND = {
+				has_law_or_variant = law_type:law_isolationism
+				OR = {
+					is_enacting_law = law_type:law_mercantilism
+					is_enacting_law = law_type:law_agrarianism
+					is_enacting_law = law_type:law_free_trade
+					is_enacting_law = law_type:law_command_economy
+				}
+			}
+			AND = {
+				has_journal_entry = je_meiji_diplomacy
+				OR = {
+					NOT = { has_law_or_variant = law_type:law_isolationism }
+					is_enacting_law = law_type:law_mercantilism
+					is_enacting_law = law_type:law_agrarianism
+					is_enacting_law = law_type:law_free_trade
+					is_enacting_law = law_type:law_command_economy
+				}
+				enacting_any_law = no
+			}
+		}
+		any_country = {
+			country_rank >= rank_value:major_power
+			relations:root >= relations_threshold:neutral
+			NOT = { has_war_with = ROOT }
+			NOT = { is_owed_obligation_by = ROOT }
+			ig:ig_industrialists = {
+				is_in_government = yes
+			}
+		}
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				country_rank >= rank_value:major_power
+				relations:root >= relations_threshold:neutral
+				NOT = { has_war_with = ROOT }
+				NOT = { is_owed_obligation_by = ROOT }
+				ig:ig_industrialists = {
+					is_in_government = yes
+				}
+			}
+			save_scope_as = western_investor_country
+			ig:ig_industrialists = {
+				leader = {
+					save_scope_as = western_investor_ig_leader
+				}
+			}
+		}
+	}
+
+	option = { # production tech spread for a obligation
+		name = meiji.6.a
+		default_option = yes
+		set_owes_obligation_to = {
+			country = scope:western_investor_country
+			setting = yes
+		}
+		add_modifier = {
+			name = japan_production_tech_modifier
+			days = normal_modifier_time
+		}
+		if = {
+			limit = {
+				has_law_or_variant = law_type:law_isolationism
+				OR = {
+					is_enacting_law = law_type:law_mercantilism
+					is_enacting_law = law_type:law_protectionism
+					is_enacting_law = law_type:law_free_trade
+				}
+			}
+			add_enactment_modifier = {
+				name = ending_isolation
+			}
+		}
+		# kmpmp
+		set_variable = kmpmp_japan_used_japan_production_tech_modifier
+	}
+	option = { # no thanks
+		name = meiji.6.b
+		change_relations = {
+			country = scope:western_investor_country
+			value = -2
+		}
+		if = {
+			limit = {
+				has_law_or_variant = law_type:law_isolationism
+				OR = {
+					is_enacting_law = law_type:law_mercantilism
+					is_enacting_law = law_type:law_protectionism
+					is_enacting_law = law_type:law_free_trade
+				}
+			}
+			add_enactment_modifier = {
+				name = ending_isolation
+			}
+		}
+	}
 }

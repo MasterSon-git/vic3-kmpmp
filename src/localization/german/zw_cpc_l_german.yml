@@ -18,316 +18,103 @@ l_german:
 # Decrees
 	
 	decree_zw_no_state_private_investment: "Privatbautenverbot"
-	decree_zw_no_state_private_investment_desc: "Privatbauten verbieten"
+	decree_zw_no_state_private_investment_desc: "Privatbauten und Privatisierung werden im Staat verboten."
 
 # Modifiers
 
-	zw_modifier_intervene_investment_from_abroad_industry: "Industrielle Investitionen Aus Dem Ausland"
-	zw_modifier_intervene_investment_from_abroad_agriculture: "Landwirtschaftliche Investitionen Aus Dem Ausland"
+	zw_modifier_intervene_investment_from_abroad_industry: "Investitionen Aus Dem Ausland"
+	zw_modifier_intervene_investment_from_abroad_agriculture: "Investitionen Aus Dem Ausland"
 
 # Journal entry
 
 	je_zw_autonom_invest_management: "Privatbauten-Verwaltung"
-	je_zw_autonom_invest_management_reason: "Regulate our private and foreign investment." 
+	je_zw_autonom_invest_management_reason: "In die private Investitionen und ausländische Investitionen eingreifen." 
 
 # Scripted buttons
 	
 	# incorporated states, auto-expand
 
-	zw_auto_expand_incorporated_states_only_button: "@incorporated! Auto. Erweitern"
+	zw_auto_expand_incorporated_states_only_button: "@zw_texticon_auto_expand! Inkorporierte Staaten"
 	zw_auto_expand_incorporated_states_only_button_desc: ""
-	zw_auto_expand_incorporated_states_only_button_effect: "Nur Gebäude in inkorporierten Staaten dürfen automatisch erweitert werden"
-
-	zw_auto_expand_incorporated_states_only_undo_button: "@unincorporated! Auto. Erweitern"
-	zw_auto_expand_incorporated_states_only_undo_button_desc: ""
-	zw_auto_expand_incorporated_states_only_undo_button_effect: "Gebäude aller Staaten dürfen automatisch erweitert werden"
+	zw_auto_expand_incorporated_states_only_button_effect: "Nur Gebäude in inkorporierten Staaten dürfen #white #b automatisch erweitert#!#! werden."
 
 	# incorporated states, private construtions
 
-	zw_auto_invest_incorporated_states_only_button: "Inkorporierte Staaten"
+	zw_auto_invest_incorporated_states_only_button: "@zw_texticon_private_construction! Inkorporierte Staaten"
 	zw_auto_invest_incorporated_states_only_button_desc: ""
-	zw_auto_invest_incorporated_states_only_button_effect: "Privatbauten sind nur in inkorporierten Staaten erlaubt."
-
-	zw_auto_invest_incorporated_states_only_undo_button: "Alle Staaten"
-	zw_auto_invest_incorporated_states_only_undo_button_desc: ""
-	zw_auto_invest_incorporated_states_only_undo_button_effect: "Privatbauten sind in alle Staaten erlaubt."
-
-	# existing manufacture buildings only
-
-	zw_auto_invest_existing_buildings_only_manufacture_button: "@red_cross! Neue Gebäude @zw_texticon_manufacture!"
-	zw_auto_invest_existing_buildings_only_manufacture_button_desc: ""
-	zw_auto_invest_existing_buildings_only_manufacture_button_effect: "Inländische private Investitionen dürfen nur bestehende Gebäude erweiten, wenn sie in Fertigungswerke und Kunsthochschule investieren."
-
-	zw_auto_invest_existing_buildings_only_manufacture_undo_button: " @green_checkmark! Neue Gebäude @zw_texticon_manufacture!"
-	zw_auto_invest_existing_buildings_only_manufacture_undo_button_desc: ""
-	zw_auto_invest_existing_buildings_only_manufacture_undo_button_effect: "Inländische private Investitionen dürfen neue Gebäude bauen, wenn sie in Fertigungswerke und Kunsthochschule investieren."
-
-	# existing agro buildings only
-
-	zw_auto_invest_existing_buildings_only_agro_button: "@red_cross! Neue Gebäude @zw_texticon_agro!"
-	zw_auto_invest_existing_buildings_only_agro_button_desc: ""
-	zw_auto_invest_existing_buildings_only_agro_button_effect: "Inländische private Investitionen dürfen nur bestehende Gebäude erweiten, wenn sie in Landwirtschaft und Plantagen investieren."
-
-	zw_auto_invest_existing_buildings_only_agro_undo_button: "@green_checkmark! Neue Gebäude @zw_texticon_agro!"
-	zw_auto_invest_existing_buildings_only_agro_undo_button_desc: ""
-	zw_auto_invest_existing_buildings_only_agro_undo_button_effect: "Inländische private Investitionen dürfen neue Gebäude bauen, wenn sie in Landwirtschaft und Plantagen investieren."
-
-	# existing resource buildings only
-
-	zw_auto_invest_existing_buildings_only_resource_button: "@red_cross! Neue Gebäude @zw_texticon_resource!"
-	zw_auto_invest_existing_buildings_only_resource_button_desc: ""
-	zw_auto_invest_existing_buildings_only_resource_button_effect: "Inländische private Investitionen dürfen nur bestehende Gebäude erweiten, wenn sie in Landwirtschaft und Plantagen investieren."
-
-	zw_auto_invest_existing_buildings_only_resource_undo_button: "@green_checkmark! Neue Gebäude @zw_texticon_resource!"
-	zw_auto_invest_existing_buildings_only_resource_undo_button_desc: ""
-	zw_auto_invest_existing_buildings_only_resource_undo_button_effect: "Inländische private Investitionen dürfen neue Gebäude bauen, wenn sie in Rohstoffindustrie investieren."
-
-	# existing infrastructure buildings only
-
-	zw_auto_invest_existing_buildings_only_infrastructure_button: "@red_cross! Neue Gebäude @zw_texticon_infrastructure!"
-	zw_auto_invest_existing_buildings_only_infrastructure_button_desc: ""
-	zw_auto_invest_existing_buildings_only_infrastructure_button_effect: "Inländische private Investitionen dürfen nur bestehende Gebäude erweiten, wenn sie in Infrastruktur investieren."
-
-	zw_auto_invest_existing_buildings_only_infrastructure_undo_button: "@green_checkmark! Neue Gebäude @zw_texticon_infrastructure!"
-	zw_auto_invest_existing_buildings_only_infrastructure_undo_button_desc: ""
-	zw_auto_invest_existing_buildings_only_infrastructure_undo_button_effect: "Inländische private Investitionen dürfen neue Gebäude bauen, wenn sie in Infrastruktur investieren."
+	zw_auto_invest_incorporated_states_only_button_effect: "#white #b Privatbauten#!#! sind nur in inkorporierten Staaten erlaubt."
 
 	# existing profitable buildings only
 
-	zw_auto_invest_profitable_buildings_only_button: "Strenge Profit-Bedingungen"
+	zw_auto_invest_profitable_buildings_only_button: "@coin12! Profit-Bedingungen"
 	zw_auto_invest_profitable_buildings_only_button_desc: ""
-	zw_auto_invest_profitable_buildings_only_button_effect: "Wenn unsere inländischen Privatinvestitionen nur bestehende Gebäude erweiten dürfen, werden sie nur die Gebäude bewerten, die mindestens eine von diesen zwei Bedingungen erfüllen:\n\n    1. Alle diese Bedingungen:\n          [concept_occupancy] >= 0.9\n          [concept_market_access] >= 100%\n          $concept_building_balance_profit$ > (200 * $concept_building_levels$)\n\n    2. Alle diese Bedingungen:\n          Gebäudeart ist $building_railway$\n          [concept_occupancy] >= 0.9\n          [concept_infrastructure] < [concept_infrastructure_usage]\n         Beliebige der folgenden Bedingungen:\n              $IS_SUBSIDIZED$\n              $concept_building_balance_profit$ > 0"
+	zw_auto_invest_profitable_buildings_only_button_effect: "$zw_text_profit_condition$"
 
-	zw_auto_invest_profitable_buildings_only_undo_button: "Lockere Profit-Bedingungen"
+	zw_auto_invest_profitable_buildings_only_undo_button: "@coin7! Profit-Bedingungen"
 	zw_auto_invest_profitable_buildings_only_undo_button_desc: ""
-	zw_auto_invest_profitable_buildings_only_undo_button_effect: "Unsere inländischen Privatinvestitionen dürfen alle Gebäude bewerten, um sie zu bauen oder erweiten."
+	zw_auto_invest_profitable_buildings_only_undo_button_effect: "Unsere #white #b inländischen Privatinvestitionen#!#! dürfen alle Gebäude bewerten, um sie zu bauen oder erweiten."
+
+	# existing  buildings only
+
+	zw_auto_invest_existing_buildings_only_manufacture_button: "@red_cross! Neue Gebäude @zw_texticon_manufacture!"
+	zw_auto_invest_existing_buildings_only_manufacture_button_desc: ""
+	zw_auto_invest_existing_buildings_only_manufacture_button_effect: "#white #b Inländische private Investitionen#!#! dürfen nur bestehende Gebäude erweiten, wenn sie in #white #b Fertigungswerke und Kunsthochschule#!#! investieren."
+
+	zw_auto_invest_existing_buildings_only_agro_button: "@red_cross! Neue Gebäude @zw_texticon_agro!"
+	zw_auto_invest_existing_buildings_only_agro_button_desc: ""
+	zw_auto_invest_existing_buildings_only_agro_button_effect: "#white #b Inländische private Investitionen#!#! dürfen nur bestehende Gebäude erweiten, wenn sie in #white #b Landwirtschaft und Plantagen#!#! investieren."
+
+	zw_auto_invest_existing_buildings_only_resource_button: "@red_cross! Neue Gebäude @zw_texticon_resource!"
+	zw_auto_invest_existing_buildings_only_resource_button_desc: ""
+	zw_auto_invest_existing_buildings_only_resource_button_effect: "#white #b Inländische private Investitionen#!#! dürfen nur bestehende Gebäude erweiten, wenn sie in #white #b Rohstoffindustrie#!#! investieren.""
+
+	zw_auto_invest_existing_buildings_only_infrastructure_button: "@red_cross! Neue Gebäude @zw_texticon_infrastructure!"
+	zw_auto_invest_existing_buildings_only_infrastructure_button_desc: ""
+	zw_auto_invest_existing_buildings_only_infrastructure_button_effect: "#white #b Inländische private Investitionen#!#! dürfen nur bestehende Gebäude erweiten, wenn sie in #white #b Infrastruktur#!#! investieren."
 
 	# no foreign investment @green_checkmark! @red_cross!
 
-	zw_no_foreign_private_investment_manufacture_button: "@red_cross! Ausländische Investitionen @zw_texticon_investment_abroad!@zw_texticon_manufacture!"
+	zw_no_foreign_private_investment_manufacture_button: "@red_cross! Auslandsinvestition @zw_texticon_investment_abroad!@zw_texticon_manufacture!"
 	zw_no_foreign_private_investment_manufacture_button_desc: ""
-	zw_no_foreign_private_investment_manufacture_button_effect: "Private Investitionen dürfen nicht in Fertigungswerke und Kunsthochschule im Ausland investieren."
+	zw_no_foreign_private_investment_manufacture_button_effect: "#white #b Private Investitionen#!#! dürfen nicht in #white #b Fertigungswerke und Kunsthochschule im Ausland#!#! investieren."
 
-	zw_no_foreign_private_investment_manufacture_undo_button: "@green_checkmark! Ausländische Investitionen @zw_texticon_investment_abroad!@zw_texticon_manufacture!"
-	zw_no_foreign_private_investment_manufacture_undo_button_desc: ""
-	zw_no_foreign_private_investment_manufacture_undo_button_effect: "Private Investitionen dürfen in Fertigungswerke und Kunsthochschule im Ausland investieren."
-
-	zw_no_foreign_private_investment_agro_button: "@red_cross! Ausländische Investitionen @zw_texticon_investment_abroad!@zw_texticon_agro!"
+	zw_no_foreign_private_investment_agro_button: "@red_cross! Auslandsinvestition @zw_texticon_investment_abroad!@zw_texticon_agro!"
 	zw_no_foreign_private_investment_agro_button_desc: ""
-	zw_no_foreign_private_investment_agro_button_effect: "Private Investitionen dürfen nicht in Landwirtschaft und Plantagen im Ausland investieren."
+	zw_no_foreign_private_investment_agro_button_effect: "#white #b Private Investitionen#!#! dürfen nicht in #white #b Landwirtschaft und Plantagen im Ausland#!#! investieren."
 
-	zw_no_foreign_private_investment_agro_undo_button: "@green_checkmark! Ausländische Investitionen @zw_texticon_investment_abroad!@zw_texticon_agro!"
-	zw_no_foreign_private_investment_agro_undo_button_desc: ""
-	zw_no_foreign_private_investment_agro_undo_button_effect: "Private Investitionen dürfen in Landwirtschaft und Plantagen im Ausland investieren."
-
-	zw_no_foreign_private_investment_resource_button: "@red_cross! Ausländische Investitionen @zw_texticon_investment_abroad!@zw_texticon_resource!"
+	zw_no_foreign_private_investment_resource_button: "@red_cross! Auslandsinvestition @zw_texticon_investment_abroad!@zw_texticon_resource!"
 	zw_no_foreign_private_investment_resource_button_desc: ""
-	zw_no_foreign_private_investment_resource_button_effect: "Private Investitionen dürfen nicht in Rohstoffindustrie im Ausland investieren."
+	zw_no_foreign_private_investment_resource_button_effect: "#white #b Private Investitionen#!#! dürfen nicht in #white #b Rohstoffindustrie im Ausland#!#! investieren."
 
-	zw_no_foreign_private_investment_resource_undo_button: "@green_checkmark! Ausländische Investitionen @zw_texticon_investment_abroad!@zw_texticon_resource!"
-	zw_no_foreign_private_investment_resource_undo_button_desc: ""
-	zw_no_foreign_private_investment_resource_undo_button_effect: "Private Investitionen dürfen in Rohstoffindustrie im Ausland investieren."
-
-	zw_no_foreign_private_investment_infrastructure_button: "@red_cross! Ausländische Investitionen @zw_texticon_investment_abroad!@zw_texticon_infrastructure!"
+	zw_no_foreign_private_investment_infrastructure_button: "@red_cross! Auslandsinvestition @zw_texticon_investment_abroad!@zw_texticon_infrastructure!"
 	zw_no_foreign_private_investment_infrastructure_button_desc: ""
-	zw_no_foreign_private_investment_infrastructure_button_effect: "Private Investitionen dürfen nicht in Infrastruktur im Ausland investieren."
-
-	zw_no_foreign_private_investment_infrastructure_undo_button: "@green_checkmark! Ausländische Investitionen @zw_texticon_investment_abroad!@zw_texticon_infrastructure!"
-	zw_no_foreign_private_investment_infrastructure_undo_button_desc: ""
-	zw_no_foreign_private_investment_infrastructure_undo_button_effect: "Private Investitionen dürfen in Infrastruktur im Ausland investieren."
+	zw_no_foreign_private_investment_infrastructure_button_effect: "#white #b Private Investitionen#!#! dürfen nicht in #white #b Infrastruktur im Ausland#!#! investieren."
 
 	# intervene investment from foreign countries
 
-	zw_intervene_investment_from_abroad_industry_button: "@red_cross! Ausländische Investitionen @zw_texticon_investment_from_abroad!@zw_texticon_industry!"
+	zw_intervene_investment_from_abroad_industry_button: "@red_cross! Auslandsinvestition @zw_texticon_investment_from_abroad!@zw_texticon_industry!"
 	zw_intervene_investment_from_abroad_industry_button_desc: ""
-	zw_intervene_investment_from_abroad_industry_button_effect: "Investitionen aus dem Ausland in unsere Indsutrie dürfen nur bestehende Gebäude erweiten."
+	zw_intervene_investment_from_abroad_industry_button_effect: "#white #b Investitionen aus dem Ausland#!#! in unsere #white #b Indsutrie#!#! dürfen nur bestehende Gebäude erweiten.\n"
 
-	zw_intervene_investment_from_abroad_industry_undo_button: "@green_checkmark! Ausländische Investitionen @zw_texticon_investment_from_abroad!@zw_texticon_industry!"
-	zw_intervene_investment_from_abroad_industry_undo_button_desc: ""
-	zw_intervene_investment_from_abroad_industry_undo_button_effect: "Investitionen aus dem Ausland in unsere Indsutrie dürfen neue Gebäude bauen."
-
-	zw_intervene_investment_from_abroad_agriculture_button: "@red_cross! Ausländische Investitionen @zw_texticon_investment_from_abroad!@zw_texticon_agriculture!"
+	zw_intervene_investment_from_abroad_agriculture_button: "@red_cross! Auslandsinvestition @zw_texticon_investment_from_abroad!@zw_texticon_agriculture!"
 	zw_intervene_investment_from_abroad_agriculture_button_desc: ""
-	zw_intervene_investment_from_abroad_agriculture_button_effect: "Investitionen aus dem Ausland in unsere Landwirtschaft und Plantagen dürfen nur bestehende Gebäude erweiten."
+	zw_intervene_investment_from_abroad_agriculture_button_effect: "#white #b Investitionen aus dem Ausland#!#! in unsere #white #b Landwirtschaft und Plantagen#!#! dürfen nur bestehende Gebäude erweiten.\n"
 
-	zw_intervene_investment_from_abroad_agriculture_undo_button: "@green_checkmark! Ausländische Investitionen @zw_texticon_investment_from_abroad!@zw_texticon_agriculture!"
-	zw_intervene_investment_from_abroad_agriculture_undo_button_desc: ""
-	zw_intervene_investment_from_abroad_agriculture_undo_button_effect: "Investitionen aus dem Ausland in unsere Landwirtschaft und Plantagen dürfen neue Gebäude bauen."
+	# tooltip
 
-	# disallow private construction for certain building types
-
-	zw_auto_invest_disallow_building_button: "Gebäudearten Beschränken"
-	zw_auto_invest_disallow_building_button_desc: ""
-	zw_auto_invest_disallow_building_button_effect: "Unsere inländischen privaten Investitionen dürfen nur in erlaubte Gebäudearten investieren"
-
-	zw_auto_invest_disallow_building_undo_button: "Alle Gebäudearten"
-	zw_auto_invest_disallow_building_undo_button_desc: ""
-	zw_auto_invest_disallow_building_undo_button_effect: "Unsere inländischen privaten Investitionen dürfen in alle Gebäudearten investieren"
-
-	zw_auto_invest_disallow_building_food_industry_button: "@red_cross! $building_food_industry$"
-	zw_auto_invest_disallow_building_food_industry_button_desc: ""
-	zw_auto_invest_disallow_building_food_industry_button_effect: "Unsere inländischen privaten Investitionen dürfen in $building_food_industry$ investieren."
-
-	zw_auto_invest_disallow_building_food_industry_undo_button: "@green_checkmark! $building_food_industry$"
-	zw_auto_invest_disallow_building_food_industry_undo_button_desc: ""
-	zw_auto_invest_disallow_building_food_industry_undo_button_effect: "Unsere inländischen privaten Investitionen dürfen nicht in $building_food_industry$ investieren."
-
-	zw_auto_invest_disallow_building_textile_mills_button: "@red_cross! $building_textile_mills$"
-	zw_auto_invest_disallow_building_textile_mills_button_desc: ""
-	zw_auto_invest_disallow_building_textile_mills_button_effect: "Unsere inländischen privaten Investitionen dürfen in $building_textile_mills$ investieren."
-
-	zw_auto_invest_disallow_building_textile_mills_undo_button: "@green_checkmark! $building_textile_mills$"
-	zw_auto_invest_disallow_building_textile_mills_undo_button_desc: ""
-	zw_auto_invest_disallow_building_textile_mills_undo_button_effect: "Unsere inländischen privaten Investitionen dürfen nicht in $building_textile_mills$ investieren."
-
-	zw_auto_invest_disallow_building_furniture_manufacturies_button: "@red_cross! $building_furniture_manufacturies$"
-	zw_auto_invest_disallow_building_furniture_manufacturies_button_desc: ""
-	zw_auto_invest_disallow_building_furniture_manufacturies_button_effect: "Unsere inländischen privaten Investitionen dürfen in $building_furniture_manufacturies$ investieren."
-
-	zw_auto_invest_disallow_building_furniture_manufacturies_undo_button: "@green_checkmark! $building_furniture_manufacturies$"
-	zw_auto_invest_disallow_building_furniture_manufacturies_undo_button_desc: ""
-	zw_auto_invest_disallow_building_furniture_manufacturies_undo_button_effect: "Unsere inländischen privaten Investitionen dürfen nicht in $building_furniture_manufacturies$ investieren."
-
-	zw_auto_invest_disallow_building_glassworks_button: "@red_cross! $building_glassworks$"
-	zw_auto_invest_disallow_building_glassworks_button_desc: ""
-	zw_auto_invest_disallow_building_glassworks_button_effect: "Unsere inländischen privaten Investitionen dürfen in $building_glassworks$ investieren."
-
-	zw_auto_invest_disallow_building_glassworks_undo_button: "@green_checkmark! $building_glassworks$"
-	zw_auto_invest_disallow_building_glassworks_undo_button_desc: ""
-	zw_auto_invest_disallow_building_glassworks_undo_button_effect: "Unsere inländischen privaten Investitionen dürfen nicht in $building_glassworks$ investieren."
-
-	zw_auto_invest_disallow_building_paper_mills_button: "@red_cross! $building_paper_mills$"
-	zw_auto_invest_disallow_building_paper_mills_button_desc: ""
-	zw_auto_invest_disallow_building_paper_mills_button_effect: "Unsere inländischen privaten Investitionen dürfen in $building_paper_mills$ investieren."
-
-	zw_auto_invest_disallow_building_paper_mills_undo_button: "@green_checkmark! $building_paper_mills$"
-	zw_auto_invest_disallow_building_paper_mills_undo_button_desc: ""
-	zw_auto_invest_disallow_building_paper_mills_undo_button_effect: "Unsere inländischen privaten Investitionen dürfen nicht in $building_paper_mills$ investieren."
-
-	zw_auto_invest_disallow_building_chemical_plants_button: "@red_cross! $building_chemical_plants$"
-	zw_auto_invest_disallow_building_chemical_plants_button_desc: ""
-	zw_auto_invest_disallow_building_chemical_plants_button_effect: "Unsere inländischen privaten Investitionen dürfen in $building_chemical_plants$ investieren."
-
-	zw_auto_invest_disallow_building_chemical_plants_undo_button: "@green_checkmark! $building_chemical_plants$"
-	zw_auto_invest_disallow_building_chemical_plants_undo_button_desc: ""
-	zw_auto_invest_disallow_building_chemical_plants_undo_button_effect: "Unsere inländischen privaten Investitionen dürfen nicht in $building_chemical_plants$ investieren."
-
-	zw_auto_invest_disallow_building_explosives_factory_button: "@red_cross! $building_explosives_factory$"
-	zw_auto_invest_disallow_building_explosives_factory_button_desc: ""
-	zw_auto_invest_disallow_building_explosives_factory_button_effect: "Unsere inländischen privaten Investitionen dürfen in $building_explosives_factory$ investieren."
-
-	zw_auto_invest_disallow_building_explosives_factory_undo_button: "@green_checkmark! $building_explosives_factory$"
-	zw_auto_invest_disallow_building_explosives_factory_undo_button_desc: ""
-	zw_auto_invest_disallow_building_explosives_factory_undo_button_effect: "Unsere inländischen privaten Investitionen dürfen nicht in $building_explosives_factory$ investieren."
-
-	zw_auto_invest_disallow_building_synthetics_plants_button: "@red_cross! $building_synthetics_plants$"
-	zw_auto_invest_disallow_building_synthetics_plants_button_desc: ""
-	zw_auto_invest_disallow_building_synthetics_plants_button_effect: "Unsere inländischen privaten Investitionen dürfen in $building_synthetics_plants$ investieren."
-
-	zw_auto_invest_disallow_building_synthetics_plants_undo_button: "@green_checkmark! $building_synthetics_plants$"
-	zw_auto_invest_disallow_building_synthetics_plants_undo_button_desc: ""
-	zw_auto_invest_disallow_building_synthetics_plants_undo_button_effect: "Unsere inländischen privaten Investitionen dürfen nicht in $building_synthetics_plants$ investieren."
-
-	zw_auto_invest_disallow_building_tooling_workshops_button: "@red_cross! $building_tooling_workshops$"
-	zw_auto_invest_disallow_building_tooling_workshops_button_desc: ""
-	zw_auto_invest_disallow_building_tooling_workshops_button_effect: "Unsere inländischen privaten Investitionen dürfen in $building_tooling_workshops$ investieren."
-
-	zw_auto_invest_disallow_building_tooling_workshops_undo_button: "@green_checkmark! $building_tooling_workshops$"
-	zw_auto_invest_disallow_building_tooling_workshops_undo_button_desc: ""
-	zw_auto_invest_disallow_building_tooling_workshops_undo_button_effect: "Unsere inländischen privaten Investitionen dürfen nicht in $building_tooling_workshops$ investieren."
-
-	zw_auto_invest_disallow_building_steel_mills_button: "@red_cross! $building_steel_mills$"
-	zw_auto_invest_disallow_building_steel_mills_button_desc: ""
-	zw_auto_invest_disallow_building_steel_mills_button_effect: "Unsere inländischen privaten Investitionen dürfen in $building_steel_mills$ investieren."
-
-	zw_auto_invest_disallow_building_steel_mills_undo_button: "@green_checkmark! $building_steel_mills$"
-	zw_auto_invest_disallow_building_steel_mills_undo_button_desc: ""
-	zw_auto_invest_disallow_building_steel_mills_undo_button_effect: "Unsere inländischen privaten Investitionen dürfen nicht in $building_steel_mills$ investieren."
-
-	zw_auto_invest_disallow_building_motor_industry_button: "@red_cross! $building_motor_industry$"
-	zw_auto_invest_disallow_building_motor_industry_button_desc: ""
-	zw_auto_invest_disallow_building_motor_industry_button_effect: "Unsere inländischen privaten Investitionen dürfen in $building_motor_industry$ investieren."
-
-	zw_auto_invest_disallow_building_motor_industry_undo_button: "@green_checkmark! $building_motor_industry$"
-	zw_auto_invest_disallow_building_motor_industry_undo_button_desc: ""
-	zw_auto_invest_disallow_building_motor_industry_undo_button_effect: "Unsere inländischen privaten Investitionen dürfen nicht in $building_motor_industry$ investieren."
-
-	zw_auto_invest_disallow_building_electrics_industry_button: "@red_cross! $building_electrics_industry$"
-	zw_auto_invest_disallow_building_electrics_industry_button_desc: ""
-	zw_auto_invest_disallow_building_electrics_industry_button_effect: "Unsere inländischen privaten Investitionen dürfen in $building_electrics_industry$ investieren."
-
-	zw_auto_invest_disallow_building_electrics_industry_undo_button: "@green_checkmark! $building_electrics_industry$"
-	zw_auto_invest_disallow_building_electrics_industry_undo_button_desc: ""
-	zw_auto_invest_disallow_building_electrics_industry_undo_button_effect: "Unsere inländischen privaten Investitionen dürfen nicht in $building_electrics_industry$ investieren."
-
-	zw_auto_invest_disallow_building_shipyards_button: "@red_cross! $building_shipyards$"
-	zw_auto_invest_disallow_building_shipyards_button_desc: ""
-	zw_auto_invest_disallow_building_shipyards_button_effect: "Unsere inländischen privaten Investitionen dürfen in $building_shipyards$ investieren."
-
-	zw_auto_invest_disallow_building_shipyards_undo_button: "@green_checkmark! $building_shipyards$"
-	zw_auto_invest_disallow_building_shipyards_undo_button_desc: ""
-	zw_auto_invest_disallow_building_shipyards_undo_button_effect: "Unsere inländischen privaten Investitionen dürfen nicht in $building_shipyards$ investieren."
-
-	zw_auto_invest_disallow_building_arts_academy_button: "@red_cross! $building_arts_academy$"
-	zw_auto_invest_disallow_building_arts_academy_button_desc: ""
-	zw_auto_invest_disallow_building_arts_academy_button_effect: "Unsere inländischen privaten Investitionen dürfen in $building_arts_academy$ investieren."
-
-	zw_auto_invest_disallow_building_arts_academy_undo_button: "@green_checkmark! $building_arts_academy$"
-	zw_auto_invest_disallow_building_arts_academy_undo_button_desc: ""
-	zw_auto_invest_disallow_building_arts_academy_undo_button_effect: "Unsere inländischen privaten Investitionen dürfen nicht in $building_arts_academy$ investieren."
-
-	zw_auto_invest_disallow_agro_button: "@red_cross! $bg_agriculture$"
-	zw_auto_invest_disallow_agro_button_desc: ""
-	zw_auto_invest_disallow_agro_button_effect: "Unsere inländischen privaten Investitionen dürfen in $bg_agriculture$ investieren."
-
-	zw_auto_invest_disallow_agro_undo_button: "@green_checkmark! $bg_agriculture$"
-	zw_auto_invest_disallow_agro_undo_button_desc: ""
-	zw_auto_invest_disallow_agro_undo_button_effect: "Unsere inländischen privaten Investitionen dürfen nicht in $bg_agriculture$ investieren."
-
-	zw_auto_invest_disallow_plantations_button: "@red_cross! $bg_plantations$"
-	zw_auto_invest_disallow_plantations_button_desc: ""
-	zw_auto_invest_disallow_plantations_button_effect: "Unsere inländischen privaten Investitionen dürfen in $bg_plantations$ investieren."
-
-	zw_auto_invest_disallow_plantations_undo_button: "@green_checkmark! $bg_plantations$"
-	zw_auto_invest_disallow_plantations_undo_button_desc: ""
-	zw_auto_invest_disallow_plantations_undo_button_effect: "Unsere inländischen privaten Investitionen dürfen nicht in $bg_plantations$ investieren."
-
-	zw_auto_invest_disallow_mines_button: "@red_cross! $bg_mining$"
-	zw_auto_invest_disallow_mines_button_desc: ""
-	zw_auto_invest_disallow_mines_button_effect: "Unsere inländischen privaten Investitionen dürfen in $bg_mining$ investieren."
-
-	zw_auto_invest_disallow_mines_undo_button: "@green_checkmark! $bg_mining$"
-	zw_auto_invest_disallow_mines_undo_button_desc: ""
-	zw_auto_invest_disallow_mines_undo_button_effect: "Unsere inländischen privaten Investitionen dürfen nicht in $bg_mining$ investieren."
-
-	zw_auto_invest_disallow_misc_button: "@red_cross! $RESOURCES$"
-	zw_auto_invest_disallow_misc_button_desc: ""
-	zw_auto_invest_disallow_misc_button_effect: "Unsere inländischen privaten Investitionen dürfen in $RESOURCES$ investieren."
-
-	zw_auto_invest_disallow_misc_undo_button: "@green_checkmark! $RESOURCES$"
-	zw_auto_invest_disallow_misc_undo_button_desc: ""
-	zw_auto_invest_disallow_misc_undo_button_effect: "Unsere inländischen privaten Investitionen dürfen nicht in $RESOURCES$ investieren."
-
-	zw_auto_invest_disallow_military_button: "@red_cross! $COST_OF_WAR_TYPE_MATERIEL$"
-	zw_auto_invest_disallow_military_button_desc: ""
-	zw_auto_invest_disallow_military_button_effect: "Unsere inländischen privaten Investitionen dürfen in $COST_OF_WAR_TYPE_MATERIEL$ investieren."
-
-	zw_auto_invest_disallow_military_undo_button: "@green_checkmark! $COST_OF_WAR_TYPE_MATERIEL$"
-	zw_auto_invest_disallow_military_undo_button_desc: ""
-	zw_auto_invest_disallow_military_undo_button_effect: "Unsere inländischen privaten Investitionen dürfen nicht in $COST_OF_WAR_TYPE_MATERIEL$ investieren."
-
-	zw_auto_invest_disallow_building_power_plant_button: "@red_cross! $building_power_plant$"
-	zw_auto_invest_disallow_building_power_plant_button_desc: ""
-	zw_auto_invest_disallow_building_power_plant_button_effect: "Unsere inländischen privaten Investitionen dürfen in $building_power_plant$ investieren."
-
-	zw_auto_invest_disallow_building_power_plant_undo_button: "@green_checkmark! $building_power_plant$"
-	zw_auto_invest_disallow_building_power_plant_undo_button_desc: ""
-	zw_auto_invest_disallow_building_power_plant_undo_button_effect: "Unsere inländischen privaten Investitionen dürfen nicht in $building_power_plant$ investieren."
-
-	zw_auto_invest_disallow_building_railway_button: "@red_cross! $building_railway$"
-	zw_auto_invest_disallow_building_railway_button_desc: ""
-	zw_auto_invest_disallow_building_railway_button_effect: "Unsere inländischen privaten Investitionen dürfen in $building_railway$ investieren."
-
-	zw_auto_invest_disallow_building_railway_undo_button: "@green_checkmark! $building_railway$"
-	zw_auto_invest_disallow_building_railway_undo_button_desc: ""
-	zw_auto_invest_disallow_building_railway_undo_button_effect: "Unsere inländischen privaten Investitionen dürfen nicht in $building_railway$ investieren."
+	zw_text_profit_condition: "$zw_text_profit_condition_01$$zw_text_profit_condition_02$$zw_text_profit_condition_03$$zw_text_profit_condition_04$$zw_text_profit_condition_05$$zw_text_profit_condition_06$$zw_text_profit_condition_07$$zw_text_profit_condition_08$$zw_text_profit_condition_09$$zw_text_profit_condition_10$$zw_text_profit_condition_11$$zw_text_profit_condition_12$$zw_text_profit_condition_13$$zw_text_profit_condition_14$$zw_text_profit_condition_15$"
+	zw_text_profit_condition_01: ""
+	zw_text_profit_condition_02: "Wenn unsere #white #b inländischen Privatinvestitionen#!#! nur bestehende Gebäude erweiten dürfen, werden sie nur die Gebäude bewerten, die mindestens eine von diesen zwei Bedingungen erfüllen:"
+	zw_text_profit_condition_03: "#indent_newline:4 \n1. Alle diese Bedingungen müssen erfüllt werden:#!"
+	zw_text_profit_condition_04: "#indent_newline:8 \n$EFFECT_LIST_BULLET$[concept_occupancy] >= 0.9#!"
+	zw_text_profit_condition_05: "#indent_newline:8 \n$EFFECT_LIST_BULLET$[concept_market_access] = 100%#!"
+	zw_text_profit_condition_06: "#indent_newline:8 \n$EFFECT_LIST_BULLET$$concept_building_balance_profit$ > 200 * $concept_building_levels$#!"
+	zw_text_profit_condition_07: "#indent_newline:4 \n2. Alle diese Bedingungen müssen erfüllt werden:#!"
+	zw_text_profit_condition_08: "#indent_newline:8 \n$EFFECT_LIST_BULLET$Gebäudeart ist $building_railway$#!"
+	zw_text_profit_condition_09: "#indent_newline:8 \n$EFFECT_LIST_BULLET$[concept_occupancy] >= 0.9#!"
+	zw_text_profit_condition_10: "#indent_newline:8 \n$EFFECT_LIST_BULLET$Mindestens eine von diesen Bedingungen muss erfüllt werden:#!"
+	zw_text_profit_condition_11: "#indent_newline:12 \n$EFFECT_LIST_BULLET$Alle diese Bedingungen müssen erfüllt werden:#!"
+	zw_text_profit_condition_12: "#indent_newline:16 \n$EFFECT_LIST_BULLET$[concept_infrastructure] < [concept_infrastructure_usage]#!"
+	zw_text_profit_condition_13: "#indent_newline:16 \n$EFFECT_LIST_BULLET$$IS_SUBSIDIZED$ oder $concept_building_balance_profit$ > 0#!"
+	zw_text_profit_condition_14: "#indent_newline:12 \n$EFFECT_LIST_BULLET$$concept_building_balance_profit$ > 200 * $concept_building_levels$#!"
+	zw_text_profit_condition_15: "\n\nWenn ein Gebäude im Bau die Bedingungen nicht mehr erfüllen kann, wird der Bau nicht abgebrochen außer wenn das Gebäude schon Verlust macht oder der Marktzugriff niedrig ist."

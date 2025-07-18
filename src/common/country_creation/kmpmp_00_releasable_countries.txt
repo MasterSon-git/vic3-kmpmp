@@ -45,3 +45,18 @@ EGY = {
 
     ai_will_do = { always = no }
 }
+
+OCC = {
+    # kmpmp - remove Rhone from releasable occitania
+	# use_culture_states = yes
+
+    states = {
+        STATE_PROVENCE
+        STATE_LANGUEDOC
+        STATE_GUYENNE
+        STATE_AUVERGNE_LIMOUSIN
+        STATE_AQUITAINE
+    }
+
+	ai_will_do = { always = no }
+}

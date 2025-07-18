@@ -4,7 +4,7 @@
 	possible = {
 		market ?= {
 			mg:wine ?= {
-				market_goods_sell_orders > 0
+				has_potential_supply = yes
 			}
 		}
 	}

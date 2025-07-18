@@ -106,7 +106,17 @@
 								has_truce_with = PREV.owner
 							}
 						}
+						NOT = {
+							any_in_list = {
+								list = kmpmp_established_truces_target_list
+								THIS = PREV.owner
+							}
+						}
+						owner = {
+							add_to_temporary_list = kmpmp_established_truces_target_list
+						}
 					}
+					
 					scope:target_country = {
 						create_unidirectional_truce = { country = PREV.owner months = 6 }
 					}
@@ -127,13 +137,34 @@
 								has_truce_with = PREV.owner
 							}
 						}
+						NOT = {
+							any_in_list = {
+								list = kmpmp_established_truces_root_list
+								THIS = PREV.owner
+							}
+						}
+						owner = {
+							add_to_temporary_list = kmpmp_established_truces_root_list
+						}
 					}
 					root = {
 						create_unidirectional_truce = { country = PREV.owner months = 6 }
 					}
 				}
 			}
-		}		
+		}
+
+		add_modifier = {
+			name = kmpmp_trade_states_influcence_cost
+			years = 3
+		}
+
+		scope:target_country = {
+			add_modifier = {
+				name = kmpmp_trade_states_influcence_cost
+				years = 3
+			}
+		}
 	}
 	
 	first_state_trigger = {

@@ -5,12 +5,13 @@
 	progressiveness = -50
 	
 	modifier = {
+		country_can_only_conscript_peasants_bool = yes
 		unit_morale_loss_mult = 0.1
 		unit_experience_gain_mult = -0.25
-		state_conscription_rate_add = 0.02 #0.04
+		state_conscription_rate_add = 0.03 #0.04
 		country_aristocrats_pol_str_mult = 0.25
 		country_officers_pol_str_mult = 1
-		country_military_goods_cost_mult = -0.25 #-0.1
+		country_military_goods_cost_mult = -0.2 #-0.1
 		state_building_barracks_max_level_add = 25
 		state_building_conscription_center_max_level_add = 25
 	}
@@ -72,15 +73,16 @@ law_professional_army = {
 	
 	institution = institution_qwf_conscription
 	institution_modifier = {
-		state_conscription_rate_add = 0.002
+		state_conscription_rate_add = 0.003
 		unit_army_offense_mult = 0.05
 		unit_army_defense_mult = 0.05
 		interest_group_ig_armed_forces_pol_str_mult = 0.05
+		country_military_goods_cost_mult = 0.01
 	}
 
 	modifier = {
-		unit_morale_loss_mult = -0.1
-		state_conscription_rate_add = 0.01
+		unit_morale_loss_mult = -0.05 #-0.1
+		state_conscription_rate_add = 0.005 #0.01
 		country_officers_pol_str_mult = 2
 		country_soldiers_pol_str_mult = 0.50
 		state_building_barracks_max_level_add = 100
@@ -171,11 +173,11 @@ law_national_militia = {
 		state_conscription_rate_add = 0.005
 		unit_army_offense_mult = 0.01
 		unit_army_defense_mult = 0.04
-		unit_supply_consumption_mult = -0.02
+		building_mobilization_cost_mult = -0.02
 	}
 	
 	modifier = {
-		unit_morale_loss_mult = -0.05
+		# unit_morale_loss_mult = -0.05
 		state_conscription_rate_add = 0.05
 		country_officers_pol_str_mult = 1
 		country_soldiers_pol_str_mult = 1
@@ -183,7 +185,6 @@ law_national_militia = {
 		state_building_barracks_max_level_add = 35 #5
 		state_building_conscription_center_max_level_add = 100
 		# kmpmp
-		building_training_rate_mult = 0.35
 		country_military_goods_cost_mult = -0.1
 		unit_experience_gain_mult = 0.05
 		country_institution_qwf_conscription_max_investment_add = 3
@@ -244,15 +245,16 @@ law_mass_conscription = {
 		state_conscription_rate_add = 0.01
 		unit_army_offense_mult = 0.02
 		unit_army_defense_mult = 0.02
+		building_mobilization_cost_mult = -0.01
 	}
 
 	modifier = {
 		unit_morale_loss_mult = 0.05
 		state_conscription_rate_add = 0.04 #0.03
-		building_training_rate_mult = 0.9 #1
+		building_training_rate_mult = 0.85 #1
 		country_officers_pol_str_mult = 1.5
 		country_soldiers_pol_str_mult = 1
-		state_building_barracks_max_level_add = 120 #100
+		state_building_barracks_max_level_add = 125 #100
 		state_building_conscription_center_max_level_add = 100
 		# kmpmp
 		unit_experience_gain_mult = -0.1

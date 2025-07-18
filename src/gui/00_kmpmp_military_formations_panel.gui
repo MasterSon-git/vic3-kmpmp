@@ -17,7 +17,7 @@ types military_formation_panel_types
 			enabled = "[And(IsValid( MilitaryFormation.Mobilize ), Not(GetVariableSystem.Exists('kmpmp_block_mobilization')) )]"
 			onclick = "[Execute( MilitaryFormation.Mobilize )]"
 			tooltip = "MOBILIZE_ARMY_TOOLTIP"
-			using = tooltip_above
+			using = tooltip_ne
 
 			block "button_size" {
 				size = { 80% 75% }
@@ -49,6 +49,8 @@ types military_formation_panel_types
 		widget = {
 			visible = "[MilitaryFormation.IsFullyMobilized]"
 			parentanchor = right|vcenter
+			using = tooltip_ne
+			tooltip = "MILITARY_FORMATION_MOBILIZED_TOOLTIP"
 
 			block "button_size" {
 				size = { 80% 75% }
@@ -61,7 +63,6 @@ types military_formation_panel_types
 			textbox = {
 				parentanchor = center
 				text = "MILITARY_FORMATION_IS_FULLY_MOBILIZED"
-				tooltip = "MILITARY_FORMATION_MOBILIZED_TOOLTIP"
 				autoresize = yes
 				align = nobaseline
 				fontsize_min = 12
@@ -98,7 +99,7 @@ types military_formation_panel_types
 			onclick = "[PopupManager.AskConfirmation( MilitaryFormation.Demobilize )]"
 			tooltip = "DEMOBILIZE_ARMY_TOOLTIP"
 			using = close_button_sound
-			using = tooltip_above
+			using = tooltip_ne
 			
 			block "mobilization_icon_size" {
 				size = { 70 70 }

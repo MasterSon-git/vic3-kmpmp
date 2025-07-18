@@ -78,7 +78,7 @@ krakatoa.1 = { #krakatoa erupts and you're the owner
 		scope:krakatoa_state = {
 			add_modifier = {
 				name = krakatoa_eruption_help_modifier
-				months = short_modifier_time
+				days = short_modifier_time
 			}
 		}
 		scope:krakatoa_state.state_region = {
@@ -86,7 +86,7 @@ krakatoa.1 = { #krakatoa erupts and you're the owner
 		}
 		add_modifier = {
 			name = krakatoa_cost_modifier
-			months = short_modifier_time
+			days = short_modifier_time
 			multiplier = money_amount_multiplier_small
 		}
 		add_journal_entry = {	
@@ -99,7 +99,7 @@ krakatoa.1 = { #krakatoa erupts and you're the owner
 		scope:krakatoa_state = {
 			add_modifier = {
 				name = krakatoa_eruption_no_help_modifier
-				months = short_modifier_time
+				days = short_modifier_time
 			}
 		}
 		scope:krakatoa_state.state_region = {

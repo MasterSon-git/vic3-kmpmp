@@ -1,0 +1,23 @@
+﻿FRA_ferdinand_philippe = {
+	first_name = "Ferdinand_Philippe"
+	last_name = d_Orleans
+	historical = yes
+	culture = primary_culture
+	heir = yes
+	birth_date = 1810.9.3
+	interest_group = ig_industrialists #ig_armed_forces
+	ideology = ideology_orleanist
+	traits = {
+		popular_commander
+		wrathful
+		expensive_tastes
+        # kmpmp
+        imperious
+	}
+	on_created = {
+		set_variable = {
+			name = orleanist_leader
+		}
+	}
+	trait_generation = { }
+}

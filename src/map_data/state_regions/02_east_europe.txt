@@ -143,7 +143,7 @@ STATE_WEST_GALICIA = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 30
+        undiscovered_amount = 60
     }
 }
 
@@ -163,7 +163,7 @@ STATE_EAST_GALICIA = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 60
+        undiscovered_amount = 100
     }
 }
 
@@ -234,7 +234,7 @@ STATE_DELVIDEK = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 10
+        undiscovered_amount = 20
     }
 }
 
@@ -341,7 +341,7 @@ STATE_MOLDAVIA = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 30
+        undiscovered_amount = 50
     }
 }
 
@@ -364,7 +364,7 @@ STATE_WALLACHIA = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 60
+        undiscovered_amount = 80
     }
 }
 

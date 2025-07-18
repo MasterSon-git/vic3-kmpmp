@@ -23,8 +23,22 @@
 	
 	possible = {
 		# Might have these despite low relations due to a forced pact
-		NOT = { has_diplomatic_pact = { who = scope:target_country type = alliance } }	
-		NOT = { has_diplomatic_pact = { who = scope:target_country type = defensive_pact } }	
+		NOT = {
+			any_scope_treaty = {
+				binds = scope:target_country
+				any_scope_article = {
+					has_type = alliance
+				}
+			}
+		}
+		NOT = {
+			any_scope_treaty = {
+				binds = scope:target_country
+				any_scope_article = {
+					has_type = defensive_pact
+				}
+			}
+		}
 	}
 	
 	accept_effect = {
@@ -49,7 +63,7 @@
 		is_hostile = yes
 		is_rivalry = yes		
 		is_two_sided_pact = no
-		forced_duration = 84 #12
+		forced_duration = 60 #12
 		
 		relations_progress_per_day = -1 # At -100, -1 relations
 		relations_improvement_min = -20

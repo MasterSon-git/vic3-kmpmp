@@ -1,0 +1,1042 @@
+﻿# power_bloc_mandate_progress_by_rank = {
+
+
+# 	value = 0
+
+# 	if = {
+# 		limit = {
+# 			has_game_rule = kates_power_bloc_rule_enable_mandate_progress_enabled
+# 		}
+# 		add = {
+# 			desc = "POWER_BLOC_VALUE_PER_MEMBER"
+# 			value = power_bloc_mandate_progress_countries
+# 			multiply = {
+# 				add = 1
+# 				add = modifier:mandate_progress_from_members_mult
+# 			}
+# 		}
+# 	}
+
+# 	if = {
+# 		limit = {
+# 			has_game_rule = kates_power_bloc_rule_enable_mandate_progress_enabled
+# 		}
+# 		add = {
+# 			desc = "POWER_BLOC_VALUE_PER_COHESION"
+# 			value = 10
+# 			multiply = current_cohesion_percentage
+# 			multiply = current_cohesion_percentage
+# 			multiply = {
+# 				add = 1
+# 				add = modifier:mandate_progress_from_cohesion_mult
+# 			}
+# 		}
+# 	}
+
+# 	if = {
+# 		limit = {
+# 			num_power_bloc_members < kates_low_member_penalty_rule_value
+# 			has_game_rule = kates_power_bloc_rule_enable_mandate_progress_enabled
+# 			NOT = {
+# 				has_game_rule = kates_power_bloc_rule_low_member_penalty_0
+# 			}
+# 		}
+# 		multiply = {
+# 			desc = "POWER_BLOC_LOW_MEMBER_PENALTY"
+# 			add = 1
+# 			subtract = {
+# 				add = kates_low_member_penalty_rule_value
+# 				subtract = num_power_bloc_members
+# 				divide = 10
+# 			}
+# 		}
+# 	}
+
+# 	if = {
+# 		limit = {
+# 			has_game_rule = kates_power_bloc_rule_enable_mandate_progress_enabled
+# 			power_bloc_diminishing_multiplier > 1
+# 		}
+# 		multiply = {
+# 			desc = "POWER_BLOC_EXISTING_PRINCIPLE_LEVELS"
+# 			add = {
+# 				add = 1
+# 				divide = power_bloc_diminishing_multiplier
+# 			}
+# 		}
+# 	}
+
+# 	if = {
+# 		limit = {
+# 			has_game_rule = kates_power_bloc_rule_enable_mandate_progress_disabled
+# 		}
+# 		value = {
+# 			value = 6
+# 			subtract = power_bloc_rank
+# 			min = 1
+# 			multiply = power_bloc_adjusted_mandate_cost_vanilla
+# 			desc = "POWER_BLOC_MANDATE_PROGRESS_BASE"
+# 		}
+# 	}
+
+# 	if = {
+# 		limit = {
+# 			power_bloc_great_power_non_leader_members > 0
+# 			has_game_rule = kates_power_bloc_rule_enable_mandate_progress_disabled
+# 		}
+# 		add = {
+# 			add = power_bloc_great_power_non_leader_members
+# 			multiply = 10
+# 			multiply = power_bloc_adjusted_mandate_cost_vanilla
+# 			desc = "POWER_BLOC_MANDATE_PROGRESS_FROM_GREAT_POWER_MEMBERS"
+# 		}
+# 	}
+
+# 	if = {
+# 		limit = {
+# 			power_bloc_major_power_non_leader_members > 0
+# 			has_game_rule = kates_power_bloc_rule_enable_mandate_progress_disabled
+# 		}
+# 		add = {
+# 			desc = "POWER_BLOC_MANDATE_PROGRESS_FROM_MAJOR_POWER_MEMBERS"
+# 			add = power_bloc_major_power_non_leader_members
+# 			multiply = 5
+# 			multiply = power_bloc_adjusted_mandate_cost_vanilla
+# 		}
+# 	}
+
+# 	if = {
+# 		limit = {
+# 			power_bloc_minor_power_non_leader_members > 0
+# 			has_game_rule = kates_power_bloc_rule_enable_mandate_progress_disabled
+# 		}
+# 		add = {
+# 			desc = "POWER_BLOC_MANDATE_PROGRESS_FROM_MINOR_POWER_MEMBERS"
+# 			add = power_bloc_minor_power_non_leader_members
+# 			multiply = 2
+# 			multiply = power_bloc_adjusted_mandate_cost_vanilla
+# 		}
+# 	}
+
+# 	if = {
+# 		limit = {
+# 			power_bloc_unrecognized_major_power_non_leader_members > 0
+# 			has_game_rule = kates_power_bloc_rule_enable_mandate_progress_disabled
+# 		}
+# 		add = {
+# 			desc = "POWER_BLOC_MANDATE_PROGRESS_FROM_UNRECOGNIZED_MAJOR_POWER_MEMBERS"
+# 			add = power_bloc_unrecognized_major_power_non_leader_members
+# 			multiply = 2
+# 			multiply = power_bloc_adjusted_mandate_cost_vanilla
+# 		}
+# 	}
+
+# 	if = {
+# 		limit = {
+# 			power_bloc_unrecognized_regional_power_non_leader_members > 0
+# 			has_game_rule = kates_power_bloc_rule_enable_mandate_progress_disabled
+# 		}
+# 		add = {
+# 			desc = "POWER_BLOC_MANDATE_PROGRESS_FROM_UNRECOGNIZED_REGIONAL_POWER_MEMBERS"
+# 			add = power_bloc_unrecognized_regional_power_non_leader_members
+# 			multiply = 1
+# 			multiply = power_bloc_adjusted_mandate_cost_vanilla
+# 		}
+# 	}
+
+# 	if = {
+# 		limit = {
+# 			power_bloc_vanilla_cohesion_mandate_modifier != 0
+# 			has_game_rule = kates_power_bloc_rule_enable_mandate_progress_disabled
+# 		}
+# 		multiply = {
+# 			desc = "MANDATE_MULTIPLIER_VANILLA"
+# 			add = 1
+# 			add = power_bloc_vanilla_cohesion_mandate_modifier
+# 		}
+# 	}
+
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandate_progress_rule_value != 1
+# 		}
+# 		multiply = {
+# 			desc = "POWER_BLOC_MANDATE_PROGRESS_MULTIPLIER_RULE"
+# 			add = power_bloc_mandate_progress_rule_value
+# 		}
+# 	}
+
+# 	if = {
+# 		limit = {
+# 			num_mandates >= power_bloc_max_mandates_rule_value
+# 		}
+# 		multiply = {
+# 			desc = "POWER_BLOC_MAX_MANDATES_RULE"
+# 			add = 0
+# 		}
+# 	}
+
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandates_plus_principle_levels = 1
+# 		}
+# 		add = {
+# 			desc = "POWER_BLOC_FREE_FOUNDING_MANDATES"
+# 			add = define:NPowerBlocs|MAX_MANDATE_PROGRESS
+# 			multiply = power_bloc_free_founding_mandates
+# 		}
+# 	}
+
+# 	if = {
+# 		limit = {
+# 			AND = {
+# 				modifier:power_bloc_free_mandates_from_reform > power_bloc_mandates_plus_principle_levels
+# 				modifier:power_bloc_free_mandates_from_reform > 0
+# 			}
+# 		}
+# 		add = {
+# 			desc = "POWER_BLOC_REFORMED_MANDATES"
+# 			add = define:NPowerBlocs|MAX_MANDATE_PROGRESS
+# 			multiply = {
+# 				add = modifier:power_bloc_free_mandates_from_reform
+# 				subtract = power_bloc_mandates_plus_principle_levels
+# 			}
+# 		}
+# 	}
+
+# 	if = {
+# 		limit = {
+# 			has_game_rule = kates_power_bloc_rule_late_founding_mandates_enabled
+# 			modifier:power_bloc_free_mandates_from_reform < 1
+# 			power_bloc_mandates_plus_principle_levels <= kates_late_founding_mandates
+# 			kates_late_founding_mandates >= 1
+# 			NOT = {
+# 				any_power_bloc_member = {
+# 					tenure_in_current_power_bloc_weeks > 2
+# 				}
+# 			}
+# 		}
+# 		add = {
+# 			desc = "POWER_BLOC_LATE_FOUNDING_MANDATES"
+# 			add = define:NPowerBlocs|MAX_MANDATE_PROGRESS
+# 			multiply = kates_late_founding_mandates
+# 		}
+# 	}
+
+# 	if = {
+# 		limit = {
+# 			power_bloc_leader = {
+# 				is_ai = yes
+# 			}
+# 			total_used_principle_levels >= power_bloc_ai_max_principles
+# 		}
+# 		multiply = {
+# 			add = 0
+# 			desc = "MANDATE_PROGRESS_AI_FREEZE"
+# 		}
+# 	}
+# }
+
+# kates_late_founding_mandates = {
+# 	add = year
+# 	subtract = 1836
+# 	divide = 5
+# 	floor = yes
+# }
+
+# kates_low_member_penalty_rule_value = {
+# 	value = 0
+# 	if = {
+# 		limit = {
+# 			has_game_rule = kates_power_bloc_rule_low_member_penalty_6
+# 		}
+# 		value = 6
+# 	}
+# 	else_if = {
+# 		limit = {
+# 			has_game_rule = kates_power_bloc_rule_low_member_penalty_8
+# 		}
+# 		value = 8
+# 	}
+# 	else_if = {
+# 		limit = {
+# 			has_game_rule = kates_power_bloc_rule_low_member_penalty_10
+# 		}
+# 		value = 10
+# 	}
+# 	else_if = {
+# 		limit = {
+# 			has_game_rule = kates_power_bloc_rule_low_member_penalty_12
+# 		}
+# 		value = 12
+# 	}
+# }
+
+# power_bloc_vanilla_cohesion_mandate_modifier = {
+# 	value = 0
+# 	if = {
+# 		limit = {
+# 			current_cohesion_percentage >= 0.6
+# 		}
+# 		add = 0.1
+# 	}
+# 	if = {
+# 		limit = {
+# 			current_cohesion_percentage >= 0.8
+# 		}
+# 		add = 0.15
+# 	}
+# 	if = {
+# 		limit = {
+# 			current_cohesion_percentage < 0.4
+# 		}
+# 		subtract = 0.3
+# 	}
+# 	if = {
+# 		limit = {
+# 			current_cohesion_percentage < 0.2
+# 		}
+# 		subtract = 0.3
+# 	}
+# }
+
+# power_bloc_adjusted_mandate_cost_vanilla = {
+# 	add = define:NPowerBlocs|MAX_MANDATE_PROGRESS
+# 	divide = 2000
+# }
+
+# power_bloc_ai_max_principles = {
+# 	add = power_bloc_max_principles_rule_value
+# 	multiply = 3
+# }
+
+# power_bloc_free_founding_mandates = {
+# 	if = {
+# 		limit = {
+# 			has_game_rule = kates_power_bloc_rule_free_founding_mandates_0
+# 		}
+# 		value = 0
+# 	}
+# 	else_if = {
+# 		limit = {
+# 			has_game_rule = kates_power_bloc_rule_free_founding_mandates_1
+# 		}
+# 		value = 1
+# 	}
+# 	else_if = {
+# 		limit = {
+# 			has_game_rule = kates_power_bloc_rule_free_founding_mandates_2
+# 		}
+# 		value = 2
+# 	}
+# }
+
+# power_bloc_diminishing_modifier_tooltip = {
+# 	power_bloc = {
+# 		add = power_bloc_diminishing_multiplier
+# 		subtract = 1
+# 	}
+# }
+
+# power_bloc_mandates_plus_principle_levels = {
+# 	add = total_used_principle_levels
+# 	add = num_mandates
+# }
+
+# power_bloc_diminishing_return_exponent_base_tooltip = {
+# 	power_bloc = {
+# 		add = power_bloc_diminishing_return_exponent_base
+# 	}
+# 	subtract = 1
+# }
+
+# power_bloc_diminishing_return_exponent_base = {
+# 	if = {
+# 		limit = {
+# 			has_game_rule = kates_power_bloc_rule_mandate_cost_growth_0
+# 		}
+# 		value = 1
+# 	}
+# 	else_if = {
+# 		limit = {
+# 			has_game_rule = kates_power_bloc_rule_mandate_cost_growth_3
+# 		}
+# 		value = 1.03
+# 	}
+# 	else_if = {
+# 		limit = {
+# 			has_game_rule = kates_power_bloc_rule_mandate_cost_growth_6
+# 		}
+# 		value = 1.06
+# 	}
+# 	else_if = {
+# 		limit = {
+# 			has_game_rule = kates_power_bloc_rule_mandate_cost_growth_9
+# 		}
+# 		value = 1.09
+# 	}
+# 	else_if = {
+# 		limit = {
+# 			has_game_rule = kates_power_bloc_rule_mandate_cost_growth_12
+# 		}
+# 		value = 1.12
+# 	}
+# }
+
+# power_bloc_diminishing_multiplier = {
+# 	add = 1
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandates_plus_principle_levels >= 1
+# 		}
+# 		multiply = power_bloc_diminishing_return_exponent_base
+# 	}
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandates_plus_principle_levels >= 2
+# 		}
+# 		multiply = power_bloc_diminishing_return_exponent_base
+# 	}
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandates_plus_principle_levels >= 3
+# 		}
+# 		multiply = power_bloc_diminishing_return_exponent_base
+# 	}
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandates_plus_principle_levels >= 4
+# 		}
+# 		multiply = power_bloc_diminishing_return_exponent_base
+# 	}
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandates_plus_principle_levels >= 5
+# 		}
+# 		multiply = power_bloc_diminishing_return_exponent_base
+# 	}
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandates_plus_principle_levels >= 6
+# 		}
+# 		multiply = power_bloc_diminishing_return_exponent_base
+# 	}
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandates_plus_principle_levels >= 7
+# 		}
+# 		multiply = power_bloc_diminishing_return_exponent_base
+# 	}
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandates_plus_principle_levels >= 8
+# 		}
+# 		multiply = power_bloc_diminishing_return_exponent_base
+# 	}
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandates_plus_principle_levels >= 9
+# 		}
+# 		multiply = power_bloc_diminishing_return_exponent_base
+# 	}
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandates_plus_principle_levels >= 10
+# 		}
+# 		multiply = power_bloc_diminishing_return_exponent_base
+# 	}
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandates_plus_principle_levels >= 11
+# 		}
+# 		multiply = power_bloc_diminishing_return_exponent_base
+# 	}
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandates_plus_principle_levels >= 12
+# 		}
+# 		multiply = power_bloc_diminishing_return_exponent_base
+# 	}
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandates_plus_principle_levels >= 13
+# 		}
+# 		multiply = power_bloc_diminishing_return_exponent_base
+# 	}
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandates_plus_principle_levels >= 14
+# 		}
+# 		multiply = power_bloc_diminishing_return_exponent_base
+# 	}
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandates_plus_principle_levels >= 15
+# 		}
+# 		multiply = power_bloc_diminishing_return_exponent_base
+# 	}
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandates_plus_principle_levels >= 16
+# 		}
+# 		multiply = power_bloc_diminishing_return_exponent_base
+# 	}
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandates_plus_principle_levels >= 17
+# 		}
+# 		multiply = power_bloc_diminishing_return_exponent_base
+# 	}
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandates_plus_principle_levels >= 18
+# 		}
+# 		multiply = power_bloc_diminishing_return_exponent_base
+# 	}
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandates_plus_principle_levels >= 19
+# 		}
+# 		multiply = power_bloc_diminishing_return_exponent_base
+# 	}
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandates_plus_principle_levels >= 20
+# 		}
+# 		multiply = power_bloc_diminishing_return_exponent_base
+# 	}
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandates_plus_principle_levels >= 21
+# 		}
+# 		multiply = power_bloc_diminishing_return_exponent_base
+# 	}
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandates_plus_principle_levels >= 22
+# 		}
+# 		multiply = power_bloc_diminishing_return_exponent_base
+# 	}
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandates_plus_principle_levels >= 23
+# 		}
+# 		multiply = power_bloc_diminishing_return_exponent_base
+# 	}
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandates_plus_principle_levels >= 24
+# 		}
+# 		multiply = power_bloc_diminishing_return_exponent_base
+# 	}
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandates_plus_principle_levels >= 25
+# 		}
+# 		multiply = power_bloc_diminishing_return_exponent_base
+# 	}
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandates_plus_principle_levels >= 26
+# 		}
+# 		multiply = power_bloc_diminishing_return_exponent_base
+# 	}
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandates_plus_principle_levels >= 27
+# 		}
+# 		multiply = power_bloc_diminishing_return_exponent_base
+# 	}
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandates_plus_principle_levels >= 28
+# 		}
+# 		multiply = power_bloc_diminishing_return_exponent_base
+# 	}
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandates_plus_principle_levels >= 29
+# 		}
+# 		multiply = power_bloc_diminishing_return_exponent_base
+# 	}
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandates_plus_principle_levels >= 30
+# 		}
+# 		multiply = power_bloc_diminishing_return_exponent_base
+# 	}
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandates_plus_principle_levels >= 31
+# 		}
+# 		multiply = power_bloc_diminishing_return_exponent_base
+# 	}
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandates_plus_principle_levels >= 32
+# 		}
+# 		multiply = power_bloc_diminishing_return_exponent_base
+# 	}
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandates_plus_principle_levels >= 33
+# 		}
+# 		multiply = power_bloc_diminishing_return_exponent_base
+# 	}
+# 	if = {
+# 		limit = {
+# 			power_bloc_mandates_plus_principle_levels >= 34
+# 		}
+# 		multiply = power_bloc_diminishing_return_exponent_base
+# 	}
+# }
+
+# power_bloc_mandate_progress_countries = {
+# 	value = 0
+# 	every_power_bloc_member = {
+# 		add = country_rank
+# 	}
+# 	save_temporary_value_as = num_to_sqrt
+# 	value = {
+# 		add = 5
+# 		subtract = {
+# 			add = {
+# 				add = 5
+# 				multiply = 5
+# 			}
+# 			subtract = scope:num_to_sqrt
+# 			divide = {
+# 				add = 5
+# 				multiply = 2
+# 			}
+# 		}
+# 	}
+# 	save_temporary_value_as = guess
+# 	value = {
+# 		add = scope:guess
+# 		subtract = {
+# 			add = {
+# 				add = scope:guess
+# 				multiply = scope:guess
+# 			}
+# 			subtract = scope:num_to_sqrt
+# 			divide = {
+# 				add = scope:guess
+# 				multiply = 2
+# 			}
+# 		}
+# 	}
+# 	save_temporary_value_as = guess
+# 	value = {
+# 		add = scope:guess
+# 		subtract = {
+# 			add = {
+# 				add = scope:guess
+# 				multiply = scope:guess
+# 			}
+# 			subtract = scope:num_to_sqrt
+# 			divide = {
+# 				add = scope:guess
+# 				multiply = 2
+# 			}
+# 		}
+# 	}
+# }
+
+# kates_force_become_subject_infamy = {
+# 	scope:target_country = {
+# 		every_scope_state = {
+# 			add = {
+# 				add = state_population 
+# 				divide = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_FACTOR
+# 				multiply = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER
+# 				multiply = {
+# 					add = 1
+# 					if = {
+# 						limit = {
+# 							is_incorporated = no
+# 						}
+# 						add = define:NDiplomacy|WAR_GOAL_INFAMY_UNINCORPORATED_FACTOR
+# 					}
+# 				}
+# 				min = 0.1
+# 				max = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_PER_STATE
+# 			}
+# 			max = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_TOTAL
+# 		}
+# 	}
+# 	multiply = {
+# 		add = define:NDiplomacy|WAR_GOAL_INFAMY_MAKE_PROTECTORATE
+# 		divide = 2
+# 	}
+# 	multiply = {
+# 		add = 1
+# 		add = modifier:country_infamy_generation_mult
+# 		if = {
+# 			limit = {
+# 				scope:target_country = {
+# 					is_country_type = unrecognized
+# 				}
+# 			}
+# 			add = modifier:country_infamy_generation_against_unrecognized_mult
+# 		}
+# 	}
+# }
+
+# kates_force_regime_change_infamy = {
+# 	scope:target_country = {
+# 		every_scope_state = {
+# 			add = {
+# 				add = state_population 
+# 				divide = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_FACTOR
+# 				multiply = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER
+# 				multiply = {
+# 					add = 1
+# 					if = {
+# 						limit = {
+# 							is_incorporated = no
+# 						}
+# 						add = define:NDiplomacy|WAR_GOAL_INFAMY_UNINCORPORATED_FACTOR
+# 					}
+# 				}
+# 				min = 0.1
+# 				max = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_PER_STATE
+# 			}
+# 			max = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_TOTAL
+# 		}
+# 	}
+# 	multiply = {
+# 		add = define:NDiplomacy|WAR_GOAL_INFAMY_REGIME_CHANGE
+# 		divide = 2
+# 	}
+# 	multiply = {
+# 		add = 1
+# 		add = modifier:country_infamy_generation_mult
+# 		if = {
+# 			limit = {
+# 				scope:target_country = {
+# 					is_country_type = unrecognized
+# 				}
+# 			}
+# 			add = modifier:country_infamy_generation_against_unrecognized_mult
+# 		}
+# 	}
+# }
+
+# kates_prestige_value_3x_target = {
+# 	add = prestige
+# 	multiply = 3
+# }
+
+# kates_influence_per_subject_multiplier = {
+# 	add = num_subjects
+# 	multiply = modifier:country_influence_per_subject_add
+# }
+
+# kates_minting_per_bloc_member_multiplier = {
+# 	power_bloc = {
+# 		every_power_bloc_member = {
+# 			if = {
+# 				limit = {
+# 					is_subject = no
+# 				}
+# 				add = 1
+# 			}
+# 		}
+# 	}
+# 	multiply = modifier:country_minting_from_bloc_members_mult
+# 	max = modifier:country_minting_from_bloc_members_mult_max
+# }
+
+# kates_training_rate_per_subject_multiplier = {
+# 	add = num_subjects
+# 	multiply = modifier:building_training_rate_per_subject_mult
+# }
+
+# kates_legitimacy_per_bloc_member_multiplier = {
+# 	power_bloc = {
+# 		every_power_bloc_member = {
+# 			if = {
+# 				limit = {
+# 					is_subject = no
+# 				}
+# 				add = 1
+# 			}
+# 		}
+# 	}
+# 	multiply = modifier:country_legitimacy_per_power_bloc_member_add
+# }
+
+# kates_influence_per_bloc_member_multiplier = {
+# 	power_bloc = {
+# 		every_power_bloc_member = {
+# 			if = {
+# 				limit = {
+# 					is_subject = no
+# 				}
+# 				add = 1
+# 			}
+# 		}
+# 	}
+# 	multiply = modifier:country_influence_from_bloc_members_add
+# }
+
+# kates_trade_per_bloc_member_multiplier = {
+# 	power_bloc = {
+# 		every_power_bloc_member = {
+# 			if = {
+# 				limit = {
+# 					is_subject = no
+# 				}
+# 				add = 1
+# 			}
+# 		}
+# 	}
+# 	multiply = modifier:country_trade_from_bloc_members_mult
+# 	max = modifier:country_trade_from_bloc_members_mult_max
+# }
+
+# kates_bureaucracy_per_bloc_member_multiplier = {
+# 	power_bloc = {
+# 		every_power_bloc_member = {
+# 			if = {
+# 				limit = {
+# 					is_subject = no
+# 				}
+# 				add = 1
+# 			}
+# 		}
+# 	}
+# 	multiply = modifier:country_bureaucracy_from_bloc_members_mult
+# }
+
+# kates_interest_rate_per_bloc_member_multiplier = {
+# 	power_bloc = {
+# 		every_power_bloc_member = {
+# 			if = {
+# 				limit = {
+# 					is_subject = no
+# 				}
+# 				add = 1
+# 			}
+# 		}
+# 	}
+# 	multiply = modifier:country_interest_rate_from_bloc_members_mult
+# 	min = modifier:country_interest_rate_from_bloc_members_mult_max
+# }
+
+# kates_convoys_per_leader_subjects_multiplier = {
+# 	power_bloc = {
+# 		every_power_bloc_member = {
+# 			if = {
+# 				limit = {
+# 					is_subject = yes
+# 					overlord = {
+# 						is_power_bloc_leader = yes
+# 					}
+# 				}
+# 				add = 1
+# 			}
+# 		}
+# 	}
+# 	multiply = modifier:country_convoys_per_leader_subject_mult
+# 	max = modifier:country_convoys_per_leader_subject_mult_max
+# }
+
+# kates_mapi_per_leader_subjects_multiplier = {
+# 	power_bloc = {
+# 		every_power_bloc_member = {
+# 			if = {
+# 				limit = {
+# 					is_subject = yes
+# 					overlord = {
+# 						is_power_bloc_leader = yes
+# 					}
+# 				}
+# 				add = 1
+# 			}
+# 		}
+# 	}
+# 	multiply = modifier:country_mapi_per_leader_subject_mult
+# 	max = modifier:country_mapi_per_leader_subject_mult_max
+# }
+
+# kates_authority_per_manor_house_multiplier = {
+# 	add = modifier:kates_country_authority_add
+# 	max = modifier:country_authority_per_manor_house_max
+# }
+
+# kates_gold_interest_rate_baseline = {
+# 	value = 0.1
+# }
+
+# kates_interest_rate_additive_modifier = {
+# 	add = 0.2
+# 	subtract = modifier:country_loan_interest_rate_add
+# }
+
+# kates_interest_rate_mult_modifier = {
+# 	subtract = modifier:country_loan_interest_rate_mult
+# }
+
+# kates_gold_reserves_interest_rate_multiplier_tt = {
+# 	add = kates_gold_interest_rate_baseline
+# 	add = kates_interest_rate_additive_modifier
+# 	multiply = {
+# 		add = 1
+# 		add = kates_interest_rate_mult_modifier
+# 	}
+# }
+
+# kates_gold_reserves_interest_rate_multiplier = {
+# 	if = {
+# 		limit = {
+# 			gold_reserves > 0
+# 		}
+# 		add = gold_reserves
+# 		multiply = kates_gold_reserves_interest_rate_multiplier_tt
+# 		divide = 52
+# 	}
+# 	else = {
+# 		value = 0
+# 	}
+# }
+
+power_bloc_identity_change_mandates = {
+	power_bloc = {
+		add = total_used_principle_levels
+		divide = 2
+		add = num_mandates
+	}
+	floor = yes
+	max = power_bloc_preserved_principles_switch
+}
+
+power_bloc_identity_change_mandates_tt = {
+	power_bloc = {
+		add = total_used_principle_levels
+		divide = 2
+		add = num_mandates
+	}
+	floor = yes
+	subtract = 1
+	# add = power_bloc_free_founding_mandates
+	min = 0
+	max = power_bloc_preserved_principles_switch
+}
+
+power_bloc_preserved_principles_switch = {
+	add = 4 #power_bloc_max_principles_rule_value
+	multiply = 3
+	divide = 2
+	add = power_bloc_max_mandates_rule_value
+	subtract = 1
+	# subtract = power_bloc_free_founding_mandates
+}
+
+power_bloc_preserved_principles_switch_tt = {
+	add = 4 #power_bloc_max_principles_rule_value
+	multiply = 3
+	divide = 2
+	add = power_bloc_max_mandates_rule_value
+	subtract = 1
+}
+
+# power_bloc_max_principles_rule_value = {
+# 	if = {
+# 		limit = {
+# 			has_game_rule = kates_power_bloc_rule_principle_slots_4
+# 		}
+# 		value = 4
+# 	}
+# 	else_if = {
+# 		limit = {
+# 			has_game_rule = kates_power_bloc_rule_principle_slots_6
+# 		}
+# 		value = 6
+# 	}
+# 	else_if = {
+# 		limit = {
+# 			has_game_rule = kates_power_bloc_rule_principle_slots_8
+# 		}
+# 		value = 8
+# 	}
+# 	else_if = {
+# 		limit = {
+# 			has_game_rule = kates_power_bloc_rule_principle_slots_10
+# 		}
+# 		value = 10
+# 	}
+# 	else_if = {
+# 		limit = {
+# 			has_game_rule = kates_power_bloc_rule_principle_slots_12
+# 		}
+# 		value = 12
+# 	}
+# }
+
+# power_bloc_mandate_progress_rule_value = {
+# 	if = {
+# 		limit = {
+# 			has_game_rule = kates_power_bloc_rule_mandate_progress_speed_50
+# 		}
+# 		value = 0.5
+# 	}
+# 	else_if = {
+# 		limit = {
+# 			has_game_rule = kates_power_bloc_rule_mandate_progress_speed_75
+# 		}
+# 		value = 0.75
+# 	}
+# 	else_if = {
+# 		limit = {
+# 			has_game_rule = kates_power_bloc_rule_mandate_progress_speed_100
+# 		}
+# 		value = 1
+# 	}
+# 	else_if = {
+# 		limit = {
+# 			has_game_rule = kates_power_bloc_rule_mandate_progress_speed_150
+# 		}
+# 		value = 1.5
+# 	}
+# 	else_if = {
+# 		limit = {
+# 			has_game_rule = kates_power_bloc_rule_mandate_progress_speed_200
+# 		}
+# 		value = 2
+# 	}
+# }
+
+power_bloc_max_mandates_rule_value = {
+	if = {
+		limit = {
+			has_game_rule = kates_power_bloc_rule_max_saved_mandates_3
+		}
+		value = 3
+	}
+	else_if = {
+		limit = {
+			has_game_rule = kates_power_bloc_rule_max_saved_mandates_6
+		}
+		value = 6
+	}
+	else_if = {
+		limit = {
+			has_game_rule = kates_power_bloc_rule_max_saved_mandates_9
+		}
+		value = 9
+	}
+	else_if = {
+		limit = {
+			has_game_rule = kates_power_bloc_rule_max_saved_mandates_12
+		}
+		value = 12
+	}
+	else_if = {
+		limit = {
+			has_game_rule = kates_power_bloc_rule_max_saved_mandates_15
+		}
+		value = 15
+	}
+}

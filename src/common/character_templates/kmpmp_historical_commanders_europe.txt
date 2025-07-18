@@ -1,0 +1,34 @@
+﻿sar_general_chiodo = {
+	first_name = Agostino
+	last_name = Chiodo
+	historical = yes
+	culture = cu:north_italian
+	female = no
+	ideology = ideology_moderate
+	commander_rank = default
+	interest_group = ig_armed_forces
+	birth_date = 1796.4.16 #1791.4.16
+	traits = {
+		trench_rat
+	}
+	commander_usage = {
+		country_trigger = {
+			OR = {
+				AND = {
+					exists = c:SAR
+					this = c:SAR
+				}
+				AND = {
+					NOT = { exists = c:SAR }
+					exists = c:ITA
+					this = c:ITA
+					c:ITA = { owns_entire_state_region = STATE_PIEDMONT }
+				}
+			}
+		}
+		role = general
+		earliest_usage_date = 1836.1.1
+		latest_usage_date = 1850.1.1
+		chance = 50
+	}
+}

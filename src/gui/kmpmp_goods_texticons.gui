@@ -1,0 +1,49 @@
+texticon = {
+	icon = prestige_good_kmpmp_calais_coal
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/coal.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_generic_kmpmp_premium_engines
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/schichau_engines_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_generic_kmpmp_premium_silk
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/silk.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_generic_kmpmp_premium_oil
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/prestige_goods/baku_oil_prestige.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = prestige_good_generic_kmpmp_premium_wine
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/wine.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}

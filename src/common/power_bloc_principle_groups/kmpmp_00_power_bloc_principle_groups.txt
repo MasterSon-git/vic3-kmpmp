@@ -189,3 +189,12 @@ principle_group_ideological_truth = {
 		principle_ideological_truth_3
 	}
 }
+
+principle_group_companies = {
+
+	levels = {
+		principle_companies_1
+		principle_companies_2
+		principle_companies_3
+	}
+}

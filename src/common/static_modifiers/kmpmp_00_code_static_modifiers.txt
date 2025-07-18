@@ -45,18 +45,19 @@
 	
 	state_market_access_price_impact = 0.65 #0.75
 	
-	country_company_throughput_bonus_add = 0.25
+	country_company_throughput_bonus_add = 0.2
 	country_company_construction_efficiency_bonus_add = 0.5
 	
 	country_max_weekly_construction_progress_add = 10
-	
-	country_free_trade_routes_add = 5
 	
 	military_formation_organization_gain_add = 0.5 # 200 days to get max organization
 	
 	state_urbanization_per_level_add = 100
 	
 	unit_experience_gain_add = 0.5
+
+	state_trade_advantage_from_capacity_add = 0.0005
+	state_max_trade_advantage_from_capacity_add = 0.2
 }
 
 in_default = {
@@ -93,6 +94,7 @@ unincorporated_state = {
 	building_group_bg_government_throughput_add = -0.1
 	building_group_bg_military_throughput_add = -0.1		
 	state_market_access_price_impact = -0.05 #-0.1
+	state_construction_mult = -0.30 #-0.33
 }
 
 # Excess AUT reduces enactment time by -25% at 2x production to usage
@@ -102,6 +104,36 @@ legislative_efficiency = {
 	#kmpmp
 	building_training_rate_mult = 0.35
 	country_military_goods_cost_mult = -0.1
+}
+
+# Insufficent AUT reduces opposition Interest Groups' Approval by -10 at 2x usage to production
+political_dysfunction = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	#country_opposition_ig_approval_add = -10
+	#state_radicals_from_political_movements_mult = 0.20
+	#kmpmp
+	building_training_rate_mult = -0.4
+	country_military_goods_cost_mult = 0.2
+	state_tax_waste_add = 0.1
+}
+
+# Insufficient DIP reduces prestige by up to 50% at 2x usage to production
+diplomatic_overreach = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	country_prestige_mult = -0.5
+	country_infamy_decay_mult = -0.5
+	country_weekly_innovation_mult = -0.3
+	country_kmpmp_power_bloc_mandate_progress_mult = -0.3
+}
+
+# Scales with devastation level
+state_region_devastation = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	state_infrastructure_mult = -1.0
+	state_mortality_mult = 1.0 #2.0
+	state_migration_pull_mult = -2.0
+	state_construction_mult = -0.5 #-1.0
+	building_throughput_add = -0.5
 }
 
 # Scales by the amount of debt owed to government owned buildings (ie; government self owned debt)
@@ -122,6 +154,14 @@ country_army_power_projection = {
 country_navy_power_projection = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
 	country_max_declared_interests_add = 0.0015 #0.01
+}
+
+country_humiliated = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	country_prestige_mult = -0.25
+	country_leverage_generation_mult = -0.25
+	# kmpmp
+	country_influence_mult = -0.25
 }
 
 weak_power_bloc = {

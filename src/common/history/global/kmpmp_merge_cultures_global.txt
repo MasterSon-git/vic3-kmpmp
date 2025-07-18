@@ -324,6 +324,39 @@
         kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_caucasian TARGET_CULTURE = cu:georgian }
     }
 
+    # replace primary cultures in decentralized countries
+    every_decentralized_country = {
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_west_african TARGET_CULTURE = cu:bambara }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_central_african TARGET_CULTURE = cu:fang }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_east_african TARGET_CULTURE = cu:beja }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_south_african TARGET_CULTURE = cu:chewa }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_middle_east TARGET_CULTURE = cu:misri }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_persian TARGET_CULTURE = cu:persian }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_afro_american TARGET_CULTURE = cu:afro_american }
+        # kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_american TARGET_CULTURE = cu:yankee }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_mesoamerican TARGET_CULTURE = cu:mayan }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_north_american_native TARGET_CULTURE = cu:cherokee }
+        # kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_south_american TARGET_CULTURE = cu:brazilian }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_south_american_native TARGET_CULTURE = cu:amazonian }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_central_asian TARGET_CULTURE = cu:hazara }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_mongol TARGET_CULTURE = cu:mongol }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_indonesian TARGET_CULTURE = cu:javan }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_thai TARGET_CULTURE = cu:thai }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_burmese TARGET_CULTURE = cu:burmese }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_oceanic_native TARGET_CULTURE = cu:polynesian }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_north_german TARGET_CULTURE = cu:north_german }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_dutch TARGET_CULTURE = cu:dutch }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_danish TARGET_CULTURE = cu:danish }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_swedish TARGET_CULTURE = cu:swedish }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_british TARGET_CULTURE = cu:british }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_finnish TARGET_CULTURE = cu:finnish }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_spanish TARGET_CULTURE = cu:spanish }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_corsican TARGET_CULTURE = cu:corsican }
+        # kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_jugoslav TARGET_CULTURE = cu:serb }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_hungarian TARGET_CULTURE = cu:hungarian }
+        kmpmp_replace_country_primary_cultures = { CULTURE_LIST = cultures_caucasian TARGET_CULTURE = cu:georgian }
+    }
+
     # replace state homelands
     every_state_region = {
         kmpmp_replace_state_region_homeland_cultures = { CULTURE_LIST = cultures_west_african TARGET_CULTURE = cu:bambara }

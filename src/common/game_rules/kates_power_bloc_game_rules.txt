@@ -1,0 +1,135 @@
+﻿# kates_power_bloc_rule_enable_new_principles = {
+# 	default = kates_power_bloc_rule_enable_new_principles_enabled
+
+# 	kates_power_bloc_rule_enable_new_principles_enabled = {}
+
+# 	kates_power_bloc_rule_enable_new_principles_disabled = {}
+# }
+
+# kates_power_bloc_rule_enable_new_cohesion = {
+# 	default = kates_power_bloc_rule_enable_new_cohesion_enabled
+
+# 	kates_power_bloc_rule_enable_new_cohesion_enabled = {}
+
+# 	kates_power_bloc_rule_enable_new_cohesion_disabled = {}
+# }
+
+# kates_power_bloc_rule_enable_mandate_progress = {
+# 	default = kates_power_bloc_rule_enable_mandate_progress_enabled
+
+# 	kates_power_bloc_rule_enable_mandate_progress_enabled = {}
+
+# 	kates_power_bloc_rule_enable_mandate_progress_disabled = {}
+# }
+
+kates_power_bloc_rule_enable_identity_switch = {
+	default = kates_power_bloc_rule_enable_identity_switch_enabled
+
+	kates_power_bloc_rule_enable_identity_switch_enabled = {}
+
+	kates_power_bloc_rule_enable_identity_switch_disabled = {}
+}
+
+# kates_power_bloc_rule_diplo_action_changes = {
+# 	default = kates_power_bloc_rule_diplo_action_changes_enabled
+
+# 	kates_power_bloc_rule_diplo_action_changes_enabled = {}
+
+# 	kates_power_bloc_rule_diplo_action_changes_disabled = {}
+# }
+
+# kates_power_bloc_rule_holy_wars_gp = {
+# 	default = kates_power_bloc_rule_holy_wars_gp_disabled
+
+# 	kates_power_bloc_rule_holy_wars_gp_enabled = {}
+
+# 	kates_power_bloc_rule_holy_wars_gp_disabled = {}
+# }
+
+# kates_power_bloc_rule_mandate_cost_growth = {
+# 	default = kates_power_bloc_rule_mandate_cost_growth_6
+
+# 	kates_power_bloc_rule_mandate_cost_growth_0 = {}
+
+# 	kates_power_bloc_rule_mandate_cost_growth_3 = {}
+
+# 	kates_power_bloc_rule_mandate_cost_growth_6 = {}
+
+# 	kates_power_bloc_rule_mandate_cost_growth_9 = {}
+
+# 	kates_power_bloc_rule_mandate_cost_growth_12 = {}
+# }
+
+# kates_power_bloc_rule_mandate_progress_speed = {
+# 	default = kates_power_bloc_rule_mandate_progress_speed_100
+
+# 	kates_power_bloc_rule_mandate_progress_speed_50 = {}
+
+# 	kates_power_bloc_rule_mandate_progress_speed_75 = {}
+
+# 	kates_power_bloc_rule_mandate_progress_speed_100 = {}
+
+# 	kates_power_bloc_rule_mandate_progress_speed_150 = {}
+
+# 	kates_power_bloc_rule_mandate_progress_speed_200 = {}
+# }
+
+# kates_power_bloc_rule_principle_slots = {
+# 	default = kates_power_bloc_rule_principle_slots_8
+
+# 	kates_power_bloc_rule_principle_slots_4 = {}
+
+# 	kates_power_bloc_rule_principle_slots_6 = {}
+
+# 	kates_power_bloc_rule_principle_slots_8 = {}
+
+# 	kates_power_bloc_rule_principle_slots_10 = {}
+
+# 	kates_power_bloc_rule_principle_slots_12 = {}
+# }
+
+kates_power_bloc_rule_max_saved_mandates = {
+	default = kates_power_bloc_rule_max_saved_mandates_9
+
+	kates_power_bloc_rule_max_saved_mandates_3 = {}
+
+	kates_power_bloc_rule_max_saved_mandates_6 = {}
+
+	kates_power_bloc_rule_max_saved_mandates_9 = {}
+
+	kates_power_bloc_rule_max_saved_mandates_12 = {}
+
+	kates_power_bloc_rule_max_saved_mandates_15 = {}
+}
+
+# kates_power_bloc_rule_free_founding_mandates = {
+# 	default = kates_power_bloc_rule_free_founding_mandates_1
+
+# 	kates_power_bloc_rule_free_founding_mandates_0 = {}
+
+# 	kates_power_bloc_rule_free_founding_mandates_1 = {}
+
+# 	kates_power_bloc_rule_free_founding_mandates_2 = {}
+# }
+
+# kates_power_bloc_rule_low_member_penalty = {
+# 	default = kates_power_bloc_rule_low_member_penalty_8
+
+# 	kates_power_bloc_rule_low_member_penalty_0 = {}
+
+# 	kates_power_bloc_rule_low_member_penalty_6 = {}
+
+# 	kates_power_bloc_rule_low_member_penalty_8 = {}
+
+# 	kates_power_bloc_rule_low_member_penalty_10 = {}
+
+# 	kates_power_bloc_rule_low_member_penalty_12 = {}
+# }
+
+# kates_power_bloc_rule_late_founding_mandates = {
+# 	default = kates_power_bloc_rule_late_founding_mandates_enabled
+
+# 	kates_power_bloc_rule_late_founding_mandates_enabled = {}
+
+# 	kates_power_bloc_rule_late_founding_mandates_disabled = {}
+# }

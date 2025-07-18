@@ -39,7 +39,7 @@ GGGG_mo_firearms = {
         trigger_else = {
             market ?= {
                 mg:small_arms ?= {
-                    market_goods_sell_orders > 0
+                    has_potential_supply = yes
                 }
             }
         }
@@ -128,7 +128,7 @@ GGGG_mo_percussion_caps = {
         }
         market ?= {
             mg:ammunition ?= {
-                market_goods_sell_orders > 0
+                has_potential_supply = yes
             }
         }
     }

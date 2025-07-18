@@ -1,4 +1,11 @@
-﻿NEconomy = {
+﻿NPolitics = {
+	# kmpmp - for the moment vanilla - check if we can do something with the ranks
+	LAW_ENACTMENT_LAW_COMMITMENT_EFFECT = 0.05 # Committing to enacting a law via treaty adds this much to pass chance, scaled by the number of ranks the country the comittee has on the committer
+}
+
+NEconomy = {
+	ECONOMY_OF_SCALE_NATIONALIZED_FRACTION_MULT = 0.25 #0.5	# Non-government building economy of scale modifier if multiplied by (1 - the fraction of nationalized levels * this)
+
 	DECLARE_BANKRUPTCY_PENALTY_DURATION_YEARS = 4 #10		# How many years does it take for penalties from declaring bankruptcy to fully decay
 
 	CREDIT_RATIO_MAX_OVERRUN = 0.1 #0.01 			# Countries can accumulate this percentage more of a debt "hole" than their credit limit when in default
@@ -6,7 +13,6 @@
 
 NDiplomacy = {
 	WAR_GOAL_INFAMY_CONQUER_STATE = 4.0 #5.0
-	WAR_GOAL_INFAMY_MAKE_PROTECTORATE = 1.5 #2.0
 	WAR_GOAL_INFAMY_FORCE_NATIONALIZATION = 0.15 #5.0
 
 	# kmpmp TEST
@@ -14,13 +20,24 @@ NDiplomacy = {
 }
 
 NCharacter = {
+	# kmpmp - lower min age of generals
+	AGE_GENERATION_STARTVAL = 11 #20
+	RECRUIT_COMMANDER_NUM_OPTIONS = 5 #3
+	RECRUIT_COMMANDER_REMOVE_AGE = 50 #55			# removed from the recruit pool when they reach 55 years
+
 	# kmpmp - try to reroll chars after months
 	VOIDED_CHARACTER_DEFAULT_DURATION = 6 #12 # Default months a character will be in the void before being deleted
 }
 
 NWar = {
+	DEVASTATION_MAX = 100.0
+	DEVASTATION_INCREASE_RATE = 0.05 #0.1 Per day, scales with level of occupation
+	DEVASTATION_DECAY_RATE = -0.025 # Per day, when there are no occupations
+	DEVASTATION_FROM_BATTLES = 0.1 # For each battle
 	WAR_EXHAUSTION_KIA_FACTOR =  1.65 #kmpmp #4.0 # Scaled by casualties compared to total manpower
 
+	NAVAL_INVASION_PREPARATION_DURATION_DAYS = 30 #14 						# How many days should pass since the first army arrived to the naval invasion front to start advancing it without the sea node being blocked by enemy fleet
+	LAND_INVASION_PREPARATION_DURATION_DAYS = 30 #14 						# How many days should pass since the first army arrived to the invasion front to start advancing it
 	STATE_CONQUEST_HOMELAND_AND_CLAIM_RADICALIZATION = 0.0 #0.1
 	STATE_CONQUEST_HOMELAND_OR_CLAIM_RADICALIZATION = 0.0 #0.3
 }
@@ -38,6 +55,7 @@ NCountry = {
 }
 
 NPowerBlocs = {
+	POWER_STRUGGLE_DURATION_SUCCESS_MONTHS = 36 #12 	# Power struggle succeeds after this months
 	COUNTRY_POPULATION_LEVERAGE_RESISTANCE_MODIFIER_DIVISOR = 1200000 	#1000000 	# Population divided by this is multiplied by country_leverage_resistance_per_population to give a certain amount of leverage per million people
 	COUNTRY_POPULATION_LEVERAGE_RESISTANCE_MODIFIER_MAX_MULTIPLIER = 100	# Max multiplier given by population. With the value above at 1 000 000, this means the cap for leverage resistance is at 100 000 000.
 }

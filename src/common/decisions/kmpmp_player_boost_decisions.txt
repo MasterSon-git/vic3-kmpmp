@@ -21,7 +21,7 @@
     }
 
     ai_chance = {
-        base = 0	
+        value = 0	
     }
 }
 
@@ -48,7 +48,7 @@ kmpmp_player_boost_imperialism_oversea_empire_decision = {
     }
 
     ai_chance = {
-        base = 0	
+        value = 0	
     }
 }
 
@@ -85,7 +85,7 @@ kmpmp_player_boost_military_industrial_complex_decision = {
     }
 
     ai_chance = {
-        base = 0	
+        value = 0	
     }
 }
 
@@ -112,7 +112,7 @@ kmpmp_player_boost_state_capitalism_decision = {
     }
 
     ai_chance = {
-        base = 0	
+        value = 0	
     }
 }
 
@@ -139,7 +139,7 @@ kmpmp_player_boost_autarky_decision = {
     }
 
     ai_chance = {
-        base = 0	
+        value = 0	
     }
 }
 
@@ -171,7 +171,7 @@ kmpmp_player_boost_social_welfare_state_decision = {
     }
 
     ai_chance = {
-        base = 0	
+        value = 0	
     }
 }
 
@@ -186,7 +186,7 @@ kmpmp_player_boost_corporative_socialism_decision = {
         }
         exists = ig:ig_trade_unions
         ig:ig_trade_unions = {
-            ig_clout >= 0.1
+            ig_clout >= 0.15
             ig_approval >= 5
         }
     }
@@ -203,7 +203,7 @@ kmpmp_player_boost_corporative_socialism_decision = {
     }
 
     ai_chance = {
-        base = 0	
+        value = 0	
     }
 }
 
@@ -221,6 +221,10 @@ kmpmp_player_boost_military_police_state_decision = {
             ig_clout >= 0.25
             ig_approval >= 10
         }
+        ig:ig_petty_bourgeoisie = {
+            ig_clout >= 0.2
+            ig_approval >= 10
+        }
     }
 
     when_taken = {
@@ -235,7 +239,7 @@ kmpmp_player_boost_military_police_state_decision = {
     }
 
     ai_chance = {
-        base = 0	
+        value = 0	
     }
 }
 
@@ -251,7 +255,7 @@ kmpmp_player_boost_tycoon_capitalism_decision = {
         exists = ig:ig_industrialists
         ig:ig_industrialists = {
             ig_clout >= 0.05
-            ig_approval > 0
+            ig_approval >= 5
         }
     }
 
@@ -267,7 +271,7 @@ kmpmp_player_boost_tycoon_capitalism_decision = {
     }
 
     ai_chance = {
-        base = 0	
+        value = 0	
     }
 }
 
@@ -278,10 +282,11 @@ kmpmp_player_boost_rhine_capitalism_decision = {
 
     possible = {
         NOT = {
-            OR = {
-                has_law = law_type:law_command_economy
-                has_modifier = kmpmp_player_boost_adjustment
-            }
+            has_modifier = kmpmp_player_boost_adjustment
+        }
+        NOR = {
+            has_law = law_type:law_command_economy
+            has_law = law_type:law_council_republic
         }
         exists = ig:ig_armed_forces
         exists = ig:ig_industrialists
@@ -315,7 +320,7 @@ kmpmp_player_boost_rhine_capitalism_decision = {
     }
 
     ai_chance = {
-        base = 0	
+        value = 0	
     }
 }
 
@@ -354,7 +359,7 @@ kmpmp_player_boost_unite_the_workers_of_the_world_decision = {
     }
 
     ai_chance = {
-        base = 0	
+        value = 0	
     }
 }
 
@@ -377,15 +382,63 @@ kmpmp_player_boost_expand_influence_decision = {
             years = 15
         }
         remove_player_boost_modifiers = yes
-        custom_tooltip = {
-            text = kmpmp_power_bloc_mandate_progress_by_player_boost_expand_influence_tooltip
-        }
         add_modifier = {
             name = kmpmp_player_boost_expand_influence
         }
     }
 
     ai_chance = {
-        base = 0	
+        value = 0	
+    }
+}
+
+kmpmp_player_boost_arsenal_of_democrazy_decision = {
+    is_shown = {
+        always = yes
+    }
+
+    possible = {
+        NOT = {
+            has_modifier = kmpmp_player_boost_adjustment
+        }
+        OR = {
+            has_law = law_type:law_census_voting
+            has_law = law_type:law_universal_suffrage
+            has_law = law_type:law_wealth_voting
+        }
+        OR = {
+            has_law = law_type:law_presidential_republic
+            has_law = law_type:law_parliamentary_republic
+        }
+        
+        has_technology_researched = philosophical_pragmatism
+        
+        exists = ig:ig_armed_forces
+        exists = ig:ig_intelligentsia
+
+        ig:ig_armed_forces ?= {
+            ig_clout >= 0.2
+            ig_approval >= 10
+        }
+
+        ig:ig_intelligentsia ?= {
+            ig_clout >= 0.15
+            ig_approval >= 10
+        }
+    }
+
+    when_taken = {
+        add_modifier = {
+            name = kmpmp_player_boost_adjustment
+            years = 15
+        }
+        remove_player_boost_modifiers = yes
+        add_modifier = {
+            name = kmpmp_player_boost_arsenal_of_democrazy
+        }
+    }
+
+    ai_chance = {
+        value = 0	
     }
 }

@@ -2,6 +2,7 @@
  kmpmp_japan_buff_start:0 "The path of Westernization"
  kmpmp_japan_buff_start_decaying:0 "Spirit of Shiroyama"
  kmpmp_japan_buff_meiji_complete:0 "Empire of the rising Sun"
+ kmpmp_japan_buff_meiji_complete_condition_tt:0 "Complete [SCOPE.sJournalEntry('journal_entry').GetName] before #v 1885#! to receive the buff:"
 
  kmpmp_ev_japan_buff.1.t:0 "$kmpmp_japan_buff_start$"
  kmpmp_ev_japan_buff.1.d:0 "Enable Japan buffs"

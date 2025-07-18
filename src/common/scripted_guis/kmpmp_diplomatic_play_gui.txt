@@ -1,0 +1,225 @@
+﻿# shows a tooltip to warn before declaring neutrality in a diplomatic play if
+# - initiator is allied
+# - target is allied or has defensive pact
+kmpmp_sgui_diplomatic_play_declare_neutrality_warning = {
+    scope = country
+    saved_scopes = { diplomatic_play }
+    
+    effect = {
+        if = {
+            limit = {
+                any_scope_treaty = {
+                    binds = scope:diplomatic_play.initiator
+                    any_scope_article = {
+                        has_type = alliance
+                        save_temporary_scope_as = treaty_article
+                    }
+                    scope:diplomatic_play.initiator = {
+                        save_temporary_scope_as = other
+                    }
+                }
+            }
+            custom_tooltip = KMPMP_SGUI_DIPLOMATIC_PLAY_DECLARE_NEUTRALITY_WARNING
+        }
+        else = {
+            custom_tooltip = EMPTY
+        }
+        
+        if = {
+            limit = {
+                any_scope_treaty = {
+                    binds = scope:diplomatic_play.target
+                    any_scope_article = {
+                        OR = {
+                            has_type = alliance
+                            has_type = defensive_pact
+                        }
+                        save_temporary_scope_as = treaty_article
+                    }
+                    scope:diplomatic_play.target = {
+                        save_temporary_scope_as = other
+                    }
+                }
+            }
+            custom_tooltip = KMPMP_SGUI_DIPLOMATIC_PLAY_DECLARE_NEUTRALITY_WARNING
+        }
+        else = {
+            custom_tooltip = EMPTY
+        }
+    }
+}
+
+# enable "Give In" button
+# diplomatic plays open_market, regime_change are not allowed to give in
+# note: diplomatic play is not escalated
+kmpmp_sgui_diplomatic_play_can_give_in = {
+    scope = diplomatic_play
+    saved_scopes = { country }
+
+    is_valid = {
+        trigger_if = {
+            limit = {
+                target = scope:country
+                has_play_goal = open_market
+            }
+
+            NOT = {
+                has_play_goal = open_market
+            }
+        }
+        trigger_else_if = {
+            limit = {
+                target = scope:country
+                has_play_goal = regime_change
+            }
+
+            NOT = {
+                has_play_goal = regime_change
+            }
+        }
+        trigger_else = {
+            always = yes
+        }
+    }
+}
+
+# enable "Capitulate" button
+# diplomatic plays open_market, regime_change are not allowed to captitulate,
+# unless 80 war exhaustion on target is reached
+kmpmp_sgui_diplomatic_play_can_capitulate = {
+    scope = war
+    saved_scopes = { country }
+
+    is_valid = {
+        trigger_if = {
+            limit = {
+                OR = {
+                    AND = {
+                        defender_warleader = scope:country
+                        has_war_goal = open_market
+                    }
+
+                    AND = {
+                        defender_warleader = scope:country
+                        has_war_goal = regime_change
+                    }
+                }
+            }
+
+            defender_warleader ?= {
+                save_temporary_scope_as = target_country
+            }
+
+            kmpmp_war_support_lower_or_equal_than = {
+                TARGET_VALUE = -80
+            }
+        }
+        trigger_else = {
+            always = yes
+        }
+    }
+}
+
+kmpmp_sgui_diplomatic_play_can_propose_peace = {
+    scope = war
+
+    is_valid = {
+        trigger_if = {
+            limit = {
+                OR = {
+                    has_war_goal = open_market
+                    has_war_goal = regime_change
+                }
+            }
+
+            defender_warleader ?= {
+                save_temporary_scope_as = target_country
+            }
+
+            kmpmp_war_support_lower_or_equal_than = {
+                TARGET_VALUE = -80
+            }
+
+            # didn't work - war_goal is not a valid event_target
+            # scope:diplomatic_play = {
+            #     has_variable_list = kmpmp_pressed_war_goals
+            #     any_in_list = {
+            #         variable = kmpmp_pressed_war_goals
+            #         THIS = "open_market"
+            #     }
+            #     custom_tooltip = {
+            #         text = kmpmp_sgui_diplomatic_play_can_capitulate_tt
+            #         war ?= {
+            #             has_war_exhaustion = {
+            #                 target = defender_warleader
+            #                 value >= 80
+            #             }
+            #         }
+            #     }
+            # }
+        }
+        trigger_else = {
+            always = yes
+        }
+    }
+}
+
+# actually removed... no idea how to check pressed war goals
+# kmpmp_sgui_diplomatic_play_toggle_pressed_war_goal_in_list = {
+#     scope = diplomatic_play
+#     saved_scopes = { war_goal }
+
+#     effect = {
+#         if = {
+#             limit = {
+#                 NOT = {
+#                     OR = {
+#                         has_variable_list = kmpmp_pressed_war_goals
+#                         any_in_list = {
+#                             variable = kmpmp_pressed_war_goals
+#                             THIS = scope:war_goal
+#                         }
+#                     }
+#                 }
+#             }
+
+#             add_to_variable_list = {
+#                 name = kmpmp_pressed_war_goals
+#                 target = scope:war_goal
+#             }
+#         }
+#         else = {
+#             remove_list_variable = {
+#                 name = kmpmp_pressed_war_goals
+#                 target = scope:war_goal
+#             }
+#         }
+
+#         # test to check if this works...
+#         # it didn't ^^
+#         # if = {
+#         #     limit = {
+#         #         NOT = {
+#         #             OR = {
+#         #                 has_global_variable_list = kmpmp_pressed_war_goals_global
+#         #                 any_in_global_list = {
+#         #                     variable = kmpmp_pressed_war_goals_global
+#         #                     THIS = scope:war_goal
+#         #                 }
+#         #             }
+#         #         }
+#         #     }
+
+#         #     add_to_global_variable_list = {
+#         #         name = kmpmp_pressed_war_goals_global
+#         #         target = scope:war_goal
+#         #     }
+#         # }
+#         # else = {
+#         #     remove_list_global_variable = {
+#         #         name = kmpmp_pressed_war_goals_global
+#         #         target = scope:war_goal
+#         #     }
+#         # }
+#     }
+# }

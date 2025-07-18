@@ -71,4 +71,10 @@
         }
         remove_modifier = kmpmp_player_boost_expand_influence
     }
+    if = {
+        limit = {
+            has_modifier = kmpmp_player_boost_arsenal_of_democrazy
+        }
+        remove_modifier = kmpmp_player_boost_arsenal_of_democrazy
+    }
 }

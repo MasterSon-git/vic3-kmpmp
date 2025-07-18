@@ -36,8 +36,9 @@ italian_unification.1 = {
 		# prestige
 		add_modifier = {
 			name = italian_unifier_prestige
-			months = long_modifier_time
+			days = long_modifier_time
 		}
+		# kmpmp
 		add_modifier = {
 			name = kmpmp_risorgimento
 		}
@@ -54,9 +55,10 @@ italian_unification.1 = {
 		scope:ruler_ig_scope = {
 			add_modifier = {
 				name = italian_unifiers_ig
-				months = long_modifier_time
+				days = long_modifier_time
 			}
 		}
+		# kmpmp
 		add_modifier = {
 			name = kmpmp_risorgimento
 		}
@@ -106,7 +108,19 @@ italian_unification.10 = {
 	option = {
 		name = italian_unification.10.a
 		ai_chance = {
-			base = 50
+			base = 40
+			modifier = {
+				trigger = {
+					c:SAR ?= this
+				}
+				add = 50
+			}
+			modifier = {
+				trigger = {
+					c:SIC ?= this
+				}
+				add = -35
+			}
 		}
 		default_option = yes
 		custom_tooltip = {
@@ -151,12 +165,12 @@ italian_unification.10 = {
 			}
 			add_modifier = {
 				name = modifier_risorgimento_supporters
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		add_modifier = {
 			name = modifier_risorgimento_support
-			months = long_modifier_time
+			days = long_modifier_time
 			is_decaying = yes
 		}
 		every_country = {
@@ -200,6 +214,26 @@ italian_unification.10 = {
 				}
 				add = -25
 			}
+			modifier = {
+				trigger = {
+					ig:ig_landowners = {
+						is_in_government = yes
+					}
+				}
+				add = 15
+			}
+			modifier = {
+				trigger = {
+					c:SAR ?= this
+				}
+				add = -50
+			}
+			modifier = {
+				trigger = {
+					c:SIC ?= this
+				}
+				add = 50
+			}
 		}
 		every_interest_group = {
 			limit = {
@@ -239,12 +273,12 @@ italian_unification.10 = {
 			}
 			add_modifier = {
 				name = modifier_risorgimento_opponents
-				months = normal_modifier_time
+				days = normal_modifier_time
 			}
 		}
 		add_modifier = {
 			name = modifier_risorgimento_opposition
-			months = long_modifier_time
+			days = long_modifier_time
 			is_decaying = yes
 		}
 		set_variable = risorgimento_anti_unifying_stance

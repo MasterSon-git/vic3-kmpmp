@@ -18,6 +18,26 @@ owns_or_has_subject_entire_state_region = {
 }
 
 # root - country
+# STATE_REGION - <s:STATE_***>
+owns_or_has_subject_entire_state_region_and_is_incorporated = {
+    $STATE_REGION$ = {
+        custom_tooltip = {
+            text = owns_or_has_subject_entire_state_region_and_is_incorporated_tooltip
+            any_scope_state = {
+                OR = {
+                    owner = root
+                    owner = {
+                        is_subject_of = root
+                    }
+                }
+                is_incorporated = yes
+                count = all
+            }
+        }
+    }
+}
+
+# root - country
 # this - STATE_REGION
 state_region_owned = {
     custom_tooltip = {
@@ -66,5 +86,41 @@ is_island = {
     #  none
     any_neighbouring_state = {
         count < 2
+    }
+}
+
+# root - country
+kmpmp_is_chinese_country = {
+    OR = {
+        any_primary_culture = {
+            has_discrimination_trait = han_chinese
+        }
+        country_has_primary_culture = cu:yi
+        country_has_primary_culture = cu:manchu
+    }
+    OR = {
+        capital.region = sr:region_north_china
+        capital.region = sr:region_south_china
+        capital.region = sr:region_manchuria
+        capital.region = sr:region_central_asia
+        capital.region = sr:region_himalayas
+    }
+}
+
+# root - war to check war exhaustion against scope:target_country
+# scope:target_country - comparison country
+# TARGET_VALUE - comparison value
+kmpmp_war_support_lower_or_equal_than = {
+    save_temporary_scope_value_as = {
+        name = target_value
+        value = $TARGET_VALUE$
+    }
+    custom_tooltip = {
+        text = kmpmp_war_support_lower_or_equal_than_tt
+
+        has_war_support = {
+            target = scope:target_country
+            value <= scope:target_value
+        }
     }
 }

@@ -305,6 +305,8 @@
 			first_name = Helmuth
 			last_name = von_Moltke
 			historical = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_jingoist_leader
 			hq = region_north_germany
 			age = 36
 			traits = {
@@ -312,6 +314,7 @@
 				experienced_artillery_commander #kmpmp
 				resupply_commander
 				reserved
+				# surveyor
 			}
 			save_scope_as = helmuth_gen
 		}
@@ -1385,7 +1388,7 @@
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_frigate
-				state_region = s:STATE_MALAYA
+				state_region = s:STATE_EAST_ANGLIA
 				count = 6
 			}
 
@@ -4086,7 +4089,7 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_frigate
 				state_region = s:STATE_GALICIA
-				count = 3 #2
+				count = 13 #2
 			}
 
 			combat_unit = {

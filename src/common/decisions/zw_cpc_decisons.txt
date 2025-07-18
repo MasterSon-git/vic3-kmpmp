@@ -14,9 +14,4 @@
 			type = je_zw_autonom_invest_management
 		}
 	}
-	
-	ai_chance = {
-		base = 0 
-	}
-
 }

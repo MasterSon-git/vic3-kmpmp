@@ -1,17 +1,39 @@
 ﻿kmpmp_break_truce_penalties_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
 
+    # add -15% Authority for 5 years
+    country_authority_mult = -0.15
+
+    # add -15% Influence for 5 years for breaking a truce
+    country_influence_mult = -0.15
+
+    # add -25% infamy decay for 5 years
+    country_infamy_decay_mult = -0.25
+
     # add -5 approval for IGs in opposition for 5 years
-    country_opposition_ig_approval_add = -5
+    country_opposition_ig_approval_add = -8
 }
 
 kmpmp_break_truce_penalties_decaying_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
-    
-    # add -10% Influence for 5 years for breaking a truce (decaying)
-    country_influence_mult = -0.1
-    # add -10% infamy decay for 5 years (decaying) (stapelbar mit weiteren Brüchen)
-    country_infamy_decay_mult = -0.1
-    # add -10% Authority for 5 years (decaying)
-    country_authority_mult = -0.1
+
+    # kmpmp ??? add something here??
 }
+
+# kmpmp_break_truce_penalties_modifier = {
+#     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+
+#     # add -5 approval for IGs in opposition for 5 years
+#     country_opposition_ig_approval_add = -5
+# }
+
+# kmpmp_break_truce_penalties_decaying_modifier = {
+#     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    
+#     # add -10% Influence for 5 years for breaking a truce (decaying)
+#     country_influence_mult = -0.1
+#     # add -10% infamy decay for 5 years (decaying) (stapelbar mit weiteren Brüchen)
+#     country_infamy_decay_mult = -0.1
+#     # add -10% Authority for 5 years (decaying)
+#     country_authority_mult = -0.1
+# }

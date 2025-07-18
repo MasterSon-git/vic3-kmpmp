@@ -1,13 +1,5 @@
-﻿# overwrite vanilla functions in "00_scrpted_triggers.txt"
-default_auto_expand_rule = {
-	is_under_construction = no				
-	occupancy >= 0.99
-	building_has_goods_shortage = no
-	weekly_profit > {
-		value = 200
-		multiply = level
-	}
-	state.market_access >= 1
+﻿# incorporated state only
+zw_trigger_incorporated_states_only = {
 	trigger_if = {
 		limit = {
 			owner = { has_variable = zw_var_auto_expand_incorporated_states_only }
@@ -16,12 +8,25 @@ default_auto_expand_rule = {
 	}
 }
 
+# overwrite vanilla functions in "00_scrpted_triggers.txt"
+default_auto_expand_rule = {
+	is_under_construction = no				
+	occupancy >= 0.95
+	building_has_goods_shortage = no
+	weekly_profit > {
+		value = 200
+		multiply = level
+	}
+	state.market_access >= 1
+	zw_trigger_incorporated_states_only = yes
+}
+
 # 01_industry.txt
 
 # building_shipyards
-zw_building_shipyards_auto_expand_trigger = {
+zw_trigger_auto_expand_building_shipyards = {
 	is_under_construction = no
-	occupancy >= 0.99
+	occupancy >= 0.95
 	building_has_goods_shortage = no
 	OR = {					
 		is_subsidized = yes
@@ -44,18 +49,13 @@ zw_building_shipyards_auto_expand_trigger = {
 		}
 	}
 	state.market_access >= 1
-	trigger_if = {
-		limit = {
-			owner = { has_variable = zw_var_auto_expand_incorporated_states_only }
-		}
-		state = { is_incorporated = yes }
-	}
+	zw_trigger_incorporated_states_only = yes
 }
 
 # building_military_shipyards
-zw_building_military_shipyards_auto_expand_trigger = {
+zw_trigger_auto_expand_building_military_shipyards = {
 	is_under_construction = no
-	occupancy >= 0.99
+	occupancy >= 0.95
 	building_has_goods_shortage = no
 	OR = {					
 		is_subsidized = yes
@@ -78,69 +78,13 @@ zw_building_military_shipyards_auto_expand_trigger = {
 		}
 	}
 	state.market_access >= 1
-	trigger_if = {
-		limit = {
-			owner = { has_variable = zw_var_auto_expand_incorporated_states_only }
-		}
-		state = { is_incorporated = yes }
-	}
-}
-
-# building_war_machine_industry
-zw_building_war_machine_industry_auto_expand_trigger = {
-	is_under_construction = no
-	occupancy >= 0.99
-	building_has_goods_shortage = no
-	OR = {					
-		is_subsidized = yes
-		weekly_profit > 0
-	}
-	trigger_if = {
-		limit = {
-			owner = {
-				NOT = {
-					any_military_formation = { is_mobilized = yes }
-				}
-			}
-		}
-		OR = {
-			market = {
-				mg:aeroplanes = { market_goods_pricier > 0 }
-			}
-			trigger_if = {
-				limit = { has_active_production_method = pm_tank_production }
-				market = {
-					mg:tanks = { market_goods_pricier > 0 }
-				}
-			}
-		}
-	}
-	trigger_else = {
-		OR = {
-			market = {
-				mg:aeroplanes = { market_goods_pricier >= 0.25 }
-			}
-			trigger_if = {
-				limit = { has_active_production_method = pm_tank_production }
-				market = {
-					mg:tanks = { market_goods_pricier >= 0.25 }
-				}
-			}
-		}
-	}
-	state.market_access >= 1
-	trigger_if = {
-		limit = {
-			owner = { has_variable = zw_var_auto_expand_incorporated_states_only }
-		}
-		state = { is_incorporated = yes }
-	}
+	zw_trigger_incorporated_states_only = yes
 }
 
 # building_arms_industry
-zw_building_arms_industry_auto_expand_trigger = {
+zw_trigger_auto_expand_building_arms_industry = {
 	is_under_construction = no
-	occupancy >= 0.99
+	occupancy >= 0.95
 	building_has_goods_shortage = no
 	OR = {					
 		is_subsidized = yes
@@ -164,18 +108,13 @@ zw_building_arms_industry_auto_expand_trigger = {
 		}
 	}
 	state.market_access >= 1
-	trigger_if = {
-		limit = {
-			owner = { has_variable = zw_var_auto_expand_incorporated_states_only }
-		}
-		state = { is_incorporated = yes }
-	}
+	zw_trigger_incorporated_states_only = yes
 }
 
 # building_artillery_foundries
-zw_building_artillery_foundries_auto_expand_trigger = {
+zw_trigger_auto_expand_building_artillery_foundries = {
 	is_under_construction = no
-	occupancy >= 0.99
+	occupancy >= 0.95
 	building_has_goods_shortage = no
 	OR = {					
 		is_subsidized = yes
@@ -199,18 +138,13 @@ zw_building_artillery_foundries_auto_expand_trigger = {
 		}
 	}
 	state.market_access >= 1
-	trigger_if = {
-		limit = {
-			owner = { has_variable = zw_var_auto_expand_incorporated_states_only }
-		}
-		state = { is_incorporated = yes }
-	}
+	zw_trigger_incorporated_states_only = yes
 }
 
 # building_munition_plants
-zw_building_munition_plants_auto_expand_trigger = {
+zw_trigger_auto_expand_building_munition_plants = {
 	is_under_construction = no
-	occupancy >= 0.99
+	occupancy >= 0.95
 	building_has_goods_shortage = no
 	OR = {					
 		is_subsidized = yes
@@ -234,20 +168,15 @@ zw_building_munition_plants_auto_expand_trigger = {
 		}
 	}
 	state.market_access >= 1
-	trigger_if = {
-		limit = {
-			owner = { has_variable = zw_var_auto_expand_incorporated_states_only }
-		}
-		state = { is_incorporated = yes }
-	}
+	zw_trigger_incorporated_states_only = yes
 }
 
 # 06_urban_center.txt
 
 # building_power_plant
-zw_building_power_plant_auto_expand_trigger = {
+zw_trigger_auto_expand_building_power_plant = {
 	is_under_construction = no
-	occupancy >= 0.99
+	occupancy >= 0.95
 	building_has_goods_shortage = no
 	OR = {
 		is_subsidized = yes
@@ -257,20 +186,15 @@ zw_building_power_plant_auto_expand_trigger = {
 		sg:electricity = { state_goods_pricier >= 0.10 }
 	}
 	state.market_access >= 1
-	trigger_if = {
-		limit = {
-			owner = { has_variable = zw_var_auto_expand_incorporated_states_only }
-		}
-		state = { is_incorporated = yes }
-	}
+	zw_trigger_incorporated_states_only = yes
 }
 
 # 11_private_infrastructure.txt
 
 # building_railway
-zw_building_railway_auto_expand_trigger = {
+zw_trigger_auto_expand_building_railway = {
 	is_under_construction = no
-	occupancy >= 0.99
+	occupancy >= 0.95
 	building_has_goods_shortage = no
 	OR = {
 		is_subsidized = yes
@@ -285,10 +209,5 @@ zw_building_railway_auto_expand_trigger = {
 			relative_infrastructure <= 1
 		}
 	}
-	trigger_if = {
-		limit = {
-			owner = { has_variable = zw_var_auto_expand_incorporated_states_only }
-		}
-		state = { is_incorporated = yes }
-	}
+	zw_trigger_incorporated_states_only = yes
 }

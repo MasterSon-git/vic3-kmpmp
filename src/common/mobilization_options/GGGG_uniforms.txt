@@ -35,7 +35,7 @@ GGGG_mo_full_dress = {
         }
         market ?= {
             mg:luxury_clothes ?= {
-                market_goods_sell_orders > 0
+                has_potential_supply = yes
             }
         }
     }
@@ -92,10 +92,10 @@ kmpmp_mo_utility_gear = {
         }
         market ?= {
             mg:fabric ?= {
-                market_goods_sell_orders > 0
+                has_potential_supply = yes
             }
             mg:tools ?= {
-                market_goods_sell_orders > 0
+                has_potential_supply = yes
             }
         }
     }
@@ -146,7 +146,7 @@ GGGG_mo_modern_uniform = {
         }
         market ?= {
             mg:steel ?= {
-                market_goods_sell_orders > 0
+                has_potential_supply = yes
             }
         }
     }

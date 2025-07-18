@@ -2,6 +2,7 @@
  kmpmp_japan_buff_start:0 "Der Weg zum Westen"
  kmpmp_japan_buff_start_decaying:0 "Geist von Shiroyama"
  kmpmp_japan_buff_meiji_complete:0 "Reich der aufgehenden Sonne"
+ kmpmp_japan_buff_meiji_complete_condition_tt:0 "Schließe [SCOPE.sJournalEntry('journal_entry').GetName] vor #v 1885#! ab um den Buff zu erhalten:"
 
  kmpmp_ev_japan_buff.1.t:0 "$kmpmp_japan_buff_start$"
  kmpmp_ev_japan_buff.1.d:0 "Japan buffs aktivieren"
@@ -38,8 +39,8 @@
  mobilization_option_school_of_defence_desc:0 "Schule der Defensive"
  mobilization_option_grand_battleplan:0 "Grosser Schlachtplan"
  mobilization_option_grand_battleplan_desc:0 "Grosser Schlachtplan"
- mobilization_option_superior_firepower:0 "èberlegene feuerkraft"
- mobilization_option_superior_firepower_desc:0 "èberlegene feuerkraft"
+ mobilization_option_superior_firepower:0 "Überlegene Feuerkraft"
+ mobilization_option_superior_firepower_desc:0 "Überlegene Feuerkraft"
  mobilization_option_mass_assault:0 "Massenangriff"
  mobilization_option_mass_assault_desc:0 "Massenangriff"
 

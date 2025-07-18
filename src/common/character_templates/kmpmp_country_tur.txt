@@ -1,0 +1,46 @@
+﻿tur_abdulmecid_osmanoglu_template = {
+    first_name = Abdulmecid
+    last_name = Osmanoglu
+    historical = yes
+    culture = primary_culture
+    heir = yes
+    birth_date = 1823.4.25
+    interest_group = ig_intelligentsia
+    ideology = ideology_moderate
+    traits = {
+        trait_child
+        imperious
+    }
+}
+
+tur_abdulhamid_ii_template = {
+    first_name = Abdul_Hamid
+    last_name = Osmanoglu
+    historical = yes
+    culture = cu:turkish
+    female = no
+    dna = dna_abdul_hamid_ii
+    ideology = ideology_authoritarian
+    interest_group = ig_intelligentsia #ig_landowners
+    birth_date = 1842.9.21
+	ruler = yes
+    traits = {
+        pious
+        imperious #persistent
+        basic_diplomat
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:TUR
+            this = c:TUR
+            c:TUR = { has_law = law_type:law_monarchy }
+        }
+        interest_group_trigger = {
+            is_marginal = no
+            is_interest_group_type = ig_intelligentsia #ig_landowners
+        }
+        earliest_usage_date = 1870.1.1
+        latest_usage_date = 1900.1.1
+        chance = 50
+    }
+}

@@ -109,9 +109,14 @@ kmpmp_ev_japan_buff.2 = {
     }
 
     immediate = {
-        add_modifier = {
-            name = kmpmp_japan_buff_meiji_complete
-            years = 15
+        if = {
+            limit = {
+                game_date < 1885.1.1
+            }
+            add_modifier = {
+                name = kmpmp_japan_buff_meiji_complete
+                years = 15
+            }
         }
 
         ruler = {

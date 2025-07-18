@@ -2,11 +2,13 @@
  TRIGGER_MILITARY_FORMATION_NUM_UNITS_GREATER_OR_EQUAL: "Anzahl der Einheiten in der Armee ist grösser oder gleich $TARGET_VALUE|0v$"
 
  TRIGGER_ANY_IN_GLOBAL_LIST_COUNT: "$PARAMETERS$ $FILTER$:"
- TRIGGER_ANY_SCOPE_STATE_ALL_IN_STATE_REGION: "Alle [Concept('concept_state', '$concept_states$')] in der [concept_state_region] [STATE_REGION.GetName]"
- TRIGGER_ANY_SCOPE_STATE_ALL_IN_STATE_REGION_NOT: "Kein [concept_state] in der [concept_state_region] [STATE_REGION.GetName]"
+# added in vanilla 
+# TRIGGER_ANY_SCOPE_STATE_ALL_IN_STATE_REGION: "Alle [Concept('concept_state', '$concept_states$')] in der [concept_state_region] [STATE_REGION.GetName]"
+# TRIGGER_ANY_SCOPE_STATE_ALL_IN_STATE_REGION_NOT: "Kein [concept_state] in der [concept_state_region] [STATE_REGION.GetName]"
  TRIGGER_ANY_SCOPE_BUILDING_COUNT_IN_STATE: "$PARAMETERS$ Gebäude erfüllen die Bedingungen in diesem Staat:"
 
  owns_or_has_subject_entire_state_region_tooltip: "Gesamte [concept_state_region] [THIS.GetStateRegion.GetName] im Besitz oder vasallisiert durch [SCOPE.GetRootScope.GetCountry.GetName]"
+ owns_or_has_subject_entire_state_region_and_is_incorporated_tooltip: "Gesamte [concept_state_region] [THIS.GetStateRegion.GetName] im Besitz oder vasallisiert durch [SCOPE.GetRootScope.GetCountry.GetName] und inkorporiert"
  state_region_owned_tooltip: "Gesamte [concept_state_region] [THIS.GetStateRegion.GetName] im Besitz durch [SCOPE.GetRootScope.GetCountry.GetName]"
  state_region_owned_and_incorporated_tooltip: "Gesamte [concept_state_region] [SCOPE.sStateRegion('state_region_to_check').GetName] im Besitz und inkorporiert durch [SCOPE.GetRootScope.GetCountry.GetName]"
 
@@ -16,3 +18,5 @@
  kmpmp_owns_entire_state_region_and_is_incorporated_tt: "Gesamte [concept_state_region] im Besitz und inkorporiert durch [SCOPE.GetRootScope.GetCountry.GetName]"
  
  kmpmp_owns_all_sca_states_tooltip: "Besitzt alle Skandinavischen Staaten"
+
+ kmpmp_war_support_lower_or_equal_than_tt: "Die [SCOPE.sCountry('target_country').GetAdjectiveNoFormatting|l]e [concept_war_support] ist kleiner oder gleich [SCOPE.GetValue('target_value')|0v]"

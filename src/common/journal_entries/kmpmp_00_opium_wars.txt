@@ -2,13 +2,13 @@
 	icon = "gfx/interface/icons/event_icons/event_military.dds"
 
 	group = je_group_foreign_affairs
-	
+
 	complete = {
 		OR = {
-			has_diplomatic_pact = {
-				who = scope:target
-				type = foreign_investment_rights
+			scope:target ?= {
+				has_law = law_type:law_free_trade
 			}
+			has_treaty_foreign_investment_rights_with = { TARGET = scope:target }
 			any_scope_state = {
 				is_treaty_port = yes
 				state_region = {
@@ -16,6 +16,11 @@
 						owner = scope:target
 					}
 				}
+			}
+		}
+		hidden_trigger = {
+			scope:target = {
+				has_modifier = opium_wars_lost
 			}
 		}
 	}
@@ -79,5 +84,5 @@
 	weight = 10000
 	should_be_pinned_by_default = yes
 
-	timeout = 1825
+	timeout = 3650
 }

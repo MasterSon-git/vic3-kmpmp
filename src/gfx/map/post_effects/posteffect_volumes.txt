@@ -112,7 +112,10 @@ posteffect_values = {
 }
 
 
-
+## Area volumes locations ###
+# These are the classic 'post processing volumes' which can be placed around the world
+# These are locations only, use settings above to change their effects
+posteffect_volumes = {
 	# Paper Map
 	posteffect_volume = {
 		name = "Paper Map"
@@ -142,3 +145,4 @@ posteffect_values = {
 		height = 50 #700			# Should be equal to the "camera zoom" when you want the volume to have half effect if you "fade distance" is above 0
 		fade_distance = 50 #200 	# The lenght of the "camera zoom" value before the volume takes half effect
 	}
+}

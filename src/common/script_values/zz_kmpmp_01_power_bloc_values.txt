@@ -67,7 +67,7 @@ power_bloc_leverage_gain = {
 	}
 	if = {
 		limit = {
-			has_treaty_port_in_country = scope:target
+			has_treaty_port_in_market = scope:target.market
 		}
 		add = {
 			value = 200
@@ -326,26 +326,6 @@ power_bloc_mandate_progress_by_rank = {
 	# kmpmp
 	if = {
 		limit = {
-			power_bloc_leader ?= c:JAP
-		}
-		add = {
-			value = 5
-			desc = "KMPMP_POWER_BLOC_MANDATE_PROGRESS_JAPAN"
-		}
-	}
-	# kmpmp
-	if = {
-		limit = {
-			has_modifier = kmpmp_player_boost_expand_influence
-		}
-		add = {
-			value = 3
-			desc = "KMPMP_POWER_BLOC_MANDATE_PROGRESS_FROM_PLAYER_BOOST_EXPAND_INFLUENCE"
-		}
-	}
-	# kmpmp
-	if = {
-		limit = {
             power_bloc_leader ?= {
                 modifier:country_kmpmp_power_bloc_mandate_progress_add > 0
             }
@@ -430,6 +410,18 @@ power_bloc_mandate_progress_by_rank = {
 			value = power_bloc_insignificant_power_non_leader_members
 			multiply = power_bloc_mandate_progress_per_insignificant_power_member
 			desc = "POWER_BLOC_MANDATE_PROGRESS_FROM_INSIGNIFICANT_POWER_MEMBERS"
+		}	
+	}
+		# kmpmp
+	if = {
+		limit = {
+            power_bloc_leader ?= {
+                modifier:country_kmpmp_power_bloc_mandate_progress_mult > 0
+            }
+		}
+		multiply = {
+			value = power_bloc_leader.modifier:country_kmpmp_power_bloc_mandate_progress_mult
+			desc = "KMPMP_POWER_BLOC_MANDATE_PROGRESS_FROM_COUNTRY_MODIFIER"
 		}
 	}
 }

@@ -9,6 +9,16 @@
 	monthly_progress = {
 		if = {
 			limit = {
+				# Your absolute GDP is relatively high
+				gdp_ranking <= 10 # Lower = better
+			}
+			add = {
+				desc = "earning_recognition_progress_gdp_tt"
+				value = 1
+			}
+		}	
+		if = {
+			limit = {
 				# Your GDP per Capita is relatively high
 				# gdp_per_capita_ranking <= 20 # Lower = better
 				kmpmp_gdp_per_capita >= 1
@@ -50,6 +60,30 @@
 		}
 		if = {
 			limit = {
+				any_scope_treaty = {
+					any_scope_article = {
+						has_type = offer_embassy
+						target_country = root
+					}
+				}
+			}
+			add = {
+				desc = "offer_embassy"
+				value = {
+					every_scope_treaty = {
+						limit = {
+							any_scope_article = {
+								has_type = offer_embassy
+								target_country = root
+							}
+						}
+						add = 1
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
 				# Slavery is legal
 				NOT = {
 					has_law = law_type:law_slavery_banned
@@ -60,6 +94,16 @@
 				value = 1
 			}
 		}
+		if = {
+			limit = {
+				# Isolationist
+				has_law_or_variant = law_type:law_isolationism
+			}
+			subtract = {
+				desc = "earning_recognition_isolationism_tt"
+				value = 1
+			}
+		}		
 		if = {
 			limit = {
 				# Serfdom is legal
@@ -93,7 +137,7 @@
 		if = {
 			limit = {
 				# Literacy rating is low
-				literacy_rate <= 0.2
+				literacy_rate < 0.2
 			}
 			subtract = {
 				desc = "earning_recognition_low_literacy_tt"
@@ -102,15 +146,17 @@
 		}
 		if = {
 			limit = {
-				# Your GDP per Capita is relatively low
-				# gdp_per_capita_ranking >= 50 # Higher = worse
+				# Absolute GDP ranking is low
+				# gdp_ranking > 30
 				kmpmp_gdp_per_capita <= 0.8
 			}
 			subtract = {
+				# desc = "earning_recognition_low_gdp_tt"
 				desc = "earning_recognition_low_gdpc_tt"
 				value = 1
 			}
 		}
+		# kmpmp removed in vanilla since 1.9.6 - but we llike this
 		if = {
 			limit = {
 				# Your Standard of Living is relatively low
@@ -123,7 +169,7 @@
 			}
 		}
 	}
-	start_value = 10
+	start_value = 0
 	min_value = 0
 	max_value = 200
 }
