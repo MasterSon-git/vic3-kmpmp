@@ -14,6 +14,8 @@ company_fundidora_monterrey = {
 
 	extension_building_types = {
 		building_iron_mine
+		building_railway #kmpmp
+		building_motor_industry #kmpmp
 	}
 
 	possible_prestige_goods = {
@@ -52,8 +54,9 @@ company_fundidora_monterrey = {
 	}
 
 	prosperity_modifier = {
-		building_railway_throughput_add = 0.15 #0.05
-		building_iron_mine_throughput_add = 0.1
+		building_railway_throughput_add = 0.05
+		building_iron_mine_throughput_add = 0.10
+		building_coal_mine = 0.05 #kmpmp
 	}
 
 	ai_will_do = {
@@ -142,75 +145,6 @@ company_el_aguila = {
 				region = sr:region_mexico
 				is_incorporated = yes
 				is_coastal = yes
-			}
-		}
-	}
-
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}
-}
-
-# Compañía de Salitres y Ferrocarril de Antofagasta
-company_csfa = {
-	icon = "gfx/interface/icons/company_icons/historical_company_icons/bolivia_csfa.dds"
-	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
-
-	flavored_company = yes
-
-	preferred_headquarters = { STATE_ANTOFAGASTA }
-
-	building_types = {
-		building_sulfur_mine
-		building_railway
-	}
-
-	extension_building_types = {
-		building_iron_mine
-	}
-
-	potential = {
-		has_interest_marker_in_region = region_andes
-	}
-
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = s:STATE_ANTOFAGASTA
-			}
-		}
-	}
-
-	possible = {
-		has_technology_researched = railways
-		any_scope_state = {
-			state_region = s:STATE_ANTOFAGASTA
-			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_sulfur_mine
-				level >= 5
-			}
-		}
-	}
-
-	prosperity_modifier = {
-		state_infrastructure_mult = 0.1 #0.05
-		interest_group_ig_industrialists_approval_add = 3
-	}
-
-	ai_will_do = {
-		has_technology_researched = railways
-		any_scope_state = {
-			state_region = s:STATE_ANTOFAGASTA
-			is_incorporated = yes
-		}
-	}
-
-	ai_construction_targets = {
-		building_sulfur_mine = {
-			level = 5
-			state_trigger = {
-				state_region = s:STATE_ANTOFAGASTA
 			}
 		}
 	}
@@ -329,18 +263,21 @@ company_la_rosada = {
 
 	extension_building_types = {
 		building_iron_mine
+		building_lead_mine #kmpmp
+		building_coal_mine #kmpmp
+		building_logging_camp #kmpmp
 	}
 
-	possible_prestige_goods = {
-		prestige_good_generic_steel
-	}
-
-	prestige_goods_trigger = {
-		custom_tooltip = {
-			text = je_prestige_goods_steel_complete_tt
-			has_variable = prestige_good_generic_steel_var
-		}
-	}
+#	possible_prestige_goods = {
+#		prestige_good_generic_steel
+#	}
+#
+#	prestige_goods_trigger = {
+#		custom_tooltip = {
+#			text = je_prestige_goods_steel_complete_tt
+#			has_variable = prestige_good_generic_steel_var
+#		}
+#	}
 
 	potential = {
 		has_interest_marker_in_region = region_la_plata
@@ -369,6 +306,7 @@ company_la_rosada = {
 	prosperity_modifier = {
 		unit_defense_mult = 0.05
 		building_iron_mine_throughput_add = 0.15 #0.1
+		unit_offense_mult = 0.05 #kmpmp
 	}
 
 	ai_will_do = {
@@ -404,7 +342,6 @@ company_peruvian_amazon = {
 
 	building_types = {
 		building_rubber_plantation
-		building_tooling_workshops # kmpmp
 	}
 
 	extension_building_types = {
@@ -436,15 +373,9 @@ company_peruvian_amazon = {
 
 	prosperity_modifier = {
 		state_loyalists_from_political_movements_mult = 0.1
-		# building_group_bg_rubber_mortality_mult = 0.1
-		# kmpmp
-		country_loyalism_increases_full_acceptance_mult = 0.1
-		country_loyalism_increases_second_rate_citizen_mult = 0.1
-		country_loyalism_increases_open_prejudice_mult = 0.1
-		country_loyalism_increases_cultural_erasure_mult = 0.1
-		country_loyalism_increases_violent_hostility_mult = 0.1
-
-		building_steel_mills_throughput_add = 0.1
+		building_group_bg_rubber_mortality_mult = 0.1
+		building_rubber_plantation_thoughput_add = 0.10 #kmpmp
+		building_group_bg_plantation_throughput_add = 0.10 #kmpmp
 	}
 
 	ai_will_do = {
@@ -484,7 +415,7 @@ company_kablin = {
 	extension_building_types = {
 		building_sulfur_mine
 		building_dye_plantation #kmpmp
-		building_chemical_plants #kmpmp
+		building_synthetics_plants #kmpmp
 	}
 
 	possible_prestige_goods = {
@@ -562,7 +493,7 @@ company_csfa = {
 		building_iron_mine
 		building_coal_mine #kmpmp
 		building_explosives_factory #kmpmp
-		building_chemical_plants #kmpmp
+		building_synthetics_plants #kmpmp
 	}
 
 	potential = {
@@ -611,6 +542,57 @@ company_csfa = {
 		}
 	}
 
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Caribbean Petroleum Company
+company_caribbean_petroleum = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/venezuela_caribbean_petroleum_company.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	
+	flavored_company = yes
+	
+	building_types = {
+		building_oil_rig
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_gran_colombia
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_ZULIA
+					state_region = s:STATE_MIRANDA
+				}
+			}
+		}
+	}	
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_ZULIA
+				state_region = s:STATE_MIRANDA
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_oil_rig
+				level >= 5
+			}
+		}
+		has_technology_researched = pumpjacks
+	}
+	
+	prosperity_modifier = {
+		country_convoys_capacity_mult = 0.1
+		interest_group_ig_industrialists_approval_add = 3
+	}
+	
 	ai_weight = {
 		value = 3 # Higher base value for flavored companies
 	}

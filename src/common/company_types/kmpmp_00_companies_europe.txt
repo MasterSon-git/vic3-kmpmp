@@ -976,6 +976,7 @@ company_trubia = {
 	extension_building_types = {
 		building_munition_plants
 		building_explosives_factory
+		building_chemical_plants
 	}
 
 	possible_prestige_goods = {
@@ -1014,9 +1015,9 @@ company_trubia = {
 	}
 
 	prosperity_modifier = {
-		unit_offense_mult = 0.05
+		unit_offense_mult = 0.10
 		unit_defense_mult = 0.05 # kmpmp
-		country_military_goods_cost_mult = -0.05
+		building_steel_mills_throughput_add = 0.10 #kmpmp
 	}
 
 	ai_will_do = {

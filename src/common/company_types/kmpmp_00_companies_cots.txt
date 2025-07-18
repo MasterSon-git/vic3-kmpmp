@@ -557,3 +557,47 @@ company_estaleiro_maua = {
 		value = 3 # Higher base value for flavored companies
 	}
 }
+
+# Empresas Eléctricas Asociadas
+company_eea = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/peru_empresas_electricas_asociadas.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+	
+	building_types = {  
+		building_power_plant
+	}
+	
+	potential = {
+		has_dlc_feature = rp1_content
+		has_interest_marker_in_region = region_andes
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_LIMA
+			}
+		}
+	}		
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_LIMA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_power_plant
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_infrastructure_from_population_mult = 0.10 #0.05
+		state_construction_mult = 0.05
+		state_infrastructure_mult = 0.05
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
