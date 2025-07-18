@@ -83,7 +83,7 @@ dp_annex_subject = {
 	}
 }
 
-# kmpmp - allow player to set war goals on target
+# kmpmp - allow target to set war goals on joining countries
 dp_revolution = {
 	requires_interest_marker = no
 	enable_switch_sides = yes
@@ -131,6 +131,51 @@ dp_revolution = {
 		OR = {
 			has_interest_marker_in_region = scope:target_capital_region
 			has_interest_marker_in_region = scope:initiator_capital_region
+		}
+	}
+
+	on_weekly_pulse = {}
+
+	on_war_begins = {}
+
+	on_war_end = {}
+}
+
+# kmpmp - allow target to set war goals on joining countries
+dp_secession = {
+	requires_interest_marker = no
+	initiator_can_add_war_goals = no
+	target_can_add_war_goals = yes #no
+	backing_down_always_ends_play = no
+	add_infamy_for_starting_initiator_wargoals = no
+
+	war_goal = secession
+
+	texture = "gfx/interface/icons/war_goals/secession.dds"
+
+	selectable_in_lens = {
+		always = no
+	}
+
+	possible = {
+		scope:initiator = { is_secessionist = yes }
+	}
+
+	additional_involvement_trigger = {
+		NOT = { is_country_type = decentralized }
+		aggressive_diplomatic_plays_permitted = yes
+
+		scope:initiator = {
+			capital = {
+				region = {
+					save_temporary_scope_as = secession_capital_region
+				}
+			}
+		}
+
+		OR = {
+			has_interest_marker_in_region = scope:secession_capital_region
+			is_home_country_for = scope:initiator
 		}
 	}
 

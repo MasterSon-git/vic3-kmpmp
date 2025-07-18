@@ -6,3 +6,5 @@
 
  setting_kmpmp_trade_states_relations_vanilla: "Vanilla"
  setting_kmpmp_trade_states_relations_vanilla_desc: "Vanilla behavior, relations to target country must be at least $relations_neutral$."
+
+ kmpmp_trade_states_influcence_cost: "$trade_states$"

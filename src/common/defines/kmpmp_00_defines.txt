@@ -1,5 +1,5 @@
 ﻿NPolitics = {
-	LAW_ENACTMENT_LAW_COMMITMENT_EFFECT = 0.1 #0.05
+	LAW_ENACTMENT_LAW_COMMITMENT_EFFECT = 0.1 #0.05 # Committing to enacting a law via treaty adds this much to pass chance, scaled by the number of ranks the country the comittee has on the committer
 }
 
 NEconomy = {

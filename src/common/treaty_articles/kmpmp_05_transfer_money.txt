@@ -397,6 +397,54 @@
 		infamy = {
 			value = 0
 
+			# if = {
+			# 	limit = {
+			# 		exists = scope:quantity
+			# 	}
+			# 	add = {
+			# 		desc = "INFAMY_QUANTITY_FACTOR"
+			# 		value = scope:quantity
+			# 		divide = 1000
+			# 		min = 5
+			# 		max = 50
+			# 	}
+			# }
+
+			# if = {
+			# 	limit = {
+			# 		any_scope_treaty = {
+			# 			any_scope_article = {
+			# 				has_type = money_transfer
+			# 				target_country = root
+			# 			}
+			# 		}
+			# 	}
+			# 	add = {
+			# 		value = 0
+
+			# 		every_scope_treaty = {
+			# 			limit = {
+			# 				any_scope_article = {
+			# 					has_type = money_transfer
+			# 					target_country = root
+			# 				}
+			# 			}
+			# 			every_scope_article = {
+			# 				limit = {
+			# 					has_type = money_transfer
+			# 					target_country = root
+			# 				}
+
+			# 				desc = "INFAMY_MONEY_TRANSFER_QUANTITY_ROOT_HAS_ALREADY_ESTABLISHED_FACTOR"
+			# 				add = input_quantity
+			# 				divide = 2000
+			# 			}
+			# 		}
+			# 		max = 50
+			# 	}
+			# }
+
+			# kmpmp - change infamy scale to quantity by target income
 			if = {
 				limit = {
 					exists = scope:quantity
@@ -404,7 +452,26 @@
 				add = {
 					desc = "INFAMY_QUANTITY_FACTOR"
 					value = scope:quantity
-					divide = 1000
+					divide = {
+						value = scope:target_country.income
+						divide = 4
+					}
+					save_temporary_value_as = relative_quantity_to_infome_factor
+
+					if = { # first 50% give only 30% of max infamy
+						limit = {
+							scope:relative_quantity_to_infome_factor <= 0.5
+						}
+						divide = 0.5
+						multiply = 15
+					}
+					else = { # next 50%
+						subtract = 0.5
+						divide = 0.5
+						multiply = 35
+						add = 15
+					}
+
 					min = 5
 					max = 50
 				}
@@ -436,8 +503,28 @@
 							}
 
 							desc = "INFAMY_MONEY_TRANSFER_QUANTITY_ROOT_HAS_ALREADY_ESTABLISHED_FACTOR"
-							add = input_quantity
-							divide = 2000
+							add = {
+								value = scope:quantity
+								divide = {
+									value = scope:target_country.income
+									divide = 4
+								}
+								save_temporary_value_as = relative_quantity_to_infome_factor
+
+								if = { # first 50% give only 30% of max infamy
+									limit = {
+										scope:relative_quantity_to_infome_factor <= 0.5
+									}
+									divide = 0.5
+									multiply = 7.5
+								}
+								else = { # next 50%
+									subtract = 0.5
+									divide = 0.5
+									multiply = 17.5
+									add = 7.5
+								}
+							}
 						}
 					}
 					max = 50

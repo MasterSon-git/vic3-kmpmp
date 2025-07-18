@@ -100,12 +100,13 @@
 			years = 5
 			multiplier = kmpmp_break_truce_penalties_multiplier
 		}
-		add_modifier = {
-			name = kmpmp_break_truce_penalties_decaying_modifier
-			years = 5
-			is_decaying = yes
-			multiplier = kmpmp_break_truce_penalties_multiplier
-		}
+		# kmpmp actually no more decaying debuffs, but modifier still exists
+		# add_modifier = {
+		# 	name = kmpmp_break_truce_penalties_decaying_modifier
+		# 	years = 5
+		# 	is_decaying = yes
+		# 	multiplier = kmpmp_break_truce_penalties_multiplier
+		# }
 	}
 
 	ai = {
