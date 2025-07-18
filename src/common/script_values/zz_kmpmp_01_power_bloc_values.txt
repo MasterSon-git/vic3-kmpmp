@@ -410,6 +410,18 @@ power_bloc_mandate_progress_by_rank = {
 			value = power_bloc_insignificant_power_non_leader_members
 			multiply = power_bloc_mandate_progress_per_insignificant_power_member
 			desc = "POWER_BLOC_MANDATE_PROGRESS_FROM_INSIGNIFICANT_POWER_MEMBERS"
+		}	
+	}
+		# kmpmp
+	if = {
+		limit = {
+            power_bloc_leader ?= {
+                modifier:country_kmpmp_power_bloc_mandate_progress_mult > 0
+            }
+		}
+		multiply = {
+			value = power_bloc_leader.modifier:country_kmpmp_power_bloc_mandate_progress_mult
+			desc = "KMPMP_POWER_BLOC_MANDATE_PROGRESS_FROM_COUNTRY_MODIFIER"
 		}
 	}
 }

@@ -164,5 +164,8 @@
  country_kmpmp_power_bloc_mandate_progress_add: "[concept_power_bloc_mandate_progress]"
  country_kmpmp_power_bloc_mandate_progress_add_desc: "A bonus or penalty to [concept_power_bloc_mandate_progress]"
 
+ country_kmpmp_power_bloc_mandate_progress_mult: "[concept_power_bloc_mandate_progress]"
+ country_kmpmp_power_bloc_mandate_progress_mult_desc: "A bonus or penalty to [concept_power_bloc_mandate_progress]"
+
  country_kmpmp_land_battle_size_mult: "Land battle size"
  country_kmpmp_land_battle_size_mult_desc: "An increase or decrease to the land battle size"

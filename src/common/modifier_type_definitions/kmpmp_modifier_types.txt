@@ -7,6 +7,15 @@
 	}
 }
 
+country_kmpmp_power_bloc_mandate_progress_mult = {
+	decimals = 2
+	color = good
+	percent = yes
+	game_data = {
+		ai_value = 0
+	}
+}
+
 country_kmpmp_war_support_from_power_bloc_principles_add = {
 	decimals = 2
 	color = good

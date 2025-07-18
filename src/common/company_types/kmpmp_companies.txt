@@ -141,6 +141,16 @@ company_imperial_porcelan_company = {
 		building_lead_mine
 	}
 
+	extension_building_types = {
+		building_dye_plantation
+		building_oil_rig
+		building_logging_camp
+	}
+
+	possible_prestige_goods = {
+		prestige_good_kmpmp_russia_porcelain
+	}
+
 	potential = {
 		has_interest_marker_in_region = region_russia
 	}
@@ -154,6 +164,7 @@ company_imperial_porcelan_company = {
 	}
 
 	possible = {
+		has_technology_researched = chemical_bleaching
 		any_scope_state = {
 			state_region = s:STATE_INGRIA
 			is_incorporated = yes
@@ -171,11 +182,11 @@ company_imperial_porcelan_company = {
 		building_logging_camp_throughput_add = 0.1
 		building_sulfur_mine_throughput_add = 0.1
 		# kmpmp
-		country_radicalism_increases_full_acceptance_mult = -0.1
-		country_radicalism_increases_second_rate_citizen_mult = -0.1
-		country_radicalism_increases_open_prejudice_mult = -0.1
-		country_radicalism_increases_cultural_erasure_mult = -0.1
-		country_radicalism_increases_violent_hostility_mult = -0.1
+		#country_radicalism_increases_full_acceptance_mult = -0.1
+		#country_radicalism_increases_second_rate_citizen_mult = -0.1
+		#country_radicalism_increases_open_prejudice_mult = -0.1
+		#country_radicalism_increases_cultural_erasure_mult = -0.1
+		#country_radicalism_increases_violent_hostility_mult = -0.1
 	}
 
 	ai_will_do = {

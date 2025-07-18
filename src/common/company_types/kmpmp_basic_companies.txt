@@ -10,6 +10,10 @@
         building_arts_academy
     }
 
+	extension_building_types = {
+		building_paper_mills
+	}
+
     possible = { 
         any_scope_state = {
             is_incorporated = yes
@@ -21,8 +25,9 @@
     }
     
     prosperity_modifier = {
-        building_power_plant_throughput_add = 0.1
-        building_tooling_workshops_throughput_add = 0.1
+        building_power_plant_throughput_add = 0.15 #0.1
+        building_tooling_workshops_throughput_add = 0.15 #0.1
+        country_prestige_mult = 0.15 
     }
 
     ai_will_do = {
