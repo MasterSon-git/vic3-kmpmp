@@ -112,12 +112,12 @@ company_pernambuco_textiles = {
 	#	prestige_good_generic_clothes
 	#}
 
-	prestige_goods_trigger = {
-		custom_tooltip = {
-			text = je_prestige_goods_clothes_complete_tt
-			has_variable = prestige_good_generic_clothes_var
-		}
-	}
+	# prestige_goods_trigger = {
+	# 	custom_tooltip = {
+	# 		text = je_prestige_goods_clothes_complete_tt
+	# 		has_variable = prestige_good_generic_clothes_var
+	# 	}
+	# }
 
 	potential = {
 		has_dlc_feature = rp1_content
@@ -280,7 +280,7 @@ company_estanifera_llallagua = {
 	}
 
 	possible_prestige_goods = {
-		prestige_good_potosi_lead #kmpmp
+		prestige_good_kmpmp_potosi_lead #kmpmp
 	}
 
 	potential = {
@@ -428,9 +428,16 @@ company_argentinian_wine = {
 		building_motor_industry
 	}
 
-	#possible_prestige_goods = {
-	#	prestige_good_premium_vine #kmpmp
-	#}
+	possible_prestige_goods = {
+		prestige_good_generic_kmpmp_premium_wine #kmpmp
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_good_generic_kmpmp_premium_wine_complete_tt
+			has_variable = prestige_good_generic_kmpmp_premium_wine_var
+		}
+	}
 
 	potential = {
 		has_dlc_feature = rp1_content

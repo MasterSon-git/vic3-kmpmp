@@ -491,6 +491,10 @@ company_korean_tungsten_company = {
 		building_tooling_workshops
 	}
 
+	possible_prestige_goods = {
+		prestige_good_kmpmp_korean_lead
+	}
+
 	potential = {
 		has_interest_marker_in_region = region_manchuria
 	}

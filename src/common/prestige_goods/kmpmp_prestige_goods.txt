@@ -16,6 +16,18 @@ prestige_good_kmpmp_la_plata_sulfur = {
     texture = "gfx/interface/icons/goods_icons/prestige_goods/sicilian_sulfur_prestige.dds"
 }
 
+prestige_good_kmpmp_potosi_lead = {
+    base_good = lead
+    prestige_bonus = 0.1
+    texture = "gfx/interface/icons/goods_icons/lead.dds"
+}
+
+prestige_good_kmpmp_korean_lead = {
+    base_good = lead
+    prestige_bonus = 0.1
+    texture = "gfx/interface/icons/goods_icons/lead.dds"
+}
+
 prestige_good_generic_kmpmp_premium_engines = {
     base_good = engines
     prestige_bonus = 0.1
@@ -38,3 +50,10 @@ prestige_good_kmpmp_russia_porcelain = {
 	base_good = porcelain
 	prestige_bonus = 0.1
 	texture = "gfx/interface/icons/goods_icons/prestige_goods/meissen_porcelain_prestige.dds"
+}
+    
+prestige_good_generic_kmpmp_premium_wine = {
+    base_good = wine
+    prestige_bonus = 0.1
+    texture = "gfx/interface/icons/goods_icons/wine.dds"
+}

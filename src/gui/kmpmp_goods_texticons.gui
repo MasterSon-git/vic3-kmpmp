@@ -37,3 +37,13 @@ texticon = {
 		fontsize = 18
 	}
 }
+
+texticon = {
+	icon = prestige_good_generic_kmpmp_premium_wine
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/wine.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
