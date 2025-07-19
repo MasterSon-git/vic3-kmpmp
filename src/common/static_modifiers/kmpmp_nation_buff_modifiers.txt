@@ -106,5 +106,5 @@ kmpmp_debuff_global_empire_decaying = {
 	state_middle_strata_expected_sol_add = 1
 	state_upper_strata_expected_sol_add = 1
     # -5% power bloc mandate progress
-    country_kmpmp_power_bloc_mandate_progress_mult = -0.05
+    country_kmpmp_power_bloc_mandate_progress_mult = -0.10 #0.05
 }

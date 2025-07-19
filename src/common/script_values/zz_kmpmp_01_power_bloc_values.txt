@@ -420,8 +420,13 @@ power_bloc_mandate_progress_by_rank = {
             }
 		}
 		multiply = {
-			value = power_bloc_leader.modifier:country_kmpmp_power_bloc_mandate_progress_mult
-			desc = "KMPMP_POWER_BLOC_MANDATE_PROGRESS_FROM_COUNTRY_MODIFIER"
+    		value = {
+        		add = {
+            		value = 1
+            		add = power_bloc_leader.modifier:country_kmpmp_power_bloc_mandate_progress_mult
+#					desc = "KMPMP_POWER_BLOC_MANDATE_PROGRESS_FROM_COUNTRY_MODIFIER"
+				}
+			}
 		}
 	}
 	# kates power bloc expanded
