@@ -4,7 +4,7 @@
 		region_state:POR = {
 			create_pop = {
 				culture = portuguese
-				size = 745016 #372508
+				size = 372508
 			}
 		}
 	}
@@ -13,7 +13,7 @@
 		region_state:POR = {
 			create_pop = {
 				culture = portuguese
-				size = 1721592 #860796
+				size = 860796
 			}
 		}
 	}
