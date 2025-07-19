@@ -10,19 +10,40 @@
                 c:NET ?= this    # netherlands
                 c:SWE ?= this    # sweden
                 #c:JAP ?= this    # japan - has special logic
-                c:BRZ ?= this    # brazil
-                c:MEX ?= this    # mexico
+                AND = {         # brazil
+                    c:BRZ ?= this
+                    NOT = {
+                        c:BRZ ?= {
+                            has_variable = reino_unido_won
+                        }
+                    }
+                }
+                AND = {         # mexico
+                    c:MEX ?= this
+                    NOT = {
+                        c:MEX ?= {
+                            has_variable = kmpmp_je_a_true_gran_colombia_comp
+                        }
+                    }
+                }
                 c:PER ?= this    # persia
                 c:EGY ?= this    # egypt
-                c:POR ?= this    # portugal
+                AND = {         # portugal
+                    c:POR ?= this
+                    NOT = {
+                        c:POR ?= {
+                            has_variable = reino_unido_won
+                        }
+                    }
+                }
                 c:ARG ?= this    # argentina
-                c:SIA ?= this    # siam
+                #c:SIA ?= this    # siam
                 c:WAL ?= this    # wallachia
                 c:HBC ?= this    # hudson bay company
-                c:SOK ?= this    # sokoto
+                #c:SOK ?= this    # sokoto
                 #c:PEU = this    # peru
                 c:BOL ?= this    # bolivia
-                c:UNL ?= this    # united netherlands
+                # c:UNL ?= this    # united netherlands - moved to medium nation
             }
             NOT = {
                 has_modifier = kmpmp_buff_small_nation
@@ -44,6 +65,25 @@
                 c:SCA ?= this   # scandinavia
                 c:P01 ?= this   # parthia
                 c:LTN ?= this   # latin empire
+                c:UNL ?= this    # united netherlands
+                AND = {         # greater colombia
+                    c:MEX ?= this
+                    c:MEX = {
+                        has_variable = kmpmp_je_a_true_gran_colombia_comp
+                    }
+                }
+                AND = {         # brz - reino unido
+                    c:BRZ ?= this
+                    c:BRZ ?= {
+                        has_variable = reino_unido_won
+                    }
+                }
+                AND = {         # portugal - reino unido
+                    c:POR ?= this
+                    c:POR ?= {
+                        has_variable = reino_unido_won
+                    }
+                }
             }
             NOT = {
                 has_modifier = kmpmp_buff_medium_nation

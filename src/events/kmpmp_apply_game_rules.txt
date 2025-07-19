@@ -21,7 +21,7 @@ kmpmp_ev_apply_game_rules.1 = {
             }
             add_modifier = {
                 name = kmpmp_age_of_warfare_modifier
-                years = 30
+                years = 25
                 is_decaying = yes
             }
         }

@@ -21,26 +21,28 @@
     state_building_barracks_max_level_add = 10
     # +20% Autorität
     country_authority_mult = 0.2
-    # +10% infra
-    state_infrastructure_mult = 0.1
+    # +10% railway to
+    building_railway_throughput_add = 0.1
     # +10% migration attraction
     state_migration_pull_mult = 0.1
+    # +4 mandate progress
+    country_kmpmp_power_bloc_mandate_progress_add = 4
 }
 
 # 50% of small nation buffs, no authority buff
 kmpmp_buff_medium_nation = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 
-    country_minting_add = 5000
-    state_education_access_add = 0.025
-    state_construction_mult = 0.025
-    building_university_throughput_add = 0.025
-    building_government_administration_throughput_add = 0.05
+    country_authority_mult = 0.1
     country_convoys_capacity_mult = 0.05
     country_military_goods_cost_mult = -0.025
+    country_minting_add = 5000
+    state_education_access_add = 0.025
+    building_government_administration_throughput_add = 0.05
+    building_railway_throughput_add = 0.05
+    building_university_throughput_add = 0.025
     building_mobilization_cost_mult = -0.025
     state_building_barracks_max_level_add = 5
-    country_authority_mult = 0.1
     country_kmpmp_power_bloc_mandate_progress_add = 4
 }
 
@@ -48,11 +50,13 @@ kmpmp_debuff_massive_empire = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
 
     country_military_goods_cost_mult = 0.05
+    country_military_wages_mult = 0.05
     unit_offense_mult = -0.05
     unit_defense_mult = -0.05
+    goods_input_ammunition_mult = 0.05
     goods_input_artillery_mult = 0.05
     goods_input_small_arms_mult = 0.05
-    country_military_wages_mult = 0.05
+    country_kmpmp_power_bloc_mandate_progress_mult = -0.2
 }
 
 # still implemented to support older save games
@@ -101,4 +105,6 @@ kmpmp_debuff_global_empire_decaying = {
     state_lower_strata_expected_sol_add = 1
 	state_middle_strata_expected_sol_add = 1
 	state_upper_strata_expected_sol_add = 1
+    # -5% power bloc mandate progress
+    country_kmpmp_power_bloc_mandate_progress_mult = -0.05
 }
