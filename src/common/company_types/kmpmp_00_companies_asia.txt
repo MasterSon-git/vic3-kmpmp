@@ -609,7 +609,7 @@ company_san_miguel = {
 	prosperity_modifier = {
 		state_radicals_from_political_movements_mult = -0.1
 		state_birth_rate_mult = 0.06 #kmpmp
-		state_mortality_mult = 0.02 #kmpmp
+		state_mortality_mult = -0.02 #kmpmp
 	}
 
 	ai_will_do = {
