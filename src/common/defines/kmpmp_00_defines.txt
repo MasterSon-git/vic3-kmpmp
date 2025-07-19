@@ -64,3 +64,8 @@ NPops = {
 	ASSIMILATION_RATE = 0.004 #0.002					# Percentage of pops who will Assimilate into a different Culture each month, if eligible
 	CONVERSION_RATE = 0.004 #0.002						# Percentage of pops who will Convert into a different Religion each month, if eligible
 }
+
+NCharacters = {
+    RECRUIT_COMMANDER_NUM_OPTIONS = 5    # default: 3
+    RECRUIT_COMMANDER_POOL_SIZE = 5    # default: 5
+}
