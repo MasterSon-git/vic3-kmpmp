@@ -412,7 +412,7 @@ power_bloc_mandate_progress_by_rank = {
 			desc = "POWER_BLOC_MANDATE_PROGRESS_FROM_INSIGNIFICANT_POWER_MEMBERS"
 		}	
 	}
-		# kmpmp
+	# kmpmp
 	if = {
 		limit = {
             power_bloc_leader ?= {
@@ -422,6 +422,23 @@ power_bloc_mandate_progress_by_rank = {
 		multiply = {
 			value = power_bloc_leader.modifier:country_kmpmp_power_bloc_mandate_progress_mult
 			desc = "KMPMP_POWER_BLOC_MANDATE_PROGRESS_FROM_COUNTRY_MODIFIER"
+		}
+	}
+	# kates power bloc expanded
+	if = {
+		limit = {
+			AND = {
+				# modifier:power_bloc_free_mandates_from_reform > power_bloc_mandates_plus_principle_levels
+				modifier:power_bloc_free_mandates_from_reform > 0
+			}
+		}
+		add = {
+			desc = "POWER_BLOC_REFORMED_MANDATES"
+			add = define:NPowerBlocs|MAX_MANDATE_PROGRESS
+			multiply = {
+				add = modifier:power_bloc_free_mandates_from_reform
+				# subtract = power_bloc_mandates_plus_principle_levels
+			}
 		}
 	}
 }
