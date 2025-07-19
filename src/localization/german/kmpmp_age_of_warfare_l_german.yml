@@ -5,10 +5,10 @@
  setting_kmpmp_age_of_warfare_none_desc: ""
 
  setting_kmpmp_age_of_warfare_player: "Nur Spieler"
- setting_kmpmp_age_of_warfare_player_desc: "Gibt einen über 30 years abklingenden Modifikator auf alle #b Spieler#!:\n$kmpmp_age_of_warfare_modifier_rule_desc$"
+ setting_kmpmp_age_of_warfare_player_desc: "Gibt einen über 25 years abklingenden Modifikator auf alle #b Spieler#!:\n$kmpmp_age_of_warfare_modifier_rule_desc$"
 
  setting_kmpmp_age_of_warfare_all: "Alle"
- setting_kmpmp_age_of_warfare_all_desc: "Gibt einen über 30 years abklingenden Modifikator auf alle #b Nationen#!:\n$kmpmp_age_of_warfare_modifier_rule_desc$"
+ setting_kmpmp_age_of_warfare_all_desc: "Gibt einen über 25 years abklingenden Modifikator auf alle #b Nationen#!:\n$kmpmp_age_of_warfare_modifier_rule_desc$"
 
  kmpmp_age_of_warfare_modifier: "Age of Warfare"
  kmpmp_age_of_warfare_modifier_rule_desc: "+ 60% [GetGoods('ammunition').GetTextIcon] [GetGoods('artillery').GetTextIcon] [GetGoods('small_arms').GetTextIcon] Durchsatz auf Kriegsindustrien\n- 30% $building_mobilization_cost_mult$\n- 15% [GetGoods('ammunition').GetTextIcon] [GetGoods('artillery').GetTextIcon] [GetGoods('small_arms').GetTextIcon] Warenzufuhr"

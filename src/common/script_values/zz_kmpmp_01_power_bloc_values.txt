@@ -416,7 +416,7 @@ power_bloc_mandate_progress_by_rank = {
 	if = {
 		limit = {
             power_bloc_leader ?= {
-                modifier:country_kmpmp_power_bloc_mandate_progress_mult > 0
+                modifier:country_kmpmp_power_bloc_mandate_progress_mult != 0
             }
 		}
 		multiply = {

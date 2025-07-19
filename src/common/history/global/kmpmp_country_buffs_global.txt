@@ -15,10 +15,10 @@
                 c:EGY ?= this    # egypt
                 c:POR ?= this    # portugal
                 c:ARG ?= this    # argentina
-                c:SIA ?= this    # siam
+                #c:SIA ?= this    # siam
                 c:WAL ?= this    # wallachia
                 c:HBC ?= this    # hudson bay company
-                c:SOK ?= this    # sokoto
+                #c:SOK ?= this    # sokoto
                 #c:PEU ?= this    # peru
                 c:BOL ?= this    # bolivia
             }
