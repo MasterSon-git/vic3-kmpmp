@@ -423,8 +423,9 @@ power_bloc_mandate_progress_by_rank = {
     		value = {
         		add = {
             		value = 1
-            		add = country_kmpmp_power_bloc_mandate_progress_mult
-        		}
+            		add = power_bloc_leader.modifier:country_kmpmp_power_bloc_mandate_progress_mult
+#					desc = "KMPMP_POWER_BLOC_MANDATE_PROGRESS_FROM_COUNTRY_MODIFIER"
+				}
 			}
 		}
 	}
