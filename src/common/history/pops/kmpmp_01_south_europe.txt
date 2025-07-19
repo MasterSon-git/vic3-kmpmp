@@ -4,8 +4,17 @@
 		region_state:POR = {
 			create_pop = {
 				culture = portuguese
-				size = 372508
+				size = 745016 #372508
 			}
 		}
 	}
-}
+
+	s:STATE_ESTREMADURA = {
+		region_state:POR = {
+			create_pop = {
+				culture = portuguese
+				size = 1721592 #860796
+			}
+		}
+	}
+}	
