@@ -8,4 +8,13 @@
 			}
 		}
 	}
-}
+
+	s:STATE_ESTREMADURA = {
+		region_state:POR = {
+			create_pop = {
+				culture = portuguese
+				size = 860796
+			}
+		}
+	}
+}	
