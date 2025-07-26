@@ -1189,10 +1189,7 @@ company_basic_metalworks = {
 	}
 
 	prosperity_modifier = {
-		# building_group_bg_manufacturing_throughput_add = 0.05
-		# kmpmp
-		unit_army_offense_mult = 0.05
-		unit_army_defense_mult = 0.05
+		building_group_bg_manufacturing_throughput_add = 0.1 #0.05
 	}
 
 	ai_will_do = {
