@@ -1,0 +1,82 @@
+﻿kmpmp_occupy_state = {
+    kind = directed
+    cost = 0
+
+    icon = "gfx/interface/icons/diplomatic_treaties_articles_icons/transfer_state.dds"
+
+    flags = {
+        can_be_enforced
+        hostile
+    }
+
+    usage_limit = once_per_side_with_same_inputs
+
+    maintenance_paid_by = source_country
+
+    required_inputs = {
+        state
+    }
+
+    visible = {
+        is_diplomatic_play_enemy_of = scope:other_country
+    }
+
+    can_ratify = {
+        custom_tooltip = {
+            text = DUPLICATE_ARTICLE_SAME_INPUTS
+            scope:treaty ?= {
+                NOT = {
+                    any_scope_article_option = {
+                        count > 1
+                        has_type = kmpmp_occupy_state
+                        source_country = scope:source_country
+                        input_state = root.input_state
+                    }
+                }
+            }
+        }
+    }
+
+    state_valid_trigger = {
+        scope:input = {
+            owner = {
+                is_diplomatic_play_enemy_of = scope:other_country
+            }
+        }
+    }
+
+    ai = {
+		treaty_categories = {
+			expansion
+		}
+
+		evaluation_chance = {
+			value = 0
+		}
+
+		article_ai_usage = {
+            request
+        }
+
+		inherent_accept_score = {
+			value = 1000
+		}
+
+		wargoal_score_multiplier = {
+			value = 0
+		}
+	}
+
+    wargoal = {
+        execution_priority = 1000
+        contestion_type = control_target_state
+
+        maneuvers = {
+            value = 0
+        }
+
+        infamy = {
+            value = 0
+        }
+    }
+}
