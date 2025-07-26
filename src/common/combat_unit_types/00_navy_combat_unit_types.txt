@@ -45,10 +45,10 @@ combat_unit_type_monitor = {
 
     battle_modifier = {
         unit_offense_add = 20
-        unit_defense_add = 30
-        unit_blockade_add = 20
+        unit_defense_add = 35 #30
+        unit_blockade_add = 10 #20
         unit_morale_loss_add = 8
-	    unit_convoy_defense_mult = 0.20
+	    unit_convoy_defense_mult = 0.25 #0.20
     }
 
     formation_modifier = {
@@ -78,9 +78,9 @@ combat_unit_type_destroyer = {
     }
 
     battle_modifier = {
-        unit_offense_add = 30
+        unit_offense_add = 40 #30
         unit_defense_add = 40
-        unit_blockade_add = 30
+        unit_blockade_add = 15 #30
         unit_morale_loss_add = 6
         unit_convoy_defense_mult = 0.35
     }
@@ -116,7 +116,7 @@ combat_unit_type_anti_submarine_destroyer = {
     battle_modifier = {
         unit_offense_add = 60
         unit_defense_add = 70
-        unit_blockade_add = 30
+        unit_blockade_add = 15 #30
         unit_morale_loss_add = 4
 		unit_convoy_defense_mult = 0.65
     }
@@ -146,9 +146,9 @@ combat_unit_type_torpedo_boat = {
     }
 
     battle_modifier = {
-        unit_offense_add = 40
+        unit_offense_add = 30 #40
         unit_defense_add = 30
-        unit_blockade_add = 30
+        unit_blockade_add = 15 #30
         unit_morale_loss_add = 8
         unit_convoy_raiding_mult = 0.25
     }
@@ -184,7 +184,7 @@ combat_unit_type_scout_cruiser = {
     battle_modifier = {
         unit_offense_add = 50
         unit_defense_add = 50
-        unit_blockade_add = 40
+        unit_blockade_add = 20 #40
         unit_morale_loss_add = 6
 		unit_convoy_defense_mult = 0.5
     }
@@ -222,7 +222,7 @@ combat_unit_type_heavy_cruiser = {
     battle_modifier = {
         unit_offense_add = 80
         unit_defense_add = 60
-        unit_blockade_add = 40
+        unit_blockade_add = 30 #40
         unit_morale_loss_add = 6
 		unit_convoy_defense_mult = 0.35
     }
@@ -255,7 +255,7 @@ combat_unit_type_man_o_war = {
     battle_modifier = {
         unit_offense_add = 25
         unit_defense_add = 25
-        unit_blockade_add = 100
+        unit_blockade_add = 50 #100
         unit_morale_loss_add = 10
         unit_convoy_raiding_mult = -0.9
     }
@@ -284,7 +284,7 @@ combat_unit_type_ironclad = {
     battle_modifier = {
         unit_offense_add = 50
         unit_defense_add = 50
-		unit_blockade_add = 200
+		unit_blockade_add = 100 #200
         unit_morale_loss_add = 8
 		unit_convoy_raiding_mult = -0.9
     }
@@ -319,7 +319,7 @@ combat_unit_type_dreadnought = {
     battle_modifier = {
         unit_offense_add = 80
         unit_defense_add = 80
-        unit_blockade_add = 400
+        unit_blockade_add = 200 #400
         unit_morale_loss_add = 6
 		unit_convoy_raiding_mult = -0.9
     }
@@ -353,7 +353,7 @@ combat_unit_type_battleship = {
     battle_modifier = {
         unit_offense_add = 100
         unit_defense_add = 100
-        unit_blockade_add = 500
+        unit_blockade_add = 250 #500
         unit_morale_loss_add = 4
 		unit_convoy_raiding_mult = -0.9
     }
@@ -389,13 +389,13 @@ combat_unit_type_battleship_bismarck_class = {
     battle_modifier = {
         unit_offense_add = 115
         unit_defense_add = 115
-        unit_blockade_add = 550
-        unit_morale_loss_add = 3
-        unit_convoy_raiding_mult = -0.5
+        unit_blockade_add = 250
+        unit_morale_loss_add = 4
+        unit_convoy_raiding_mult = -0.9
     }
 
     formation_modifier = {
-        military_formation_movement_speed_mult = -0.25
+        military_formation_movement_speed_mult = -0.3
     }
 
 	unlocking_technologies = { kmpmp_super_heavy_battleship }
@@ -426,7 +426,7 @@ combat_unit_type_submarine = {
     battle_modifier = {
         unit_offense_add = 60
         unit_defense_add = 20
-        unit_blockade_add = 10
+        unit_blockade_add = 5 #10
         unit_morale_loss_add = 8
         unit_convoy_raiding_mult = 1.0
     }
@@ -462,8 +462,8 @@ combat_unit_type_long_range_submarine = {
         unit_offense_add = 70
         unit_defense_add = 40
         unit_blockade_add = 10
-        unit_morale_loss_add = 6
-        unit_convoy_raiding_mult = 1.25
+        unit_morale_loss_add = 8
+        unit_convoy_raiding_mult = 1.0
     }
 
     formation_modifier = {
@@ -496,7 +496,7 @@ combat_unit_type_carrier = {
     battle_modifier = {
         unit_offense_add = 120
         unit_defense_add = 60
-        unit_blockade_add = 500
+        unit_blockade_add = 250 #500
         unit_morale_loss_add = 6
 		unit_convoy_defense_mult = 0.25
     }
@@ -531,10 +531,9 @@ combat_unit_type_interwar_carrier = {
     battle_modifier = {
         unit_offense_add = 130
         unit_defense_add = 70
-        unit_blockade_add = 550
-        unit_morale_loss_add = 5
-		unit_convoy_defense_mult = 0.35
-        unit_convoy_raiding_mult = 0.25
+        unit_blockade_add = 275 #550
+        unit_morale_loss_add = 4
+        unit_convoy_raiding_mult = -0.9
     }
 
     formation_modifier = {
