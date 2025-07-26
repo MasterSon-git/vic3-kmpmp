@@ -239,8 +239,8 @@ kmpmp_player_boost_military_police_state = {
     country_society_tech_research_speed_mult = -0.1
     # +2% birthrate pops
     state_birth_rate_mult = 0.02
-    # +2% mortality
-    state_mortality_mult = 0.02
+    # -2% mortality
+    state_mortality_mult = -0.02
     # +25% Army Off / Def
     unit_army_offense_mult = 0.25
     unit_army_defense_mult = 0.25
