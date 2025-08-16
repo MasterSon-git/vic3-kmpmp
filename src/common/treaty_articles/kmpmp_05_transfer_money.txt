@@ -456,11 +456,11 @@
 						value = scope:target_country.income
 						divide = 4
 					}
-					save_temporary_value_as = relative_quantity_to_infome_factor
+					save_temporary_value_as = relative_quantity_to_income_factor
 
 					if = { # first 50% give only 30% of max infamy
 						limit = {
-							scope:relative_quantity_to_infome_factor <= 0.5
+							scope:relative_quantity_to_income_factor <= 0.5
 						}
 						divide = 0.5
 						multiply = 15
@@ -504,16 +504,16 @@
 
 							desc = "INFAMY_MONEY_TRANSFER_QUANTITY_ROOT_HAS_ALREADY_ESTABLISHED_FACTOR"
 							add = {
-								value = scope:quantity
+								value = input_quantity
 								divide = {
-									value = scope:target_country.income
+									value = target_country.income
 									divide = 4
 								}
-								save_temporary_value_as = relative_quantity_to_infome_factor
+								save_temporary_value_as = relative_quantity_to_income_factor
 
 								if = { # first 50% give only 30% of max infamy
 									limit = {
-										scope:relative_quantity_to_infome_factor <= 0.5
+										scope:relative_quantity_to_income_factor <= 0.5
 									}
 									divide = 0.5
 									multiply = 7.5
