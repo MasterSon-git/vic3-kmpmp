@@ -495,7 +495,7 @@ pm_assembly_lines_building_munition_plants = {
 		}
 
 		level_scaled = {
-			building_employment_laborers_add = -3000
+			building_employment_laborers_add = -2500
 		}
 	}
 

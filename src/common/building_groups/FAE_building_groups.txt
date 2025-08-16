@@ -9,7 +9,7 @@
 
 	infrastructure_usage_per_level = 0.2
 	
-	lens = government # Can't build buildings in military lens anymore, thanks 1.5
+	lens = development #government # Can't build buildings in military lens anymore, thanks 1.5
 	
 	urbanization = 2
     
