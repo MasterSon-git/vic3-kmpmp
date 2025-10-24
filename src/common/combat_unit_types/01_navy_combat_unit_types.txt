@@ -104,6 +104,7 @@ combat_unit_type_destroyer = {
 # kmpmp
 combat_unit_type_anti_submarine_destroyer = {
     group = combat_unit_group_light_ship
+    max_manpower = 1000
 
     upkeep_modifier = {
         goods_input_ironclads_add = 4
@@ -210,6 +211,7 @@ combat_unit_type_scout_cruiser = {
 # kmpmp
 combat_unit_type_heavy_cruiser = {
     group = combat_unit_group_light_ship
+    max_manpower = 1000
 
     upkeep_modifier = {
         goods_input_ironclads_add = 4
@@ -377,6 +379,7 @@ combat_unit_type_battleship = {
 # kmpmp
 combat_unit_type_battleship_bismarck_class = {
     group = combat_unit_group_capital_ship
+    max_manpower = 1000
 
     upkeep_modifier = {
         goods_input_ironclads_add = 10
@@ -449,6 +452,7 @@ combat_unit_type_submarine = {
 # kmpmp
 combat_unit_type_long_range_submarine = {
     group = combat_unit_group_support_ship
+    max_manpower = 1000
 
     upkeep_modifier = {
         goods_input_ironclads_add = 3
@@ -519,6 +523,7 @@ combat_unit_type_carrier = {
 # kmpmp
 combat_unit_type_interwar_carrier = {
     group = combat_unit_group_support_ship
+    max_manpower = 1000
 
     upkeep_modifier = {
         goods_input_ironclads_add = 10
