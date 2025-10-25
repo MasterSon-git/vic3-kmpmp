@@ -14,6 +14,8 @@ war_exhaustion = {
 	save_temporary_value_as = temp_war_exhaustion_from_acceptance_of_dead
 	value = war_exhaustion_from_country_turmoil
 	save_temporary_value_as = temp_war_exhaustion_from_country_turmoil
+	value = war_support_from_fervor
+	save_temporary_value_as = temp_war_support_from_fervor
 	value = war_exhaustion_from_lobby_clout
 	save_temporary_value_as = temp_war_exhaustion_from_lobby_clout
 	value = war_support_from_lobby_clout
@@ -126,6 +128,14 @@ war_exhaustion = {
 			desc = "WAR_EXHAUSTION_FROM_ACCEPTANCE_OF_DEAD"
 		}
 	}
+
+	if = {
+		limit = { scope:temp_war_support_from_fervor <= -0.01 }
+		add = {
+			add = scope:temp_war_support_from_fervor
+			desc = "WAR_SUPPORT_FROM_FERVOR"
+		}
+	}
 	
 	if = {
 		limit = { scope:temp_war_exhaustion_from_country_turmoil >= 0.01 }
@@ -174,5 +184,5 @@ war_exhaustion = {
 	}
 
 	max = define:NWar|WAR_EXHAUSTION_MAX
-	min = 0 # kmpmp no additions to war support
+	min = define:NWar|WAR_EXHAUSTION_MIN
 }

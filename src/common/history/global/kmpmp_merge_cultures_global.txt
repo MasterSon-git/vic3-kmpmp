@@ -56,7 +56,7 @@
     add_to_global_variable_list = { name = cultures_east_african target = cu:sukuma }
     add_to_global_variable_list = { name = cultures_east_african target = cu:swahili }
     add_to_global_variable_list = { name = cultures_east_african target = cu:tigray } # relevant for ai_strategy_unify_ethiopia and for country formation Ethiopia formation.4 
-    add_to_global_variable_list = { name = cultures_east_african target = cu:unyamwezi }
+    add_to_global_variable_list = { name = cultures_east_african target = cu:nyamwezi }
     add_to_global_variable_list = { name = cultures_east_african target = cu:lacustrine_bantu }
     add_to_global_variable_list = { name = cultures_east_african target = cu:malagasy }
 

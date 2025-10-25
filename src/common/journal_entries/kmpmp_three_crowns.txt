@@ -9,7 +9,7 @@
 		owns_entire_state_region = STATE_CROATIA
 		owns_entire_state_region = STATE_SLOVENIA
 		owns_entire_state_region = STATE_BOSNIA
-		owns_entire_state_region = STATE_NORTHERN_SERBIA
+		owns_entire_state_region = STATE_WESTERN_SERBIA
 		owns_entire_state_region = STATE_WALLACHIA
 		owns_entire_state_region = STATE_MOLDAVIA
 		owns_entire_state_region = STATE_DOBRUDJA
@@ -41,9 +41,9 @@
 		}
 		if = {
 			limit = {
-				NOT = { owns_entire_state_region = STATE_SOUTHERN_SERBIA}
+				NOT = { owns_entire_state_region = STATE_EASTERN_SERBIA}
 			}
-			s:STATE_SOUTHERN_SERBIA = {
+			s:STATE_EASTERN_SERBIA = {
 				add_claim = ROOT
 			}
 		}

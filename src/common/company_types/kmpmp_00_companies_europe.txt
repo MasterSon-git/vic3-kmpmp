@@ -3,6 +3,8 @@ company_ccci = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/ccci.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
 
+	category = aristocrat_owned
+
 	flavored_company = yes
 
 	building_types = {
@@ -564,6 +566,8 @@ company_lkab = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/lkab.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
 
+	category = bureaucrat_owned
+
 	flavored_company = yes
 
 	preferred_headquarters = { STATE_NORRLAND }
@@ -837,8 +841,8 @@ company_ursus = {
 
 	prosperity_modifier = {
 		building_wheat_farm_throughput_add = 0.2
-		# kmpmp
 		building_rye_farm_throughput_add = 0.2
+		# kmpmp
 		building_food_industry_throughput_add = 0.1
 	}
 
@@ -963,6 +967,8 @@ company_lilpop = {
 company_mozambique_company = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/mozambique_companhia_de_mocambique.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
+
+	category = bureaucrat_owned
 
 	flavored_company = yes
 
@@ -1403,7 +1409,7 @@ company_zastava = {
 
 	flavored_company = yes
 
-	preferred_headquarters = { STATE_NORTHERN_SERBIA }
+	preferred_headquarters = { STATE_WESTERN_SERBIA }
 
 	building_types = {
 		building_arms_industry
@@ -1433,7 +1439,7 @@ company_zastava = {
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
-				# state_region = s:STATE_NORTHERN_SERBIA
+				# state_region = s:STATE_WESTERN_SERBIA
 				state_region = {
 					is_homeland = cu:serb
 				}
@@ -1444,13 +1450,14 @@ company_zastava = {
 	possible = {
 		has_technology_researched = rifling #gunsmithing
 		# any_scope_state = {
-		# 	state_region = s:STATE_NORTHERN_SERBIA
+		# 	state_region = s:STATE_WESTERN_SERBIA
 		# 	is_incorporated = yes
 		# 	any_scope_building = {
 		# 		is_building_type = building_arms_industry
 		# 		level >= 5
 		# 	}
 		# }
+
 		# kmpmp
 		trigger_if = {
 			limit = {
@@ -1487,10 +1494,11 @@ company_zastava = {
 	ai_will_do = {
 		has_technology_researched = rifling #gunsmithing
 		# any_scope_state = {
-		# 	state_region = s:STATE_NORTHERN_SERBIA
+		# 	state_region = s:STATE_WESTERN_SERBIA
 		# 	is_incorporated = yes
 		# }
 
+		# kmpmp
 		trigger_if = {
 			limit = {
 				country_has_primary_culture = cu:turkish
@@ -1518,7 +1526,7 @@ company_zastava = {
 		# building_arms_industry = {
 		# 	level = 5
 		# 	state_trigger = {
-		# 		state_region = s:STATE_NORTHERN_SERBIA
+		# 		state_region = s:STATE_WESTERN_SERBIA
 		# 	}
 		# }
 	}
@@ -1706,6 +1714,8 @@ company_ap_moller = {
 company_cfr = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/romania_cfr.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+
+	category = bureaucrat_owned
 
 	flavored_company = yes
 

@@ -1,6 +1,7 @@
 ﻿# If you add religions, and use those tags, do not change them without changing everywhere they are used.
 
 zoroastrian = {
-	texture = "gfx/interface/icons/religion_icons/zoroastrian.dds"
+	icon = "gfx/interface/icons/religion_icons/zoroastrian.dds"
+	heritage = heritage_dharmic
 	color = { 221 188 19 }
 }

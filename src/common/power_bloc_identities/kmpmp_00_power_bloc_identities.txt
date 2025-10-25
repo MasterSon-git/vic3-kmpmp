@@ -15,7 +15,7 @@
 		# kmpmp
 		building_group_bg_manufacturing_throughput_add = 0.05
 	}
-	
+
 	non_leader_modifier = {
 		country_convoy_contribution_to_market_owner_add = 0.2
 	}
@@ -36,7 +36,7 @@
 			}
 		}
 	}
-	
+
 	possible = {
 		# NOT = { has_law_or_variant = law_type:law_isolationism } # No longer needed since Isolationism is a blocker for forming any Power Bloc, but in case that changes, uncomment this
 	}
@@ -45,9 +45,9 @@
 	background = "gfx/interface/power_blocs/backgrounds/pb_background_generic.dds"
 
 	mandate_progress = power_bloc_mandate_progress_by_rank
-	
+
 	on_created = { relations_hit_with_power_bloc_leaders = yes }
-	
+
 	cohesion = {
 		add = {
 			add = 0.15
@@ -103,7 +103,7 @@
 			multiply = 0.5
 			desc = POWER_BLOC_COHESION_SHARE_GDP
 		}
-		
+
 		add = {
 			if = {
 				limit = { exists = scope:with_country }
@@ -122,7 +122,7 @@
 			max = 0
 			desc = POWER_BLOC_COHESION_WORST_LEADER_RELATIONS
 		}
-		
+
 		add = {
 			if = {
 				limit = { exists = scope:with_country }
@@ -142,28 +142,28 @@
 			desc = POWER_BLOC_COHESION_WORST_ECONOMIC_DEPENDENCE
 		}
 	}
-	
+
 	ai_weight = {
 		value = 100
-		
+
 		if = {
 			limit = {
 				ig:ig_industrialists ?= { is_in_government = yes }
 			}
 			add = 100
-		}		
-		
+		}
+
 		if = {
-			limit = { has_law = law_type:law_free_trade }
+			limit = { has_law_or_variant = law_type:law_free_trade }
 			add = 100
 		}
-		
+
 		if = {
 			limit = {
 				has_strategy = ai_strategy_economic_imperialism
 			}
 			multiply = 2.0
-		}			
+		}
 	}
 }
 
@@ -193,9 +193,9 @@ identity_sovereign_empire = {
 		# kmpmp
 		country_liberty_desire_of_subjects_add = -0.05
 	}
-	
+
 	possible = {
-		has_law = law_type:law_monarchy
+		has_law_or_variant = law_type:law_monarchy
 	}
 
 	can_leave = {
@@ -218,16 +218,16 @@ identity_sovereign_empire = {
 	}
 
 	mandate_progress = power_bloc_mandate_progress_by_rank
-	
+
 	on_created = { relations_hit_with_power_bloc_leaders = yes }
-	
+
 	cohesion = {
 		add = {
 			add = 0.3
 			multiply = define:NPowerBlocs|COHESION_TARGET_MAX
 			desc = POWER_BLOC_COHESION_BASE
 		}
-	
+
 		add = {
 			if = {
 				limit = { exists = scope:with_country }
@@ -243,7 +243,7 @@ identity_sovereign_empire = {
 			multiply = define:NPowerBlocs|COHESION_TARGET_MAX
 			desc = POWER_BLOC_COHESION_SHARE_PRESTIGE
 		}
-		
+
 		add = {
 			if = {
 				limit = { exists = scope:with_country }
@@ -262,7 +262,7 @@ identity_sovereign_empire = {
 			max = 0
 			desc = POWER_BLOC_COHESION_WORST_LEADER_RELATIONS
 		}
-		
+
 		add = {
 			if = {
 				limit = { exists = scope:with_country }
@@ -281,30 +281,30 @@ identity_sovereign_empire = {
 			desc = POWER_BLOC_COHESION_WORST_LIBERTY_DESIRE
 		}
 	}
-	
+
 	ai_weight = {
 		value = 100
-		
+
 		if = {
 			limit = {
 				ig:ig_landowners ?= { is_in_government = yes }
 			}
 			add = 100
-		}		
-		
+		}
+
 		add = {
 			value = num_subjects
 			multiply = 25
 			max = 250
 		}
-		
+
 		if = {
 			limit = {
 				has_strategy = ai_strategy_colonial_expansion
 			}
-			
+
 			multiply = 2.0
-		}		
+		}
 	}
 }
 
@@ -354,7 +354,7 @@ identity_ideological_union = {
 	}
 
 	mandate_progress = power_bloc_mandate_progress_by_rank
-	
+
 	on_created = { relations_hit_with_power_bloc_leaders = yes }
 
 	cohesion = {
@@ -363,7 +363,7 @@ identity_ideological_union = {
 			multiply = define:NPowerBlocs|COHESION_TARGET_MAX
 			desc = POWER_BLOC_COHESION_BASE
 		}
-	
+
 		add = {
 			add = legitimacy
 			divide = 100 # legitimacy max value
@@ -371,7 +371,7 @@ identity_ideological_union = {
 			multiply = 0.7
 			desc = POWER_BLOC_COHESION_LEGITIMACY
 		}
-		
+
 		add = {
 			if = {
 				limit = { exists = scope:with_country }
@@ -390,9 +390,9 @@ identity_ideological_union = {
 			max = 0
 			desc = POWER_BLOC_COHESION_WORST_LEADER_RELATIONS
 		}
-		
+
 		if = {
-		 	limit = { 
+		 	limit = {
 		 		exists = scope:with_country
 		 		"scope:power_bloc.power_bloc_worst_progressiveness_difference_government_type_with(scope:with_country)" != 0
 		 	}
@@ -402,7 +402,7 @@ identity_ideological_union = {
 		 		multiply = -1
 		 		multiply = define:NPowerBlocs|COHESION_TARGET_MAX
 		 		desc = POWER_BLOC_COHESION_WORST_PROGRESSIVENESS_DIFFERENCE
-		 	}	
+		 	}
 		}
 		else_if = {
 		 	limit = {
@@ -434,30 +434,30 @@ identity_ideological_union = {
 			}
 		}
 	}
-	
+
 	ai_weight = {
 		value = 100
-		
+
 		if = {
 			limit = {
 				ig:ig_intelligentsia ?= { is_in_government = yes }
 			}
 			add = 100
-		}		
+		}
 
 		if = { # The forces of reaction
-			limit = { 
-				has_law = law_type:law_monarchy 
+			limit = {
+				has_law_or_variant = law_type:law_monarchy
 				OR = {
-					has_law = law_type:law_autocracy
-					has_law = law_type:law_oligarchy
+					has_law_or_variant = law_type:law_autocracy
+					has_law_or_variant = law_type:law_oligarchy
 				}
 			}
 			add = 100
-		}		
-		
+		}
+
 		if = { # The forces of revolution
-			limit = { 
+			limit = {
 				has_radical_leftist_government = yes
 			}
 			add = 200
@@ -469,10 +469,10 @@ identity_ideological_union = {
 					has_strategy = ai_strategy_maintain_power_balance
 					has_strategy = ai_strategy_world_revolution
 					has_strategy = ai_strategy_anti_imperialism
-				}			
-			}	
+				}
+			}
 			multiply = 2.0
-		}		
+		}
 	}
 }
 
@@ -505,10 +505,10 @@ identity_military_treaty_organization = {
 		unit_recovery_rate_add = 0.2
 		interest_group_ig_armed_forces_pol_str_mult = 0.1
 	}
-	
+
 	possible = {
-		NOT = { has_law = law_type:law_national_militia }
-	}	
+		NOT = { has_law_or_variant = law_type:law_national_militia }
+	}
 
 	can_leave = {
 		OR = {
@@ -530,16 +530,16 @@ identity_military_treaty_organization = {
 	}
 
 	mandate_progress = power_bloc_mandate_progress_by_rank
-	
+
 	on_created = { relations_hit_with_power_bloc_leaders = yes }
-	
+
 	cohesion = {
 		add = {
 			add = 0.4 #0.3
 			multiply = define:NPowerBlocs|COHESION_TARGET_MAX
 			desc = POWER_BLOC_COHESION_BASE
 		}
-	
+
 		add = {
 			if = {
 				limit = { exists = scope:with_country }
@@ -555,7 +555,7 @@ identity_military_treaty_organization = {
 			multiply = define:NPowerBlocs|COHESION_TARGET_MAX
 			desc = POWER_BLOC_COHESION_SHARE_POWER_PROJECTION
 		}
-		
+
 		add = {
 			if = {
 				limit = { exists = scope:with_country }
@@ -573,7 +573,7 @@ identity_military_treaty_organization = {
 			multiply = define:NPowerBlocs|COHESION_TARGET_MAX
 			desc = POWER_BLOC_COHESION_WORST_INFAMY
 		}
-		
+
 		add = {
 			if = {
 				limit = { exists = scope:with_country }
@@ -592,27 +592,27 @@ identity_military_treaty_organization = {
 			max = 0
 			desc = POWER_BLOC_COHESION_WORST_LEADER_RELATIONS
 		}
-		
+
 		add = {
 			scope:power_bloc = {
 				every_power_bloc_member = {
 					if = {
-						limit = { has_law = law_type:law_national_militia }
+						limit = { has_law_or_variant = law_type:law_national_militia }
 						add = -0.05
 					}
 				}
 			}
 			if = {
-				limit = { 
-					exists = scope:with_country 
-					scope:with_country ?= { has_law = law_type:law_national_militia }
+				limit = {
+					exists = scope:with_country
+					scope:with_country ?= { has_law_or_variant = law_type:law_national_militia }
 				}
 				add = -0.05
 			}
 			else_if = {
-				limit = { 
-					exists = scope:without_country 
-					scope:without_country ?= { has_law = law_type:law_national_militia }
+				limit = {
+					exists = scope:without_country
+					scope:without_country ?= { has_law_or_variant = law_type:law_national_militia }
 				}
 				add = 0.05
 			}
@@ -620,13 +620,13 @@ identity_military_treaty_organization = {
 			desc = POWER_BLOC_COHESION_ARMY_MODEL_INCOMPATIBILITY
 		}
 	}
-	
+
 	ai_weight = {
 		value = 100
-		
+
 		if = {
 			limit = {
-				has_law = law_type:law_professional_army
+				has_law_or_variant = law_type:law_professional_army
 			}
 			add = 100
 		}
@@ -636,17 +636,17 @@ identity_military_treaty_organization = {
 				ig:ig_armed_forces ?= { is_in_government = yes }
 			}
 			add = 100
-		}		
-		
+		}
+
 		if = {
 			limit = {
 				OR = {
 					has_strategy = ai_strategy_territorial_expansion
 					has_strategy = ai_strategy_armed_isolationism
-				}			
-			}	
+				}
+			}
 			multiply = 2.0
-		}			
+		}
 	}
 }
 
@@ -667,11 +667,11 @@ identity_religious = {
 
 	non_leader_modifier = {
 	}
-	
+
 	possible = {
 		OR = {
-			has_law = law_type:law_state_religion
-			has_law = law_type:law_freedom_of_conscience
+			has_law_or_variant = law_type:law_state_religion
+			has_law_or_variant = law_type:law_freedom_of_conscience
 		}
 	}
 
@@ -703,16 +703,16 @@ identity_religious = {
 	}
 
 	mandate_progress = power_bloc_mandate_progress_by_rank
-	
+
 	on_created = { relations_hit_with_power_bloc_leaders = yes }
-	
+
 	cohesion = {
 		add = {
 			add = 0.3
 			multiply = define:NPowerBlocs|COHESION_TARGET_MAX
 			desc = POWER_BLOC_COHESION_BASE
 		}
-	
+
 		add = {
 			value = define:NPowerBlocs|COHESION_TARGET_MAX
 			multiply = ig:ig_devout.ig_clout
@@ -723,16 +723,16 @@ identity_religious = {
 
 		if = {
 			limit = {
-				ig:ig_devout = {
+				ig:ig_devout ?= {
 					is_in_government = no
 				}
 			}
 			add = {
 				add = -15
 				desc = POWER_BLOC_COHESION_DEVOUT_IG_NOT_IN_GOVERNMENT
-			}	
+			}
 		}
-		
+
 		add = {
 			if = {
 				limit = { exists = scope:with_country }
@@ -751,7 +751,7 @@ identity_religious = {
 			max = 0
 			desc = POWER_BLOC_COHESION_WORST_LEADER_RELATIONS
 		}
-		
+
 		add = {
 			if = {
 				limit = { exists = scope:with_country }
@@ -769,15 +769,15 @@ identity_religious = {
 			multiply = define:NPowerBlocs|COHESION_TARGET_MAX
 			desc = POWER_BLOC_COHESION_LEADER_RELIGION_WORST_POPULATION_SHARE
 		}
-		
+
 		add = {
 			scope:power_bloc = {
 				every_power_bloc_member = {
 					if = {
-						limit = { 
+						limit = {
 							OR = {
-								has_law = law_type:law_total_separation
-								has_law = law_type:law_state_atheism
+								has_law_or_variant = law_type:law_total_separation
+								has_law_or_variant = law_type:law_state_atheism
 							}
 						}
 						add = -0.1
@@ -785,24 +785,24 @@ identity_religious = {
 				}
 			}
 			if = {
-				limit = { 
-					exists = scope:with_country 
+				limit = {
+					exists = scope:with_country
 					scope:with_country ?= {
 						OR = {
-							has_law = law_type:law_total_separation
-							has_law = law_type:law_state_atheism
+							has_law_or_variant = law_type:law_total_separation
+							has_law_or_variant = law_type:law_state_atheism
 						}
 					}
 				}
 				add = -0.1
 			}
 			else_if = {
-				limit = { 
-					exists = scope:without_country 
+				limit = {
+					exists = scope:without_country
 					scope:without_country ?= {
 						OR = {
-							has_law = law_type:law_total_separation
-							has_law = law_type:law_state_atheism
+							has_law_or_variant = law_type:law_total_separation
+							has_law_or_variant = law_type:law_state_atheism
 						}
 					}
 				}
@@ -812,7 +812,7 @@ identity_religious = {
 			desc = POWER_BLOC_COHESION_CHURCH_AND_STATE_INCOMPATIBILITY
 		}
 	}
-	
+
 	ai_weight = {
 		value = 100
 
@@ -821,26 +821,26 @@ identity_religious = {
 				ig:ig_devout ?= { is_in_government = yes }
 			}
 			add = 100
-		}			
-		
+		}
+
 		if = {
 			limit = {
-				has_law = law_type:law_state_religion
+				has_law_or_variant = law_type:law_state_religion
 			}
 			multiply = 1.5
 		}
-		
+
 		if = {
 			limit = {
 				religion = {
 					NOR = { # Non-abrahamic religions probably wouldn't go for this type of bloc
-						has_discrimination_trait = christian
-						has_discrimination_trait = muslim
-						has_discrimination_trait = jewish
-					}					
-				}			
+						has_discrimination_trait = heritage_christian
+						has_discrimination_trait = heritage_islamic
+						has_discrimination_trait = heritage_jewish
+					}
+				}
 			}
-			multiply = 0.1		
-		}		
+			multiply = 0.1
+		}
 	}
 }

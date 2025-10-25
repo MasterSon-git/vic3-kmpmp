@@ -64,7 +64,7 @@ algeria_events.1 = {
 				}
 			}
 		}
-		ig:ig_armed_forces = {
+		ig:ig_armed_forces ?= {
 			add_modifier = {
 				name = vanquished_barbary
 				days = normal_modifier_time
@@ -268,8 +268,8 @@ algeria_events.2 = {
 	trigger = {
 		has_variable = algeria_je_success
 		NOR = {
-			has_law = law_type:law_ethnostate
-			has_law = law_type:law_national_supremacy
+			has_law_or_variant = law_type:law_ethnostate
+			has_law_or_variant = law_type:law_national_supremacy
 		}
 		any_scope_state = {
 			OR = {
@@ -496,7 +496,7 @@ algeria_events.8 = {
 			custom_tooltip = {
 				text = algeria_events.8.tt.1
 				has_variable = algeria_constantine_var
-				has_law = law_type:law_monarchy
+				has_law_or_variant = law_type:law_monarchy
 			}
 		}
 		set_variable = algeria_deylik_restored
@@ -524,10 +524,10 @@ algeria_events.8 = {
 			custom_tooltip = {
 				text = algeria_events.8.tt.1
 				has_variable = algeria_constantine_var
-				has_law = law_type:law_monarchy
+				has_law_or_variant = law_type:law_monarchy
 				exists = c:TUR
 				c:TUR = { 
-					has_law = law_type:law_monarchy
+					has_law_or_variant = law_type:law_monarchy
 				}
 			}
 		}

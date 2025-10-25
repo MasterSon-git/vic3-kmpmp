@@ -4,17 +4,19 @@
     historical = yes
     culture = primary_culture
     heir = yes
+    noble = yes
     birth_date = 1823.4.25
     interest_group = ig_intelligentsia
-    ideology = ideology_moderate
+    ideology = ideology_modernizer_leader #ideology_moderate
     traits = {
         trait_child
+        # aesthete
         imperious
     }
 }
 
 tur_abdulhamid_ii_template = {
-    first_name = Abdul_Hamid
+    first_name = Abdulhamid
     last_name = Osmanoglu
     historical = yes
     culture = cu:turkish
@@ -23,12 +25,13 @@ tur_abdulhamid_ii_template = {
     ideology = ideology_authoritarian
     interest_group = ig_intelligentsia #ig_landowners
     birth_date = 1842.9.21
-	ruler = yes
+	heir = yes
     traits = {
         pious
         imperious #persistent
         basic_diplomat
     }
+    # kmpmp - no longer in vanilla
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:TUR

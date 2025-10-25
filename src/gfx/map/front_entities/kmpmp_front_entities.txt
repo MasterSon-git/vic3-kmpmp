@@ -45,7 +45,12 @@ military_infantry_european_interwar_mechanized_diorama_entity = {
 	
 	trigger = {
 		scope:culture = {
-			has_culture_graphics = european
+			OR = {
+				has_culture_graphics = european
+				has_culture_graphics = french
+				has_culture_graphics = brazilian
+				has_culture_graphics = balkan
+			}
 		}
 		scope:combat_unit_type = unit_type:combat_unit_type_interwar_mechanized_infantry
 	}

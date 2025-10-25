@@ -51,7 +51,7 @@ NMilitary = {
 }
 
 NCountry = {
-	INCORPORATION_TIME_NO_MATCH = 10	#20			# Years if the state's Homeland cultures have nothing in common with the country's primary cultures
+	INCORPORATION_TIME_NO_MATCH = 10	#25			# Years if the state's Homeland cultures have nothing in common with the country's primary cultures
 }
 
 NPowerBlocs = {

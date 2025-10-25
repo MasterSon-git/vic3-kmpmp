@@ -3,6 +3,7 @@
 building_port = {
 	building_group = bg_private_infrastructure
 	city_type = port
+	levels_per_mesh = 1
 	icon = "gfx/interface/icons/building_icons/building_port.dds"
 
 	port = yes
@@ -158,6 +159,23 @@ building_railway = {
 			}
 			add = 10000
 		}
+		else_if = { # AI Metternich wants railways
+			limit = {
+				owner ?= {
+					c:AUS ?= this
+					has_journal_entry = je_metternich
+				}
+				is_incorporated = yes
+				NOR = {
+					has_building = building_railway
+					any_scope_building = {
+						is_building_type = building_railway
+						is_under_construction = yes
+					}
+				}
+			}
+			add = 10000
+		}
 
 		if = { # Manchurian Railway
 			limit = {
@@ -203,7 +221,7 @@ building_railway = {
 building_trade_center = {
 	building_group = bg_trade
 	city_type = city
-	levels_per_mesh = 10
+	levels_per_mesh = 50
 
 	lens = infrastructure
 
