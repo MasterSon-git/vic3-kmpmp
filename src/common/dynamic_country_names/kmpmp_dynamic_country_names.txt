@@ -1,17 +1,20 @@
 ﻿AUS = { # Austria
     dynamic_country_name = {
-        name = dyn_c_austria-hungary
-        adjective = dyn_c_austria-hungary_adj
-        
+        name = dyn_c_federal_state_of_austria
+        adjective = AUS_ADJ
+
         is_main_tag_only = yes
-        priority = 0
-        
+        priority = 1
+
         trigger = {
             exists = scope:actor
-            scope:actor = { country_has_primary_culture = cu:hungarian }
+            scope:actor ?= {
+                has_law_or_variant = law_type:law_corporate_state
+            }
         }
     }
 
+    # kmpmp
     dynamic_country_name = {
         name = dyn_c_three-crowns
         adjective = dyn_c_three-crowns_adj

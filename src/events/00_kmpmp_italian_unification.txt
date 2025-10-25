@@ -131,6 +131,7 @@ italian_unification.10 = {
 			limit = {
 				OR = {
 					has_ideology = ideology:ideology_patriotic
+					has_ideology = ideology:ideology_military_absolutist
 					has_ideology = ideology:ideology_liberal
 					has_ideology = ideology:ideology_liberal_modern
 					leader = {
@@ -196,19 +197,19 @@ italian_unification.10 = {
 			base = 15
 			modifier = {
 				trigger = {
-					has_law = law_type:law_theocracy
+					has_law_or_variant = law_type:law_theocracy
 				}
 				add = 50
 			}
 			modifier = {
 				trigger = {
-					has_law = law_type:law_traditionalism
+					has_law_or_variant = law_type:law_traditionalism
 				}
 				add = 50
 			}
 			modifier = {
 				trigger = {
-					ig:ig_intelligentsia = {
+					ig:ig_intelligentsia ?= {
 						is_in_government = yes
 					}
 				}
@@ -216,7 +217,7 @@ italian_unification.10 = {
 			}
 			modifier = {
 				trigger = {
-					ig:ig_landowners = {
+					ig:ig_landowners ?= {
 						is_in_government = yes
 					}
 				}

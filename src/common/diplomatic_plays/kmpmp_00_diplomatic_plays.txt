@@ -33,6 +33,7 @@ dp_annex_subject = {
 				has_diplomatic_pact = { who = root type = colony }
 				has_diplomatic_pact = { who = root type = puppet }
 				has_diplomatic_pact = { who = root type = vassal }
+				has_diplomatic_pact = { who = root type = crown_land }
 			}
 		}
 		NAND = {

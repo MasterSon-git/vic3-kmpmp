@@ -4,7 +4,7 @@ building_food_industry = {
 	building_group = bg_light_industry
 	icon = "gfx/interface/icons/building_icons/food_industry.dds"
 	city_type = city
-	levels_per_mesh = 5
+	levels_per_mesh = 50
 
 	ai_nationalization_desire = -0.25 # AI is generally fine with privatizing consumer goods industries
 
@@ -42,7 +42,7 @@ building_textile_mills = {
 	building_group = bg_light_industry
 	icon = "gfx/interface/icons/building_icons/textile_industry.dds"
 	city_type = city
-	levels_per_mesh = 5
+	levels_per_mesh = 50
 
 	ai_nationalization_desire = -0.25 # AI is generally fine with privatizing consumer goods industries
 
@@ -79,7 +79,7 @@ building_furniture_manufacturies = {
 	building_group = bg_light_industry
 	icon = "gfx/interface/icons/building_icons/furniture_manufacturies.dds"
 	city_type = city
-	levels_per_mesh = 5
+	levels_per_mesh = 50
 
 	ai_nationalization_desire = -0.25 # AI is generally fine with privatizing consumer goods industries
 
@@ -116,7 +116,7 @@ building_glassworks = {
 	building_group = bg_light_industry
 	icon = "gfx/interface/icons/building_icons/glassworks.dds"
 	city_type = city
-	levels_per_mesh = 5
+	levels_per_mesh = 50
 
 	unlocking_technologies = {
 		manufacturies
@@ -158,7 +158,7 @@ building_tooling_workshops = {
 	}
 
 	city_type = city
-	levels_per_mesh = 5
+	levels_per_mesh = 50
 
 	production_method_groups = {
 		pmg_base_building_tooling_workshops
@@ -197,7 +197,7 @@ building_paper_mills = {
 	}
 
 	city_type = city
-	levels_per_mesh = 5
+	levels_per_mesh = 50
 
 	production_method_groups = {
 		pmg_base_building_paper_mills
@@ -232,7 +232,7 @@ building_chemical_plants = {
 	}
 
 	city_type = city
-	levels_per_mesh = 5
+	levels_per_mesh = 50
 
 	production_method_groups = {
 		pmg_fertilizer_production
@@ -244,8 +244,8 @@ building_chemical_plants = {
 		owner = {
 			NOT = {
 				OR = {
-					has_law = law_type:law_industry_banned
-					has_law = law_type:law_extraction_economy
+					has_law_or_variant = law_type:law_industry_banned
+					has_law_or_variant = law_type:law_extraction_economy
 				}
 			}
 		}
@@ -278,7 +278,7 @@ building_explosives_factory = {
 	}
 
 	city_type = city
-	levels_per_mesh = 5
+	levels_per_mesh = 50
 
 	production_method_groups = {
 		pmg_explosives_building_chemical_plants
@@ -290,8 +290,8 @@ building_explosives_factory = {
 		owner = {
 			NOT = {
 				OR = {
-					has_law = law_type:law_industry_banned
-					has_law = law_type:law_extraction_economy
+					has_law_or_variant = law_type:law_industry_banned
+					has_law_or_variant = law_type:law_extraction_economy
 				}
 			}
 		}
@@ -318,7 +318,7 @@ building_synthetics_plants = {
 	building_group = bg_heavy_industry
 	icon = "gfx/interface/icons/building_icons/synthetics_plants.dds"
 	city_type = city
-	levels_per_mesh = 5
+	levels_per_mesh = 50
 
 	unlocking_technologies = {
 		aniline
@@ -335,8 +335,8 @@ building_synthetics_plants = {
 		owner = {
 			NOT = {
 				OR = {
-					has_law = law_type:law_industry_banned
-					has_law = law_type:law_extraction_economy
+					has_law_or_variant = law_type:law_industry_banned
+					has_law_or_variant = law_type:law_extraction_economy
 				}
 			}
 		}
@@ -363,7 +363,7 @@ building_steel_mills = {
 	building_group = bg_heavy_industry
 	icon = "gfx/interface/icons/building_icons/steel_mills.dds"
 	city_type = city
-	levels_per_mesh = 5
+	levels_per_mesh = 50
 
 	ai_nationalization_desire = 0.25 # AI will generally not privatize steel mills due to importance for construction
 
@@ -382,8 +382,8 @@ building_steel_mills = {
 		owner = {
 			NOT = {
 				OR = {
-					has_law = law_type:law_industry_banned
-					has_law = law_type:law_extraction_economy
+					has_law_or_variant = law_type:law_industry_banned
+					has_law_or_variant = law_type:law_extraction_economy
 				}
 			}
 		}
@@ -410,7 +410,7 @@ building_motor_industry = {
 	building_group = bg_heavy_industry
 	icon = "gfx/interface/icons/building_icons/motor_industry.dds"
 	city_type = city
-	levels_per_mesh = 5
+	levels_per_mesh = 50
 
 	unlocking_technologies = {
 		atmospheric_engine
@@ -427,8 +427,8 @@ building_motor_industry = {
 		owner = {
 			NOT = {
 				OR = {
-					has_law = law_type:law_industry_banned
-					has_law = law_type:law_extraction_economy
+					has_law_or_variant = law_type:law_industry_banned
+					has_law_or_variant = law_type:law_extraction_economy
 				}
 			}
 		}
@@ -455,6 +455,7 @@ building_shipyards = {
 	building_group = bg_shipyards
 	icon = "gfx/interface/icons/building_icons/shipyards.dds"
 	city_type = port
+	levels_per_mesh = 1
 
 	ai_nationalization_desire = 0.25 # AI is a bit reluctant to privatize government goods
 
@@ -497,6 +498,7 @@ building_military_shipyards = {
 	building_group = bg_military_shipyards
 	icon = "gfx/interface/icons/building_icons/military_shipyards.dds"
 	city_type = port
+	levels_per_mesh = 1
 
 	ai_nationalization_desire = 0.5 # AI generally does not want to privatize military goods industries
 
@@ -539,7 +541,7 @@ building_automotive_industry = {
 	building_group = bg_heavy_industry
 	icon = "gfx/interface/icons/building_icons/vehicles_industry.dds"
 	city_type = city
-	levels_per_mesh = 5
+	levels_per_mesh = 50
 
 	unlocking_technologies = {
 		combustion_engine
@@ -558,8 +560,8 @@ building_automotive_industry = {
 		owner = {
 			NOT = {
 				OR = {
-					has_law = law_type:law_industry_banned
-					has_law = law_type:law_extraction_economy
+					has_law_or_variant = law_type:law_industry_banned
+					has_law_or_variant = law_type:law_extraction_economy
 				}
 			}
 		}
@@ -586,7 +588,7 @@ building_electrics_industry = {
 	building_group = bg_heavy_industry
 	icon = "gfx/interface/icons/building_icons/electrics_industry.dds"
 	city_type = city
-	levels_per_mesh = 5
+	levels_per_mesh = 50
 
 	unlocking_technologies = {
 		telephone
@@ -603,8 +605,8 @@ building_electrics_industry = {
 		owner = {
 			NOT = {
 				OR = {
-					has_law = law_type:law_industry_banned
-					has_law = law_type:law_extraction_economy
+					has_law_or_variant = law_type:law_industry_banned
+					has_law_or_variant = law_type:law_extraction_economy
 				}
 			}
 		}
@@ -631,7 +633,7 @@ building_arms_industry = {
 	building_group = bg_arms_industries
 	icon = "gfx/interface/icons/building_icons/arms_industry.dds"
 	city_type = city
-	levels_per_mesh = 5
+	levels_per_mesh = 50
 
 	ai_nationalization_desire = 0.5 # AI generally does not want to privatize military goods industries
 
@@ -668,10 +670,10 @@ building_arms_industry = {
 }
 
 building_artillery_foundries = {
-	building_group = bg_artillery_foundaries
+	building_group = bg_artillery_foundries
 	icon = "gfx/interface/icons/building_icons/artillery_foundry.dds"
 	city_type = city
-	levels_per_mesh = 5
+	levels_per_mesh = 50
 
 	ai_nationalization_desire = 0.5 # AI generally does not want to privatize military goods industries
 
@@ -711,7 +713,7 @@ building_munition_plants = {
 	building_group = bg_munition_plants
 	icon = "gfx/interface/icons/building_icons/munition_plants.dds"
 	city_type = city
-	levels_per_mesh = 5
+	levels_per_mesh = 50
 
 	ai_nationalization_desire = 0.5 # AI generally does not want to privatize military goods industries
 
@@ -730,8 +732,8 @@ building_munition_plants = {
 		owner = {
 			NOT = {
 				OR = {
-					has_law = law_type:law_industry_banned
-					has_law = law_type:law_extraction_economy
+					has_law_or_variant = law_type:law_industry_banned
+					has_law_or_variant = law_type:law_extraction_economy
 				}
 			}
 		}

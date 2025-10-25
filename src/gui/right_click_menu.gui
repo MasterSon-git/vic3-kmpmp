@@ -7963,7 +7963,7 @@ template article_input_fixed_bottom {
 			}
 
 			flowcontainer = {
-				visible = "[And(Not(WarGoal.IsValidDataContext), And(TreatyDraft.IsValidDataContext, ArticleDraft.HasAllRequiredInputsSet))]"
+				visible = "[And(And(Not(WarGoal.IsValidDataContext), And(TreatyDraft.IsValidDataContext, ArticleDraft.HasAllRequiredInputsSet)), TreatyDraft.GetRightCountry.IsAI)]"
 				parentanchor = center
 				spacing = 5
 				margin = { 10 10 }
@@ -8026,6 +8026,7 @@ template article_input_fixed_bottom {
 types article_input_types
 {
 	type treaty_draft_input_acceptance_icon = icon {
+		visible = "[TreatyDraft.GetRightCountry.IsAI]"
 		size = { 22 22 }
 
 		icon = {
@@ -8057,6 +8058,7 @@ types article_input_types
 	}
 
 	type treaty_draft_input_acceptance_button_icon = button {
+		visible = "[TreatyDraft.GetRightCountry.IsAI]"
 		size = { 22 22 }
 		alwaystransparent = yes
 
@@ -8110,7 +8112,7 @@ types article_input_types
 						FancyTooltip_State = {
 							blockoverride "tooltip_content_before" {
 								flowcontainer = {
-									visible = "[Not(WarGoal.IsValidDataContext)]"
+									visible = "[And(Not(WarGoal.IsValidDataContext), TreatyDraft.GetRightCountry.IsAI)]"
 									spacing = 5
 									tooltip = "[TreatyDraft.GetArticleTypeAcceptanceBreakdownWithState(ArticleType.Self, Country.Self, State.Self)]"
 
@@ -10197,7 +10199,7 @@ types article_input_types
 					using = elide_fontsize_min
 					max_width = 100
 					multiline = yes
-					text = "[ArticleDraft.GetGoods.GetName]"
+					text = "[ArticleDraft.GetGoods.GetNameNoIcon]"
 				}
 
 				textbox = {
@@ -11088,6 +11090,22 @@ right_click_menu = {
 
 			blockoverride = "text" {
 				text = "INFORMATION"
+			}
+		}
+
+		right_click_menu_item = {
+			visible = "[And(Goods.HasMarketContext, Goods.CanEditName)]"
+			blockoverride "properties" {
+				onclick = "[PopupManager.ShowPrestigeGoodChangeName(Goods.Self)]"
+				tooltip = "CHANGE_NAME_OF_PRESTIGE_GOOD"
+			}
+
+			blockoverride "texture" {
+				texture = "gfx/interface/buttons/button_icons/edit.dds"
+			}
+
+			blockoverride = "text" {
+				text = "CHANGE_NAME"
 			}
 		}
 

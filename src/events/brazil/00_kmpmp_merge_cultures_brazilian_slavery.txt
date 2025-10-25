@@ -28,7 +28,7 @@ brazilian_slavery.13 = {
 		if = {
 			limit = {
 				c:GBR ?= {
-					has_law = law_type:law_slavery_banned
+					has_law_or_variant = law_type:law_slavery_banned
 				}
 			}
 			c:GBR ?= {
@@ -38,13 +38,13 @@ brazilian_slavery.13 = {
 		else_if = {
 			limit = {
 				any_country = {
-					has_law = law_type:law_slavery_banned
+					has_law_or_variant = law_type:law_slavery_banned
 					country_rank = rank_value:great_power					
 				}
 			}
 			random_country = {
 				limit = {
-					has_law = law_type:law_slavery_banned
+					has_law_or_variant = law_type:law_slavery_banned
 					country_rank = rank_value:great_power
 				}
 				save_scope_as = anti_slavery_great_power_scope
@@ -53,7 +53,7 @@ brazilian_slavery.13 = {
 		else = {
 			random_country = {
 				limit = {
-					has_law = law_type:law_slavery_banned
+					has_law_or_variant = law_type:law_slavery_banned
 				}
 				save_scope_as = anti_slavery_great_power_scope				
 			}
@@ -63,7 +63,7 @@ brazilian_slavery.13 = {
 	option = {
 		name = brazilian_slavery.13.a
 		default_option = yes
-        ig:ig_rural_folk = {
+        ig:ig_rural_folk ?= {
             add_ideology = ideology_pro_slavery
         }
         add_modifier = {
@@ -79,7 +79,7 @@ brazilian_slavery.13 = {
         }
         every_country = {
         	limit = {
-				has_law = law_type:law_slavery_banned
+				has_law_or_variant = law_type:law_slavery_banned
 				country_rank >= rank_value:great_power
         	}
         	change_relations = { country = root value = -30 }

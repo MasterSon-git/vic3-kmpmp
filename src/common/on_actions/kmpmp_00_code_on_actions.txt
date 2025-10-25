@@ -112,6 +112,97 @@ on_wargoal_enforced = {
         		trigger_event = { id = brazilian_minors.3 days = 0 popup = yes }
         	}
         }
+
+		if = { # recently crushed a secession
+			limit = {
+				scope:diplomatic_play ?= {
+					is_diplomatic_play_type = dp_secession
+				}
+			}
+			ROOT ?= {
+				set_variable = {
+					name = crushed_secession
+					days = 90
+				}
+			}
+		}
+
+		if = { # Ottoman recently crushed a secession
+			limit = {
+				AND = {
+					c:TUR ?= this
+					has_journal_entry = je_great_eastern_crisis
+					scope:diplomatic_play = {
+						is_diplomatic_play_type = dp_secession
+					}
+				}
+			}
+			ROOT ?= {
+				set_variable = {
+					name = ottoman_crushed_secession
+					days = 365
+				}
+			}
+		}
+
+		if = { # Balkan Wars - Ottoman Empire loses
+			limit = {
+				ROOT = {
+					NOT = {
+						has_variable = lost_balkan_wars
+					}
+					scope:target ?= {
+						c:TUR ?= this
+					}
+					scope:diplomatic_play = {
+						is_diplomatic_play_type = dp_balkan_war
+					}
+				}
+			}
+			scope:target ?= {
+				trigger_event = { id = balkan_wars.13 popup = yes }
+				set_variable = {
+					name = lost_balkan_wars
+					days = 30
+				}
+			}
+			scope:diplomatic_play = {
+				if = {
+					limit = {
+						NOT = {
+							any_scope_initiator_ally = {
+								country_rank >= rank_value:great_power
+							}
+						}
+					}
+					every_scope_play_involved = {
+						limit = {
+							has_journal_entry = je_the_balkan_league
+						}
+						set_variable = balkan_league_fought_alone_var
+					}
+				}
+			}
+		}
+
+		if = { # Balkan Wars - BL loses
+			limit = {
+				ROOT = {
+					scope:target ?= {
+						has_journal_entry = je_the_balkan_league
+					}
+					scope:diplomatic_play = {
+						is_diplomatic_play_type = dp_balkan_war
+					}
+				}
+			}
+			scope:target ?= {
+				set_variable = {
+					name = lost_balkan_wars
+					days = 30
+				}
+			}
+		}
         if = { # Persia - Loss of Herat
         	limit = {
         		owner = {
@@ -202,5 +293,109 @@ on_wargoal_enforced = {
 		# 		}
 		# 	}
 		# }
+
+		if = { # Enforcing Trialist Manifesto
+			limit = {
+				c:AUS ?= owner
+				scope:target ?= {
+					c:HUN ?= this
+					NOT = {
+						has_variable = forced_trialist_manifesto
+					}
+				}
+				scope:diplomatic_play = {
+					is_diplomatic_play_type = dp_enforce_trialist_manifesto
+				}
+			}
+			owner = {
+				trigger_event = { id = austria_trialism.3 days = 1 popup = yes }
+			}
+			scope:target = {
+				set_variable = { name = forced_trialist_manifesto years = 1 }
+			}
+		}
+
+		### Austrian Neo-Absolutism JE
+		if = {
+			limit = {
+				scope:target ?= {
+					has_journal_entry = je_austrian_neo_absolutism
+				}
+			}
+			scope:target ?= {
+				set_variable = {
+					name = temp_wargoal_impact
+					value = {
+						value = scope:wargoal_impact
+						multiply = 4
+					}
+				}
+				if = {
+					limit = {
+						has_variable = temp_wargoal_impact
+					}
+					je:je_austrian_neo_absolutism ?= {
+						add_progress = { value = owner.var:temp_wargoal_impact name = austrian_neo_absolutism_constitutional_pressure_progress_bar }
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					has_journal_entry = je_austrian_neo_absolutism
+				}
+				scope:target ?= {
+					OR = {
+						is_country_type = recognized
+						is_country_type = colonial
+					}
+					country_rank >= rank_value:great_power
+				}
+			}
+			owner = {
+				set_variable = {
+					name = temp_wargoal_impact
+					value = {
+						value = scope:wargoal_impact
+						multiply = -4
+					}
+				}
+				if = {
+					limit = {
+						has_variable = temp_wargoal_impact
+					}
+					je:je_austrian_neo_absolutism ?= {
+						add_progress = { value = owner.var:temp_wargoal_impact name = austrian_neo_absolutism_constitutional_pressure_progress_bar }
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner ?= {
+					has_journal_entry = je_austrian_neo_absolutism
+				}
+				scope:target ?= {
+					c:PRU ?= this
+				}
+			}
+			owner = {
+				set_variable = has_enforced_wargoal_on_prussia_var
+			}
+		}
+		if = {
+			limit = {
+				owner ?= {
+					has_journal_entry = je_austrian_neo_absolutism
+				}
+				scope:target ?= {
+					c:GER ?= this
+				}
+			}
+			owner = {
+				set_variable = has_enforced_wargoal_on_germany_var
+			}
+		}
 	}
 }

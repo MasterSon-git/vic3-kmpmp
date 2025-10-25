@@ -24,6 +24,18 @@
 		}
 	}
 
+	on_activate = {
+		if = { # removes opium ban authority modifier if forced to open market via diplomacy
+			limit = {
+				AND = {
+					c:CHI ?= this
+					has_modifier = opium_ban_authority
+				}
+			}
+			remove_modifier = opium_ban_authority
+		}
+	}
+
 	modifier = {
 		state_subvention_export_add = 0.50
 		state_subvention_import_add = 0.50

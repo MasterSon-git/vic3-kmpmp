@@ -4,11 +4,13 @@
 # scope:has_capital_interest is whether the power bloc has interest on the capital of the target country.
 # No randomness is allowed in this script value
 power_bloc_leverage_gain = {
-	##### Add factors: #####
+
+##### Add factors: #####
 	add = {
 		value = 100
 		desc = POWER_BLOC_LEVERAGE_GAIN_FROM_INTEREST
 	}
+
 	if = {
 		limit = {
 			power_bloc ?= {
@@ -22,9 +24,11 @@ power_bloc_leverage_gain = {
 			desc = POWER_BLOC_LEVERAGE_GAIN_FROM_MEMBERSHIP
 		}
 	}
+
 	add = {
 		value = 300	#200
 		multiply = "scope:target.economic_dependence(ROOT)"
+
 		if = {
 			limit = {
 				root.power_bloc = {
@@ -33,8 +37,10 @@ power_bloc_leverage_gain = {
 			}
 			multiply = 2 #1.5
 		}
+
 		desc = POWER_BLOC_LEVERAGE_GAIN_FROM_ECONOMIC_DEPENDENCE
 	}
+
 	if = {
 		limit = {
 			is_in_war_together = scope:target
@@ -44,6 +50,7 @@ power_bloc_leverage_gain = {
 			desc = POWER_BLOC_LEVERAGE_GAIN_IN_COMMON_WAR
 		}
 	}
+
 	if = {
 		limit = {
 			scope:target.religion = root.religion
@@ -65,6 +72,7 @@ power_bloc_leverage_gain = {
 			}
 		}
 	}
+
 	if = {
 		limit = {
 			has_treaty_port_in_market = scope:target.market
@@ -74,6 +82,7 @@ power_bloc_leverage_gain = {
 			desc = POWER_BLOC_LEVERAGE_HAS_TREATY_PORT
 		}
 	}
+
 	if = {
 		limit = {
 			is_adjacent_to_country = scope:target
@@ -83,6 +92,7 @@ power_bloc_leverage_gain = {
 			desc = POWER_BLOC_LEVERAGE_ADJACENT_TO_LEADER
 		}
 	}
+
 	else_if = {
 		limit = {
 			has_strategic_adjacency = scope:target
@@ -92,11 +102,16 @@ power_bloc_leverage_gain = {
 			desc = POWER_BLOC_LEVERAGE_STRATEGIC_ADJACENCY
 		}
 	}
+
 	if = {
 		limit = {
 			scope:target = {
 				any_primary_culture = {
-					shares_trait_with_any_primary_culture = root
+					OR = {
+						shares_heritage_trait_group_with_any_primary_culture = root
+						shares_language_trait_group_with_any_primary_culture = root
+						shares_tradition_trait_with_any_primary_culture = root
+					}
 				}
 			}
 		}
@@ -106,7 +121,7 @@ power_bloc_leverage_gain = {
 				limit = {
 					scope:target = {
 						any_primary_culture = {
-							shares_heritage_trait_with_any_primary_culture = root
+							shares_heritage_trait_group_with_any_primary_culture = root
 						}
 					}
 				}
@@ -116,7 +131,13 @@ power_bloc_leverage_gain = {
 				limit = {
 					scope:target = {
 						any_primary_culture = {
-							shares_heritage_and_other_trait_with_any_primary_culture = root
+							AND = {
+								shares_heritage_trait_group_with_any_primary_culture = root
+								OR = {
+									shares_language_trait_group_with_any_primary_culture = root
+									shares_tradition_trait_with_any_primary_culture = root
+								}
+							}
 						}
 					}
 				}
@@ -125,7 +146,9 @@ power_bloc_leverage_gain = {
 			desc = POWER_BLOC_LEVERAGE_GAIN_FROM_CULTURAL_PROXIMITY
 		}
 	}
-	##### Mult factors: #####
+
+##### Mult factors: #####
+
 	if = {
 		limit = {
 			scope:target = {
@@ -155,15 +178,13 @@ power_bloc_leverage_gain = {
 			desc = POWER_BLOC_LEVERAGE_PENALTY_FROM_EXPELLED_DIPLOMATS
 		}
 	}
+
 	if = {
 		limit = {
 			scope:target = {
 				any_primary_culture = {
 					ROOT = {
-						cultural_acceptance_base = {
-							target = PREV
-							value < acceptance_status_2
-						}
+						cultural_acceptance_base = { target = PREV value < acceptance_status_2 }
 					}
 				}
 			}
@@ -178,10 +199,7 @@ power_bloc_leverage_gain = {
 			scope:target = {
 				any_primary_culture = {
 					ROOT = {
-						cultural_acceptance_base = {
-							target = PREV
-							value < acceptance_status_3
-						}
+						cultural_acceptance_base = { target = PREV value < acceptance_status_3 }
 					}
 				}
 			}
@@ -196,10 +214,7 @@ power_bloc_leverage_gain = {
 			scope:target = {
 				any_primary_culture = {
 					ROOT = {
-						cultural_acceptance_base = {
-							target = PREV
-							value < acceptance_status_4
-						}
+						cultural_acceptance_base = { target = PREV value < acceptance_status_4 }
 					}
 				}
 			}
@@ -214,10 +229,7 @@ power_bloc_leverage_gain = {
 			scope:target = {
 				any_primary_culture = {
 					ROOT = {
-						cultural_acceptance_base = {
-							target = PREV
-							value < acceptance_status_5
-						}
+						cultural_acceptance_base = { target = PREV value < acceptance_status_5 }
 					}
 				}
 			}
@@ -227,6 +239,7 @@ power_bloc_leverage_gain = {
 			desc = POWER_BLOC_LEVERAGE_PENALTY_FROM_DISCRIMINATED_PRIMARY_CULTURE
 		}
 	}
+
 	if = {
 		limit = {
 			capital = {
@@ -238,8 +251,8 @@ power_bloc_leverage_gain = {
 			NOT = {
 				scope:target = {
 					OR = {
-						has_law = law_type:law_total_separation
-						has_law = law_type:law_freedom_of_conscience
+						has_law_or_variant = law_type:law_total_separation
+						has_law_or_variant = law_type:law_freedom_of_conscience
 					}
 				}
 			}
@@ -257,6 +270,7 @@ power_bloc_leverage_gain = {
 			desc = POWER_BLOC_LEVERAGE_PENALTY_FROM_DISCRIMINATED_RELIGION
 		}
 	}
+
 	if = {
 		limit = {
 			scope:has_capital_interest = no
@@ -266,6 +280,7 @@ power_bloc_leverage_gain = {
 			desc = POWER_BLOC_LEVERAGE_GAIN_NO_CAPITAL_INTEREST
 		}
 	}
+
 	if = {
 		limit = {
 			has_war_with = scope:target
@@ -275,18 +290,22 @@ power_bloc_leverage_gain = {
 			desc = POWER_BLOC_LEVERAGE_HAS_WAR_WITH
 		}
 	}
+
 	if = {
 		limit = {
 			infamy >= infamy_threshold:infamous
 		}
+
 		multiply = {
 			value = 0.9
+
 			if = {
 				limit = {
 					infamy >= infamy_threshold:notorious
 				}
 				add = -0.2
 			}
+
 			if = {
 				limit = {
 					infamy >= infamy_threshold:pariah
@@ -300,6 +319,7 @@ power_bloc_leverage_gain = {
 			desc = POWER_BLOC_LEVERAGE_PENALTY_INFAMY
 		}
 	}
+
 	if = {
 		limit = {
 			is_country_type = unrecognized
@@ -323,6 +343,7 @@ power_bloc_mandate_progress_by_rank = {
 		min = 1
 		desc = "POWER_BLOC_MANDATE_PROGRESS_BASE"
 	}
+
 	# kmpmp
 	if = {
 		limit = {
@@ -346,6 +367,7 @@ power_bloc_mandate_progress_by_rank = {
 			desc = "POWER_BLOC_MANDATE_PROGRESS_FROM_GREAT_POWER_MEMBERS"
 		}
 	}
+
 	if = {
 		limit = {
 			power_bloc_major_power_non_leader_members > 0
@@ -357,6 +379,7 @@ power_bloc_mandate_progress_by_rank = {
 			desc = "POWER_BLOC_MANDATE_PROGRESS_FROM_MAJOR_POWER_MEMBERS"
 		}
 	}
+
 	if = {
 		limit = {
 			power_bloc_minor_power_non_leader_members > 0
@@ -368,6 +391,7 @@ power_bloc_mandate_progress_by_rank = {
 			desc = "POWER_BLOC_MANDATE_PROGRESS_FROM_MINOR_POWER_MEMBERS"
 		}
 	}
+
 	if = {
 		limit = {
 			power_bloc_unrecognized_major_power_non_leader_members > 0
@@ -379,6 +403,7 @@ power_bloc_mandate_progress_by_rank = {
 			desc = "POWER_BLOC_MANDATE_PROGRESS_FROM_UNRECOGNIZED_MAJOR_POWER_MEMBERS"
 		}
 	}
+
 	if = {
 		limit = {
 			power_bloc_unrecognized_regional_power_non_leader_members > 0
@@ -390,6 +415,7 @@ power_bloc_mandate_progress_by_rank = {
 			desc = "POWER_BLOC_MANDATE_PROGRESS_FROM_UNRECOGNIZED_REGIONAL_POWER_MEMBERS"
 		}
 	}
+
 	if = {
 		limit = {
 			power_bloc_unrecognized_power_non_leader_members > 0
@@ -401,6 +427,7 @@ power_bloc_mandate_progress_by_rank = {
 			desc = "POWER_BLOC_MANDATE_PROGRESS_FROM_UNRECOGNIZED_POWER_MEMBERS"
 		}
 	}
+
 	if = {
 		limit = {
 			power_bloc_insignificant_power_non_leader_members > 0
@@ -410,7 +437,7 @@ power_bloc_mandate_progress_by_rank = {
 			value = power_bloc_insignificant_power_non_leader_members
 			multiply = power_bloc_mandate_progress_per_insignificant_power_member
 			desc = "POWER_BLOC_MANDATE_PROGRESS_FROM_INSIGNIFICANT_POWER_MEMBERS"
-		}	
+		}
 	}
 	# kmpmp
 	if = {
@@ -448,187 +475,3 @@ power_bloc_mandate_progress_by_rank = {
 	}
 }
 
-ai_accept_join_request_score = {
-	### Trade League
-	if = {
-		limit = {
-			power_bloc ?= {
-				has_identity = identity:identity_trade_league
-			}
-		}
-		### Joining country has Isolationism - ignore
-		if = {
-			limit = {
-				exists = scope:source_country
-				scope:source_country = {
-					modifier:country_disallow_trade_bool = yes
-				}
-			}
-			add = {
-				desc = "DIPLOMATIC_ACCEPTANCE_DISALLOWED_TRADE_FIRST"
-				value = -1000
-			}
-		}
-		else = {
-			### Trade routes: increase for each trade route between the two countries
-			### Trade: increase with mutual trade value
-			if = {
-				limit = {
-					exists = scope:source_country
-					"mutual_trade_value_with_country(scope:source_country)" > 0
-				}
-				add = {
-					desc = "DIPLOMATIC_ACCEPTANCE_MUTUAL_TRADE_VALUE"
-					value = "mutual_trade_value_with_country(scope:source_country)"
-					multiply = 50000
-					divide = { # We modulate this value by GDP, clamped to a range to ensure it remains relevant for very small/very large economies
-						value = gdp
-						max = scope:source_country.gdp # We use whichever GDP is smaller
-						min = 1000000
-					}
-					max = 50
-				}
-			}
-			### Economic Dependence: increase if high, decrease if low
-			if = {
-				limit = {
-					exists = scope:source_country
-					"scope:source_country.economic_dependence(root)" > 1
-				}
-				add = {
-					desc = "DIPLOMATIC_ACCEPTANCE_HIGH_ECONOMIC_DEPENDENCE_FIRST"
-					value = "scope:source_country.economic_dependence(root)"
-					subtract = 1
-					multiply = 25
-					max = 50
-				}
-			}
-			else_if = {
-				limit = {
-					exists = scope:source_country
-					"scope:source_country.economic_dependence(root)" < 1
-				}
-				add = {
-					desc = "DIPLOMATIC_ACCEPTANCE_LOW_ECONOMIC_DEPENDENCE_FIRST"
-					value = "scope:source_country.economic_dependence(root)"
-					subtract = 1
-					multiply = 50
-					min = -50
-				}
-			}
-		}
-	}
-	### Sovereign Empire
-	else_if = {
-		limit = {
-			power_bloc ?= {
-				has_identity = identity:identity_sovereign_empire
-			}
-		}
-		### Base bonus: sovereign empires should be happy to have more subjects
-		add = {
-			desc = "[GetPowerBlocIdentity('identity_sovereign_empire').GetName]"
-			value = 50
-		}
-	}
-	### Ideological Union
-	else_if = {
-		limit = {
-			power_bloc ?= {
-				has_identity = identity:identity_ideological_union
-			}
-		}
-		### Strong weight for ideological opinion
-		add = {
-			desc = "DIPLOMATIC_ACCEPTANCE_IDEOLOGICAL_OPINION"
-			value = "scope:source_country.ai_ideological_opinion(root)"
-			multiply = 0.5
-			max = 50
-			min = -50
-		}
-	}
-	### Military Treaty
-	else_if = {
-		limit = {
-			power_bloc ?= {
-				has_identity = identity:identity_military_treaty_organization
-			}
-		}
-		### Military spending - check the military spending of the joining country
-		if = {
-			limit = {
-				scope:source_country ?= {
-					OR = {
-						military_expenses_share < 0.25
-						military_expenses < 2000
-					}
-				}
-			}
-			add = {
-				desc = "DIPLOMATIC_ACCEPTANCE_MILITARY_SPENDING_FIRST"
-				value = military_expenses_share
-				subtract = 0.25
-				multiply = 200
-				min = -50
-			}
-		}
-		else_if = {
-			limit = {
-				scope:source_country ?= {
-					military_expenses_share > 0.3
-					military_expenses > 5000
-				}
-			}
-			add = {
-				desc = "DIPLOMATIC_ACCEPTANCE_MILITARY_SPENDING_FIRST"
-				value = military_expenses_share
-				subtract = 0.3
-				multiply = 100
-				max = 50
-			}
-		}
-	}
-	### Religious homogeneity
-	else_if = {
-		limit = {
-			power_bloc ?= {
-				has_identity = identity:identity_religious
-			}
-		}
-		### Same religion
-		if = {
-			limit = {
-				scope:source_country ?= {
-					religion = scope:source_country.religion
-				}
-			}
-			add = {
-				desc = "DIPLOMATIC_ACCEPTANCE_SAME_RELIGION"
-				value = 50
-			}
-		}
-		else = {
-			### If you share a religious discrimination trait
-			if = {
-				limit = {
-					scope:source_country ?= {
-						religion = {
-							shares_heritage_trait_with_state_religion = root
-						}
-					}
-				}
-				add = {
-					desc = "DIPLOMATIC_ACCEPTANCE_DIFFERENT_RELIGION_BUT_SAME_TRAIT"
-					value = -25
-				}
-			}
-			### Different religion
-			else = {
-				add = {
-					desc = "DIPLOMATIC_ACCEPTANCE_DIFFERENT_RELIGION"
-					value = -50
-				}
-			}
-		}
-	}
-}

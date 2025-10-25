@@ -382,10 +382,6 @@ types goods_panel_types
 						goods_prestige_goods_breakdown_list_item = {						
 							parentanchor = hcenter
 
-							blockoverride "prestige_goods_item_minimumsize" {
-								minimumsize = { 540 -1 }
-							}
-
 							blockoverride "prestige_goods_item_name_size" {
 								minimumsize = { 300 -1 }
 								maximumsize = { 300 -1 }
@@ -407,13 +403,10 @@ types goods_panel_types
 
 							item = {
 								goods_prestige_goods_breakdown_list_item = {
-									blockoverride "prestige_goods_item_minimumsize" {
-										minimumsize = { 540 -1 }
-									}
 
 									blockoverride "prestige_goods_item_name_size" {
-										minimumsize = { 300 -1 }
-										maximumsize = { 300 -1 }
+										minimumsize = { 260 -1 }
+										maximumsize = { 260 -1 }
 									}
 								}
 							}

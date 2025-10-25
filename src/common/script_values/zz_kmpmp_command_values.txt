@@ -13,6 +13,20 @@ land_battle_size = {
 		value = "scope:front.num_total_battalions(root)"
 		desc = "BATTLE_SIZE_BASE_TOTAL_BATTALIONS_ON_FRONT"
 	}
+
+	# If it's a land or naval invasion defender can bring additional troops
+	if = {
+		limit = {
+			exists = scope:front.invasion
+			scope:is_advancing_side = no
+		}
+		add = {
+			value = "scope:province.land_controller_hq.num_garrison_units"
+			desc = "BATTLE_SIZE_INVASION_GARRISONED_BATTALIONS"
+		}
+	}
+
+	save_temporary_value_as = num_units_on_front_and_hq
 	
 	# For regular land battles, subtract a random number of battalions depending on how many battalions are on the front compared to how long it is
 	if = {
@@ -119,10 +133,10 @@ land_battle_size = {
 	else_if = {
 		limit = {
 			scope:is_advancing_side = no
-			scope:pre_max_amount_cap > "scope:front.num_total_battalions(root)"
+			scope:pre_max_amount_cap > scope:num_units_on_front_and_hq
 		}
 		max = {
-			add = "scope:front.num_total_battalions(root)"
+			add = scope:num_units_on_front_and_hq
 			desc = "BATTLE_SIZE_MAX_AMOUNT_REACHED"
 		}
 	}

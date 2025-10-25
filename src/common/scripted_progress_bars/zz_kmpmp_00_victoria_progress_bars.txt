@@ -86,7 +86,7 @@
 			limit = {
 				# Slavery is legal
 				NOT = {
-					has_law = law_type:law_slavery_banned
+					has_law_or_variant = law_type:law_slavery_banned
 				}
 			}
 			subtract = {
@@ -107,7 +107,7 @@
 		if = {
 			limit = {
 				# Serfdom is legal
-				has_law = law_type:law_serfdom
+				has_law_or_variant = law_type:law_serfdom
 			}
 			subtract = {
 				desc = "earning_recognition_serfdom_tt"
@@ -117,7 +117,7 @@
 		if = {
 			limit = {
 				# Traditional economic system
-				has_law = law_type:law_traditionalism
+				has_law_or_variant = law_type:law_traditionalism
 			}
 			subtract = {
 				desc = "earning_recognition_traditionalism_tt"
@@ -127,7 +127,7 @@
 		if = {
 			limit = {
 				# 'Draconic' law
-				has_law = law_type:law_outlawed_dissent
+				has_law_or_variant = law_type:law_outlawed_dissent
 			}
 			subtract = {
 				desc = "earning_recognition_outlawed_dissent_tt"

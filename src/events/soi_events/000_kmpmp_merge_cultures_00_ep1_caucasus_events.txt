@@ -118,7 +118,7 @@ caucasuswar.1 = {
 				}
 			}	
 		}
-		ig:ig_armed_forces = {
+		ig:ig_armed_forces ?= {
 			add_modifier = {
 				name = modifier_failed_to_cover_incursion
 				months = 13
@@ -164,7 +164,7 @@ caucasuswar.5 = {
 				target = cu:circassian 
 				value < acceptance_status_4 
 			}
-			has_law = law_type:law_state_religion
+			has_law_or_variant = law_type:law_state_religion
 		}
 		any_scope_state = {
 			state_region = s:STATE_KUBAN
@@ -229,6 +229,10 @@ caucasuswar.5 = {
 				target = root
 			}
 		}
+
+		ai_chance = {
+			base = 4
+		}
 	}
 
 	option = {
@@ -236,7 +240,7 @@ caucasuswar.5 = {
 		custom_tooltip = {
 			text = milyutin_available_tt
 		}
-		ig:ig_armed_forces = {
+		ig:ig_armed_forces ?= {
 			add_modifier = {
 				name = modifier_refused_milyutin_memorandum
 				days = normal_modifier_time
@@ -249,6 +253,10 @@ caucasuswar.5 = {
 		}
 		scope:milyutin_scope = {
 			add_trait = experienced_colonial_administrator
+		}
+
+		ai_chance = {
+			base = 1
 		}
 	}
 }
@@ -344,7 +352,7 @@ caucasuswar.6 = {
 				days = short_modifier_time
 			}
 		}
-		ig:ig_armed_forces = {
+		ig:ig_armed_forces ?= {
 			add_modifier = {
 				name = modifier_rampant_desertions
 				days = short_modifier_time
@@ -555,7 +563,7 @@ caucasuswar.9 = { #Muhammad Amin's arrival
 		c:CHC = {
 			save_scope_as = imamate_scope
 		}
-		ig:ig_devout = {
+		ig:ig_devout ?= {
 			save_scope_as = devout_scope
 		}
 	}
@@ -568,7 +576,7 @@ caucasuswar.9 = { #Muhammad Amin's arrival
 			template = CIR_Muhammad_Amin_Asiyalav
 		}
 		add_primary_culture = cu:georgian #cu:north_caucasian
-		ig:ig_devout = {
+		ig:ig_devout ?= {
 			add_modifier = {
 				name = modifier_accepted_muhammad_amin
 				days = long_modifier_time
@@ -599,7 +607,7 @@ caucasuswar.9 = { #Muhammad Amin's arrival
 
 	option = {
 		name = caucasuswar.9.b
-		ig:ig_devout = {
+		ig:ig_devout ?= {
 			add_modifier = {
 				name = modifier_repudiated_muhammad_amin
 				days = long_modifier_time
@@ -1446,6 +1454,13 @@ caucasus_expulsions.2 = {
 				value = 10
 			}
 		}
+		cu:circassian = {
+			add_tradition_trait = tradition_rumelian
+		}
+
+		ai_chance = {
+			base = 4
+		}
 	}
 
 	option = { # Reject the proposal
@@ -1462,6 +1477,10 @@ caucasus_expulsions.2 = {
 				type = catalyst_event_negative
 				target = root
 			}
+		}
+
+		ai_chance = {
+			base = 1
 		}
 	}
 }
