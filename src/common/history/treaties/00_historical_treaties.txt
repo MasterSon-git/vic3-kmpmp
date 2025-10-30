@@ -876,7 +876,9 @@
 
 		is_draft = no
 		entered_into_force_on = 1828.6.15 
-		binding_period = { years = 35 }
+		binding_period = {
+			years = 18 #35
+		}
 
 		articles_to_create = {
 			{
@@ -895,7 +897,9 @@
 
 		is_draft = no
 		entered_into_force_on = 1829.9.14
-		binding_period = { years = 30 } # The Organic Regulation ended in 1856
+		binding_period = {
+			years = 17 #30
+		} # The Organic Regulation ended in 1856
 
 		articles_to_create = {
 			{ # Organic Regulation
@@ -932,7 +936,9 @@
 
 		is_draft = no
 		entered_into_force_on = 1829.9.14
-		binding_period = { years = 30 } # The Organic Regulation ended in 1856
+		binding_period = {
+			years = 17 #30
+		} # The Organic Regulation ended in 1856
 
 		articles_to_create = {
 			{ # Organic Regulation

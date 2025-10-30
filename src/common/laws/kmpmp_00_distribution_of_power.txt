@@ -152,8 +152,8 @@ law_technocracy = {
 		country_engineers_pol_str_mult = 0.33
 		country_officers_pol_str_mult = 0.33
 		country_authority_add = 100
-		country_max_companies_add = 1
-		country_free_charters_add = 1
+		#country_max_companies_add = 1
+		#country_free_charters_add = 1
 
 		# kmpmp
 		country_consumption_tax_cost_mult = -0.2

@@ -224,7 +224,7 @@ decree_promote_social_mobility = {
 decree_promote_national_values = {
 	texture = "gfx/interface/icons/decree/decree_promote_national_values.dds"
 	unlocking_technologies = {
-		nationalism
+		centralization #nationalism
 	}
 
 	country_trigger = {
