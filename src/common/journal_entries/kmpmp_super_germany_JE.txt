@@ -11,9 +11,20 @@
             limit = {
                 exists = c:AUS
             }
-            has_diplomatic_pact = { # Österreich muss ein Rivale sein
-                who = c:AUS
-                type = rivalry
+            OR = {
+                has_diplomatic_pact = { # Österreich muss ein Rivale sein
+                    who = c:AUS
+                    type = rivalry
+                }
+
+                AND = { # germany is gp and austria is minor
+                    ROOT = {
+                        country_rank >= rank_value:great_power
+                    }
+                    c:AUS ?= {
+                        country_rank < rank_value:major_power
+                    }
+                }
             }
         } 
         
