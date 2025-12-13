@@ -7,26 +7,29 @@
     }
 
     complete = {
+        hidden_trigger = { # workaround to fix je not triggering on_complete if it's already completable when activated
+            scope:journal_entry = {
+                journal_entry_age > 0
+            }
+        }
         trigger_if = {
             limit = {
                 exists = c:AUS
             }
-            OR = {
-                has_diplomatic_pact = { # Österreich muss ein Rivale sein
+
+            OR = { # you either has rivaled or you can't rival austria
+                has_diplomatic_pact = {
                     who = c:AUS
                     type = rivalry
                 }
-
-                AND = { # germany is gp and austria is minor
-                    ROOT = {
-                        country_rank >= rank_value:great_power
-                    }
-                    c:AUS ?= {
-                        country_rank < rank_value:major_power
+                NOT = {
+                    can_create_diplomatic_pact = {
+                        target = c:AUS
+                        type = rivalry
                     }
                 }
             }
-        } 
+        }
         
         has_technology_researched = pan-nationalism  # Pan-Nationalismus erforscht
         OR = {
@@ -102,6 +105,12 @@ je_super_germany = {
     }
 
     complete = {
+        hidden_trigger = { # workaround to fix je not triggering on_complete if it's already completable when activated
+            scope:journal_entry = {
+                journal_entry_age > 0
+            }
+        }
+        
         custom_tooltip = {
             text = je_super_germany_condition_own_german_states_tooltip
             any_in_list = {
