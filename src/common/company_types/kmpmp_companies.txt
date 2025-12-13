@@ -737,11 +737,11 @@ company_la_plata_mining = {
 				}
 
 				AND = {
-					c:ARG = {
+					c:ARG ?= {
 						is_direct_subject_of = root
 						has_diplomatic_pact = { who = root type = puppet }
 					}
-					c:CHL = {
+					c:CHL ?= {
 						is_direct_subject_of = root
 						has_diplomatic_pact = { who = root type = puppet }
 					}
@@ -763,11 +763,11 @@ company_la_plata_mining = {
 			}
 
 			AND = {
-				c:ARG = {
+				c:ARG ?= {
 					is_direct_subject_of = root
 					has_diplomatic_pact = { who = root type = puppet }
 				}
-				c:CHL = {
+				c:CHL ?= {
 					is_direct_subject_of = root
 					has_diplomatic_pact = { who = root type = puppet }
 				}

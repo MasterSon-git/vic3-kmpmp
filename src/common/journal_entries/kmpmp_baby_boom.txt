@@ -25,13 +25,17 @@
         }
     }
 
-    # due to a bug, now it's always possible
-    # we had an issue when complete is true before possible that the je completes without applying the effect
-    # possible = {
-    #     has_technology_researched = pharmaceuticals
-    # }
+    possible = {
+        has_technology_researched = pharmaceuticals
+    }
 
     complete = {
+        hidden_trigger = { # workaround to fix je not triggering on_complete if it's already completable when activated
+            scope:journal_entry = {
+                journal_entry_age > 0
+            }
+        }
+        
         has_technology_researched = pharmaceuticals
         average_sol >= 10
     }

@@ -2,7 +2,7 @@
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 	group = je_group_historical_content
 	
-	possible = {
+	possible = { # added throgh history/global
 	}
 
 	complete = {
