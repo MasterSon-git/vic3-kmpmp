@@ -56,7 +56,7 @@
         }
         any_scope_building = {
 			filter = {
-				is_building_type = building_barracks
+				is_building_type = building_barrack
 			}			
 			NOR = {
 				building_has_goods_shortage = yes
@@ -65,7 +65,7 @@
 			percent = 1
 		}
         any_scope_building = {
-            is_building_type = building_munition_plants
+            is_building_type = building_munition_plant
             level >= 3
         }
     }

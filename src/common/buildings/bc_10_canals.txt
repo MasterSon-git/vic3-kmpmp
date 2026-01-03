@@ -1,0 +1,11 @@
+﻿INJECT:building_suez_canal = {
+	production_method_groups = {
+		pmg_ownership_capital_building_canal
+	}
+}
+
+INJECT:building_panama_canal = {
+	production_method_groups = {
+		pmg_ownership_capital_building_canal
+	}
+}

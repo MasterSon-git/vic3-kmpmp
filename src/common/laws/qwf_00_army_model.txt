@@ -11,7 +11,7 @@
 		state_conscription_rate_add = 0.03 #0.04
 		country_aristocrats_pol_str_mult = 0.25
 		country_military_goods_cost_mult = -0.2 #-0.1
-		state_building_barracks_max_level_add = 25
+		state_building_barrack_max_level_add = 25
 		state_building_conscription_center_max_level_add = 25
 	}
 
@@ -83,7 +83,7 @@ law_professional_army = {
 		unit_morale_loss_mult = -0.05 #-0.1
 		state_conscription_rate_add = 0.005 #0.01
 		country_officers_pol_str_mult = 0.5
-		state_building_barracks_max_level_add = 100
+		state_building_barrack_max_level_add = 100
 		state_building_conscription_center_max_level_add = 55 #50
 		unit_experience_gain_mult = 0.35 #1.0
 		country_institution_qwf_conscription_max_investment_add = 3
@@ -179,7 +179,7 @@ law_national_militia = {
 		state_conscription_rate_add = 0.05
 		country_leverage_resistance_mult = 0.5
 		country_officers_pol_str_mult = -0.25
-		state_building_barracks_max_level_add = 35 #5
+		state_building_barrack_max_level_add = 35 #5
 		state_building_conscription_center_max_level_add = 100
 		# kmpmp
 		country_military_goods_cost_mult = -0.1
@@ -250,7 +250,7 @@ law_mass_conscription = {
 		state_conscription_rate_add = 0.04 #0.03
 		building_training_rate_mult = 0.85 #1
 		country_officers_pol_str_mult = 0.25
-		state_building_barracks_max_level_add = 125 #100
+		state_building_barrack_max_level_add = 125 #100
 		state_building_conscription_center_max_level_add = 100
 		# kmpmp
 		unit_experience_gain_mult = -0.1

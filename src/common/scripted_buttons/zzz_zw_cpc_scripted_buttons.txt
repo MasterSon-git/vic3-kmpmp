@@ -79,14 +79,14 @@
 
 # restricted building types: arts academy
 
-	zw_auto_invest_disallow_building_arts_academy_button = {
-		name = "zw_auto_invest_disallow_building_arts_academy_button"
-		desc = "zw_auto_invest_disallow_building_arts_academy_button_desc"
+	zw_auto_invest_disallow_building_art_academy_button = {
+		name = "zw_auto_invest_disallow_building_art_academy_button"
+		desc = "zw_auto_invest_disallow_building_art_academy_button_desc"
 		visible = { has_variable = zw_var_auto_invest_disallow_building }
-		selected = { has_variable = zw_var_auto_invest_disallow_building_arts_academy }
+		selected = { has_variable = zw_var_auto_invest_disallow_building_art_academy }
 		effect = {
-			custom_tooltip = zw_auto_invest_disallow_building_arts_academy_button_effect
-			zw_effect_set_remove_disallowed_building_type = { building_1 = building_arts_academy }
+			custom_tooltip = zw_auto_invest_disallow_building_art_academy_button_effect
+			zw_effect_set_remove_disallowed_building_type = { building_1 = building_art_academy }
 		}
 	}
 
@@ -98,10 +98,10 @@
 		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = {
 			OR = {
-				has_variable = zw_var_auto_invest_disallow_building_military_shipyards
+				has_variable = zw_var_auto_invest_disallow_building_military_shipyard
 				has_variable = zw_var_auto_invest_disallow_building_arms_industry
-				has_variable = zw_var_auto_invest_disallow_building_artillery_foundries
-				has_variable = zw_var_auto_invest_disallow_building_munition_plants
+				has_variable = zw_var_auto_invest_disallow_building_artillery_foundry
+				has_variable = zw_var_auto_invest_disallow_building_munition_plant
 			}
 		}
 		effect = {
@@ -109,22 +109,22 @@
 			if = {
 				limit = {
 					OR = {
-						has_variable = zw_var_auto_invest_disallow_building_military_shipyards
+						has_variable = zw_var_auto_invest_disallow_building_military_shipyard
 						has_variable = zw_var_auto_invest_disallow_building_arms_industry
-						has_variable = zw_var_auto_invest_disallow_building_artillery_foundries
-						has_variable = zw_var_auto_invest_disallow_building_munition_plants
+						has_variable = zw_var_auto_invest_disallow_building_artillery_foundry
+						has_variable = zw_var_auto_invest_disallow_building_munition_plant
 					}
 				}
-				zw_effect_remove_disallowed_building_type = { building_1 = building_military_shipyards }
+				zw_effect_remove_disallowed_building_type = { building_1 = building_military_shipyard }
 				zw_effect_remove_disallowed_building_type = { building_1 = building_arms_industry }
-				zw_effect_remove_disallowed_building_type = { building_1 = building_artillery_foundries }
-				zw_effect_remove_disallowed_building_type = { building_1 = building_munition_plants }
+				zw_effect_remove_disallowed_building_type = { building_1 = building_artillery_foundry }
+				zw_effect_remove_disallowed_building_type = { building_1 = building_munition_plant }
 			}
 			else = {
-				zw_effect_set_remove_disallowed_building_type = { building_1 = building_military_shipyards }
+				zw_effect_set_remove_disallowed_building_type = { building_1 = building_military_shipyard }
 				zw_effect_set_remove_disallowed_building_type = { building_1 = building_arms_industry }
-				zw_effect_set_remove_disallowed_building_type = { building_1 = building_artillery_foundries }
-				zw_effect_set_remove_disallowed_building_type = { building_1 = building_munition_plants }
+				zw_effect_set_remove_disallowed_building_type = { building_1 = building_artillery_foundry }
+				zw_effect_set_remove_disallowed_building_type = { building_1 = building_munition_plant }
 			}
 		}
 	}
@@ -142,25 +142,25 @@
 		}
 	}
 
-	zw_auto_invest_disallow_building_textile_mills_button = {
-		name = "zw_auto_invest_disallow_building_textile_mills_button"
-		desc = "zw_auto_invest_disallow_building_textile_mills_button_desc"
+	zw_auto_invest_disallow_building_textile_mill_button = {
+		name = "zw_auto_invest_disallow_building_textile_mill_button"
+		desc = "zw_auto_invest_disallow_building_textile_mill_button_desc"
 		visible = { has_variable = zw_var_auto_invest_disallow_building }
-		selected = { has_variable = zw_var_auto_invest_disallow_building_textile_mills }
+		selected = { has_variable = zw_var_auto_invest_disallow_building_textile_mill }
 		effect = {
-			custom_tooltip = zw_auto_invest_disallow_building_textile_mills_button_effect
-			zw_effect_set_remove_disallowed_building_type = { building_1 = building_textile_mills }
+			custom_tooltip = zw_auto_invest_disallow_building_textile_mill_button_effect
+			zw_effect_set_remove_disallowed_building_type = { building_1 = building_textile_mill }
 		}
 	}
 
-	zw_auto_invest_disallow_building_furniture_manufacturies_button = {
-		name = "zw_auto_invest_disallow_building_furniture_manufacturies_button"
-		desc = "zw_auto_invest_disallow_building_furniture_manufacturies_button_desc"
+	zw_auto_invest_disallow_building_furniture_manufactory_button = {
+		name = "zw_auto_invest_disallow_building_furniture_manufactory_button"
+		desc = "zw_auto_invest_disallow_building_furniture_manufactory_button_desc"
 		visible = { has_variable = zw_var_auto_invest_disallow_building }
-		selected = { has_variable = zw_var_auto_invest_disallow_building_furniture_manufacturies }
+		selected = { has_variable = zw_var_auto_invest_disallow_building_furniture_manufactory }
 		effect = {
-			custom_tooltip = zw_auto_invest_disallow_building_furniture_manufacturies_button_effect
-			zw_effect_set_remove_disallowed_building_type = { building_1 = building_furniture_manufacturies }
+			custom_tooltip = zw_auto_invest_disallow_building_furniture_manufactory_button_effect
+			zw_effect_set_remove_disallowed_building_type = { building_1 = building_furniture_manufactory }
 		}
 	}
 
@@ -175,36 +175,36 @@
 		}
 	}
 
-	zw_auto_invest_disallow_building_tooling_workshops_button = {
-		name = "zw_auto_invest_disallow_building_tooling_workshops_button"
-		desc = "zw_auto_invest_disallow_building_tooling_workshops_button_desc"
+	zw_auto_invest_disallow_building_tooling_workshop_button = {
+		name = "zw_auto_invest_disallow_building_tooling_workshop_button"
+		desc = "zw_auto_invest_disallow_building_tooling_workshop_button_desc"
 		visible = { has_variable = zw_var_auto_invest_disallow_building }
-		selected = { has_variable = zw_var_auto_invest_disallow_building_tooling_workshops }
+		selected = { has_variable = zw_var_auto_invest_disallow_building_tooling_workshop }
 		effect = {
-			custom_tooltip = zw_auto_invest_disallow_building_tooling_workshops_button_effect
-			zw_effect_set_remove_disallowed_building_type = { building_1 = building_tooling_workshops }
+			custom_tooltip = zw_auto_invest_disallow_building_tooling_workshop_button_effect
+			zw_effect_set_remove_disallowed_building_type = { building_1 = building_tooling_workshop }
 		}
 	}
 
-	zw_auto_invest_disallow_building_paper_mills_button = {
-		name = "zw_auto_invest_disallow_building_paper_mills_button"
-		desc = "zw_auto_invest_disallow_building_paper_mills_button_desc"
+	zw_auto_invest_disallow_building_paper_mill_button = {
+		name = "zw_auto_invest_disallow_building_paper_mill_button"
+		desc = "zw_auto_invest_disallow_building_paper_mill_button_desc"
 		visible = { has_variable = zw_var_auto_invest_disallow_building }
-		selected = { has_variable = zw_var_auto_invest_disallow_building_paper_mills }
+		selected = { has_variable = zw_var_auto_invest_disallow_building_paper_mill }
 		effect = {
-			custom_tooltip = zw_auto_invest_disallow_building_paper_mills_button_effect
-			zw_effect_set_remove_disallowed_building_type = { building_1 = building_paper_mills }
+			custom_tooltip = zw_auto_invest_disallow_building_paper_mill_button_effect
+			zw_effect_set_remove_disallowed_building_type = { building_1 = building_paper_mill }
 		}
 	}
 
-	zw_auto_invest_disallow_building_chemical_plants_button = {
-		name = "zw_auto_invest_disallow_building_chemical_plants_button"
-		desc = "zw_auto_invest_disallow_building_chemical_plants_button_desc"
+	zw_auto_invest_disallow_building_chemical_plant_button = {
+		name = "zw_auto_invest_disallow_building_chemical_plant_button"
+		desc = "zw_auto_invest_disallow_building_chemical_plant_button_desc"
 		visible = { has_variable = zw_var_auto_invest_disallow_building }
-		selected = { has_variable = zw_var_auto_invest_disallow_building_chemical_plants }
+		selected = { has_variable = zw_var_auto_invest_disallow_building_chemical_plant }
 		effect = {
-			custom_tooltip = zw_auto_invest_disallow_building_chemical_plants_button_effect
-			zw_effect_set_remove_disallowed_building_type = { building_1 = building_chemical_plants }
+			custom_tooltip = zw_auto_invest_disallow_building_chemical_plant_button_effect
+			zw_effect_set_remove_disallowed_building_type = { building_1 = building_chemical_plant }
 		}
 	}
 
@@ -219,25 +219,25 @@
 		}
 	}
 
-	zw_auto_invest_disallow_building_synthetics_plants_button = {
-		name = "zw_auto_invest_disallow_building_synthetics_plants_button"
-		desc = "zw_auto_invest_disallow_building_synthetics_plants_button_desc"
+	zw_auto_invest_disallow_building_synthetics_plant_button = {
+		name = "zw_auto_invest_disallow_building_synthetics_plant_button"
+		desc = "zw_auto_invest_disallow_building_synthetics_plant_button_desc"
 		visible = { has_variable = zw_var_auto_invest_disallow_building }
-		selected = { has_variable = zw_var_auto_invest_disallow_building_synthetics_plants }
+		selected = { has_variable = zw_var_auto_invest_disallow_building_synthetics_plant }
 		effect = {
-			custom_tooltip = zw_auto_invest_disallow_building_synthetics_plants_button_effect
-			zw_effect_set_remove_disallowed_building_type = { building_1 = building_synthetics_plants }
+			custom_tooltip = zw_auto_invest_disallow_building_synthetics_plant_button_effect
+			zw_effect_set_remove_disallowed_building_type = { building_1 = building_synthetics_plant }
 		}
 	}
 
-	zw_auto_invest_disallow_building_steel_mills_button = {
-		name = "zw_auto_invest_disallow_building_steel_mills_button"
-		desc = "zw_auto_invest_disallow_building_steel_mills_button_desc"
+	zw_auto_invest_disallow_building_steel_mill_button = {
+		name = "zw_auto_invest_disallow_building_steel_mill_button"
+		desc = "zw_auto_invest_disallow_building_steel_mill_button_desc"
 		visible = { has_variable = zw_var_auto_invest_disallow_building }
-		selected = { has_variable = zw_var_auto_invest_disallow_building_steel_mills }
+		selected = { has_variable = zw_var_auto_invest_disallow_building_steel_mill }
 		effect = {
-			custom_tooltip = zw_auto_invest_disallow_building_steel_mills_button_effect
-			zw_effect_set_remove_disallowed_building_type = { building_1 = building_steel_mills }
+			custom_tooltip = zw_auto_invest_disallow_building_steel_mill_button_effect
+			zw_effect_set_remove_disallowed_building_type = { building_1 = building_steel_mill }
 		}
 	}
 
@@ -252,14 +252,14 @@
 		}
 	}
 
-	zw_auto_invest_disallow_building_shipyards_button = {
-		name = "zw_auto_invest_disallow_building_shipyards_button"
-		desc = "zw_auto_invest_disallow_building_shipyards_button_desc"
+	zw_auto_invest_disallow_building_shipyard_button = {
+		name = "zw_auto_invest_disallow_building_shipyard_button"
+		desc = "zw_auto_invest_disallow_building_shipyard_button_desc"
 		visible = { has_variable = zw_var_auto_invest_disallow_building }
-		selected = { has_variable = zw_var_auto_invest_disallow_building_shipyards }
+		selected = { has_variable = zw_var_auto_invest_disallow_building_shipyard }
 		effect = {
-			custom_tooltip = zw_auto_invest_disallow_building_shipyards_button_effect
-			zw_effect_set_remove_disallowed_building_type = { building_1 = building_shipyards }
+			custom_tooltip = zw_auto_invest_disallow_building_shipyard_button_effect
+			zw_effect_set_remove_disallowed_building_type = { building_1 = building_shipyard }
 		}
 	}
 
@@ -349,7 +349,7 @@
 				has_variable = zw_var_auto_invest_disallow_building_sugar_plantation
 				has_variable = zw_var_auto_invest_disallow_building_banana_plantation
 				has_variable = zw_var_auto_invest_disallow_building_silk_plantation
-				has_variable = zw_var_auto_invest_disallow_building_vineyard_plantation
+				has_variable = zw_var_auto_invest_disallow_building_vineyard
 			}
 		}
 		effect = {
@@ -366,7 +366,7 @@
 						has_variable = zw_var_auto_invest_disallow_building_sugar_plantation
 						has_variable = zw_var_auto_invest_disallow_building_banana_plantation
 						has_variable = zw_var_auto_invest_disallow_building_silk_plantation
-						has_variable = zw_var_auto_invest_disallow_building_vineyard_plantation
+						has_variable = zw_var_auto_invest_disallow_building_vineyard
 					}
 				}
 				zw_effect_remove_disallowed_building_type = { building_1 = building_coffee_plantation }
@@ -378,7 +378,7 @@
 				zw_effect_remove_disallowed_building_type = { building_1 = building_sugar_plantation }
 				zw_effect_remove_disallowed_building_type = { building_1 = building_banana_plantation }
 				zw_effect_remove_disallowed_building_type = { building_1 = building_silk_plantation }
-				zw_effect_remove_disallowed_building_type = { building_1 = building_vineyard_plantation }
+				zw_effect_remove_disallowed_building_type = { building_1 = building_vineyard }
 			}
 			else = {
 				zw_effect_set_remove_disallowed_building_type = { building_1 = building_coffee_plantation }
@@ -390,7 +390,7 @@
 				zw_effect_set_remove_disallowed_building_type = { building_1 = building_sugar_plantation }
 				zw_effect_set_remove_disallowed_building_type = { building_1 = building_banana_plantation }
 				zw_effect_set_remove_disallowed_building_type = { building_1 = building_silk_plantation }
-				zw_effect_set_remove_disallowed_building_type = { building_1 = building_vineyard_plantation }
+				zw_effect_set_remove_disallowed_building_type = { building_1 = building_vineyard }
 			}
 		}
 	}

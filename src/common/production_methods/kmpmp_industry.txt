@@ -1,4 +1,4 @@
-﻿kmpmp_pm_extensive_tank_production = {
+﻿REPLACE_OR_CREATE:kmpmp_pm_extensive_tank_production = {
 	texture = "gfx/interface/icons/production_method_icons/tanks.dds"
 
 	unlocking_technologies = {
@@ -25,7 +25,7 @@
 	}
 }
 
-kmpmp_pm_focus_tank_production = {
+REPLACE_OR_CREATE:kmpmp_pm_focus_tank_production = {
 	texture = "gfx/interface/icons/production_method_icons/tanks.dds"
 
 	unlocking_technologies = {
@@ -52,7 +52,7 @@ kmpmp_pm_focus_tank_production = {
 	}
 }
 
-kmpmp_pm_prioritize_tank_production = {
+REPLACE_OR_CREATE:kmpmp_pm_prioritize_tank_production = {
 	texture = "gfx/interface/icons/production_method_icons/tanks.dds"
 
 	unlocking_technologies = {

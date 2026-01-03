@@ -7,18 +7,18 @@
     uses_dynamic_naming = no
     
     building_types = {
-        building_arts_academy
+        building_art_academy
     }
 
 	extension_building_types = {
-		building_paper_mills
+		building_paper_mill
 	}
 
     possible = { 
         any_scope_state = {
             is_incorporated = yes
             any_scope_building = {
-                is_building_type = building_arts_academy
+                is_building_type = building_art_academy
                 level >= 5
             }
         }
@@ -26,7 +26,7 @@
     
     prosperity_modifier = {
         building_power_plant_throughput_add = 0.15 #0.1
-        building_tooling_workshops_throughput_add = 0.15 #0.1
+        building_tooling_workshop_throughput_add = 0.15 #0.1
         country_prestige_mult = 0.15 
     }
 
@@ -34,7 +34,7 @@
         any_scope_state = {
             is_incorporated = yes
             any_scope_building = {
-                is_building_type = building_arts_academy
+                is_building_type = building_art_academy
                 level >= 5
             }
         }
@@ -50,7 +50,7 @@ company_basic_furniture = {
     uses_dynamic_naming = no
     
     building_types = {
-        building_furniture_manufacturies
+        building_furniture_manufactory
         building_logging_camp
     }
 
@@ -58,22 +58,22 @@ company_basic_furniture = {
         any_scope_state = {
             is_incorporated = yes
             any_scope_building = {
-                is_building_type = building_furniture_manufacturies
+                is_building_type = building_furniture_manufactory
                 level >= 5
             }
         }
     }
     
     prosperity_modifier = {
-        building_paper_mills_throughput_add = 0.1
-        building_tooling_workshops_throughput_add = 0.1
+        building_paper_mill_throughput_add = 0.1
+        building_tooling_workshop_throughput_add = 0.1
     }
 
     ai_will_do = {
         any_scope_state = {
             is_incorporated = yes
             any_scope_building = {
-                is_building_type = building_furniture_manufacturies
+                is_building_type = building_furniture_manufactory
                 level >= 5
             }
         }

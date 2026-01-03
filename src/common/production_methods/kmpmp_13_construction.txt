@@ -1,4 +1,4 @@
-﻿pm_arc_welded_buildings = {
+﻿REPLACE:pm_arc_welded_buildings = {
 	texture = "gfx/interface/icons/production_method_icons/arc_welded_buildings.dds"
 
 	unlocking_technologies = {
@@ -38,5 +38,5 @@
 		}	
 	}
 
-	#required_input_goods = electricity
+	# required_input_goods = electricity
 }

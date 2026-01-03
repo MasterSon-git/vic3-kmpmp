@@ -8,7 +8,7 @@ company_ilva = {
 	preferred_headquarters = { STATE_PIEDMONT }
 
 	building_types = {
-		building_steel_mills
+		building_steel_mill
 		building_iron_mine
 		building_railway # kmpmp
 	}
@@ -46,7 +46,7 @@ company_ilva = {
 			state_region = s:STATE_PIEDMONT
 			is_incorporated = yes
 			any_scope_building = {
-				is_building_type = building_steel_mills
+				is_building_type = building_steel_mill
 				level >= 5
 			}
 		}
@@ -54,8 +54,8 @@ company_ilva = {
 
 	prosperity_modifier = {
 		building_railway_throughput_add = 0.1
-		building_artillery_foundries_throughput_add = 0.05
-		building_military_shipyards_throughput_add = 0.05
+		building_artillery_foundry_throughput_add = 0.05
+		building_military_shipyard_throughput_add = 0.05
 	}
 
 	ai_will_do = {
@@ -66,7 +66,7 @@ company_ilva = {
 	}
 
 	ai_construction_targets = {
-		building_steel_mills = {
+		building_steel_mill = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_PIEDMONT
@@ -89,14 +89,14 @@ company_ansaldo = {
 	preferred_headquarters = { STATE_PIEDMONT }
 
 	building_types = {
-		building_artillery_foundries
-		building_steel_mills
-		building_military_shipyards
+		building_artillery_foundry
+		building_steel_mill
+		building_military_shipyard
 	}
 
 	extension_building_types = {
 		building_power_plant
-		building_munition_plants # kmpmp
+		building_munition_plant # kmpmp
 		building_iron_mine #kmpmp
 	}
 
@@ -131,7 +131,7 @@ company_ansaldo = {
 				OR = {
 					is_building_type = building_motor_industry
 					is_building_type = building_arms_industry
-					is_building_type = building_artillery_foundries
+					is_building_type = building_artillery_foundry
 				}
 				level >= 5
 			}
@@ -161,7 +161,7 @@ company_ansaldo = {
 				state_region = s:STATE_PIEDMONT
 			}
 		}
-		building_artillery_foundries = {
+		building_artillery_foundry = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_PIEDMONT
@@ -192,7 +192,7 @@ company_ricordi = {
 	preferred_headquarters = { STATE_LOMBARDY }
 
 	building_types = {
-		building_arts_academy
+		building_art_academy
 	}
 
 	extension_building_types = {
@@ -221,7 +221,7 @@ company_ricordi = {
 			state_region = s:STATE_LOMBARDY
 			is_incorporated = yes
 			any_scope_building = {
-				is_building_type = building_arts_academy
+				is_building_type = building_art_academy
 				level >= 5
 			}
 		}
@@ -237,7 +237,7 @@ company_ricordi = {
 		country_loyalism_increases_cultural_erasure_mult = 0.15
 		country_loyalism_increases_violent_hostility_mult = 0.15
 
-		building_paper_mills_throughput_add = 0.1
+		building_paper_mill_throughput_add = 0.1
 		building_sulfur_mine_throughput_add = 0.1
 	}
 
@@ -249,7 +249,7 @@ company_ricordi = {
 	}
 
 	ai_construction_targets = {
-		building_arts_academy = {
+		building_art_academy = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_LOMBARDY
@@ -277,7 +277,7 @@ company_fiat = {
 	}
 
 	extension_building_types = {
-		building_steel_mills
+		building_steel_mill
 	}
 
 	possible_prestige_goods = {
@@ -358,13 +358,13 @@ company_stt = {
 	preferred_headquarters = { STATE_ISTRIA }
 
 	building_types = {
-		building_shipyards
-		building_military_shipyards
+		building_shipyard
+		building_military_shipyard
 	}
 
 	extension_building_types = {
 		building_motor_industry
-		building_steel_mills
+		building_steel_mill
 		building_port
 	}
 
@@ -387,8 +387,8 @@ company_stt = {
 			is_incorporated = yes
 			any_scope_building = {
 				OR = {
-					is_building_type = building_shipyards
-					is_building_type = building_military_shipyards
+					is_building_type = building_shipyard
+					is_building_type = building_military_shipyard
 				}
 				level >= 5
 			}
@@ -410,13 +410,13 @@ company_stt = {
 	}
 
 	ai_construction_targets = {
-		building_shipyards = {
+		building_shipyard = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_ISTRIA
 			}
 		}
-		building_military_shipyards = {
+		building_military_shipyard = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_ISTRIA

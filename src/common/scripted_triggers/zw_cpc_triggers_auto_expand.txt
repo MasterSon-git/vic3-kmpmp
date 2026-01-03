@@ -23,8 +23,8 @@ default_auto_expand_rule = {
 
 # 01_industry.txt
 
-# building_shipyards
-zw_trigger_auto_expand_building_shipyards = {
+# building_shipyard
+zw_trigger_auto_expand_building_shipyard = {
 	is_under_construction = no
 	occupancy >= 0.95
 	building_has_goods_shortage = no
@@ -52,8 +52,8 @@ zw_trigger_auto_expand_building_shipyards = {
 	zw_trigger_incorporated_states_only = yes
 }
 
-# building_military_shipyards
-zw_trigger_auto_expand_building_military_shipyards = {
+# building_military_shipyard
+zw_trigger_auto_expand_building_military_shipyard = {
 	is_under_construction = no
 	occupancy >= 0.95
 	building_has_goods_shortage = no
@@ -111,8 +111,8 @@ zw_trigger_auto_expand_building_arms_industry = {
 	zw_trigger_incorporated_states_only = yes
 }
 
-# building_artillery_foundries
-zw_trigger_auto_expand_building_artillery_foundries = {
+# building_artillery_foundry
+zw_trigger_auto_expand_building_artillery_foundry = {
 	is_under_construction = no
 	occupancy >= 0.95
 	building_has_goods_shortage = no
@@ -141,8 +141,8 @@ zw_trigger_auto_expand_building_artillery_foundries = {
 	zw_trigger_incorporated_states_only = yes
 }
 
-# building_munition_plants
-zw_trigger_auto_expand_building_munition_plants = {
+# building_munition_plant
+zw_trigger_auto_expand_building_munition_plant = {
 	is_under_construction = no
 	occupancy >= 0.95
 	building_has_goods_shortage = no

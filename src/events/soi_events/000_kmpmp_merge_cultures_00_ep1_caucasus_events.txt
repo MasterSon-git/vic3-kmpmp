@@ -107,7 +107,7 @@ caucasuswar.1 = {
 					limit = {
 						owner = c:RUS
 						any_scope_building = {
-							is_building_type = building_barracks
+							is_building_type = building_barrack
 						}	
 					}
 					add_radicals_in_state = {

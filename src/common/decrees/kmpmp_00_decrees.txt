@@ -163,7 +163,7 @@ decree_promote_social_mobility = {
 		state_education_access_add = 0.25
 		state_pop_qualifications_mult = 0.25
 		building_university_throughput_add = 0.1 #kmpmp
-		building_arts_academy_throughput_add = 0.1 #kmpmp
+		building_art_academy_throughput_add = 0.1 #kmpmp
 	}
 
 	cost = 100
@@ -640,7 +640,7 @@ decree_enlistment_efforts = {
 		if = {
 			limit = {
 				any_scope_building = {
-					is_building_type = building_barracks
+					is_building_type = building_barrack
 					count >= 5
 				}
 			}
@@ -649,7 +649,7 @@ decree_enlistment_efforts = {
 		if = {
 			limit = {
 				any_scope_building = {
-					is_building_type = building_barracks
+					is_building_type = building_barrack
 					count >= 10
 				}
 			}
@@ -658,7 +658,7 @@ decree_enlistment_efforts = {
 		if = {
 			limit = {
 				any_scope_building = {
-					is_building_type = building_barracks
+					is_building_type = building_barrack
 					count >= 25
 				}
 			}

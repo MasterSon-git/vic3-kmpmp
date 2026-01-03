@@ -1,4 +1,4 @@
-﻿zw_trigger_autonom_investment_manufacture = {
+﻿REPLACE:zw_trigger_autonom_investment_manufacture = {
 	# player's state
 	trigger_if = {
 		limit = {
@@ -52,7 +52,7 @@
 	}
 }
 
-zw_trigger_autonom_investment_agro = {
+REPLACE:zw_trigger_autonom_investment_agro = {
 	# player's state
 	trigger_if = {
 		limit = {
@@ -106,7 +106,7 @@ zw_trigger_autonom_investment_agro = {
 	}
 }
 
-zw_trigger_autonom_investment_resource = {
+REPLACE:zw_trigger_autonom_investment_resource = {
 	# player's state
 	trigger_if = {
 		limit = {
@@ -160,7 +160,7 @@ zw_trigger_autonom_investment_resource = {
 	}
 }
 
-zw_trigger_autonom_investment_infrastructure = {
+REPLACE:zw_trigger_autonom_investment_infrastructure = {
 	# player's state
 	trigger_if = {
 		limit = {
@@ -214,7 +214,7 @@ zw_trigger_autonom_investment_infrastructure = {
 	}
 }
 
-zw_trigger_autonom_investment_infrastructure_railway = {
+REPLACE:zw_trigger_autonom_investment_infrastructure_railway = {
 	# player's state
 	trigger_if = {
 		limit = {

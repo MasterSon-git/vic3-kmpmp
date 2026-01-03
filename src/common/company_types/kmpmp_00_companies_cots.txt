@@ -98,11 +98,11 @@ company_pernambuco_textiles = {
 	building_types = {
 		building_cotton_plantation #kmpmp
 		building_sugar_plantation #kmpmp
-		#building_textile_mills
+		#building_textile_mill
 	}
 
 	extension_building_types = {
-		building_textile_mills #kmpmp
+		building_textile_mill #kmpmp
 		building_livestock_ranch
 		building_dye_plantation #kmpmp
 		building_rubber_plantation #kmpmp
@@ -189,7 +189,7 @@ company_rossi = {
 
 	building_types = {
 		building_arms_industry
-		building_munition_plants
+		building_munition_plant
 	}
 
 	extension_building_types = {
@@ -233,7 +233,7 @@ company_rossi = {
 
 	prosperity_modifier = {
 		building_livestock_ranch_throughput_add = 0.1
-		building_chemical_plants_throughput_add = 0.05
+		building_chemical_plant_throughput_add = 0.05
 		country_military_goods_cost_mult = -0.05 # kmpmp
 	}
 
@@ -276,7 +276,7 @@ company_estanifera_llallagua = {
 		# building_iron_mine
 		building_sulfur_mine
 		building_glassworks #kmpmp
-		building_munition_plants #kmpmp
+		building_munition_plant #kmpmp
 	}
 
 	possible_prestige_goods = {
@@ -497,8 +497,8 @@ company_estaleiro_maua = {
 	preferred_headquarters = { STATE_RIO_DE_JANEIRO }
 
 	building_types = {
-		building_shipyards
-		building_military_shipyards
+		building_shipyard
+		building_military_shipyard
 	}
 
 	extension_building_types = {
@@ -525,8 +525,8 @@ company_estaleiro_maua = {
 			is_incorporated = yes
 			any_scope_building = {
 				OR = {
-					is_building_type = building_shipyards
-					is_building_type = building_military_shipyards
+					is_building_type = building_shipyard
+					is_building_type = building_military_shipyard
 				}
 				level >= 5
 			}
@@ -535,7 +535,7 @@ company_estaleiro_maua = {
 
 	prosperity_modifier = {
 		country_convoys_capacity_mult = 0.1
-		building_steel_mills_throughput_add = 0.1
+		building_steel_mill_throughput_add = 0.1
 		building_iron_mine_throughput_add = 0.05 #kmpmp
 		state_infrastructure_mult = 0.2 #kmpmp
 	}
@@ -548,13 +548,13 @@ company_estaleiro_maua = {
 	}
 
 	ai_construction_targets = {
-		building_shipyards = {
+		building_shipyard = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_RIO_DE_JANEIRO
 			}
 		}
-		building_military_shipyards = {
+		building_military_shipyard = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_RIO_DE_JANEIRO

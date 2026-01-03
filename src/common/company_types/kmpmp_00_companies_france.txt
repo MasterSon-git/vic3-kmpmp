@@ -78,14 +78,14 @@ company_dmc = {
 	preferred_headquarters = { STATE_BURGUNDY }
 
 	building_types = {
-		building_textile_mills
+		building_textile_mill
 		building_coal_mine
 	}
 
 	extension_building_types = {
 		building_dye_plantation
 		building_cotton_plantation
-		building_synthetics_plants
+		building_synthetics_plant
 	}
 
 	possible_prestige_goods = {
@@ -116,7 +116,7 @@ company_dmc = {
 			state_region = s:STATE_BURGUNDY
 			is_incorporated = yes
 			any_scope_building = {
-				is_building_type = building_textile_mills
+				is_building_type = building_textile_mill
 				level >= 5
 			}
 		}
@@ -127,7 +127,7 @@ company_dmc = {
 		state_assimilation_mult = 0.1
 		# kmpmp
 		building_silk_plantation_throughput_add = 0.1
-		building_synthetics_plants_throughput_add = 0.1
+		building_synthetics_plant_throughput_add = 0.1
 	}
 
 	ai_will_do = {
@@ -138,7 +138,7 @@ company_dmc = {
 	}
 
 	ai_construction_targets = {
-		building_textile_mills = {
+		building_textile_mill = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_BURGUNDY
@@ -233,13 +233,13 @@ company_fcm = {
 	preferred_headquarters = { STATE_PROVENCE }
 
 	building_types = {
-		building_shipyards
-		building_military_shipyards
+		building_shipyard
+		building_military_shipyard
 		building_automotive_industry # Produced the Char 2C
 	}
 
 	extension_building_types = {
-		building_steel_mills
+		building_steel_mill
 	}
 
 	potential = {
@@ -261,8 +261,8 @@ company_fcm = {
 			is_incorporated = yes
 			any_scope_building = {
 				OR = {
-					is_building_type = building_shipyards
-					is_building_type = building_military_shipyards
+					is_building_type = building_shipyard
+					is_building_type = building_military_shipyard
 				}
 				level >= 5
 			}
@@ -285,13 +285,13 @@ company_fcm = {
 	}
 
 	ai_construction_targets = {
-		building_shipyards = {
+		building_shipyard = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_PROVENCE
 			}
 		}
-		building_military_shipyards = {
+		building_military_shipyard = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_PROVENCE
@@ -354,7 +354,7 @@ company_mines_anzin = {
 	}
 
 	prosperity_modifier = {
-		building_steel_mills_throughput_add = 0.05
+		building_steel_mill_throughput_add = 0.05
 		building_railway_throughput_add = 0.1
 	}
 

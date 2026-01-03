@@ -13,7 +13,7 @@
 				activate_production_methods = { "pm_basic_port" }
 			}
             create_building = {
-				building = "building_shipyards"
+				building = "building_shipyard"
 				add_ownership = {
 					country = {
 						country = "c:PRU"
@@ -24,7 +24,7 @@
 				activate_production_methods = { "pm_basic_shipbuilding"  }
 			}
 			create_building = {
-				building = "building_military_shipyards"
+				building = "building_military_shipyard"
 				add_ownership = {
 					country = {
 						country = "c:PRU"
@@ -211,7 +211,7 @@
                 activate_production_methods = { "pm_picks_and_shovels_building_iron_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts" }
             }
             create_building = {
-                building = "building_tooling_workshops"
+                building = "building_tooling_workshop"
                 add_ownership = {
                     country = {
                         country = "c:TUR"
@@ -302,7 +302,7 @@
                 activate_production_methods = { "pm_horizontal_drawer_cabinets" }
             }
             create_building = {
-                building = "building_paper_mills"
+                building = "building_paper_mill"
                 add_ownership = {
                     country = {
                         country = "c:EGY"
@@ -312,7 +312,7 @@
                 reserves = 1
             }
             create_building = {
-                building = "building_textile_mills"
+                building = "building_textile_mill"
                 add_ownership = {
                     country = {
                         country = "c:EGY"
@@ -346,7 +346,7 @@
     s:STATE_PALESTINE = {
         region_state:EGY = {
             create_building = {
-                building = "building_tooling_workshops"
+                building = "building_tooling_workshop"
                 add_ownership = {
                     country = {
                         country = "c:EGY"
@@ -371,7 +371,7 @@
                 activate_production_methods = { "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts"  }
             }
             create_building = {
-                building = "building_paper_mills"
+                building = "building_paper_mill"
                 add_ownership = {
                     country= {
                         country = "c:PER"
@@ -410,10 +410,10 @@
                 activate_production_methods = { "pm_simple_forestry" "pm_no_hardwood" "pm_no_equipment" "pm_road_carts"  }
             }
             create_building = {
-                building = "building_tooling_workshops"
+                building = "building_tooling_workshop"
                 add_ownership = {
                     building = {
-                        type="building_tooling_workshops"
+                        type="building_tooling_workshop"
                         country = "c:PER"
                         levels = 1
                         region = "STATE_TABRIZ"
@@ -445,7 +445,7 @@
                 activate_production_methods = { "pm_iron_frame_buildings" }
             }
             create_building = {
-                building = "building_paper_mills"
+                building = "building_paper_mill"
                 add_ownership = {
                     country = {
                         country = "c:PER"
@@ -534,7 +534,7 @@
                 activate_production_methods = { "pm_horizontal_drawer_cabinets" }
             }
             create_building = {
-                building = "building_paper_mills"
+                building = "building_paper_mill"
                 add_ownership = {
                     country = {
                         country = "c:JAP"
@@ -560,7 +560,7 @@
     s:STATE_KANTO = {
         region_state:JAP = {
             create_building = {
-                building = "building_shipyards"
+                building = "building_shipyard"
                 add_ownership = {
                     country = {
                         country = "c:JAP"
@@ -593,7 +593,7 @@
                 activate_production_methods = { "pm_wooden_buildings" }
             }    
             create_building = {
-                building = "building_military_shipyards"
+                building = "building_military_shipyard"
                 add_ownership = {
                     country = {
                         country = "c:JAP"
@@ -699,7 +699,7 @@
                 activate_production_methods = { "pm_scholastic_education" "pm_religious_academia" }
             }
             create_building = {
-                building = "building_paper_mills"
+                building = "building_paper_mill"
                 add_ownership = {
                     country = {
                         country = "c:JAP"
@@ -821,7 +821,7 @@
     s:STATE_MEXICO = {
         region_state:MEX = {
             create_building = {
-                building = "building_tooling_workshops"
+                building = "building_tooling_workshop"
                 add_ownership = {
                     country = {
                         country = "c:MEX"
@@ -873,7 +873,7 @@
     s:STATE_JALISCO = {
         region_state:MEX = {
             create_building = {
-                building = "building_tooling_workshops"
+                building = "building_tooling_workshop"
                 add_ownership = {
                     country = {
                         country = "c:MEX"
