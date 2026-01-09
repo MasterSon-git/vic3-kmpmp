@@ -9,13 +9,21 @@ state_fae_building_forts_max_level_add = {
 }
 
 building_soldiers_mortality_mult = {
+    decimals = 1
     color = bad
     percent = yes
+    game_data = {
+        ai_value = 0
+    }
 }
 
 building_officers_mortality_mult = {
+    decimals = 1
     color = bad
     percent = yes
+    game_data = {
+        ai_value = 0
+    }
 }
 
 # Battle condition modifiers
@@ -34,7 +42,17 @@ unit_fae_siege_add = { # Mainly for aesthetic purposes
     percent = no
     decimals = 0
     game_data = {
-        ai_value = 1000
+        ai_value = 10000
+    }
+}
+
+country_fae_combat_engie_siege_add = { # Also mainly aesthetic
+    color    = good
+    percent  = no
+    decimals = 0
+    
+    game_data = {
+        ai_value = 0
     }
 }
 
@@ -43,6 +61,24 @@ unit_fae_entrenchment_add = { # Actually sorta functional
     percent = no
     decimals = 0
     game_data = {
-        ai_value = 1000
+        ai_value = 10000
+    }
+}
+
+character_fae_total_siege = { # These two are completely aesthetic
+    color     = good
+    percent   = no
+    decimals  = 0
+    game_data = {
+        ai_value = 0
+    }
+}
+
+character_fae_total_entrenchment = {
+    color     = good
+    percent   = no
+    decimals  = 0
+    game_data = {
+        ai_value = 0
     }
 }

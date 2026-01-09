@@ -1,0 +1,29 @@
+﻿INJECT:FAE_pm_small_arms = {
+    building_modifiers = {
+        workforce_scaled = {
+            goods_input_small_arms_add = 0.025
+        }
+    }
+}
+
+INJECT:FAE_pm_gatling_guns = {
+    building_modifiers = {
+        workforce_scaled = {
+            goods_input_small_arms_add = 0.05
+            goods_input_ammunition_add = 0.05
+            
+            unit_defense_add   = -0.1
+        }
+    }
+}
+
+INJECT:FAE_pm_auto_machine_guns = {
+    building_modifiers = {
+        workforce_scaled = {
+            goods_input_small_arms_add = 0.1
+            goods_input_ammunition_add = 0.1
+            
+            unit_defense_add   = -0.2
+        }
+    }
+}

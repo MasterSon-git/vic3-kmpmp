@@ -1,0 +1,30 @@
+﻿INJECT:FAE_pm_wood_palisades = {
+    building_modifiers = {
+        workforce_scaled = {
+            goods_input_wood_add  = 5
+            goods_input_tools_add = 0.1
+        }
+    }
+}
+
+INJECT:FAE_pm_stone_iron = {
+    building_modifiers = {
+        workforce_scaled = {
+            goods_input_iron_add  = 5
+            goods_input_tools_add = 0.2
+            
+            unit_defense_add = -0.1
+        }
+    }
+}
+
+INJECT:FAE_pm_steel_concrete = {
+    building_modifiers = {
+        workforce_scaled = {
+            goods_input_steel_add = 5
+            goods_input_tools_add = 0.5
+            
+            unit_defense_add = -0.2
+        }
+    }
+}

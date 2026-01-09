@@ -3,13 +3,13 @@
 
 	always_possible = yes
 	
-	# is_military = yes # Can't downgrade buildings of military type anymore
+	# is_military = yes # Can't construct nor downgrade buildings of military type anymore
 	
 	is_government_funded = yes
 
 	infrastructure_usage_per_level = 0.2
 	
-	lens = development #government # Can't build buildings in military lens anymore, thanks 1.5
+	lens = development # Can't build buildings in military lens anymore, thanks 1.5
 	
 	urbanization = 2
     

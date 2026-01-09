@@ -1,7 +1,7 @@
 ﻿fae_building_forts = {
     building_group = FAE_bg_forts
-    icon = "gfx/interface/icons/building_icons/FAE_building_forts.dds"
-    background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_military.dds"
+    icon           = "gfx/interface/icons/building_icons/FAE_building_forts.dds"
+    background     = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_military.dds"
     
     has_max_level = yes
     
@@ -18,7 +18,7 @@
     }
     
     required_construction = construction_cost_very_high
-
+    
     ai_value  = {
         value = 0 # These are expensive so we shouldn't just build them willy nilly
         
@@ -27,7 +27,7 @@
             limit = {
                 is_capital = yes
             }
-            add = 10000
+            add = 5000
         }
         
         # Borders capital state
@@ -38,7 +38,7 @@
                     is_capital = yes
                 }
             }
-            add = 3000
+            add = 2500
         }
         
         # Border state
@@ -53,35 +53,38 @@
                         NOR = {
                             is_subject_of = scope:this_country # Don't build on borders with subjects
                             is_in_same_power_bloc = scope:this_country # Not scared of power bloc partners
-                            any_scope_treaty = { # Not scared of allies
-                                binds  = scope:this_country
+                            any_scope_treaty = { # Not scared of allies nor defensive partners
                                 any_scope_article = {
-                                    has_type = alliance
-                                }
-                            }
-                            any_scope_treaty = { # Not scared of defensive partners
-                                binds  = scope:this_country
-                                any_scope_article = {
-                                    has_type = defensive_pact
+                                    OR = {
+                                        has_type = alliance
+                                        has_type = defensive_pact
+                                    }
+                                    OR = {
+                                        first_country = scope:this_country
+                                        second_country = scope:this_country
+                                    }
                                 }
                             }
                         }
                     }
                 }
             }
-            add = 5000
+            add = 1000
             
             # Maginot Line
             if = {
                 limit = {
                     c:FRA ?= owner
+                    c:FRA ?= {
+                        has_technology_researched = concrete_fortifications
+                    }
                     OR = {
                         state_region = s:STATE_ALSACE_LORRAINE
                         state_region = s:STATE_LORRAINE
                         state_region = s:STATE_FRANCHE_COMTE
                     }
                 }
-                add = 5000
+                add = 10000
             }
         }
         
@@ -103,6 +106,19 @@
                 }
             }
             multiply = 10
+        }
+        
+        # No money
+        if = {
+            limit = {
+                owner ?= {
+                    OR = {
+                        weekly_net_fixed_income < 5000
+                        scaled_debt > 0
+                    }
+                }
+            }
+            multiply = 0
         }
     }
 }
