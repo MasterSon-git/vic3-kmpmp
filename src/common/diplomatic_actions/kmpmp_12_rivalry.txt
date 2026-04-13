@@ -1,4 +1,4 @@
-﻿rivalry = {
+﻿REPLACE:rivalry = {
 	groups= {
 		general
 	}

@@ -1,5 +1,5 @@
 ﻿# kmpmp - merge cultures fixes
-dp_annex_subject = {
+REPLACE:dp_annex_subject = {
 	war_goal = annex_country
 
 	texture = "gfx/interface/icons/war_goals/annex_country.dds"
@@ -37,7 +37,7 @@ dp_annex_subject = {
 			}
 		}
 		NAND = {
-			has_journal_entry = je_peru_bolivia
+			is_involved_in_journal_entry = je_peru_bolivia
 			scope:target_country = {
 				OR = {
 					country_has_primary_culture = cu:amazonian #cu:quechua
@@ -85,110 +85,17 @@ dp_annex_subject = {
 }
 
 # kmpmp - allow target to set war goals on joining countries
-dp_revolution = {
-	requires_interest_marker = no
-	enable_switch_sides = yes
-	allow_negotiated_peace = no
-	mirror_war_goal = yes
-	initiator_can_add_war_goals = no
+INJECT:dp_revolution = {
 	target_can_add_war_goals = yes #no
-	add_infamy_for_starting_initiator_wargoals = no
-
-	war_goal = annex_country
-
-	texture = "gfx/interface/icons/war_goals/annex_country.dds"
-
-	selectable_in_lens = {
-		always = no
-	}
-
-	possible = {
-		scope:initiator = {
-			is_revolutionary = yes
-		}
-		scope:initiator.civil_war_origin_country = scope:target_country
-	}
-
-	additional_involvement_trigger = {
-		NOT = { is_country_type = decentralized }
-		aggressive_diplomatic_plays_permitted = yes
-
-		scope:target_country = {
-			capital = {
-				region = {
-					save_temporary_scope_as = target_capital_region
-				}
-			}
-		}
-
-		scope:initiator = {
-			capital = {
-				region = {
-					save_temporary_scope_as = initiator_capital_region
-				}
-			}
-		}
-
-		OR = {
-			has_interest_marker_in_region = scope:target_capital_region
-			has_interest_marker_in_region = scope:initiator_capital_region
-		}
-	}
-
-	on_weekly_pulse = {}
-
-	on_war_begins = {}
-
-	on_war_end = {}
 }
 
 # kmpmp - allow target to set war goals on joining countries
-dp_secession = {
-	requires_interest_marker = no
-	initiator_can_add_war_goals = no
+INJECT:dp_secession = {
 	target_can_add_war_goals = yes #no
-	backing_down_always_ends_play = no
-	add_infamy_for_starting_initiator_wargoals = no
-
-	war_goal = secession
-
-	texture = "gfx/interface/icons/war_goals/secession.dds"
-
-	selectable_in_lens = {
-		always = no
-	}
-
-	possible = {
-		scope:initiator = { is_secessionist = yes }
-	}
-
-	additional_involvement_trigger = {
-		NOT = { is_country_type = decentralized }
-		aggressive_diplomatic_plays_permitted = yes
-
-		scope:initiator = {
-			capital = {
-				region = {
-					save_temporary_scope_as = secession_capital_region
-				}
-			}
-		}
-
-		OR = {
-			has_interest_marker_in_region = scope:secession_capital_region
-			is_home_country_for = scope:initiator
-		}
-	}
-
-	on_weekly_pulse = {}
-
-	on_war_begins = {}
-
-	on_war_end = {}
 }
 
 # kmpmp - merge cultures fixes
-dp_unify_scandinavia = {
+REPLACE:dp_unify_scandinavia = {
 	war_goal = unification
 
 	requires_interest_marker = no
@@ -214,7 +121,7 @@ dp_unify_scandinavia = {
 	on_war_end = {}
 }
 
-dp_leadership_scandinavia = {
+REPLACE:dp_leadership_scandinavia = {
 	war_goal = unification_leadership
 
 	requires_interest_marker = no

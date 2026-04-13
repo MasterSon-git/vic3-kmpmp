@@ -896,13 +896,13 @@
             }
         }
     }
-    s:STATE_NAVARRA={
-		region_state:SPA={
+    s:STATE_BASQUE_COUNTRY={
+		region_state:SPC={
             create_building={
             	building="building_arms_industry"
 			    add_ownership={
 				    country={
-						country="c:SPA"
+						country="c:SPC"
 						levels= 4 #3
 					}
 				}

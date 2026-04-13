@@ -1,5 +1,5 @@
-﻿SCA = {
-	use_culture_states = yes
+﻿REPLACE:SCA = {
+	geographic_region = geographic_region_scandinavia
 	
 	is_major_formation = yes
 	
@@ -61,7 +61,7 @@
 					}
 				}
 			}
-			has_technology_researched = nationalism
+			has_technology_researched = nationalism #pan-nationalism
 			percent = 1
 		}
 	}

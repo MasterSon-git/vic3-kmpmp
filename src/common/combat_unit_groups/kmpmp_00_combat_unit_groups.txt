@@ -1,4 +1,4 @@
-﻿combat_unit_group_cavalry = {
+﻿REPLACE:combat_unit_group_cavalry = {
     type = army
     default_group = yes
     color = { 172 235 121 }

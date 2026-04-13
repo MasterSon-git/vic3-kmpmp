@@ -1,4 +1,4 @@
-﻿money_transfer = {
+﻿REPLACE:money_transfer = {
 	kind = directed
 	cost = 100 #25
 
@@ -27,6 +27,18 @@
 
 	possible = {
 		in_default = no
+	}
+
+	requirement_to_maintain = {
+		trigger = {
+			custom_tooltip = {
+				text = "MONEY_TRANSFER_INPUT_QUANTITY_INVALID"
+				scope:article ?= {
+					exists = input_quantity
+					input_quantity > 0
+				}
+			}
+		}
 	}
 
     non_fulfillment = {
@@ -80,12 +92,12 @@
 
 	quantity_min_value = {
         value = 100
-		max = income
+		max = fixed_income
 		min = 0
     }
 
     quantity_max_value = {
-        value = income
+        value = fixed_income
 		divide = 4
 
 		if = {
@@ -112,7 +124,7 @@
 			}
 
 			max = {
-				value = weekly_net_fixed_income
+				value = net_fixed_income
 				multiply = 0.25
 			}
 			min = 1000
@@ -211,14 +223,14 @@
 					limit = { exists = scope:article.input_quantity }
 
 					if = {
-						limit = { weekly_net_fixed_income < 0 }
+						limit = { net_fixed_income < 0 }
 
 						multiply = {
 							desc = "DIPLOMATIC_ACCEPTANCE_BUDGET_DEFICIT"
 							value = 1
 
 							add = {
-								value = weekly_net_fixed_income
+								value = net_fixed_income
 								divide = scope:article.input_quantity
 								multiply = -1
 								max = 0.2
@@ -226,14 +238,14 @@
 						}
 					}
 					else_if = {
-						limit = { weekly_net_fixed_income > 0 }
+						limit = { net_fixed_income > 0 }
 
 						multiply = {
 							desc = "DIPLOMATIC_ACCEPTANCE_BUDGET_SURPLUS"
 							value = 1
 
 							subtract = {
-								value = weekly_net_fixed_income
+								value = net_fixed_income
 								divide = scope:article.input_quantity
 								max = 0.2
 							}
@@ -312,14 +324,14 @@
 					limit = { exists = scope:article.input_quantity }
 
 					if = {
-						limit = { weekly_net_fixed_income < 0 }
+						limit = { net_fixed_income < 0 }
 
 						multiply = {
 							desc = "DIPLOMATIC_ACCEPTANCE_BUDGET_DEFICIT"
 							value = 1
 
 							add = {
-								value = weekly_net_fixed_income
+								value = net_fixed_income
 								divide = scope:article.input_quantity
 								multiply = -1
 								max = 0.2
@@ -327,14 +339,14 @@
 						}
 					}
 					else_if = {
-						limit = { weekly_net_fixed_income > 0 }
+						limit = { net_fixed_income > 0 }
 
 						multiply = {
 							desc = "DIPLOMATIC_ACCEPTANCE_BUDGET_SURPLUS"
 							value = 1
 
 							subtract = {
-								value = weekly_net_fixed_income
+								value = net_fixed_income
 								divide = scope:article.input_quantity
 								max = 0.2
 							}
@@ -393,53 +405,6 @@
 		infamy = {
 			value = 0
 
-			# if = {
-			# 	limit = {
-			# 		exists = scope:quantity
-			# 	}
-			# 	add = {
-			# 		desc = "INFAMY_QUANTITY_FACTOR"
-			# 		value = scope:quantity
-			# 		divide = 1000
-			# 		min = 5
-			# 		max = 50
-			# 	}
-			# }
-
-			# if = {
-			# 	limit = {
-			# 		any_scope_treaty = {
-			# 			any_scope_article = {
-			# 				has_type = money_transfer
-			# 				target_country = root
-			# 			}
-			# 		}
-			# 	}
-			# 	add = {
-			# 		value = 0
-
-			# 		every_scope_treaty = {
-			# 			limit = {
-			# 				any_scope_article = {
-			# 					has_type = money_transfer
-			# 					target_country = root
-			# 				}
-			# 			}
-			# 			every_scope_article = {
-			# 				limit = {
-			# 					has_type = money_transfer
-			# 					target_country = root
-			# 				}
-
-			# 				desc = "INFAMY_MONEY_TRANSFER_QUANTITY_ROOT_HAS_ALREADY_ESTABLISHED_FACTOR"
-			# 				add = input_quantity
-			# 				divide = 2000
-			# 			}
-			# 		}
-			# 		max = 50
-			# 	}
-			# }
-
 			# kmpmp - change infamy scale to quantity by target income
 			if = {
 				limit = {
@@ -448,8 +413,10 @@
 				add = {
 					desc = "INFAMY_QUANTITY_FACTOR"
 					value = scope:quantity
+					# divide = 1000
+					# kmpmp
 					divide = {
-						value = scope:target_country.income
+						value = scope:target_country.fixed_income
 						divide = 4
 					}
 					save_temporary_value_as = relative_quantity_to_income_factor
@@ -499,27 +466,27 @@
 							}
 
 							desc = "INFAMY_MONEY_TRANSFER_QUANTITY_ROOT_HAS_ALREADY_ESTABLISHED_FACTOR"
-							add = {
-								value = input_quantity
-								divide = {
-									value = target_country.income
-									divide = 4
-								}
-								save_temporary_value_as = relative_quantity_to_income_factor
+							add = input_quantity
+							# divide = 2000
+							# kmpmp
+							divide = {
+								value = target_country.fixed_income
+								divide = 4
+							}
+							save_temporary_value_as = relative_quantity_to_income_factor
 
-								if = { # first 50% give only 30% of max infamy
-									limit = {
-										scope:relative_quantity_to_income_factor <= 0.5
-									}
-									divide = 0.5
-									multiply = 7.5
+							if = { # first 50% give only 30% of max infamy
+								limit = {
+									scope:relative_quantity_to_income_factor <= 0.5
 								}
-								else = { # next 50%
-									subtract = 0.5
-									divide = 0.5
-									multiply = 17.5
-									add = 7.5
-								}
+								divide = 0.5
+								multiply = 7.5
+							}
+							else = { # next 50%
+								subtract = 0.5
+								divide = 0.5
+								multiply = 17.5
+								add = 7.5
 							}
 						}
 					}
@@ -539,7 +506,7 @@
 					add = scope:quantity
 					value = {
 						desc = "INFAMY_TARGET_QUANTITY_DEDUCTION_FACTOR"
-						add = scope:target_country.income
+						add = scope:target_country.fixed_income
 						multiply = 0.1
 					}
 					divide = 1000

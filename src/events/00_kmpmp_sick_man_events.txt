@@ -70,7 +70,7 @@ sick_man.1 = {
 			add_modifier = {
 				name = sick_man_of_europe
 				months = -1
-			}		
+			}
 			add_modifier = {
 				name = outmoded_bureaucracy
 				months = -1
@@ -231,7 +231,7 @@ sick_man.3 = {
 			var:sick_man_var <= 1
 		}
 		if = {
-			limit = {				
+			limit = {
 				is_subject = no
 				any_subject_or_below = {
 					NOT = { any_overlord_or_above = { NOT = { ROOT = this } } }
@@ -266,9 +266,7 @@ sick_man.3 = {
 				has_dlc_feature = ip3_content
 			}
 			show_as_tooltip = {
-				add_journal_entry = {
-					type = je_great_eastern_crisis
-				}
+				add_contextless_journal_entry = je_great_eastern_crisis
 			}
 		}
 		# kmpmp

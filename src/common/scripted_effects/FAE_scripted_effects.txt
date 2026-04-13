@@ -19,14 +19,14 @@ FAE_se_calculate_siege = {
         }
         
         # Add siege from combat engineers
-        # kmpmp add siege from mobilization_option_rocket_artillery
+        # kmpmp add siege from kmpmp_mobilization_option_rocket_artillery
         if = {
             limit = {
                 owner = {
                     any_military_formation = {
                         OR = {
                             has_mobilization_option = mobilization_option:FAE_mo_combat_engineers
-                            has_mobilization_option = mobilization_option:mobilization_option_rocket_artillery
+                            has_mobilization_option = mobilization_option:kmpmp_mobilization_option_rocket_artillery
                         }
                         any_combat_unit = {
                             this = scope:current_unit
@@ -59,7 +59,7 @@ FAE_se_calculate_siege = {
                     if = {
                         limit = {
                             scope:current_military_formation = {
-                                has_mobilization_option = mobilization_option:mobilization_option_rocket_artillery
+                                has_mobilization_option = mobilization_option:kmpmp_mobilization_option_rocket_artillery
                             }
                         }
                         add  = kmpmp_FAE_siege_rocket_artillery
@@ -79,6 +79,8 @@ FAE_se_calculate_siege = {
         }
         
         # Add siege from unit type
+        # Despite being able to guarantee that all the relevant unit types have the siege ability modifier since 1.12,
+        # units are not a scope from which the `modifier` event target works, so we still have to hardcode the math here
         if = {
             limit = {
                 has_unit_type = unit_type:combat_unit_type_light_tanks

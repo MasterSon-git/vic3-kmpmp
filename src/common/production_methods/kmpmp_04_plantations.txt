@@ -1,0 +1,21 @@
+﻿REPLACE:electric_rollers = {
+	texture = "gfx/interface/icons/production_method_icons/electric_rollers.dds"
+
+	unlocking_technologies = {
+		electrical_generation
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_iron_add = 2
+			goods_input_electricity_add = 2
+			goods_output_tobacco_add = 20
+		}
+
+		level_scaled = {
+			building_employment_machinists_add = 500
+			building_employment_laborers_add = -1500
+		}
+	}
+
+	# required_input_goods = electricity
+}

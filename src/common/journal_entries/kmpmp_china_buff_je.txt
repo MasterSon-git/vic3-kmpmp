@@ -1,4 +1,4 @@
-﻿kmpmp_china_buff_je = {
+﻿REPLACE_OR_CREATE:kmpmp_china_buff_je = {
     icon = "gfx/interface/icons/event_icons/event_advantage.dds"
     group = je_group_historical_content
 

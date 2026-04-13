@@ -1,5 +1,10 @@
 ﻿TRY_INJECT:je_zw_autonom_invest_management = {
 
+	## level under
+
+	scripted_button = zw_auto_invest_level_under_construction_increase_button
+	scripted_button = zw_auto_invest_level_under_construction_decrease_button
+
 	## general toggle
 
 	scripted_button = zw_auto_invest_disallow_building_button

@@ -21,7 +21,7 @@ brazilian_minors.2 = {
 	trigger = {
 		# Triggered by on_wargoal_enforced
 	}
-	
+
 	immediate = {
 		random_scope_state = {
 			limit = {
@@ -36,9 +36,9 @@ brazilian_minors.2 = {
 			save_scope_as = afro_brazilian_culture_scope
 		}
 	}
-	
+
 	option = {
-		name = brazilian_minors.2.a 
+		name = brazilian_minors.2.a
 		default_option = yes
 		change_infamy = 5
 		every_scope_state = {

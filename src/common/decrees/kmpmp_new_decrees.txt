@@ -1,4 +1,4 @@
-﻿kmpmp_decree_emmigration_edict = {
+﻿REPLACE_OR_CREATE:kmpmp_decree_emmigration_edict = {
 	texture = "gfx/interface/icons/decree/decree_emmigration_edict.dds"
 	state_trigger = {
 		NOR = {
@@ -10,7 +10,7 @@
 		state_standard_of_living_add = -1
 		state_turmoil_effects_mult = -0.25
 		state_migration_pull_mult = -0.75
-		state_migration_push_mult = 0.75
+		# state_migration_push_mult = 0.75 # Removed in 1.12
 	}
 	unlocking_technologies = { 
 		romanticism
@@ -22,7 +22,7 @@
 	}
 }
 
-kmpmp_decree_public_health_program = {
+REPLACE_OR_CREATE:kmpmp_decree_public_health_program = {
 	texture = "gfx/interface/icons/decree/decree_public_health_program.dds"
 	unlocking_technologies = {
 		centralization

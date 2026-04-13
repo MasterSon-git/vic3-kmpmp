@@ -1,4 +1,4 @@
-﻿da_knowledge_sharing = {
+﻿REPLACE:da_knowledge_sharing = {
 	groups= {
 		power_bloc_leader
 		overlord

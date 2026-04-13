@@ -1,4 +1,4 @@
-﻿je_master_of_mediterranean_sea = {
+﻿REPLACE_OR_CREATE:je_master_of_mediterranean_sea = {
     group = je_group_foreign_affairs
     icon = "gfx/interface/icons/event_icons/event_advantage.dds"
 
@@ -149,7 +149,7 @@
     }
 }
 
-je_leader_of_latin_america = {
+REPLACE_OR_CREATE:je_leader_of_latin_america = {
     group = je_group_foreign_affairs
     icon = "gfx/interface/icons/event_icons/event_advantage.dds"
 
@@ -230,7 +230,7 @@ je_leader_of_latin_america = {
     }
 }
 
-je_ruler_of_the_east = {
+REPLACE_OR_CREATE:je_ruler_of_the_east = {
     group = je_group_foreign_affairs
     icon = "gfx/interface/icons/event_icons/event_advantage.dds"
 
@@ -375,7 +375,7 @@ je_ruler_of_the_east = {
     }
 }
 
-je_the_sugar_monopoly = {
+REPLACE_OR_CREATE:je_the_sugar_monopoly = {
     group = je_group_foreign_affairs
     icon = "gfx/interface/icons/event_icons/event_advantage.dds"
 

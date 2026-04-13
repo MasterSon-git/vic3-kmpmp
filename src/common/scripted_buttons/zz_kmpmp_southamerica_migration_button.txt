@@ -1,4 +1,4 @@
-﻿southamerica_migration_button = {
+﻿REPLACE:southamerica_migration_button = {
 	name = southamerica_migration_button
 	desc = southamerica_migration_button_desc
 
@@ -23,7 +23,7 @@
 			}
 			custom_tooltip = {
 				text = is_in_europe_tt
-				country_is_in_europe = yes
+				is_in_geographic_region = geographic_region_europe
 			}
 			custom_tooltip = {
 				text = same_state_religion
@@ -42,7 +42,7 @@
 				is_incorporated = yes
 				custom_tooltip = {
 					text = is_in_europe_tt
-					state_is_in_europe = yes
+					is_in_geographic_region = geographic_region_europe
 				}
 				count >= 3
 			}
@@ -54,7 +54,7 @@
 				}
 				custom_tooltip = {
 					text = is_in_sa_tt
-					state_is_in_south_america = yes
+					is_in_geographic_region = geographic_region_south_america
 				}
 			}
 			trigger_else_if = {

@@ -39,7 +39,7 @@ brazilian_slavery.13 = {
 			limit = {
 				any_country = {
 					has_law_or_variant = law_type:law_slavery_banned
-					country_rank = rank_value:great_power					
+					country_rank = rank_value:great_power
 				}
 			}
 			random_country = {
@@ -55,7 +55,7 @@ brazilian_slavery.13 = {
 				limit = {
 					has_law_or_variant = law_type:law_slavery_banned
 				}
-				save_scope_as = anti_slavery_great_power_scope				
+				save_scope_as = anti_slavery_great_power_scope
 			}
 		}
 	}

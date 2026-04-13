@@ -1,6 +1,6 @@
 ﻿# kmpmp TODO: check if we need to add them in interest_groups, like it's done for kmpmp_ig_trait_made_in_germany
 
-kmpmp_ig_trait_battotai = {
+REPLACE_OR_CREATE:kmpmp_ig_trait_battotai = {
 	icon = "gfx/interface/icons/ig_trait_icons/patriotic_fervor.dds"
 	min_approval = loyal
 	
@@ -12,7 +12,7 @@ kmpmp_ig_trait_battotai = {
 	}
 }
 
-kmpmp_ig_trait_banzai = {
+REPLACE_OR_CREATE:kmpmp_ig_trait_banzai = {
 	icon = "gfx/interface/icons/ig_trait_icons/veteran_consultation.dds"
 	min_approval = happy
 	
@@ -22,7 +22,7 @@ kmpmp_ig_trait_banzai = {
 	}
 }
 
-kmpmp_ig_trait_army_with_a_state = {
+REPLACE_OR_CREATE:kmpmp_ig_trait_army_with_a_state = {
 	icon = "gfx/interface/icons/ig_trait_icons/patriotic_fervor.dds"
 	min_approval = loyal
 	

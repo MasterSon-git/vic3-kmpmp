@@ -427,7 +427,7 @@ meiji.6 = {
 			relations:root >= relations_threshold:neutral
 			NOT = { has_war_with = ROOT }
 			NOT = { is_owed_obligation_by = ROOT }
-			ig:ig_industrialists = {
+			ig:ig_industrialists ?= {
 				is_in_government = yes
 			}
 		}
@@ -440,12 +440,12 @@ meiji.6 = {
 				relations:root >= relations_threshold:neutral
 				NOT = { has_war_with = ROOT }
 				NOT = { is_owed_obligation_by = ROOT }
-				ig:ig_industrialists = {
+				ig:ig_industrialists ?= {
 					is_in_government = yes
 				}
 			}
 			save_scope_as = western_investor_country
-			ig:ig_industrialists = {
+			ig:ig_industrialists ?= {
 				leader = {
 					save_scope_as = western_investor_ig_leader
 				}

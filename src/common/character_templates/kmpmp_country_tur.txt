@@ -1,4 +1,4 @@
-﻿tur_abdulmecid_osmanoglu_template = {
+﻿REPLACE:tur_abdulmecid_osmanoglu_template = {
     first_name = Abdulmecid
     last_name = Osmanoglu
     historical = yes
@@ -15,7 +15,7 @@
     }
 }
 
-tur_abdulhamid_ii_template = {
+REPLACE:tur_abdulhamid_ii_osmanoglu_template = {
     first_name = Abdulhamid
     last_name = Osmanoglu
     historical = yes

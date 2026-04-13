@@ -1,4 +1,4 @@
-﻿kmpmp_je_military_goods_shortage = {
+﻿REPLACE_OR_CREATE:kmpmp_je_military_goods_shortage = {
     icon = "gfx/interface/icons/event_icons/event_military.dds"
 	group = je_group_foreign_affairs
 

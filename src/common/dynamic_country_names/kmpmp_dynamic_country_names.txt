@@ -1,41 +1,4 @@
-﻿AUS = { # Austria
-    dynamic_country_name = {
-        name = dyn_c_federal_state_of_austria
-        adjective = AUS_ADJ
-
-        is_main_tag_only = yes
-        priority = 1
-
-        trigger = {
-            exists = scope:actor
-            scope:actor ?= {
-                has_law_or_variant = law_type:law_corporate_state
-            }
-        }
-    }
-
-    # kmpmp
-    dynamic_country_name = {
-        name = dyn_c_three-crowns
-        adjective = dyn_c_three-crowns_adj
-        
-        is_main_tag_only = yes
-        priority = 10
-        
-        trigger = {
-            exists = scope:actor
-            scope:actor = {
-                country_has_primary_culture = cu:hungarian
-                country_has_primary_culture = cu:serb
-                country_has_primary_culture = cu:bosniak
-                country_has_primary_culture = cu:croat
-                country_has_primary_culture = cu:romanian
-            }
-        }
-    }
-}
-
-P01 = {
+﻿REPLACE_OR_CREATE:P01 = {
     dynamic_country_name = {
         name = dyn_c_parthian_empire_name
         adjective = dyn_c_parthian_empire_adj

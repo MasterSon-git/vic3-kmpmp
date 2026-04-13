@@ -1,4 +1,4 @@
-﻿kmpmp_je_ottoman_medium_nation = {
+﻿REPLACE_OR_CREATE:kmpmp_je_ottoman_medium_nation = {
     icon = "gfx/interface/icons/event_icons/waving_flag.dds"
     group = je_group_historical_content
     

@@ -1,4 +1,4 @@
-﻿exempt_from_service = {
+﻿REPLACE:exempt_from_service = {
 	requires_approval = no
 	groups= {
 		overlord

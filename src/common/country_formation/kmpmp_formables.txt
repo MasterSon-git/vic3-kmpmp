@@ -1,4 +1,4 @@
-﻿P01 = {
+﻿REPLACE_OR_CREATE:P01 = {
 	states = {
 		STATE_IRAKAJEMI
 		STATE_ISFAHAN
@@ -39,7 +39,7 @@
 	}
 }
 
-LTN = {
+REPLACE_OR_CREATE:LTN = {
 	# use_culture_states = yes
 	
 	# is_major_formation = yes
@@ -65,24 +65,27 @@ LTN = {
 		# Iberia
 		STATE_GALICIA
 		STATE_ASTURIAS
-		STATE_NAVARRA
+		STATE_BASQUE_COUNTRY
 		STATE_ARAGON
 		STATE_CATALONIA
 		STATE_BEIRA
-		STATE_CASTILE
+		STATE_OLD_CASTILE
 		STATE_ESTREMADURA
-		STATE_BADAJOZ
-		STATE_TOLEDO
+		STATE_EXTREMADURA
+		STATE_NEW_CASTILE
 		STATE_VALENCIA
 		STATE_ALENTEJO
-		STATE_ANDALUSIA
-		STATE_GRANADA
+		STATE_LOWER_ANDALUSIA
+		STATE_UPPER_ANDALUSIA
+		STATE_MURCIA
+		STATE_LEON
+		STATE_ENTRE_DOURO_E_MINHO
 		# Iberian isles
 		STATE_AZORES
 		STATE_MADEIRA
 		STATE_CANARY_ISLANDS
 		STATE_CAPE_VERDE
-		STATE_BALEARES
+		STATE_BALEARIC_ISLANDS
 
 		# Italy
 		STATE_SAVOY
@@ -108,8 +111,9 @@ LTN = {
 		STATE_CRETE
 	}
 
+	# kmpmp - total states 53 - 32 needed to form
 	# required_num_states = 32 # didn't work in formables
-	required_states_fraction = 0.63 # 32 total states
+	required_states_fraction = 0.604 #0.63 # 32 total states
 	
 
 	ai_will_do = { has_technology_researched = pan-nationalism }

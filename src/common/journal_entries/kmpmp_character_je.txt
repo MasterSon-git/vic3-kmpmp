@@ -1,4 +1,4 @@
-﻿kmpmp_je_character_schooling_heir_ig = {
+﻿REPLACE_OR_CREATE:kmpmp_je_character_schooling_heir_ig = {
     group = je_group_internal_affairs
     icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
 

@@ -1,4 +1,4 @@
-﻿kmpmp_occupy_state = {
+﻿REPLACE_OR_CREATE:kmpmp_occupy_state = {
     kind = directed
     cost = 0
 

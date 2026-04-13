@@ -1,5 +1,5 @@
 ﻿# Prussia NGF Germany
-je_the_matter_of_the_reichsland = {
+REPLACE_OR_CREATE:je_the_matter_of_the_reichsland = {
     group = je_group_historical_content
     icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
@@ -33,7 +33,7 @@ je_the_matter_of_the_reichsland = {
     }
 }
 
-je_the_industrial_heartland = {
+REPLACE_OR_CREATE:je_the_industrial_heartland = {
     group = je_group_historical_content
     icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
@@ -68,7 +68,7 @@ je_the_industrial_heartland = {
 }
 
 #FRANCE:
-je_the_border_with_the_germans = {
+REPLACE_OR_CREATE:je_the_border_with_the_germans = {
     group = je_group_historical_content
     icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
@@ -120,7 +120,7 @@ je_the_border_with_the_germans = {
     }
 }
 
-je_humiliated_by_the_germans = {
+REPLACE_OR_CREATE:je_humiliated_by_the_germans = {
     group = je_group_historical_content
     icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 

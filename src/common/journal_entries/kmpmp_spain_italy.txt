@@ -1,4 +1,4 @@
-﻿je_spain_aragons_legacy = {
+﻿REPLACE_OR_CREATE:je_spain_aragons_legacy = {
     icon = "gfx/interface/icons/event_icons/event_map.dds"
 	group = je_group_historical_content
 

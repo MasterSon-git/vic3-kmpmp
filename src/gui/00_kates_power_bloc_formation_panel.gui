@@ -10,6 +10,10 @@
 @panel_width_plus_30 = 570			# used to be 490
 @panel_width_plus_70 = 610			# used to be 530
 
+power_bloc_customization_popup_type = {
+	name = power_bloc_customization_popup
+}
+
 types power_bloc_formation
 {
 	type power_bloc_formation_panel = default_block_window
@@ -37,7 +41,7 @@ types power_bloc_formation
 				datacontext = "[PowerBlocFormationPanel.GetPowerBlocFormation]"
 				margin_top = 10
 				spacing = 10
-				
+
 				flowcontainer = {
 					parentanchor = hcenter
 					spacing = 5

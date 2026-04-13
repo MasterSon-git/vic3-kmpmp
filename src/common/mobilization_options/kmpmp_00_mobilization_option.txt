@@ -1,299 +1,71 @@
-﻿mobilization_option_basic_supplies = {
-	texture = "gfx/interface/icons/mobilization_options/basic_supplies.dds"
-	can_be_turned_off = {
-		custom_tooltip = {
-		    text = mobilization_option_basic_supplies_can_be_turned_off_tt
-			always = no
-		}
-	}
-	upkeep_modifier = {
-		goods_input_grain_add = 0.75
-	}
+﻿INJECT:mobilization_option_basic_supplies = {
 	upkeep_modifier_unscaled = {
-        goods_input_small_arms_mult = 0.10 #0.5
-        goods_input_artillery_mult = 0.10 #0.5
-		goods_input_ammunition_mult = 0.10 #0.5
-        goods_input_oil_mult = 0.10 #0.5
-        goods_input_radios_mult = 0.10 #0.5
-        goods_input_tanks_mult = 0.10 #0.5
+        goods_input_small_arms_mult = -0.4 # = 0.1
+        goods_input_artillery_mult = -0.4 # = 0.1
+		goods_input_ammunition_mult = -0.4 # = 0.1
+        goods_input_oil_mult = -0.4 # = 0.1
+        goods_input_radios_mult = -0.4 # = 0.1
+        goods_input_tanks_mult = -0.4 # = 0.1
 	}
-	
-	unit_modifier = {
-		# empty on purpose - this is the minimum mobilization cost
-	}
-	ai_weight = {
-		value = 1
-	}
-
-	group = supplies
 }
 
-mobilization_option_extra_supplies = {
-	texture = "gfx/interface/icons/mobilization_options/extra_supplies.dds"
-
-	possible = {
-		market ?= {
-			mg:groceries ?= {
-				has_potential_supply = yes
-			}
-		}
-	}
-	
-	unlocking_technologies = {
-		army_reserves
-	}	
-	
-	on_deactivate_while_mobilized = {
-		custom_tooltip = {
-			text = mobilization_option_it_hurts_morale_when_you_remove_supplies_while_in_combat_tt
-			every_combat_unit = {
-				add_morale = {
-					value = morale
-					multiply = -0.5
-				}
-			}
-		}
-	}
-	
-	upkeep_modifier = {
-		goods_input_groceries_add = 1.5
-	}
+INJECT:mobilization_option_extra_supplies = {
 	upkeep_modifier_unscaled = {
-        goods_input_small_arms_mult = 0.15 #0.25
-        goods_input_artillery_mult = 0.15 #0.25
-		goods_input_ammunition_mult = 0.15 #0.25
-        goods_input_oil_mult = 0.15 #0.25
-        goods_input_radios_mult = 0.15 #0.25
-        goods_input_tanks_mult = 0.15 #0.25
-	}	
-	
-	unit_modifier = {
-		unit_morale_loss_mult = -0.05
-		unit_offense_mult = 0.1
-		unit_defense_mult = 0.1
+        goods_input_small_arms_mult = -0.1 # = 0.15
+        goods_input_artillery_mult = -0.1 # = 0.15
+		goods_input_ammunition_mult = -0.1 # = 0.15
+        goods_input_oil_mult = -0.1 # = 0.15
+        goods_input_radios_mult = -0.1 # = 0.15
+        goods_input_tanks_mult = -0.1 # = 0.15
 	}
-	ai_weight = {
-		value = 1
-	}
-
-	group = supplies
 }
 
-mobilization_option_luxurious_supplies = {
-	texture = "gfx/interface/icons/mobilization_options/luxurious_supplies.dds"
-
-	possible = {
-		scope:military_formation = { has_mobilization_option = mobilization_option:mobilization_option_extra_supplies }
-		market ?= {
-			mg:meat ?= {
-				has_potential_supply = yes
-			}
-			mg:wine ?= {
-				has_potential_supply = yes
-			}
-		}
-	}
-	
-	unlocking_technologies = {
-		military_statistics
-	}
-	
-	on_deactivate_while_mobilized = {
-		custom_tooltip = {
-			text = mobilization_option_it_hurts_morale_when_you_remove_supplies_while_in_combat_tt
-			every_combat_unit = {
-				add_morale = {
-					value = morale
-					multiply = -0.5
-				}
-			}
-		}
-	}
-	
-	upkeep_modifier = {
-		goods_input_meat_add = 1.5
-		goods_input_wine_add = 1.5
-	}
+INJECT:mobilization_option_luxurious_supplies = {
 	upkeep_modifier_unscaled = {
-        goods_input_small_arms_mult = 0.15 #0.25
-        goods_input_artillery_mult = 0.15 #0.25
-		goods_input_ammunition_mult = 0.15 #0.25
-        goods_input_oil_mult = 0.15 #0.25
-        goods_input_radios_mult = 0.15 #0.25
-        goods_input_tanks_mult = 0.15 #0.25
+        goods_input_small_arms_mult = -0.1 # = 0.15
+        goods_input_artillery_mult = -0.1 # = 0.15
+		goods_input_ammunition_mult = -0.1 # = 0.15
+        goods_input_oil_mult = -0.1 # = 0.15
+        goods_input_radios_mult = -0.1 # = 0.15
+        goods_input_tanks_mult = -0.1 # = 0.15
 	}	
-	
-	unit_modifier = {
-		unit_morale_loss_mult = -0.05
-		unit_offense_mult = 0.1
-		unit_defense_mult = 0.1
-	}
-	ai_weight = {
-		value = 1
-	}
-
-	group = supplies
 }
 
-mobilization_option_chocolate = {
-	texture = "gfx/interface/icons/mobilization_options/chocolate.dds"
-
-	possible = {
-		market ?= {
-			mg:sugar ?= {
-				has_potential_supply = yes
-			}
-		}
-	}
-
-	on_deactivate_while_mobilized = {
-		custom_tooltip = {
-			text = mobilization_option_it_hurts_morale_when_you_remove_supplies_while_in_combat_tt
-			every_combat_unit = {
-				add_morale = {
-					value = morale
-					multiply = -0.5
-				}
-			}
-		}
-	}
-
-	upkeep_modifier = {
-		goods_input_sugar_add = 1
-	}
+INJECT:mobilization_option_chocolate = {
 	unit_modifier = {
-		unit_morale_recovery_mult = 0.1
 		# kmpmp
 		unit_morale_damage_mult = 0.05
 		unit_recovery_rate_add = 0.05
 	}
-	ai_weight = {
-		value = 1
-	}
-
-	group = supplements
 }
 
-mobilization_option_tobacco = {
-	texture = "gfx/interface/icons/mobilization_options/tobacco.dds"
-
-	possible = {
-		market ?= {
-			mg:tobacco ?= {
-				has_potential_supply = yes
-			}
-		}
-	}
-	
-	on_deactivate_while_mobilized = {
-		custom_tooltip = {
-			text = mobilization_option_it_hurts_morale_when_you_remove_supplies_while_in_combat_tt
-			every_combat_unit = {
-				add_morale = {
-					value = morale
-					multiply = -0.5
-				}
-			}
-		}
-	}
-	
-	upkeep_modifier = {
-		goods_input_tobacco_add = 0.5
-	}
+INJECT:mobilization_option_tobacco = {
 	unit_modifier = {
-		unit_morale_recovery_mult = 0.1
 		# kmpmp
 		unit_morale_damage_mult = 0.05
 		unit_morale_loss_mult = -0.05
 	}
-	ai_weight = {
-		value = 1
-	}
-
-	group = supplements
 }
 
-mobilization_option_liquor = {
-	texture = "gfx/interface/icons/mobilization_options/liquor.dds"
-
-	possible = {
-		market ?= {
-			mg:liquor ?= {
-				has_potential_supply = yes
-			}
-		}
-	}
-	
-	on_deactivate_while_mobilized = {
-		custom_tooltip = {
-			text = mobilization_option_it_hurts_morale_when_you_remove_supplies_while_in_combat_tt
-			every_combat_unit = {
-				add_morale = {
-					value = morale
-					multiply = -0.5
-				}
-			}
-		}
-	}
-	
-	upkeep_modifier = {
-		goods_input_liquor_add = 1
-	}
+INJECT:mobilization_option_liquor = {
 	unit_modifier = {
-		unit_morale_recovery_mult = 0.1
 		# kmpmp
 		unit_morale_damage_mult = 0.05
 		unit_recovery_rate_add = 0.05
 	}
-	ai_weight = {
-		value = 1
-	}
-
-	group = supplements
 }
 
-mobilization_option_opium = {
-	texture = "gfx/interface/icons/mobilization_options/opium.dds"
-
-	possible = {
-		market ?= {
-			mg:opium ?= {
-				has_potential_supply = yes
-			}
-		}
-	}
-	
-	on_deactivate_while_mobilized = {
-		custom_tooltip = {
-			text = mobilization_option_it_hurts_morale_when_you_remove_supplies_while_in_combat_tt
-			every_combat_unit = {
-				add_morale = {
-					value = morale
-					multiply = -0.5
-				}
-			}
-		}
-	}
-	
-	upkeep_modifier = {
-		goods_input_opium_add = 0.5
-	}
+INJECT:mobilization_option_opium = {
 	unit_modifier = {
-		unit_morale_recovery_mult = 0.1
 		# kmpmp
 		unit_morale_damage_mult = 0.05
 		unit_recovery_rate_add = 0.05
 	}
-	ai_weight = {
-		value = 1
-	}
-
-	group = supplements
 }
 
-mobilization_option_truck_transport = {
+REPLACE:mobilization_option_truck_transport = {
 	texture = "gfx/interface/icons/mobilization_options/truck_transport.dds"
-	
+
 	possible = {
 		scope:military_formation = {
 			NOR = {
@@ -311,7 +83,7 @@ mobilization_option_truck_transport = {
 			}
 		}
 	}
-	
+
 	on_activate_while_mobilized = {
 		custom_tooltip = {
 			text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
@@ -321,7 +93,7 @@ mobilization_option_truck_transport = {
 			}
 		}
 	}
-	
+
 	on_deactivate = {
 		custom_tooltip = {
 			text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
@@ -331,7 +103,7 @@ mobilization_option_truck_transport = {
 			}
 		}
 	}
-	
+
 	unlocking_technologies = {
 		combustion_engine
 	}
@@ -350,56 +122,13 @@ mobilization_option_truck_transport = {
     group = transport
 }
 
-mobilization_option_chemical_weapons = {
-	texture = "gfx/interface/icons/mobilization_options/chemical_weapons.dds"
-
-	possible = {
-		market ?= {
-			mg:fertilizer ?= {
-				has_potential_supply = yes
-			}
-		}
-	}
-	
-	on_activate_while_mobilized = {
-		custom_tooltip = {
-			text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
-			add_organization = {
-				value = organization
-				multiply = -0.5
-			}
-		}
-	}
-	
-	on_deactivate = {
-		custom_tooltip = {
-			text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
-			add_organization = {
-				value = organization
-				multiply = -0.5
-			}
-		}
-	}
-	
-	unlocking_technologies = {
-		chemical_warfare
-	}
-	upkeep_modifier = {
-		goods_input_fertilizer_add = 2
-	}
+INJECT:mobilization_option_chemical_weapons = {
 	unit_modifier = {
-		unit_offense_add = 20
-		unit_kill_rate_add = 0.4 #0.5
-		unit_recovery_rate_add = -0.2
+		unit_kill_rate_add = -0.1 # =0.4
 	}
-	ai_weight = {
-		value = 1
-	}
-
-    group = special_weapons
 }
 
-mobilization_option_flamethrowers = {
+REPLACE:mobilization_option_flamethrowers = {
 	texture = "gfx/interface/icons/mobilization_options/flamethrowers.dds"
 
 	possible = {
@@ -415,7 +144,7 @@ mobilization_option_flamethrowers = {
 			}
 		}
 	}
-	
+
 	on_activate_while_mobilized = {
 		custom_tooltip = {
 			text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
@@ -425,7 +154,7 @@ mobilization_option_flamethrowers = {
 			}
 		}
 	}
-	
+
 	on_deactivate = {
 		custom_tooltip = {
 			text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
@@ -435,13 +164,14 @@ mobilization_option_flamethrowers = {
 			}
 		}
 	}
-	
+
 	unlocking_technologies = {
 		flamethrowers
 	}
 	upkeep_modifier = {
 		goods_input_oil_add = 0.5 #1
-		goods_input_fertilizer_add = 1 #kmpmp
+		# kmpmp
+		goods_input_fertilizer_add = 1
 	}
 	unit_modifier = {
 		unit_offense_add = 15
@@ -455,7 +185,7 @@ mobilization_option_flamethrowers = {
     group = special_weapons
 }
 
-mobilization_option_motorized_recon = {
+REPLACE:mobilization_option_motorized_recon = {
 	texture = "gfx/interface/icons/mobilization_options/motorized_reconaissance.dds"
 
 	possible = {
@@ -472,7 +202,7 @@ mobilization_option_motorized_recon = {
 			}
 		}
 	}
-	
+
 	on_activate_while_mobilized = {
 		custom_tooltip = {
 			text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
@@ -482,7 +212,7 @@ mobilization_option_motorized_recon = {
 			}
 		}
 	}
-	
+
 	on_deactivate = {
 		custom_tooltip = {
 			text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
@@ -492,14 +222,15 @@ mobilization_option_motorized_recon = {
 			}
 		}
 	}
-	
+
 	unlocking_technologies = {
 		combustion_engine
 	}
 	upkeep_modifier = {
 		# goods_input_automobiles_add = 1
 		goods_input_oil_add = 0.5
-		goods_input_engines_add = 1.5 #kmpmp
+		# kmpmp
+		goods_input_engines_add = 1.5
 	}
 	unit_modifier = {
 		unit_occupation_mult = 0.5

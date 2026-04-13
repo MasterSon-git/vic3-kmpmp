@@ -1,4 +1,4 @@
-﻿je_sick_man_main = {
+﻿REPLACE:je_sick_man_main = {
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
 	group = je_group_tanzimat
@@ -42,7 +42,7 @@
 		if = {
 			limit = {
 				is_in_power_bloc = yes
-				is_power_bloc_leader = yes				
+				is_power_bloc_leader = yes
 			}
 			custom_tooltip = sick_man_of_europe_lose_power_bloc
 		}
@@ -67,12 +67,10 @@
 				c:TUR ?= this
 				has_dlc_feature = ip3_content
 				NOT = {
-					has_variable = eastern_crisis_happened
+					has_global_variable = eastern_crisis_happened
 				}
 			}
-			add_journal_entry = {
-				type = je_great_eastern_crisis
-			}
+			add_contextless_journal_entry = je_great_eastern_crisis
 		}
 		cu:albanian = {
 			remove_tradition_trait = tradition_rumelian
@@ -101,7 +99,7 @@
 }
 
 # Literacy and Universities
-je_sick_man_education = {
+REPLACE:je_sick_man_education = {
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
 	group = je_group_tanzimat

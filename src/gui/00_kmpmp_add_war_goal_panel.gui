@@ -9,7 +9,7 @@ types wargoal_types
 
 		block "war_goal_tooltip" {
 			tooltipwidget = {
-				RegularTooltip_WarGoal = {}
+				FancyTooltip_WarGoal = {}
 			}
 		}
 
@@ -78,7 +78,7 @@ types wargoal_types
 					align = hcenter|nobaseline
 					multiline = yes
 					autoresize = yes
-					text = "[WarGoal.GetName]"
+					text = "[WarGoal.GetNameNoIcon]"
 				}
 			}
 		}
@@ -149,7 +149,7 @@ types wargoal_types
 					align = hcenter|nobaseline
 					multiline = yes
 					autoresize = yes
-					text = "[WarGoal.GetName]"
+					text = "[WarGoal.GetNameNoIcon]"
 				}
 			}
 		}

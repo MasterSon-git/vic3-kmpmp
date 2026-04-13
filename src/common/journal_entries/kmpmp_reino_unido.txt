@@ -1,4 +1,4 @@
-﻿je_reino_unido = {
+﻿REPLACE_OR_CREATE:je_reino_unido = {
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 	group = je_group_historical_content
 	transferable = no
@@ -165,7 +165,7 @@
 	}
 }
 
-je_reino_unido_protectorate = {
+REPLACE_OR_CREATE:je_reino_unido_protectorate = {
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 	group = je_group_historical_content
 	transferable = no

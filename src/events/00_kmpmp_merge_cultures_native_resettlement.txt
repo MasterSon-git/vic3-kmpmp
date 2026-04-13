@@ -24,7 +24,7 @@ native_resettlement.7 = {
 	}
 
 	immediate = {
-		c:SEQ = {
+		c:SEQ ?= {
 			save_scope_as = indian_territory_scope
 		}
 		cu:cherokee = { #cu:muskogean = {

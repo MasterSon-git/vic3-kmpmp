@@ -10,13 +10,13 @@ prussia_form_ngf = {
 			AND = {
 				exists = c:SGF
 				exists = c:PRU
-				THIS = c:PRU
+				c:PRU ?= THIS
 				NOT = { exists = c:NGF }
 				NOT = { exists = c:GER }
 			}
 			AND = {
 				exists = c:PRU
-				THIS = c:PRU
+				c:PRU ?= THIS
 				has_global_variable = aggressive_austria_var
 			}
 		}
@@ -94,7 +94,7 @@ prussia_form_ngf = {
 				is_ai = yes
 				country_rank < rank_value:great_power	
 				NOT = {
-					THIS = c:PRU
+					c:PRU ?= THIS
 				}
 				AND = {
 					root = { country_has_primary_culture = cu:north_german }

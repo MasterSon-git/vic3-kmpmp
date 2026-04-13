@@ -1,4 +1,4 @@
-﻿sar_general_chiodo = {
+﻿REPLACE:sar_general_chiodo = {
 	first_name = Agostino
 	last_name = Chiodo
 	historical = yes
@@ -16,13 +16,13 @@
 			OR = {
 				AND = {
 					exists = c:SAR
-					this = c:SAR
+					c:SAR ?= THIS
 				}
 				AND = {
 					NOT = { exists = c:SAR }
 					exists = c:ITA
-					this = c:ITA
-					c:ITA = { owns_entire_state_region = STATE_PIEDMONT }
+					c:ITA ?= THIS
+					c:ITA ?= { owns_entire_state_region = STATE_PIEDMONT }
 				}
 			}
 		}

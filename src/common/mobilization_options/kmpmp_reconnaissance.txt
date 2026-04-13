@@ -1,4 +1,4 @@
-﻿mobilization_option_close_air_support = {
+﻿REPLACE_OR_CREATE:kmpmp_mobilization_option_close_air_support = {
 	texture = "gfx/interface/icons/mobilization_options/close_air_support.dds"
 
 	on_activate_while_mobilized = {
@@ -40,7 +40,7 @@
 	group = reconnaissance
 }
 
-mobilization_option_fighter_planes = {
+REPLACE_OR_CREATE:kmpmp_mobilization_option_fighter_planes = {
 	texture = "gfx/interface/icons/mobilization_options/fighter_planes.dds"
 
 	on_activate_while_mobilized = {
@@ -82,7 +82,7 @@ mobilization_option_fighter_planes = {
 	group = reconnaissance
 }
 
-mobilization_option_tactical_bombers = {
+REPLACE_OR_CREATE:kmpmp_mobilization_option_tactical_bombers = {
 	texture = "gfx/interface/icons/mobilization_options/tactical_bombers.dds"
 
 	on_activate_while_mobilized = {

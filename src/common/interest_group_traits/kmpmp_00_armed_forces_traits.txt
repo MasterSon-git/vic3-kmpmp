@@ -1,19 +1,11 @@
-﻿ig_trait_elan_vital = {
-	icon = "gfx/interface/icons/ig_trait_icons/patriotic_fervor.dds"
-	min_approval = loyal
-	
+﻿INJECT:ig_trait_elan_vital = {
 	modifier = {
-		unit_offense_mult = 0.15
 		unit_defense_mult = 0.05 #kmpmp
 	}
 }
 
-ig_trait_el_buen_jefe = {
-	icon = "gfx/interface/icons/ig_trait_icons/patriotic_fervor.dds"
-	min_approval = loyal
-	
+INJECT:ig_trait_el_buen_jefe = {
 	modifier = {
-		country_authority_mult = 0.1
 		unit_offense_mult = 0.1 #kmpmp
 		unit_defense_mult = 0.1 #kmpmp
 	}

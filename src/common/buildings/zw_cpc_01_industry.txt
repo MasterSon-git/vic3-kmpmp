@@ -188,10 +188,6 @@ INJECT_OR_CREATE:building_shipyard = {
 			building_1 = building_shipyard
 		}
 	}
-
-	should_auto_expand = { 
-		zw_trigger_auto_expand_building_shipyard = yes
-	}
 }
 
 INJECT_OR_CREATE:building_military_shipyard = {
@@ -209,7 +205,7 @@ INJECT_OR_CREATE:building_military_shipyard = {
 		}
 	}
 
-	should_auto_expand = { 
+	should_auto_expand = {
 		zw_trigger_auto_expand_building_military_shipyard = yes
 	}
 }
@@ -261,7 +257,7 @@ INJECT_OR_CREATE:building_arms_industry = {
 		}
 	}
 
-	should_auto_expand = { 
+	should_auto_expand = {
 		zw_trigger_auto_expand_building_arms_industry = yes
 	}
 }
@@ -281,7 +277,7 @@ INJECT_OR_CREATE:building_artillery_foundry = {
 		}
 	}
 
-	should_auto_expand = { 
+	should_auto_expand = {
 		zw_trigger_auto_expand_building_artillery_foundry = yes
 	}
 }
@@ -301,7 +297,7 @@ INJECT_OR_CREATE:building_munition_plant = {
 		}
 	}
 
-	should_auto_expand = { 
+	should_auto_expand = {
 		zw_trigger_auto_expand_building_munition_plant = yes
 	}
 }

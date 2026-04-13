@@ -40,7 +40,7 @@ algeria_events.1 = {
 			type = je_french_foreign_legion
 		}
 		random_scope_character = {
-			limit = { 
+			limit = {
 				has_role = general
 				is_ruler = no
 			}
@@ -85,18 +85,6 @@ algeria_events.1 = {
 			add_claim = c:FRA
 		}
 		s:STATE_TUNISIA = {
-			add_claim = c:FRA
-		}
-		s:STATE_INNER_MOROCCO = {
-			add_claim = c:FRA
-		}
-		s:STATE_FEZ = {
-			add_claim = c:FRA
-		}
-		s:STATE_MARRAKECH = {
-			add_claim = c:FRA
-		}
-		s:STATE_WEST_SAHARA = {
 			add_claim = c:FRA
 		}
 	}
@@ -153,18 +141,6 @@ algeria_events.1 = {
 		s:STATE_TUNISIA = {
 			add_claim = c:FRA
 		}
-		s:STATE_INNER_MOROCCO = {
-			add_claim = c:FRA
-		}
-		s:STATE_FEZ = {
-			add_claim = c:FRA
-		}
-		s:STATE_MARRAKECH = {
-			add_claim = c:FRA
-		}
-		s:STATE_WEST_SAHARA = {
-			add_claim = c:FRA
-		}		
 	}
 	option = {  # Focus on appeasement
 		name = algeria_events.1.c
@@ -230,18 +206,6 @@ algeria_events.1 = {
 		s:STATE_TUNISIA = {
 			add_claim = c:FRA
 		}
-		s:STATE_INNER_MOROCCO = {
-			add_claim = c:FRA
-		}
-		s:STATE_FEZ = {
-			add_claim = c:FRA
-		}
-		s:STATE_MARRAKECH = {
-			add_claim = c:FRA
-		}
-		s:STATE_WEST_SAHARA = {
-			add_claim = c:FRA
-		}		
 	}
 }
 
@@ -496,7 +460,7 @@ algeria_events.8 = {
 			custom_tooltip = {
 				text = algeria_events.8.tt.1
 				has_variable = algeria_constantine_var
-				has_law_or_variant = law_type:law_monarchy
+				has_law = law_type:law_monarchy
 			}
 		}
 		set_variable = algeria_deylik_restored
@@ -506,7 +470,7 @@ algeria_events.8 = {
 			culture = cu:turkish
 		}
 		add_modifier = {
-			name = barbary_pirates_modifier	
+			name = barbary_pirates_modifier
 			days = very_long_modifier_time
 		}
 		s:STATE_EAST_SAHARA = {
@@ -524,10 +488,10 @@ algeria_events.8 = {
 			custom_tooltip = {
 				text = algeria_events.8.tt.1
 				has_variable = algeria_constantine_var
-				has_law_or_variant = law_type:law_monarchy
+				has_law = law_type:law_monarchy
 				exists = c:TUR
-				c:TUR = { 
-					has_law_or_variant = law_type:law_monarchy
+				c:TUR ?= {
+					has_law = law_type:law_monarchy
 				}
 			}
 		}
@@ -536,11 +500,11 @@ algeria_events.8 = {
 		add_primary_culture = cu:turkish
 		if = {
 			limit = {
-				c:TUR = { 
-					is_country_type = recognized 
+				c:TUR ?= {
+					is_country_type = recognized
 				}
 			}
-			c:TUR = {
+			c:TUR ?= {
 				create_diplomatic_pact = {
 					country = c:ALD
 					type = puppet
@@ -548,7 +512,7 @@ algeria_events.8 = {
 			}
 		}
 		else_if = {
-			c:TUR = {
+			c:TUR ?= {
 				create_diplomatic_pact = {
 					country = c:ALD
 					type = vassal
@@ -556,7 +520,7 @@ algeria_events.8 = {
 			}
 		}
 		add_modifier = {
-			name = barbary_pirates_modifier	
+			name = barbary_pirates_modifier
 			days = very_long_modifier_time
 		}
 		add_loyalists = {
@@ -581,9 +545,9 @@ algeria_events.8 = {
 			}
 		}
 		set_variable = algeria_maghreb_restored
-		if = { 
+		if = {
 			limit = {
-				NOT = { 
+				NOT = {
 					has_law = law_type:law_theocracy
 				}
 			}
@@ -654,7 +618,7 @@ algeria_events.8 = {
 		name = algeria_events.8.g
 		ruler = {
 			add_modifier = {
-				name = modern_jugurtha	
+				name = modern_jugurtha
 				days = long_modifier_time
 			}
 		}

@@ -1,0 +1,199 @@
+﻿# vtm - remove negative state_construction_mult modifiers
+
+# british_isles
+INJECT:state_trait_scottish_highlands = {
+	modifier = {
+		state_construction_mult = 0.1
+	}
+}
+
+# north_america
+INJECT:state_trait_northern_canadian_terrain = {
+	modifier = {
+		state_construction_mult = 0.2
+	}
+}
+
+INJECT:state_trait_cascades = {
+	modifier = {
+		state_construction_mult = 0.1
+	}
+}
+
+INJECT:state_trait_northern_california_coastal_forests = {
+	modifier = {
+		state_construction_mult = 0.1
+	}
+}
+
+INJECT:state_trait_the_great_basin_desert = {
+	modifier = {
+		state_construction_mult = 0.25
+	}
+}
+
+INJECT:state_trait_floridian_wetlands = {
+	modifier = {
+		state_construction_mult = 0.15
+	}
+}
+
+INJECT:state_trait_rocky_mountains = {
+	modifier = {
+		state_construction_mult = 0.2
+	}
+}
+
+INJECT:state_trait_sierra_madre_occidental = {
+	modifier = {
+		state_construction_mult = 0.1
+	}
+}
+
+INJECT:state_trait_sierra_madre_oriental = {
+	modifier = {
+		state_construction_mult = 0.1
+	}
+}
+
+INJECT:state_trait_central_american_cordilleras = {
+	modifier = {
+		state_construction_mult = 0.1
+	}
+}
+
+# south_america
+INJECT:state_trait_atacama_desert = {
+	modifier = {
+		state_construction_mult = 0.1
+	}
+}
+
+INJECT:state_trait_andes = {
+	modifier = {
+		state_construction_mult = 0.1
+	}
+}
+
+# western_europe
+INJECT:state_trait_alps_mountains = {
+	modifier = {
+		state_construction_mult = 0.15
+	}
+}
+
+# eastern_europe
+INJECT:state_trait_caucasus_mountains = {
+	modifier = {
+		state_construction_mult = 0.2
+	}
+}
+
+# africa
+INJECT:state_trait_congo_forest = {
+	modifier = {
+		state_construction_mult = 0.2
+	}
+}
+
+INJECT:state_trait_sahara_desert = {
+	modifier = {
+		state_construction_mult = 0.25
+    }
+}
+
+INJECT:state_trait_atlas_mountains = {
+	modifier = {
+		state_construction_mult = 0.15
+	}
+}
+
+# near_east
+INJECT:state_trait_zagros_mountains = {
+	modifier = {
+		state_construction_mult = 0.1
+	}
+}
+
+INJECT:state_trait_alborz_mountains = {
+	modifier = {
+		state_construction_mult = 0.1
+	}
+}
+
+INJECT:state_trait_baluchistan_mountains = {
+	modifier = {
+		state_construction_mult = 0.2
+	}
+}
+
+INJECT:state_trait_arabian_desert = {
+	modifier = {
+		state_construction_mult = 0.25
+    }
+}
+
+INJECT:state_trait_mount_lebanon = {
+	modifier = {
+		state_construction_mult = 0.05
+	}
+}
+
+# india
+INJECT:state_trait_himalayas_mountains = {
+	modifier = {
+		state_construction_mult = 0.25
+	}
+}
+
+# south_east_asia
+INJECT:state_trait_burmese_teak = {
+	modifier = {
+		state_construction_mult = 0.1
+	}
+}
+
+INJECT:state_trait_indochinese_forest = {
+	modifier = {
+		state_construction_mult = 0.1
+	}
+}
+
+INJECT:state_trait_borneo_rainforest = {
+	modifier = {
+		state_construction_mult = 0.1
+	}
+}
+
+# far_east_asia
+INJECT:state_trait_gobi_desert = {
+	modifier = {
+		state_construction_mult = 0.25
+    }
+}
+
+
+INJECT:state_trait_taklamakan_desert = {
+	modifier = {
+		state_construction_mult = 0.25
+    }
+}
+
+INJECT:state_trait_siberian_terrain = {
+	modifier = {
+		state_construction_mult = 0.2
+	}
+}
+
+# oceania
+INJECT:state_trait_great_dividing_range = {
+	modifier = {
+		state_construction_mult = 0.1
+	}
+}
+
+INJECT:state_trait_australian_desert = {
+	modifier = {
+		state_construction_mult = 0.25
+    }
+}

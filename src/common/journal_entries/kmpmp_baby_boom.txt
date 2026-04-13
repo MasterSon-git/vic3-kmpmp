@@ -1,4 +1,4 @@
-﻿kmpmp_je_baby_boom = {
+﻿REPLACE_OR_CREATE:kmpmp_je_baby_boom = {
     # Sweden, Portugal, Netherlands, Bolivia, Brazil, Mexico add babyboom JE
     # req: has invented pharmaceuticals, has SOL of 10 avg on nation
     # grants: 10% birthrate for 10 years

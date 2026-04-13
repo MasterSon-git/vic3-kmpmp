@@ -1,4 +1,4 @@
-﻿embargo = {
+﻿REPLACE:embargo = {
 	groups= {
 		general
 	}

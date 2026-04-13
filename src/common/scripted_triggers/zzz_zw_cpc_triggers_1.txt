@@ -22,9 +22,12 @@
 					owner = { has_variable = zw_var_auto_invest_existing_buildings_only_manufacture }
 				}
 				# trigger 2.1 existing building types
-				has_building = $building_1$
-				# trigger 2.2 existing building profit conditions
-				b:$building_1$ = { zw_trigger_profit_conditions = yes }
+				b:$building_1$ ?= {
+					# trigger 2.2 existing building profit conditions
+					zw_trigger_profit_conditions = yes
+					# trigger 2.3 max level under construction
+					zw_trigger_level_under_construction = yes
+				}
 			}
 			# trigger 3: restricted building type
 			owner = {
@@ -76,9 +79,12 @@ REPLACE:zw_trigger_autonom_investment_agro = {
 					owner = { has_variable = zw_var_auto_invest_existing_buildings_only_agro }
 				}
 				# trigger 2.1 existing building types
-				has_building = $building_1$
-				# trigger 2.2 existing building profit conditions
-				b:$building_1$ = { zw_trigger_profit_conditions = yes }
+				b:$building_1$ ?= {
+					# trigger 2.2 existing building profit conditions
+					zw_trigger_profit_conditions = yes
+					# trigger 2.3 max level under construction
+					zw_trigger_level_under_construction = yes
+				}
 			}
 			# trigger 3: restricted building type
 			owner = {
@@ -130,9 +136,12 @@ REPLACE:zw_trigger_autonom_investment_resource = {
 					owner = { has_variable = zw_var_auto_invest_existing_buildings_only_resource }
 				}
 				# trigger 2.1 existing building types
-				has_building = $building_1$
-				# trigger 2.2 existing building profit conditions
-				b:$building_1$ = { zw_trigger_profit_conditions = yes }
+				b:$building_1$ ?= {
+					# trigger 2.2 existing building profit conditions
+					zw_trigger_profit_conditions = yes
+					# trigger 2.3 max level under construction
+					zw_trigger_level_under_construction = yes
+				}
 			}
 			# trigger 3: restricted building type
 			owner = {
@@ -184,9 +193,12 @@ REPLACE:zw_trigger_autonom_investment_infrastructure = {
 					owner = { has_variable = zw_var_auto_invest_existing_buildings_only_infrastructure }
 				}
 				# trigger 2.1 existing building types
-				has_building = $building_1$
-				# trigger 2.2 existing building profit conditions
-				b:$building_1$ = { zw_trigger_profit_conditions = yes }
+				b:$building_1$ ?= {
+					# trigger 2.2 existing building profit conditions
+					zw_trigger_profit_conditions = yes
+					# trigger 2.3 max level under construction
+					zw_trigger_level_under_construction = yes
+				}
 			}
 			# trigger 3: restricted building type
 			owner = {
@@ -238,9 +250,12 @@ REPLACE:zw_trigger_autonom_investment_infrastructure_railway = {
 					owner = { has_variable = zw_var_auto_invest_existing_buildings_only_infrastructure }
 				}
 				# trigger 2.1 existing building types
-				has_building = $building_1$
-				# trigger 2.2 existing building profit conditions
-				b:$building_1$ = { zw_trigger_profit_conditions_railway = yes }
+				b:$building_1$ ?= {
+					# trigger 2.2 existing building profit conditions
+					zw_trigger_profit_conditions = yes
+					# trigger 2.3 max level under construction
+					zw_trigger_level_under_construction = yes
+				}
 			}
 			# trigger 3: restricted building type
 			owner = {
@@ -265,5 +280,18 @@ REPLACE:zw_trigger_autonom_investment_infrastructure_railway = {
 			}
 		}
 		owner = scope:investor_country
+	}
+}
+
+zw_trigger_level_under_construction = {
+	trigger_if = {
+		limit = {
+			owner = { has_variable = zw_var_auto_invest_level_under_construction }
+		}
+		 0 > {
+			add = level_after_queued_constructions
+			subtract = level
+			subtract = owner.var:zw_var_auto_invest_level_under_construction
+		}
 	}
 }

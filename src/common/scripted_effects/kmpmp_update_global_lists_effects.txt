@@ -68,7 +68,7 @@ kmpmp_update_global_list_states_je_master_of_mediterranean_sea = {
         }
         add_to_global_variable_list = {
             name = states_je_master_of_mediterranean_sea
-            target = s:STATE_BALEARES
+            target = s:STATE_BALEARIC_ISLANDS
         }
         add_to_global_variable_list = {
             name = states_je_master_of_mediterranean_sea
@@ -357,7 +357,15 @@ kmpmp_update_global_list_states_je_the_sugar_monopoly = {
         }
         add_to_global_variable_list = {
             name = states_je_the_sugar_monopoly
-            target = s:STATE_CUBA
+            target = s:STATE_WESTERN_CUBA
+        }
+        add_to_global_variable_list = {
+            name = states_je_the_sugar_monopoly
+            target = s:STATE_EASTERN_CUBA
+        }
+        add_to_global_variable_list = {
+            name = states_je_the_sugar_monopoly
+            target = s:STATE_CENTRAL_CUBA
         }
         add_to_global_variable_list = {
             name = states_je_the_sugar_monopoly
@@ -399,11 +407,11 @@ kmpmp_update_global_list_states_ibe = {
         }
         add_to_global_variable_list = {
             name = states_ibe
-            target = s:STATE_CASTILE
+            target = s:STATE_OLD_CASTILE
         }
         add_to_global_variable_list = {
             name = states_ibe
-            target = s:STATE_NAVARRA
+            target = s:STATE_BASQUE_COUNTRY
         }
         add_to_global_variable_list = {
             name = states_ibe
@@ -415,11 +423,11 @@ kmpmp_update_global_list_states_ibe = {
         }
         add_to_global_variable_list = {
             name = states_ibe
-            target = s:STATE_BADAJOZ
+            target = s:STATE_EXTREMADURA
         }
         add_to_global_variable_list = {
             name = states_ibe
-            target = s:STATE_TOLEDO
+            target = s:STATE_NEW_CASTILE
         }
         add_to_global_variable_list = {
             name = states_ibe
@@ -431,11 +439,23 @@ kmpmp_update_global_list_states_ibe = {
         }
         add_to_global_variable_list = {
             name = states_ibe
-            target = s:STATE_ANDALUSIA
+            target = s:STATE_LOWER_ANDALUSIA
         }
         add_to_global_variable_list = {
             name = states_ibe
-            target = s:STATE_GRANADA
+            target = s:STATE_UPPER_ANDALUSIA
+        }
+        add_to_global_variable_list = {
+            name = states_ibe
+            target = s:STATE_MURCIA
+        }
+        add_to_global_variable_list = {
+            name = states_ibe
+            target = s:STATE_LEON
+        }
+        add_to_global_variable_list = {
+            name = states_ibe
+            target = s:STATE_ENTRE_DOURO_E_MINHO
         }
         # portuguese states
         add_to_global_variable_list = {
@@ -716,7 +736,7 @@ kmpmp_update_global_list_states_ltn = {
         }
         add_to_global_variable_list = {
             name = states_ltn
-            target = s:STATE_NAVARRA
+            target = s:STATE_BASQUE_COUNTRY
         }
         add_to_global_variable_list = {
             name = states_ltn
@@ -732,7 +752,7 @@ kmpmp_update_global_list_states_ltn = {
         }
         add_to_global_variable_list = {
             name = states_ltn
-            target = s:STATE_CASTILE
+            target = s:STATE_OLD_CASTILE
         }
         add_to_global_variable_list = {
             name = states_ltn
@@ -740,11 +760,11 @@ kmpmp_update_global_list_states_ltn = {
         }
         add_to_global_variable_list = {
             name = states_ltn
-            target = s:STATE_BADAJOZ
+            target = s:STATE_EXTREMADURA
         }
         add_to_global_variable_list = {
             name = states_ltn
-            target = s:STATE_TOLEDO
+            target = s:STATE_NEW_CASTILE
         }
         add_to_global_variable_list = {
             name = states_ltn
@@ -756,11 +776,23 @@ kmpmp_update_global_list_states_ltn = {
         }
         add_to_global_variable_list = {
             name = states_ltn
-            target = s:STATE_ANDALUSIA
+            target = s:STATE_LOWER_ANDALUSIA
         }
         add_to_global_variable_list = {
             name = states_ltn
-            target = s:STATE_GRANADA
+            target = s:STATE_UPPER_ANDALUSIA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_MURCIA
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_LEON
+        }
+        add_to_global_variable_list = {
+            name = states_ltn
+            target = s:STATE_ENTRE_DOURO_E_MINHO
         }
         # Iberian isles
         add_to_global_variable_list = {
@@ -781,7 +813,7 @@ kmpmp_update_global_list_states_ltn = {
         }
         add_to_global_variable_list = {
             name = states_ltn
-            target = s:STATE_BALEARES
+            target = s:STATE_BALEARIC_ISLANDS
         }
         
         # Italy

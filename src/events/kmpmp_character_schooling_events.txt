@@ -29,7 +29,7 @@ kmpmp_ev_character_schooling.1 = { # schooling heir ig
                 NOT = {
                     THIS = scope:schooling_heir.interest_group
                 }
-                ig_clout >= 0.05
+                ig_counts_as_marginal = no
             }
             weight = { # i'm too stupid to get this mtth block to work adding ig_clout
                 base = 1
@@ -49,7 +49,7 @@ kmpmp_ev_character_schooling.1 = { # schooling heir ig
                     THIS = scope:schooling_heir.interest_group
                     THIS = scope:schooling_heir_ig_target_a
                 }
-                ig_clout >= 0.05
+                ig_counts_as_marginal = no
             }
             weight = {
                 base = 1
@@ -70,7 +70,7 @@ kmpmp_ev_character_schooling.1 = { # schooling heir ig
                     THIS = scope:schooling_heir_ig_target_a
                     THIS = scope:schooling_heir_ig_target_b
                 }
-                ig_clout >= 0.05
+                ig_counts_as_marginal = no
             }
             weight = {
                 base = 1

@@ -28,8 +28,4 @@ INJECT_OR_CREATE:building_power_plant = {
 			building_1 = building_power_plant
 		}
 	}
-
-	should_auto_expand = { 
-		zw_trigger_auto_expand_building_power_plant = yes
-	}
 }

@@ -1,4 +1,4 @@
-﻿AMZ = {
+﻿REPLACE:AMZ = {
     # kmpmp due to merged cultures, we need to use the vanilla states instead of the culture
     # use_culture_states = yes
 
@@ -16,7 +16,7 @@
     ai_will_do = { always = no }
 }
 
-CHE = {
+REPLACE:CHE = {
     # kmpmp due to merged cultures, we need to use the vanilla states instead of the culture
     # use_culture_states = yes
 
@@ -28,7 +28,7 @@ CHE = {
     ai_will_do = { always = no }
 }
 
-EGY = {
+REPLACE:EGY = {
     # kmpmp due to merged cultures, we need to use the vanilla states instead of the culture
     # use_culture_states = yes
 
@@ -46,7 +46,7 @@ EGY = {
     ai_will_do = { always = no }
 }
 
-OCC = {
+REPLACE:OCC = {
     # kmpmp - remove Rhone from releasable occitania
 	# use_culture_states = yes
 

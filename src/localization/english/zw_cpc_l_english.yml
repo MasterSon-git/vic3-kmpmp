@@ -18,31 +18,25 @@ l_english:
 # Decrees
 	
 	decree_zw_no_state_private_investment: "Ban Private Constructions"
-	decree_zw_no_state_private_investment_desc: "Ban private constructions in the state."
+	decree_zw_no_state_private_investment_desc: "Ban $zw_text_domestic_private_investment$ in the state"
 
 # Modifiers
 
-	zw_modifier_intervene_investment_from_abroad_industry: "Intervene Investment From Abroad"
-	zw_modifier_intervene_investment_from_abroad_agriculture: "Intervene Investment From Abroad"
+	zw_modifier_intervene_investment_from_abroad_industry: "Intervene Inbound Investment"
+	zw_modifier_intervene_investment_from_abroad_agriculture: "Intervene Inbound Investment"
 
 # Journal entry
 
 	je_zw_autonom_invest_management: "Private Constructions Management"
-	je_zw_autonom_invest_management_reason: "Regulate our private and foreign investment."
+	je_zw_autonom_invest_management_reason: "Intervene $zw_text_domestic_private_investment$, $zw_text_investment_abroad$ and $zw_text_investment_from_abroad$.\n\n#red Note: #!Private investment intervention applies only to [Concept('concept_private_construction', '$concept_private_constructions$')] and does #b not#! include [Concept('concept_privatize', '$concept_privatizations$')]."
 
 # Scripted buttons
-	
-	# incorporated states, auto-expand
-
-	zw_auto_expand_incorporated_states_only_button: "@zw_texticon_auto_expand! Incorporated States"
-	zw_auto_expand_incorporated_states_only_button_desc: ""
-	zw_auto_expand_incorporated_states_only_button_effect: "Only buildings in incorporated states can be #white #b auto-expanded#!#!."
 
 	# incorporated states, private constructions
 
 	zw_auto_invest_incorporated_states_only_button: "@zw_texticon_private_construction! Incorporated States"
 	zw_auto_invest_incorporated_states_only_button_desc: ""
-	zw_auto_invest_incorporated_states_only_button_effect: "#white #b Private constructions#!#! are only allowed in incorporated states."
+	zw_auto_invest_incorporated_states_only_button_effect: "$zw_text_domestic_private_investment$ are only allowed in incorporated states."
 
 	# existing profitable buildings only
 
@@ -50,97 +44,105 @@ l_english:
 	zw_auto_invest_profitable_buildings_only_button_desc: ""
 	zw_auto_invest_profitable_buildings_only_button_effect: "$zw_text_profit_condition$"
 
-	zw_auto_invest_profitable_buildings_only_undo_button: "@coin7! Profit Conditions"
-	zw_auto_invest_profitable_buildings_only_undo_button_desc: ""
-	zw_auto_invest_profitable_buildings_only_undo_button_effect: "Our $zw_text_domestic_private_investment$ is allowed to evaluate a building's profitability by themselves."
-
 	# existing buildings only
 
 	zw_auto_invest_existing_buildings_only_manufacture_button: "@red_cross! New Buildings @zw_texticon_manufacture!"
 	zw_auto_invest_existing_buildings_only_manufacture_button_desc: ""
-	zw_auto_invest_existing_buildings_only_manufacture_button_effect: "Our $zw_text_domestic_private_investment$ is only allowed to expand existing buildings while investing in $zw_text_manufacture$."
+	zw_auto_invest_existing_buildings_only_manufacture_button_effect: "$zw_text_domestic_private_investment$ is only allowed to expand #b existing#! buildings while investing in $zw_text_manufacture$."
 
 	zw_auto_invest_existing_buildings_only_agro_button: "@red_cross! New Buildings @zw_texticon_agro!"
 	zw_auto_invest_existing_buildings_only_agro_button_desc: ""
-	zw_auto_invest_existing_buildings_only_agro_button_effect: "Our $zw_text_domestic_private_investment$ is only allowed to expand existing buildings while investing in $zw_text_agro$."
+	zw_auto_invest_existing_buildings_only_agro_button_effect: "$zw_text_domestic_private_investment$ is only allowed to expand #b existing#! buildings while investing in $zw_text_agro$."
 
 	zw_auto_invest_existing_buildings_only_resource_button: " @red_cross! New Buildings @zw_texticon_resource!"
 	zw_auto_invest_existing_buildings_only_resource_button_desc: ""
-	zw_auto_invest_existing_buildings_only_resource_button_effect: "Our $zw_text_domestic_private_investment$ is only allowed to expand existing buildings while investing in $zw_text_resource$."
+	zw_auto_invest_existing_buildings_only_resource_button_effect: "$zw_text_domestic_private_investment$ is only allowed to expand #b existing#! buildings while investing in $zw_text_resource$."
 
 	zw_auto_invest_existing_buildings_only_infrastructure_button: "@red_cross! New Buildings @zw_texticon_infrastructure!"
 	zw_auto_invest_existing_buildings_only_infrastructure_button_desc: ""
-	zw_auto_invest_existing_buildings_only_infrastructure_button_effect: "Our $zw_text_domestic_private_investment$ is only allowed to expand existing buildings while investing in $zw_text_infrastructure$."
+	zw_auto_invest_existing_buildings_only_infrastructure_button_effect: "$zw_text_domestic_private_investment$ is only allowed to expand #b existing#! buildings while investing in $zw_text_infrastructure$."
 
 	# no foreign investment @green_checkmark! @red_cross!
 
-	zw_no_foreign_private_investment_manufacture_button: "@red_cross! Foreign Investment @zw_texticon_investment_abroad!@zw_texticon_manufacture!"
+	zw_no_foreign_private_investment_manufacture_button: "@red_cross! Outbound Investment @zw_texticon_manufacture!"
 	zw_no_foreign_private_investment_manufacture_button_desc: ""
-	zw_no_foreign_private_investment_manufacture_button_effect: "Private investment is not allowed to construct foreign $zw_text_manufacture$ buildings."
+	zw_no_foreign_private_investment_manufacture_button_effect: "$zw_text_investment_abroad$ is not allowed to construct $zw_text_manufacture$ buildings."
 
-	zw_no_foreign_private_investment_agro_button: "@red_cross! Foreign Investment @zw_texticon_investment_abroad!@zw_texticon_agro!"
+	zw_no_foreign_private_investment_agro_button: "@red_cross! Outbound Investment @zw_texticon_agro!"
 	zw_no_foreign_private_investment_agro_button_desc: ""
-	zw_no_foreign_private_investment_agro_button_effect: "Private investment is not allowed to construct foreign $zw_text_agro$ buildings."
+	zw_no_foreign_private_investment_agro_button_effect: "$zw_text_investment_abroad$ is not allowed to construct $zw_text_agro$ buildings."
 
-	zw_no_foreign_private_investment_resource_button: "@red_cross! Foreign Investment @zw_texticon_investment_abroad!@zw_texticon_resource!"
+	zw_no_foreign_private_investment_resource_button: "@red_cross! Outbound Investment @zw_texticon_resource!"
 	zw_no_foreign_private_investment_resource_button_desc: ""
-	zw_no_foreign_private_investment_resource_button_effect: "Private investment is not allowed to construct foreign $zw_text_resource$ buildings."
+	zw_no_foreign_private_investment_resource_button_effect: "$zw_text_investment_abroad$ is not allowed to construct $zw_text_resource$ buildings."
 
-	zw_no_foreign_private_investment_infrastructure_button: "@red_cross! Foreign Investment @zw_texticon_investment_abroad!@zw_texticon_infrastructure!"
+	zw_no_foreign_private_investment_infrastructure_button: "@red_cross! Outbound Investment @zw_texticon_infrastructure!"
 	zw_no_foreign_private_investment_infrastructure_button_desc: ""
-	zw_no_foreign_private_investment_infrastructure_button_effect: "Private investment is not allowed to construct foreign $zw_text_infrastructure$ buildings."
+	zw_no_foreign_private_investment_infrastructure_button_effect: "$zw_text_investment_abroad$ is not allowed to construct $zw_text_infrastructure$ buildings."
 
 	# intervene investment from foreign countries
 
-	zw_intervene_investment_from_abroad_industry_button: "@red_cross! Foreign Investment @zw_texticon_investment_from_abroad!@zw_texticon_industry!"
+	zw_intervene_investment_from_abroad_industry_button: "@red_cross! Inbound Investment @zw_texticon_industry!"
 	zw_intervene_investment_from_abroad_industry_button_desc: ""
-	zw_intervene_investment_from_abroad_industry_button_effect: "$zw_text_investment_from_abroad$ in our $zw_text_manufacture$ and $zw_text_infrastructure$ can only expand existing buildings.\n"
+	zw_intervene_investment_from_abroad_industry_button_effect: "$zw_text_investment_from_abroad$ in $zw_text_manufacture$ and $zw_text_infrastructure$ can only expand #b existing#! buildings.\n"
 
-	zw_intervene_investment_from_abroad_agriculture_button: "@red_cross! Foreign Investment @zw_texticon_investment_from_abroad!@zw_texticon_agriculture!"
+	zw_intervene_investment_from_abroad_agriculture_button: "@red_cross! Inbound Investment @zw_texticon_agriculture!"
 	zw_intervene_investment_from_abroad_agriculture_button_desc: ""
-	zw_intervene_investment_from_abroad_agriculture_button_effect: "$zw_text_investment_from_abroad$ in our $zw_text_agro$ can only expand existing buildings.\n"
+	zw_intervene_investment_from_abroad_agriculture_button_effect: "$zw_text_investment_from_abroad$ in $zw_text_agro$ can only expand #b existing#! buildings.\n"
 
-	# tooltip
+# Tooltips
+
+	# profit conditions
 
 	zw_text_profit_condition: "$zw_text_profit_condition_01$$zw_text_profit_condition_02$$zw_text_profit_condition_03$$zw_text_profit_condition_04$$zw_text_profit_condition_05$$zw_text_profit_condition_06$$zw_text_profit_condition_07$$zw_text_profit_condition_08$$zw_text_profit_condition_09$$zw_text_profit_condition_10$$zw_text_profit_condition_11$$zw_text_profit_condition_12$$zw_text_profit_condition_13$$zw_text_profit_condition_14$$zw_text_profit_condition_15$"
 	zw_text_profit_condition_01: ""
-	zw_text_profit_condition_02: "If our $zw_text_domestic_private_investment$ was only allowed to expand existing buildings, it only evaluates the buildings that at least meet one of these two conditions:"
+	zw_text_profit_condition_02: "If our $zw_text_domestic_private_investment$ was only allowed to expand existing buildings, only the buildings that meet at least one of these two conditions are evaluated:"
 	zw_text_profit_condition_03: "#indent_newline:4 \n1. All of these conditions are met:#!"
-	zw_text_profit_condition_04: "#indent_newline:8 \n$EFFECT_LIST_BULLET$[concept_occupancy] >= 0.9#!"
+	zw_text_profit_condition_04: "#indent_newline:8 \n$EFFECT_LIST_BULLET$[concept_occupancy] ≥ 0.9#!"
 	zw_text_profit_condition_05: "#indent_newline:8 \n$EFFECT_LIST_BULLET$[concept_market_access] = 100%#!"
-	zw_text_profit_condition_06: "#indent_newline:8 \n$EFFECT_LIST_BULLET$$concept_building_balance_profit$ >= 200 * $concept_building_levels$#!"
+	zw_text_profit_condition_06: "#indent_newline:8 \n$EFFECT_LIST_BULLET$$concept_building_balance_profit$ ≥ 200 * $concept_building_levels$#!"
 	zw_text_profit_condition_07: "#indent_newline:4 \n2. All of these conditions are met:#!"
 	zw_text_profit_condition_08: "#indent_newline:8 \n$EFFECT_LIST_BULLET$Building type is $building_railway$#!"
-	zw_text_profit_condition_09: "#indent_newline:8 \n$EFFECT_LIST_BULLET$[concept_occupancy] >= 0.9#!"
+	zw_text_profit_condition_09: "#indent_newline:8 \n$EFFECT_LIST_BULLET$[concept_occupancy] ≥ 0.9#!"
 	zw_text_profit_condition_10: "#indent_newline:8 \n$EFFECT_LIST_BULLET$At least one of these conditions is met:#!"
 	zw_text_profit_condition_11: "#indent_newline:12 \n$EFFECT_LIST_BULLET$All of these conditions are met:#!"
 	zw_text_profit_condition_12: "#indent_newline:16 \n$EFFECT_LIST_BULLET$[concept_infrastructure] < [concept_infrastructure_usage]#!"
 	zw_text_profit_condition_13: "#indent_newline:16 \n$EFFECT_LIST_BULLET$$IS_SUBSIDIZED$ or $concept_building_balance_profit$ > 0#!"
-	zw_text_profit_condition_14: "#indent_newline:12 \n$EFFECT_LIST_BULLET$$concept_building_balance_profit$ >= 200 * $concept_building_levels$#!"
+	zw_text_profit_condition_14: "#indent_newline:12 \n$EFFECT_LIST_BULLET$$concept_building_balance_profit$ ≥ 200 * $concept_building_levels$#!"
 	zw_text_profit_condition_15: "\n\nIf a building can't meet the profit conditions anymore during an on-going construction, the construction #white #b won't#!#! be cancelled."
 
+	#
+
 	zw_text_manufacture: "#tooltip:[GetPlayer.GetTooltipTag],zw_text_manufacture_tooltip_text $zw_text_manufacture_tooltip$#!"
-	zw_text_manufacture_tooltip: "#tooltippable Manufacturing Industries#!"
-	zw_text_manufacture_tooltip_text: "$bg_light_industry$\n$bg_heavy_industry$\n$building_art_academy$"
+	zw_text_manufacture_tooltip: "#tooltippable $bg_manufacturing$ and $bg_urban_facilities$#!"
+	zw_text_manufacture_tooltip_text: "[GetBuildingGroup('bg_manufacturing').GetName]\n[GetBuildingType('building_art_academy').GetName]"
 
 	zw_text_agro: "#tooltip:[GetPlayer.GetTooltipTag],zw_text_agro_tooltip_text $zw_text_agro_tooltip$#!"
-	zw_text_agro_tooltip: "#tooltippable Agriculture#!"
-	zw_text_agro_tooltip_text: "$bg_agriculture$\n$bg_ranching$\n$bg_plantations$"
+	zw_text_agro_tooltip: "#tooltippable $bg_agriculture$ and $bg_ranching$#!"
+	zw_text_agro_tooltip_text: "[GetBuildingGroup('bg_staple_crops').GetName]\n[GetBuildingType('building_vineyard').GetName]\n[GetBuildingType('building_livestock_ranch').GetName]\n[GetBuildingGroup('bg_plantations').GetName]"
 
 	zw_text_resource: "#tooltip:[GetPlayer.GetTooltipTag],zw_text_resource_tooltip_text $zw_text_resource_tooltip$#!"
 	zw_text_resource_tooltip: "#tooltippable Resource Industries#!"
-	zw_text_resource_tooltip_text: "$bg_mining$\n$building_oil_rig$\n$building_rubber_plantation$\n$building_logging_camp$\n$building_fishing_wharf$\n$building_whaling_station$"
+	zw_text_resource_tooltip_text: "[GetBuildingGroup('bg_mining').GetName]\n[GetBuildingType('building_logging_camp').GetName]\n[GetBuildingType('building_rubber_plantation').GetName]\n[GetBuildingType('building_fishing_wharf').GetName]\n[GetBuildingType('building_whaling_station').GetName]\n[GetBuildingType('building_oil_rig').GetName]"
 
 	zw_text_infrastructure: "#tooltip:[GetPlayer.GetTooltipTag],zw_text_infrastructure_tooltip_text $zw_text_infrastructure_tooltip$#!"
-	zw_text_infrastructure_tooltip: "#tooltippable Infrastructure#!"
-	zw_text_infrastructure_tooltip_text: "$building_railway$\n$building_power_plant$\n$building_trade_center$\n$building_port$"
+	zw_text_infrastructure_tooltip: "#tooltippable $bg_private_infrastructure$ and $bg_power$#!"
+	zw_text_infrastructure_tooltip_text: "[GetBuildingType('building_railway').GetName]\n[GetBuildingType('building_power_plant').GetName]\n[GetBuildingType('building_trade_center').GetName]\n[GetBuildingType('building_port').GetName]"
 
-	zw_text_investment_from_abroad: "#tooltip:[GetPlayer.GetTooltipTag],zw_text_investment_from_abroad_tooltip_text $zw_text_investment_from_abroad_tooltip$#!"
-	zw_text_investment_from_abroad_tooltip: "#tooltippable Investment From Foreign Countries#!"
-	zw_text_investment_from_abroad_tooltip_text: "Private and government investment from foreign countries"
+	#
 
 	zw_text_domestic_private_investment: "#tooltip:[GetPlayer.GetTooltipTag],zw_text_domestic_private_investment_tooltip_text $zw_text_domestic_private_investment_tooltip$#!"
 	zw_text_domestic_private_investment_tooltip: "#tooltippable Domestic Private Investment#!"
-	zw_text_domestic_private_investment_tooltip_text: "Domestic investment from domestic investor"
+	zw_text_domestic_private_investment_tooltip_text: "#b Domestic#! [Concept('concept_private_construction', '$concept_private_constructions$')] funded by #b domestic#! investors"
+
+	zw_text_investment_abroad: "#tooltip:[GetPlayer.GetTooltipTag],zw_text_investment_abroad_tooltip_text $zw_text_investment_abroad_tooltip$#!"
+	zw_text_investment_abroad_tooltip: "#tooltippable Outbound Private Investment#!"
+	zw_text_investment_abroad_tooltip_text: "#b Foreign#! [Concept('concept_private_construction', '$concept_private_constructions$')] funded by #b domestic#! investors"
+
+	zw_text_investment_from_abroad: "#tooltip:[GetPlayer.GetTooltipTag],zw_text_investment_from_abroad_tooltip_text $zw_text_investment_from_abroad_tooltip$#!"
+	zw_text_investment_from_abroad_tooltip: "#tooltippable Inbound Investment#!"
+	zw_text_investment_from_abroad_tooltip_text: "#b Domestic#! [Concept('concept_government_construction', '$concept_government_constructions$')] and [Concept('concept_private_construction', '$concept_private_constructions$')] funded by #b foreign#! investors"
+
+	#
 
 	zw_text_intervene_gov_investment_from_abroad: "The local government allows foreign investment to plan this industry freely"

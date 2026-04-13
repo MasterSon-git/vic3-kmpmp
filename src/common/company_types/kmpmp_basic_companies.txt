@@ -1,4 +1,4 @@
-﻿company_basic_arts = {
+﻿REPLACE_OR_CREATE:company_basic_arts = {
     icon = "gfx/interface/icons/company_icons/basic_arts.dds"
     background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
     
@@ -41,7 +41,7 @@
     }
 }
 
-company_basic_furniture = {
+REPLACE_OR_CREATE:company_basic_furniture = {
     icon = "gfx/interface/icons/company_icons/basic_furniture.dds"
     background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
     

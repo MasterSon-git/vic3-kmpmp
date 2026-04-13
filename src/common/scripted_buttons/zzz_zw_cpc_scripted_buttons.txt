@@ -1,4 +1,64 @@
-﻿# restricted building types: general toggle
+﻿# level under construction
+
+	zw_auto_invest_level_under_construction_increase_button = {
+		name = "zw_auto_invest_level_under_construction_increase_button"
+		desc = "zw_auto_invest_level_under_construction_increase_button_desc"
+		selected = { has_variable = zw_var_auto_invest_level_under_construction }
+		effect = {
+			if = {
+				limit = { exists = var:zw_var_auto_invest_level_under_construction }
+				custom_tooltip = zw_auto_invest_level_under_construction_increase_button_effect_1
+				if = {
+					limit = { var:zw_var_auto_invest_level_under_construction < 100 }
+					change_variable = {
+						name = zw_var_auto_invest_level_under_construction
+						add = 10
+					}
+				}
+				else = {
+					remove_variable = zw_var_auto_invest_level_under_construction
+				}
+			}
+			else = {
+				custom_tooltip = zw_auto_invest_level_under_construction_increase_button_effect_2
+				set_variable = {
+					name = zw_var_auto_invest_level_under_construction
+					value = 10
+				}
+			}
+		}
+	}
+
+	zw_auto_invest_level_under_construction_decrease_button = {
+		name = "zw_auto_invest_level_under_construction_decrease_button"
+		desc = "zw_auto_invest_level_under_construction_decrease_button_desc"
+		selected = { has_variable = zw_var_auto_invest_level_under_construction }
+		effect = {
+			if = {
+				limit = { exists = var:zw_var_auto_invest_level_under_construction }
+				custom_tooltip = zw_auto_invest_level_under_construction_decrease_button_effect_1
+				if = {
+					limit = { var:zw_var_auto_invest_level_under_construction > 10 }
+					change_variable = {
+						name = zw_var_auto_invest_level_under_construction
+						subtract = 10
+					}
+				}
+				else = {
+					remove_variable = zw_var_auto_invest_level_under_construction
+				}
+			}
+			else = {
+				custom_tooltip = zw_auto_invest_level_under_construction_decrease_button_effect_2
+				set_variable = {
+					name = zw_var_auto_invest_level_under_construction
+					value = 100
+				}
+			}
+		}
+	}
+
+# restricted building types: general toggle
 
 	zw_auto_invest_disallow_building_button = {
 		name = "zw_auto_invest_disallow_building_button"

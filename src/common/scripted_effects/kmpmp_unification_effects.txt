@@ -1,4 +1,82 @@
-﻿kmpmp_give_claims_for_italy_unification = {
+﻿kmpmp_arabia_unification_modifier = {
+	if = {
+		limit = {
+			has_modifier = kmpmp_ottoman_leader_of_islam
+		}
+		add_modifier = {
+			name = kmpmp_united_arabia
+			years = 10
+			multiplier = 0.5
+		}
+	}
+	else = {
+		add_modifier = {
+			name = kmpmp_united_arabia
+			years = 10
+		}
+		add_modifier = {
+			name = kmpmp_arabia
+		}
+	}
+}
+
+kmpmp_arabia_unification_effect = {
+	# claims
+	every_state = {
+		limit = {
+			NOT = { owner = ROOT }
+			OR = {
+				state_region = s:STATE_KONYA
+				state_region = s:STATE_HUDAVENDIGAR
+				state_region = s:STATE_AYDIN
+				state_region = s:STATE_KASTAMONU
+				state_region = s:STATE_ANKARA
+			}
+		}
+		
+		state_region = { add_claim = ROOT }
+	}
+}
+
+kmpmp_iberia_unification_effect = {
+	if = {
+		limit = { NOT = { has_modifier = kmpmp_united_iberia } }
+		add_modifier = {
+			name = kmpmp_united_iberia
+		}
+	}
+
+	# claims
+	every_state = {
+		limit = {
+			NOT = { owner = ROOT }
+			OR = {
+				state_region = s:STATE_SICILY
+				state_region = s:STATE_SARDINIA
+				state_region = s:STATE_CORSICA
+				state_region = s:STATE_AL_RIF
+				state_region = s:STATE_FEZ
+				state_region = s:STATE_MARRAKECH
+				state_region = s:STATE_INNER_MOROCCO
+			}
+		}
+		
+		state_region = { add_claim = ROOT }
+	}
+}
+
+kmpmp_italy_unification_effect = {
+	if = {
+		limit = { NOT = { has_modifier = kmpmp_risorgimento } }
+		add_modifier = {
+			name = kmpmp_risorgimento
+		}
+	}
+	add_primary_culture = cu:francoprovencal
+	add_primary_culture = cu:albanian
+	add_primary_culture = cu:greek
+
+	# claims
 	every_state = {
 		limit = {
 			NOT = { owner = ROOT }
@@ -12,6 +90,65 @@
 				state_region = s:STATE_MACEDONIA
 				state_region = s:STATE_ALBANIA
 				state_region = s:STATE_CORSICA
+			}
+		}
+		
+		state_region = { add_claim = ROOT }
+	}
+}
+
+kmpmp_netherlands_unification_effect = {
+	if = {
+		limit = { NOT = { has_modifier = kmpmp_united_netherlands } }
+		add_modifier = {
+			name = kmpmp_united_netherlands
+		}
+	}
+	add_loyalists = {
+		value = 0.25
+		culture = cu:flemish
+	}
+	add_loyalists = {
+		value = 0.25
+		culture = cu:wallonian
+	}
+
+	# claims
+	every_state = {
+		limit = {
+			NOT = { owner = ROOT }
+			OR = {
+				state_region = s:STATE_FRENCH_LOW_COUNTRIES
+				state_region = s:STATE_CAPE_COLONY
+				state_region = s:STATE_NORTHERN_CAPE
+				state_region = s:STATE_EASTERN_CAPE
+				state_region = s:STATE_VRYSTAAT
+				state_region = s:STATE_ZULULAND
+				state_region = s:STATE_TRANSVAAL
+			}
+		}
+		
+		state_region = { add_claim = ROOT }
+	}
+}
+
+kmpmp_scandinavia_unification_effect = {
+	if = {
+		limit = { NOT = { has_modifier = kmpmp_lion_of_the_north } }
+		add_modifier = {
+			name = kmpmp_lion_of_the_north
+		}
+	}
+
+	# claims
+	every_state = {
+		limit = {
+			NOT = { owner = ROOT }
+			OR = {
+				state_region = s:STATE_WEST_PRUSSIA
+				state_region = s:STATE_POMERANIA
+				state_region = s:STATE_INGRIA
+				state_region = s:STATE_MECKLENBURG
 			}
 		}
 		
