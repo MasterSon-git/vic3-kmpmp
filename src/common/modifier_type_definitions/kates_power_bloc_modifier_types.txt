@@ -117,6 +117,7 @@
 power_bloc_free_mandates_from_reform={
 	decimals=0
 	color=good
+	script_only = yes
 	game_data={
 		ai_value=0
 	}

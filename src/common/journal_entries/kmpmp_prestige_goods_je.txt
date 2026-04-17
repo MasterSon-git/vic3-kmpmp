@@ -1,4 +1,4 @@
-﻿je_prestige_good_generic_kmpmp_premium_engines = {
+﻿REPLACE_OR_CREATE:je_prestige_good_generic_kmpmp_premium_engines = {
     icon = "gfx/interface/icons/goods_icons/prestige_goods/schichau_engines_prestige.dds"
 
     group = je_group_technology
@@ -127,7 +127,7 @@
     should_be_pinned_by_default = yes
 }
 
-je_prestige_good_generic_kmpmp_premium_silk = {
+REPLACE_OR_CREATE:je_prestige_good_generic_kmpmp_premium_silk = {
     icon = "gfx/interface/icons/goods_icons/prestige_goods/schichau_engines_prestige.dds"
 
     group = je_group_technology
@@ -256,7 +256,7 @@ je_prestige_good_generic_kmpmp_premium_silk = {
     should_be_pinned_by_default = yes
 }
 
-je_prestige_good_generic_kmpmp_premium_oil = {
+REPLACE_OR_CREATE:je_prestige_good_generic_kmpmp_premium_oil = {
     icon = "gfx/interface/icons/goods_icons/prestige_goods/schichau_engines_prestige.dds"
 
     group = je_group_technology
@@ -385,7 +385,7 @@ je_prestige_good_generic_kmpmp_premium_oil = {
     should_be_pinned_by_default = yes
 }
 
-je_prestige_good_generic_kmpmp_premium_wine = {
+REPLACE_OR_CREATE:je_prestige_good_generic_kmpmp_premium_wine = {
     icon = "gfx/interface/icons/goods_icons/prestige_goods/schichau_engines_prestige.dds"
 
     group = je_group_technology

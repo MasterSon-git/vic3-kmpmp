@@ -1,4 +1,4 @@
-﻿je_united_scandinavia = {
+﻿REPLACE_OR_CREATE:je_united_scandinavia = {
     icon = "gfx/interface/icons/event_icons/event_map.dds"
     group = je_group_historical_content
 
@@ -49,7 +49,7 @@
     }
 }
 
-je_baltic_empire = {
+REPLACE_OR_CREATE:je_baltic_empire = {
     icon = "gfx/interface/icons/event_icons/event_map.dds"
     group = je_group_historical_content
 
@@ -93,7 +93,7 @@ je_baltic_empire = {
     }
 }
 
-je_baltic_empire_maintain = {
+REPLACE_OR_CREATE:je_baltic_empire_maintain = {
     icon = "gfx/interface/icons/event_icons/event_map.dds"
     group = je_group_historical_content
 

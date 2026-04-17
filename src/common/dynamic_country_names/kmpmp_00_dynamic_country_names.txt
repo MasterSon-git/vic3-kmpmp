@@ -1,28 +1,4 @@
-﻿MEX = { # Mexico
-    dynamic_country_name = {
-        name = dyn_c_mexican_empire
-        adjective = MEX_ADJ
-        
-        is_main_tag_only = yes
-        priority = 0
-        
-        trigger = {
-            coa_def_monarchy_flag_trigger = yes
-        }
-    }
-
-    dynamic_country_name = {
-        name = dyn_c_new_spain
-        adjective = dyn_c_new_spain_adj
-        
-        is_main_tag_only = yes
-        priority = 0
-        
-        trigger = {
-            coa_def_spanish_ensign_trigger = yes
-        }
-    }
-
+﻿INJECT:MEX = { # Mexico
     # kmpmp
     dynamic_country_name = {
         name = dyn_c_gran_colombia
@@ -35,6 +11,28 @@
             exists = scope:actor
 	        scope:actor ?= {
                 has_variable = kmpmp_je_a_true_gran_colombia_comp
+            }
+        }
+    }
+}
+
+INJECT:AUS = { # Austria
+    # kmpmp
+    dynamic_country_name = {
+        name = dyn_c_three-crowns
+        adjective = dyn_c_three-crowns_adj
+        
+        is_main_tag_only = yes
+        priority = 10
+        
+        trigger = {
+            exists = scope:actor
+            scope:actor ?= {
+                country_has_primary_culture = cu:hungarian
+                country_has_primary_culture = cu:serb
+                country_has_primary_culture = cu:bosniak
+                country_has_primary_culture = cu:croat
+                country_has_primary_culture = cu:romanian
             }
         }
     }

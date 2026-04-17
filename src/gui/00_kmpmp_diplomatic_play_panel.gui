@@ -37,7 +37,7 @@ types diplomatic_play_panel_types
 			onclick = "[DiplomaticPlay.TogglePinInOutliner]"
 			tooltip = "PIN_DIPLOMATIC_PLAY"
 		}
-		
+
 		#TOP
 		blockoverride "fixed_top"
 		{
@@ -169,25 +169,25 @@ types diplomatic_play_panel_types
 				#	text = "DIPLO_PLAY_POTENTIAL_FRONTS"
 				#}
 			}
-			
+
 			widget = { size = { 1 5 }}
 		}
-		
+
 		### CONTENT
 		blockoverride "scrollarea_content" {
-			
+
 			### OVERVIEW TAB
 			flowcontainer = {
 				visible = "[InformationPanel.IsTabSelected('default')]"
 				using = default_content_fade
 				direction = vertical
 				using = default_list_position
-				
+
 				### phase images
 				background = {
 					fittype = start
 					texture = "gfx/interface/illustrations/diplomatic_plays/phase_opening_moves_big.dds"
-					using = visibility_opening_moves	
+					using = visibility_opening_moves
 					using = phase_image_swap
 					alpha = 0.5
 				}
@@ -205,7 +205,7 @@ types diplomatic_play_panel_types
 					using = phase_image_swap
 					alpha = 0.5
 				}
-				
+
 				### HEADER
 				default_header = {
 					blockoverride "text" {
@@ -214,11 +214,11 @@ types diplomatic_play_panel_types
 					blockoverride "size" {
 						size = { 100% 65 }
 					}
-					
+
 					flowcontainer = {
 						direction = vertical
 						parentanchor = center
-						
+
 						### phase names
 						textbox = {
 							visible = "[GreaterThan_int32(DiplomaticPlay.GetEscalationPause, '(int32)0')]"
@@ -241,7 +241,7 @@ types diplomatic_play_panel_types
 							minimumsize = { 310 -1 }
 							multiline = yes
 						}
-						
+
 						### phase status
 						textbox = {
 							autoresize = yes
@@ -263,20 +263,20 @@ types diplomatic_play_panel_types
 							multiline = yes
 						}
 					}
-				}	
-				
+				}
+
 				### DIPLO PLAY SIDES
 				container = {
 					minimumsize = { @panel_width_plus_14 -1 }
-					maximumsize = { @panel_width_plus_14 -1 } 
+					maximumsize = { @panel_width_plus_14 -1 }
 					parentanchor = hcenter
-					
+
 					background = {
 						using = dark_area
 						alpha = 0.2
 						margin_right = -277
 						margin_bottom = 50
-						
+
 						modify_texture = {
 							texture = "gfx/interface/masks/fade_vertical_center.dds"
 							spriteType = Corneredstretched
@@ -284,13 +284,13 @@ types diplomatic_play_panel_types
 							blend_mode = alphamultiply
 						}
 					}
-					
+
 					background = {
 						using = light_bg
 						alpha = 0.2
 						margin_left = -277
 						margin_bottom = 50
-						
+
 						modify_texture = {
 							texture = "gfx/interface/masks/fade_vertical_center.dds"
 							spriteType = Corneredstretched
@@ -298,16 +298,16 @@ types diplomatic_play_panel_types
 							blend_mode = alphamultiply
 						}
 					}
-					
+
 					#left
 					diplo_play_side = {
 						position = { 8 0 }
 					}
-					
+
 					#right
 					diplo_play_side = {
 						position = { -8 0 }
-						
+
 						blockoverride "parentanchor" {
 							parentanchor = right
 						}
@@ -319,7 +319,7 @@ types diplomatic_play_panel_types
 						}
 						blockoverride "confidence_tooltip" {
 							tooltip = "[DiplomaticPlay.GetConfidenceDesc(DiplomaticPlay.GetTarget)]"
-						}						
+						}
 						blockoverride "maneuvers_tooltip" {
 							tooltip = "DIPLO_PLAY_MANEUVERS_TARGET_TOOLTIP"
 						}
@@ -370,12 +370,12 @@ types diplomatic_play_panel_types
 							visible = "[Not(IsDataModelEmpty(DiplomaticPlay.AccessTargetBackers))]"
 						}
 					}
-					
+
 					#divider
 					vertical_divider_full = {
 						parentanchor = hcenter
 					}
-					
+
 					### round progressbar + small phase images
 					widget = {
 						size = { 180 170 }
@@ -391,7 +391,7 @@ types diplomatic_play_panel_types
 							value = "[FixedPointToFloat(DiplomaticPlay.GetEscalationProgress)]"
 							using = diplo_play_phases_scale
 						}
-						
+
 						### phase images
 						icon = {
 							texture = "gfx/interface/diplomatic_plays/phase_opening_moves_small.dds"
@@ -417,7 +417,7 @@ types diplomatic_play_panel_types
 							using = phase_image_small_swap
 							using = diplo_play_phases_scale
 						}
-						
+
 						### frame on top
 						icon = {
 							tooltip = "DIPLOMATIC_PLAY_ESCALATION_TOOLTIP"
@@ -426,7 +426,7 @@ types diplomatic_play_panel_types
 							parentanchor = center
 							using = diplo_play_phases_scale
 						}
-						
+
 						### paused overlay
 						icon = {
 							visible = "[GreaterThan_int32(DiplomaticPlay.GetEscalationPause, '(int32)0')]"
@@ -437,15 +437,15 @@ types diplomatic_play_panel_types
 							alpha = 0.3
 							alwaystransparent = yes
 						}
-						
+
 						### current phase glow highlight
 						container = {
 							visible = "[Not(GreaterThan_int32(DiplomaticPlay.GetEscalationPause, '(int32)0'))]"
-							
+
 							container = {
 								position = { 79 0 }
 								using = visibility_opening_moves
-								
+
 								state = {
 									name = _show
 									alpha = 1
@@ -458,7 +458,7 @@ types diplomatic_play_panel_types
 									duration = 0.5
 									using = Animation_Curve_Default
 								}
-								
+
 								icon = {
 									texture = "gfx/interface/diplomatic_plays/escalation_glow_opening_moves.dds"
 									size = { 160 130 }
@@ -469,7 +469,7 @@ types diplomatic_play_panel_types
 							container = {
 								position = { 0 55 }
 								using = visibility_diplomatic_maneuvers
-								
+
 								state = {
 									name = _show
 									alpha = 1
@@ -482,7 +482,7 @@ types diplomatic_play_panel_types
 									duration = 0.5
 									using = Animation_Curve_Default
 								}
-								
+
 								icon = {
 									texture = "gfx/interface/diplomatic_plays/escalation_glow_diplomatic_maneuvers.dds"
 									size = { 300 193 }
@@ -493,7 +493,7 @@ types diplomatic_play_panel_types
 							container = {
 								position = { 6 0 }
 								using = visibility_countdown_to_war
-								
+
 								state = {
 									name = _show
 									alpha = 1
@@ -506,7 +506,7 @@ types diplomatic_play_panel_types
 									duration = 0.5
 									using = Animation_Curve_Default
 								}
-								
+
 								icon = {
 									texture = "gfx/interface/diplomatic_plays/escalation_glow_countdown_to_war.dds"
 									size = { 160 130 }
@@ -515,7 +515,7 @@ types diplomatic_play_panel_types
 								}
 							}
 						}
-						
+
 						### phase shift glows
 						icon = {
 							texture = "gfx/interface/diplomatic_plays/escalation_phase_shift_1.dds"
@@ -524,7 +524,7 @@ types diplomatic_play_panel_types
 							using = visibility_diplomatic_maneuvers
 							using = diplo_play_phases_scale
 							alpha = 0
-							
+
 							state = {
 								name = _show
 								next = 2
@@ -549,7 +549,7 @@ types diplomatic_play_panel_types
 							using = visibility_countdown_to_war
 							using = diplo_play_phases_scale
 							alpha = 0
-							
+
 							state = {
 								name = _show
 								next = 2
@@ -575,7 +575,7 @@ types diplomatic_play_panel_types
 					parentanchor = hcenter
 
 					using = entry_bg_fancy
-					
+
 					involved_countries_summary_gridbox = {
 						blockoverride "involved_battalions_tooltip" {
 							tooltip = "[DiplomaticPlay.GetNumLeaningMobilizedBattalionsForSideBreakdown( DiplomaticPlay.GetInitiator )]"
@@ -614,7 +614,7 @@ types diplomatic_play_panel_types
 					}
 
 					vertical_divider = {}
-					
+
 					involved_countries_summary_gridbox = {
 						blockoverride "involved_battalions_tooltip" {
 							tooltip = "[DiplomaticPlay.GetNumOnTheFenceBattalionsBreakdown]"
@@ -651,9 +651,9 @@ types diplomatic_play_panel_types
 							text = "DIPLO_PLAY_ON_THE_FENCE"
 						}
 					}
-					
+
 					vertical_divider = {}
-					
+
 					involved_countries_summary_gridbox = {
 						blockoverride "involved_battalions_tooltip" {
 							tooltip = "[DiplomaticPlay.GetNumLeaningMobilizedBattalionsForSideBreakdown( DiplomaticPlay.GetTarget )]"
@@ -692,7 +692,7 @@ types diplomatic_play_panel_types
 					}
 				}
 			}
-			
+
 			### INVOLVED COUNTRIES TAB
 			flowcontainer = {
 				visible = "[InformationPanel.IsTabSelected('involved_countries')]"
@@ -700,14 +700,14 @@ types diplomatic_play_panel_types
 				direction = vertical
 				using = default_list_position
 				spacing = 10
-				
+
 				### bgs for stance lanes
 				background = {
 					using = light_bg
 					margin = { -164 0 }
 					margin_bottom = 50
 					alpha = 0.5
-					
+
 					modify_texture = {
 						texture = "gfx/interface/masks/fade_vertical_center.dds"
 						spriteType = Corneredstretched
@@ -716,12 +716,12 @@ types diplomatic_play_panel_types
 					}
 				}
 
-				
+
 				### phase images
 				background = {
 					fittype = start
 					texture = "gfx/interface/illustrations/diplomatic_plays/phase_opening_moves_big.dds"
-					using = visibility_opening_moves	
+					using = visibility_opening_moves
 					using = phase_image_swap
 					alpha = 0.5
 				}
@@ -739,18 +739,18 @@ types diplomatic_play_panel_types
 					using = phase_image_swap
 					alpha = 0.5
 				}
-				
+
 				### TOP INFO
 				container = {
 					parentanchor = hcenter
 					minimumsize = { @panel_width_plus_14 -1 }
-					
+
 					### INITIATOR
 					diplo_play_side_sway_tab = {
 						parentanchor = left
 						position = { 30 0 }
 					}
-					
+
 					### INSTRUCTION (CANNOT SWAY AND INITIATOR OR TARGET)
 					textbox = {
 						visible = "[And(Or(LessThan_int32(DiplomaticPlay.GetEscalation, GetDefine('NDiplomacy', 'DIPLOMATIC_PLAY_OPENING_PHASE_END')), GreaterThanOrEqualTo_int32(DiplomaticPlay.GetEscalation, GetDefine('NDiplomacy', 'DIPLOMATIC_PLAY_CLOSING_PHASE_START'))), DiplomaticPlay.IsTargetOrInitiator(GetPlayer))]"
@@ -795,7 +795,7 @@ types diplomatic_play_panel_types
 						align = center|nobaseline
 						using = fontsize_large
 					}
-					
+
 					### INSTRUCTION (INVOLVED COUNTRIES)
 					textbox = {
 						visible = "[Or(Or(DiplomaticPlay.IsUndecidedParticipant(GetPlayer),DiplomaticPlay.IsBacker(GetPlayer)), Not(DiplomaticPlay.IsInvolved(GetPlayer)))]"
@@ -810,7 +810,7 @@ types diplomatic_play_panel_types
 						align = hcenter|nobaseline
 						using = fontsize_large
 					}
-					
+
 					### TARGET
 					diplo_play_side_sway_tab = {
 						parentanchor = right
@@ -875,41 +875,41 @@ types diplomatic_play_panel_types
 						blockoverride "show_button" {
 							visible = no
 						}
-						
+
 						blockoverride "reverse_sway_button_properties" {
 							enabled = "[Or(DiplomaticPlay.CanSwayCountry(GetPlayer.Self, DiplomaticPlay.GetInitiator), DiplomaticPlay.CanSupportInitiator(GetPlayer))]"
 							onclick = "[InformationPanelBar.OpenSwayCountryPanel( DiplomaticPlay.Self, DiplomaticPlay.GetInitiator )]"
 							tooltip = "[DiplomaticPlay.GetCanSwayCountryDesc(GetPlayer.Self, DiplomaticPlay.GetInitiator)]"
-						}					
-						
+						}
+
 						blockoverride "show_reverse_sway_button" {
 							visible = "[And(Or(DiplomaticPlay.IsUndecidedParticipant(GetPlayer), DiplomaticPlay.IsBacker(GetPlayer)), Not(DiplomaticPlay.IsInitiatorBacker(GetPlayer)))]"
-						}	
-						
+						}
+
 						blockoverride "show_reverse_sway_approval" {
 							visible = "[DiplomaticPlay.WouldAcceptAnySway( GetPlayer.Self, DiplomaticPlay.GetInitiator )]"
-						}							
+						}
 
 						blockoverride "show_reverse_sway_disapproval" {
 							visible = "[Not(DiplomaticPlay.WouldAcceptAnySway( GetPlayer.Self, DiplomaticPlay.GetInitiator ))]"
-						}							
+						}
 					}
-					
-					vertical_divider_full = { 
+
+					vertical_divider_full = {
 						#maximumsize = { -1 65 }
 					}
-					
+
 					# on the fence and leaning
 					diplomatic_play_stance_lane_fence_and_leaning = {
 						blockoverride "list_datamodel" {
 							datamodel = "[DiplomaticPlay.AccessUndecided]"
 						}
 					}
-					
-					vertical_divider_full = { 
+
+					vertical_divider_full = {
 						#maximumsize = { -1 65 }
 					}
-					
+
 					# target backer
 					diplomatic_play_stance_lane_backer = {
 						background = {
@@ -935,43 +935,43 @@ types diplomatic_play_panel_types
 						blockoverride "show_button" {
 							visible = no
 						}
-							
+
 						blockoverride "reverse_sway_button_properties" {
 							enabled = "[Or(DiplomaticPlay.CanSwayCountry(GetPlayer.Self, DiplomaticPlay.GetTarget), DiplomaticPlay.CanSupportTarget(GetPlayer))]"
 							onclick = "[InformationPanelBar.OpenSwayCountryPanel( DiplomaticPlay.Self, DiplomaticPlay.GetTarget )]"
 							tooltip = "[DiplomaticPlay.GetCanSwayCountryDesc(GetPlayer.Self, DiplomaticPlay.GetTarget)]"
-						}	
+						}
 
 						blockoverride "show_reverse_sway_button" {
 							visible = "[And(Or(DiplomaticPlay.IsUndecidedParticipant(GetPlayer),DiplomaticPlay.IsBacker(GetPlayer)), Not(DiplomaticPlay.IsTargetBacker(GetPlayer)))]"
 						}
-						
+
 						blockoverride "show_reverse_sway_approval" {
 							visible = "[DiplomaticPlay.WouldAcceptAnySway( GetPlayer.Self, DiplomaticPlay.GetTarget )]"
-						}	
+						}
 
 						blockoverride "show_reverse_sway_disapproval" {
 							visible = "[Not(DiplomaticPlay.WouldAcceptAnySway( GetPlayer.Self, DiplomaticPlay.GetTarget ))]"
-						}							
+						}
 					}
 				}
 			}
 		}
-		
+
 		blockoverride "fixed_bottom" {
 			flowcontainer = {
 				visible = "[InformationPanel.IsTabSelected('default')]"
 				using = default_content_fade
 				direction = vertical
 				spacing = 8
-				
+
 				### ACTION BUTTONS
 				flowcontainer = {
 					visible = "[DiplomaticPlay.IsInvolved(GetPlayer)]"
 					direction = vertical
 					parentanchor = hcenter
 					spacing = 3
-					
+
 					button = {
 						using = default_button_action
 						visible = "[And( DiplomaticPlay.IsInitiator(GetPlayer), Not( IsValid( DiplomaticPlay.SwitchSide( GetPlayer ))))]"
@@ -1013,7 +1013,7 @@ types diplomatic_play_panel_types
 						enabled = "[DiplomaticPlay.CanDeclareNeutrality(GetPlayer)]"
 						tooltip = "DECLARE_NEUTRALITY_DIPLOMATIC_PLAY_TOOLTIP"
 						onclick = "[PopupManager.AskConfirmation(DiplomaticPlay.DeclareNeutrality(GetPlayer))]"
-					}						
+					}
 				}
 			}
 		}

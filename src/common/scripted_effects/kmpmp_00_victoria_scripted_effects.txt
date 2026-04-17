@@ -1,4 +1,4 @@
-﻿capitulate_to_revolution = {
+﻿REPLACE:capitulate_to_revolution = {
 	scope:ongoing_revolution_movement = { #Can't trigger if they want governance reforms anyway.
 		this.most_desired_law = {
 			save_scope_as = revolutionaries_law
@@ -15,40 +15,18 @@
 			is_insurrectionary = yes
 		}
 		order_by = ig_clout
+		position = 0
+		check_range_bounds = no
 		save_scope_as = revolution_leader_ig
 	}
 
 	activate_law = scope:revolutionaries_law
 
-    # kmpmp
-    # add_loyalists = {
-	# 	value = 0.25
-	# }
-	# kmpmp - no more loyalists with 1.8
-	# but we still like to add legitimacy debuff
+	# kmpmp - add legitimacy debuff
     if = { # resign from office
         limit = {
             exists = scope:resigning_politician
         }
-        # if = { # loyalists
-        #     limit = {
-        #         NOT = {
-        #             has_variable = kmpmp_block_loyalists_from_resign
-        #         }
-        #     }
-        #     add_loyalists = {
-        #         value = 0.15 #0.25
-        #     }
-        #     set_variable = {
-        #         name = kmpmp_block_loyalists_from_resign
-        #         years = 50
-        #     }
-        # }
-        # else = {
-        #     custom_tooltip = { # TODO: check if this is shown without effect
-        #         text = kmpmp_no_loyalists_from_capitulate_to_revolution
-        #     }
-        # }
 
         add_modifier = { # legitimacy
             name = kmpmp_character_resign_from_office_legitimacy
@@ -60,36 +38,11 @@
             exists = scope:abdicating_monarch
         }
 
-        # if = { # loyalists
-        #     limit = {
-        #         NOT = {
-        #             has_variable = kmpmp_block_loyalists_from_abdication
-        #         }
-        #     }
-        #     add_loyalists = {
-        #         value = 0.15 #0.25
-        #     }
-        #     set_variable = {
-        #         name = kmpmp_block_loyalists_from_abdication
-        #         years = 50
-        #     }
-        # }
-        # else = {
-        #     custom_tooltip = { # TODO: check if this is shown without effect
-        #         text = kmpmp_no_loyalists_from_capitulate_to_revolution
-        #     }
-        # }
-
         add_modifier = { # legitimacy
             name = kmpmp_character_abdication_legitimacy
             years = 10
         }
     }
-    # else = {
-    #     add_loyalists = {
-    #         value = 0.25
-    #     }
-    # }
 	
 	every_interest_group = {
 		limit = {
@@ -106,6 +59,7 @@
 	if = {
 		limit = {
 			country_has_voting_franchise = yes
+			in_election_campaign = no
 		}
 		call_election = {
 			months = 6
@@ -114,7 +68,7 @@
 	if = {
 		limit = {
 			NOT = {
-				has_law_or_variant = law_type:law_monarchy
+				has_law = law_type:law_monarchy
 			}
 		}
 		hidden_effect = {

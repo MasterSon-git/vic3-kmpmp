@@ -26,31 +26,25 @@ italian_unification.1 = {
 		ruler.interest_group = {
 			save_scope_as = ruler_ig_scope
 		}
-	}		
+	}
 
 	option = {
 		name = italian_unification.1.a
 		default_option = yes
 		give_claims_on_italy = yes
-		
+
 		# prestige
 		add_modifier = {
 			name = italian_unifier_prestige
 			days = long_modifier_time
 		}
 		# kmpmp
-		add_modifier = {
-			name = kmpmp_risorgimento
-		}
-		add_primary_culture = cu:francoprovencal
-		add_primary_culture = cu:albanian
-		add_primary_culture = cu:greek
-		kmpmp_give_claims_for_italy_unification = yes
+		kmpmp_italy_unification_effect = yes
 	}
 	option = {
 		name = italian_unification.1.b
 		give_claims_on_italy = yes
-		
+
 		# ruler IG attraction
 		scope:ruler_ig_scope = {
 			add_modifier = {
@@ -59,13 +53,7 @@ italian_unification.1 = {
 			}
 		}
 		# kmpmp
-		add_modifier = {
-			name = kmpmp_risorgimento
-		}
-		add_primary_culture = cu:francoprovencal
-		add_primary_culture = cu:albanian
-		add_primary_culture = cu:greek
-		kmpmp_give_claims_for_italy_unification = yes
+		kmpmp_italy_unification_effect = yes
 	}
 }
 
@@ -135,7 +123,7 @@ italian_unification.10 = {
 					has_ideology = ideology:ideology_liberal
 					has_ideology = ideology:ideology_liberal_modern
 					leader = {
-						OR = {						
+						OR = {
 							has_ideology = ideology:ideology_radical
 							has_ideology = ideology:ideology_jingoist_leader
 						}
@@ -245,7 +233,7 @@ italian_unification.10 = {
 				}
 				NOT = {
 					leader = {
-						OR = {						
+						OR = {
 							has_ideology = ideology:ideology_radical
 							has_ideology = ideology:ideology_jingoist_leader
 						}

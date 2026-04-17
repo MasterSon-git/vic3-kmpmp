@@ -1,4 +1,4 @@
-﻿kmpmp_ig_trait_made_in_germany = {
+﻿REPLACE_OR_CREATE:kmpmp_ig_trait_made_in_germany = {
     icon = "gfx/interface/icons/ig_trait_icons/job_creators.dds"
     min_approval = loyal
 

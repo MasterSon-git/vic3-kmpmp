@@ -1,4 +1,4 @@
-﻿battle_condition_death_from_below = {
+﻿REPLACE:battle_condition_death_from_below = {
     icon = "gfx/interface/icons/battle_conditions/battle_condition_death_from_below.dds"
 
     modifier = {
@@ -9,12 +9,13 @@
         exists = scope:character
         scope:character = { 
             has_role = admiral 
-            commander_military_formation = {
+            commander_military_formation ?= {
                 OR = {
                     formation_navy_unit_type_fraction = {  
                         target = unit_type:combat_unit_type_submarine
                         value >= 0.2  
                     }
+                    # kmpmp - add new units
                     formation_navy_unit_type_fraction = {  
                         target = unit_type:combat_unit_type_long_range_submarine
                         value >= 0.2  

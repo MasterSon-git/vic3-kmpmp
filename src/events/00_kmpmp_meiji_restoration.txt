@@ -145,6 +145,7 @@ meiji.4 = {
 		}
 		any_country = {
 			country_rank >= rank_value:major_power
+			NOT = { THIS = ROOT }
 			relations:root >= relations_threshold:neutral
 			relations:root >= 0
 			NOT = { is_owed_obligation_by = ROOT }
@@ -160,6 +161,7 @@ meiji.4 = {
 		random_country = {
 			limit = {
 				country_rank >= rank_value:major_power
+				NOT = { THIS = ROOT }
 				relations:root >= relations_threshold:neutral
 				NOT = { is_owed_obligation_by = ROOT }
 				NOT = { has_war_with = ROOT }
@@ -273,6 +275,7 @@ meiji.5 = {
 		}
 		any_country = {
 			country_rank = rank_value:great_power
+			NOT = { THIS = ROOT }
 			relations:root >= relations_threshold:neutral
 			NOT = { has_war_with = ROOT }
 			NOT = { is_owed_obligation_by = ROOT }
@@ -282,6 +285,7 @@ meiji.5 = {
 		random_country = {
 			limit = {
 				country_rank = rank_value:great_power
+				NOT = { THIS = ROOT }
 				relations:root >= relations_threshold:neutral
 				NOT = { has_war_with = ROOT }
 				NOT = { is_owed_obligation_by = ROOT }
@@ -424,10 +428,11 @@ meiji.6 = {
 		}
 		any_country = {
 			country_rank >= rank_value:major_power
+			NOT = { THIS = ROOT }
 			relations:root >= relations_threshold:neutral
 			NOT = { has_war_with = ROOT }
 			NOT = { is_owed_obligation_by = ROOT }
-			ig:ig_industrialists = {
+			ig:ig_industrialists ?= {
 				is_in_government = yes
 			}
 		}
@@ -437,15 +442,16 @@ meiji.6 = {
 		random_country = {
 			limit = {
 				country_rank >= rank_value:major_power
+				NOT = { THIS = ROOT }
 				relations:root >= relations_threshold:neutral
 				NOT = { has_war_with = ROOT }
 				NOT = { is_owed_obligation_by = ROOT }
-				ig:ig_industrialists = {
+				ig:ig_industrialists ?= {
 					is_in_government = yes
 				}
 			}
 			save_scope_as = western_investor_country
-			ig:ig_industrialists = {
+			ig:ig_industrialists ?= {
 				leader = {
 					save_scope_as = western_investor_ig_leader
 				}

@@ -2,12 +2,12 @@
     texture = "gfx/interface/icons/production_method_icons/GGGG_pikehead.dds"
     group   = GGGG_mog_guns
     
-    can_be_turned_off = {
-        always = no
-    }
-        
     possible = {
         always = yes
+    }
+    
+    can_be_turned_off = {
+        always = no
     }
     
     unit_modifier = {
@@ -26,40 +26,20 @@ GGGG_mo_firearms = {
     group   = GGGG_mog_guns
     
     possible = {
-        trigger_if = { # force enable firearms on game start
-            limit = {
-                game_date < 1836.1.2
-            }
-            # market goods can't be checked on game start, so check if we have a building for small_arms
-            any_scope_building = {
-                is_building_type = building_arms_industry
-                level > 0
-            }
-        }
-        trigger_else = {
-            market ?= {
-                mg:small_arms ?= {
-                    has_potential_supply = yes
-                }
+        market ?= {
+            mg:small_arms ?= {
+                market_goods_sell_orders > 0
             }
         }
     }
     
     can_be_turned_off = {
-        trigger_if = { # force enable firearms on game start
-            limit = {
-                game_date < 1836.1.2
-            }
-            always = no
-        }
-        trigger_else = {
-            scope:military_formation = {
-                NOR = {
-                    has_mobilization_option = mobilization_option:GGGG_mo_percussion_caps
-                    has_mobilization_option = mobilization_option:GGGG_mo_rifling
-                    has_mobilization_option = mobilization_option:GGGG_mo_breechblocks
-                    has_mobilization_option = mobilization_option:GGGG_mo_bolt_actions
-                }
+        scope:military_formation = {
+            NOR = {
+                has_mobilization_option = mobilization_option:GGGG_mo_percussion_caps
+                has_mobilization_option = mobilization_option:GGGG_mo_rifling
+                has_mobilization_option = mobilization_option:GGGG_mo_breechblocks
+                has_mobilization_option = mobilization_option:GGGG_mo_bolt_actions
             }
         }
     }
@@ -67,7 +47,9 @@ GGGG_mo_firearms = {
     on_activate = {
         if = { # Allow free changes during first week of game so AI can pick for themselves what they want
             limit = { # b/c otherwise we have to overwrite vanilla military formation histories
-                game_date >= 1836.1.8
+                NOT = {
+                    has_global_variable = GGGG_free_MOs
+                }
             }
             custom_tooltip = {
                 text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
@@ -80,11 +62,18 @@ GGGG_mo_firearms = {
     }
     
     on_deactivate = {
-        custom_tooltip = {
-            text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
-            add_organization = {
-                value = organization
-                multiply = -0.5
+        if = { # Allow free changes during first week of game so AI can pick for themselves what they want
+            limit = { # b/c otherwise we have to overwrite vanilla military formation histories
+                NOT = {
+                    has_global_variable = GGGG_free_MOs
+                }
+            }
+            custom_tooltip = {
+                text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
+                add_organization = {
+                    value = organization
+                    multiply = -0.5
+                }
             }
         }
     }
@@ -97,7 +86,7 @@ GGGG_mo_firearms = {
         goods_input_small_arms_add = 0.5
     }
     
-    unit_modifier = {
+    unit_modifier = { # Cancel out effects of melee weapons
         unit_offense_mult  = 0.25
         unit_defense_mult  = 0.25
         unit_kill_rate_add = 0.10
@@ -128,7 +117,7 @@ GGGG_mo_percussion_caps = {
         }
         market ?= {
             mg:ammunition ?= {
-                has_potential_supply = yes
+                market_goods_sell_orders > 0
             }
         }
     }
@@ -144,7 +133,9 @@ GGGG_mo_percussion_caps = {
     on_activate = {
         if = {
             limit = {
-                game_date >= 1836.1.8
+                NOT = {
+                    has_global_variable = GGGG_free_MOs
+                }
             }
             custom_tooltip = {
                 text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
@@ -157,11 +148,18 @@ GGGG_mo_percussion_caps = {
     }
     
     on_deactivate = {
-        custom_tooltip = {
-            text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
-            add_organization = {
-                value = organization
-                multiply = -0.5
+        if = {
+            limit = {
+                NOT = {
+                    has_global_variable = GGGG_free_MOs
+                }
+            }
+            custom_tooltip = {
+                text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
+                add_organization = {
+                    value = organization
+                    multiply = -0.5
+                }
             }
         }
     }
@@ -181,7 +179,7 @@ GGGG_mo_percussion_caps = {
     }
     
     ai_weight = {
-        value = 1
+        value = 2
         if = {
             limit = {
                 market ?= {
@@ -208,7 +206,9 @@ GGGG_mo_rifling = {
     on_activate = {
         if = {
             limit = {
-                game_date >= 1836.1.8
+                NOT = {
+                    has_global_variable = GGGG_free_MOs
+                }
             }
             custom_tooltip = {
                 text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
@@ -221,11 +221,18 @@ GGGG_mo_rifling = {
     }
     
     on_deactivate = {
-        custom_tooltip = {
-            text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
-            add_organization = {
-                value = organization
-                multiply = -0.5
+        if = {
+            limit = {
+                NOT = {
+                    has_global_variable = GGGG_free_MOs
+                }
+            }
+            custom_tooltip = {
+                text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
+                add_organization = {
+                    value = organization
+                    multiply = -0.5
+                }
             }
         }
     }
@@ -245,7 +252,7 @@ GGGG_mo_rifling = {
     }
     
     ai_weight = {
-        value = 1
+        value = 2
         if = {
             limit = {
                 market ?= {
@@ -280,7 +287,9 @@ GGGG_mo_breechblocks = {
     on_activate = {
         if = {
             limit = {
-                game_date >= 1836.1.8
+                NOT = {
+                    has_global_variable = GGGG_free_MOs
+                }
             }
             custom_tooltip = {
                 text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
@@ -293,11 +302,18 @@ GGGG_mo_breechblocks = {
     }
     
     on_deactivate = {
-        custom_tooltip = {
-            text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
-            add_organization = {
-                value = organization
-                multiply = -0.5
+        if = {
+            limit = {
+                NOT = {
+                    has_global_variable = GGGG_free_MOs
+                }
+            }
+            custom_tooltip = {
+                text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
+                add_organization = {
+                    value = organization
+                    multiply = -0.5
+                }
             }
         }
     }
@@ -318,7 +334,7 @@ GGGG_mo_breechblocks = {
     }
     
     ai_weight = {
-        value = 1
+        value = 2
         if = {
             limit = {
                 market ?= {
@@ -356,7 +372,9 @@ GGGG_mo_bolt_actions = {
     on_activate = {
         if = {
             limit = {
-                game_date >= 1836.1.8
+                NOT = {
+                    has_global_variable = GGGG_free_MOs
+                }
             }
             custom_tooltip = {
                 text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
@@ -369,11 +387,18 @@ GGGG_mo_bolt_actions = {
     }
     
     on_deactivate = {
-        custom_tooltip = {
-            text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
-            add_organization = {
-                value = organization
-                multiply = -0.5
+        if = {
+            limit = {
+                NOT = {
+                    has_global_variable = GGGG_free_MOs
+                }
+            }
+            custom_tooltip = {
+                text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
+                add_organization = {
+                    value = organization
+                    multiply = -0.5
+                }
             }
         }
     }
@@ -394,7 +419,7 @@ GGGG_mo_bolt_actions = {
     }
     
     ai_weight = {
-        value = 1
+        value = 2
         if = {
             limit = {
                 market ?= {

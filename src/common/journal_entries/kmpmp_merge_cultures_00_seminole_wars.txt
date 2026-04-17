@@ -1,5 +1,5 @@
 ﻿# kmpmp - merge cultures fixes
-je_seminole_wars = {
+REPLACE:je_seminole_wars = {
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
 	group = je_group_usa_manifest_destiny
@@ -41,7 +41,7 @@ je_seminole_wars = {
 	}
 
 	immediate = {
-		c:SML = {
+		c:SML ?= {
 			save_scope_as = seminoles
 		}
 		cu:cherokee = { #cu:muskogean = {
@@ -50,7 +50,7 @@ je_seminole_wars = {
 		s:STATE_OKLAHOMA = {
 			save_scope_as = oklahoma_region
 		}
-		c:SEQ = {
+		c:SEQ ?= {
 			save_scope_as = indian_territory
 		}
 		s:STATE_FLORIDA.region_state:USA = {

@@ -1,6 +1,6 @@
 ﻿###ERA 6
 
-kmpmp_highways = {
+REPLACE_OR_CREATE:kmpmp_highways = {
 	era = era_kmpmp_6
 	texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
 	category = society
@@ -23,7 +23,7 @@ kmpmp_highways = {
 	}
 }
 
-kmpmp_filmworks = {
+REPLACE_OR_CREATE:kmpmp_filmworks = {
 	era = era_kmpmp_6
 	texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
 	category = society
@@ -45,7 +45,7 @@ kmpmp_filmworks = {
 	}
 }
 
-kmpmp_vaccination_campagns = {
+REPLACE_OR_CREATE:kmpmp_vaccination_campagns = {
 	era = era_kmpmp_6
 	texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
 	category = society
@@ -65,7 +65,7 @@ kmpmp_vaccination_campagns = {
 	}
 }
 
-kmpmp_abolish_the_gold_standard = {
+REPLACE_OR_CREATE:kmpmp_abolish_the_gold_standard = {
 	era = era_kmpmp_6
 	texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
 	category = society
@@ -84,7 +84,7 @@ kmpmp_abolish_the_gold_standard = {
 	}
 }
 
-kmpmp_public_flights = {
+REPLACE_OR_CREATE:kmpmp_public_flights = {
 	era = era_kmpmp_6
 	texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
 	category = society
@@ -105,7 +105,7 @@ kmpmp_public_flights = {
 	}
 }
 
-kmpmp_globalism = {
+REPLACE_OR_CREATE:kmpmp_globalism = {
 	era = era_kmpmp_6
 	texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
 	category = society

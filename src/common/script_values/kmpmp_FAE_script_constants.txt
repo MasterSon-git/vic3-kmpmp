@@ -1,0 +1,8 @@
+﻿# kmpmp !!!ATTENTION!!! reorder units in scripted effect FAE_se_calculate_siege by siege value
+kmpmp_FAE_siege_rocket_artillery = 2 # kmpmp
+kmpmp_FAE_siege_interwar_light_tank = 10 # kmpmp
+
+kmpmp_FAE_siege_interwar_heavy_tank = 12 # kmpmp
+kmpmp_FAE_siege_fort_arty     = 18 # kmpmp
+
+kmpmp_FAE_siege_rocket_technology = 1 # kmpmp

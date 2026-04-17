@@ -1,4 +1,4 @@
-﻿raise_payments = {
+﻿REPLACE:raise_payments = {
 	requires_approval = no
 	groups= { overlord subject } # this is a subject action only for the sake of breaking it if LD is high enough
 
@@ -113,7 +113,7 @@
 					attitude = protective
 				}
 				AND = {
-					scope:target_country = { liberty_desire >= 50 }
+					scope:target_country ?= { liberty_desire >= 50 }
 					"relations(scope:target_country)" >= relations_threshold:friendly
 					NOR = {
 						has_strategy = ai_strategy_economic_imperialism

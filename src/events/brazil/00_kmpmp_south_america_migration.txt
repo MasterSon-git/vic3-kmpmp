@@ -5,11 +5,11 @@
 sa_migration.1 = {
 	type = country_event
 	placement = scope:migration_target_state
-	
+
 	title = sa_migration.1.t
 	desc = sa_migration.1.d
 	flavor = sa_migration.1.f
-	
+
 	event_image = {
 		video = "southamerica_factory_opening"
 	}
@@ -17,9 +17,9 @@ sa_migration.1 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
-	
+
 	duration = 3
-	
+
 	trigger = {
 		# triggered by southamerica_migration_button
 	}
@@ -32,7 +32,7 @@ sa_migration.1 = {
 				country_rank >= rank_value:major_power
 				custom_tooltip = {
 					text = is_in_europe_tt
-					country_is_in_europe = yes
+					is_in_geographic_region = geographic_region_europe
 				}
 				custom_tooltip = {
 					text = same_state_religion
@@ -47,7 +47,7 @@ sa_migration.1 = {
 					is_incorporated = yes
 					custom_tooltip = {
 						text = is_in_europe_tt
-						state_is_in_europe = yes
+						is_in_geographic_region = geographic_region_europe
 					}
 					count >= 3
 				}
@@ -72,7 +72,7 @@ sa_migration.1 = {
 			random_scope_state = {
 				limit = {
 					is_incorporated = yes
-					state_is_in_europe = yes
+					is_in_geographic_region = geographic_region_europe
 					any_scope_culture = {
 						has_homeland = PREV
 						culture_can_have_mass_migration_to_country = ROOT
@@ -92,12 +92,11 @@ sa_migration.1 = {
 				years = 10
 			}
 		}
-		
 		ordered_scope_state = {
 			limit = {
 				trigger_if = {
-					limit = { 
-						ROOT = { 
+					limit = {
+						ROOT = {
 							has_journal_entry = je_central_america_migration
 						}
 					}
@@ -112,7 +111,7 @@ sa_migration.1 = {
 							has_journal_entry = je_south_america_migration
 						}
 					}
-					state_is_in_south_america = yes
+					is_in_geographic_region = geographic_region_south_america
 				}
 				trigger_else_if = {
 					limit = {
@@ -128,6 +127,8 @@ sa_migration.1 = {
 				state_is_eligible_as_mass_migration_target = yes
 			}
 			order_by = migration_pull
+			position = 0
+			check_range_bounds = no
 			save_scope_as = migration_target_state
 		}
 		scope:migration_target_state = {

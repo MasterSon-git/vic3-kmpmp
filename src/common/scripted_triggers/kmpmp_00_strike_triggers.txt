@@ -1,4 +1,4 @@
-﻿strike_goal_complete_trigger = {
+﻿REPLACE:strike_goal_complete_trigger = {
 	trigger_if = {
 		limit = {
 			has_variable = strike_promised_pensions

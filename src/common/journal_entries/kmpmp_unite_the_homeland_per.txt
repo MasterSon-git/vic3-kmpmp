@@ -1,4 +1,4 @@
-﻿je_unite_the_homeland_per = {
+﻿REPLACE_OR_CREATE:je_unite_the_homeland_per = {
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 	group = je_group_historical_content
 	

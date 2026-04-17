@@ -33,7 +33,7 @@ types budget
 		blockoverride "window_header_name" {
 			text = "BUDGET_PANEL_TITLE"
 		}
-		
+
 		blockoverride "map_modes_button" {
 			map_modes_single_button_minimized = {
 				datacontext = "[BudgetPanel.GetMapModeList]"
@@ -901,7 +901,7 @@ types budget
 								using = subventions_expense_tooltip_with_graph
 								alpha = "[TransparentIfZero(GetPlayer.GetSubventionsExpenses)]"
 							}
-						}
+						}						
 						
 						tax_exp_frame = {
 
@@ -1119,10 +1119,6 @@ types budget
 							}
 						}
 					}
-				}
-				
-				not_yet_initialized = {
-					visible = "[EqualTo_CFixedPoint(GetPlayer.GetWeeklyExpenses, '(CFixedPoint)0')]"
 				}
 			}
 
@@ -1805,7 +1801,7 @@ types budget
 		}
 
 		using = tooltip_above
-		
+
 		### BUTTON
 		button = {
 			parentanchor = center
@@ -1816,7 +1812,7 @@ types budget
 
 			block "click" {}
 			block "is_clickable_alpha" {}
-			
+
 			button = {
 				block "button_texture" {}
 				block "click" {}
@@ -1848,7 +1844,7 @@ types budget
 				duration = 0
 				alpha = 0
 			}
-			
+
 			icon = {
 				using = highlighted_square_selection
 			}
@@ -1970,7 +1966,7 @@ types budget
 			blockoverride "is_clickable_alpha" {
 				alpha = "[TransparentIfFalse(IsValid( GetPlayer.SetExportSubventionsLow(Goods.Self)))]"
 			}
-		}
+		}		
 		
 		### High subventions
 		set_level_bar_item = {
@@ -1990,8 +1986,8 @@ types budget
 			blockoverride "is_clickable_alpha" {
 				alpha = "[TransparentIfFalse(IsValid( GetPlayer.SetExportSubventionsHigh(Goods.Self)))]"
 			}
-		}
-		
+		}	
+
 
 		### Max subventions
 		set_level_bar_item = {
@@ -2157,8 +2153,8 @@ types budget
 			blockoverride "is_clickable_alpha" {
 				alpha = "[TransparentIfFalse(IsValid( GetPlayer.SetImportSubventionsMax(Goods.Self)))]"
 			}
-		}
-	}
+		}		
+	}	
 		
 	### SET LEVEL BAR (budget tax)
 	type set_level_bar = flowcontainer {

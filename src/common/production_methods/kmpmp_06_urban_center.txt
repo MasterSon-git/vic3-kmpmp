@@ -1,4 +1,4 @@
-﻿pm_arcades = {
+﻿REPLACE:pm_arcades = {
 	texture = "gfx/interface/icons/production_method_icons/arcades.dds"
 	unlocking_technologies = {
 		elevator
@@ -19,10 +19,10 @@
 		}
 	}
 
-	#required_input_goods = electricity
+	# required_input_goods = electricity
 }
 
-pm_electric_streetlights = {
+REPLACE:pm_electric_streetlights = {
 	texture = "gfx/interface/icons/production_method_icons/electric_streetlights.dds"
 
 	city_lights_color_index = 2	# Needs to match city_graphics_data.settings color array
@@ -49,10 +49,10 @@ pm_electric_streetlights = {
 		}
 	}
 
-	#required_input_goods = electricity
+	# required_input_goods = electricity
 }
 
-pm_film_art = {
+REPLACE:pm_film_art = {
 	texture = "gfx/interface/icons/production_method_icons/film_art.dds"
 
 	unlocking_technologies = {
@@ -70,21 +70,13 @@ pm_film_art = {
 		}
 	}
 
-	#required_input_goods = electricity
+	# required_input_goods = electricity
 }
 
-pm_principle_freedom_of_movement_3 = {
-	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
-
-	is_hidden_when_unavailable = yes
-
-	unlocking_principles = {
-		principle_freedom_of_movement_3
-	}
-
+INJECT:pm_principle_freedom_of_movement_3 = {
 	state_modifiers = {
 		unscaled = {
-			state_migration_pull_mult = 0.1 #0.2
+			state_migration_pull_mult = -0.1
 		}
 	}
 }

@@ -1,4 +1,4 @@
-﻿mobilization_option_school_of_defence = {
+﻿REPLACE_OR_CREATE:kmpmp_mobilization_option_school_of_defence = {
 	texture = "gfx/interface/icons/military_icons/mobilization_option_school_of_defence.dds"
 	possible = {
 		market ?= {
@@ -25,7 +25,7 @@
     group = kmpmp_mog_doctrines
 }
 
-mobilization_option_grand_battleplan = {
+REPLACE_OR_CREATE:kmpmp_mobilization_option_grand_battleplan = {
 	texture = "gfx/interface/icons/military_icons/mobilization_option_grand_battleplan.dds"
 	possible = {
 		market ?= {
@@ -52,7 +52,7 @@ mobilization_option_grand_battleplan = {
     group = kmpmp_mog_doctrines
 }
 
-mobilization_option_superior_firepower = {
+REPLACE_OR_CREATE:kmpmp_mobilization_option_superior_firepower = {
 	texture = "gfx/interface/icons/military_icons/mobilization_option_superior_firepower.dds"
 	possible = {
 		market ?= {
@@ -79,7 +79,7 @@ mobilization_option_superior_firepower = {
     group = kmpmp_mog_doctrines
 }
 
-mobilization_option_mass_assault = {
+REPLACE_OR_CREATE:kmpmp_mobilization_option_mass_assault = {
 	texture = "gfx/interface/icons/military_icons/mobilization_option_mass_assault.dds"
 	possible = {
 		market ?= {

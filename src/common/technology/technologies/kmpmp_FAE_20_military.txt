@@ -1,0 +1,35 @@
+﻿INJECT:standing_army = {
+	modifier = {
+		state_fae_building_forts_max_level_add = 1
+	}
+}
+
+INJECT:napoleonic_warfare = {
+	modifier = {
+		state_fae_building_forts_max_level_add = 1
+	}
+}
+
+INJECT:field_works = {
+	modifier = {
+		state_fae_building_forts_max_level_add = 1
+	}
+}
+
+INJECT:breech_loading_artillery = {
+	modifier = {
+		state_fae_building_forts_max_level_add = 2
+	}
+}
+
+INJECT:defense_in_depth = {
+	modifier = {
+		state_fae_building_forts_max_level_add = 2
+	}
+}
+
+INJECT:concrete_fortifications = {
+	modifier = {
+		state_fae_building_forts_max_level_add = 3
+	}
+}

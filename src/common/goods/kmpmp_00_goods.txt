@@ -1,9 +1,4 @@
-﻿electricity = {
-	texture = "gfx/interface/icons/goods_icons/electricity.dds"
-	cost = 30
-	category = staple
-	#local = yes
+﻿INJECT:electricity = {
+	local = no #yes
 	tradeable = no #kmpmp
-
-	consumption_tax_cost = 200
 }

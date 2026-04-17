@@ -1,4 +1,4 @@
-﻿kmpmp_je_break_truce_with_country = {
+﻿REPLACE_OR_CREATE:kmpmp_je_break_truce_with_country = {
     group = je_group_foreign_affairs
     icon = "gfx/interface/icons/lens_toolbar_icons/break_truce.dds"
 

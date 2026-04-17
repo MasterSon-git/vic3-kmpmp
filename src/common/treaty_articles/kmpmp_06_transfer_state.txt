@@ -1,4 +1,4 @@
-﻿state_transfer = {
+﻿REPLACE:state_transfer = {
 	kind = directed
 	cost = 150 #0
 

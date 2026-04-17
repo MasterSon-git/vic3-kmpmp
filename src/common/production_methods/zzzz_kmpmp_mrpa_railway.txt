@@ -1,0 +1,141 @@
+﻿INJECT:pm_early_trains = {
+	state_modifiers = {
+		unscaled = {
+			state_market_access_price_impact = 0.025
+		}
+	}
+}
+
+INJECT:pm_steam_trains = {
+	state_modifiers = {
+		unscaled = {
+			state_market_access_price_impact = 0.025
+		}
+	}
+}
+
+REPLACE:pm_electric_trains = {
+	texture = "gfx/interface/icons/production_method_icons/trains_electric.dds"
+	replacement_if_valid = pm_electric_trains_principle_transport_3
+
+	unlocking_technologies = {
+		electric_railway
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_engines_add = 5 # 300
+			goods_input_electricity_add = 6 # 180
+			goods_output_transportation_add = 30 # 1050
+		}
+		level_scaled = {
+			building_employment_laborers_add = 400
+			building_employment_machinists_add = 350
+			building_employment_engineers_add = 50
+			building_employment_clerks_add = 200
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_infrastructure_add = 30
+		}
+		unscaled = {
+			state_market_access_price_impact = 0.1
+		}
+	}
+
+	# required_input_goods = electricity
+}
+
+REPLACE:pm_electric_trains_principle_transport_3 = {
+	texture = "gfx/interface/icons/production_method_icons/trains_electric.dds"
+	is_hidden_when_unavailable = yes
+
+	unlocking_principles = {
+		principle_transport_3
+	}
+
+	unlocking_technologies = {
+		electric_railway
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_engines_add = 6 # 360
+			goods_input_electricity_add = 4 # 120
+			goods_output_transportation_add = 40 # 1200
+		}
+		level_scaled = {
+			building_employment_laborers_add = 400
+			building_employment_machinists_add = 350
+			building_employment_engineers_add = 50
+			building_employment_clerks_add = 200
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_infrastructure_add = 40
+		}
+		unscaled = {
+			state_market_access_price_impact = 0.1
+		}
+	}
+
+	# required_input_goods = electricity
+}
+
+INJECT:pm_diesel_trains = {
+	state_modifiers = {
+		unscaled = {
+			state_market_access_price_impact = 0.05
+		}
+	}
+}
+
+REPLACE:pm_electric_passenger_carriages = {
+	texture = "gfx/interface/icons/production_method_icons/electric_carriages.dds"
+
+	unlocking_technologies = {
+		electric_railway
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_steel_add = 5
+			goods_input_electricity_add = 5
+			goods_output_transportation_add = 25
+		}
+		level_scaled = {
+			building_employment_clerks_add = 200
+			building_employment_machinists_add = 100
+		}
+	}	
+	# required_input_goods = electricity
+}
+
+REPLACE:pm_electrified_railway = {
+	texture = "gfx/interface/icons/production_method_icons/gauges_electric.dds"
+	
+	unlocking_technologies = {
+		electric_railway
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_electricity_add = 5
+			goods_output_transportation_add = 10 # 300
+		}
+		level_scaled = {
+			building_employment_machinists_add = 200
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_infrastructure_add = 10
+		}
+	}
+	# required_input_goods = electricity
+}

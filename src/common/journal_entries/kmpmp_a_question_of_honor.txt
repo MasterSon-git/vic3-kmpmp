@@ -1,4 +1,4 @@
-﻿kmpmp_je_a_question_of_honor = {
+﻿REPLACE_OR_CREATE:kmpmp_je_a_question_of_honor = {
     icon = "gfx/interface/icons/event_icons/event_map.dds"
     group = je_group_historical_content
 

@@ -12,110 +12,124 @@ l_german:
 
 # Scripted buttons
 
+	# set max. levels under construction
+
+	zw_auto_invest_level_under_construction_increase_button: "@arrow_up_up! Max Ausbaustufen"
+	zw_auto_invest_level_under_construction_increase_button_desc: ""
+	zw_auto_invest_level_under_construction_increase_button_effect_1: "$zw_text_auto_invest_level_under_construction$#white #b Aktuelle max. Ausbaustufen: [ROOT.Var('zw_var_auto_invest_level_under_construction').GetValue]\nErneut klicken, um den Wert zu erhöhen.#!#!"
+	zw_auto_invest_level_under_construction_increase_button_effect_2: "$zw_text_auto_invest_level_under_construction$#white #b Aktuelle max. Ausbaustufen: Unbegrenzt\nErneut klicken, um den Wert zu erhöhen.#!#!"
+
+	zw_auto_invest_level_under_construction_decrease_button: "@arrow_down_down! Max Ausbaustufen"
+	zw_auto_invest_level_under_construction_decrease_button_desc: ""
+	zw_auto_invest_level_under_construction_decrease_button_effect_1: "$zw_text_auto_invest_level_under_construction$#white #b Aktuelle max. Ausbaustufen: [ROOT.Var('zw_var_auto_invest_level_under_construction').GetValue]\nErneut klicken, um den Wert zu verringern.#!#!"
+	zw_auto_invest_level_under_construction_decrease_button_effect_2: "$zw_text_auto_invest_level_under_construction$#white #b Aktuelle max. Ausbaustufen: Unbegrenzt\nErneut klicken, um den Wert zu verringern.#!#!"
+
+	zw_text_auto_invest_level_under_construction: "Wenn die im Bau befindlichen Stufen eines Gebäudes diesen Wert nicht unterschreiten, sind weitere Stufen durch $zw_text_domestic_private_investment$ von [ROOT.GetCountry.GetNameNoFlag] nicht zulässig.\n\nHierfür muss $zw_text_domestic_private_investment$ zunächst der Bau neuer Gebäude untersagt werden.\n\n"
+
 	# disallowed building types: general toggle
 
-	zw_auto_invest_disallow_building_button: "@approves! Gebäudearten Beschränken"
+	zw_auto_invest_disallow_building_button: "Beschränkte Gebäudearten "
 	zw_auto_invest_disallow_building_button_desc: ""
-	zw_auto_invest_disallow_building_button_effect: "[ROOT.GetCountry.GetNameNoFlag]s #white #b inländischen privaten Investitionen#!#! dürfen nur in die erlaubten Gebäudearten investieren\n\nDie #white #b Privatisierungen#!#! unerlaubter Gebäudearten werden #white #b nicht#!#! beschränkt."
+	zw_auto_invest_disallow_building_button_effect: "[ROOT.GetCountry.GetNameNoFlag]s $zw_text_domestic_private_investment$ dürfen nur erlaubten Gebäudearten bauen\n\nDie [Concept('concept_privatize', '$concept_privatizations$')] unerlaubter Gebäudearten werden #v nicht#! beschränkt."
 
-	zw_auto_invest_disallow_building_undo_button: "@disapproves! Gebäudearten Beschränken"
+	zw_auto_invest_disallow_building_undo_button: "Alle Gebäudearten"
 	zw_auto_invest_disallow_building_undo_button_desc: ""
-	zw_auto_invest_disallow_building_undo_button_effect: "[ROOT.GetCountry.GetNameNoFlag]s #white #b inländischen privaten Investitionen#!#! dürfen in alle Gebäudearten investieren"
+	zw_auto_invest_disallow_building_undo_button_effect: "[ROOT.GetCountry.GetNameNoFlag]s $zw_text_domestic_private_investment$ dürfen alle Gebäudearten bauen."
 
 	# disallowed building types
 
 	zw_auto_invest_disallow_building_food_industry_button: "$building_food_industry$"
 	zw_auto_invest_disallow_building_food_industry_button_desc: ""
-	zw_auto_invest_disallow_building_food_industry_button_effect: "[ROOT.GetCountry.GetNameNoFlag]s #white #b inländischen privaten Investitionen#!#! dürfen nicht in #white #b $building_food_industry$#!#! investieren."
+	zw_auto_invest_disallow_building_food_industry_button_effect: "Bau von [GetBuildingType('building_food_industry').GetName] durch $zw_text_domestic_private_investment$ in [ROOT.GetCountry.GetNameNoFlag] ist untersagt."
 
-	zw_auto_invest_disallow_building_textile_mills_button: "$building_textile_mills$"
-	zw_auto_invest_disallow_building_textile_mills_button_desc: ""
-	zw_auto_invest_disallow_building_textile_mills_button_effect: "[ROOT.GetCountry.GetNameNoFlag]s #white #b inländischen privaten Investitionen#!#! dürfen nicht in #white #b $building_textile_mills$#!#! investieren."
+	zw_auto_invest_disallow_building_textile_mill_button: "$building_textile_mill$"
+	zw_auto_invest_disallow_building_textile_mill_button_desc: ""
+	zw_auto_invest_disallow_building_textile_mill_button_effect: "Bau von [GetBuildingType('building_textile_mill').GetName] durch $zw_text_domestic_private_investment$ in [ROOT.GetCountry.GetNameNoFlag] ist untersagt."
 
-	zw_auto_invest_disallow_building_furniture_manufacturies_button: "$building_furniture_manufacturies$"
-	zw_auto_invest_disallow_building_furniture_manufacturies_button_desc: ""
-	zw_auto_invest_disallow_building_furniture_manufacturies_button_effect: "[ROOT.GetCountry.GetNameNoFlag]s #white #b inländischen privaten Investitionen#!#! dürfen nicht in #white #b $building_furniture_manufacturies$#!#! investieren."
+	zw_auto_invest_disallow_building_furniture_manufactory_button: "$building_furniture_manufactory$"
+	zw_auto_invest_disallow_building_furniture_manufactory_button_desc: ""
+	zw_auto_invest_disallow_building_furniture_manufactory_button_effect: "Bau von [GetBuildingType('building_furniture_manufactory').GetName] durch $zw_text_domestic_private_investment$ in [ROOT.GetCountry.GetNameNoFlag] ist untersagt."
 
 	zw_auto_invest_disallow_building_glassworks_button: "$building_glassworks$"
 	zw_auto_invest_disallow_building_glassworks_button_desc: ""
-	zw_auto_invest_disallow_building_glassworks_button_effect: "[ROOT.GetCountry.GetNameNoFlag]s #white #b inländischen privaten Investitionen#!#! dürfen nicht in #white #b $building_glassworks$#!#! investieren."
+	zw_auto_invest_disallow_building_glassworks_button_effect: "Bau von [GetBuildingType('building_glassworks').GetName] durch $zw_text_domestic_private_investment$ in [ROOT.GetCountry.GetNameNoFlag] ist untersagt."
 
-	zw_auto_invest_disallow_building_paper_mills_button: "$building_paper_mills$"
-	zw_auto_invest_disallow_building_paper_mills_button_desc: ""
-	zw_auto_invest_disallow_building_paper_mills_button_effect: "[ROOT.GetCountry.GetNameNoFlag]s #white #b inländischen privaten Investitionen#!#! dürfen nicht in #white #b $building_paper_mills$#!#! investieren."
+	zw_auto_invest_disallow_building_paper_mill_button: "$building_paper_mill$"
+	zw_auto_invest_disallow_building_paper_mill_button_desc: ""
+	zw_auto_invest_disallow_building_paper_mill_button_effect: "Bau von [GetBuildingType('building_paper_mill').GetName] durch $zw_text_domestic_private_investment$ in [ROOT.GetCountry.GetNameNoFlag] ist untersagt."
 
-	zw_auto_invest_disallow_building_chemical_plants_button: "$building_chemical_plants$"
-	zw_auto_invest_disallow_building_chemical_plants_button_desc: ""
-	zw_auto_invest_disallow_building_chemical_plants_button_effect: "[ROOT.GetCountry.GetNameNoFlag]s #white #b inländischen privaten Investitionen#!#! dürfen nicht in #white #b $building_chemical_plants$#!#! investieren."
+	zw_auto_invest_disallow_building_chemical_plant_button: "$building_chemical_plant$"
+	zw_auto_invest_disallow_building_chemical_plant_button_desc: ""
+	zw_auto_invest_disallow_building_chemical_plant_button_effect: "Bau von [GetBuildingType('building_chemical_plant').GetName] durch $zw_text_domestic_private_investment$ in [ROOT.GetCountry.GetNameNoFlag] ist untersagt."
 
 	zw_auto_invest_disallow_building_explosives_factory_button: "$building_explosives_factory$"
 	zw_auto_invest_disallow_building_explosives_factory_button_desc: ""
-	zw_auto_invest_disallow_building_explosives_factory_button_effect: "[ROOT.GetCountry.GetNameNoFlag]s #white #b inländischen privaten Investitionen#!#! dürfen nicht in #white #b $building_explosives_factory$#!#! investieren."
+	zw_auto_invest_disallow_building_explosives_factory_button_effect: "Bau von [GetBuildingType('building_explosives_factory').GetName] durch $zw_text_domestic_private_investment$ in [ROOT.GetCountry.GetNameNoFlag] ist untersagt."
 
-	zw_auto_invest_disallow_building_synthetics_plants_button: "$building_synthetics_plants$"
-	zw_auto_invest_disallow_building_synthetics_plants_button_desc: ""
-	zw_auto_invest_disallow_building_synthetics_plants_button_effect: "[ROOT.GetCountry.GetNameNoFlag]s #white #b inländischen privaten Investitionen#!#! dürfen nicht in #white #b $building_synthetics_plants$#!#! investieren."
+	zw_auto_invest_disallow_building_synthetics_plant_button: "$building_synthetics_plant$"
+	zw_auto_invest_disallow_building_synthetics_plant_button_desc: ""
+	zw_auto_invest_disallow_building_synthetics_plant_button_effect: "Bau von [GetBuildingType('building_synthetics_plant').GetName] durch $zw_text_domestic_private_investment$ in [ROOT.GetCountry.GetNameNoFlag] ist untersagt."
 
-	zw_auto_invest_disallow_building_tooling_workshops_button: "$building_tooling_workshops$"
-	zw_auto_invest_disallow_building_tooling_workshops_button_desc: ""
-	zw_auto_invest_disallow_building_tooling_workshops_button_effect: "[ROOT.GetCountry.GetNameNoFlag]s #white #b inländischen privaten Investitionen#!#! dürfen nicht in #white #b $building_tooling_workshops$#!#! investieren."
+	zw_auto_invest_disallow_building_tooling_workshop_button: "$building_tooling_workshop$"
+	zw_auto_invest_disallow_building_tooling_workshop_button_desc: ""
+	zw_auto_invest_disallow_building_tooling_workshop_button_effect: "Bau von [GetBuildingType('building_tooling_workshop').GetName] durch $zw_text_domestic_private_investment$ in [ROOT.GetCountry.GetNameNoFlag] ist untersagt."
 
-	zw_auto_invest_disallow_building_steel_mills_button: "$building_steel_mills$"
-	zw_auto_invest_disallow_building_steel_mills_button_desc: ""
-	zw_auto_invest_disallow_building_steel_mills_button_effect: "[ROOT.GetCountry.GetNameNoFlag]s #white #b inländischen privaten Investitionen#!#! dürfen nicht in #white #b $building_steel_mills$#!#! investieren."
+	zw_auto_invest_disallow_building_steel_mill_button: "$building_steel_mill$"
+	zw_auto_invest_disallow_building_steel_mill_button_desc: ""
+	zw_auto_invest_disallow_building_steel_mill_button_effect: "Bau von [GetBuildingType('building_steel_mill').GetName] durch $zw_text_domestic_private_investment$ in [ROOT.GetCountry.GetNameNoFlag] ist untersagt."
 
 	zw_auto_invest_disallow_building_motor_industry_button: "$building_motor_industry$"
 	zw_auto_invest_disallow_building_motor_industry_button_desc: ""
-	zw_auto_invest_disallow_building_motor_industry_button_effect: "[ROOT.GetCountry.GetNameNoFlag]s #white #b inländischen privaten Investitionen#!#! dürfen nicht in #white #b $building_motor_industry$#!#! investieren."
+	zw_auto_invest_disallow_building_motor_industry_button_effect: "Bau von [GetBuildingType('building_motor_industry').GetName] durch $zw_text_domestic_private_investment$ in [ROOT.GetCountry.GetNameNoFlag] ist untersagt."
 
 	zw_auto_invest_disallow_building_automotive_industry_button: "$building_automotive_industry$"
 	zw_auto_invest_disallow_building_automotive_industry_button_desc: ""
-	zw_auto_invest_disallow_building_automotive_industry_button_effect: "[ROOT.GetCountry.GetNameNoFlag]s #white #b inländischen privaten Investitionen#!#! dürfen nicht in #white #b $building_automotive_industry$#!#! investieren."
+	zw_auto_invest_disallow_building_automotive_industry_button_effect: "Bau von [GetBuildingType('building_automotive_industry').GetName] durch $zw_text_domestic_private_investment$ in [ROOT.GetCountry.GetNameNoFlag] ist untersagt."
 
 	zw_auto_invest_disallow_building_electrics_industry_button: "$building_electrics_industry$"
 	zw_auto_invest_disallow_building_electrics_industry_button_desc: ""
-	zw_auto_invest_disallow_building_electrics_industry_button_effect: "[ROOT.GetCountry.GetNameNoFlag]s #white #b inländischen privaten Investitionen#!#! dürfen nicht in #white #b $building_electrics_industry$#!#! investieren."
+	zw_auto_invest_disallow_building_electrics_industry_button_effect: "Bau von [GetBuildingType('building_electrics_industry').GetName] durch $zw_text_domestic_private_investment$ in [ROOT.GetCountry.GetNameNoFlag] ist untersagt."
 
-	zw_auto_invest_disallow_building_shipyards_button: "$building_shipyards$"
-	zw_auto_invest_disallow_building_shipyards_button_desc: ""
-	zw_auto_invest_disallow_building_shipyards_button_effect: "[ROOT.GetCountry.GetNameNoFlag]s #white #b inländischen privaten Investitionen#!#! dürfen nicht in #white #b $building_shipyards$#!#! investieren."
+	zw_auto_invest_disallow_building_shipyard_button: "$building_shipyard$"
+	zw_auto_invest_disallow_building_shipyard_button_desc: ""
+	zw_auto_invest_disallow_building_shipyard_button_effect: "Bau von [GetBuildingType('building_shipyard').GetName] durch $zw_text_domestic_private_investment$ in [ROOT.GetCountry.GetNameNoFlag] ist untersagt."
 
-	zw_auto_invest_disallow_building_arts_academy_button: "$building_arts_academy$"
-	zw_auto_invest_disallow_building_arts_academy_button_desc: ""
-	zw_auto_invest_disallow_building_arts_academy_button_effect: "[ROOT.GetCountry.GetNameNoFlag]s #white #b inländischen privaten Investitionen#!#! dürfen nicht in #white #b $building_arts_academy$#!#! investieren."
+	zw_auto_invest_disallow_building_art_academy_button: "$building_art_academy$"
+	zw_auto_invest_disallow_building_art_academy_button_desc: ""
+	zw_auto_invest_disallow_building_art_academy_button_effect: "Bau von [GetBuildingType('building_art_academy').GetName] durch $zw_text_domestic_private_investment$ in [ROOT.GetCountry.GetNameNoFlag] ist untersagt."
 
 	zw_auto_invest_disallow_agro_button: "$bg_agriculture$"
 	zw_auto_invest_disallow_agro_button_desc: ""
-	zw_auto_invest_disallow_agro_button_effect: "[ROOT.GetCountry.GetNameNoFlag]s #white #b inländischen privaten Investitionen#!#! dürfen nicht in #white #b $bg_agriculture$#!#! investieren."
+	zw_auto_invest_disallow_agro_button_effect: "Bau von [GetBuildingGroup('bg_agriculture').GetName] und [GetBuildingType('building_livestock_ranch').GetName] durch $zw_text_domestic_private_investment$ in [ROOT.GetCountry.GetNameNoFlag] ist untersagt."
 
 	zw_auto_invest_disallow_plantations_button: "$bg_plantations$"
 	zw_auto_invest_disallow_plantations_button_desc: ""
-	zw_auto_invest_disallow_plantations_button_effect: "[ROOT.GetCountry.GetNameNoFlag]s #white #b inländischen privaten Investitionen#!#! dürfen nicht in #white #b $bg_plantations$#!#! investieren."
+	zw_auto_invest_disallow_plantations_button_effect: "Bau von [GetBuildingGroup('bg_plantations').GetName] durch $zw_text_domestic_private_investment$ in [ROOT.GetCountry.GetNameNoFlag] ist untersagt."
 
 	zw_auto_invest_disallow_mines_button: "$bg_mining$"
 	zw_auto_invest_disallow_mines_button_desc: ""
-	zw_auto_invest_disallow_mines_button_effect: "[ROOT.GetCountry.GetNameNoFlag]s #white #b inländischen privaten Investitionen#!#! dürfen nicht in #white #b $bg_mining$#!#! investieren."
+	zw_auto_invest_disallow_mines_button_effect: "Bau von [GetBuildingGroup('bg_mining').GetName] durch $zw_text_domestic_private_investment$ in [ROOT.GetCountry.GetNameNoFlag] ist untersagt."
 
-	zw_auto_invest_disallow_misc_button: "$RESOURCES$"
+	zw_auto_invest_disallow_misc_button: "$bg_extraction$"
 	zw_auto_invest_disallow_misc_button_desc: ""
-	zw_auto_invest_disallow_misc_button_effect: "[ROOT.GetCountry.GetNameNoFlag]s #white #b inländischen privaten Investitionen#!#! dürfen nicht in #white #b $RESOURCES$#!#! investieren."
+	zw_auto_invest_disallow_misc_button_effect: "Bau von [GetBuildingGroup('bg_extraction').GetName] (außer [GetBuildingGroup('bg_mining').GetName]) durch $zw_text_domestic_private_investment$ in [ROOT.GetCountry.GetNameNoFlag] ist untersagt."
 
-	zw_auto_invest_disallow_military_button: "$COST_OF_WAR_TYPE_MATERIEL$"
+	zw_auto_invest_disallow_military_button: "$bg_military_industry$"
 	zw_auto_invest_disallow_military_button_desc: ""
-	zw_auto_invest_disallow_military_button_effect: "[ROOT.GetCountry.GetNameNoFlag]s #white #b inländischen privaten Investitionen#!#! dürfen nicht in #white #b $COST_OF_WAR_TYPE_MATERIEL$#!#! investieren."
+	zw_auto_invest_disallow_military_button_effect: "Bau von [GetBuildingGroup('bg_military_industry').GetName] durch $zw_text_domestic_private_investment$ in [ROOT.GetCountry.GetNameNoFlag] ist untersagt."
 
 	zw_auto_invest_disallow_building_power_plant_button: "$building_power_plant$"
 	zw_auto_invest_disallow_building_power_plant_button_desc: ""
-	zw_auto_invest_disallow_building_power_plant_button_effect: "[ROOT.GetCountry.GetNameNoFlag]s #white #b inländischen privaten Investitionen#!#! dürfen nicht in #white #b $building_power_plant$#!#! investieren."
+	zw_auto_invest_disallow_building_power_plant_button_effect: "Bau von [GetBuildingType('building_power_plant').GetName] durch $zw_text_domestic_private_investment$ in [ROOT.GetCountry.GetNameNoFlag] ist untersagt."
 
 	zw_auto_invest_disallow_building_railway_button: "$building_railway$"
 	zw_auto_invest_disallow_building_railway_button_desc: ""
-	zw_auto_invest_disallow_building_railway_button_effect: "[ROOT.GetCountry.GetNameNoFlag]s #white #b inländischen privaten Investitionen#!#! dürfen nicht in #white #b $building_railway$#!#! investieren."
+	zw_auto_invest_disallow_building_railway_button_effect: "Bau von [GetBuildingType('building_railway').GetName] durch $zw_text_domestic_private_investment$ in [ROOT.GetCountry.GetNameNoFlag] ist untersagt."
 
 	zw_auto_invest_disallow_building_port_button: "$building_port$"
 	zw_auto_invest_disallow_building_port_button_desc: ""
-	zw_auto_invest_disallow_building_port_button_effect: "[ROOT.GetCountry.GetNameNoFlag]s #white #b inländischen privaten Investitionen#!#! dürfen nicht in #white #b $building_port$#!#! investieren."
+	zw_auto_invest_disallow_building_port_button_effect: "Bau von [GetBuildingType('building_port').GetName] durch $zw_text_domestic_private_investment$ in [ROOT.GetCountry.GetNameNoFlag] ist untersagt."
 
 	zw_auto_invest_disallow_building_trade_center_button: "$building_trade_center$"
 	zw_auto_invest_disallow_building_trade_center_button_desc: ""
-	zw_auto_invest_disallow_building_trade_center_button_effect: "[ROOT.GetCountry.GetNameNoFlag]s #white #b inländischen privaten Investitionen#!#! dürfen nicht in #white #b $building_trade_center$#!#! investieren."
+	zw_auto_invest_disallow_building_trade_center_button_effect: "Bau von [GetBuildingType('building_trade_center').GetName] durch $zw_text_domestic_private_investment$ in [ROOT.GetCountry.GetNameNoFlag] ist untersagt."

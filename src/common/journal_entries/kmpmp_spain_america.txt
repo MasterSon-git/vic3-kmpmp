@@ -1,4 +1,4 @@
-﻿je_spain_regain_influence_in_america = {
+﻿REPLACE_OR_CREATE:je_spain_regain_influence_in_america = {
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 	group = je_group_historical_content
 	possible = { # added in history\global

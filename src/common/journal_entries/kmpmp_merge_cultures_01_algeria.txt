@@ -1,5 +1,5 @@
 ﻿# kmpmp - merge cultures fixes
-je_the_algerian_departements = {
+REPLACE:je_the_algerian_departements = {
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
 	group = je_group_france_expansion
@@ -95,8 +95,8 @@ je_the_algerian_departements = {
 			}
 			AND = {
 				country_average_religious_acceptance = { target = rel:sunni value >= religious_acceptance_medium }
-				# country_average_cultural_acceptance = { target = cu:maghrebi value >= acceptance_status_3 }
-				# country_average_cultural_acceptance = { target = cu:berber value >= acceptance_status_3 }
+				# country_average_culture_pop_acceptance = { culture = cu:maghrebi value >= acceptance_status_3 }
+				# country_average_culture_pop_acceptance = { culture = cu:berber value >= acceptance_status_3 }
 				# kmpmp
 				cultural_acceptance_base = { target = cu:misri value >= acceptance_status_3 }
 			}

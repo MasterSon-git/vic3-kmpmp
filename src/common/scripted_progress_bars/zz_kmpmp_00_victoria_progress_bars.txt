@@ -1,6 +1,6 @@
 ﻿ ### For je_earn_recognition
 
- earn_recognition_progress_bar = {
+ REPLACE:earn_recognition_progress_bar = {
 	name = "earning_recognition_progress_bar"
 	desc = "earning_recognition_progress_bar_desc"
 
@@ -156,7 +156,7 @@
 				value = 1
 			}
 		}
-		# kmpmp removed in vanilla since 1.9.6 - but we llike this
+		# kmpmp removed in vanilla since 1.9.6 - but we like this
 		if = {
 			limit = {
 				# Your Standard of Living is relatively low

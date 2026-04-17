@@ -3,7 +3,7 @@
 # scope:has_interest is whether the power bloc has interest on the target country.
 # scope:has_capital_interest is whether the power bloc has interest on the capital of the target country.
 # No randomness is allowed in this script value
-power_bloc_leverage_gain = {
+REPLACE:power_bloc_leverage_gain = {
 
 ##### Add factors: #####
 	add = {
@@ -336,7 +336,7 @@ power_bloc_leverage_gain = {
 	}
 }
 
-power_bloc_mandate_progress_by_rank = {
+REPLACE:power_bloc_mandate_progress_by_rank = {
 	value = {
 		value = 6
 		subtract = power_bloc_rank

@@ -1,29 +1,13 @@
-﻿pm_cannery = {
-	texture = "gfx/interface/icons/production_method_icons/canneries.dds"
-	
-	unlocking_technologies = {
-		canneries
-	}
-	
+﻿INJECT:pm_cannery = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_grain_add = -20		# x20 = -400
-			goods_input_meat_add = 25 #20	# x20 =  600
-			goods_input_iron_add = 10		# x40 =  400
-			
-			# output goods
-			goods_output_groceries_add = 30	# x30 =  900
-		}
-
-		level_scaled = {
-			# profit = 300 (20.8)
-			building_employment_machinists_add = 500	# x1.5 = 750 laborer wages
+			goods_input_meat_add = 5
 		}
 	}
 }
 
-pm_electric_sewing_machines = {
+REPLACE:pm_electric_sewing_machines = {
 	texture = "gfx/interface/icons/production_method_icons/electric_sewing_machines.dds"
 	
 	unlocking_technologies = {
@@ -51,10 +35,10 @@ pm_electric_sewing_machines = {
 		}
 	}
 
-	#required_input_goods = electricity
+	# required_input_goods = electricity
 }
 
-pm_automatic_power_looms = {
+REPLACE:pm_automatic_power_looms = {
 	texture = "gfx/interface/icons/production_method_icons/automatic_power_looms.dds"
 	
 	unlocking_technologies = {
@@ -78,10 +62,10 @@ pm_automatic_power_looms = {
 		}
 	}
 
-	#required_input_goods = electricity
+	# required_input_goods = electricity
 }
 
-pm_assembly_lines_building_furniture_manufacturies = {
+REPLACE:pm_assembly_lines_building_furniture_manufactory = {
 	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
 	
 	unlocking_technologies = {
@@ -111,10 +95,10 @@ pm_assembly_lines_building_furniture_manufacturies = {
 		}
 	}
 
-	#required_input_goods = electricity
+	# required_input_goods = electricity
 }
 
-pm_assembly_lines_building_tooling_workshops = {
+REPLACE:pm_assembly_lines_building_tooling_workshop = {
 	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
 	
 	state_modifiers = {
@@ -142,10 +126,10 @@ pm_assembly_lines_building_tooling_workshops = {
 		}
 	}
 
-	#required_input_goods = electricity
+	# required_input_goods = electricity
 }
 
-pm_brine_electrolysis = {
+REPLACE:pm_brine_electrolysis = {
 	texture = "gfx/interface/icons/production_method_icons/vaccum_brine_electrolysis.dds"
 	state_modifiers = {
 		workforce_scaled = {
@@ -178,35 +162,22 @@ pm_brine_electrolysis = {
 		}
 	}
 
-	#required_input_goods = electricity
+	# required_input_goods = electricity
 }
 
-pm_rayon = {
-	texture = "gfx/interface/icons/production_method_icons/rayon.dds"
-
-	unlocking_technologies = {
-		art_silk
-	}
-
+INJECT:pm_rayon = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_wood_add = 20 #40
+			goods_input_wood_add = -20
 
 			# output goods
-			goods_output_dye_add = -30 #-40
-			goods_output_silk_add = 40
-		}
-
-		level_scaled = {
-			# employment
-			building_employment_laborers_add = -1000
-			building_employment_machinists_add = 1000
+			goods_output_dye_add = 10
 		}
 	}
 }
 
-pm_electric_arc_process = {
+REPLACE:pm_electric_arc_process = {
 	texture = "gfx/interface/icons/production_method_icons/electric_arc_process.dds"
 	
 	state_modifiers = {
@@ -239,10 +210,10 @@ pm_electric_arc_process = {
 		}
 	}
 
-	#required_input_goods = electricity
+	# required_input_goods = electricity
 }
 
-pm_electric_engines = {
+REPLACE:pm_electric_engines = {
 	texture = "gfx/interface/icons/production_method_icons/electric_engines.dds"
 	
 	state_modifiers = {
@@ -273,10 +244,10 @@ pm_electric_engines = {
 		}
 	}
 
-	#required_input_goods = electricity
+	# required_input_goods = electricity
 }
 
-pm_assembly_lines_building_motor_industry = {
+REPLACE:pm_assembly_lines_building_motor_industry = {
 	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
 	state_modifiers = {
 		workforce_scaled = {
@@ -302,10 +273,10 @@ pm_assembly_lines_building_motor_industry = {
 		}
 	}
 
-	#required_input_goods = electricity
+	# required_input_goods = electricity
 }
 
-pm_assembly_lines_building_automotive_industry = {
+REPLACE:pm_assembly_lines_building_automotive_industry = {
 	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
 	state_modifiers = {
 		workforce_scaled = {
@@ -327,14 +298,13 @@ pm_assembly_lines_building_automotive_industry = {
 
 		level_scaled = {
 			building_employment_laborers_add = -1500
-			building_employment_machinists_add = -500
 		}
 	}
 
-	#required_input_goods = electricity
+	# required_input_goods = electricity
 }
 
-pm_arc_welding_shipbuilding = {
+REPLACE:pm_arc_welding_shipbuilding = {
 	texture = "gfx/interface/icons/production_method_icons/arc_welded_steam_ships.dds"
 	
 	unlocking_technologies = {
@@ -367,10 +337,10 @@ pm_arc_welding_shipbuilding = {
 		}
 	}
 
-	#required_input_goods = electricity
+	# required_input_goods = electricity
 }
 
-pm_military_shipbuilding_steam_2 = {
+REPLACE:pm_military_shipbuilding_steam_2 = {
 	texture = "gfx/interface/icons/production_method_icons/military_shipbuilding_steam_2.dds"
 	
 	unlocking_technologies = {
@@ -396,10 +366,10 @@ pm_military_shipbuilding_steam_2 = {
 		}
 	}
 
-	#required_input_goods = electricity
+	# required_input_goods = electricity
 }
 
-pm_radios = {
+REPLACE:pm_radios = {
 	texture = "gfx/interface/icons/production_method_icons/radios.dds"
 	unlocking_technologies = {
 		radio
@@ -416,39 +386,22 @@ pm_radios = {
 		}
 	}
 
-	#required_input_goods = electricity
+	# required_input_goods = electricity
 }
 
-pm_bolt_action_rifles = {
-	texture = "gfx/interface/icons/production_method_icons/bolt_action_rifles.dds"
-	
-	unlocking_technologies = {
-		bolt_action_rifles
-	}
-	
+INJECT:pm_bolt_action_rifles = {	
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_steel_add = 20
-			goods_input_hardwood_add = 10
-			goods_input_tools_add = 20
-			goods_input_oil_add = 5 #10
+			goods_input_oil_add = -5
 			
 			# output goods
-			goods_output_small_arms_add = 95 #100
-		}
-
-		level_scaled = {
-			# employment
-			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 2500
-			building_employment_machinists_add = 1250
-			building_employment_engineers_add = 750
+			goods_output_small_arms_add = -5
 		}
 	}
 }
 
-pm_assembly_lines_building_arms_industry = {
+REPLACE:pm_assembly_lines_building_arms_industry = {
 	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
 	
 	state_modifiers = {
@@ -472,10 +425,10 @@ pm_assembly_lines_building_arms_industry = {
 		}
 	}
 
-	#required_input_goods = electricity
+	# required_input_goods = electricity
 }
 
-pm_assembly_lines_building_munition_plants = {
+REPLACE:pm_assembly_lines_building_munition_plant = {
 	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
 	
 	state_modifiers = {
@@ -499,5 +452,5 @@ pm_assembly_lines_building_munition_plants = {
 		}
 	}
 
-	#required_input_goods = electricity
+	# required_input_goods = electricity
 }

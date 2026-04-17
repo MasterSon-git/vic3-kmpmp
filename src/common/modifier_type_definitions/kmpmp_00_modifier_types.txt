@@ -1,28 +1,13 @@
-﻿state_birth_rate_mult={
-	decimals=2
-	color=good
-	percent=yes
-	game_data={
-		ai_value=0
-	}
+﻿INJECT:state_birth_rate_mult={
+	decimals=2 #0
 }
 
-state_mortality_wealth_mult = {
-	color = bad
-	percent = yes
+INJECT:state_mortality_wealth_mult = {
 	decimals = 2 #1
-	game_data = {
-		ai_value = 0
-	}
 }
 
-state_pollution_reduction_health_mult = {
-	color = bad
-	percent = yes
+INJECT:state_pollution_reduction_health_mult = {
 	decimals = 1 #0
-	game_data = {
-		ai_value = 0
-	}
 }
 
 unit_combat_unit_type_squad_infantry_offense_mult = {

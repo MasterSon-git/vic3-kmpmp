@@ -1,146 +1,25 @@
 ﻿# Imperial Arsenal
-company_imperial_arsenal = {
-	icon = "gfx/interface/icons/company_icons/historical_company_icons/imperial_arsenal.dds"
-	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
-
-	category = bureaucrat_owned
-
-	flavored_company = yes
-
-	preferred_headquarters = { STATE_EASTERN_THRACE }
-
+INJECT:company_imperial_arsenal = {
 	building_types = {
-		building_military_shipyards
-		building_iron_mine # kmpmp
-	}
-
-	extension_building_types = {
-		building_shipyards
-	}
-
-	potential = {
-		has_interest_marker_in_region = region_anatolia
-	}
-
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = s:STATE_EASTERN_THRACE
-			}
-		}
-	}
-
-	possible = {
-		has_technology_researched = hydraulic_cranes
-		any_scope_state = {
-			state_region = s:STATE_EASTERN_THRACE
-			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_military_shipyards
-				level >= 5
-			}
-		}
+		building_iron_mine
 	}
 
 	prosperity_modifier = {
 		building_motor_industry_throughput_add = 0.1 # kmpmp
-		unit_navy_defense_mult = 0.075 #0.1
+		unit_navy_defense_mult = -0.025
 		unit_navy_offense_mult = 0.075 # kmpmp
-	}
-
-	ai_will_do = {
-		has_technology_researched = hydraulic_cranes
-		any_scope_state = {
-			state_region = s:STATE_EASTERN_THRACE
-			is_incorporated = yes
-		}
-	}
-
-	ai_construction_targets = {
-		building_military_shipyards = {
-			level = 5
-			state_trigger = {
-				state_region = s:STATE_EASTERN_THRACE
-			}
-		}
-	}
-
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
 	}
 }
 
 # Ottoman Tobacco Company, later Tekel
-company_ottoman_tobacco_regie = {
-	icon = "gfx/interface/icons/company_icons/historical_company_icons/ottoman_tobacco_regie.dds"
-	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
-
-	flavored_company = yes
-
-	building_types = {
-		building_tobacco_plantation
-	}
-
-	extension_building_types = {
-		building_opium_plantation
-	}
-
-	possible_prestige_goods = {
-		prestige_good_turkish_tobacco
-	}
-
-	potential = {
-		country_has_primary_culture = cu:turkish
-	}
-
-	possible = {
-		NOR = {
-			has_modifier = sick_man_of_europe
-			is_country_type = unrecognized
-		}
-		any_scope_state = {
-			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_tobacco_plantation
-				level >= 5
-			}
-			count >= 4
-		}
-	}
-
+INJECT:company_ottoman_tobacco_regie = {
 	prosperity_modifier = {
-		country_production_tech_spread_mult = 0.1
 		country_society_tech_spread_mult = 0.15 #kmpmp
-	}
-
-	ai_will_do = {
-		NOR = {
-			has_modifier = sick_man_of_europe
-			is_country_type = unrecognized
-		}
-		any_scope_state = {
-			is_incorporated = yes
-			has_potential_resource = bg_tobacco_plantations
-			count >= 4
-		}
-	}
-
-	ai_construction_targets = {
-		building_tobacco_plantation = {
-			level = 5
-			state_trigger = {
-				has_potential_resource = bg_tobacco_plantations
-			}
-		}
-	}
-
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
 	}
 }
 
 # Allatini Mills
-company_allatini_mills = {
+REPLACE:company_allatini_mills = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/allatini_mills.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_rye.dds"
 
@@ -156,7 +35,7 @@ company_allatini_mills = {
 
 	extension_building_types = {
 		building_food_industry
-		building_vineyard_plantation #kmpmp
+		building_vineyard #kmpmp
 	}
 
 	possible_prestige_goods = {
@@ -194,7 +73,7 @@ company_allatini_mills = {
 				OR = {
 					is_building_type = building_wheat_farm
 					# is_building_type = building_rye_farm
-					is_building_type = building_vineyard_plantation #kmpmp
+					is_building_type = building_vineyard #kmpmp
 					is_building_type = building_tea_plantation #kmpmp
 				}
 				level >= 5
@@ -242,85 +121,15 @@ company_allatini_mills = {
 }
 
 # Chemins de fer Orientaux
-company_orient_express = {
-	icon = "gfx/interface/icons/company_icons/historical_company_icons/chemins_de_fer_orientaux.dds"
-	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
-
-	category = bureaucrat_owned
-
-	flavored_company = yes
-
-	preferred_headquarters = { STATE_EASTERN_THRACE }
-
-	building_types = {
-		building_railway
-	}
-
-	extension_building_types = {
-		building_motor_industry
-	}
-
-	potential = {
-		OR = {
-			has_interest_marker_in_region = region_anatolia
-			has_interest_marker_in_region = region_balkans
-		}
-	}
-
-	attainable = {
-		owns_entire_state_region = STATE_EASTERN_THRACE
-	}
-
-	possible = {
-		NOR = {
-			has_modifier = sick_man_of_europe
-			is_country_type = unrecognized
-		}
-		any_scope_state = {
-			region = sr:region_balkans
-			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_railway
-				level >= 5
-			}
-			count >= 3
-		}
-	}
-
+INJECT:company_orient_express = {
 	prosperity_modifier = {
-		country_prestige_mult = 0.1
 		building_sulfur_mine_throughput_add = 0.1 # kmpmp
 		building_lead_mine_throughput_add = 0.1 # kmpmp
-	}
-
-	ai_will_do = {
-		NOR = {
-			has_modifier = sick_man_of_europe
-			is_country_type = unrecognized
-		}
-		any_scope_state = {
-			region = sr:region_balkans
-			is_incorporated = yes
-		}
-	}
-
-	ai_construction_targets = {
-		building_railway = {
-			level = 5
-			state_trigger = {
-				region = sr:region_balkans
-				is_incorporated = yes
-			}
-		}
-	}
-
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
 	}
 }
 
 # Sunhwaguk
-company_sunhwaguk = {
+REPLACE:company_sunhwaguk = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/korea_sunhwaguk.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
 
@@ -333,8 +142,8 @@ company_sunhwaguk = {
 
 	extension_building_types = {
 		building_food_industry
-		building_chemical_plants
-		building_vineyard_plantation #kmpmp
+		building_chemical_plant
+		building_vineyard #kmpmp
 		building_opium_plantation #kmpmp
 		building_coffee_plantation #kmpmp
 		building_tea_plantation #kmpmp
@@ -410,85 +219,14 @@ company_sunhwaguk = {
 }
 
 # Nam Định Textile Factory
-company_nam_dinh = {
-	icon = "gfx/interface/icons/company_icons/historical_company_icons/vietnam_nam_dinh.dds"
-	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
-
-	flavored_company = yes
-
-	preferred_headquarters = { STATE_TONKIN }
-
-	building_types = {
-		building_textile_mills
-	}
-
-	extension_building_types = {
-		building_cotton_plantation
-		building_silk_plantation
-	}
-
-	possible_prestige_goods = {
-		prestige_good_generic_clothes
-	}
-
-	prestige_goods_trigger = {
-		custom_tooltip = {
-			text = je_prestige_goods_clothes_complete_tt
-			has_variable = prestige_good_generic_clothes_var
-		}
-	}
-
-	potential = {
-		has_interest_marker_in_region = region_indochina
-	}
-
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = s:STATE_TONKIN
-			}
-		}
-	}
-
-	possible = {
-		any_scope_state = {
-			state_region = s:STATE_TONKIN
-			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_textile_mills
-				level >= 5
-			}
-		}
-		has_technology_researched = corporate_charters
-	}
-
+INJECT:company_nam_dinh = {
 	prosperity_modifier = {
-		country_tech_spread_mult = 0.075 #0.1
-	}
-
-	ai_will_do = {
-		any_scope_state = {
-			state_region = s:STATE_TONKIN
-			is_incorporated = yes
-		}
-	}
-
-	ai_construction_targets = {
-		building_textile_mills = {
-			level = 5
-			state_trigger = {
-				state_region = s:STATE_TONKIN
-			}
-		}
-	}
-
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		country_tech_spread_mult = -0.025
 	}
 }
 
 # Imperial Tobacco Corporation of Persia, Limited
-company_imperial_tobacco = {
+REPLACE:company_imperial_tobacco = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/imperial_tobacco.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
 
@@ -501,7 +239,7 @@ company_imperial_tobacco = {
 	}
 
 	extension_building_types = {
-		building_synthetics_plants
+		building_synthetics_plant
 	}
 
 	potential = {
@@ -541,7 +279,7 @@ company_imperial_tobacco = {
 		any_scope_state = {
 			region = sr:region_persia
 			is_incorporated = yes
-			has_potential_resource = bg_tobacco_plantations
+			has_potential_resource = building_tobacco_plantation
 			count >= 4
 		}
 	}
@@ -562,7 +300,7 @@ company_imperial_tobacco = {
 }
 
 # San Miguel
-company_san_miguel = {
+REPLACE:company_san_miguel = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/manila_la_fabrica_de_cerveza_san_miguel.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
 
@@ -576,7 +314,7 @@ company_san_miguel = {
 		building_wheat_farm
 		building_maize_farm
 		building_rye_farm
-		building_millet_farm
+		building_millet_farm # kmpmp
 	}
 
 	possible_prestige_goods = {
@@ -617,10 +355,20 @@ company_san_miguel = {
 	}
 
 	ai_will_do = {
-		has_technology_researched = mutual_funds
+		has_technology_researched = mutual_funds #corporate_charters
 		any_scope_state = {
 			region = sr:region_indonesia
 			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_food_industry = {
+			level = 5
+			state_trigger = {
+				region = sr:region_indonesia
+				is_incorporated = yes
+			}
 		}
 	}
 
@@ -630,7 +378,7 @@ company_san_miguel = {
 }
 
 # B.Grimm
-company_b_grimm = {
+REPLACE:company_b_grimm = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/thailand_b_grimm.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 
@@ -645,7 +393,7 @@ company_b_grimm = {
 	}
 
 	extension_building_types = {
-		building_chemical_plants
+		building_chemical_plant
 		building_wheat_farm
 		building_rye_farm
 		building_millet_farm

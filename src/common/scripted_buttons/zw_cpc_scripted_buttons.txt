@@ -1,20 +1,4 @@
-﻿# auto-expand only in incorporated states
-
-	zw_auto_expand_incorporated_states_only_button = {
-		name = "zw_auto_expand_incorporated_states_only_button"
-		desc = "zw_auto_expand_incorporated_states_only_button_desc"
-		selected = { has_variable = zw_var_auto_expand_incorporated_states_only }
-		effect = {
-			custom_tooltip = zw_auto_expand_incorporated_states_only_button_effect
-			if = {
-				limit = { has_variable = zw_var_auto_expand_incorporated_states_only }
-				remove_variable = zw_var_auto_expand_incorporated_states_only
-			}
-			else = { set_variable = zw_var_auto_expand_incorporated_states_only }
-		}
-	}
-
-# only in incorporated states
+﻿# only in incorporated states
 
 	zw_auto_invest_incorporated_states_only_button = {
 		name = "zw_auto_invest_incorporated_states_only_button"
@@ -27,6 +11,22 @@
 				remove_variable = zw_var_auto_invest_incorporated_states_only
 			}
 			else = { set_variable = zw_var_auto_invest_incorporated_states_only }
+		}
+	}
+
+# only expands existing profitable buildings
+
+	zw_auto_invest_profitable_buildings_only_button = {
+		name = "zw_auto_invest_profitable_buildings_only_button"
+		desc = "zw_auto_invest_profitable_buildings_only_button_desc"
+		selected = { has_variable = zw_var_auto_invest_profitable_buildings_only }
+		effect = {
+			custom_tooltip = zw_auto_invest_profitable_buildings_only_button_effect
+			if = {
+				limit = { has_variable = zw_var_auto_invest_profitable_buildings_only }
+				remove_variable = zw_var_auto_invest_profitable_buildings_only
+			}
+			else = { set_variable = zw_var_auto_invest_profitable_buildings_only }
 		}
 	}
 
@@ -91,38 +91,6 @@
 				remove_variable = zw_var_auto_invest_existing_buildings_only_infrastructure
 			}
 			else = { set_variable = zw_var_auto_invest_existing_buildings_only_infrastructure }
-		}
-	}
-
-# only expands existing profitable buildings
-
-	zw_auto_invest_profitable_buildings_only_button = {
-		name = "zw_auto_invest_profitable_buildings_only_button"
-		desc = "zw_auto_invest_profitable_buildings_only_button_desc"
-		selected = { has_variable = zw_var_auto_invest_profitable_buildings_only }
-		effect = {
-			custom_tooltip = zw_auto_invest_profitable_buildings_only_button_effect
-			if = {
-				limit = { has_variable = zw_var_auto_invest_profitable_buildings_only }
-				remove_variable = zw_var_auto_invest_profitable_buildings_only
-			}
-			else = { set_variable = zw_var_auto_invest_profitable_buildings_only }
-		}
-	}
-
-	zw_auto_invest_profitable_buildings_only_undo_button = {
-		name = "zw_auto_invest_profitable_buildings_only_undo_button"
-		desc = "zw_auto_invest_profitable_buildings_only_undo_button_desc"
-		selected = {
-			NOT = { has_variable = zw_var_auto_invest_profitable_buildings_only }
-		}
-		effect = {
-			custom_tooltip = zw_auto_invest_profitable_buildings_only_undo_button_effect
-			if = {
-				limit = { has_variable = zw_var_auto_invest_profitable_buildings_only }
-				remove_variable = zw_var_auto_invest_profitable_buildings_only
-			}
-			else = { set_variable = zw_var_auto_invest_profitable_buildings_only }
 		}
 	}
 

@@ -1,4 +1,4 @@
-﻿je_adriatic_empire = {
+﻿REPLACE_OR_CREATE:je_adriatic_empire = {
     group = je_group_foreign_affairs
     icon = "gfx/interface/icons/event_icons/event_advantage.dds"
 
@@ -66,7 +66,7 @@
     }
 }
 
-je_adriatic_empire_maintain = {
+REPLACE_OR_CREATE:je_adriatic_empire_maintain = {
     group = je_group_foreign_affairs
     icon = "gfx/interface/icons/event_icons/event_advantage.dds"
 

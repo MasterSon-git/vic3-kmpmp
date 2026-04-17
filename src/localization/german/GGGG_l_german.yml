@@ -13,7 +13,13 @@
     
     # Supplements MOs
     GGGG_mo_wine:      "$wine$"
-    GGGG_mo_wine_desc: "Hilft um abzuklingen."
+    GGGG_mo_wine_desc: "Hilft beim Entspannen."
+    
+    GGGG_mo_tea:      "$tea$"
+    GGGG_mo_tea_desc: "Hilft, sich zu beruhigen."
+    
+    GGGG_mo_coffee:      "$coffee$"
+    GGGG_mo_coffee_desc: "Hilft dabei, wachsam zu bleiben."
     
     # Gun MOs
     # The descriptions for the MOs that have input multipliers have a double newline affixed to the front to resolve
@@ -54,7 +60,7 @@
     
     # Uniforms MOs
     GGGG_mo_traditional_uniforms: "Traditionelle Uniformen"
-    GGGG_mo_full_dress:           "Paradeuniforme"
+    GGGG_mo_full_dress:           "Paradeuniformen"
     GGGG_mo_modern_uniform:       "Helme & eintönige Uniformen"
     
     GGGG_mo_traditional_uniforms_desc: "Soldiers will be issued plain uniforms or uniforms of more traditional designs. More sophisticated uniform features may be added on top of them.\n\n$GGGG_txt_GGGG_feature$"

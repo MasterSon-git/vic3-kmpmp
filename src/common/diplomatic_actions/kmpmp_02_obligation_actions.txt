@@ -1,4 +1,4 @@
-﻿redeem_obligation = {
+﻿REPLACE:redeem_obligation = {
 	groups= {
 		general
 	}
@@ -40,7 +40,7 @@
 
 	accept_effect = {
 		# kmpmp - add countries in cooldown list on both sides
-		# so they can't take over the debts from each other to improve relations quickly
+		# so they can't redeem obligations from each other to improve relations quickly
 		add_to_variable_list = {
 			name = kmpmp_redeem_obligation_cooldown_list
 			target = scope:target_country
@@ -59,13 +59,15 @@
 		hidden_effect = {
 			trigger_event = {
 				id = kmpmp_ev_redeem_obligation.1
-				days = 7
+				#days = 7
+				months = 6
 				#years = 2
 			}
 			scope:target_country = {
 				trigger_event = {
 					id = kmpmp_ev_redeem_obligation.1
-					days = 7
+					#days = 7
+					months = 6
 					#years = 2
 				}
 			}

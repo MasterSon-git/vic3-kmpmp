@@ -1,4 +1,4 @@
-﻿je_oregon = {
+﻿REPLACE:je_oregon = {
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 
 	group = je_group_usa_manifest_destiny
@@ -39,7 +39,7 @@
 		}
 	}
 
-	possible = { 
+	possible = {
 		OR = {
 			has_interest_marker_in_region = region_pacific_coast
 			custom_tooltip = {
@@ -61,7 +61,7 @@
 				}
 				owns_entire_state_region = STATE_MONTANA
 				owns_entire_state_region = STATE_WYOMING
-				c:GBR = {
+				c:GBR ?= {
 					relations:ROOT >= relations_threshold:cordial
 				}
 			}
@@ -107,7 +107,7 @@
 					}
 				}
 			}
-			c:GBR = { trigger_event = { id = oregon.2 } }
+			c:GBR ?= { trigger_event = { id = oregon.2 } }
 		}
 		else = {
 			s:STATE_IDAHO = {
@@ -127,7 +127,7 @@
 	}
 
 	fail = {
-		c:GBR = {
+		c:GBR ?= {
 			relations:ROOT <= relations_threshold:poor
    	 	}
 	}
@@ -151,13 +151,13 @@
 	weight = 100
 }
 
-je_conquer_oregon = {
+REPLACE:je_conquer_oregon = {
 	icon = "gfx/interface/icons/event_icons/event_military.dds"
 
 	group = je_group_usa_manifest_destiny
 
 	complete = {
-		c:USA = {
+		c:USA ?= {
 			owns_entire_state_region = STATE_WASHINGTON
 			owns_entire_state_region = STATE_IDAHO
 			owns_entire_state_region = STATE_OREGON

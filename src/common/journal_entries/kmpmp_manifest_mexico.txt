@@ -1,4 +1,4 @@
-﻿kmpmp_je_successor_of_gran_colombia = {
+﻿REPLACE_OR_CREATE:kmpmp_je_successor_of_gran_colombia = {
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 	group = je_group_historical_content
 
@@ -109,7 +109,7 @@
 	}
 }
 
-kmpmp_je_a_true_gran_colombia = {
+REPLACE_OR_CREATE:kmpmp_je_a_true_gran_colombia = {
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 	group = je_group_historical_content
 
@@ -271,7 +271,7 @@ kmpmp_je_a_true_gran_colombia = {
 	}
 }
 
-kmpmp_je_united_states_of_latin_america = {
+REPLACE_OR_CREATE:kmpmp_je_united_states_of_latin_america = {
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 	group = je_group_historical_content
 
@@ -322,7 +322,7 @@ kmpmp_je_united_states_of_latin_america = {
 	}
 }
 
-kmpmp_je_manifest_mexico = {
+REPLACE_OR_CREATE:kmpmp_je_manifest_mexico = {
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 	group = je_group_historical_content
 	#can_deactivate = yes   # if we are using this and add modifier in modifiers_while_active, the modifier is doubled on reactivation
@@ -409,7 +409,7 @@ kmpmp_je_manifest_mexico = {
 	}
 }
 
-kmpmp_je_manifest_mexico_fail = {
+REPLACE_OR_CREATE:kmpmp_je_manifest_mexico_fail = {
     icon = "gfx/interface/icons/event_icons/event_map.dds"
     group = je_group_historical_content
     #can_deactivate = yes   # if we are using this and add modifier in modifiers_while_active, the modifier is doubled on reactivation
@@ -445,7 +445,7 @@ kmpmp_je_manifest_mexico_fail = {
     }
 }
 
-kmpmp_je_consolidate_california = {
+REPLACE_OR_CREATE:kmpmp_je_consolidate_california = {
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 	group = je_group_historical_content
 

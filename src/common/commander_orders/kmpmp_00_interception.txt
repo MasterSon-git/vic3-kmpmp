@@ -1,0 +1,49 @@
+﻿REPLACE:interception_carrier_assualt = {
+	texture = "gfx/interface/icons/commander_order_icons/patrol_coast.dds"
+	
+	military_type = navy
+	behavior = intercept
+
+	visible = {
+		has_role = admiral
+	}
+
+	possible = {
+		has_role = admiral
+		has_trait = innovative
+		NOT = { has_trait = traditionalist_commander }
+		trigger_if = {
+			limit = {
+				has_role = admiral
+			}
+			commander_military_formation ?= {
+				OR = {
+					formation_navy_unit_type_fraction = {
+						target = unit_type:combat_unit_type_carrier
+						value >= 0.4
+					}
+					# kmpmp
+					formation_navy_unit_type_fraction = {
+						target = unit_type:combat_unit_type_interwar_carrier
+						value >= 0.4
+					}
+				}
+			}
+		}
+	}
+
+	modifier = {
+		character_interception_add = 4
+		unit_supply_consumption_mult = 0.5
+		unit_navy_offense_mult = 0.15
+	}
+
+	clicksound = "event:/SFX/UI/Military/order_admiral_intercept"
+	experience = 0 # Default experience gain with this Order
+	naval_entity = "naval_order_interception_entity"		# Node indicator entity
+	indicator_position_angle = 150							# Order position on indicator in degrees
+
+	ai_weight = {
+		value = 2
+	}
+}

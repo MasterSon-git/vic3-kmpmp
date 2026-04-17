@@ -1,86 +1,6 @@
 ﻿# building pop shares
-building_academics_shares_add = {
-	color = good
-	percent = no
-	game_data = {
-		ai_value = 0
-	}
-}
-
-building_aristocrats_shares_add = {
-	color = good
-	percent = no
-	game_data = {
-		ai_value = 0
-	}
-}
-
-building_bureaucrats_shares_add = {
-	color = good
-	percent = no
-	game_data = {
-		ai_value = 0
-	}
-}
-
-building_capitalists_shares_add = {
-	color = good
-	percent = no
-	game_data = {
-		ai_value = 0
-	}
-}
-
-building_clergymen_shares_add = {
-	color = good
-	percent = no
-	game_data = {
-		ai_value = 0
-	}
-}
-
-building_clerks_shares_add = {
-	color = good
-	percent = no
-	game_data = {
-		ai_value = 0
-	}
-}
-
-building_engineers_shares_add = {
-	color = good
-	percent = no
-	game_data = {
-		ai_value = 0
-	}
-}
-
 building_farmers_shares_add = {
-	color = good
-	percent = no
-	game_data = {
-		ai_value = 0
-	}
-}
-
-building_laborers_shares_add = {
-	color = good
-	percent = no
-	game_data = {
-		ai_value = 0
-	}
-}
-
-building_machinists_shares_add = {
-	color = good
-	percent = no
-	game_data = {
-		ai_value = 0
-	}
-}
-
-building_officers_shares_add = {
-	color = good
+	color = neutral
 	percent = no
 	game_data = {
 		ai_value = 0
@@ -88,15 +8,7 @@ building_officers_shares_add = {
 }
 
 building_peasants_shares_add = {
-	color = good
-	percent = no
-	game_data = {
-		ai_value = 0
-	}
-}
-
-building_shopkeepers_shares_add = {
-	color = good
+	color = neutral
 	percent = no
 	game_data = {
 		ai_value = 0
@@ -104,15 +16,7 @@ building_shopkeepers_shares_add = {
 }
 
 building_slaves_shares_add = {
-	color = good
-	percent = no
-	game_data = {
-		ai_value = 0
-	}
-}
-
-building_soldiers_shares_add = {
-	color = good
+	color = neutral
 	percent = no
 	game_data = {
 		ai_value = 0
@@ -160,59 +64,6 @@ building_oil_rig_throughput_add = {
 	decimals = 0
 	color = good
 	percent = yes
-	game_data = {
-		ai_value = 0
-	}
-}
-
-building_sugar_plantation_throughput_add = {
-	color = good
-	percent = yes
-	decimals = 0
-	game_data = {
-		ai_value = 0
-	}
-}
-
-building_tobacco_plantation_throughput_add = {
-	color = good
-	percent = yes
-	decimals = 0
-	game_data = {
-		ai_value = 0
-	}
-}
-
-# building good modifiers
-goods_input_coffee_add = {
-	color = bad
-	percent = no
-	game_data = {
-		ai_value = 0
-	}
-}
-
-goods_input_tea_add = {
-	color = bad
-	percent = no
-	game_data = {
-		ai_value = 0
-	}
-}
-
-goods_input_ironclads_mult = {
-	color = bad
-	percent = yes
-	decimals = 0
-	game_data = {
-		ai_value = 0
-	}
-}
-
-goods_input_manowars_mult = {
-	color = bad
-	percent = yes
-	decimals = 0
 	game_data = {
 		ai_value = 0
 	}

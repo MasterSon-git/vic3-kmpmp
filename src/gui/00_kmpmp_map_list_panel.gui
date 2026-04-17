@@ -10,7 +10,6 @@
 @panel_width_plus_70 = 610			# used to be 530
 
 types map_list_panel_types {
-	
 	type construction_interaction_item_condensed = map_list_panel_item_interaction {
 		# this is very expensive for big countries like China
 		max_update_rate = 32
@@ -421,7 +420,7 @@ types map_list_panel_types {
 				onclick = "[MapListPanel.Sort('tax_capacity_balance')]"
 				visible = "[ObjectsEqual(MapListBuildingPanel.GetBuildingType, GetBuildingType('building_government_administration').Self)]"
 			}
-			
+
 			sort_button = {
 				align = hcenter|nobaseline
 				
@@ -437,8 +436,8 @@ types map_list_panel_types {
 				size = { 65 20 }
 				onclick = "[MapListPanel.Sort('trade_capacity_balance')]"
 				visible = "[ObjectsEqual(MapListBuildingPanel.GetBuildingType, GetBuildingType('building_trade_center').Self)]"
-			}			
-			
+			}
+
 			sort_button = {
 				visible = "[Not(ObjectsEqual(MapListBuildingPanel.GetBuildingType, GetBuildingType('building_trade_center').Self))]"
 				align = hcenter|nobaseline
@@ -459,14 +458,14 @@ types map_list_panel_types {
 			sort_button = {
 				visible = "[ObjectsEqual(MapListBuildingPanel.GetBuildingType, GetBuildingType('building_trade_center').Self)]"
 				align = hcenter|nobaseline
-				
+
 				icon = {
 					texture = "gfx/interface/icons/trade_icons/trade_potential.dds"
 					size = { 25 25 }
 					parentanchor = center
 					alwaystransparent = yes
-				}				
-				
+				}
+
 				tooltip = "TRADE_POTENTIAL_EXPLAINER"
 				# size = { 80 20 }
 				size = { 70 20 }
@@ -494,7 +493,7 @@ types map_list_panel_types {
 				alwaystransparent = yes
 			}
 		}
-	}	
+	}
 
 	### DECREES
 	type decree_map_list_panel = map_list_panel {
@@ -601,6 +600,7 @@ types map_list_panel_types {
 					}
 
 					blockoverride "values" {
+						# kmpmp
 						textbox = {
 							datacontext = "[MapListOption.GetDecreeData.GetState]"
 							parentanchor = right|vcenter

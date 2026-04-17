@@ -1,4 +1,4 @@
-﻿ig_armed_forces = {
+﻿REPLACE:ig_armed_forces = {
 	color = hsv{ 0.09 0.29 0.39 }
 	texture = "gfx/interface/icons/ig_icons/armed_forces.dds"
 	layer = "revolution_dynamic_armed_forces"
@@ -198,6 +198,32 @@
 				bedouin swahili baluchi
 			}
 		}
+		rule = {
+			trigger = {
+				c:PHI ?= this
+				NOT = { has_variable = je_philippines_main_reliance_happened }
+				NOT = { any_primary_culture = { cu:filipino = this } }
+				NOT = { any_primary_culture = { cu:filipino_hispanophone = this } }
+				any_primary_culture = { cu:spanish = this }
+			}
+			cultures = {
+				spanish filipino_mestizo
+			}
+		}
+		rule = {
+			trigger = {
+				c:PHI ?= this
+				any_primary_culture = {
+					AND = {
+						cu:spanish = this
+						cu:filipino_hispanophone = this
+					}
+				}
+			}
+			cultures = {
+				spanish filipino_hispanophone
+			}
+		}
 	}
 
 	on_character_ig_membership = {}
@@ -359,12 +385,7 @@
 			desc = "MILITARY_INDUSTRIES"
 			if = {
 				limit = {
-					OR = {
-						pop_employment_building_group = bg_munition_plants
-						pop_employment_building_group = bg_arms_industries
-						pop_employment_building_group = bg_artillery_foundries
-						pop_employment_building_group = bg_military_shipyards
-					}
+					pop_employment_building_group = bg_military_industry
 				}
 				if = {
 					limit = {
@@ -453,7 +474,7 @@
 		# Monarch is not likely to adopt a marginal IG
 		if = {
 			limit = {
-				is_marginal = yes
+				ig_counts_as_marginal = yes
 			}
 			multiply = {
 				value = 0.1
@@ -520,7 +541,7 @@
 		if = {
 			limit = {
 				owner.ig:ig_armed_forces ?= {
-					is_marginal = yes
+					ig_counts_as_marginal = yes
 				}
 			}
 			multiply = {
@@ -535,13 +556,13 @@
 
 	executive_weight = {
 		value = 0.2
-		
+
 		# The company owning BIC should not get non-industrialist executives
 		if = {
 			limit = {
 				exists = scope:company
 				exists = c:BIC
-				c:BIC = {
+				c:BIC ?= {
 					exists = owning_company
 					owning_company = scope:company
 				}

@@ -1,4 +1,4 @@
-﻿increase_relations = {
+﻿REPLACE:increase_relations = {
 	groups= {
 		general
 	}
@@ -200,7 +200,7 @@
 	}
 }
 
-damage_relations = {
+REPLACE:damage_relations = {
 	groups= {
 		general
 	}

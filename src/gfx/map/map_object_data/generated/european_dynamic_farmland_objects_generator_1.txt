@@ -13,7 +13,7 @@ object={
 	render_under_water=no
 	generated_content=yes
 	layer="farms_dynamic"
-	pdxmesh="european_province_farm_02_mesh"
+	pdxmesh="european_province_farm_02_nobillboards_mesh"
 	count=0
 }
 object={

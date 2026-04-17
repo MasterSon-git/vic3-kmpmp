@@ -1,4 +1,4 @@
-﻿je_way_to_greater_germany = {
+﻿REPLACE_OR_CREATE:je_way_to_greater_germany = {
     icon = "gfx/interface/icons/event_icons/waving_flag.dds"
     group = je_group_historical_content
 
@@ -62,7 +62,7 @@
     }
 }
 
-je_super_germany = {
+REPLACE_OR_CREATE:je_super_germany = {
     icon = "gfx/interface/icons/event_icons/waving_flag.dds"
     group = je_group_historical_content
 

@@ -1,9 +1,9 @@
-﻿gfx_military_mobilization_is_mechanized = {
+﻿REPLACE:gfx_military_mobilization_is_mechanized = {
 
     OR = {
         country_army_unit_type_fraction = {
             target = unit_type:combat_unit_type_mechanized_infantry
-            value >= 0.2  
+            value >= 0.2
         }
         country_army_unit_type_fraction = {
             target = unit_type:combat_unit_type_interwar_mechanized_infantry
@@ -13,7 +13,7 @@
 
 }
 
-gfx_military_unit_is_mechanized = {
+REPLACE:gfx_military_unit_is_mechanized = {
 
     OR = {
         scope:military_formation = {

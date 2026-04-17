@@ -1,4 +1,4 @@
-﻿# Root: Battle
+﻿# Scope: Battle
 # Set a local variable named `total_siege` before calling
 # `SCOPE` should be either `attacker` or `character` depending on if it's being called from the on_battle_started OA or
 # for a battle condition, respectively
@@ -17,27 +17,16 @@ FAE_se_calculate_siege = {
                 }
             }
         }
-
-        # kmpmp add siege from tech
-        if = {
-            limit = {
-                owner = {
-                    has_technology_researched = kmpmp_rocket_technology
-                }
-            }
-            change_local_variable = {
-                name = total_siege
-                add  = FAE_siege_rocket_technology
-            }
-        }
         
+        # Add siege from combat engineers
+        # kmpmp add siege from kmpmp_mobilization_option_rocket_artillery
         if = {
             limit = {
                 owner = {
                     any_military_formation = {
                         OR = {
                             has_mobilization_option = mobilization_option:FAE_mo_combat_engineers
-                            has_mobilization_option = mobilization_option:mobilization_option_rocket_artillery
+                            has_mobilization_option = mobilization_option:kmpmp_mobilization_option_rocket_artillery
                         }
                         any_combat_unit = {
                             this = scope:current_unit
@@ -46,95 +35,59 @@ FAE_se_calculate_siege = {
                     }
                 }
             }
-        }
+            change_local_variable = {
+                name = total_siege
+                add = {
+                    if = {
+                        limit = {
+                            scope:current_military_formation = {
+                                has_mobilization_option = mobilization_option:FAE_mo_combat_engineers
+                            }
+                        }
+                        add = FAE_siege_combat_engies
 
-        if = {
-            limit = {
-                exists = scope:current_military_formation
-            }
-
-            scope:current_military_formation = {
-                # Add siege from combat engineers
-                if = {
-                    limit = {
-                        has_mobilization_option = mobilization_option:FAE_mo_combat_engineers
+                        if = {
+                            limit = {
+                                owner = {
+                                    has_technology_researched = dynamite
+                                }
+                            }
+                            add = FAE_siege_combat_engies_tnt
+                        }
                     }
-                    ROOT = {
-                        change_local_variable = {
-                            name = total_siege
-                            add  = FAE_siege_combat_engies
+
+                    if = {
+                        limit = {
+                            scope:current_military_formation = {
+                                has_mobilization_option = mobilization_option:kmpmp_mobilization_option_rocket_artillery
+                            }
+                        }
+                        add  = kmpmp_FAE_siege_rocket_artillery
+
+                        # kmpmp add siege from tech
+                        if = {
+                            limit = {
+                                owner = {
+                                    has_technology_researched = kmpmp_rocket_technology
+                                }
+                            }
+                            add  = kmpmp_FAE_siege_rocket_technology
                         }
                     }
                 }
-
-                # kmpmp add siege from mobilization_option_rocket_artillery
-                if = {
-                    limit = {
-                        has_mobilization_option = mobilization_option:mobilization_option_rocket_artillery
-                    }
-                    ROOT = {
-                        change_local_variable = {
-                            name = total_siege
-                            add  = FAE_siege_rocket_artillery
-                        }
-                    }
-                }
             }
         }
-
-        # # Add siege from combat engineers
-        # if = {
-        #     limit = {
-        #         owner = {
-        #             any_military_formation = {
-        #                 has_mobilization_option = mobilization_option:FAE_mo_combat_engineers
-        #                 any_combat_unit = {
-        #                     this = scope:current_unit
-        #                 }
-        #             }
-        #         }
-        #     }
-        #     change_local_variable = {
-        #         name = total_siege
-        #         add  = FAE_siege_combat_engies
-        #     }
-        # }
-
-        # # kmpmp add siege from mobilization_option_rocket_artillery
-        # if = {
-        #     limit = {
-        #         owner = {
-        #             any_military_formation = {
-        #                 has_mobilization_option = mobilization_option:mobilization_option_rocket_artillery
-        #                 any_combat_unit = {
-        #                     this = scope:current_unit
-        #                 }
-        #             }
-        #         }
-        #     }
-        #     change_local_variable = {
-        #         name = total_siege
-        #         add  = FAE_siege_rocket_artillery
-        #     }
-        # }
         
         # Add siege from unit type
+        # Despite being able to guarantee that all the relevant unit types have the siege ability modifier since 1.12,
+        # units are not a scope from which the `modifier` event target works, so we still have to hardcode the math here
         if = {
             limit = {
-                has_unit_type = unit_type:combat_unit_type_fort_buster_artillery
+                has_unit_type = unit_type:combat_unit_type_light_tanks
             }
             change_local_variable = {
                 name = total_siege
-                add  = FAE_siege_fort_arty
-            }
-        }
-        else_if = {
-            limit = {
-                has_unit_type = unit_type:combat_unit_type_interwar_heavy_tank
-            }
-            change_local_variable = {
-                name = total_siege
-                add  = FAE_siege_interwar_heavy_tank
+                add  = FAE_siege_light_tank
             }
         }
         else_if = {
@@ -144,24 +97,6 @@ FAE_se_calculate_siege = {
             change_local_variable = {
                 name = total_siege
                 add  = FAE_siege_heavy_tank
-            }
-        }
-        else_if = {
-            limit = {
-                has_unit_type = unit_type:combat_unit_type_interwar_light_tanks
-            }
-            change_local_variable = {
-                name = total_siege
-                add  = FAE_siege_interwar_light_tank
-            }
-        }
-        else_if = {
-            limit = {
-                has_unit_type = unit_type:combat_unit_type_light_tanks
-            }
-            change_local_variable = {
-                name = total_siege
-                add  = FAE_siege_light_tank
             }
         }
         else_if = {
@@ -198,6 +133,177 @@ FAE_se_calculate_siege = {
             change_local_variable = {
                 name = total_siege
                 add  = FAE_siege_cannon_arty
+            }
+        }
+        # kmpmp new unit types
+        else_if = {
+            limit = {
+                has_unit_type = unit_type:combat_unit_type_fort_buster_artillery
+            }
+            change_local_variable = {
+                name = total_siege
+                add  = kmpmp_FAE_siege_fort_arty
+            }
+        }
+        else_if = {
+            limit = {
+                has_unit_type = unit_type:combat_unit_type_interwar_heavy_tank
+            }
+            change_local_variable = {
+                name = total_siege
+                add  = kmpmp_FAE_siege_interwar_heavy_tank
+            }
+        }
+        else_if = {
+            limit = {
+                has_unit_type = unit_type:combat_unit_type_interwar_light_tanks
+            }
+            change_local_variable = {
+                name = total_siege
+                add  = kmpmp_FAE_siege_interwar_light_tank
+            }
+        }
+    }
+    
+    if = {
+        limit = {
+            scope:$SCOPE$.owner = {
+                is_ai = yes
+            }
+        }
+        set_local_variable = {
+            name  = total_siege
+            value = {
+                add = local_var:total_siege
+                multiply = {
+                    add  = 1
+                    if = {
+                        limit = { has_game_rule = FAE_grs_ai_siege_low }
+                        add   = FAE_ai_mult_low
+                    }
+                    else_if = {
+                        limit = { has_game_rule = FAE_grs_ai_siege_med }
+                        add   = FAE_ai_mult_med
+                    }
+                    else_if = {
+                        limit = { has_game_rule = FAE_grs_ai_siege_hi }
+                        add   = FAE_ai_mult_hi
+                    }
+                    else_if = {
+                        limit = { has_game_rule = FAE_grs_ai_siege_vhi }
+                        add   = FAE_ai_mult_vhi
+                    }
+                    else_if = {
+                        limit = { has_game_rule = FAE_grs_ai_siege_ext }
+                        add   = FAE_ai_mult_ext
+                    }
+                }
+            }
+        }
+    }
+}
+
+# Scope: country
+# Calculates and (re)applies backup modifier to increase fort levels for hands-off mod compatibility in case someone
+# comes in and touches the tech definitions
+FAE_se_refresh_fort_max_lvl = {
+    if = {
+        limit = {
+            NOT = {
+                has_variable = FAE_refresh_fort_max_lvl_debounce
+            }
+        }
+        
+        # Debounce needed in case multiple techs are researched on the same day
+        # Due to how the math works, firing this multiple times in a single day causes the correction amount to be over-
+        # calculated, resulting in more levels than they should be getting.
+        set_variable = {
+            name  = FAE_refresh_fort_max_lvl_debounce
+            value = yes
+            days  = 1
+        }
+        
+        remove_modifier = FAE_md_fort_max_level
+        set_local_variable = {
+            name  = expected_max_lvl
+            value = {
+                if = {
+                    limit = {
+                        has_technology_researched = standing_army
+                    }
+                    add = 1
+                }
+                if = {
+                    limit = {
+                        has_technology_researched = napoleonic_warfare
+                    }
+                    add = 1
+                }
+                if = {
+                    limit = {
+                        has_technology_researched = field_works
+                    }
+                    add = 1
+                }
+                if = {
+                    limit = {
+                        has_technology_researched = breech_loading_artillery
+                    }
+                    add = 2
+                }
+                if = {
+                    limit = {
+                        has_technology_researched = defense_in_depth
+                    }
+                    add = 2
+                }
+                if = {
+                    limit = {
+                        has_technology_researched = concrete_fortifications
+                    }
+                    add = 3
+                }
+            }
+        }
+        
+        if = {
+            limit = {
+                local_var:expected_max_lvl != {
+                    add = modifier:state_fae_building_forts_max_level_add
+                    subtract = {
+                        if = {
+                            limit = {
+                                has_variable = FAE_max_lvl_correction
+                            }
+                            add = var:FAE_max_lvl_correction
+                        }
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        has_variable = FAE_max_lvl_correction
+                    }
+                }
+                set_variable = {
+                    name  = FAE_max_lvl_correction
+                    value = 0
+                }
+            }
+            set_variable = {
+                name  = FAE_max_lvl_correction
+                value = {
+                    add      = local_var:expected_max_lvl
+                    subtract = {
+                        add      = modifier:state_fae_building_forts_max_level_add
+                        subtract = var:FAE_max_lvl_correction
+                    }
+                }
+            }
+            add_modifier = {
+                name = FAE_md_fort_max_level
+                multiplier = var:FAE_max_lvl_correction
             }
         }
     }

@@ -1,0 +1,23 @@
+﻿INJECT:FAE_pm_bastion_forts = {
+    building_modifiers = {
+        workforce_scaled = {
+            unit_defense_add = -0.2
+        }
+    }
+}
+
+INJECT:FAE_pm_polygonal_forts = {
+    building_modifiers = {
+        workforce_scaled = {
+            unit_defense_add = -0.3
+        }
+    }
+}
+
+INJECT:FAE_pm_bunkers = {
+    building_modifiers = {
+        workforce_scaled = {
+            unit_defense_add = -0.4
+        }
+    }
+}

@@ -1,4 +1,4 @@
-﻿je_german_fate_in_the_east = {
+﻿REPLACE_OR_CREATE:je_german_fate_in_the_east = {
     group = je_group_foreign_affairs
     icon = "gfx/interface/icons/event_icons/event_map.dds"
 
@@ -113,7 +113,7 @@
     }
 }
 
-je_german_fate_in_the_east_expand = {
+REPLACE_OR_CREATE:je_german_fate_in_the_east_expand = {
     group = je_group_foreign_affairs
     icon = "gfx/interface/icons/event_icons/event_map.dds"
 
@@ -240,7 +240,7 @@ je_german_fate_in_the_east_expand = {
     }
 }
 
-je_german_fate_in_the_east_maintain = {
+REPLACE_OR_CREATE:je_german_fate_in_the_east_maintain = {
     group = je_group_foreign_affairs
     icon = "gfx/interface/icons/event_icons/event_map.dds"
 

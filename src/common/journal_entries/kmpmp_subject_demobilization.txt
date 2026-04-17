@@ -1,4 +1,4 @@
-﻿kmpmp_je_subject_demobilization = {
+﻿REPLACE_OR_CREATE:kmpmp_je_subject_demobilization = {
     icon = "gfx/interface/icons/event_icons/event_military.dds"
 	group = je_group_foreign_affairs
 

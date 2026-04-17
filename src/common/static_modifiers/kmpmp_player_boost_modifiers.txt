@@ -375,9 +375,9 @@ kmpmp_player_boost_arsenal_of_democrazy = {
     # +10% TP on Arms Industry
     building_arms_industry_throughput_add = 0.1
     # +10% TP on Munition Plants
-    building_munition_plants_throughput_add = 0.1
+    building_munition_plant_throughput_add = 0.1
     # +10% TP on Artillery Factory
-    building_artillery_foundries_throughput_add = 0.1
+    building_artillery_foundry_throughput_add = 0.1
     # +10% Army Off / Def
     unit_army_defense_mult = 0.1
     unit_army_offense_mult = 0.1

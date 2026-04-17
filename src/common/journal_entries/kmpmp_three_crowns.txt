@@ -1,4 +1,4 @@
-﻿je_empire_of_the_three_crowns = {
+﻿REPLACE_OR_CREATE:je_empire_of_the_three_crowns = {
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 	group = je_group_historical_content
 	possible = { # added throgh history/global

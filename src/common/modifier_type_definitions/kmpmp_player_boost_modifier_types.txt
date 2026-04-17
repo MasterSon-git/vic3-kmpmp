@@ -2,6 +2,7 @@
     color = good
 	percent = yes
 	decimals = 0
+	script_only = yes
 	game_data = {
 		ai_value = 0
 	}
@@ -11,6 +12,7 @@ state_kmpmp_unincorporated_construction_mult = {
 	color = good
 	percent = yes
 	decimals = 0
+	script_only = yes
 	game_data = {
 		ai_value = 0
 	}

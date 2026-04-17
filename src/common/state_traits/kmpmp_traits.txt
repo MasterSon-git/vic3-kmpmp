@@ -1,4 +1,6 @@
-﻿state_trait_caribbean_sea = {
+﻿# kmpmp - custom traits
+
+REPLACE_OR_CREATE:state_trait_caribbean_sea = {
     icon = "gfx/interface/icons/state_trait_icons/tropical_climate.dds"
 
     # add 10% Sugar and Tabak plantation TP

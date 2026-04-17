@@ -1,108 +1,14 @@
-﻿basic_artillery_commander = {
-	type = skill
-	texture = gfx/interface/icons/character_trait_icons/basic_artillery_commander.dds
-    
+﻿INJECT:basic_artillery_commander = {    
 	command_modifier = {
-		unit_combat_unit_type_fort_buster_artillery_offense_mult = 0.05 #kmpmp
-		unit_combat_unit_type_siege_artillery_offense_mult = 0.05
-		unit_combat_unit_type_shrapnel_artillery_offense_mult = 0.05
-		unit_combat_unit_type_cannon_artillery_offense_mult = 0.05
-		unit_combat_unit_type_mobile_artillery_offense_mult = 0.05
-		character_battle_condition_aggressive_maneuver_mult = 1
-		character_battle_condition_mud_mult = 0.5
+		unit_combat_unit_type_fort_buster_artillery_offense_mult = 0.05
 
-        # kmpmp
         unit_combat_unit_type_heavy_tank_offense_mult = 0.05
         unit_combat_unit_type_heavy_tank_defense_mult = 0.05
 		unit_combat_unit_type_interwar_heavy_tank_offense_mult = 0.05
         unit_combat_unit_type_interwar_heavy_tank_defense_mult = 0.05
 	}
 
-	possible = {
-		has_role = general
-		owner ?= {
-			has_technology_researched = artillery
-		}
-		NOR = {
-			has_trait = experienced_artillery_commander
-			has_trait = expert_artillery_commander
-		}
-		NOT = {
-			age < define:NCharacters|ADULT_AGE
-		}
-	}
-
 	weight = {
-		value = 2
-		if = {
-			limit = {
-				owner = {
-					any_military_formation = {
-						is_army = yes
-						any_scope_general = {
-							this = root
-						}
-						formation_army_unit_type_fraction = {
-							target = unit_type:combat_unit_type_cannon_artillery
-							value >= 0.2
-						}
-					}
-				}
-			}
-			multiply = 2
-		}
-		if = {
-			limit = {
-				owner = {
-					any_military_formation = {
-						is_army = yes
-						any_scope_general = {
-							this = root
-						}
-						formation_army_unit_type_fraction = {
-							target = unit_type:combat_unit_type_mobile_artillery
-							value >= 0.2
-						}
-					}
-				}
-			}
-			multiply = 5
-		}
-		if = {
-			limit = {
-				owner = {
-					any_military_formation = {
-						is_army = yes
-						any_scope_general = {
-							this = root
-						}
-						formation_army_unit_type_fraction = {
-							target = unit_type:combat_unit_type_shrapnel_artillery
-							value >= 0.2
-						}
-					}
-				}
-			}
-			multiply = 10
-		}
-		if = {
-			limit = {
-				owner = {
-					any_military_formation = {
-						is_army = yes
-						any_scope_general = {
-							this = root
-						}
-						formation_army_unit_type_fraction = {
-							target = unit_type:combat_unit_type_siege_artillery
-							value >= 0.2
-						}
-					}
-				}
-			}
-			multiply = 20
-		}
-		# kmpmp
 		if = {
 			limit = {
 				owner = {
@@ -128,15 +34,9 @@
 						any_scope_general = {
 							this = root
 						}
-						OR = {
-							formation_army_unit_type_fraction = {
-								target = unit_type:combat_unit_type_heavy_tank
-								value >= 0.2
-							}
-							formation_army_unit_type_fraction = {
-								target = unit_type:combat_unit_type_interwar_heavy_tank
-								value >= 0.2
-							}
+						formation_army_unit_type_fraction = {
+							target = unit_type:combat_unit_type_interwar_heavy_tank
+							value >= 0.2
 						}
 					}
 				}
@@ -144,95 +44,19 @@
 			multiply = 50
 		}
 	}
-
-	replace = {
-		inexperienced
-	}
-
-	value = 1
 }
 
-experienced_artillery_commander = {
-	type = skill
-	texture = gfx/interface/icons/character_trait_icons/experienced_artillery_commander.dds
-
+INJECT:experienced_artillery_commander = {
 	command_modifier = {
-		unit_combat_unit_type_fort_buster_artillery_offense_mult = 0.1 #kmpmp
-		unit_combat_unit_type_siege_artillery_offense_mult = 0.1
-		unit_combat_unit_type_shrapnel_artillery_offense_mult = 0.1
-		unit_combat_unit_type_cannon_artillery_offense_mult = 0.1
-		unit_combat_unit_type_mobile_artillery_offense_mult = 0.1
-		character_battle_condition_aggressive_maneuver_mult = 2
-		character_battle_condition_mud_mult = 0.5
+		unit_combat_unit_type_fort_buster_artillery_offense_mult = 0.1
 
-        # kmpmp
         unit_combat_unit_type_heavy_tank_offense_mult = 0.1
         unit_combat_unit_type_heavy_tank_defense_mult = 0.1
 		unit_combat_unit_type_interwar_heavy_tank_offense_mult = 0.1
         unit_combat_unit_type_interwar_heavy_tank_defense_mult = 0.1
 	}
 
-	possible = {
-		has_trait = basic_artillery_commander
-		NOT = {
-			age < define:NCharacters|ADULT_AGE
-		}
-	}
-
 	weight = {
-		value = 5
-		if = {
-			limit = {
-				owner = {
-					any_military_formation = {
-						is_army = yes
-						any_scope_general = {
-							this = root
-						}
-						formation_army_unit_type_fraction = {
-							target = unit_type:combat_unit_type_mobile_artillery
-							value >= 0.2
-						}
-					}
-				}
-			}
-			multiply = 5
-		}
-		if = {
-			limit = {
-				owner = {
-					any_military_formation = {
-						is_army = yes
-						any_scope_general = {
-							this = root
-						}
-						formation_army_unit_type_fraction = {
-							target = unit_type:combat_unit_type_shrapnel_artillery
-							value >= 0.2
-						}
-					}
-				}
-			}
-			multiply = 10
-		}
-		if = {
-			limit = {
-				owner = {
-					any_military_formation = {
-						is_army = yes
-						any_scope_general = {
-							this = root
-						}
-						formation_army_unit_type_fraction = {
-							target = unit_type:combat_unit_type_siege_artillery
-							value >= 0.2
-						}
-					}
-				}
-			}
-			multiply = 20
-		}
-		# kmpmp
 		if = {
 			limit = {
 				owner = {
@@ -258,15 +82,9 @@ experienced_artillery_commander = {
 						any_scope_general = {
 							this = root
 						}
-						OR = {
-							formation_army_unit_type_fraction = {
-								target = unit_type:combat_unit_type_heavy_tank
-								value >= 0.2
-							}
-							formation_army_unit_type_fraction = {
-								target = unit_type:combat_unit_type_interwar_heavy_tank
-								value >= 0.2
-							}
+						formation_army_unit_type_fraction = {
+							target = unit_type:combat_unit_type_interwar_heavy_tank
+							value >= 0.2
 						}
 					}
 				}
@@ -274,78 +92,19 @@ experienced_artillery_commander = {
 			multiply = 50
 		}
 	}
-
-	replace = {
-		basic_artillery_commander
-	}
-
-	value = 2
 }
 
-expert_artillery_commander = {
-	type = skill
-	texture = gfx/interface/icons/character_trait_icons/expert_artillery_commander.dds
-
+INJECT:expert_artillery_commander = {
 	command_modifier = {
-		unit_combat_unit_type_fort_buster_artillery_offense_mult = 0.15 #kmpmp
-		unit_combat_unit_type_siege_artillery_offense_mult = 0.15
-		unit_combat_unit_type_shrapnel_artillery_offense_mult = 0.15
-		unit_combat_unit_type_cannon_artillery_offense_mult = 0.15
-		unit_combat_unit_type_mobile_artillery_offense_mult = 0.15
-		character_battle_condition_aggressive_maneuver_mult = 3
-		character_battle_condition_mud_mult = 0.5
+		unit_combat_unit_type_fort_buster_artillery_offense_mult = 0.15
 
-        # kmpmp
         unit_combat_unit_type_heavy_tank_offense_mult = 0.15
         unit_combat_unit_type_heavy_tank_defense_mult = 0.15
 		unit_combat_unit_type_interwar_heavy_tank_offense_mult = 0.15
         unit_combat_unit_type_interwar_heavy_tank_defense_mult = 0.15
 	}
 
-	possible = {
-		has_trait = experienced_artillery_commander
-		NOT = {
-			age < define:NCharacters|ADULT_AGE
-		}
-	}
-
 	weight = {
-		value = 5
-		if = {
-			limit = {
-				owner = {
-					any_military_formation = {
-						is_army = yes
-						any_scope_general = {
-							this = root
-						}
-						formation_army_unit_type_fraction = {
-							target = unit_type:combat_unit_type_shrapnel_artillery
-							value >= 0.2
-						}
-					}
-				}
-			}
-			multiply = 10
-		}
-		if = {
-			limit = {
-				owner = {
-					any_military_formation = {
-						is_army = yes
-						any_scope_general = {
-							this = root
-						}
-						formation_army_unit_type_fraction = {
-							target = unit_type:combat_unit_type_siege_artillery
-							value >= 0.2
-						}
-					}
-				}
-			}
-			multiply = 20
-		}
-		# kmpmp
 		if = {
 			limit = {
 				owner = {
@@ -371,15 +130,9 @@ expert_artillery_commander = {
 						any_scope_general = {
 							this = root
 						}
-						OR = {
-							formation_army_unit_type_fraction = {
-								target = unit_type:combat_unit_type_heavy_tank
-								value >= 0.2
-							}
-							formation_army_unit_type_fraction = {
-								target = unit_type:combat_unit_type_interwar_heavy_tank
-								value >= 0.2
-							}
+						formation_army_unit_type_fraction = {
+							target = unit_type:combat_unit_type_interwar_heavy_tank
+							value >= 0.2
 						}
 					}
 				}
@@ -387,180 +140,28 @@ expert_artillery_commander = {
 			multiply = 50
 		}
 	}
-
-	replace = {
-		experienced_artillery_commander
-	}
-
-	value = 3
 }
 
-convoy_raider_commander = {
-	type = skill
-	texture = "gfx/interface/icons/character_trait_icons/convoy_raider_commander.dds"
-
+INJECT:convoy_raider_commander = {
 	command_modifier = {
-		character_convoy_raiding_mult = 0.1
-		unit_combat_unit_type_submarine_offense_mult = 0.1
-		# kmpmp
 		unit_combat_unit_type_long_range_submarine_offense_mult = 0.1
 	}
-
-	possible = {
-		has_role = admiral
-		owner ?= {
-			has_technology_researched = admiralty
-		}
-		NOR = {
-			has_trait = experienced_convoy_raider
-			has_trait = expert_convoy_raider
-		}
-		NOT = { age < define:NCharacters|ADULT_AGE }
-	}
-
-	weight = {
-		value = 10
-		if = {
-			limit = {
-				OR = {
-					has_trait = persistent
-					has_trait = reckless
-					has_trait = cruel
-				}
-			}
-			multiply = 2
-		}
-	}
-
-	replace = {
-	}
-
-	value = 1
 }
 
-experienced_convoy_raider = {
-	type = skill
-	texture = "gfx/interface/icons/character_trait_icons/experienced_convoy_raider.dds"
-
+INJECT:experienced_convoy_raider = {
 	command_modifier = {
-		character_convoy_raiding_mult = 0.5
-		unit_combat_unit_type_submarine_offense_mult = 0.15
-		# kmpmp
 		unit_combat_unit_type_long_range_submarine_offense_mult = 0.15
 	}
-
-	possible = {
-		has_trait = convoy_raider_commander
-		NOT = { age < define:NCharacters|ADULT_AGE }
-	}
-
-	weight = {
-		value = 20
-		if = {
-			limit = {
-				OR = {
-					has_trait = persistent
-					has_trait = reckless
-					has_trait = cruel
-				}
-			}
-			multiply = 2
-		}
-	}
-
-	replace = {
-		convoy_raider_commander
-	}
-
-	value = 2
 }
 
-expert_convoy_raider = {
-	type = skill
-	texture = "gfx/interface/icons/character_trait_icons/expert_convoy_raider.dds"
-
+INJECT:expert_convoy_raider = {
 	command_modifier = {
-		character_convoy_raiding_mult = 1.5
-		unit_combat_unit_type_submarine_offense_mult = 0.25
-		# kmpmp
 		unit_combat_unit_type_long_range_submarine_offense_mult = 0.25
 	}
-
-	possible = {
-		has_trait = experienced_convoy_raider
-		NOT = { age < define:NCharacters|ADULT_AGE }
-	}
-
-	weight = {
-		value = 20
-		if = {
-			limit = {
-				OR = {
-					has_trait = persistent
-					has_trait = reckless
-					has_trait = cruel
-				}
-			}
-			multiply = 2
-		}
-	}
-
-	replace = {
-		experienced_convoy_raider
-	}
-
-	value = 3
 }
 
-traditionalist_commander = {
-	type = skill
-	texture = "gfx/interface/icons/character_trait_icons/traditionalist_commander.dds"
-
+INJECT:traditionalist_commander = {
 	command_modifier = {
-		character_command_limit_mult = 0.1
-		unit_combat_unit_type_carrier_offense_mult = -0.1
-		character_blockade_mult = 0.2
-		# kmpmp
 		unit_combat_unit_type_interwar_carrier_offense_mult = -0.1
 	}
-
-	# Reminder: this would only come into effect if this Commander is or becomes a Ruler
-	country_modifier = {
-		country_prestige_mult = 0.05
-	}
-
-	possible = {
-		NOR = {
-			has_trait = popular_commander
-			has_trait = celebrity_commander
-		}
-		interest_group ?= {
-			OR = {
-				is_interest_group_type = ig_devout
-				is_interest_group_type = ig_landowners
-				is_interest_group_type = ig_armed_forces
-				is_powerful = yes
-			}
-		}
-		NOT = { age < define:NCharacters|ADULT_AGE }
-	}
-
-	weight = {
-		value = 10
-		if = {
-			limit = {
-				OR = {
-					is_interest_group_type = ig_devout
-					is_interest_group_type = ig_landowners
-					is_interest_group_type = ig_armed_forces
-				}
-			}
-			multiply = 2
-		}
-	}
-
-	replace = {
-	}
-
-	value = 1
 }

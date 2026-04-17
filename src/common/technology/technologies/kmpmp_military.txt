@@ -1,6 +1,6 @@
 ﻿### ERA 5
 
-kmpmp_international_tradehubs = {
+REPLACE_OR_CREATE:kmpmp_international_tradehubs = {
     era = era_5
     texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
     category = military
@@ -21,7 +21,7 @@ kmpmp_international_tradehubs = {
 
 ### ERA 6
 
-kmpmp_lessons_from_the_great_war = {
+REPLACE_OR_CREATE:kmpmp_lessons_from_the_great_war = {
     # -50% battlesize
 
     era = era_kmpmp_6
@@ -37,8 +37,7 @@ kmpmp_lessons_from_the_great_war = {
         # General advancement Speed +2
         character_advancement_speed_add = 2
 
-        # kmpmp fake modifier
-        country_kmpmp_land_battle_size_mult = -0.5
+        battle_total_combat_width_mult = -0.5
     }
 
     unlocking_technologies = {
@@ -51,7 +50,7 @@ kmpmp_lessons_from_the_great_war = {
     }
 }
 
-kmpmp_anti_tank_defences = {
+REPLACE_OR_CREATE:kmpmp_anti_tank_defences = {
     era = era_kmpmp_6
     texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
     category = military
@@ -73,7 +72,7 @@ kmpmp_anti_tank_defences = {
     }
 }
 
-kmpmp_combined_arms_strategy = {
+REPLACE_OR_CREATE:kmpmp_combined_arms_strategy = {
     # unlocks mobilization options
     # Close Air Support
     # Air superiority
@@ -96,7 +95,7 @@ kmpmp_combined_arms_strategy = {
     }
 }
 
-kmpmp_interwar_tanks = {
+REPLACE_OR_CREATE:kmpmp_interwar_tanks = {
     # unlock units
     # Interwar Heavy Tank (Unit)
     # Interwar Light Tank (Unit)
@@ -118,7 +117,7 @@ kmpmp_interwar_tanks = {
     }
 }
 
-kmpmp_rocket_technology = {
+REPLACE_OR_CREATE:kmpmp_rocket_technology = {
     era = era_kmpmp_6
     texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
     category = military
@@ -137,7 +136,7 @@ kmpmp_rocket_technology = {
     }
 }
 
-kmpmp_rocket_artillery = {
+REPLACE_OR_CREATE:kmpmp_rocket_artillery = {
     # unlocks mobilizations option
     # Rocket Artillery
 
@@ -157,7 +156,7 @@ kmpmp_rocket_artillery = {
     }
 }
 
-kmpmp_interwar_mechanized_infantry = {
+REPLACE_OR_CREATE:kmpmp_interwar_mechanized_infantry = {
     # unlocks unit
     # Interwar Infantry (Unit)
 
@@ -178,7 +177,7 @@ kmpmp_interwar_mechanized_infantry = {
     }
 }
 
-kmpmp_blitzkrieg = {
+REPLACE_OR_CREATE:kmpmp_blitzkrieg = {
     era = era_kmpmp_6
     texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
     category = military
@@ -211,7 +210,7 @@ kmpmp_blitzkrieg = {
     }
 }
 
-kmpmp_super_heavy_battleship = {
+REPLACE_OR_CREATE:kmpmp_super_heavy_battleship = {
     # unlock unit
     # Bismarck Class Battleship (Unit)
 
@@ -231,7 +230,7 @@ kmpmp_super_heavy_battleship = {
     }
 }
 
-kmpmp_long_range_submarines = {
+REPLACE_OR_CREATE:kmpmp_long_range_submarines = {
     # unlock unit
     # Long Range Submarine (Unit)
 
@@ -253,7 +252,7 @@ kmpmp_long_range_submarines = {
     }
 }
 
-kmpmp_heavy_cruiser = {
+REPLACE_OR_CREATE:kmpmp_heavy_cruiser = {
     # unlocks unit
     # Heavy Cruiser (Unit)
 
@@ -273,7 +272,7 @@ kmpmp_heavy_cruiser = {
     }
 }
 
-kmpmp_anti_submarine_warfare = {
+REPLACE_OR_CREATE:kmpmp_anti_submarine_warfare = {
     # unlocks unit
     # Anti Submarine Destroyer (Unit)
 
@@ -294,7 +293,7 @@ kmpmp_anti_submarine_warfare = {
     }
 }
 
-kmpmp_interwar_carrier = {
+REPLACE_OR_CREATE:kmpmp_interwar_carrier = {
     # unlocks unit
     # Interwar Carrier (Unit)
 
@@ -314,7 +313,7 @@ kmpmp_interwar_carrier = {
     }
 }
 
-kmpmp_deepsea_dockyards = {
+REPLACE_OR_CREATE:kmpmp_deepsea_dockyards = {
     era = era_kmpmp_6
     texture = "gfx/interface/icons/invention_icons/unused/invention_placeholder.dds"
     category = military

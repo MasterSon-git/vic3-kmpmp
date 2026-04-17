@@ -1,4 +1,4 @@
-﻿pm_electric_saw_mills = {
+﻿REPLACE:pm_electric_saw_mills = {
 	texture = "gfx/interface/icons/production_method_icons/electric_saw_mills.dds"
 	unlocking_technologies = {
 		electrical_generation
@@ -23,10 +23,10 @@
 		}
 	}
 
-	#required_input_goods = electricity
+	# required_input_goods = electricity
 }
 
-pm_refrigerated_storage_building_fishing_wharf = {
+REPLACE:pm_refrigerated_storage_building_fishing_wharf = {
 	texture = "gfx/interface/icons/production_method_icons/refrigerated_storage.dds"
 	
 	unlocking_technologies = {
@@ -45,10 +45,10 @@ pm_refrigerated_storage_building_fishing_wharf = {
 		}
 	}
 
-	#required_input_goods = electricity
+	# required_input_goods = electricity
 }
 
-pm_refrigerated_rail_cars_building_fishing_wharf = {
+REPLACE:pm_refrigerated_rail_cars_building_fishing_wharf = {
 	texture = "gfx/interface/icons/production_method_icons/refrigerated_rail_cars.dds"
 
 	state_modifiers = {
@@ -74,10 +74,10 @@ pm_refrigerated_rail_cars_building_fishing_wharf = {
 		}
 	}
 
-	#required_input_goods = electricity
+	# required_input_goods = electricity
 }
 
-pm_flash_freezing_building_fishing_wharf = {
+REPLACE:pm_flash_freezing_building_fishing_wharf = {
 	texture = "gfx/interface/icons/production_method_icons/flash_refrigerated.dds"
 	
 	unlocking_technologies = {
@@ -97,10 +97,10 @@ pm_flash_freezing_building_fishing_wharf = {
 		}
 	}
 
-	#required_input_goods = electricity
+	# required_input_goods = electricity
 }
 
-pm_refrigerated_storage_building_whaling_station = {
+REPLACE:pm_refrigerated_storage_building_whaling_station = {
 	texture = "gfx/interface/icons/production_method_icons/refrigerated_storage.dds"
 	
 	unlocking_technologies = {
@@ -119,10 +119,10 @@ pm_refrigerated_storage_building_whaling_station = {
 		}
 	}
 
-	#required_input_goods = electricity
+	# required_input_goods = electricity
 }
 
-pm_refrigerated_rail_cars_building_whaling_station = {
+REPLACE:pm_refrigerated_rail_cars_building_whaling_station = {
 	texture = "gfx/interface/icons/production_method_icons/refrigerated_rail_cars.dds"
 
 	state_modifiers = {
@@ -148,10 +148,10 @@ pm_refrigerated_rail_cars_building_whaling_station = {
 		}
 	}
 
-	#required_input_goods = electricity
+	# required_input_goods = electricity
 }
 
-pm_flash_freezing_building_whaling_station = {
+REPLACE:pm_flash_freezing_building_whaling_station = {
 	texture = "gfx/interface/icons/production_method_icons/flash_refrigerated.dds"
 	
 	unlocking_technologies = {
@@ -171,64 +171,23 @@ pm_flash_freezing_building_whaling_station = {
 		}
 	}
 
-	#required_input_goods = electricity
+	# required_input_goods = electricity
 }
 
-pm_steam_derricks = {
-	texture = "gfx/interface/icons/production_method_icons/simple_oil_extraction.dds"
-	
-	state_modifiers = {
-		workforce_scaled = {
-			state_pollution_generation_add = 10
-		}
-	}
-	
+INJECT:pm_steam_derricks = {
 	building_modifiers = {
 		workforce_scaled = {
-			# input goods
-			goods_input_engines_add = 5
-			goods_input_coal_add = 10
-			
 			# output goods
-			goods_output_oil_add = 65 #60
-		}
-
-		level_scaled = {
-			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 3000
-			building_employment_machinists_add = 1000
-			building_employment_engineers_add = 500
+			goods_output_oil_add = 5
 		}
 	}
 }
 
-pm_combustion_derricks = {
-	texture = "gfx/interface/icons/production_method_icons/combustion_derricks.dds"
-	
-	state_modifiers = {
-		workforce_scaled = {
-			state_pollution_generation_add = 15
-		}
-	}
-	
-	unlocking_technologies = {
-		combustion_engine
-	}
-	
+INJECT:pm_combustion_derricks = {	
 	building_modifiers = {
 		workforce_scaled = {
-			# input goods
-			goods_input_engines_add = 10
-			
 			# output goods
-			goods_output_oil_add = 110 #100
-		}
-
-		level_scaled = {
-			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 2000
-			building_employment_machinists_add = 1500
-			building_employment_engineers_add = 1000
+			goods_output_oil_add = 10
 		}
 	}
 }

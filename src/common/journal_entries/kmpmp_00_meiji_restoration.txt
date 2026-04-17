@@ -1,4 +1,4 @@
-﻿je_meiji_main = {
+﻿REPLACE:je_meiji_main = {
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
 	group = je_group_meiji_restoration
@@ -26,7 +26,7 @@
 		trigger_event = {
 			id = meiji.2
 		}
-        # kmpmp - show that is nees to be completed before year 1885 otherwise you don't get the buff "Empire of the rising Sun"
+        # kmpmp - show that it needs to be completed before year 1885 otherwise you don't get the buff "Empire of the rising Sun"
         show_as_tooltip = {
             custom_tooltip = kmpmp_japan_buff_meiji_complete_condition_tt
             add_modifier = {

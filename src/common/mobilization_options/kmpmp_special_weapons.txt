@@ -1,4 +1,4 @@
-﻿mobilization_option_rocket_artillery = {
+﻿REPLACE_OR_CREATE:kmpmp_mobilization_option_rocket_artillery = {
 	texture = "gfx/interface/icons/mobilization_options/rocket_artillery.dds"
 
 	on_activate_while_mobilized = {
@@ -48,7 +48,7 @@
 	group = special_weapons
 }
 
-mobilization_option_military_playbooks = {
+REPLACE_OR_CREATE:kmpmp_mobilization_option_military_playbooks = {
 	texture = "gfx/interface/icons/military_icons/military_formation.dds"
 	possible = {
 		market ?= {
