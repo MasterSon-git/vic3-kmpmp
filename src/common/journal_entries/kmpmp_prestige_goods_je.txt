@@ -4,7 +4,6 @@
     group = je_group_technology
 
     is_shown_when_inactive = {
-        has_dlc_feature = mp1_content
         any_company = {
             can_potentially_produce_prestige_goods = prestige_good_generic_kmpmp_premium_engines
             is_producing_prestige_goods = no
@@ -79,6 +78,11 @@
 
     on_monthly_pulse = {
         effect = {
+            rebind_prestige_good_company = {
+                GOODS = prestige_good_generic_kmpmp_premium_engines
+                UNLOCK_VAR = prestige_good_generic_kmpmp_premium_engines_var
+                TIMER_VAR = prestige_good_generic_kmpmp_premium_engines_timer_var
+            }
             if = {
                 limit = {
                     scope:relevant_company ?= {
@@ -106,11 +110,7 @@
         post_notification = prestige_good_generic_kmpmp_premium_engines_unlocked
     }
 
-    invalid = {
-        NOT = {
-            exists = scope:relevant_company
-        }
-    }
+    can_deactivate = yes
 
     current_value = {
         value = root.var:prestige_good_generic_kmpmp_premium_engines_timer_var
@@ -124,7 +124,7 @@
 
     weight = 1000
 
-    should_be_pinned_by_default = yes
+    should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
 REPLACE_OR_CREATE:je_prestige_good_generic_kmpmp_premium_silk = {
@@ -133,7 +133,6 @@ REPLACE_OR_CREATE:je_prestige_good_generic_kmpmp_premium_silk = {
     group = je_group_technology
 
     is_shown_when_inactive = {
-        has_dlc_feature = mp1_content
         any_company = {
             can_potentially_produce_prestige_goods = prestige_good_generic_kmpmp_premium_silk
             is_producing_prestige_goods = no
@@ -208,6 +207,11 @@ REPLACE_OR_CREATE:je_prestige_good_generic_kmpmp_premium_silk = {
 
     on_monthly_pulse = {
         effect = {
+            rebind_prestige_good_company = {
+                GOODS = prestige_good_generic_kmpmp_premium_silk
+                UNLOCK_VAR = prestige_good_generic_kmpmp_premium_silk_var
+                TIMER_VAR = prestige_good_generic_kmpmp_premium_silk_timer_var
+            }
             if = {
                 limit = {
                     scope:relevant_company ?= {
@@ -235,11 +239,7 @@ REPLACE_OR_CREATE:je_prestige_good_generic_kmpmp_premium_silk = {
         post_notification = prestige_good_generic_kmpmp_premium_silk_unlocked
     }
 
-    invalid = {
-        NOT = {
-            exists = scope:relevant_company
-        }
-    }
+    can_deactivate = yes
 
     current_value = {
         value = root.var:prestige_good_generic_kmpmp_premium_silk_timer_var
@@ -253,7 +253,7 @@ REPLACE_OR_CREATE:je_prestige_good_generic_kmpmp_premium_silk = {
 
     weight = 1000
 
-    should_be_pinned_by_default = yes
+    should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
 REPLACE_OR_CREATE:je_prestige_good_generic_kmpmp_premium_oil = {
@@ -262,7 +262,6 @@ REPLACE_OR_CREATE:je_prestige_good_generic_kmpmp_premium_oil = {
     group = je_group_technology
 
     is_shown_when_inactive = {
-        has_dlc_feature = mp1_content
         any_company = {
             can_potentially_produce_prestige_goods = prestige_good_generic_kmpmp_premium_oil
             is_producing_prestige_goods = no
@@ -337,6 +336,11 @@ REPLACE_OR_CREATE:je_prestige_good_generic_kmpmp_premium_oil = {
 
     on_monthly_pulse = {
         effect = {
+            rebind_prestige_good_company = {
+                GOODS = prestige_good_generic_kmpmp_premium_oil
+                UNLOCK_VAR = prestige_good_generic_kmpmp_premium_oil_var
+                TIMER_VAR = prestige_good_generic_kmpmp_premium_oil_timer_var
+            }
             if = {
                 limit = {
                     scope:relevant_company ?= {
@@ -364,11 +368,7 @@ REPLACE_OR_CREATE:je_prestige_good_generic_kmpmp_premium_oil = {
         post_notification = prestige_good_generic_kmpmp_premium_oil_unlocked
     }
 
-    invalid = {
-        NOT = {
-            exists = scope:relevant_company
-        }
-    }
+    can_deactivate = yes
 
     current_value = {
         value = root.var:prestige_good_generic_kmpmp_premium_oil_timer_var
@@ -382,7 +382,7 @@ REPLACE_OR_CREATE:je_prestige_good_generic_kmpmp_premium_oil = {
 
     weight = 1000
 
-    should_be_pinned_by_default = yes
+    should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
 REPLACE_OR_CREATE:je_prestige_good_generic_kmpmp_premium_wine = {
@@ -391,7 +391,6 @@ REPLACE_OR_CREATE:je_prestige_good_generic_kmpmp_premium_wine = {
     group = je_group_technology
 
     is_shown_when_inactive = {
-        has_dlc_feature = mp1_content
         any_company = {
             can_potentially_produce_prestige_goods = prestige_good_generic_kmpmp_premium_wine
             is_producing_prestige_goods = no
@@ -466,6 +465,11 @@ REPLACE_OR_CREATE:je_prestige_good_generic_kmpmp_premium_wine = {
 
     on_monthly_pulse = {
         effect = {
+            rebind_prestige_good_company = {
+                GOODS = prestige_good_generic_kmpmp_premium_wine
+                UNLOCK_VAR = prestige_good_generic_kmpmp_premium_wine_var
+                TIMER_VAR = prestige_good_generic_kmpmp_premium_wine_timer_var
+            }
             if = {
                 limit = {
                     scope:relevant_company ?= {
@@ -493,11 +497,7 @@ REPLACE_OR_CREATE:je_prestige_good_generic_kmpmp_premium_wine = {
         post_notification = prestige_good_generic_kmpmp_premium_wine_unlocked
     }
 
-    invalid = {
-        NOT = {
-            exists = scope:relevant_company
-        }
-    }
+    can_deactivate = yes
 
     current_value = {
         value = root.var:prestige_good_generic_kmpmp_premium_wine_timer_var
@@ -511,5 +511,5 @@ REPLACE_OR_CREATE:je_prestige_good_generic_kmpmp_premium_wine = {
 
     weight = 1000
 
-    should_be_pinned_by_default = yes
+    should_be_pinned_by_default_uninvolved_or_context = yes
 }

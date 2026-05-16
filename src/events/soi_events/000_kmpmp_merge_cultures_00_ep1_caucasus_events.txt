@@ -165,21 +165,7 @@ caucasuswar.7 = { #Parliament of Independence
 			days = normal_modifier_time
 		}
 		create_character = {
-			# Qerandiqo Berzeg
-			first_name = Qerandiqo
-			last_name = Berzeg
-			birth_date = 1804.6.1 #Only year known
-			ruler = yes
-			hq = region_caucasus
-			is_general = yes
-			commander_rank = commander_rank_3
-			interest_group = ig_landowners
-			ideology = ideology_moderate
-			traits = {
-				persistent
-				brave
-				forest_commander
-			}
+			template = CIR_qerandiqo_berzeg
 		}
 	}
 
@@ -194,21 +180,7 @@ caucasuswar.7 = { #Parliament of Independence
 			add_primary_culture = cu:georgian #cu:north_caucasian
 		}
 		create_character = {
-			# Qerandiqo Berzeg
-			first_name = Qerandiqo
-			last_name = Berzeg
-			birth_date = 1804.6.1 #Only year known
-			ruler = yes
-			hq = region_caucasus
-			is_general = yes
-			commander_rank = commander_rank_3
-			interest_group = ig_landowners
-			ideology = ideology_moderate
-			traits = {
-				persistent
-				brave
-				forest_commander
-			}
+			template = CIR_qerandiqo_berzeg
 		}
 		add_modifier = {
 			name = modifier_circassian_diplomacy
@@ -217,7 +189,7 @@ caucasuswar.7 = { #Parliament of Independence
 		every_country = {
 			limit = {
 				country_rank >= rank_value:major_power
-				has_interest_marker_in_region = region_caucasus
+				has_interest_marker_in_region = sr:region_russia
 				NOT = {
 					c:RUS ?= THIS
 				}
@@ -229,7 +201,7 @@ caucasuswar.7 = { #Parliament of Independence
 	option = {
 		name = caucasuswar.7.c
 		trigger = {
-			ruler.interest_group = {
+			ruler.interest_group ?= {
 				is_interest_group_type = ig_devout
 			}
 			exists = c:CHC
@@ -400,29 +372,13 @@ caucasuswar_end.3 = {
 				save_scope_as = rus_ruler_scope
 			}
 		}
-		if = {
-			limit = {
-				any_state = {
-					state_region = s:STATE_DAGESTAN
-				}
-			}
-			random_state = {
-				limit = {
-					state_region = s:STATE_DAGESTAN
-				}
+		s:STATE_DAGESTAN ?= {
+			random_scope_state = {
 				save_scope_as = dagestan_state
 			}
 		}
-		if = {
-			limit = {
-				any_state = {
-					state_region = s:STATE_NORTH_CAUCASUS
-				}
-			}
-			random_state = {
-				limit = {
-					state_region = s:STATE_NORTH_CAUCASUS
-				}
+		s:STATE_NORTH_CAUCASUS ?= {
+			random_scope_state = {
 				save_scope_as = north_caucasus_state
 			}
 		}

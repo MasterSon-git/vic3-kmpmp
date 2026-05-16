@@ -12,7 +12,7 @@ formation.5 = {
 			triggered_desc = {
 				desc = formation.5.f
 				trigger = {
-					has_law = law_type:law_monarchy
+					country_has_monarchy_law = yes
 				}
 			}
 			triggered_desc = {

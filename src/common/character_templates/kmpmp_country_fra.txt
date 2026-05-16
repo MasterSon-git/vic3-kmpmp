@@ -3,10 +3,11 @@
 	last_name = d_Orleans
 	historical = yes
 	culture = primary_culture
-	heir = yes
+	role = heir
 	birth_date = 1810.9.3
 	interest_group = ig_industrialists #ig_armed_forces
 	ideology = ideology_orleanist
+	home_region = STATE_ILE_DE_FRANCE
 	traits = {
 		popular_commander
 		wrathful

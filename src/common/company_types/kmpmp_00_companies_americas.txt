@@ -43,7 +43,6 @@ INJECT:company_caribbean_petroleum = {
 	}
 	
 	prosperity_modifier = {
-		country_convoys_capacity_mult = -0.05
 		interest_group_ig_industrialists_pol_str_mult = 0.15
 	}
 }
@@ -95,7 +94,7 @@ REPLACE:company_la_rosada = {
 #	}
 
 	potential = {
-		has_interest_marker_in_region = region_la_plata
+		has_interest_marker_in_region = sr:region_la_plata
 	}
 
 	attainable = {
@@ -198,7 +197,7 @@ REPLACE:company_panama_company = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_central_america
+		has_interest_marker_in_region = sr:region_central_america
 	}
 
 	attainable = {

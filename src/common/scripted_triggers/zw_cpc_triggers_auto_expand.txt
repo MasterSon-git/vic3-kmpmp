@@ -10,32 +10,6 @@ REPLACE:default_auto_expand_rule = {
 
 # 01_industry.txt
 
-# building_military_shipyard
-zw_trigger_auto_expand_building_military_shipyard = {
-	occupancy >= 0.95
-	OR = {
-		is_subsidized = yes
-		weekly_profit > 0
-	}
-	trigger_if = {
-		limit = {
-			OR = {
-				has_active_production_method = pm_military_shipbuilding_steam
-				has_active_production_method = pm_military_shipbuilding_steam_2
-			}
-		}
-		market = {
-			mg:ironclads = { market_goods_pricier > 0 }
-		}
-	}
-	trigger_else = {
-		market = {
-			mg:manowars = { market_goods_pricier > 0 }
-		}
-	}
-	state.market_access >= 1
-}
-
 # building_arms_industry
 zw_trigger_auto_expand_building_arms_industry = {
 	occupancy >= 0.95

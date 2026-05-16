@@ -6,6 +6,7 @@
     heir = yes
     noble = yes
     birth_date = 1823.4.25
+    home_region = STATE_EASTERN_THRACE
     interest_group = ig_intelligentsia
     ideology = ideology_modernizer_leader #ideology_moderate
     traits = {
@@ -25,6 +26,7 @@ REPLACE:tur_abdulhamid_ii_osmanoglu_template = {
     ideology = ideology_authoritarian
     interest_group = ig_intelligentsia #ig_landowners
     birth_date = 1842.9.21
+    home_region = STATE_EASTERN_THRACE
 	heir = yes
     traits = {
         pious
@@ -36,7 +38,7 @@ REPLACE:tur_abdulhamid_ii_osmanoglu_template = {
         country_trigger = {
             exists = c:TUR
             this = c:TUR
-            c:TUR = { has_law = law_type:law_monarchy }
+            c:TUR = { country_has_monarchy_law = yes }
         }
         interest_group_trigger = {
             is_marginal = no

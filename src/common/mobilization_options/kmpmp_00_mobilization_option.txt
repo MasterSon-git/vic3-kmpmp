@@ -112,7 +112,7 @@ REPLACE:mobilization_option_truck_transport = {
 		goods_input_engines_add = 0.75 #kmpmp
 	}
 	unit_modifier = {
-		military_formation_movement_speed_mult = 0.25 #0.3
+		military_formation_army_movement_speed_mult = 0.25 #0.3
 		military_formation_mobilization_speed_mult = 0.4
 	}
 	ai_weight = {
@@ -234,7 +234,7 @@ REPLACE:mobilization_option_motorized_recon = {
 	}
 	unit_modifier = {
 		unit_occupation_mult = 0.5
-		military_formation_movement_speed_mult = 0.3
+		military_formation_army_movement_speed_mult = 0.3
 		character_battle_condition_surprise_maneuver_mult = 0.5
 	}
 	ai_weight = {

@@ -25,6 +25,8 @@ meiji.2 = {
 		ruler = {
 			save_scope_as = meiji_ruler
 		}
+
+		# kmpmp - we still need this - removed in vanilla
 		set_global_variable = meiji_restoration_complete
 
 		trigger_event = { # kmpmp
@@ -37,6 +39,13 @@ meiji.2 = {
 	option = {
 		name = meiji.2.a
 		default_option = yes
+		trigger = {
+			has_variable = completed_je_meiji_army
+		}
+		show_as_unavailable = {
+			always = yes
+		}
+
 		add_modifier = {
 			name = japan_military_reward
 			days = normal_modifier_time
@@ -84,6 +93,16 @@ meiji.2 = {
 	}
 	option = {
 		name = meiji.2.b
+		trigger = {
+			OR = {
+				has_variable = iwakura_mission_finished
+				has_variable = completed_je_meiji_diplomacy
+			}
+		}
+		show_as_unavailable = {
+			always = yes
+		}
+
 		add_modifier = {
 			name = japan_diplomatic_reward
 			days = normal_modifier_time
@@ -91,6 +110,13 @@ meiji.2 = {
 	}
 	option = {
 		name = meiji.2.c
+		trigger = {
+			has_variable = completed_je_meiji_economy
+		}
+		show_as_unavailable = {
+			always = yes
+		}
+
 		add_modifier = {
 			name = japan_production_reward
 			days = normal_modifier_time
@@ -151,7 +177,7 @@ meiji.4 = {
 			NOT = { is_owed_obligation_by = ROOT }
 			NOT = { has_war_with = ROOT }
 			any_scope_character = {
-				has_role = general
+				has_role_of_type = general
 				is_busy = no
 			}
 		}
@@ -166,14 +192,14 @@ meiji.4 = {
 				NOT = { is_owed_obligation_by = ROOT }
 				NOT = { has_war_with = ROOT }
 				any_scope_character = {
-					has_role = general
+					has_role_of_type = general
 					is_busy = no
 				}
 			}
 			save_scope_as = military_consultant_country
 			random_scope_character = {
 				limit = {
-					has_role = general
+					has_role_of_type = general
 					is_busy = no
 				}
 				save_scope_as = military_consultant_general

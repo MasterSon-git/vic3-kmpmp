@@ -86,11 +86,6 @@ INJECT:country_army_power_projection = {
 	country_prestige_from_army_power_projection_mult = -0.0002
 }
 
-# Scales with total navy power projection of a country
-INJECT:country_navy_power_projection = {
-	country_max_declared_interests_add = -0.0085 # = 0.0015
-}
-
 INJECT:country_humiliated = {
 	# kmpmp
 	country_influence_mult = -0.25

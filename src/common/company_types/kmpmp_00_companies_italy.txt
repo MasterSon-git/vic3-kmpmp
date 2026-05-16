@@ -29,7 +29,7 @@ REPLACE:company_ilva = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_italy
+		has_interest_marker_in_region = sr:region_southern_europe
 	}
 
 	attainable = {
@@ -55,7 +55,7 @@ REPLACE:company_ilva = {
 	prosperity_modifier = {
 		building_railway_throughput_add = 0.1
 		building_artillery_foundry_throughput_add = 0.05
-		building_military_shipyard_throughput_add = 0.05
+		building_shipyard_throughput_add = 0.05 # kmpmp
 	}
 
 	ai_will_do = {
@@ -87,7 +87,7 @@ INJECT:company_ansaldo = {
 	}
 
 	prosperity_modifier = {
-		unit_navy_offense_mult = -0.05
+		ship_hull_damage_mult = -0.025
 		unit_army_offense_mult = -0.05
 		# kmpmp
 		unit_defense_mult = 0.1
@@ -132,7 +132,6 @@ INJECT:company_stt = {
 	}
 
 	prosperity_modifier = {
-		unit_navy_offense_mult = 0.05 # kmpmp
-		country_convoys_capacity_mult = 0.05
+		ship_hull_damage_mult = 0.025 # kmpmp
 	}
 }

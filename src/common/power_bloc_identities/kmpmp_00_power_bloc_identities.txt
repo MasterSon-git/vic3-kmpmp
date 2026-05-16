@@ -16,10 +16,6 @@
 		building_group_bg_manufacturing_throughput_add = 0.05
 	}
 
-	non_leader_modifier = {
-		country_convoy_contribution_to_market_owner_add = 0.2
-	}
-
 	# kmpmp
 	member_modifier = {
 		tax_dividends_add = 0.05
@@ -195,7 +191,7 @@ REPLACE:identity_sovereign_empire = {
 	}
 
 	possible = {
-		has_law = law_type:law_monarchy
+		country_has_monarchy_law = yes
 	}
 
 	can_leave = {
@@ -447,7 +443,7 @@ REPLACE:identity_ideological_union = {
 
 		if = { # The forces of reaction
 			limit = {
-				has_law = law_type:law_monarchy
+				country_has_monarchy_law = yes
 				OR = {
 					has_law_or_variant = law_type:law_autocracy
 					has_law_or_variant = law_type:law_oligarchy
@@ -991,7 +987,7 @@ REPLACE:identity_cultural = {
 	}
 
 	ai_weight = {
-		value = 50
+		value = 25
 
 		if = {
 			limit = {
@@ -1000,7 +996,7 @@ REPLACE:identity_cultural = {
 					ig:ig_petty_bourgeoisie ?= { is_in_government = yes }
 				}
 			}
-			add = 100
+			add = 25
 		}
 
 		if = {

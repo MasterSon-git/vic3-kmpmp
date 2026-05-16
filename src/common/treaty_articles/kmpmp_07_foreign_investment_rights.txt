@@ -5,6 +5,9 @@
 	relations_progress_per_day = 0.5
 	relations_improvement_max = 50
 
+	max_target_involvement = 2000
+	target_involvement_applies_to = source_country
+
 	icon = "gfx/interface/icons/diplomatic_treaties_articles_icons/foreign_investment_agreement_treaties.dds"
 
 	flags = {
@@ -33,6 +36,7 @@
 			has_dlc_feature = foreign_investment
 			has_dlc_feature = mp1_treaties
 		}
+		is_revolutionary = no
 	}
 
 	possible = {
@@ -194,7 +198,7 @@
 					}
 					add = {
 						desc = "law_isolationism"
-						add = -100
+						add = -300
 					}
 				}
 
@@ -268,6 +272,19 @@
 						value = -1000
 					}
 				}
+
+				if = {
+					limit = {
+						c:JAP ?= scope:source_country
+						scope:source_country ?= {
+							has_journal_entry = je_meiji_imperial_marriage
+						}
+					}
+					add = {
+						desc = "je_meiji_imperial_marriage"
+						value = -500
+					}
+				}
 			}
 			else = {
 				scope:source_country = {
@@ -288,7 +305,7 @@
 					}
 					add = {
 						desc = "law_isolationism"
-						add = -100
+						add = -300
 					}
 				}
 

@@ -17,8 +17,7 @@ INJECT:company_schichau = {
 	}
 
 	prosperity_modifier = {
-		unit_navy_defense_mult = 0.05 # kmpmp
-		unit_combat_unit_type_long_range_submarine_offense_mult = 0.1 # kmpmp
+		ship_armor_mult = 0.025 # kmpmp
 	}
 }
 
@@ -34,7 +33,7 @@ INJECT:company_siemens_and_halske = {
 # Preußische Staatseisenbahnen
 INJECT:company_prussian_state_railways = {
 	prosperity_modifier = {
-		military_formation_movement_speed_mult = 0.1
+		military_formation_army_movement_speed_mult = 0.1
 		# kmpmp
 		building_coal_mine_throughput_add = 0.10 #0.05
 		building_iron_mine_throughput_add = 0.10 #0.05

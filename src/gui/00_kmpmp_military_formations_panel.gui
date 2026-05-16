@@ -30,7 +30,7 @@ types military_formation_panel_types
 				align = nobaseline
 
 				block "text_position" {}
-				
+
 				block "fontsize" {
 					using = fontsize_large
 				}
@@ -101,7 +101,7 @@ types military_formation_panel_types
 			tooltip = "DEMOBILIZE_ARMY_TOOLTIP"
 			using = close_button_sound
 			using = tooltip_ne
-			
+
 			block "mobilization_icon_size" {
 				size = { 70 70 }
 			}

@@ -4,8 +4,6 @@
 
  GOODS_PRICE_DESC_FIXED:0 "[GOODS.GetName] has a fixed price of @money![GOODS.GetBasePrice|1v] that will never change."
  CIVIL_WAR_MAX_UNSUPPORTED_PROGRESS:0 "This revolution cannot sustain progress above [Multiply_CFixedPoint('(CFixedPoint)$PROGRESS_LIMIT$','(CFixedPoint)100')|0v] because the [concept_political_movement] lacks support from an [concept_interest_group]."
- CIVIL_WAR_PROGRESS_AT_MAX_PROGRESS:1 "#header Weekly Progress\n$TOOLTIP_DELIMITER$\n[concept_revolution] is at current maximum progress of #tooltippable #tooltip:$BREAKDOWN_TAG$ [Multiply_CFixedPoint('(CFixedPoint)$MAX_PROGRESS$','(CFixedPoint)100')|0]#!#!"
- CIVIL_WAR_PROGRESS_ABOVE_MAX_PROGRESS:1 "#header Weekly Progress\n$TOOLTIP_DELIMITER$\n[concept_revolution] is above maximum progress of #tooltippable #tooltip:$BREAKDOWN_TAG$ [Multiply_CFixedPoint('(CFixedPoint)$MAX_PROGRESS$','(CFixedPoint)100')|0]#!#!"
  
  # kmpmp show warning in tooltip if you'd like to declare neutrality where initiator is ally or target is ally/defense pact
  DECLARE_NEUTRALITY_DIPLOMATIC_PLAY_TOOLTIP:0 "Declare yourself to be neutral in this [concept_diplomatic_play][ConcatIfNeitherEmpty('\n\n',DiplomaticPlay.GetDeclareNeutralityValidTooltip(GetPlayer))][ConcatIfNeitherEmpty('\n\n', GetScriptedGui('kmpmp_sgui_diplomatic_play_declare_neutrality_warning').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('diplomatic_play', DiplomaticPlay.MakeScope).End))]"

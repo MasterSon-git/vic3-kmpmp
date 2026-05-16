@@ -87,7 +87,8 @@ NCamera = {
 #	ZOOM_STEPS_MIN_TILT = { 35	35	35	35		35		38		40		40		45		50		50		50		50		50		50		50		}
 #	ZOOM_STEPS_MAX_TILT = { 89	89	89	89		89		89		89		89		89		89		89		89		89		89		89		89		}
 
-	MAX_PAN_TO_ZOOM_STEP = 8 #7							# The camera will lower to this height (but only if above it) when panning to characters/provinces etc.
+	# kmpmp - removed since 1.13 - renamed to TO_ZOOM_STEP_EXTRA_CLOSE = 1 ???
+	# MAX_PAN_TO_ZOOM_STEP = 8 #7							# The camera will lower to this height (but only if above it) when panning to characters/provinces etc.
 }
 
 NCities = {

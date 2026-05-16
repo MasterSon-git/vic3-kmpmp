@@ -4,8 +4,8 @@
     # +25% Convois
     country_convoys_capacity_mult = 0.25
     # +10% Navy OFF DEF
-    unit_navy_defense_mult = 0.1
-    unit_navy_offense_mult = 0.1
+    ship_armor_mult = 0.05
+    ship_hull_damage_mult = 0.05
     # +20% Traderoute Volume
     #country_trade_route_quantity_mult = 0.2
     state_trade_quantity_mult = 0.2

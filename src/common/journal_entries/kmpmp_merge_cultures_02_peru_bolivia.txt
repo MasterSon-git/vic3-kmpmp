@@ -223,7 +223,7 @@ REPLACE:je_peru_bolivia = {
 			}
 			if = {
 				limit = {
-					any_country = {
+					any_country_in_south_america = {
 						has_variable = pbc_member
 						is_player = yes
 					}
@@ -256,7 +256,7 @@ REPLACE:je_peru_bolivia = {
 			}
 			if = {
 				limit = {
-					any_country = {
+					any_country_in_south_america = {
 						has_variable = pbc_member
 						is_player = yes
 					}
@@ -349,5 +349,8 @@ REPLACE:je_peru_bolivia = {
 
 	weight = 10000
 
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_involved = yes
+	should_be_pinned_by_default_uninvolved_or_context = no
+
+	can_revolution_inherit = yes
 }

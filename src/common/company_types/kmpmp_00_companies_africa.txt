@@ -39,7 +39,7 @@ REPLACE:company_egyptian_rail = {
 			has_culture_graphics = arabic
 		}
 		any_scope_state = {
-			region = sr:region_nile_basin
+			is_in_geographic_region = geographic_region_nile_basin
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_railway
@@ -60,7 +60,7 @@ REPLACE:company_egyptian_rail = {
 	ai_will_do = {
 		has_technology_researched = corporate_charters
 		any_scope_state = {
-			region = sr:region_nile_basin
+			is_in_geographic_region = geographic_region_nile_basin
 			is_incorporated = yes
 		}
 	}
@@ -69,7 +69,7 @@ REPLACE:company_egyptian_rail = {
 		building_railway = {
 			level = 5
 			state_trigger = {
-				region = sr:region_nile_basin
+				is_in_geographic_region = geographic_region_nile_basin
 				is_incorporated = yes
 			}
 		}
@@ -112,7 +112,7 @@ REPLACE:company_suez_company = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_nile_basin
+		has_interest_marker_in_region = sr:region_nile_basin
 	}
 
 	attainable = {

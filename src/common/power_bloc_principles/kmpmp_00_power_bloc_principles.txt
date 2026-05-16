@@ -22,7 +22,6 @@ INJECT:principle_construction_3 = {
 INJECT:principle_internal_trade_1 = {
 	member_modifier = {
 		# kmpmp
-		unit_convoy_defense_mult = 0.05
 		building_group_bg_manufacturing_throughput_add = 0.05
 	}
 }
@@ -31,7 +30,6 @@ INJECT:principle_internal_trade_2 = {
 	member_modifier = {
 		# kmpmp
 		# Modifiers from previous level(s)
-		unit_convoy_defense_mult = 0.1
 		building_group_bg_manufacturing_throughput_add = 0.1
 	}
 }
@@ -40,7 +38,6 @@ INJECT:principle_internal_trade_3 = {
 	member_modifier = {
 		# kmpmp
 		# Modifiers from previous level(s)
-		unit_convoy_defense_mult = 0.1
 		building_group_bg_manufacturing_throughput_add = 0.1
 		
 		# unit_convoy_requirements_mult = -0.1 # Removed in 1.12
@@ -52,7 +49,7 @@ INJECT:principle_internal_trade_3 = {
 INJECT:principle_market_unification_1 = {
 	member_modifier = {
 		# Members get a bonus to infrastructure
-		state_infrastructure_mult = -0.1 # = 0.02
+		state_infrastructure_mult = -0.1 # = 0.0
 	}
 }
 
@@ -286,8 +283,6 @@ INJECT:principle_military_industry_3 = {
 		# Modifiers from previous level(s)
 		# kmpmp
 		building_munition_plant_throughput_add = 0.1
-		
-		character_supply_route_cost_mult = 0.08 # = -0.25
 	}
 }
 

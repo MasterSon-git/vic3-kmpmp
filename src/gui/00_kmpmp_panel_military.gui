@@ -30,18 +30,18 @@ types mobilization_options {
 					using = default_button
 					size = { 100% 100% }
 					visible = "[ShouldAskConfirmation(MobilizationOption.Toggle(MilitaryFormation.AccessSelf))]"
-					
+
 					enabled = "[And(Not(MobilizationOption.IsActivated(MilitaryFormation.AccessSelf)), IsValid(MobilizationOption.Toggle(MilitaryFormation.AccessSelf)))]"
 					onclick = "[PopupManager.AskConfirmation(MobilizationOption.Toggle(MilitaryFormation.AccessSelf))]"
 					tooltip = "ACTIVATE_MOBILIZATION_OPTION_BUTTON_TOOLTIP"
 				}
-				
+
 				# Activate button - no confirmation popup
 				button = {
 					using = default_button
 					size = { 100% 100% }
 					visible = "[Not(ShouldAskConfirmation(MobilizationOption.Toggle(MilitaryFormation.AccessSelf)))]"
-					
+
 					enabled = "[And(Not(MobilizationOption.IsActivated(MilitaryFormation.AccessSelf)), IsValid(MobilizationOption.Toggle(MilitaryFormation.AccessSelf)))]"
 					onclick = "[Execute(MobilizationOption.Toggle(MilitaryFormation.AccessSelf))]"
 					tooltip = "ACTIVATE_MOBILIZATION_OPTION_BUTTON_TOOLTIP"
@@ -52,13 +52,13 @@ types mobilization_options {
 			widget = {
 				visible = "[MobilizationOption.IsActivated(MilitaryFormation.AccessSelf)]"
 				size = { 100% 100% }
-				
+
 				# Deactivate button - show confirmation popup
 				button = {
 					using = default_button
 					size = { 100% 100% }
 					visible = "[ShouldAskConfirmation(MobilizationOption.Toggle(MilitaryFormation.AccessSelf))]"
-					
+
 					enabled = "[And(MobilizationOption.IsActivated(MilitaryFormation.AccessSelf), IsValid(MobilizationOption.Toggle(MilitaryFormation.AccessSelf)))]"
 					onclick = "[PopupManager.AskConfirmation(MobilizationOption.Toggle(MilitaryFormation.AccessSelf))]"
 					tooltip = "DEACTIVATE_MOBILIZATION_OPTION_BUTTON_TOOLTIP"
@@ -69,7 +69,7 @@ types mobilization_options {
 					using = default_button
 					size = { 100% 100% }
 					visible = "[Not(ShouldAskConfirmation(MobilizationOption.Toggle(MilitaryFormation.AccessSelf)))]"
-					
+
 					enabled = "[And(MobilizationOption.IsActivated(MilitaryFormation.AccessSelf), IsValid(MobilizationOption.Toggle(MilitaryFormation.AccessSelf)))]"
 					onclick = "[Execute(MobilizationOption.Toggle(MilitaryFormation.AccessSelf))]"
 					tooltip = "DEACTIVATE_MOBILIZATION_OPTION_BUTTON_TOOLTIP"
@@ -141,7 +141,7 @@ types mobilization_options {
 					parentanchor = vcenter
 					multiline = yes
 					autoresize = yes
-					text = "[MilitaryFormation.GetName]"
+					text = "[MilitaryFormation.GetNameNoIcon]"
 					align = nobaseline
 					elide = right
 					margin_right = 3
@@ -269,7 +269,7 @@ types mobilization_options {
 
 			flowcontainer = {
 				minimumsize = { 80 -1 }
-				spacing = 10 
+				spacing = 10
 				tooltip = "MILITARY_FORMATION_MORALE_TOOLTIP"
 				parentanchor = vcenter
 
@@ -314,7 +314,7 @@ types mobilization_options {
 				organization_bar = {
 					size = { 6 24 }
 					parentanchor = vcenter
-					
+
 					blockoverride "organization_value" {
 						value = "[FixedPointToFloat( MilitaryFormation.GetOrganizationPercentage )]"
 					}

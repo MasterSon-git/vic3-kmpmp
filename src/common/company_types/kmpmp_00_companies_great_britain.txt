@@ -1,15 +1,14 @@
 ﻿# Sir W G Armstrong Whitworth & Co Ltd
 INJECT:company_armstrong_whitworth = {
 	prosperity_modifier = {
-		unit_combat_unit_type_interwar_carrier_offense_mult = 0.15 # kmpmp
-		unit_navy_offense_mult = 0.1 # kmpmp
+		ship_hull_damage_mult = 0.05 # kmpmp
 	}
 }
 
 # John Brown & Company
 INJECT:company_john_brown = {
 	prosperity_modifier = {
-		country_convoys_capacity_mult = 0.05
+		country_ship_group_supply_ships_construction_efficiency_add = 0.05
 		# kmpmp
 		building_port_throughput_add = 0.1
 	}

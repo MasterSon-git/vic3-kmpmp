@@ -17,7 +17,6 @@ INJECT:great_power = {
 	prestige_relative_threshold = 0.65 #0.75
 
 	modifier = {
-		country_max_declared_interests_add = 4
 		# kmpmp
 		country_kmpmp_power_bloc_mandate_progress_mult = 0.15
 	}
@@ -27,7 +26,6 @@ INJECT:major_power = {
 	prestige_relative_threshold = 0.4 #0.5
 
 	modifier = {
-		country_max_declared_interests_add = 3
 		# kmpmp
 		country_influence_mult = -0.15
 	}
@@ -37,7 +35,6 @@ INJECT:minor_power = {
 	prestige_relative_threshold = 0.14 #0.15
 
 	modifier = {
-		country_max_declared_interests_add = 3
 		# kmpmp
 		country_influence_mult = -0.25
 	}
@@ -46,7 +43,6 @@ INJECT:minor_power = {
 INJECT:insignificant_power = {
 	modifier = {
 		# kmpmp
-		country_max_declared_interests_add = 2
 		country_influence_mult = -0.25
 	}
 }
@@ -57,14 +53,12 @@ INJECT:insignificant_power = {
 
 INJECT:unrecognized_major_power = {
 	modifier = {
-		country_max_declared_interests_add = 1
 		country_tech_spread_mult = 0.05
 	}
 }
 
 INJECT:unrecognized_regional_power = {
 	modifier = {
-		country_max_declared_interests_add = 1
 		country_tech_spread_mult = 0.05
 	}
 }

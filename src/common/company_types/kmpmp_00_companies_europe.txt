@@ -56,7 +56,7 @@ REPLACE:company_basileiades = {
 	}
 
 	extension_building_types = {
-		building_military_shipyard
+		building_tooling_workshop
 	}
 
 	# kmpmp
@@ -73,7 +73,7 @@ REPLACE:company_basileiades = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_balkans
+		has_interest_marker_in_region = sr:region_balkans
 	}
 
 	attainable = {
@@ -100,7 +100,7 @@ REPLACE:company_basileiades = {
 	}
 
 	prosperity_modifier = {
-		country_convoys_capacity_mult = 0.2
+		country_ship_group_supply_ships_construction_efficiency_add = 0.2
 		state_infrastructure_mult = 0.05
 	}
 
@@ -195,7 +195,7 @@ REPLACE:company_ursus = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_poland
+		has_interest_marker_in_region = sr:region_eastern_europe
 	}
 
 	attainable = {
@@ -278,7 +278,7 @@ REPLACE:company_lilpop = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_poland
+		has_interest_marker_in_region = sr:region_eastern_europe
 	}
 
 	attainable = {
@@ -356,7 +356,7 @@ REPLACE:company_mozambique_company = {
 	building_types = {
 		building_cotton_plantation
 		building_tea_plantation
-		building_rice_farm
+		# building_wheat_farm
 		building_coffee_plantation # kmpmp
 		building_tobacco_plantation # kmpmp
 	}
@@ -457,7 +457,7 @@ REPLACE:company_altos_hornos_de_vizcaya = {
 
 	building_types = {
 		building_steel_mill
-		#building_iron_mine
+		# building_iron_mine
 		building_tooling_workshop
 	}
 
@@ -481,7 +481,7 @@ REPLACE:company_altos_hornos_de_vizcaya = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_iberia
+		has_interest_marker_in_region = sr:region_southern_europe
 	}
 
 	attainable = {
@@ -507,7 +507,7 @@ REPLACE:company_altos_hornos_de_vizcaya = {
 
 	prosperity_modifier = {
 		state_infrastructure_mult = 0.1
-		unit_defense_mult = 0.1 #kmpmp
+		unit_defense_mult = 0.1 # kmpmp
 	}
 
 	ai_will_do = {
@@ -563,7 +563,7 @@ REPLACE:company_espana_industrial = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_iberia
+		has_interest_marker_in_region = sr:region_southern_europe
 	}
 
 	attainable = {
@@ -576,7 +576,7 @@ REPLACE:company_espana_industrial = {
 
 	possible = {
 		has_technology_researched = cotton_gin
-		has_technology_researched = mechanized_workshops
+		has_technology_researched = mechanized_workshops # kmpmp
 		any_scope_state = {
 			state_region = s:STATE_CATALONIA
 			is_incorporated = yes
@@ -660,7 +660,7 @@ REPLACE:company_zastava = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_balkans
+		has_interest_marker_in_region = sr:region_balkans
 	}
 
 	attainable = {
@@ -779,14 +779,10 @@ INJECT:company_chr_hansens = {
 
 # A.P. Møller (later Mærsk)
 INJECT:company_ap_moller = {
-	extension_building_types = {
-		building_military_shipyard # kmpmp
-	}
-
 	prosperity_modifier = {
 		# kmpmp
-		unit_navy_offense_mult = 0.05
-		unit_navy_defense_mult = 0.05
+		ship_hull_damage_mult = 0.025
+		ship_armor_mult = 0.025
 	}
 }
 
@@ -807,7 +803,7 @@ REPLACE:company_cfr = {
 	extension_building_types = {
 		building_motor_industry
 		building_livestock_ranch # kmpmp
-		building_synthetics_plant #kmpmp
+		building_synthetics_plant # kmpmp
 	}
 
 	possible_prestige_goods = {
@@ -901,7 +897,7 @@ REPLACE:company_romanian_star = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_danubia
+		has_interest_marker_in_region = sr:region_balkans
 	}
 
 	attainable = {

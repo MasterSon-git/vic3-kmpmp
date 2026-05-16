@@ -1,14 +1,14 @@
 ﻿# Standard Oil
 INJECT:company_standard_oil = {
 	prosperity_modifier = {
-		building_railway_throughput_add = -0.1
+		building_railway_throughput_add = -0.1 # = 0.1
 	}
 }
 
 # United Fruit Company
 INJECT:company_united_fruit = {
 	prosperity_modifier = {
-		country_infamy_decay_mult = 0.25
+		country_infamy_decay_mult = 0.25 # = 0.0
 		# kmpmp
 		building_cotton_plantation_throughput_add = 0.1
 	}
@@ -17,6 +17,6 @@ INJECT:company_united_fruit = {
 # Ford Motor Company
 INJECT:company_ford_motor = {
 	prosperity_modifier = {
-		building_automotive_industry_throughput_add = 0.05
+		building_automotive_industry_throughput_add = 0.05 # = 0.1
 	}
 }

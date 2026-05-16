@@ -59,8 +59,8 @@ types map_list_panel_types {
 					size = { 25 25 }
 					texture = "gfx/interface/icons/state_status_icons/unincorporated_state.dds"
 				}
-			}		
-			
+			}
+
 		}
 
 		blockoverride "values" {
@@ -208,13 +208,13 @@ types map_list_panel_types {
 				tooltip = "STATE_INFRASTRUCTURE_DESC"
 				parentanchor = vcenter
 				elide = right
-				visible = "[Not(MapListOption.GetBuildingData.GetBuilding.GetBuildingType.IsMilitaryBuilding)]"
+				visible = "[Not(MapListOption.GetBuildingData.GetBuilding.GetBuildingType.GeneratesCombatUnits)]"
 			}
 
 			widget = {
 				# size = { 105 25 }
 				size = { 90 25 }
-				visible = "[MapListOption.GetBuildingData.GetBuilding.GetBuildingType.IsMilitaryBuilding]"
+				visible = "[MapListOption.GetBuildingData.GetBuilding.GetBuildingType.GeneratesCombatUnits]"
 				parentanchor = vcenter
 				textbox = {
 					margin = { 5 0 }
@@ -243,6 +243,24 @@ types map_list_panel_types {
 					elide = right
 					visible = "[IsZero(Building.GetExpansionLevel)]"
 					alpha = "[TransparentIfTrue('(bool)yes')]"
+				}
+			}
+
+			flowcontainer = {
+				visible = "[And(MapListOption.GetBuildingData.GetBuilding.GetBuildingType.IsMilitaryBuilding, Not(MapListOption.GetBuildingData.GetBuilding.GetBuildingType.GeneratesCombatUnits))]"
+				parentanchor = vcenter
+
+				textbox = {
+					visible = "[Not(ObjectsEqual(Building.GetBuildingType, GetBuildingType('building_trade_center').Self))]"
+					margin = { 5 0 }
+					margin_right = 10
+					size = { 150 25 }
+					align = right|nobaseline
+					datacontext = "[MapListOption.GetBuildingData.GetBuilding]"
+					raw_text = "#v [Building.GetBuildingType.GetExpansionRevenueImpact(Building.Self, Building.GetState)|K+=]#!"
+					tooltip = "[Building.GetBuildingType.GetExpansionRevenueImpactDesc(Building.Self, Building.GetState)]"
+					parentanchor = vcenter
+					elide = right
 				}
 			}
 
@@ -308,7 +326,7 @@ types map_list_panel_types {
 				raw_text = "#v [Building.GetState.GetStateRegion.GetStrategicRegion.GetName]#!"
 				parentanchor = vcenter
 				elide = right
-				visible = "[MapListOption.GetBuildingData.GetBuilding.GetBuildingType.IsMilitaryBuilding]"
+				visible = "[MapListOption.GetBuildingData.GetBuilding.GetBuildingType.GeneratesCombatUnits]"
 			}
 		}
 	}
@@ -372,7 +390,7 @@ types map_list_panel_types {
 			tooltip = "BUILDING_MAP_LIST_PANEL_INFRASTRUCTURE_HEADER_TOOLTIP"
 			size = { 60 20 }
 			onclick = "[MapListPanel.Sort('infrastructure_balance')]"
-			visible = "[Not(MapListBuildingPanel.GetBuildingType.IsMilitaryBuilding)]"
+			visible = "[Not(MapListBuildingPanel.GetBuildingType.GeneratesCombatUnits)]"
 
 			icon = {
 				texture = "gfx/interface/icons/state_status_icons/state_infrastructure.dds"
@@ -387,8 +405,17 @@ types map_list_panel_types {
 			text = "concept_units_short"
 			# size = { 105 20 }
 			size = { 90 20 }
-			visible = "[MapListBuildingPanel.GetBuildingType.IsMilitaryBuilding]"
+			visible = "[MapListBuildingPanel.GetBuildingType.GeneratesCombatUnits]"
 			onclick = "[MapListPanel.Sort('units')]"
+		}
+
+		sort_button = {
+			visible = "[And(MapListBuildingPanel.GetBuildingType.IsMilitaryBuilding, Not(MapListBuildingPanel.GetBuildingType.GeneratesCombatUnits))]"
+			align = hcenter|nobaseline
+			text = "BUILDING_MAP_LIST_PANEL_PROFIT_IMPACT_HEADER"
+			tooltip = "BUILDING_MAP_LIST_PANEL_PROFIT_IMPACT_TOOLTIP"
+			size = { 150 20 }
+			onclick = "[MapListPanel.Sort('profit_impact')]"
 		}
 
 		flowcontainer = {
@@ -478,7 +505,7 @@ types map_list_panel_types {
 			text = "[concept_hq]"
 			size = { 105 20 }
 			onclick = "[MapListPanel.Sort('strategic_region')]"
-			visible = "[MapListBuildingPanel.GetBuildingType.IsMilitaryBuilding]"
+			visible = "[MapListBuildingPanel.GetBuildingType.GeneratesCombatUnits]"
 		}
 
 		sort_button = {

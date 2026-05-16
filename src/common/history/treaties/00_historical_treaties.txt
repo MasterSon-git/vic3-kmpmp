@@ -89,6 +89,11 @@
 					source_country = c:GBR
 					target_country = c:POR
 				}
+				{ # British Portuguese Trade Agreement
+					article = trade_privilege
+					source_country = c:POR
+					target_country = c:GBR
+				}
 				{ # Port wine trade
 					article = goods_transfer
 					source_country = c:POR
@@ -363,15 +368,6 @@
 					{ quantity = 10 }
 				}
 			}
-			{ # Naval aid
-				article = goods_transfer
-				source_country = c:USA
-				target_country = c:TEX
-				inputs = {
-					{ goods = g:manowars }
-					{ quantity = 1 }
-				}
-			}
 		}
 	}
 
@@ -542,30 +538,6 @@
 					source_country = c:BEL
 					target_country = c:GBR
 				}
-			}
-		}
-	}
-
-	# Hamburg-Prussian Trade relationship / Not official treaty
-	create_treaty = {
-		name = treaty_name_ham_pru_trade
-		first_country = c:HAM
-		second_country = c:PRU
-
-		is_draft = no
-		entered_into_force_on = 1815.6.9 # Final Act of the Congress of Vienna
-		binding_period = { years = 25 } # 4 years
-
-		articles_to_create = {
-			{ # Hamburg-Prussian Trade Agreement
-				article = trade_privilege
-				source_country = c:HAM
-				target_country = c:PRU
-			}
-			{ # Hamburg-Prussian Trade Agreement
-				article = trade_privilege
-				source_country = c:PRU
-				target_country = c:HAM
 			}
 		}
 	}
@@ -797,41 +769,10 @@
 		binding_period = { years = 60 } # 23 years until the Opening of Japan
 
 		articles_to_create = {
-			{ # Glasswares
-				article = goods_transfer
+			{ # Dejima Trade Agreement
+				article = trade_privilege
 				source_country = c:JAP
 				target_country = c:NET
-				inputs = {
-					{ goods = g:glass }
-					{ quantity = 20 }
-				}
-			}
-			{ # Porcelain Trade
-				article = goods_transfer
-				source_country = c:JAP
-				target_country = c:NET
-				inputs = {
-					{ goods = g:porcelain }
-					{ quantity = 20 }
-				}
-			}
-			{ # Silk Trade
-				article = goods_transfer
-				source_country = c:JAP
-				target_country = c:NET
-				inputs = {
-					{ goods = g:silk }
-					{ quantity = 40 }
-				}
-			}
-			{ # Spirits Trade
-				article = goods_transfer
-				source_country = c:NET
-				target_country = c:JAP
-				inputs = {
-					{ goods = g:liquor }
-					{ quantity = 30 }
-				}
 			}
 		}
 	}
@@ -857,13 +798,74 @@
 				}
 			}
 			{
+				article = money_transfer
+				source_country = c:JAP
+				target_country = c:CHI
+				inputs = {
+					{ quantity = 700 }
+				}
+			}
+			{
 				article = goods_transfer
 				source_country = c:CHI
 				target_country = c:JAP
 				inputs = {
-					{ goods = g:tools }
-					{ quantity = 20 }
+					{ goods = g:sugar }
+					{ quantity = 50 }
 				}
+			}
+		}
+	}
+
+	# Sino-Ryukyuan Tributary relationship / Not official treaty
+	create_treaty = {
+		name = treaty_name_china_ryukyu_agreement
+		first_country = c:CHI
+		second_country = c:RYU
+
+		is_draft = no
+		entered_into_force_on = 1372.1.1 # Year when The Ming emperor sent a mission recognizing the Ryukyuan king and the Ryukyuans began sending tribute missions to China
+		binding_period = { years = 500 }
+
+		articles_to_create = {
+			{
+				article = military_assistance
+				source_country = c:CHI
+				target_country = c:RYU
+			}
+			{
+				article = law_commitment
+				source_country = c:RYU
+				target_country = c:CHI
+				inputs = {
+					{ law_type = law_type:law_monarchy }
+				}
+			}
+			{
+				article = money_transfer
+				source_country = c:RYU
+				target_country = c:CHI
+				inputs = {
+					{ quantity = 100 }
+				}
+			}
+		}
+	}
+
+	# Siam supporting Cambodian independence - TODO fix this PRCAL-39401
+	create_treaty = {
+		first_country = c:SIA
+		second_country = c:CAM
+
+		is_draft = no
+		entered_into_force_on = 1834.1.1 # End of the last war
+		binding_period = { years = 10 } # However long you want, really
+
+		articles_to_create = {
+			{
+				article = support_independence
+				source_country = c:SIA
+				target_country = c:CAM
 			}
 		}
 	}
@@ -875,7 +877,7 @@
 		second_country = c:MON
 
 		is_draft = no
-		entered_into_force_on = 1828.6.15 
+		entered_into_force_on = 1828.6.15
 		binding_period = {
 			years = 18 #35
 		}
@@ -966,14 +968,14 @@
 			}
 		}
 	}
-	
+
 	#######################################################
 	# 			Anti-Cheese Treaties of 1836			  #
 	# not precisely historical, but good for game balance #
 	#######################################################
-	
-	#Historically Russia was giving food to stop Montenegro from Starving. Unfortunately can't be done in our game currently, so it's coming via Austria so they don't starve to death. 
-	
+
+	#Historically Russia was  giving food to stop Montenegro from Starving. Unfortunately can't be done in our game currently, so it's coming via Austria so they don't starve to death.
+
 	#Austria provides transit access and some grain aid (which historically came from Russia but this isn't possible ingame so it must come via Austria)
 	create_treaty = {
 		#name = treaty_name_mon_orthodox_donations
@@ -981,7 +983,7 @@
 		second_country = c:AUS
 
 		is_draft = no
-		entered_into_force_on = 1821.1.15 
+		entered_into_force_on = 1821.1.15
 		binding_period = { years = 40 }
 
 		articles_to_create = {
@@ -994,7 +996,7 @@
 					{ quantity = 18 }
 				}
 			}
-			{ # an apple a day keeps the doctor (economic collapse from trade centres overordering) away. 
+			{ # an apple a day keeps the doctor (economic collapse from trade centres overordering) away.
 				article = goods_transfer
 				source_country = c:AUS
 				target_country = c:MON
@@ -1011,7 +1013,8 @@
 		}
 	}
 
-	
+
+	### South African treaties for initial trading and such
 
 	create_treaty = {
 		first_country = c:GBR
@@ -1019,10 +1022,15 @@
 
 		is_draft = no
 		entered_into_force_on = 1836.1.1
-		binding_period = { years = 25 } 
+		binding_period = { years = 10 }
 
 		articles_to_create = {
 			{
+				article = transit_rights
+				source_country = c:GBR
+				target_country = c:ORA
+			}
+			{ # Guarantee of Independence
 				article = guarantee_independence
 				source_country = c:GBR
 				target_country = c:ORA
@@ -1036,17 +1044,117 @@
 
 		is_draft = no
 		entered_into_force_on = 1836.1.1
-		binding_period = { years = 25 } 
+		binding_period = { years = 10 }
 
 		articles_to_create = {
 			{
+				article = transit_rights
+				source_country = c:GBR
+				target_country = c:TRN
+			}
+			{ # Guarantee of Independence
 				article = guarantee_independence
 				source_country = c:GBR
 				target_country = c:TRN
 			}
 		}
 	}
-	
+
+	create_treaty = {
+		first_country = c:ORA
+		second_country = c:TRN
+
+		is_draft = no
+		entered_into_force_on = 1836.1.1
+		binding_period = { years = 10 }
+
+		articles_to_create = {
+			{
+				article = transit_rights
+				source_country = c:ORA
+				target_country = c:TRN
+			}
+		}
+	}
+
+	create_treaty = {
+		first_country = c:PHL
+		second_country = c:ORA
+
+		is_draft = no
+		entered_into_force_on = 1836.1.1
+		binding_period = { years = 10 }
+
+		articles_to_create = {
+			{
+				article = transit_rights
+				source_country = c:PHL
+				target_country = c:ORA
+			}
+		}
+	}
+
+	create_treaty = {
+		first_country = c:WBL
+		second_country = c:TRN
+
+		is_draft = no
+		entered_into_force_on = 1836.1.1
+		binding_period = { years = 10 }
+
+		articles_to_create = {
+			{
+				article = transit_rights
+				source_country = c:WBL
+				target_country = c:TRN
+			}
+		}
+	}
+
+	create_treaty = {
+		first_country = c:GBR
+		second_country = c:PHL
+
+		is_draft = no
+		entered_into_force_on = 1836.1.1
+		binding_period = { years = 10 }
+
+		articles_to_create = {
+			{
+				article = transit_rights
+				source_country = c:GBR
+				target_country = c:PHL
+			}
+			{ # Guarantee of Independence
+				article = guarantee_independence
+				source_country = c:GBR
+				target_country = c:PHL
+			}
+		}
+	}
+
+	create_treaty = {
+		first_country = c:GBR
+		second_country = c:WBL
+
+		is_draft = no
+		entered_into_force_on = 1836.1.1
+		binding_period = { years = 10 }
+
+		articles_to_create = {
+			{
+				article = transit_rights
+				source_country = c:GBR
+				target_country = c:WBL
+			}
+			{ # Guarantee of Independence
+				article = guarantee_independence
+				source_country = c:GBR
+				target_country = c:WBL
+			}
+		}
+	}
+
 	# Yemen coffee trade
 	create_treaty = {
 		first_country = c:LAH

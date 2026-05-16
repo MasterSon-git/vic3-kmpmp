@@ -593,11 +593,11 @@ types diplomatic_play_panel_types
 							text = "[DiplomaticPlay.GetNumLeaningTotalBattalionsForSide( DiplomaticPlay.GetInitiator )]"
 						}
 
-						blockoverride "involved_flotillas_tooltip" {
+						blockoverride "involved_ships_tooltip" {
 							tooltip = "[DiplomaticPlay.GetNumLeaningTotalWarshipsForSideBreakdown( DiplomaticPlay.GetInitiator )]"
 						}
 
-						blockoverride "involved_flotillas_alpha" {
+						blockoverride "involved_ships_alpha" {
 							alpha = "[TransparentIfZero_int32(DiplomaticPlay.GetNumLeaningTotalWarshipsForSide( DiplomaticPlay.GetInitiator ))]"
 						}
 
@@ -632,11 +632,11 @@ types diplomatic_play_panel_types
 							text = "[DiplomaticPlay.GetNumOnTheFenceTotalBattalions]"
 						}
 
-						blockoverride "involved_flotillas_tooltip" {
+						blockoverride "involved_ships_tooltip" {
 							tooltip = "[DiplomaticPlay.GetNumOnTheFenceWarshipsBreakdown]"
 						}
 
-						blockoverride "involved_flotillas_alpha" {
+						blockoverride "involved_ships_alpha" {
 							alpha = "[TransparentIfZero_int32(DiplomaticPlay.GetNumOnTheFenceTotalWarships)]"
 						}
 
@@ -671,11 +671,11 @@ types diplomatic_play_panel_types
 							text = "[DiplomaticPlay.GetNumLeaningTotalBattalionsForSide( DiplomaticPlay.GetTarget )]"
 						}
 
-						blockoverride "involved_flotillas_tooltip" {
+						blockoverride "involved_ships_tooltip" {
 							tooltip = "[DiplomaticPlay.GetNumLeaningTotalWarshipsForSideBreakdown( DiplomaticPlay.GetTarget )]"
 						}
 
-						blockoverride "involved_flotillas_alpha" {
+						blockoverride "involved_ships_alpha" {
 							alpha = "[TransparentIfZero_int32(DiplomaticPlay.GetNumLeaningTotalWarshipsForSide( DiplomaticPlay.GetTarget ))]"
 						}
 

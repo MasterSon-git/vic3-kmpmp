@@ -8,6 +8,7 @@
 	commander_rank = default
 	interest_group = ig_armed_forces
 	birth_date = 1796.4.16 #1791.4.16
+	home_region = STATE_PIEDMONT
 	traits = {
 		trench_rat
 	}
@@ -29,6 +30,6 @@
 		role = general
 		earliest_usage_date = 1836.1.1
 		latest_usage_date = 1850.1.1
-		chance = 50
+		#guaranteed to spawn if possible
 	}
 }

@@ -68,7 +68,7 @@
 	if = {
 		limit = {
 			NOT = {
-				has_law = law_type:law_monarchy
+				country_has_monarchy_law = yes
 			}
 		}
 		hidden_effect = {

@@ -1,6 +1,3 @@
-﻿REPLACE:combat_unit_group_cavalry = {
-    type = army
+﻿INJECT:combat_unit_group_cavalry = {
     default_group = yes
-    color = { 172 235 121 }
-    icon = "gfx/interface/icons/generic_icons/battalions.dds"
 }
