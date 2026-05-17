@@ -3,7 +3,7 @@
 		workforce_scaled = {
 			country_prestige_add = -30
 			# bc
-			country_convoys_capacity_mult = 0.1
+			country_ship_group_supply_ships_construction_efficiency_add = 0.1
 		}
 	}
 
@@ -40,7 +40,7 @@ REPLACE_OR_CREATE:pm_canals_mint = {
 	country_modifiers = {
 		workforce_scaled = {
 			country_prestige_add = 70
-			country_convoys_capacity_mult = 0.1
+			country_ship_group_supply_ships_construction_efficiency_add = 0.1
 			country_minting_add = 1000
 		}
 	}
@@ -74,7 +74,7 @@ REPLACE_OR_CREATE:pm_canals_eletric = {
 	country_modifiers = {
 		workforce_scaled = {
 			country_prestige_add = 100
-			country_convoys_capacity_mult = 0.1
+			country_ship_group_supply_ships_construction_efficiency_add = 0.1
 		}
 	}
 
@@ -114,7 +114,7 @@ REPLACE_OR_CREATE:pm_canals_oil = {
 	country_modifiers = {
 		workforce_scaled = {
 			country_prestige_add = 150
-			country_convoys_capacity_mult = 0.1
+			country_ship_group_supply_ships_construction_efficiency_add = 0.1
 		}
 	}
 

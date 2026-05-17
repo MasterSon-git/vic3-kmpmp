@@ -22,10 +22,11 @@ REPLACE:company_pernambuco_textiles = {
 	building_types = {
 		building_cotton_plantation #kmpmp
 		building_sugar_plantation #kmpmp
-		#building_textile_mill
+		# building_textile_mill
 	}
 
 	extension_building_types = {
+		# building_cotton_plantation
 		building_textile_mill #kmpmp
 		building_livestock_ranch
 		building_dye_plantation #kmpmp
@@ -45,7 +46,7 @@ REPLACE:company_pernambuco_textiles = {
 
 	potential = {
 		has_dlc_feature = rp1_content
-		has_interest_marker_in_region = region_brazil
+		has_interest_marker_in_region = sr:region_brazil
 	}
 
 	attainable = {
@@ -136,7 +137,7 @@ REPLACE:company_estanifera_llallagua = {
 
 	potential = {
 		has_dlc_feature = rp1_content
-		has_interest_marker_in_region = region_andes
+		has_interest_marker_in_region = sr:region_andes
 	}
 
 	attainable = {

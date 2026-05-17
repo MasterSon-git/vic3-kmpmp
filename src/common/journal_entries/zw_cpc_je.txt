@@ -39,5 +39,4 @@
 
 	weight = 99999
 
-	should_be_pinned_by_default = yes
 }

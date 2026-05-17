@@ -45,6 +45,16 @@ REPLACE:dp_annex_subject = {
 				}
 			}
 		}
+		NAND = {
+			is_involved_in_journal_entry = je_ryukyu_rivalry
+			scope:target_country = {
+				c:RYU ?= this
+			}
+		}
+		NAND = {
+			c:JAP ?= this
+			has_law_or_variant = law_type:law_serfdom # Proxy for feudalism
+		}
 	}
 
 	ai_acceptance_max = 75

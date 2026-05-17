@@ -113,7 +113,7 @@ REPLACE_OR_CREATE:kmpmp_globalism = {
 	modifier = {
 		country_max_companies_add = 1
 		state_trade_capacity_mult = 0.25
-		country_convoys_capacity_mult = 0.1
+		country_ship_group_supply_ships_construction_efficiency_add = 0.1
 	}
 
 	unlocking_technologies = {

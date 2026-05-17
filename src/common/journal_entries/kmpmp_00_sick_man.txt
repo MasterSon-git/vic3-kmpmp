@@ -41,8 +41,8 @@
 		}
 		if = {
 			limit = {
-				is_in_power_bloc = yes
-				is_power_bloc_leader = yes
+	       		is_in_power_bloc = yes
+	        	is_power_bloc_leader = yes
 			}
 			custom_tooltip = sick_man_of_europe_lose_power_bloc
 		}
@@ -95,7 +95,8 @@
 
 	weight = 10000
 
-	should_be_pinned_by_default = yes
+
+	should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
 # Literacy and Universities
@@ -145,7 +146,8 @@ REPLACE:je_sick_man_education = {
 
 	weight = 5000
 
-	should_be_pinned_by_default = yes
+
+	should_be_pinned_by_default_uninvolved_or_context = yes
 
 	progressbar = yes
 }

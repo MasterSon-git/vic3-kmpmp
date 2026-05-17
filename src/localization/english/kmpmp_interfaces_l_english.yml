@@ -16,21 +16,6 @@
  combat_unit_type_interwar_light_tanks: "Recon Tank"
  combat_unit_type_interwar_light_tanks_desc: "Fast and lightly armored tanks used for scouting and flanking operations."
 
- combat_unit_type_battleship_bismarck_class: "Bismarck Class Battleship"
- combat_unit_type_battleship_bismarck_class_desc: "A powerful battleship class equipped with heavy armor and long-range guns, designed to dominate naval engagements."
-
- combat_unit_type_heavy_cruiser: "Heavy Cruiser"
- combat_unit_type_heavy_cruiser_desc: "A well-balanced warship with strong armor and firepower, suited for independent operations or fleet support."
-
- combat_unit_type_long_range_submarine: "Long Range Submarine"
- combat_unit_type_long_range_submarine_desc: "Designed for extended missions, these submarines can operate far from friendly ports and strike distant shipping lanes."
-
- combat_unit_type_anti_submarine_destroyer: "Anti Submarine Destroyer"
- combat_unit_type_anti_submarine_destroyer_desc: "Equipped with sonar and depth charges to locate and neutralize enemy submarines."
-
- combat_unit_type_interwar_carrier: "Fleet Carrier"
- combat_unit_type_interwar_carrier_desc: "Purpose-built capital ships capable of launching a large number of aircraft for offensive operations at sea."
-
  kmpmp_treaty_adjust_binding_days_tt:0 "Adjusts the treaty binding duration, but not below #v 3 Years#! and not above #v 99 Years#!.\n\n• Click (#white 1 Year#!)\n• $SHORTCUT_KEY_MOD_shift$Click (#white 5 Years#!)\n• $SHORTCUT_KEY_MOD_ctrl$Click (#white 10 Years#!)\n• $SHORTCUT_KEY_MOD_alt$Click (#white 20 Years#!)"
 
  #KMPMP_SGUI_DIPLOMATIC_PLAY_DECLARE_NEUTRALITY_WARNING: "#title #r Warning#!#! [ROOT.GetCountry.GetNameNoFlag] has [SCOPE.sTreatyArticle('treaty_article').GetNameNoIcon] with [SCOPE.sCountry('other').GetNameNoFlag]"

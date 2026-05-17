@@ -14,7 +14,7 @@
 		every_subject_or_below = {
 			limit = {
 				any_scope_state = {
-					region = sr:region_persia
+					region = sr:region_greater_persia
 				}
 			}
 			ROOT = {

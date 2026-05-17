@@ -31,7 +31,6 @@ zw_effect_remove_disallowed_building_type_all = {
 	zw_effect_remove_disallowed_building_type = { building_1 = building_steel_mill }
 	zw_effect_remove_disallowed_building_type = { building_1 = building_motor_industry }
 	zw_effect_remove_disallowed_building_type = { building_1 = building_shipyard }
-	zw_effect_remove_disallowed_building_type = { building_1 = building_military_shipyard }
 	zw_effect_remove_disallowed_building_type = { building_1 = building_automotive_industry }
 	zw_effect_remove_disallowed_building_type = { building_1 = building_electrics_industry }
 	zw_effect_remove_disallowed_building_type = { building_1 = building_arms_industry }

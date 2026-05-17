@@ -1,28 +1,8 @@
 ﻿country_is_valid_for_je_master_of_mediterranean_sea = {
-    # Balkan, Anatolia, Arabia, Nile, North Africa, Iberia, Occitania, Italy
+    # Near East, Nile Basin, North Africa, South Europe, Balkans
     save_temporary_scope_as = country_to_check
     OR = {
-        sr:region_anatolia = {
-            any_scope_state = {
-                owner = scope:country_to_check
-            }
-        }
-        sr:region_arabic = {
-            any_scope_state = {
-                owner = scope:country_to_check
-            }
-        }
-        sr:region_balkans = {
-            any_scope_state = {
-                owner = scope:country_to_check
-            }
-        }
-        sr:region_iberia = {
-            any_scope_state = {
-                owner = scope:country_to_check
-            }
-        }
-        sr:region_italy = {
+        sr:region_near_east = {
             any_scope_state = {
                 owner = scope:country_to_check
             }
@@ -37,7 +17,12 @@
                 owner = scope:country_to_check
             }
         }
-        sr:region_occitania = {
+        sr:region_southern_europe = {
+            any_scope_state = {
+                owner = scope:country_to_check
+            }
+        }
+        sr:region_balkans = {
             any_scope_state = {
                 owner = scope:country_to_check
             }

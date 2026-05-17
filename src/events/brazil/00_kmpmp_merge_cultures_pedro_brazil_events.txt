@@ -62,7 +62,7 @@ pedro.7 = {
 				NOT = {
 					THIS = ROOT
 				}
-				has_interest_marker_in_region = region_brazil
+				has_interest_marker_in_region = sr:region_brazil
 			}
 			post_notification = brz_isabel_accession
 		}

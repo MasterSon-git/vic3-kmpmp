@@ -1,22 +1,4 @@
-﻿### ERA 1
-
-INJECT:paddle_steamer = {
-	modifier = {
-		# kmpmp
-		country_max_declared_interests_add = 1
-	}
-}
-
-### ERA 2
-
-INJECT:screw_frigate = {
-	modifier = {
-		# kmpmp
-		country_max_declared_interests_add = 1
-	}
-}
-
-### ERA 3
+﻿### ERA 3
 
 INJECT:electric_telegraph = {
 	modifier = {
@@ -34,27 +16,6 @@ INJECT:military_statistics = {
 	}
 }
 
-INJECT:self_propelled_torpedoes = {
-	modifier = {
-		# kmpmp
-		country_max_declared_interests_add = 2
-	}
-}
-
-INJECT:monitor_tech = {
-	modifier = {
-		# kmpmp
-		country_max_declared_interests_add = 2
-	}
-}
-
-INJECT:ironclad_tech = {
-	modifier = {
-		# kmpmp
-		country_max_declared_interests_add = 2
-	}
-}
-
 ### ERA 4
 
 INJECT:war_propaganda = {
@@ -69,25 +30,4 @@ INJECT:wargaming = {
 		# qwf
 		country_institution_qwf_conscription_max_investment_add = 1
     }
-}
-
-INJECT:submarine = {
-	modifier = {
-		# kmpmp
-		country_max_declared_interests_add = 2
-	}
-}
-
-INJECT:destroyer = {
-	modifier = {
-		# kmpmp
-		country_max_declared_interests_add = 2
-	}
-}
-
-INJECT:sea_lane_strategies = {
-	modifier = {
-		# kmpmp
-		country_max_declared_interests_add  = 2
-	}
 }

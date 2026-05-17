@@ -16,8 +16,8 @@ INJECT:company_vodka_monopoly = {
 INJECT:company_putilov_company = {
 	prosperity_modifier = {
 		# kmpmp
-		unit_navy_offense_mult = 0.05
-		unit_navy_defense_mult = 0.05
+		ship_hull_damage_mult = 0.025
+		ship_armor_mult = 0.025
 	}
 }
 

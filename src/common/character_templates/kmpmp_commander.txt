@@ -8,6 +8,7 @@
 	commander_rank = default
 	interest_group = ig_landowners
 	birth_date = 1797.1.1
+	home_region = STATE_HOLLAND
 	traits = {
 		trench_rat
         basic_defensive_strategist

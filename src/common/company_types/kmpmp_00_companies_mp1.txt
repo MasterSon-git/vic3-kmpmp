@@ -83,64 +83,10 @@ INJECT:company_norsk_hydro = {
 }
 
 # John Holt and Company
-REPLACE:company_john_holt = {
-	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_john_holt.dds"
-	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
-
-	flavored_company = yes
-
-	building_types = {
-		building_rubber_plantation
-		building_logging_camp
-		building_port
-	}
-
-	extension_building_types = {
-		building_shipyard
-	}
-
-	potential = {
-		has_interest_marker_in_region = region_niger
-	}
-
-	attainable = {
-	}
-
-	possible = {
-		has_technology_researched = rubber_mastication
-		any_scope_state = {
-			region = sr:region_niger
-			any_scope_building = {
-				is_building_type = building_rubber_plantation
-				level >= 5
-			}
-			count >= 6
-		}
-	}
-
+INJECT:company_john_holt = {
 	prosperity_modifier = {
-		building_group_bg_plantations_throughput_add = 0.15 #0.1
-		country_bureaucracy_investment_cost_factor_mult = -0.1 #-0.05
-	}
-
-	ai_will_do = {
-		has_technology_researched = rubber_mastication
-		any_scope_state = {
-			region = sr:region_niger
-		}
-	}
-
-	ai_construction_targets = {
-		building_rubber_plantation = {
-			level = 5
-			state_trigger = {
-				region = sr:region_niger
-			}
-		}
-	}
-
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
+		building_group_bg_plantations_throughput_add = 0.05 # = 0.15
+		country_bureaucracy_investment_cost_factor_mult = -0.05 # = -0.1
 	}
 }
 
@@ -151,7 +97,6 @@ INJECT:company_imperial_ethiopian_railways = {
 		building_tobacco_plantation_throughput_add = 0.1 #kmpmp
 	}
 }
-
 
 # Lanfang Kongsi
 INJECT:company_lanfang_kongsi = {

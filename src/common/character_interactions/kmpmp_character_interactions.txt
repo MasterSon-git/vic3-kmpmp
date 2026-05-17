@@ -3,7 +3,7 @@
     clicksound = "event:/SFX/UI/Military/commander_promote"
 
     potential = {
-        is_heir = yes
+        is_heir_of_own_country = yes
         owner = scope:actor
         NOT = {
             has_modifier = kmpmp_character_schooling_heir_ig_in_progress

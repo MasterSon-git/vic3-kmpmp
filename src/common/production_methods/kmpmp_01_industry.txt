@@ -311,6 +311,12 @@ REPLACE:pm_arc_welding_shipbuilding = {
 		arc_welding
 	}
 
+	country_modifiers = {
+		workforce_scaled = {
+			country_ship_construction_add = 20
+		}
+	}
+
 	state_modifiers = {
 		workforce_scaled = {
 			state_pollution_generation_add = 20
@@ -334,35 +340,6 @@ REPLACE:pm_arc_welding_shipbuilding = {
 			building_employment_laborers_add = 1000
 			building_employment_machinists_add = 2000
 			building_employment_engineers_add = 1500
-		}
-	}
-
-	# required_input_goods = electricity
-}
-
-REPLACE:pm_military_shipbuilding_steam_2 = {
-	texture = "gfx/interface/icons/production_method_icons/military_shipbuilding_steam_2.dds"
-	
-	unlocking_technologies = {
-		arc_welding
-	}
-	
-	building_modifiers = {
-		workforce_scaled = {
-			#input
-			goods_input_steel_add = 40
-			goods_input_electricity_add = 30
-			goods_input_engines_add = 20
-
-			# output goods
-			goods_output_ironclads_add = 70
-		}
-		level_scaled = {
-			# employment
-			building_employment_shopkeepers_add = 500
-			building_employment_laborers_add = 2000
-			building_employment_machinists_add = 1500
-			building_employment_engineers_add = 1000
 		}
 	}
 

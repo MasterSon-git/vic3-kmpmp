@@ -190,26 +190,6 @@ INJECT_OR_CREATE:building_shipyard = {
 	}
 }
 
-INJECT_OR_CREATE:building_military_shipyard = {
-
-	can_build_government = {
-		zw_trigger_gov_investment = {
-			building_1 = building_military_shipyard
-			bgs_1 = industry
-		}
-	}
-
-	can_build_private = {
-		zw_trigger_autonom_investment_manufacture = {
-			building_1 = building_military_shipyard
-		}
-	}
-
-	should_auto_expand = {
-		zw_trigger_auto_expand_building_military_shipyard = yes
-	}
-}
-
 INJECT_OR_CREATE:building_automotive_industry = {
 
 	can_build_government = {

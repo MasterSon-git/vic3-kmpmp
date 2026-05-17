@@ -6,8 +6,8 @@ INJECT:company_imperial_arsenal = {
 
 	prosperity_modifier = {
 		building_motor_industry_throughput_add = 0.1 # kmpmp
-		unit_navy_defense_mult = -0.025
-		unit_navy_offense_mult = 0.075 # kmpmp
+		ship_armor_mult = -0.0125
+		ship_hull_damage_mult = 0.0375 # kmpmp
 	}
 }
 
@@ -50,7 +50,7 @@ REPLACE:company_allatini_mills = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_balkans
+		has_interest_marker_in_region = sr:region_balkans
 	}
 
 	attainable = {
@@ -162,7 +162,7 @@ REPLACE:company_sunhwaguk = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_manchuria
+		has_interest_marker_in_region = sr:region_northeast_asia
 	}
 
 	attainable = {
@@ -243,13 +243,13 @@ REPLACE:company_imperial_tobacco = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_persia
+		has_interest_marker_in_region = sr:region_greater_persia
 	}
 
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
-				region = sr:region_persia
+				region = sr:region_greater_persia
 			}
 		}
 	}
@@ -257,7 +257,7 @@ REPLACE:company_imperial_tobacco = {
 	possible = {
 		has_technology_researched = corporate_charters
 		any_scope_state = {
-			region = sr:region_persia
+			region = sr:region_greater_persia
 			is_incorporated = yes
 			any_scope_building = {
 				# is_building_type = building_tobacco_plantation
@@ -277,7 +277,7 @@ REPLACE:company_imperial_tobacco = {
 	ai_will_do = {
 		has_technology_researched = corporate_charters
 		any_scope_state = {
-			region = sr:region_persia
+			region = sr:region_greater_persia
 			is_incorporated = yes
 			has_potential_resource = building_tobacco_plantation
 			count >= 4
@@ -288,7 +288,7 @@ REPLACE:company_imperial_tobacco = {
 		building_tobacco_plantation = {
 			level = 5
 			state_trigger = {
-				region = sr:region_persia
+				region = sr:region_greater_persia
 				is_incorporated = yes
 			}
 		}
@@ -329,7 +329,7 @@ REPLACE:company_san_miguel = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_indonesia
+		has_interest_marker_in_region = sr:region_indonesia
 	}
 
 	attainable = {
@@ -411,7 +411,7 @@ REPLACE:company_b_grimm = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_indochina
+		has_interest_marker_in_region = sr:region_indochina
 	}
 
 	attainable = {

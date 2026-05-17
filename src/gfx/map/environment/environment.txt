@@ -66,9 +66,9 @@ tree_sway_world_direction = { -1 0 -1 }
 
 ######## Graphics ########
 # Bloom
-bloom_strength = 0.113
-bloom_steepness = 1.49
-bloom_threshold = 0.15
+bloom_strength = 0.25 # papermap 0.113
+bloom_steepness = 1.0 # Not used # papermap 1.49
+bloom_threshold = 1.0 # papermap 0.15
 
 # Map global SSAO settings
 ssao = {

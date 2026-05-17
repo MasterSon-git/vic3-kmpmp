@@ -12,7 +12,7 @@ REPLACE_OR_CREATE:company_rubber_corporation_indochina = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_indochina
+		has_interest_marker_in_region = sr:region_indochina
 	}
 
 	attainable = {
@@ -78,8 +78,7 @@ REPLACE_OR_CREATE:company_taiwanese_tea = {
 	}
 
 	potential = {
-		has_dlc_feature = mp1_content
-		has_interest_marker_in_region = region_south_china
+		has_interest_marker_in_region = sr:region_south_china
 	}
 
 	attainable = {
@@ -152,7 +151,7 @@ REPLACE_OR_CREATE:company_imperial_porcelan_company = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_russia
+		has_interest_marker_in_region = sr:region_russia
 	}
 
 	attainable = {
@@ -241,7 +240,7 @@ REPLACE_OR_CREATE:company_heineken_international = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_rhine
+		has_interest_marker_in_region = sr:region_western_europe
 	}
 	
 	attainable = {
@@ -355,7 +354,7 @@ REPLACE_OR_CREATE:company_shell = {
 	}
 
 	prosperity_modifier = {
-		country_convoys_capacity_mult = 0.15
+		country_ship_group_supply_ships_construction_efficiency_add = 0.15
 		building_power_plant_throughput_add = 0.10 #0.05
 		building_textile_mill_throughput_add = 0.1
 	}
@@ -419,7 +418,7 @@ REPLACE_OR_CREATE:company_persian_luxury_goods = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_persia
+		has_interest_marker_in_region = sr:region_greater_persia
 	}
 
 	attainable = {
@@ -428,7 +427,7 @@ REPLACE_OR_CREATE:company_persian_luxury_goods = {
 
 	possible = {
 		any_scope_state = {
-			region = sr:region_persia
+			region = sr:region_greater_persia
 			is_incorporated = yes
 			any_scope_building = {
 				OR = {
@@ -448,7 +447,7 @@ REPLACE_OR_CREATE:company_persian_luxury_goods = {
 
 	ai_will_do = {
 		any_scope_state = {
-			region = sr:region_persia
+			region = sr:region_greater_persia
 			is_incorporated = yes
 		}
 	}
@@ -457,7 +456,7 @@ REPLACE_OR_CREATE:company_persian_luxury_goods = {
 		building_textile_mill = {
 			level = 5
 			state_trigger = {
-				region = sr:region_persia
+				region = sr:region_greater_persia
 				is_incorporated = yes
 			}
 		}
@@ -492,7 +491,7 @@ REPLACE_OR_CREATE:company_korean_tungsten_company = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_manchuria
+		has_interest_marker_in_region = sr:region_northeast_asia
 	}
 
 	attainable = {
@@ -517,8 +516,8 @@ REPLACE_OR_CREATE:company_korean_tungsten_company = {
 	}
 
 	prosperity_modifier = {
-		building_steel_mill_throughput_add = 0.10
-		building_military_shipyard_throughput_add = 0.10
+		building_steel_mill_throughput_add = 0.1
+		building_shipyard_throughput_add = 0.1
 	}
 
 	ai_will_do = {
@@ -576,7 +575,7 @@ REPLACE_OR_CREATE:company_imperial_arsenal_japan = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_japan
+		has_interest_marker_in_region = sr:region_northeast_asia
 	}
 
 	attainable = {
@@ -648,7 +647,7 @@ REPLACE_OR_CREATE:company_genda_shigyo = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_japan
+		has_interest_marker_in_region = sr:region_northeast_asia
 	}
 
 	attainable = {
@@ -721,7 +720,7 @@ REPLACE_OR_CREATE:company_la_plata_mining = {
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_la_plata
+		has_interest_marker_in_region = sr:region_la_plata
 	}
 
 	attainable = {
@@ -782,17 +781,13 @@ REPLACE_OR_CREATE:company_la_plata_mining = {
 
 	ai_will_do = {
 		any_scope_state = {
-			state_region = s:STATE_CHUGOKU
-			is_incorporated = yes
-		}
-	}
-
-	ai_construction_targets = {
-		building_paper_mill = {
-			level = 5
-			state_trigger = {
-				state_region = s:STATE_CHUGOKU
+			OR = {
+				state_region = s:STATE_LOS_RIOS
+				state_region = s:STATE_ARAUCANIA
+				state_region = s:STATE_PATAGONIA
 			}
+			is_incorporated = yes
+			count >= 3
 		}
 	}
 

@@ -101,7 +101,7 @@ kmpmp_is_chinese_country = {
     OR = {
         capital.region = sr:region_north_china
         capital.region = sr:region_south_china
-        capital.region = sr:region_manchuria
+        capital.region = sr:region_northeast_asia
         capital.region = sr:region_central_asia
         capital.region = sr:region_himalayas
     }

@@ -41,8 +41,9 @@ algeria_events.1 = {
 		}
 		random_scope_character = {
 			limit = {
-				has_role = general
-				is_ruler = no
+				has_role_of_type = general
+				is_ruler_of_own_country = no
+				character_is_valid_for_events = yes
 			}
 			save_scope_as = algerian_parade_general_scope
 		}
@@ -460,7 +461,7 @@ algeria_events.8 = {
 			custom_tooltip = {
 				text = algeria_events.8.tt.1
 				has_variable = algeria_constantine_var
-				has_law = law_type:law_monarchy
+				country_has_monarchy_law = yes
 			}
 		}
 		set_variable = algeria_deylik_restored
@@ -488,10 +489,10 @@ algeria_events.8 = {
 			custom_tooltip = {
 				text = algeria_events.8.tt.1
 				has_variable = algeria_constantine_var
-				has_law = law_type:law_monarchy
+				country_has_monarchy_law = yes
 				exists = c:TUR
 				c:TUR ?= {
-					has_law = law_type:law_monarchy
+					country_has_monarchy_law = yes
 				}
 			}
 		}

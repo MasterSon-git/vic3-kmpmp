@@ -141,27 +141,3 @@ INJECT:expert_artillery_commander = {
 		}
 	}
 }
-
-INJECT:convoy_raider_commander = {
-	command_modifier = {
-		unit_combat_unit_type_long_range_submarine_offense_mult = 0.1
-	}
-}
-
-INJECT:experienced_convoy_raider = {
-	command_modifier = {
-		unit_combat_unit_type_long_range_submarine_offense_mult = 0.15
-	}
-}
-
-INJECT:expert_convoy_raider = {
-	command_modifier = {
-		unit_combat_unit_type_long_range_submarine_offense_mult = 0.25
-	}
-}
-
-INJECT:traditionalist_commander = {
-	command_modifier = {
-		unit_combat_unit_type_interwar_carrier_offense_mult = -0.1
-	}
-}

@@ -13,7 +13,7 @@ FAE_battle_condition_attacker_fort_breached = {
     possible = {
         # Generals existence check
         scope:character ?= {
-            has_role = general
+            has_role_of_type = general
             exists   = opposing_commander
         }
         
@@ -111,7 +111,7 @@ FAE_battle_condition_defender_fort_breached = {
     instant_switch = {
         # Generals existence check
         scope:character ?= {
-            has_role = general
+            has_role_of_type = general
             exists   = opposing_commander
         }
         

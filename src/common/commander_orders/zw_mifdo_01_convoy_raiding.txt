@@ -1,3 +1,0 @@
-﻿INJECT:raid_unrestricted_sub = {
-	texture = "gfx/interface/icons/commander_order_icons/zw_raid_wolf_pack.dds"
-}

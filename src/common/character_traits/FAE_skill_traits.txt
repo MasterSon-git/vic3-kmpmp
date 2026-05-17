@@ -9,7 +9,7 @@
     }
 
     possible = {
-        has_role = general
+        has_role_of_type = general
         owner ?= {
             has_technology_researched = field_works
 		}
@@ -90,7 +90,7 @@ FAE_trait_combat_engineer_2 = {
     }
 
     possible = {
-        has_role  = general
+        has_role_of_type = general
         has_trait = FAE_trait_combat_engineer_1
         NOT = {
             age < define:NCharacters|ADULT_AGE
@@ -168,7 +168,7 @@ FAE_trait_combat_engineer_3 = {
     }
 
     possible = {
-        has_role  = general
+        has_role_of_type = general
         has_trait = FAE_trait_combat_engineer_2
         NOT = {
             age < define:NCharacters|ADULT_AGE

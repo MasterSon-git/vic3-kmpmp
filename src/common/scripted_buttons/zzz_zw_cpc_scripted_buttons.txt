@@ -158,7 +158,6 @@
 		visible = { has_variable = zw_var_auto_invest_disallow_building }
 		selected = {
 			OR = {
-				has_variable = zw_var_auto_invest_disallow_building_military_shipyard
 				has_variable = zw_var_auto_invest_disallow_building_arms_industry
 				has_variable = zw_var_auto_invest_disallow_building_artillery_foundry
 				has_variable = zw_var_auto_invest_disallow_building_munition_plant
@@ -169,19 +168,16 @@
 			if = {
 				limit = {
 					OR = {
-						has_variable = zw_var_auto_invest_disallow_building_military_shipyard
 						has_variable = zw_var_auto_invest_disallow_building_arms_industry
 						has_variable = zw_var_auto_invest_disallow_building_artillery_foundry
 						has_variable = zw_var_auto_invest_disallow_building_munition_plant
 					}
 				}
-				zw_effect_remove_disallowed_building_type = { building_1 = building_military_shipyard }
 				zw_effect_remove_disallowed_building_type = { building_1 = building_arms_industry }
 				zw_effect_remove_disallowed_building_type = { building_1 = building_artillery_foundry }
 				zw_effect_remove_disallowed_building_type = { building_1 = building_munition_plant }
 			}
 			else = {
-				zw_effect_set_remove_disallowed_building_type = { building_1 = building_military_shipyard }
 				zw_effect_set_remove_disallowed_building_type = { building_1 = building_arms_industry }
 				zw_effect_set_remove_disallowed_building_type = { building_1 = building_artillery_foundry }
 				zw_effect_set_remove_disallowed_building_type = { building_1 = building_munition_plant }

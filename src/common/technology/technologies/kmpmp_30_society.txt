@@ -26,7 +26,6 @@ INJECT:nationalism = {
 	modifier = {
 		# kmpmp
         country_infamy_generation_mult = -0.03
-        country_max_declared_interests_add = 1
 	}
 }
 
@@ -40,7 +39,6 @@ INJECT:postal_savings = {
 
 INJECT:civilizing_mission = {
 	modifier = {
-		country_max_declared_interests_add = 1 # = 2
 		# kmpmp
 		country_radicals_from_conquest_mult = -0.05
 		country_infamy_generation_mult = -0.05
@@ -74,7 +72,6 @@ INJECT:pan-nationalism = {
 	modifier = {
 		# kmpmp
         country_infamy_generation_mult = -0.05
-        country_max_declared_interests_add = 2
 	}
 }
 
@@ -135,7 +132,6 @@ INJECT:film = {
 INJECT:multilateral_alliances = {
 	modifier = {
 		# kmpmp
-		country_max_declared_interests_add = 4
 		country_radicals_from_conquest_mult = -0.05
 	}
 }
