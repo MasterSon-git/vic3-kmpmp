@@ -147,7 +147,7 @@ INJECT:principle_aggressive_coordination_3 = {
 INJECT:principle_external_trade_1 = {
 	member_modifier = {
 		# kmpmp
-		country_convoys_capacity_mult = 0.1
+		country_ship_group_supply_ships_construction_efficiency_add = 0.1
 	}
 }
 
@@ -155,7 +155,7 @@ INJECT:principle_external_trade_2 = {
 	member_modifier = {
 		# Modifiers from previous level(s)
 		# kmpmp
-		country_convoys_capacity_mult = 0.1
+		country_ship_group_supply_ships_construction_efficiency_add = 0.1
 
 		# kmpmp
 		building_group_bg_manufacturing_throughput_add = 0.05
@@ -167,7 +167,7 @@ INJECT:principle_external_trade_3 = {
 	member_modifier = {
 		# Modifiers from previous level(s)
 		# kmpmp
-		country_convoys_capacity_mult = 0.1
+		country_ship_group_supply_ships_construction_efficiency_add = 0.1
 		building_group_bg_manufacturing_throughput_add = 0.1
 		state_trade_capacity_add = 100
 

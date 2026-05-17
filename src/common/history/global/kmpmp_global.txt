@@ -109,7 +109,7 @@
     # add claims for persia on all persian hq states it does not own at start
     every_state_region = {
         limit = {
-            region = sr:region_persia
+            region = sr:region_greater_persia
             NOR = {
                 c:PER ?= {
                     has_claim = PREV

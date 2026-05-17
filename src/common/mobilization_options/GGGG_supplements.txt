@@ -1,49 +1,49 @@
 ﻿# By request: tea & coffee supplements
-GGGG_mo_tea = {
-	texture = "gfx/interface/icons/production_method_icons/GGGG_tea.dds"
+# GGGG_mo_tea = {
+# 	texture = "gfx/interface/icons/production_method_icons/GGGG_tea.dds"
 
-	possible = {
-		market ?= {
-			mg:tea ?= {
-				market_goods_sell_orders > 0
-			}
-		}
-	}
-	upkeep_modifier = {
-		goods_input_tea_add = 0.5
-	}
-	unit_modifier = {
-		unit_morale_recovery_mult = 0.1
-	}
-	ai_weight = {
-		value = 1
-	}
+# 	possible = {
+# 		market ?= {
+# 			mg:tea ?= {
+# 				market_goods_sell_orders > 0
+# 			}
+# 		}
+# 	}
+# 	upkeep_modifier = {
+# 		goods_input_tea_add = 0.5
+# 	}
+# 	unit_modifier = {
+# 		unit_morale_recovery_mult = 0.1
+# 	}
+# 	ai_weight = {
+# 		value = 1
+# 	}
 
-	group = supplements
-}
+# 	group = supplements
+# }
 
-GGGG_mo_coffee = {
-	texture = "gfx/interface/icons/production_method_icons/GGGG_coffee.dds"
+# GGGG_mo_coffee = {
+# 	texture = "gfx/interface/icons/production_method_icons/GGGG_coffee.dds"
 
-	possible = {
-		market ?= {
-			mg:coffee ?= {
-				market_goods_sell_orders > 0
-			}
-		}
-	}
-	upkeep_modifier = {
-		goods_input_coffee_add = 0.5
-	}
-	unit_modifier = {
-		unit_morale_recovery_mult = 0.1
-	}
-	ai_weight = {
-		value = 1
-	}
+# 	possible = {
+# 		market ?= {
+# 			mg:coffee ?= {
+# 				market_goods_sell_orders > 0
+# 			}
+# 		}
+# 	}
+# 	upkeep_modifier = {
+# 		goods_input_coffee_add = 0.5
+# 	}
+# 	unit_modifier = {
+# 		unit_morale_recovery_mult = 0.1
+# 	}
+# 	ai_weight = {
+# 		value = 1
+# 	}
 
-	group = supplements
-}
+# 	group = supplements
+# }
 
 # Moves wine from lux. supplies option to supplement
 GGGG_mo_wine = {

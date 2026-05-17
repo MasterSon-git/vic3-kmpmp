@@ -12,7 +12,7 @@
     # +10% throughput für Regierungsverwaltungen
     building_government_administration_throughput_add = 0.1
     # +10% Convois
-    country_convoys_capacity_mult = 0.1
+    country_ship_group_supply_ships_construction_efficiency_add = 0.1
     # -5% military good costs
     country_military_goods_cost_mult = -0.05
     # -5% mobilisation req
@@ -34,7 +34,7 @@ kmpmp_buff_medium_nation = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 
     country_authority_mult = 0.1
-    country_convoys_capacity_mult = 0.05
+    country_ship_group_supply_ships_construction_efficiency_add = 0.05
     country_military_goods_cost_mult = -0.025
     country_minting_add = 5000
     state_education_access_add = 0.025

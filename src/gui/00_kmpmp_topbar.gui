@@ -520,7 +520,7 @@ types topbar_components
 						# maximumsize = { 76 30 }
 						maximumsize = { 95 30 }
 						spacing = 2
-						tooltip = "PANEL_MILITARY_NAVY_CURRENT_FLOTILLAS_TOOLTIP"
+						tooltip = "PANEL_MILITARY_NAVY_CURRENT_SHIPS_TOOLTIP"
 						using = tooltip_below
 	
 						icon = {
@@ -532,8 +532,8 @@ types topbar_components
 	
 						textbox = {
 							parentanchor = vcenter
-							raw_text = "#variable [Country.GetWarships|0]#!"
-							alpha = "[TransparentIfZero_int32(Country.GetWarships)]"
+							raw_text = "#variable [Country.GetNumShips|0]#!"
+							alpha = "[TransparentIfZero_int32(Country.GetNumShips)]"
 							autoresize = yes
 							align = left|nobaseline
 							elide = right
