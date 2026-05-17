@@ -16,7 +16,6 @@
 				scope:journal_entry = {
 					is_goal_complete = yes
 				}
-
 				hidden_trigger = {
 					has_variable = completed_je_meiji_army
 					has_variable = completed_je_meiji_economy

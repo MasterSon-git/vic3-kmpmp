@@ -116,10 +116,17 @@ meiji.2 = {
 		show_as_unavailable = {
 			always = yes
 		}
-
 		add_modifier = {
 			name = japan_production_reward
 			days = normal_modifier_time
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				has_social_hierarchy = edo_system
+			}
+			custom_tooltip = abolish_edo_system_available_later_tt
 		}
 	}
 }
