@@ -9,3 +9,9 @@ INJECT:building_panama_canal = {
 		pmg_ownership_capital_building_canal
 	}
 }
+
+INJECT:building_kiel_canal = {
+	production_method_groups = {
+		pmg_ownership_capital_building_canal
+	}
+}

@@ -127,6 +127,32 @@ REPLACE:on_wargoal_enforced = {
 			}
 		}
 
+		if = {
+			limit = {
+				scope:diplomatic_play ?= {
+					is_diplomatic_play_type = dp_revolution
+				}
+				ROOT = {
+					any_subject_or_below = {
+						c:EZO ?= this
+						has_variable = ezo_republic_var
+						has_variable = ezo_waiting_for_shogun
+					}
+				}
+			}
+			c:EZO ?= {
+				top_overlord ?= {
+					save_scope_as = japan_scope
+				}
+				country_ezo_set_up_as_colony = yes
+				country_ezo_generate_next_japanese_shogun = yes
+				ruler = {
+					save_scope_as = shogun_scope
+				}
+				post_notification = ezo_tokugawa_heir_arrives
+			}
+		}
+
 		if = { # Ottoman recently crushed a secession
 			limit = {
 				AND = {

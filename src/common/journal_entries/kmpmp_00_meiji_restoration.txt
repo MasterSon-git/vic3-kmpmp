@@ -39,7 +39,6 @@
 	}
 
 	on_complete = {
-		set_variable = meiji_reforms_complete_var
 		trigger_event = {
 			id = meiji.2
 		}
