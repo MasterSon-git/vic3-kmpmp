@@ -10,6 +10,10 @@
  company_basic_arts_dynamic_name_tag_singular: "Kunstwerk"
  company_basic_arts_dynamic_name_tag_plural: "Kunstwerke"
 
+ company_basic_fishing_2: "Fisch und Fleisch Unternehmen"
+ company_basic_fishing_2_dynamic_name_tag_singular: "Fischerei und Fleischerei"
+ company_basic_fishing_2_dynamic_name_tag_plural: "Fischerei und Fleischerei"
+
  company_basic_furniture: "Möbelwerke"
  company_basic_furniture_dynamic_name_tag_singular: "Möbel"
  company_basic_furniture_dynamic_name_tag_plural: "Möbel"

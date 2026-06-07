@@ -10,6 +10,10 @@
  company_basic_arts_dynamic_name_tag_singular: "Artwork"
  company_basic_arts_dynamic_name_tag_plural: "Artworks"
 
+ company_basic_fishing_2: "Fish and Meat Company"
+ company_basic_fishing_2_dynamic_name_tag_singular: "Fish and Meat"
+ company_basic_fishing_2_dynamic_name_tag_plural: "Fish and Meat"
+
  company_basic_furniture: "Furniture Facilities"
  company_basic_furniture_dynamic_name_tag_singular: "Furniture"
  company_basic_furniture_dynamic_name_tag_plural: "Furnitures"
