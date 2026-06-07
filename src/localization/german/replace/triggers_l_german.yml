@@ -1,0 +1,4 @@
+﻿l_german:
+ TRIGGER_HAS_LAW_OR_VARIANT: "Hat eine Variante von „[TARGET_LAW_TYPE.GetName]“ [Concept('concept_enactment_of_laws', '$concept_enactment_of_laws_enacted$')|l]"
+ TRIGGER_HAS_LAW_OR_VARIANT_NOT: "Hat #bold keine#! Variante von „[TARGET_LAW_TYPE.GetName]“ [Concept('concept_enactment_of_laws', '$concept_enactment_of_laws_enacted$')|l]"
+ TRIGGER_HAS_LAW_OR_VARIANT_FIRST: "[COUNTRY.GetAltNameNoFlag('NOM')|U] hat eine Variante von „[TARGET_LAW_TYPE.GetName]“ [Concept('concept_enactment_of_laws', '$concept_enactment_of_laws_enacted$')|l]"
