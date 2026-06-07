@@ -409,7 +409,9 @@ types military_formation_panel_types
 					}
 				}
 
+				### Tabs for Armies
 				tab_buttons = {
+					visible = "[MilitaryFormation.IsArmy]"
 					datacontext = "[MilitaryFormation.GetShipList]"
 
 					# Information
@@ -443,10 +445,10 @@ types military_formation_panel_types
 						onclick = "[InformationPanel.SelectTab('mobilization')]"
 					}
 					blockoverride "second_button_visibility" {
-						visible = "[And(Not(IsDataModelEmpty(MilitaryFormation.GetMobilizationOptions)),InformationPanel.IsTabSelected('mobilization'))]"
+						visible = "[And(Not(IsDataModelEmpty(MilitaryFormation.GetMobilizationOptions)), InformationPanel.IsTabSelected('mobilization'))]"
 					}
 					blockoverride "second_button_visibility_checked" {
-						visible = "[And(Not(IsDataModelEmpty(MilitaryFormation.GetMobilizationOptions)),Not(InformationPanel.IsTabSelected('mobilization')))]"
+						visible = "[And(Not(IsDataModelEmpty(MilitaryFormation.GetMobilizationOptions)), Not(InformationPanel.IsTabSelected('mobilization')))]"
 					}
 					blockoverride "second_button_selected" {
 						text = "MILITARY_FORMATION_PANEL_MOBILIZATION_TAB_SELECTED"
@@ -491,24 +493,90 @@ types military_formation_panel_types
 					blockoverride "fourth_button_selected" {
 						text = "MILITARY_FORMATION_PANEL_MODIFIERS_TAB_SELECTED"
 					}
+				}
+
+				### Tabs for Fleets
+				tab_buttons = {
+					visible = "[MilitaryFormation.IsFleet]"
+					datacontext = "[MilitaryFormation.GetShipList]"
+
+					# Information
+					blockoverride "first_button" {
+						text = "MILITARY_FORMATION_PANEL_INFORMATION_TAB"
+					}
+					blockoverride "first_button_tooltip" {
+						tooltip = "MILITARY_FORMATION_PANEL_INFORMATION_TAB"
+					}
+					blockoverride "first_button_click" {
+						onclick = "[InformationPanel.SelectTab('default')]"
+					}
+					blockoverride "first_button_visibility" {
+						visible = "[InformationPanel.IsTabSelected('default')]"
+					}
+					blockoverride "first_button_visibility_checked" {
+						visible = "[Not( InformationPanel.IsTabSelected('default') )]"
+					}
+					blockoverride "first_button_selected" {
+						text = "MILITARY_FORMATION_PANEL_INFORMATION_TAB_SELECTED"
+					}
+
+					# Buildings
+					blockoverride "second_button" {
+						text = "MILITARY_FORMATION_PANEL_BUILDINGS_TAB"
+					}
+					blockoverride "second_button_tooltip" {
+						tooltip = "MILITARY_FORMATION_PANEL_BUILDINGS_TAB"
+					}
+					blockoverride "second_button_click" {
+						onclick = "[InformationPanel.SelectTab('buildings')]"
+					}
+					blockoverride "second_button_visibility" {
+						visible = "[InformationPanel.IsTabSelected('buildings')]"
+					}
+					blockoverride "second_button_visibility_checked" {
+						visible = "[Not( InformationPanel.IsTabSelected('buildings') )]"
+					}
+					blockoverride "second_button_selected" {
+						text = "MILITARY_FORMATION_PANEL_BUILDINGS_TAB_SELECTED"
+					}
+
+					# Modifiers
+					blockoverride "third_button" {
+						text = "MILITARY_FORMATION_PANEL_MODIFIERS_TAB"
+					}
+					blockoverride "third_button_tooltip" {
+						tooltip = "MILITARY_FORMATION_PANEL_MODIFIERS_TAB"
+					}
+					blockoverride "third_button_click" {
+						onclick = "[InformationPanel.SelectTab('modifiers')]"
+					}
+					blockoverride "third_button_visibility" {
+						visible = "[InformationPanel.IsTabSelected('modifiers')]"
+					}
+					blockoverride "third_button_visibility_checked" {
+						visible = "[Not( InformationPanel.IsTabSelected('modifiers') )]"
+					}
+					blockoverride "third_button_selected" {
+						text = "MILITARY_FORMATION_PANEL_MODIFIERS_TAB_SELECTED"
+					}
 
 					# Ship Construction Queue
-					blockoverride "fifth_button" {
+					blockoverride "fourth_button" {
 						raw_text = "MILITARY_FORMATION_CONSTRUCTION_QUEUE_TAB"
 					}
-					blockoverride "fifth_button_tooltip" {
+					blockoverride "fourth_button_tooltip" {
 						tooltip = "MILITARY_FORMATION_CONSTRUCTION_QUEUE_TAB_TOOLTIP"
 					}
-					blockoverride "fifth_button_click" {
+					blockoverride "fourth_button_click" {
 						onclick = "[InformationPanel.SelectTab('ships')]"
 					}
-					blockoverride "fifth_button_visibility" {
-						visible = "[And(MilitaryFormation.IsFleet, InformationPanel.IsTabSelected('ships'))]"
+					blockoverride "fourth_button_visibility" {
+						visible = "[InformationPanel.IsTabSelected('ships')]"
 					}
-					blockoverride "fifth_button_visibility_checked" {
-						visible = "[And(MilitaryFormation.IsFleet, Not(InformationPanel.IsTabSelected('ships')))]"
+					blockoverride "fourth_button_visibility_checked" {
+						visible = "[Not(InformationPanel.IsTabSelected('ships'))]"
 					}
-					blockoverride "fifth_button_selected" {
+					blockoverride "fourth_button_selected" {
 						raw_text = "MILITARY_FORMATION_CONSTRUCTION_QUEUE_TAB_SELECTED"
 					}
 				}

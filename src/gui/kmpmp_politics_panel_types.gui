@@ -25,6 +25,7 @@ types information_panels_types
 		}
 		blockoverride "line_plotpoints_non_zero_based" {
 			visible = "[Not(IsEmpty(Country.GetGDPTrend))]"
+			# plotpoints = "[GetTrendPlotPointsNormalized(Country.GetGDPTrend, GetMinPadded(Country.GetGDPTrend), GetMaxPadded(Country.GetGDPTrend))]"
 			plotpoints = "[GetTrendPlotPointsNormalized(Country.GetGDPTrend, GetMin(Country.GetGDPTrend), GetMax(Country.GetGDPTrend))]"
 		}
 		blockoverride "maxvalue" {
@@ -76,6 +77,7 @@ types information_panels_types
 		}
 		blockoverride "line_plotpoints_non_zero_based" {
 			visible = "[Not(IsEmpty(Country.GetPrestigeTrend))]"
+			# plotpoints = "[GetTrendPlotPointsNormalized(Country.GetPrestigeTrend, GetMinPadded(Country.GetPrestigeTrend), GetMaxPadded(Country.GetPrestigeTrend))]"
 			plotpoints = "[GetTrendPlotPointsNormalized(Country.GetPrestigeTrend, GetMin(Country.GetPrestigeTrend), GetMax(Country.GetPrestigeTrend))]"
 		}
 		blockoverride "maxvalue" {

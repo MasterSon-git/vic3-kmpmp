@@ -629,14 +629,14 @@ types budget
 
 						tax_exp_frame = {
 							datacontext = "[GetPlayer]"
-							visible = "[GreaterThan_CFixedPoint(Country.GetShipConstructionGoodsExpenses, '(CFixedPoint)0')]"
+							visible = "[GreaterThan_CFixedPoint(Country.GetMilitaryShipConstructionGoodsExpenses, '(CFixedPoint)0')]"
 
 							blockoverride "text" {
 								text = "[concept_ship_construction]"
 							}
 
 							blockoverride "text_2" {
-								raw_text = "@money![Negate(Country.GetShipConstructionGoodsExpenses)|D+]"
+								raw_text = "@money![Negate(Country.GetMilitaryShipConstructionGoodsExpenses)|D+]"
 								tooltip = "SHIP_CONSTRUCTION_GOODS_EXPENSES_BREAKDOWN"
 							}
 
@@ -894,6 +894,21 @@ types budget
 						}
 
 						tax_exp_frame = {
+							visible = "[GreaterThan_CFixedPoint(GetPlayer.GetSupplyShipConstructionGoodsExpenses, '(CFixedPoint)0')]"
+
+							blockoverride "text" {
+								text = "BUDGET_SUPPLY_SHIP_CONSTRUCTION"
+							}
+
+							blockoverride "text_2" {
+								raw_text = "#N @money!-[GetPlayer.GetSupplyShipConstructionGoodsExpenses|D-]"
+								alpha = "[TransparentIfZero(GetPlayer.GetSupplyShipConstructionGoodsExpenses)]"
+							}
+
+							blockoverride "divider" {}
+						}
+
+						tax_exp_frame = {
 							visible = "[GreaterThan_CFixedPoint(GetPlayer.GetSupplyShipMaintenanceExpenses, '(CFixedPoint)0')]"
 
 							blockoverride "text" {
@@ -1013,7 +1028,7 @@ types budget
 							}
 
 							blockoverride "text_2" {
-								raw_text = "#variable @money![GetPlayer.PredictTreatyExpenses|D-]#!"
+								raw_text = "#N @money!-[GetPlayer.PredictTreatyExpenses|D-]"
 								using = treaty_expense_tooltip_with_graph
 								alpha = "[TransparentIfZero(GetPlayer.PredictTreatyExpenses)]"
 							}
