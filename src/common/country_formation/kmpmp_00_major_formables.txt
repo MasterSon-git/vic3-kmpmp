@@ -11,6 +11,7 @@
 	ai_will_do = { always = yes }
 
 	possible = {
+		is_in_geographic_region = geographic_region_scandinavia
 		OR = {
 			country_has_primary_culture = cu:swedish
 			country_has_primary_culture = cu:danish

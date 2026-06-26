@@ -207,7 +207,7 @@ types military_formation_panel_types
 
 								### TOTAL VISIBILITY
 								small_header_grid_item = {
-									tooltip = "[concept_visibility]"
+									tooltip = "MILITARY_FORMATION_VISIBILITY_TOOLTIP"
 
 									blockoverride "small_header_size" {
 										size = { 85 30 }
@@ -224,7 +224,7 @@ types military_formation_panel_types
 
 								### CARRYING CAPACITY
 								small_header_grid_item = {
-									tooltip = "[concept_carrying_capacity]"
+									tooltip = "MILITARY_FORMATION_CARRYING_CAPACITY_TOOLTIP"
 
 									blockoverride "small_header_size" {
 										size = { 85 30 }
@@ -245,7 +245,7 @@ types military_formation_panel_types
 
 								### MARINE CAPACITY
 								small_header_grid_item = {
-									tooltip = "[concept_marine_capacity]"
+									tooltip = "MILITARY_FORMATION_MARINE_CAPACITY_TOOLTIP"
 
 									blockoverride "small_header_size" {
 										size = { 85 30 }
