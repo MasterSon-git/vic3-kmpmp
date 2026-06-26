@@ -1332,16 +1332,47 @@ types budget
 					}
 				}
 
-				button = {
-					datacontext = "[GetPlayer]"
-					using = default_button_action
+				widget = {
+					name = "declare_bankruptcy_button"
 					size = { 250 75 }
-					text = "DECLARE_BANKRUPTCY"
-					onclick = "[PopupManager.AskConfirmation(Country.DeclareBankruptcy)]"
-					enabled = "[IsValid(Country.DeclareBankruptcy)]"
-					tooltip = "DECLARE_BANKRUPTCY_TOOLTIP"
-					using = tooltip_below
 					parentanchor = hcenter
+
+					button = {
+						visible = "[Or(IsValid(Country.DeclareBankruptcy), Not(GetPlayer.HasTimedModifier('declared_bankruptcy')))]"
+						datacontext = "[GetPlayer]"
+						using = default_button_action
+						size = { 100% 100% }
+						onclick = "[PopupManager.AskConfirmation(Country.DeclareBankruptcy)]"
+						enabled = "[IsValid(Country.DeclareBankruptcy)]"
+						tooltip = "DECLARE_BANKRUPTCY_TOOLTIP"
+						using = tooltip_below
+						text = "DECLARE_BANKRUPTCY"
+					}
+
+					widget = {
+						visible = "[And(GetPlayer.HasTimedModifier('declared_bankruptcy'), Not(IsValid(Country.DeclareBankruptcy)))]"
+						datacontext = "[GetPlayer]"
+						size = { 100% 100% }
+						alwaystransparent = no
+						tooltip = "DECLARE_BANKRUPTCY_TOOLTIP"
+						using = tooltip_below
+
+						background = {
+							using = paper_bg
+						}
+
+						icon = {
+							size = { 100% 100% }
+							using = highlighted_selected_square_selection
+						}
+
+						textbox = {
+							parentanchor = center
+							align = hcenter|nobaseline
+							using = fontsize_large
+							text = "DECLARED_BANKRUPTCY"
+						}
+					}
 				}
 
 				flowcontainer = {
@@ -1364,6 +1395,44 @@ types budget
 						tooltip = "[GetPlayer.GetCreditTooltip]"
 						align = nobaseline
 						parentanchor = vcenter
+					}
+				}
+
+				widget = {
+					name = "bankruptcy_progress_bar"
+					visible = "[GetPlayer.HasTimedModifier('declared_bankruptcy')]"
+					size = { @panel_width_minus_10 45 }
+					parentanchor = hcenter
+					tooltip = "[GetPlayer.GetTimedModifier('declared_bankruptcy').GetTooltip]"
+
+					bad_progressbar_horizontal = {
+						parentanchor = vcenter
+						name = "bankruptcy_progressbar"
+						size = { 100% 100% }
+
+						blockoverride "values" {
+							value = "[GetPlayer.GetTimedModifier('declared_bankruptcy').GetPercentageRemainingDays]"
+							min = 0
+							max = 1
+						}
+					}
+
+					textbox = {
+						autoresize = yes
+						align = nobaseline
+						parentanchor = vcenter
+						margin_left = 20
+						using = fontsize_large
+						text = "BANKRUPTCY_AFFECTED_BY"
+					}
+
+					textbox = {
+						using = fontsize_large
+						autoresize = yes
+						parentanchor = right|vcenter
+						align = right|nobaseline
+						margin_right = 20
+						text = "BANKRUPTCY_TIME_REMAINING"
 					}
 				}
 

@@ -356,14 +356,14 @@ REPLACE:company_mozambique_company = {
 	building_types = {
 		building_cotton_plantation
 		building_tea_plantation
-		# building_wheat_farm
+		# building_millet_farm
 		building_coffee_plantation # kmpmp
 		building_tobacco_plantation # kmpmp
 	}
 
 	extension_building_types = {
 		building_logging_camp
-		building_rice_farm
+		building_rice_farm # kmpmp
 	}
 
 	possible_prestige_goods = {

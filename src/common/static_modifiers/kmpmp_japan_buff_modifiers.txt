@@ -1,7 +1,7 @@
 ﻿kmpmp_japan_buff_start = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
     country_law_enactment_success_add = 0.15
-    country_law_enactment_time_mult = -0.15
+    country_law_enactment_speed_mult = 0.15
     building_university_throughput_add = 0.3
     country_minting_add = 30000
     country_kmpmp_power_bloc_mandate_progress_add = 2
