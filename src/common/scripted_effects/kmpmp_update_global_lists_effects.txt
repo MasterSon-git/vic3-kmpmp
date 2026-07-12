@@ -361,11 +361,11 @@ kmpmp_update_global_list_states_je_the_sugar_monopoly = {
         }
         add_to_global_variable_list = {
             name = states_je_the_sugar_monopoly
-            target = s:STATE_EASTERN_CUBA
+            target = s:STATE_CENTRAL_CUBA
         }
         add_to_global_variable_list = {
             name = states_je_the_sugar_monopoly
-            target = s:STATE_CENTRAL_CUBA
+            target = s:STATE_EASTERN_CUBA
         }
         add_to_global_variable_list = {
             name = states_je_the_sugar_monopoly
