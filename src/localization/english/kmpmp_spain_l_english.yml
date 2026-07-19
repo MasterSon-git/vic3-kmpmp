@@ -1,0 +1,8 @@
+﻿l_english:
+ kmpmp_spain_rebuild: "Rebuild $SPA$"
+
+ kmpmp_ev_spain.1.t: "$kmpmp_spain_rebuild$"
+ kmpmp_ev_spain.1.d: "Time to check our options."
+ kmpmp_ev_spain.1.f: "After this internal struggle we need to fix some of our serious issues."
+ kmpmp_ev_spain.1.a: "Let's build a strong nation"
+ kmpmp_ev_spain.1.b: "This is not part of our strategy"

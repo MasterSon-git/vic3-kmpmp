@@ -1,0 +1,46 @@
+﻿namespace = kmpmp_ev_spain
+
+kmpmp_ev_spain.1 = {
+    type = country_event
+    placement = ROOT
+
+    title = kmpmp_ev_spain.1.t
+    desc = kmpmp_ev_spain.1.d
+    flavor = kmpmp_ev_spain.1.f
+
+    icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+    duration = 3
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    trigger = { # triggered from completion of je_the_first_carlist_war
+    }
+
+    option = { # rebuild spain
+        name = kmpmp_ev_spain.1.a
+        default_option = yes
+
+        add_modifier = {
+            name = kmpmp_spain_rebuild
+            years = 10
+        }
+
+        if = {
+            limit = {
+                c:POR ?= {
+                    is_player = yes
+                }
+            }
+			create_unidirectional_truce = { country = c:POR months = 360 }
+        }
+    }
+
+    option = { # decline
+        name = kmpmp_ev_spain.1.b
+    }
+}
