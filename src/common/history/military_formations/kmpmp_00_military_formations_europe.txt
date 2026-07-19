@@ -1,0 +1,100 @@
+﻿MILITARY_FORMATIONS = {
+	c:PRU ?= { # total 10 ships
+		ordered_military_formation = {
+			order_by = num_ships
+			max = 1
+			save_temporary_scope_as = fleet_greatest
+		}
+		while = {
+			count = 9
+			create_ship = {
+				type = ship_type:ship_type_frigate
+				fleet = scope:fleet_greatest
+			}
+		}
+	}
+	c:AUS ?= { # total 10 ships
+		ordered_military_formation = {
+			order_by = num_ships
+			max = 1
+			save_temporary_scope_as = fleet_greatest
+		}
+		while = {
+			count = 5
+			create_ship = {
+				type = ship_type:ship_type_frigate
+				fleet = scope:fleet_greatest
+			}
+		}
+	}
+	c:SWE ?= { # total 20 ships
+		ordered_military_formation = {
+			order_by = num_ships
+			max = 1
+			save_temporary_scope_as = fleet_greatest
+		}
+		while = {
+			count = 5
+			create_ship = {
+				type = ship_type:ship_type_frigate
+				fleet = scope:fleet_greatest
+			}
+		}
+	}
+	c:SIC ?= { # total 10 ships
+		ordered_military_formation = {
+			order_by = num_ships
+			max = 1
+			save_temporary_scope_as = fleet_greatest
+		}
+		while = {
+			count = 2
+			create_ship = {
+				type = ship_type:ship_type_frigate
+				fleet = scope:fleet_greatest
+			}
+		}
+	}
+	c:SAR ?= { # total 10 ships
+		ordered_military_formation = {
+			order_by = num_ships
+			max = 1
+			save_temporary_scope_as = fleet_greatest
+		}
+		while = {
+			count = 5
+			create_ship = {
+				type = ship_type:ship_type_frigate
+				fleet = scope:fleet_greatest
+			}
+		}
+	}
+	c:POR ?= { # total 10 ships
+		ordered_military_formation = {
+			order_by = num_ships
+			max = 1
+			save_temporary_scope_as = fleet_greatest
+		}
+		while = {
+			count = 4
+			create_ship = {
+				type = ship_type:ship_type_frigate
+				fleet = scope:fleet_greatest
+			}
+		}
+	}
+	c:SPA ?= { # total 20 ships
+		ordered_military_formation = {
+			order_by = num_ships
+			max = 1
+			save_temporary_scope_as = fleet_greatest
+		}
+		while = {
+			count = 14
+			create_ship = {
+				type = ship_type:ship_type_frigate
+				fleet = scope:fleet_greatest
+			}
+		}
+	}
+}
