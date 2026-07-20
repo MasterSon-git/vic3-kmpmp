@@ -40,6 +40,8 @@ NWar = {
 	LAND_INVASION_PREPARATION_DURATION_DAYS = 30 #14 						# How many days should pass since the first army arrived to the invasion front to start advancing it
 	STATE_CONQUEST_HOMELAND_AND_CLAIM_RADICALIZATION = 0.0 #0.1
 	STATE_CONQUEST_HOMELAND_OR_CLAIM_RADICALIZATION = 0.0 #0.3
+
+	STATE_PARTIAL_OCCUPATION_THRESHOLD = 0.9999 #0.5 # If a state is at least this % partially occupied, it's considered occupied for purposes of contesting wargoals
 }
 
 NMilitary = {

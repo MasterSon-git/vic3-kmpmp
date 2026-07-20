@@ -32,6 +32,7 @@
     every_country = {
         limit = {
             OR = {
+                c:AUS ?= this    # austria
                 c:SPA ?= this    # spain
             }
         }
@@ -44,7 +45,7 @@
     every_country = {
         limit = {
             OR = {
-                c:AUS ?= this    # austria
+                # c:AUS ?= this    # austria
                 c:FRA ?= this    # france
                 c:GBR ?= this    # great britain
                 c:RUS ?= this    # russia

@@ -403,7 +403,7 @@ REPLACE_OR_CREATE:je_the_sugar_monopoly = {
             
             if = { # owner of every state
                 limit = { 
-                    var:var_count_states_the_sugar_monopoly >= 7
+                    var:var_count_states_the_sugar_monopoly >= 9
                 }
                 if = {
                     limit = {
@@ -458,11 +458,11 @@ REPLACE_OR_CREATE:je_the_sugar_monopoly = {
     
             if = { # owns the most states
                 limit = {
-                    var:var_count_states_the_sugar_monopoly >= 4
+                    var:var_count_states_the_sugar_monopoly >= 5
                     NOT = { # no one has all
                         exists = global_var:var_owner_states_the_sugar_monopoly
                     }
-                    # since we have a total of 7 states we don't need to check most
+                    # since we have a total of 9 states we don't need to check most
                     # NOT = { # no one has more or equal states
                     #     any_in_global_list = {
                     #         variable = countries_je_the_sugar_monopoly

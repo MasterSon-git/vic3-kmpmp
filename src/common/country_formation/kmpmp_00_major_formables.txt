@@ -1,4 +1,8 @@
-﻿REPLACE:SCA = {
+﻿INJECT:GER = {
+	required_states_fraction = 0.78 #0.73 # kmpmp add one more state 23 -> 24
+}
+
+REPLACE:SCA = {
 	geographic_region = geographic_region_scandinavia
 	
 	is_major_formation = yes

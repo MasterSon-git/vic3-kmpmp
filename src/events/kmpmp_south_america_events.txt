@@ -1,0 +1,61 @@
+﻿namespace = kmpmp_ev_south_america
+
+# hidden event to end brazil wars if player
+kmpmp_ev_south_america.1 = {
+    type = country_event
+    hidden = yes
+
+    trigger = {
+        # Fired by history\global
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                is_player = yes
+            }
+
+            every_diplomatic_play = {
+                limit = {
+                    c:BRZ ?= initiator
+                }
+                resolve_play_for = initiator
+            }
+        }
+    }
+}
+
+# hidden event to reduce liberty desire from north and south peru if bolivia and brazil are players
+kmpmp_ev_south_america.2 = {
+    type = country_event
+    hidden = yes
+
+    trigger = {
+        # Fired by history\global
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                is_player = yes
+                c:BRZ ?= {
+                    is_player = yes
+                }
+            }
+
+            c:NPU ?= {
+				add_liberty_desire = {
+                    subtract = liberty_desire
+                    add = 25
+				}
+            }
+
+            c:SPU ?= {
+				add_liberty_desire = {
+                    subtract = liberty_desire
+                    add = 25
+				}
+            }
+        }
+    }
+}

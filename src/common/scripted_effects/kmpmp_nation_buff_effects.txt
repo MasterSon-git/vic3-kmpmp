@@ -106,7 +106,7 @@
     if = {
         limit = {
             OR = {
-                c:AUS ?= this    # austria
+                # c:AUS ?= this    # austria - has special logic
                 c:FRA ?= this    # france
                 # c:GBR ?= this    # great britain
                 c:RUS ?= this    # russia
@@ -114,6 +114,7 @@
                 # c:PRU ?= this    # prussia
                 c:NGF ?= this    # north german federation
                 c:GER ?= this    # germany
+                c:SGF ?= this    # south german federation
             }
             NOT = {
                 has_modifier = kmpmp_debuff_massive_empire
@@ -121,6 +122,28 @@
         }
         add_modifier = {
             name = kmpmp_debuff_massive_empire
+        }
+
+        # remove medium nation buff - actually only possbile with austria
+        if = {
+            limit = {
+                has_modifier = kmpmp_buff_medium_nation
+            }
+            remove_modifier = kmpmp_buff_medium_nation
+        }
+    }
+
+    # aus - has special logic
+    if = {
+        limit = {
+            c:AUS ?= this
+        }
+        if = {
+            limit = {
+                has_modifier = kmpmp_buff_medium_nation
+                has_variable = crownlands_annexed_var
+            }
+            remove_modifier = kmpmp_buff_medium_nation
         }
     }
 

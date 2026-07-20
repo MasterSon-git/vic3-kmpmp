@@ -133,10 +133,6 @@
         remove_homeland = cu:ukrainian #should be moved to history\states
     }
 
-    c:BOL ?= {
-        change_infamy = -30 #should be moved to history\diplomacy
-    }
-
     c:GBR ?= {
         activate_law = law_type:law_mercantilism
     }
@@ -151,7 +147,18 @@
 
     c:BRZ ?= {
         trigger_event = { # hidden event to end brazil wars if player
-            id = kmpmp_ev_brazil_war.1
+            id = kmpmp_ev_south_america.1
+            days = 1
+        }
+    }
+
+    c:BOL ?= {
+        change_infamy = -30 #should be moved to history\diplomacy
+
+        # reduce liberty desire from north and south peru to 25
+        # should balance end of brazilian wars if there is player
+        trigger_event = {
+            id = kmpmp_ev_south_america.2
             days = 1
         }
     }
