@@ -40,6 +40,20 @@ FAE_on_battle_started = {
                         has_modifier = FAE_md_fort_defense_weak
                     }
                 }
+
+                # kmpmp: Let Vanilla naval fortifications handle naval landing battles alone.
+                NOT = {
+                    scope:state ?= {
+                        has_building = building_naval_fortification
+                    }
+                    scope:battle ?= {
+                        front ?= {
+                            invasion ?= {
+                                is_naval_invasion = yes
+                            }
+                        }
+                    }
+                }
             }
             
             # State battle counter

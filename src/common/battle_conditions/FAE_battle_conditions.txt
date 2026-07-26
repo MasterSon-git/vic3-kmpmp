@@ -44,6 +44,21 @@ FAE_battle_condition_attacker_fort_breached = {
                 }
             }
         }
+
+        # kmpmp: F&E forts do not participate in a naval landing when a Vanilla
+        # naval fortification exists in the same state.
+        NOT = {
+            province.state = {
+                has_building = building_naval_fortification
+            }
+            battle = {
+                front = {
+                    invasion ?= {
+                        is_naval_invasion = yes
+                    }
+                }
+            }
+        }
     }
     
     weight = {
@@ -133,6 +148,21 @@ FAE_battle_condition_defender_fort_breached = {
         battle = {
             attacker_side = {
                 has_battle_condition = FAE_battle_condition_attacker_fort_breached
+            }
+        }
+
+        # kmpmp: F&E forts do not participate in a naval landing when a Vanilla
+        # naval fortification exists in the same state.
+        NOT = {
+            province.state = {
+                has_building = building_naval_fortification
+            }
+            battle = {
+                front = {
+                    invasion ?= {
+                        is_naval_invasion = yes
+                    }
+                }
             }
         }
     }
