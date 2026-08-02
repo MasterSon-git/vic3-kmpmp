@@ -1,2 +1,3 @@
 ﻿l_german:
  PLAYER_MIGHT_ACCEPT_DESC: "[DiplomaticAction.GetSecondCountry.GetAltName('NOM')|U] ist ein Spieler ([DiplomaticAction.GetSecondCountry.GetPlayedByDesc]) und kann selbst entscheiden, ob es annimmt oder nicht"
+ DIPLO_ACTION_FORCED_DURATION:0 "Wir können diesen [Concept('concept_diplomatic_pact','$concept_diplomatic_pact_short$')] für weitere $TIME_LEFT$ ($DATE$) nicht brechen"
