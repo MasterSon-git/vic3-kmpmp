@@ -7,8 +7,8 @@ kmpmp_player_boost_art_of_deal = {
 
     # +20% Arty Input
     goods_input_artillery_mult = 0.2
-    # +20% iron clads input
-    goods_input_ironclads_mult = 0.2
+    # -20% ship supply efficiency
+    ship_supply_efficiency_mult = -0.2
     # +15% Authority
     country_authority_mult = 0.15
     # +400 Influence
@@ -29,10 +29,8 @@ kmpmp_player_boost_imperialism_oversea_empire = {
     # -10% Homeland defense/offense
     battle_defense_owned_province_mult = -0.1
     battle_offense_owned_province_mult = -0.1
-    # +10% iron clads input
-    goods_input_ironclads_mult = 0.15
-    # +15% Man-O-War input
-    goods_input_manowars_mult = 0.15
+    # -15% ship supply efficiency
+    ship_supply_efficiency_mult = -0.15
     # +10% income from subjects
     country_subject_income_transfer_mult = 0.1
     # -20% radicals from conquest
