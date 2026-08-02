@@ -1,0 +1,2 @@
+﻿l_english:
+ DIPLO_ACTION_FORCED_DURATION:0 "We cannot break this [Concept('concept_diplomatic_pact','$concept_diplomatic_pact_short$')] for another $TIME_LEFT$ ($DATE$)"
