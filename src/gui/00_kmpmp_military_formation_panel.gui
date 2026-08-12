@@ -971,6 +971,20 @@ types military_formation_panel_types
 								blockoverride "formation_onclick" {
 									onclick = "[FormationPanel.SelectFormation(MilitaryFormation.Self)]"
 								}
+
+								blockoverride "extra_action" {
+									military_formation_cancel_invasion_button = {
+										size = { @panel_width_minus_20 38 }
+
+										blockoverride "visible" {
+											visible = "[And(MilitaryFormation.HasInvasion, MilitaryFormation.GetCountry.IsLocalPlayer)]"
+										}
+
+										blockoverride "icon_size" {
+											size = { 24 24 }
+										}
+									}
+								}
 							}
 						}
 					}
