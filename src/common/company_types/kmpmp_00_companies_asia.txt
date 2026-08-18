@@ -334,8 +334,15 @@ REPLACE:company_san_miguel = {
 
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				region = sr:region_indonesia
+			OR = {
+				any_scope_state = {
+					region = sr:region_indonesia
+				}
+				any_subject_or_below = {
+					any_scope_state = {
+						region = sr:region_indonesia
+					}
+				}
 			}
 		}
 	}
