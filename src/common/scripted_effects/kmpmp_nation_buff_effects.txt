@@ -133,19 +133,19 @@
         }
     }
 
-    # aus - has special logic
-    if = {
-        limit = {
-            c:AUS ?= this
-        }
-        if = {
-            limit = {
-                has_modifier = kmpmp_buff_medium_nation
-                has_variable = crownlands_annexed_var
-            }
-            remove_modifier = kmpmp_buff_medium_nation
-        }
-    }
+    # aus - has special logic - removed for now, austria should stay on medium nation by now
+    # if = {
+    #     limit = {
+    #         c:AUS ?= this
+    #     }
+    #     if = {
+    #         limit = {
+    #             has_modifier = kmpmp_buff_medium_nation
+    #             has_variable = crownlands_annexed_var
+    #         }
+    #         remove_modifier = kmpmp_buff_medium_nation
+    #     }
+    # }
 
     # gb - has special logic
     if = {
