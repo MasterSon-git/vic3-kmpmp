@@ -12,9 +12,9 @@ functionality, diplomatic tools, country content and paper-map themes.
 ## Installation and development
 
 Subscribe to KMPMP on Steam Workshop and enable it in a dedicated launcher
-playset. Do not enable standalone versions of its included mods at the same time. All multiplayer
-participants should use matching game and mod versions, playset order and game
-rules.
+playset. Avoid enabling the original mods alongside KMPMP, as overlapping
+features can cause conflicts. All multiplayer participants should use matching
+game and mod versions, playset order and game rules.
 
 Check the [mod metadata](src/.metadata/metadata_kmpmp.json) for the declared game
 version. See [Development and testing](docs/DEVELOPMENT.md) for local installation,
