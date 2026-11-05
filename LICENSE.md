@@ -21,8 +21,8 @@ not establish ownership.
 
 Some third-party permissions have not been established; those components are
 not claimed to be licensed or legally cleared. Attribution alone does not
-establish redistribution rights. Voluntary thanks are listed separately in
-[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+establish redistribution rights. Third-party authors and projects are credited
+in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 ## Required upstream notices
 
