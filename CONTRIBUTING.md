@@ -47,14 +47,15 @@ migration notes belong in the PR.
 Original contributions follow [LICENSE.md](LICENSE.md); existing contributors
 have already agreed, and no renewed approval process is needed. When importing
 or adapting upstream work, include its project, author, source and known reuse
-terms in the PR. Preserve applicable notices and update
-[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) when credits or licenses change.
-Required notices must also ship in mod packages, including test builds.
+terms in the PR. Add voluntary thanks to
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md); keep license obligations in
+`LICENSE.md` and preserve the full upstream license texts. Required notices must
+also ship in mod packages, including test builds.
 
 Do not present third-party material as original KMPMP work or assume public
-availability is permission. Follow the practical third-party policy in the
-notices; routine maintenance does not require an author-contact campaign or a
-file-level ownership inventory. Do not open additional licensing issues without
+availability is permission. Follow the third-party policy in `LICENSE.md`;
+routine maintenance does not require an author-contact campaign or a file-level
+ownership inventory. Do not open additional licensing issues without
 explicit maintainer authorization.
 
 Keep discussions respectful and focused on the mod. Avoid personal attacks and

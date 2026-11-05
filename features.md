@@ -1,9 +1,8 @@
-# Historical integration notes
+# Feature notes
 
-This document records early integration work and credits. It is not a current
-feature, compatibility or licensing matrix. Some systems have since changed or
-been removed. See [README.md](README.md) for an overview and
-[the third-party notices](THIRD_PARTY_NOTICES.md) for upstream credits and license notices.
+These earlier feature notes may not reflect current gameplay. See
+[README.md](README.md) for the project overview and
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for credits.
 
 All Quiet On The Western Front
   - **new** Battle Conditions

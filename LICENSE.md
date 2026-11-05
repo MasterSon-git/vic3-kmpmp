@@ -19,10 +19,29 @@ modified upstream files and protected material within mixed files. Original
 KMPMP changes do not relicense the underlying work; a filename or namespace does
 not establish ownership.
 
-See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for credits, source links,
-preserved upstream licenses and our rights-holder request policy. Some third-party
-permissions have not been established; those components are not claimed to be
-licensed or legally cleared by this document.
+Some third-party permissions have not been established; those components are
+not claimed to be licensed or legally cleared. Attribution alone does not
+establish redistribution rights. Voluntary thanks are listed separately in
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
+## Required upstream notices
+
+Keep the complete MIT license texts, including copyright and permission notices,
+with distributed copies or substantial portions of these components:
+
+| Project | Included license | Original license source |
+| --- | --- | --- |
+| Forts & Engineers | [MIT](LICENSES/third-party/Forts-and-Engineers-MIT.txt) | [Upstream](https://github.com/1230james/vic3-forts-and-engineers/blob/7019a10ab4834d2757b93450be4fa6cbd2f67690/LICENSE.txt) |
+| Gas, Guns, Garb, and Grub | [MIT](LICENSES/third-party/Gas-Guns-Garb-and-Grub-MIT.txt) | [Upstream](https://github.com/1230james/vic3-gas-guns-garb-grub/blob/e04c9a1ac8701a86bdaf8c46cd5294c44f4cb45d/LICENSE.txt) |
+| Anbeeld's Stockpile Economy | [MIT](LICENSES/third-party/Anbeeld-Stockpile-Economy-MIT.txt) | [Upstream](https://github.com/Anbeeld/ASE/blob/c7a7e0cd5c1646b9a449854d0cefb27a7ef8ea9b/LICENSE) |
+
+Additional attribution requested by Anbeeld: KMPMP includes work based on
+Anbeeld's Stockpile Economy by Anbeeld.
 
 Distributed packages must include this file, the third-party notices and
 `LICENSES/`. The deployment scripts copy them into each mod folder.
+
+We welcome attribution corrections and requests from original rights holders
+through [repository issues](https://github.com/MasterSon-git/vic3-kmpmp/issues).
+Requests will be reviewed and addressed appropriately, including removing
+affected material where necessary. This policy does not substitute for permission.

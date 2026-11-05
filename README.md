@@ -26,7 +26,7 @@ test variants and bug-report information.
 | `scripts/` | PowerShell deployment helpers |
 | `docs/DEVELOPMENT.md` | Local workflow and testing |
 | `LICENSES/` | Original-contribution and upstream license texts |
-| [features.md](features.md) | Historical integration notes |
+| [features.md](features.md) | Earlier feature notes |
 
 ## Contribute
 
@@ -49,7 +49,7 @@ Thanks to everyone, supporting development of this mod:
   - Pfuscht auch den ganzen Tag
 
 See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for upstream projects,
-authors, source links and our approach to attribution and rights-holder requests.
+authors and source links.
 
 ## Licensing
 
