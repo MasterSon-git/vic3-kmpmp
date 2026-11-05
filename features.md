@@ -1,3 +1,9 @@
+# Feature notes
+
+These earlier feature notes may not reflect current gameplay. See
+[README.md](README.md) for the project overview and
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for credits.
+
 All Quiet On The Western Front
   - **new** Battle Conditions
     - Surrounded, Cut of Supply Lines, Hold Fort, Artillery Fire Support, Ship Advantages
