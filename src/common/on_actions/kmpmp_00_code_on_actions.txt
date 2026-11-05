@@ -1,2 +1,0 @@
-﻿# 1.15 uses vanilla on_wargoal_enforced. KMPMP recognition restrictions now live
-# in common/scripted_effects/kmpmp_wargoal_enforced_effects.txt.
