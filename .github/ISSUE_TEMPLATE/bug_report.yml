@@ -4,7 +4,7 @@ title: "[Bug]: "
 body:
   - type: markdown
     attributes:
-      value: "Search existing reports first. Add what you know; logs and a save can follow later."
+      value: "Search existing reports first. Share what you know; you can add logs or a save later."
   - type: textarea
     id: problem
     attributes:
@@ -15,14 +15,14 @@ body:
     id: reproduce
     attributes:
       label: Steps to reproduce
-      description: "Include country/date and how long to simulate. Say if it only occurs in multiplayer."
+      description: "Include the country, in-game date, and how much in-game time passes before the problem appears. Mention if it only happens in multiplayer."
     validations:
       required: true
   - type: textarea
     id: environment
     attributes:
       label: Game and mod setup
-      description: "Game version/checksum, KMPMP commit or Workshop update, variant, DLC, other mods/load order and OS. Unknown details are OK."
+      description: "Include game version/checksum, KMPMP commit or Workshop update, mod variant, DLC, other mods and their load order, and operating system. Unknown details are fine."
     validations:
       required: true
   - type: textarea

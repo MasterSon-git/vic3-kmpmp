@@ -1,8 +1,7 @@
 # Third-party credits
 
-Thank you to the mod authors, artists and translators whose work has contributed
-to KMPMP. We appreciate the time and creativity shared by these projects and
-contributors. The project list follows
+Thanks to the authors, artists and translators behind the projects listed below.
+This list reflects the credits maintained on
 [Machiavelli MP Mod on Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=3009203637).
 
 ## Projects
