@@ -4,7 +4,7 @@ title: "[Compatibility]: "
 body:
   - type: markdown
     attributes:
-      value: "Check existing compatibility issues and PRs first, including the ongoing 1.15 work in #647. Add evidence to the existing report when appropriate."
+      value: "Check existing compatibility issues and PRs first. Add evidence to the existing report when appropriate."
   - type: input
     id: game
     attributes:

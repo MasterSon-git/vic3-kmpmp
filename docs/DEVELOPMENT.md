@@ -1,116 +1,81 @@
-# Local development
+# Development and testing
 
-## Source and installations
+Use Git and PowerShell on Windows. The mod needs no compilation; the deployment
+scripts use `robocopy`. See [CONTRIBUTING.md](../CONTRIBUTING.md) for development rules.
 
-Use Git and PowerShell on Windows. Deployment uses Windows `robocopy`; there is
-no compilation step or automated gameplay test suite on the audited `main` baseline.
+## Source and variants
 
-`src/` is the common game payload. Its `.metadata/` directory contains
-`metadata_kmpmp.json`, `metadata_kmpmp_test.json` and `metadata_kspmp.json`.
-The scripts select one as the installed `.metadata/metadata.json` and select its
-matching thumbnail. Review version declarations separately from documentation work.
+`src/` is the shared mod payload. The scripts select a variant's metadata from
+`src/.metadata/` and its matching thumbnail. `src_test/` is an overlay applied
+after `src/`; it currently holds directory placeholders, which are excluded
+from deployment. Add intentional test overrides there rather than duplicating
+the whole mod.
 
-`src_test/` is an overlay, not a second complete mod. The test deployment first
-mirrors `src/`, then copies the overlay over it. Currently its tracked content
-consists only of `_placeholder.txt`, `_placeholder.gui` and `_placeholder.yml`
-directory markers, which the overlay copy excludes. Files added here can replace
-matching `src/` files in the installed test variant. Track intentional test
-overlays in Git; keep temporary experiments outside the repository.
+Run from the repository root (source paths also work from other directories):
 
-Local installations default to
-`%USERPROFILE%\Documents\Paradox Interactive\Victoria 3\mod\`.
-If Documents is redirected (for example through OneDrive), inspect your launcher
-location and supply `-Destination` explicitly. Workshop subscriptions under
-`SteamApps\workshop\content\529340\` are separate installations; editing them
-does not update this repository and Steam may overwrite them.
+| Command | Default local mod folder |
+| --- | --- |
+| `.\scripts\copy-to-vic3-kmpmp.ps1` | `vic3-kmpmp` |
+| `.\scripts\copy-to-vic3-kmpmp_test.ps1` | `vic3-kmpmp-test` |
+| `.\scripts\copy-to-vic3-kspmp.ps1` | `vic3-kspmp` |
 
-## Deploy a local variant
-
-From the repository root:
+Folders default to `%USERPROFILE%\Documents\Paradox Interactive\Victoria 3\mod\`.
+Use `-Destination` with a complete mod-folder path if Documents is redirected
+or you want an isolated copy:
 
 ```powershell
-.\scripts\copy-to-vic3-kmpmp_test.ps1
+$testMod = Join-Path $env:TEMP ('kmpmp-test-' + [guid]::NewGuid())
+.\scripts\copy-to-vic3-kmpmp_test.ps1 -Destination $testMod
 ```
 
-Sources resolve relative to the scripts, so they can also run from another
-working directory. Close the game before replacing an installation.
-**These commands mirror their source and remove destination files absent from
-it.** Never select a destination containing saves, personal files, a Git checkout
-or another mod. Inspect the resolved absolute destination first. `-Destination`
-is a complete mod folder path, not its parent.
+**Deployment mirrors the source and deletes extra destination files.** Check the
+absolute destination first; never point it at a Git checkout, saves or personal
+files. Close the game before replacing its mod folder.
 
-| Script | Default mod folder | Contents |
-| --- | --- | --- |
-| `scripts/copy-to-vic3-kmpmp.ps1` | `vic3-kmpmp` | `src/`, production metadata and thumbnail |
-| `scripts/copy-to-vic3-kmpmp_test.ps1` | `vic3-kmpmp-test` | `src/`, then `src_test/`, test metadata and thumbnail |
-| `scripts/copy-to-vic3-kspmp.ps1` | `vic3-kspmp` | Existing single-player selection described below |
+The single-player variant excludes directories named `defines` and `map`,
+then restores `gfx/map/textures/` and `common/defines/kmpmp_00_defines.txt`.
+This also excludes localization `map/` folders; `map_data/` remains included.
+Production and test copy the full shared payload.
 
-The single-player script retains its existing exclusions of directories named
-`.metadata`, `defines` and `map`; it restores `gfx/map/textures/` and the custom
-`common/defines/kmpmp_00_defines.txt` afterward. `map_data/` is not the directory
-named `map` and remains part of the initial copy. Do not treat this variant as
-identical to the multiplayer package or change those selections casually.
-The basename exclusion also omits `localization/english/map/` and
-`localization/german/map/`; the textures restoration does not restore them.
+Enable the intended local variant in a dedicated launcher playset. Disable other
+copies of KMPMP and standalone bundled mods. Treat installed vanilla files and
+Workshop subscriptions as read-only references. The workspace paths are
+machine-specific. The branch-cleanup script force-deletes local branches and
+is not needed for normal development.
 
-For a disposable packaging test without touching installed mods:
+## Testing and bug reports
 
-```powershell
-$packageRoot = Join-Path $env:TEMP ('kmpmp-package-' + [guid]::NewGuid())
-.\scripts\copy-to-vic3-kmpmp.ps1 -Destination (Join-Path $packageRoot 'production')
-.\scripts\copy-to-vic3-kmpmp_test.ps1 -Destination (Join-Path $packageRoot 'test')
-.\scripts\copy-to-vic3-kspmp.ps1 -Destination (Join-Path $packageRoot 'single-player')
-```
+- Record game version/checksum, KMPMP build/variant, enabled DLC and playset order.
+  Keep a copy of valued saves before testing.
+- Start a fresh campaign or a save just before the problem, exercise the affected
+  feature across relevant daily/weekly/monthly pulses, then save and reload.
+  Compare behaviour with the previous build to catch unintended balance changes.
+- For multiplayer changes, use matching builds, playset order and game rules on
+  host and clients. Check the affected actions and save/rehost or hotjoin where
+  relevant; retain host/client evidence if a desync occurs.
+- Inspect `logs/error.log` and `logs/game.log` under the Victoria 3 user-data
+  folder; `logs/system.log` can help with startup problems. Copy logs before
+  relaunching. For a bug report, include expected/actual behaviour, country/date,
+  exact steps, relevant DLC, a pre-problem save and useful log excerpts.
+  Remove private information before sharing.
+- Run `git diff --check` and appropriate checks for changed scripts,
+  localization or packaging. State skipped game/multiplayer tests in the PR.
 
-Inspect metadata, thumbnails, representative game files and legal files in each
-folder. Re-run deployment after source/notice changes. `robocopy` codes 0–7 are
-nonfatal; codes 8 and above fail deployment. PowerShell copy failures also stop
-the scripts. Successful deployment means files were copied, not that the game loaded.
+Use [GitHub issues](https://github.com/MasterSon-git/vic3-kmpmp/issues/new/choose)
+for reports and proposals.
 
-Add the local test variant through the launcher if it is not already visible.
-Enable only the intended build in a dedicated playset, disable the subscribed
-copy of KMPMP and standalone versions of its bundled mods, and check the name,
-version and checksum before testing. Follow [TESTING.md](TESTING.md).
+## Notices and Workshop publishing
 
-## License notice packaging and Workshop uploads
+Each deployment calls `scripts/copy-legal-notices.ps1` after copying the payload.
+It checks and copies `LICENSE.md`, `THIRD_PARTY_NOTICES.md` and `LICENSES/`
+to the mod root, outside game-definition folders. Native copy errors
+(`robocopy` codes 8 or higher) and missing required notices stop deployment.
 
-The copy scripts prepare local mod directories; they do **not** upload to Steam.
-After the game payload and test overlay, each invokes
-`scripts/copy-legal-notices.ps1`. It copies the authoritative root `LICENSE.md`,
-`THIRD_PARTY_NOTICES.md` and entire `LICENSES/` tree to the installed mod root.
-Notices stay outside `common/`, `events/`, `gui/` and `localization/`, so they are
-not introduced as game definitions. There is one maintained source of notices,
-not three manually synchronized copies. Missing inputs fail the helper.
+For packaging changes, test all three variants in disposable folders and check
+metadata, thumbnails and legal files. For a manually assembled package, run
+`.\scripts\copy-legal-notices.ps1 -Destination 'C:\path\to\assembled-mod'`.
 
-Before uploading through the launcher, inspect the **actual selected content
-folder** for these files, including the three upstream MIT texts in
-`LICENSES/third-party/`. Upload that complete folder without a notice-stripping
-filter. For a custom/manual package, run the helper after assembling the payload:
-
-```powershell
-.\scripts\copy-legal-notices.ps1 -Destination 'C:\path\to\assembled-mod'
-```
-
-The helper expects an existing directory. After publishing, inspect a clean
-downloaded Workshop copy for the same notice paths and byte contents. This final
-upload/download check is a release step: local tests do not prove what Steam
-served. See [the audit](PROVENANCE.md) for unresolved redistribution questions;
-shipping notices alone cannot settle them.
-
-## Editing and references
-
-Read [CONTRIBUTING.md](../CONTRIBUTING.md) for source conventions and workflow.
-Use installed game files and generated docs under
-`Documents\Paradox Interactive\Victoria 3\docs\` for target-build references.
-The checked-in `.code-workspace` lists machine-specific game/Workshop folders;
-adjust a local workspace copy for your machine. Treat external references,
-especially a vanilla Git repository, as read-only. Do not commit proprietary
-reference dumps.
-
-`scripts/git-delete-local-branches-not-on-remote.ps1` switches to `main`, prunes
-remote references and force-deletes local branches whose upstream is gone.
-It is an optional destructive personal utility, **not** a development,
-validation or deployment step. Do not run it during task setup.
-
-Use issues for unresolved work, PRs for completed decisions, and `CHANGELOG.md`
-for release-level changes. Do not commit local logs, saves or generated artifacts.
+The scripts prepare local folders; upload the complete selected folder through
+the launcher. Check the notices are present before uploading and in a downloaded
+Workshop copy afterward. The three MIT texts in `LICENSES/third-party/` must
+remain included.

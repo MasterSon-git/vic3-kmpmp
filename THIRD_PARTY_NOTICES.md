@@ -1,63 +1,60 @@
 # Third-party notices and attribution
 
-KMPMP incorporates work by the authors below. These components are **excluded
-from KMPMP's blanket 0BSD/CC0 scope**, including when modified or renamed.
-Some files remain substantially unchanged; others combine upstream, vanilla and
-KMPMP changes. This notice must accompany distributed mod packages together with
-`LICENSE.md` and `LICENSES/`.
+KMPMP combines original community work with adapted third-party mods. We credit
+the original projects and authors and preserve applicable license notices.
 
-## Verified licenses
+We welcome corrections to attribution and requests from original rights holders
+concerning included material. Requests will be reviewed and addressed
+appropriately, including removing affected content where necessary. This policy
+does not substitute for copyright permission: some third-party permissions have
+not been established, and no complete legal clearance is claimed.
 
-- **Forts & Engineers**, James "1230james" Hyun, copyright (c) 2023.
+Third-party and game-derived material is excluded from KMPMP's 0BSD/CC0 grants,
+including when modified or renamed. See [LICENSE.md](LICENSE.md) for the scope.
+Distribute this notice and `LICENSES/` with the mod.
+
+## MIT-licensed components
+
+- **Forts & Engineers** — James "1230james" Hyun, copyright (c) 2023.
   [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3005432154),
-  [source](https://github.com/1230james/vic3-forts-and-engineers).
-  Distributed under the [MIT License](LICENSES/third-party/Forts-and-Engineers-MIT.txt).
-  Includes adapted `FAE_*` scripts, events, localization, GUI integration and art.
-  The upstream credits the fort building icon to **Tom Darden's photograph of
-  Fort McHenry**, edited by 1230james; the underlying photograph's terms require
-  separate confirmation. Upstream German localization credit: **Rammstein20**
-  (other upstream localization credits: WarpWhistle79 and Blessing).
-- **Gas, Guns, Garb, and Grub**, James "1230james" Hyun, copyright (c) 2023.
+  [upstream license](https://github.com/1230james/vic3-forts-and-engineers/blob/7019a10ab4834d2757b93450be4fa6cbd2f67690/LICENSE.txt),
+  [included MIT text](LICENSES/third-party/Forts-and-Engineers-MIT.txt).
+  Upstream credits **Tom Darden** for the Fort McHenry photograph used in the
+  fort icon, edited by 1230james; [photograph source](https://www.nps.gov/media/photo/gallery-item.htm?pg=912388&id=1C29B72C-155D-451F-679236F35346FD7E&gid=1C27E1E2-155D-451F-6739965D63726B10).
+  Localization credits include **Rammstein20**, **WarpWhistle79** and **Blessing**.
+- **Gas, Guns, Garb, and Grub** — James "1230james" Hyun, copyright (c) 2023.
   [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2968644620),
-  [source](https://github.com/1230james/vic3-gas-guns-garb-grub).
-  Distributed under the [MIT License](LICENSES/third-party/Gas-Guns-Garb-and-Grub-MIT.txt).
-  Includes adapted `GGGG_*` military supplies, events, localization and icons.
+  [upstream license](https://github.com/1230james/vic3-gas-guns-garb-grub/blob/e04c9a1ac8701a86bdaf8c46cd5294c44f4cb45d/LICENSE.txt),
+  [included MIT text](LICENSES/third-party/Gas-Guns-Garb-and-Grub-MIT.txt).
   Upstream credits **Asayano_Tangke** for flavor text, **CrazyZombie** for Russian
-  localization, and Guns of Glory as inspiration. These credits do not assert
-  that every upstream localization is bundled here.
-- **Anbeeld's Stockpile Economy (ASE)**, **Anbeeld**, copyright (c) 2024.
+  localization and **Guns of Glory** as inspiration.
+- **Anbeeld's Stockpile Economy (ASE)** — **Anbeeld**, copyright (c) 2024.
   [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3249228964),
-  [source](https://github.com/Anbeeld/ASE).
-  Distributed under the [MIT License](LICENSES/third-party/Anbeeld-Stockpile-Economy-MIT.txt).
-  **KMPMP's stockpiling work is based on Anbeeld's Stockpile Economy.** This also
-  preserves the attribution requested in the author's Workshop reuse permission.
+  [upstream license](https://github.com/Anbeeld/ASE/blob/c7a7e0cd5c1646b9a449854d0cefb27a7ef8ea9b/LICENSE),
+  [included MIT text](LICENSES/third-party/Anbeeld-Stockpile-Economy-MIT.txt).
+  **KMPMP's stockpiling work is based on Anbeeld's Stockpile Economy**, preserving
+  the attribution requested in the author's Workshop reuse statement.
 
-The complete copyright, permission and warranty texts are included in the linked
-files. MIT permits modification and redistribution, including commercial use,
-provided the copyright and permission notices accompany copies or substantial
-portions. Upstream code licensing does not clear independently owned images or
-Paradox-derived material.
+Keep the full MIT copyright and permission notices with distributed copies or
+substantial portions. These software licenses do not independently license
+third-party photographs or Paradox material. Upstream localization credits above
+do not imply that every translation is bundled here.
 
-## Published continuation permissions
+## Published continuation wording
 
-**Power Blocs Expanded** and **Break Truce**, by **Kate the Sibyl**:
+**Power Blocs Expanded** and **Break Truce** — **Kate the Sibyl**:
 [Power Blocs Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=3387651487),
 [Break Truce](https://steamcommunity.com/workshop/filedetails/?id=3168188451).
-Both pages' "Development Abandoned" section states:
+Both pages' "Development Abandoned" section states (recorded 2026-11-05):
 
 > If you're reading this and you'd like to continue the work, feel free. Credit is appreciated.
 
-Observed 2026-11-05. This is a nonstandard permission to continue the work;
-we preserve the credit and source. It is not an MIT/0BSD/CC0 license. Adaptation
-is supported by the wording; precise redistribution channels, commercial reuse
-and independently sourced asset rights are not expressly addressed and remain
-questions for the author. Do not treat it as an unlimited sublicensing grant.
+This nonstandard permission is preserved as published; it is not a 0BSD, CC0 or
+MIT license and does not establish rights to independently sourced assets.
 
-## Other identified integrations: permission not yet established
+## Additional upstream credits
 
-Credit is preserved here even when permission could not be verified. A name or
-link in this list is **not** evidence that redistribution has been authorized.
-The audit contains affected paths, historical evidence and required follow-up.
+These credits identify source projects, not additional license grants.
 
 | Project | Credited author(s) | Source |
 | --- | --- | --- |
@@ -77,34 +74,19 @@ The audit contains affected paths, historical evidence and required follow-up.
 | Palm Oil on Millet Farm | Halcyon | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2896406216) |
 | Useful Malaria Icons | Draagyn | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3005297540) |
 | State Transfer Tool | TrueRoyalist; upstream credit to Anbeeld | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2880446671) |
-| Transfer Cash (historical spelling: "Tranfer Cash") | TrueRoyalist | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2881548032) |
+| Transfer Cash | TrueRoyalist | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2881548032) |
 | Clean Map | Salo | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2880218271) |
 | Victoria 2 style map | linwajun | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2912060491) |
 | shaded relief map Ver 2 | linwajun | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3051232603) |
 | IVW - NAVY Papermap | Immanuel von Waslaw | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3082524396) |
-| Modded Map Themes (integration candidate) | SnowBear | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3052415455) |
 
-Historical integrations also include **More General Orders** (historically
-attributed to crust; original author verification remains open; Workshop
-item [2888703922](https://steamcommunity.com/workshop/filedetails/?id=2888703922),
-now unavailable), **More Navy Illustrations** (1230james;
-[Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2984644281)),
-**Extended Building Grid** (original author not verified;
-[candidate Workshop item](https://steamcommunity.com/sharedfiles/filedetails/?id=2984488029)),
-**NO AI Multiculturalism**, **No Second Naval Invasion**, and the historical
-**Machiavelli** label. Their current surviving boundaries or original sources
-remain partly unresolved; see the audit before treating them as current features.
+Earlier integrations documented in [features.md](features.md) also include
+[More Navy Illustrations](https://steamcommunity.com/sharedfiles/filedetails/?id=2984644281)
+by **1230james**, and
+[More General Orders](https://steamcommunity.com/workshop/filedetails/?id=2888703922)
+(historically credited to **crust**; original author verification is incomplete).
+Historical credits are retained without representing every earlier feature as
+part of the current mod.
 
-## Game and asset rights
-
-Victoria 3 and game-derived material remain subject to Paradox's rights and
-applicable game/modding terms. Copied interfaces, state data, icons and modified
-game assets are not relicensed here. Maps, thumbnails, flags, company art and
-unclassified graphics require ingredient-level review. No blanket CC0 claim is
-made for bundled graphics.
-
-The full audit and file-level evidence are maintained in
-[the repository provenance record](https://github.com/MasterSon-git/vic3-kmpmp/blob/main/docs/PROVENANCE.md).
-It records unresolved permissions rather than claiming complete compliance.
-Corrections and reliable permission references are welcome through
+For attribution corrections or rights-holder requests, use
 [repository issues](https://github.com/MasterSon-git/vic3-kmpmp/issues).

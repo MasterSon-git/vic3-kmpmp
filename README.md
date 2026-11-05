@@ -1,51 +1,40 @@
 # KMPMP — Karesak Multiplayer Mod Pack
 
-KMPMP is a community mod pack for **Victoria 3 multiplayer**, published on Steam
-Workshop as **Machiavelli MP Mod**. It combines and adapts community mods with
-Karesak's own scripts, interface changes and balance choices for organised games.
-It is an independent community project.
+KMPMP is a community mod pack for **Victoria 3 multiplayer**, published as
+[Machiavelli MP Mod on Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3009203637).
+It combines and adapts community mods with Karesak's own scripts, interface
+changes and balance choices for organised games.
 
-The source includes fortifications and combat engineers, expanded military
-supplies, stockpiling, private-construction controls, canal and railway changes,
-Power Bloc extensions, diplomatic tools, country content, and paper-map themes.
-These systems are integrated here; enabling their standalone upstream mods as
-well can cause conflicts. This list describes source content, not a guarantee
-that every feature works on every game version or DLC combination.
+Features include fortifications and engineers, military supplies and stockpiling,
+private-construction controls, canal and railway changes, Power Bloc extensions,
+diplomatic tools, country content and paper-map themes.
 
-## Play and test
+## Installation and development
 
-Subscribe to [Machiavelli MP Mod on Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3009203637)
-and enable it in a dedicated launcher playset. All multiplayer participants
-should use the same game build, mod build, playset order and game rules.
+Subscribe on Workshop and enable KMPMP in a dedicated launcher playset. Avoid
+enabling standalone copies of its bundled mods alongside it. Multiplayer players
+should use matching game/mod builds, playset order and game rules.
 
-The three checked-in metadata variants currently declare **1.13.11** support.
-That declaration is not a new runtime certification. The separate
-[1.15 compatibility PR #647](https://github.com/MasterSon-git/vic3-kmpmp/pull/647)
-is ongoing; its changes are not part of this documentation work.
-For local installations and the test variant, start with
-[Development](docs/DEVELOPMENT.md) and [Testing](docs/TESTING.md).
-
-## Repository guide
+Check the [mod metadata](src/.metadata/metadata_kmpmp.json) for the declared game
+version. See [Development and testing](docs/DEVELOPMENT.md) for local installation,
+test variants and bug-report information.
 
 | Path | Purpose |
 | --- | --- |
-| `src/` | Shared mod payload, three metadata variants and thumbnails |
-| `src_test/` | Test overlay applied after `src/`; currently directory placeholders |
-| `scripts/` | PowerShell deployment helpers and a branch-cleanup utility |
-| `docs/` | Development, testing and provenance audit |
-| `LICENSES/` | Original-contribution licenses and preserved upstream license texts |
-| [features.md](features.md) | Historical integration notes; not a current feature/support matrix |
+| `src/` | Shared mod payload, metadata variants and thumbnails |
+| `src_test/` | Overlay for the test variant |
+| `scripts/` | PowerShell deployment helpers |
+| `docs/DEVELOPMENT.md` | Local workflow and testing |
+| `LICENSES/` | Original-contribution and upstream license texts |
+| [features.md](features.md) | Historical integration notes |
 
 ## Contribute
 
-Bug reports, reproducible saves, translations and focused improvements are
-welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
-It is the authoritative policy for people and AI coding agents;
-[AGENTS.md](AGENTS.md) adds agent-specific safeguards.
-Use [GitHub issues](https://github.com/MasterSon-git/vic3-kmpmp/issues) for bugs,
-feature proposals and compatibility reports. See [SUPPORT.md](SUPPORT.md) for
-the information that helps us reproduce a problem and
-[CHANGELOG.md](CHANGELOG.md) for release-oriented notes.
+Bug reports, translations and focused improvements are welcome.
+[CONTRIBUTING.md](CONTRIBUTING.md) is the authoritative development policy;
+[AGENTS.md](AGENTS.md) adds safeguards for AI coding agents.
+Use [GitHub issues](https://github.com/MasterSon-git/vic3-kmpmp/issues) for
+reproducible bugs and proposals.
 
 ## Credits
 
@@ -59,22 +48,12 @@ Thanks to everyone, supporting development of this mod:
 - Waysten
   - Pfuscht auch den ganzen Tag
 
-Bundled upstream authors and projects are credited in
-[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). The
-[provenance audit](docs/PROVENANCE.md) records evidence, affected files,
-permissions and open questions, including historical integrations.
+See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for upstream projects,
+authors, source links and our approach to attribution and rights-holder requests.
 
 ## Licensing
 
-Original KMPMP script code and repository tooling are offered under **0BSD**;
-original KMPMP creative assets are offered under **CC0 1.0** to the extent KMPMP
-contributors own those rights. No attribution is required for those original
-contributions; voluntary credit is appreciated and commercial reuse is permitted.
-
-**This is not a blanket license for this mod pack.** Third-party components,
-vanilla-derived material and content of unresolved provenance are excluded from
-that grant. Modified upstream content retains its upstream obligations.
-Read [LICENSE.md](LICENSE.md) for the scope and exclusions and the
-[third-party notices](THIRD_PARTY_NOTICES.md) before reusing any bundled material.
-Several upstream permissions and asset origins remain unresolved; this repository
-does not claim complete license clearance.
+Original KMPMP code uses **0BSD**; original creative contributions use **CC0 1.0**.
+Attribution for that original work is optional and appreciated; commercial reuse
+is permitted. Third-party and game-derived material retains its own terms and
+is excluded from these grants. See [LICENSE.md](LICENSE.md) for the scope.
