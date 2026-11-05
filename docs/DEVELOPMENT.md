@@ -11,7 +11,9 @@ after `src/`; it currently holds directory placeholders, which are excluded
 from deployment. Add intentional test overrides there rather than duplicating
 the whole mod.
 
-Run from the repository root (source paths also work from other directories):
+Run these commands from the repository root. The scripts resolve their source
+paths relative to their own location, so they also work when invoked using
+full paths from another directory:
 
 | Command | Default local mod folder |
 | --- | --- |

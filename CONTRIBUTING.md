@@ -44,10 +44,10 @@ migration notes belong in the PR.
 
 ## Upstream work and licensing
 
-Original contributions follow [LICENSE.md](LICENSE.md); existing contributors
-have already agreed, and no renewed approval process is needed. When importing
-or adapting upstream work, include its project, author, source and known reuse
-terms in the PR. Add voluntary thanks to
+Original KMPMP contributions are licensed as described in [LICENSE.md](LICENSE.md).
+Contribute only work you have the rights to license under those terms. When
+importing or adapting upstream work, identify its project, author, source and
+known reuse terms in the PR. Add voluntary thanks to
 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md); keep license obligations in
 `LICENSE.md` and preserve the full upstream license texts. Required notices must
 also ship in mod packages, including test builds.

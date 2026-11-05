@@ -1,8 +1,8 @@
 # Licensing
 
-KMPMP combines original community contributions with adapted third-party mods
-and Victoria 3 material. The existing contributors have agreed to these terms
-for their own work:
+KMPMP combines original community contributions, adapted third-party mods and
+Victoria 3 material. KMPMP contributors have agreed to license their own
+original contributions under the following terms:
 
 | Original KMPMP contribution | Terms |
 | --- | --- |
@@ -35,8 +35,7 @@ with distributed copies or substantial portions of these components:
 | Gas, Guns, Garb, and Grub | [MIT](LICENSES/third-party/Gas-Guns-Garb-and-Grub-MIT.txt) | [Upstream](https://github.com/1230james/vic3-gas-guns-garb-grub/blob/e04c9a1ac8701a86bdaf8c46cd5294c44f4cb45d/LICENSE.txt) |
 | Anbeeld's Stockpile Economy | [MIT](LICENSES/third-party/Anbeeld-Stockpile-Economy-MIT.txt) | [Upstream](https://github.com/Anbeeld/ASE/blob/c7a7e0cd5c1646b9a449854d0cefb27a7ef8ea9b/LICENSE) |
 
-Additional attribution requested by Anbeeld: KMPMP includes work based on
-Anbeeld's Stockpile Economy by Anbeeld.
+KMPMP includes work based on [Anbeeld's Stockpile Economy (ASE)](https://github.com/Anbeeld/ASE).
 
 Distributed packages must include this file, the third-party notices and
 `LICENSES/`. The deployment scripts copy them into each mod folder.

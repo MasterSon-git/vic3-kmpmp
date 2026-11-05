@@ -2,18 +2,18 @@
 
 KMPMP is a community mod pack for **Victoria 3 multiplayer**, published as
 [Machiavelli MP Mod on Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3009203637).
-It combines and adapts community mods with Karesak's own scripts, interface
-changes and balance choices for organised games.
+It combines adapted community mods with features, interface changes and balance
+adjustments developed by KMPMP contributors for organised multiplayer games.
 
 Features include fortifications and engineers, military supplies and stockpiling,
-private-construction controls, canal and railway changes, Power Bloc extensions,
+private-construction controls, canal and railway changes, selected Power Bloc functionality,
 diplomatic tools, country content and paper-map themes.
 
 ## Installation and development
 
 Subscribe on Workshop and enable KMPMP in a dedicated launcher playset. Avoid
-enabling standalone copies of its bundled mods alongside it. Multiplayer players
-should use matching game/mod builds, playset order and game rules.
+enabling standalone copies of its bundled mods alongside it. All multiplayer participants should use matching game and mod versions,
+playset order and game rules.
 
 Check the [mod metadata](src/.metadata/metadata_kmpmp.json) for the declared game
 version. See [Development and testing](docs/DEVELOPMENT.md) for local installation,
@@ -38,11 +38,11 @@ reproducible bugs and proposals.
 
 ## Credits
 
-Thanks to everyone, supporting development of this mod:
+Thanks to everyone who has helped shape and develop KMPMP:
 - Eiwei
-  - Lead mod engineer, sampling of 3rd party mods and custom extensions are based on his contributions
+  - Concept and overall design direction; the driving force behind KMPMP.
 - Yuki
-  - Gui bugfixing and testing
+  - GUI bug fixes and testing
 - Tziplays
   - Was here
 - Waysten
