@@ -1,7 +1,16 @@
-robocopy "..\src" "$env:UserProfile\Documents\Paradox Interactive\Victoria 3\mod\vic3-kspmp" /MIR /XF thumbnail* /XD .metadata defines map
-robocopy "..\src\gfx\map\textures" "$env:UserProfile\Documents\Paradox Interactive\Victoria 3\mod\vic3-kspmp\gfx\map\textures" /MIR 
-New-Item "$env:UserProfile\Documents\Paradox Interactive\Victoria 3\mod\vic3-kspmp\.metadata" -Type directory -Force
-Copy-Item "..\src\.metadata\metadata_kspmp.json" -Destination "$env:UserProfile\Documents\Paradox Interactive\Victoria 3\mod\vic3-kspmp\.metadata\metadata.json" -Force
-Copy-Item "..\src\thumbnail_kspmp.png" -Destination "$env:UserProfile\Documents\Paradox Interactive\Victoria 3\mod\vic3-kspmp\thumbnail.png" -Force
-New-Item "$env:UserProfile\Documents\Paradox Interactive\Victoria 3\mod\vic3-kspmp\common\defines" -Type directory -Force
-Copy-Item "..\src\common\defines\kmpmp_00_defines.txt" -Destination "$env:UserProfile\Documents\Paradox Interactive\Victoria 3\mod\vic3-kspmp\common\defines\kmpmp_00_defines.txt" -Force
+param(
+    [string]$Destination = "$env:UserProfile\Documents\Paradox Interactive\Victoria 3\mod\vic3-kspmp"
+)
+
+$ErrorActionPreference = 'Stop'
+$source = Join-Path $PSScriptRoot '..\src'
+robocopy $source $Destination /MIR /XF thumbnail* /XD .metadata defines map
+if ($LASTEXITCODE -ge 8) { throw "Mod copy failed (robocopy $LASTEXITCODE)." }
+robocopy (Join-Path $source 'gfx\map\textures') (Join-Path $Destination 'gfx\map\textures') /MIR
+if ($LASTEXITCODE -ge 8) { throw "Map texture copy failed (robocopy $LASTEXITCODE)." }
+New-Item (Join-Path $Destination '.metadata') -Type directory -Force | Out-Null
+Copy-Item (Join-Path $source '.metadata\metadata_kspmp.json') -Destination (Join-Path $Destination '.metadata\metadata.json') -Force
+Copy-Item (Join-Path $source 'thumbnail_kspmp.png') -Destination (Join-Path $Destination 'thumbnail.png') -Force
+New-Item (Join-Path $Destination 'common\defines') -Type directory -Force | Out-Null
+Copy-Item (Join-Path $source 'common\defines\kmpmp_00_defines.txt') -Destination (Join-Path $Destination 'common\defines\kmpmp_00_defines.txt') -Force
+& (Join-Path $PSScriptRoot 'copy-legal-notices.ps1') -Destination $Destination

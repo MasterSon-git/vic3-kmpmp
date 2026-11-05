@@ -1,5 +1,14 @@
-robocopy "..\src" "$env:UserProfile\Documents\Paradox Interactive\Victoria 3\mod\vic3-kmpmp-test" /MIR /XF thumbnail* /XD .metadata
-robocopy "..\src_test" "$env:UserProfile\Documents\Paradox Interactive\Victoria 3\mod\vic3-kmpmp-test" /E /XF thumbnail* /XF _placeholder.txt /XF _placeholder.gui /XF _placeholder.yml /XD .metadata
-New-Item "$env:UserProfile\Documents\Paradox Interactive\Victoria 3\mod\vic3-kmpmp-test\.metadata" -Type directory -Force
-Copy-Item "..\src\.metadata\metadata_kmpmp_test.json" -Destination "$env:UserProfile\Documents\Paradox Interactive\Victoria 3\mod\vic3-kmpmp-test\.metadata\metadata.json" -Force
-Copy-Item "..\src\thumbnail_kmpmp_test.png" -Destination "$env:UserProfile\Documents\Paradox Interactive\Victoria 3\mod\vic3-kmpmp-test\thumbnail.png" -Force
+param(
+    [string]$Destination = "$env:UserProfile\Documents\Paradox Interactive\Victoria 3\mod\vic3-kmpmp-test"
+)
+
+$ErrorActionPreference = 'Stop'
+$source = Join-Path $PSScriptRoot '..\src'
+robocopy $source $Destination /MIR /XF thumbnail* /XD .metadata
+if ($LASTEXITCODE -ge 8) { throw "Mod copy failed (robocopy $LASTEXITCODE)." }
+robocopy (Join-Path $PSScriptRoot '..\src_test') $Destination /E /XF thumbnail* _placeholder.txt _placeholder.gui _placeholder.yml /XD .metadata
+if ($LASTEXITCODE -ge 8) { throw "Test overlay copy failed (robocopy $LASTEXITCODE)." }
+New-Item (Join-Path $Destination '.metadata') -Type directory -Force | Out-Null
+Copy-Item (Join-Path $source '.metadata\metadata_kmpmp_test.json') -Destination (Join-Path $Destination '.metadata\metadata.json') -Force
+Copy-Item (Join-Path $source 'thumbnail_kmpmp_test.png') -Destination (Join-Path $Destination 'thumbnail.png') -Force
+& (Join-Path $PSScriptRoot 'copy-legal-notices.ps1') -Destination $Destination
