@@ -6,14 +6,15 @@ It combines adapted community mods with features, interface changes and balance
 adjustments developed by KMPMP contributors for organised multiplayer games.
 
 Features include fortifications and engineers, military supplies and stockpiling,
-private-construction controls, canal and railway changes, selected Power Bloc functionality,
-diplomatic tools, country content and paper-map themes.
+private-construction controls, canal and railway changes, selected Power Bloc
+functionality, diplomatic tools, country content and paper-map themes.
 
 ## Installation and development
 
 Subscribe on Workshop and enable KMPMP in a dedicated launcher playset. Avoid
-enabling standalone copies of its bundled mods alongside it. All multiplayer participants should use matching game and mod versions,
-playset order and game rules.
+enabling standalone copies of its bundled mods alongside it. All multiplayer
+participants should use matching game and mod versions, playset order and game
+rules.
 
 Check the [mod metadata](src/.metadata/metadata_kmpmp.json) for the declared game
 version. See [Development and testing](docs/DEVELOPMENT.md) for local installation,
