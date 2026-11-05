@@ -1,8 +1,8 @@
 # Licensing
 
-KMPMP combines original community contributions with adapted third-party mods
-and Victoria 3 material. The existing contributors have agreed to these terms
-for their own work:
+KMPMP combines original community contributions, adapted third-party mods and
+Victoria 3 material. KMPMP contributors have agreed to license their own
+original contributions under the following terms:
 
 | Original KMPMP contribution | Terms |
 | --- | --- |
@@ -19,15 +19,15 @@ modified upstream files and protected material within mixed files. Original
 KMPMP changes do not relicense the underlying work; a filename or namespace does
 not establish ownership.
 
-Some third-party permissions have not been established; those components are
-not claimed to be licensed or legally cleared. Attribution alone does not
-establish redistribution rights. Voluntary thanks are listed separately in
+We have not verified redistribution permissions for every third-party component.
+Attribution alone does not grant reuse or redistribution rights. Upstream
+authors and projects are credited in
 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 ## Required upstream notices
 
-Keep the complete MIT license texts, including copyright and permission notices,
-with distributed copies or substantial portions of these components:
+When distributing these components, preserve their full MIT license texts,
+including copyright and permission notices:
 
 | Project | Included license | Original license source |
 | --- | --- | --- |
@@ -35,13 +35,12 @@ with distributed copies or substantial portions of these components:
 | Gas, Guns, Garb, and Grub | [MIT](LICENSES/third-party/Gas-Guns-Garb-and-Grub-MIT.txt) | [Upstream](https://github.com/1230james/vic3-gas-guns-garb-grub/blob/e04c9a1ac8701a86bdaf8c46cd5294c44f4cb45d/LICENSE.txt) |
 | Anbeeld's Stockpile Economy | [MIT](LICENSES/third-party/Anbeeld-Stockpile-Economy-MIT.txt) | [Upstream](https://github.com/Anbeeld/ASE/blob/c7a7e0cd5c1646b9a449854d0cefb27a7ef8ea9b/LICENSE) |
 
-Additional attribution requested by Anbeeld: KMPMP includes work based on
-Anbeeld's Stockpile Economy by Anbeeld.
+KMPMP includes work based on [Anbeeld's Stockpile Economy (ASE)](https://github.com/Anbeeld/ASE).
 
 Distributed packages must include this file, the third-party notices and
 `LICENSES/`. The deployment scripts copy them into each mod folder.
 
-We welcome attribution corrections and requests from original rights holders
-through [repository issues](https://github.com/MasterSon-git/vic3-kmpmp/issues).
-Requests will be reviewed and addressed appropriately, including removing
-affected material where necessary. This policy does not substitute for permission.
+If you are a rights holder with concerns about included material, or if you
+notice an attribution error, please [open an issue](https://github.com/MasterSon-git/vic3-kmpmp/issues).
+We will review these reports and remove affected material where appropriate.
+This contact process does not replace any required permission.

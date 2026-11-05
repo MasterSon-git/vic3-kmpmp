@@ -15,18 +15,18 @@ body:
     id: setup
     attributes:
       label: KMPMP build and playset
-      description: "Commit/Workshop update, production/test/single-player variant, DLC and other mods/load order."
+      description: "Include the KMPMP commit or Workshop update, variant (production, test or single-player), enabled DLC, and other mods and their load order."
     validations:
       required: true
   - type: textarea
     id: failure
     attributes:
       label: Failure and reproduction
-      description: "Expected/actual behaviour, country/date, fresh or older save, steps, and last working version if known."
+      description: "Describe the expected and actual behaviour, country and in-game date, whether the save is new or older, steps to reproduce, and last working version if known."
     validations:
       required: true
   - type: textarea
     id: evidence
     attributes:
       label: Evidence (optional)
-      description: "Relevant logs, save, changed vanilla paths or script-doc references. Report only checks actually performed; remove private information."
+      description: "Include relevant logs, a save, changed vanilla paths or script documentation if available. Only mention tests you actually performed; remove private information."

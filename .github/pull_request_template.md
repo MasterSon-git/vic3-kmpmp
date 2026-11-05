@@ -1,6 +1,10 @@
+<!-- Keep this description short and current. Summarize the outcome, not the
+sequence of attempts or commits. Update existing sections as work progresses;
+use discussion comments for relevant interim findings or progress, in moderation. -->
+
 ## Purpose
 
-<!-- What problem does this solve, and what should happen afterward? -->
+<!-- What problem does this solve? -->
 
 ## Related issues
 
@@ -12,12 +16,15 @@
 
 ## Compatibility implications
 
-<!-- Game build, DLC, saves, multiplayer/checksum and affected variants. Say "none" when appropriate. -->
+<!-- State the game version, affected DLC and variants, save compatibility,
+and any multiplayer or checksum effects. Write "none" if not applicable. -->
 
 ## Validation performed
 
-<!-- Commands, gameplay/multiplayer scenarios, results and skipped checks. Include git diff --check. -->
+<!-- Summarize meaningful checks, results and important gaps; no test logs or
+chronological reports. Include `git diff --check` when applicable. -->
 
 ## Known limitations
 
-<!-- Remaining tests, permissions or other follow-up. Do not claim unperformed validation. -->
+<!-- Note outstanding tests, licensing questions or follow-up work.
+Do not claim tests you haven't run. -->

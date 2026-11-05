@@ -24,7 +24,8 @@ Keep changes focused and practical for a community-maintained multiplayer modpac
 - Keep overrides small. Avoid broad cleanup or restructuring in an unrelated fix.
   Review all affected variants before changing compatibility declarations.
 - Preserve file encoding, including UTF-8 BOMs and language headers in localization.
-  Add English/German strings for new visible keys, or note missing translations.
+  Provide English and German localization for new player-facing text, or note
+  any missing translations.
 
 **Commented-out code is not a historical archive.** Remove obsolete implementations.
 Use Git history for old code, PRs for completed migration decisions, issues for
@@ -38,25 +39,39 @@ the change, inspect relevant logs and run `git diff --check`. Test gameplay
 changes in a fresh or reproducible saved campaign; test multiplayer-affecting
 changes with matching builds when possible.
 
-Report what you actually tested and what remains untested. Update affected
-documentation when behaviour or workflow changes; detailed test results and
-migration notes belong in the PR.
+Report meaningful test results and any important gaps. Update documentation
+when behaviour or workflow changes.
+
+## Issues, pull requests and documentation
+
+**Describe the current state, not the history of getting there.** Write issues
+and pull requests for someone reading them later: explain the goal, what changed
+or is proposed, relevant validation and remaining blockers or decisions.
+Update the opening description as work progresses instead of appending a running
+log of commits, attempts, investigations or repeated test results.
+
+Keep validation in the issue or PR description concise: state relevant checks,
+outcomes and important gaps. Discussion comments may record useful intermediate
+findings, decisions, progress updates or focused test details in reasonable
+amounts. Avoid step-by-step work diaries, repeated status updates, raw logs and
+self-congratulatory summaries. Incorporate lasting conclusions into the main
+description; use Git history for older implementations, and keep permanent
+documentation focused on current behaviour and lasting constraints.
 
 ## Upstream work and licensing
 
-Original contributions follow [LICENSE.md](LICENSE.md); existing contributors
-have already agreed, and no renewed approval process is needed. When importing
-or adapting upstream work, include its project, author, source and known reuse
-terms in the PR. Add voluntary thanks to
-[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md); keep license obligations in
-`LICENSE.md` and preserve the full upstream license texts. Required notices must
-also ship in mod packages, including test builds.
+Original KMPMP contributions are licensed as described in [LICENSE.md](LICENSE.md).
+Only present work as original KMPMP material if you hold the rights to
+license it under those terms. When importing or adapting upstream work,
+identify its project, author, source and known reuse terms in the PR.
+Acknowledge the original authors and projects in
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+Keep license obligations in `LICENSE.md` and preserve the full upstream license
+texts. Required notices must also ship in mod packages, including test builds.
 
-Do not present third-party material as original KMPMP work or assume public
-availability is permission. Follow the third-party policy in `LICENSE.md`;
-routine maintenance does not require an author-contact campaign or a file-level
-ownership inventory. Do not open additional licensing issues without
-explicit maintainer authorization.
+Do not present third-party material as original KMPMP work or assume that
+publicly available content is free to reuse. See [LICENSE.md](LICENSE.md) for
+the license scope and required notices.
 
 Keep discussions respectful and focused on the mod. Avoid personal attacks and
 posting private information.
