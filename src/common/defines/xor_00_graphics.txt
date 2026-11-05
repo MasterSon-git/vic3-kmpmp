@@ -100,7 +100,7 @@ NCities = {
 }
 
 NRoutes = {
-	ROUTE_ENTITIES_CUTOFF = 25 #250				# zoom at which we hide all route entities
+	LAND_ENTITIES_CUTOFF = 25 #300				# Land route visibility; replaces the ignored ROUTE_ENTITIES_CUTOFF
 	NAVAL_ENTITIES_CUTOFF = 65 #650				# Distance to camera at which naval route entities hide
 	AIR_ENTITIES_CUTOFF = 45 #450				# Zoom at which air route entities hide
 }

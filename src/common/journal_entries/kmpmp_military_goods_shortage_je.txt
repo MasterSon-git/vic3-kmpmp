@@ -4,21 +4,17 @@
     icon = "gfx/interface/icons/event_icons/event_military.dds"
 	group = je_group_foreign_affairs
 
-    possible = { # added through on_actions
-
+    # Explicitly added by the play on-actions; re-evaluate participation afterwards.
+    possible = {
+        is_diplomatic_play_committed_participant = yes
     }
 
-    outcome = {
-        flags = { hidden invalid_outcome }
-        conclusion_desc = je_standard_failure_conclusion_desc
-        trigger = {
-            # je should be silently closed, so use invalid trigger
-            is_diplomatic_play_committed_participant = no
-        }
-        effect = {
-            # remove shortage modifiers
-            # should be removed from je if it's invalidated
-        }
+    can_deactivate = yes
+
+    # Remove the inactive instance, including its shortage modifiers, without a
+    # concluded outcome. add_journal_entry can grant it again in the next play.
+    disable_evaluation = {
+        always = yes
     }
 
     on_weekly_pulse = {

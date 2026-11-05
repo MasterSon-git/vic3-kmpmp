@@ -23,3 +23,18 @@
         }
     }
 }
+
+kmpmp_player_protectorate_has_foreign_market = {
+    # Nested branches prevent dereferencing either link before it exists.
+    trigger_if = {
+        limit = { exists = market }
+        market = {
+            trigger_if = {
+                limit = { exists = owner }
+                owner != ROOT
+            }
+            trigger_else = { always = no }
+        }
+    }
+    trigger_else = { always = no }
+}

@@ -149,6 +149,53 @@ check('mobilization group backgrounds exist in base game', () => {
         assert(background && fs.existsSync(path.join(game, background)), `${name}: missing background ${background}`);
     }
 });
+check('override defines use supported namespaces and keys', () => {
+    const supported = new Map();
+    for (const file of files(path.join(game, 'common/defines')).filter(file => file.endsWith('.txt'))) {
+        for (const namespace of parse(read(file))) {
+            const names = supported.get(namespace.key) || new Set();
+            for (const setting of namespace.children || []) names.add(setting.key);
+            supported.set(namespace.key, names);
+        }
+    }
+    const declarations = new Set();
+    for (const file of files(path.join(root, 'src/common/defines')).filter(file => file.endsWith('.txt'))) {
+        for (const namespace of parse(read(file))) for (const setting of namespace.children || []) {
+            assert(supported.get(namespace.key)?.has(setting.key), `${file}: unsupported ${namespace.key}.${setting.key}`);
+            const name = `${namespace.key}.${setting.key}`;
+            assert(!declarations.has(name), `${file}: duplicate override ${name}`);
+            declarations.add(name);
+        }
+    }
+});
+check('shortage interface deactivates without an outcome and excludes decentralized countries', () => {
+    const entry = journals.get('kmpmp_je_military_goods_shortage');
+    assert.equal(value(entry, 'can_deactivate'), 'yes');
+    assert.equal(value(field(entry, 'possible'), 'is_diplomatic_play_committed_participant'), 'yes');
+    assert.equal(value(field(entry, 'disable_evaluation'), 'always'), 'yes');
+    assert(!entry.children.some(node => ['outcome', 'timeout'].includes(node.key)), 'Temporary shortage interface must not conclude');
+    const action = index(path.join(root, 'src/common/on_actions')).get('kmpmp_add_je_military_goods_shortage');
+    const involved = field(field(action, 'effect'), 'every_scope_play_involved');
+    const limit = field(involved, 'limit');
+    assert.equal(value(field(limit, 'NOT'), 'is_country_type'), 'decentralized');
+    assert(!JSON.stringify(limit).match(/"(?:is_player|is_ai)"/), 'Shortage mechanics must remain available to regular AI and players');
+});
+check('protectorate market links are guarded before dereferencing', () => {
+    const trigger = index(path.join(root, 'src/common/scripted_triggers')).get('kmpmp_player_protectorate_has_foreign_market');
+    const marketBranch = field(trigger, 'trigger_if');
+    assert.equal(value(field(marketBranch, 'limit'), 'exists'), 'market');
+    const ownerBranch = field(field(marketBranch, 'market'), 'trigger_if');
+    assert.equal(value(field(ownerBranch, 'limit'), 'exists'), 'owner');
+    assert.equal(field(ownerBranch, 'owner')?.operator, '!=');
+    assert.equal(value(ownerBranch, 'owner'), 'ROOT');
+    assert.equal(value(field(trigger, 'trigger_else'), 'always'), 'no');
+    assert.equal(value(field(field(marketBranch, 'market'), 'trigger_else'), 'always'), 'no');
+    const action = index(path.join(root, 'src/common/on_actions')).get('kmpmp_player_protectorate_own_market');
+    const limit = field(field(field(action, 'effect'), 'if'), 'limit');
+    assert.equal(value(limit, 'kmpmp_player_protectorate_is_own_market_forced'), 'yes');
+    assert.equal(value(limit, 'kmpmp_player_protectorate_has_foreign_market'), 'yes');
+    assert(!JSON.stringify(limit).includes('market.owner'), 'Unsafe market-owner chain restored');
+});
 check('scripted bar styles and recognition conditions', () => {
     const bars = index(path.join(root, 'src/common/scripted_progress_bars'));
     for (const [name, node] of bars) {
