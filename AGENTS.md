@@ -20,3 +20,6 @@ policy. These safeguards apply to automated work:
   Do not run the branch-deletion utility as part of routine setup.
 - Review the final diff and report checks honestly. Parsing or headless loading
   is not campaign or multiplayer validation.
+- Keep issues, PR descriptions and documentation focused on the current outcome.
+  Update summaries rather than appending work logs, investigation timelines or
+  repeated validation reports. Follow the writing rules in CONTRIBUTING.md.
