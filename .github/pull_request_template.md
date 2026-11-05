@@ -1,6 +1,10 @@
+<!-- Keep this description short and current. Summarize the final outcome,
+not the sequence of attempts, commits or investigation notes. Edit existing
+sections rather than appending progress reports. -->
+
 ## Purpose
 
-<!-- What problem does this solve, and what should happen afterward? -->
+<!-- What problem does this solve? -->
 
 ## Related issues
 
@@ -17,8 +21,8 @@ and any multiplayer or checksum effects. Write "none" if not applicable. -->
 
 ## Validation performed
 
-<!-- List the checks performed, their results, and any skipped gameplay or
-multiplayer tests. Include `git diff --check`. -->
+<!-- Summarize meaningful checks, results and important gaps; no test logs or
+chronological reports. Include `git diff --check` when applicable. -->
 
 ## Known limitations
 
