@@ -50,13 +50,13 @@ or is proposed, relevant validation and remaining blockers or decisions.
 Update the opening description as work progresses instead of appending a running
 log of commits, attempts, investigations or repeated test results.
 
-Keep validation concise: state the relevant checks, their outcomes and what has
-not been verified. Add technical detail only when needed to understand a decision
-or reproduce a problem. Avoid exhaustive logs, generated reports, lengthy
-chronologies and self-congratulatory progress summaries in issues, PRs, comments
-and permanent documentation. Use discussion comments for substantial findings
-or decisions, not routine status reports. Keep historical implementation details
-in Git history; document current behaviour and lasting constraints.
+Keep validation in the issue or PR description concise: state relevant checks,
+outcomes and important gaps. Discussion comments may record useful intermediate
+findings, decisions, progress updates or focused test details in reasonable
+amounts. Avoid step-by-step work diaries, repeated status updates, raw logs and
+self-congratulatory summaries. Incorporate lasting conclusions into the main
+description; use Git history for older implementations, and keep permanent
+documentation focused on current behaviour and lasting constraints.
 
 ## Upstream work and licensing
 

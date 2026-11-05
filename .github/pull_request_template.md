@@ -1,6 +1,6 @@
-<!-- Keep this description short and current. Summarize the final outcome,
-not the sequence of attempts, commits or investigation notes. Edit existing
-sections rather than appending progress reports. -->
+<!-- Keep this description short and current. Summarize the outcome, not the
+sequence of attempts or commits. Update existing sections as work progresses;
+use discussion comments for relevant interim findings or progress, in moderation. -->
 
 ## Purpose
 
