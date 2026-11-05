@@ -48,7 +48,8 @@ Original KMPMP contributions are licensed as described in [LICENSE.md](LICENSE.m
 Only present work as original KMPMP material if you hold the rights to
 license it under those terms. When importing or adapting upstream work,
 identify its project, author, source and known reuse terms in the PR.
-Add voluntary thanks to [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+Acknowledge the original authors and projects in
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 Keep license obligations in `LICENSE.md` and preserve the full upstream license
 texts. Required notices must also ship in mod packages, including test builds.
 
