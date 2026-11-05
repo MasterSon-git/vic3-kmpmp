@@ -257,7 +257,7 @@ check('prestige-good identities and known legacy overflows', () => {
     for (const [base, variants] of counts) if (variants.length > 3) {
         assert(legacy[base], `${base}: new prestige overflow`);
         assert.deepEqual([...variants].sort(), [...legacy[base]].sort(), `${base}: changed legacy overflow set`);
-        console.warn(`WARN ${base}: ${variants.length} registered variants; same set as 1.13.11. See docs/prestige-goods-investigation-1.15.md; production beyond the diagnostic limit needs gameplay verification.`);
+        console.warn(`WARN ${base}: ${variants.length} registered variants; same set as 1.13.11. See https://github.com/MasterSon-git/vic3-kmpmp/pull/647 for findings and pending production/accounting tests.`);
     }
 });
 console.log(`${checks} compatibility checks passed.${process.exitCode ? ' Resolve the failures above before release.' : ''} Runtime, DLC and multiplayer behavior require game testing.`);
