@@ -1,5 +1,7 @@
 ﻿# Prussia NGF Germany
 REPLACE_OR_CREATE:je_the_matter_of_the_reichsland = {
+    activation_description = { always = yes }
+
     group = je_group_historical_content
     icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
@@ -10,30 +12,42 @@ REPLACE_OR_CREATE:je_the_matter_of_the_reichsland = {
         }
     }
 
-    complete = {
-        owns_entire_state_region = STATE_ALSACE_LORRAINE
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            owns_entire_state_region = STATE_ALSACE_LORRAINE
+        }
+        effect = {
+            add_loyalists = {
+                value = 0.05
+            }
+            add_modifier = {
+                name = kmpmp_the_reichsland_buff
+                years = 5
+            }
+            add_modifier = {
+                name = kmpmp_the_reichsland_training_buff
+                years = 1
+            }
+        }
     }
 
-    on_complete = {
-        add_loyalists = {
-            value = 0.05
-        }
-        add_modifier = {
-            name = kmpmp_the_reichsland_buff
-            years = 5
-        }
-        add_modifier = {
-            name = kmpmp_the_reichsland_training_buff
-            years = 1
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            year >= 1871
         }
     }
 
-    invalid = {
-        year >= 1871
-    }
 }
 
 REPLACE_OR_CREATE:je_the_industrial_heartland = {
+    activation_description = { always = yes }
+
     group = je_group_historical_content
     icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
@@ -45,30 +59,38 @@ REPLACE_OR_CREATE:je_the_industrial_heartland = {
         }
     }
 
-    complete = {
-        NOT = {
-            state_region_owned_and_incorporated = { STATE_REGION = STATE_RHINELAND }
-            state_region_owned_and_incorporated = { STATE_REGION = STATE_NORTH_RHINE }
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            NOT = {
+                state_region_owned_and_incorporated = { STATE_REGION = STATE_RHINELAND }
+                state_region_owned_and_incorporated = { STATE_REGION = STATE_NORTH_RHINE }
+            }
+        }
+        effect = {
+            add_radicals = {
+                value = 0.08
+                culture = cu:north_german
+            }
+            add_radicals = {
+                value = 0.08
+                culture = cu:south_german
+            }
+            add_modifier = {
+                name = kmpmp_industrial_heartland_lost
+            }
         }
     }
 
-    on_complete = {
-        add_radicals = {
-            value = 0.08
-            culture = cu:north_german
-        }
-        add_radicals = {
-            value = 0.08
-            culture = cu:south_german
-        }
-        add_modifier = {
-            name = kmpmp_industrial_heartland_lost
-        }
-    }
 }
 
 #FRANCE:
 REPLACE_OR_CREATE:je_the_border_with_the_germans = {
+    activation_description = { always = yes }
+
     group = je_group_historical_content
     icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
@@ -91,36 +113,49 @@ REPLACE_OR_CREATE:je_the_border_with_the_germans = {
         }
     }
 
-    complete = {
-        year >= 1871
-    }
-
-    on_complete = {
-        if = {
-            limit = {
-                has_modifier = kmpmp_historical_border_buff
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            year >= 1871
+        }
+        effect = {
+            if = {
+                limit = {
+                    has_modifier = kmpmp_historical_border_buff
+                }
+                remove_modifier = kmpmp_historical_border_buff
             }
-            remove_modifier = kmpmp_historical_border_buff
         }
     }
 
-    fail = {
-        NOT = {
-            owns_entire_state_region = STATE_ALSACE_LORRAINE
-        }
-    }
-
-    on_fail = {
-        if = {
-            limit = {
-                has_modifier = kmpmp_historical_border_buff
+    outcome = {
+        header = je_standard_failure_header
+        effect_header = je_standard_on_failure_header
+        color = "blue_negative"
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            NOT = {
+                owns_entire_state_region = STATE_ALSACE_LORRAINE
             }
-            remove_modifier = kmpmp_historical_border_buff
+        }
+        effect = {
+            if = {
+                limit = {
+                    has_modifier = kmpmp_historical_border_buff
+                }
+                remove_modifier = kmpmp_historical_border_buff
+            }
         }
     }
+
 }
 
 REPLACE_OR_CREATE:je_humiliated_by_the_germans = {
+    activation_description = { always = yes }
+
     group = je_group_historical_content
     icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
@@ -136,25 +171,36 @@ REPLACE_OR_CREATE:je_humiliated_by_the_germans = {
         }
     }
 
-    complete = {
-        owns_entire_state_region = STATE_ALSACE_LORRAINE
-    }
-        
-    on_complete = {
-    }
-
-    fail = {
-        scope:journal_entry = {
-			is_goal_complete = yes
-		}
-        NOT = {
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
             owns_entire_state_region = STATE_ALSACE_LORRAINE
+        }
+        effect = {
+
         }
     }
 
-    on_fail = {
-        add_modifier = {
-            name = kmpmp_humiliated_by_the_germans
+    outcome = {
+        header = je_standard_failure_header
+        effect_header = je_standard_on_failure_header
+        color = "blue_negative"
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            scope:journal_entry = {
+                is_goal_complete = yes
+            }
+            NOT = {
+                owns_entire_state_region = STATE_ALSACE_LORRAINE
+            }
+        }
+        effect = {
+            add_modifier = {
+                name = kmpmp_humiliated_by_the_germans
+            }
         }
     }
 

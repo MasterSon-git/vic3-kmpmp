@@ -16,7 +16,7 @@ l_german:
 	zw_cpc_add_je_desc: "Fügt dem Journal „$je_zw_autonom_invest_management$“ hinzu."
 
 # Decrees
-	
+
 	decree_zw_no_state_private_investment: "Privatbautenverbot"
 	decree_zw_no_state_private_investment_desc: "$zw_text_domestic_private_investment$ werden im Staat verboten."
 
@@ -28,10 +28,10 @@ l_german:
 # Journal entry
 
 	je_zw_autonom_invest_management: "Privatbauten-Verwaltung"
-	je_zw_autonom_invest_management_reason: "In $zw_text_domestic_private_investment$, $zw_text_investment_abroad$ und $zw_text_investment_from_abroad$ eingreifen.\n\n#red Hinweis:#! Eingriffe in private Investitionen gelten ausschließlich für [Concept('concept_private_construction', '$concept_private_constructions$')] und schließen [Concept('concept_privatize', '$concept_privatizations$')] #b nicht#! ein." 
+	je_zw_autonom_invest_management_reason: "In $zw_text_domestic_private_investment$, $zw_text_investment_abroad$ und $zw_text_investment_from_abroad$ eingreifen.\n\n#red Hinweis:#! Eingriffe in private Investitionen gelten ausschließlich für [Concept('concept_private_construction', '$concept_private_constructions|q$')] und schließen [Concept('concept_privatize', '$concept_privatizations|q$')] #b nicht#! ein."
 
 # Scripted buttons
-	
+
 	# incorporated states, private construtions
 
 	zw_auto_invest_incorporated_states_only_button: "@zw_texticon_private_construction! Inkorporierte Staaten"
@@ -133,15 +133,15 @@ l_german:
 
 	zw_text_domestic_private_investment: "#tooltip:[GetPlayer.GetTooltipTag],zw_text_domestic_private_investment_tooltip_text $zw_text_domestic_private_investment_tooltip$#!"
 	zw_text_domestic_private_investment_tooltip: "#tooltippable Inländische Private Investitionen#!"
-	zw_text_domestic_private_investment_tooltip_text: "#b Inländische#! [Concept('concept_private_construction', '$concept_private_constructions$')], die von #b inländischen#! Investoren finanziert werden"
+	zw_text_domestic_private_investment_tooltip_text: "#b Inländische#! [Concept('concept_private_construction', '$concept_private_constructions|q$')], die von #b inländischen#! Investoren finanziert werden"
 
 	zw_text_investment_abroad: "#tooltip:[GetPlayer.GetTooltipTag],zw_text_investment_abroad_tooltip_text $zw_text_investment_abroad_tooltip$#!"
 	zw_text_investment_abroad_tooltip: "#tooltippable Private Outbound-Investitionen #!"
-	zw_text_investment_abroad_tooltip_text: "#b Ausländische#! [Concept('concept_private_construction', '$concept_private_constructions$')], die von #b inländischen#! Investoren finanziert werden"
+	zw_text_investment_abroad_tooltip_text: "#b Ausländische#! [Concept('concept_private_construction', '$concept_private_constructions|q$')], die von #b inländischen#! Investoren finanziert werden"
 
 	zw_text_investment_from_abroad: "#tooltip:[GetPlayer.GetTooltipTag],zw_text_investment_from_abroad_tooltip_text $zw_text_investment_from_abroad_tooltip$#!"
 	zw_text_investment_from_abroad_tooltip: "#tooltippable Inbound-Investitionen#!"
-	zw_text_investment_from_abroad_tooltip_text: "#b Inländische#! [Concept('concept_government_construction', '$concept_government_constructions$')] und [Concept('concept_private_construction', '$concept_private_constructions$')], die von #b ausländischen#! Investoren finanziert werden "
+	zw_text_investment_from_abroad_tooltip_text: "#b Inländische#! [Concept('concept_government_construction', '$concept_government_constructions|q$')] und [Concept('concept_private_construction', '$concept_private_constructions|q$')], die von #b ausländischen#! Investoren finanziert werden "
 
 	#
 

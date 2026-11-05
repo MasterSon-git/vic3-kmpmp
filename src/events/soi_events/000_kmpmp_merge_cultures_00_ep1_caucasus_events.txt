@@ -12,7 +12,7 @@ caucasuswar.6 = {
 	dlc = dlc010
 
 	event_image = {
-		video = "gfx/event_pictures/ep1_ca_mountain_pass_military.bk2"
+		video = "ep1_ca_mountain_pass_military"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -45,6 +45,7 @@ caucasuswar.6 = {
 			save_scope_as = adversary_scope
 			ruler = {
 				save_scope_as = shamil_scope
+				set_temporary_event_immortality = { DURATION = 3 }
 			}
 		}
 	}
@@ -102,6 +103,10 @@ caucasuswar.6 = {
 			post_notification = caucasus_russian_soldiers_defection_notification
 		}
 	}
+
+	after = {
+		revoke_temporary_event_immortality = { CHARACTER = scope:shamil_scope }
+	}
 }
 
 caucasuswar.7 = { #Parliament of Independence
@@ -117,7 +122,7 @@ caucasuswar.7 = { #Parliament of Independence
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
 	event_image = {
-		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"
+		video = "unspecific_ruler_speaking_to_people"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -127,6 +132,8 @@ caucasuswar.7 = { #Parliament of Independence
 	cooldown = { days = very_long_modifier_time }
 
 	trigger = {
+		# triggered by journal entry - je_caucasian_war [on_monthly_pulse]
+		is_involved_in_journal_entry = je_caucasian_war
 		NOT = {
 			has_truce_with = c:RUS
 		}
@@ -258,7 +265,7 @@ caucasuswar.9 = { #Muhammad Amin's arrival
 	dlc = dlc010
 
 	event_image = {
-		video = "gfx/event_pictures/middleeast_islam.bk2"
+		video = "middleeast_islam"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -345,7 +352,7 @@ caucasuswar_end.3 = {
 	dlc = dlc010
 
 	event_image = {
-		video = "gfx/event_pictures/ep1_ca_mountain_pass_military.bk2"
+		video = "ep1_ca_mountain_pass_military"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -357,12 +364,14 @@ caucasuswar_end.3 = {
 	cooldown = { days = very_long_modifier_time }
 
 	trigger = {
+		# triggered by journal entry - je_caucasian_war [on_weekly_pulse]
 		NOT = {
 			exists = c:CHC
 		}
 		NOT = {
 			has_variable = imamate_defeated
 		}
+		NOT = { war_may_restore_country = CHC }
 	}
 
 	immediate = {

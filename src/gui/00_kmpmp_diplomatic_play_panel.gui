@@ -100,7 +100,7 @@ types diplomatic_play_panel_types
 
 					diplo_play_sway_approval = {
 						blockoverride "visible_approval_icon" {
-							visible = "[DiplomaticPlay.AtLeastOneCountryWouldAcceptAnySway( GetPlayer.Self )]"
+							visible = "[DiplomaticPlay.AtLeastOneUndecidedCountryWouldAcceptAnySway( GetPlayer.Self )]"
 						}
 
 						position = { 10 2 }
@@ -119,13 +119,13 @@ types diplomatic_play_panel_types
 							parentanchor = vcenter
 							position = { 30 0 }
 							margin_left = 3
-							raw_text = "#v [DiplomaticPlay.GetNumberOfPossibleSwayCountriesFormatted( GetPlayer.Self )]#!"
+							raw_text = "#v [DiplomaticPlay.GetNumberOfSwayableUndecidedCountriesFormatted( GetPlayer.Self )]#!"
 						}
 					}
 
 					diplo_play_sway_disapproval = {
 						blockoverride "visible_disapproval_icon" {
-							visible = "[And(Not(DiplomaticPlay.AtLeastOneCountryWouldAcceptAnySway( GetPlayer.Self )), Or(DiplomaticPlay.IsInitiator(GetPlayer.Self),DiplomaticPlay.IsTarget(GetPlayer.Self)))]"
+							visible = "[And(Not(DiplomaticPlay.AtLeastOneUndecidedCountryWouldAcceptAnySway( GetPlayer.Self )), Or(DiplomaticPlay.IsInitiator(GetPlayer.Self),DiplomaticPlay.IsTarget(GetPlayer.Self)))]"
 						}
 
 						position = { 10 2 }
@@ -143,7 +143,7 @@ types diplomatic_play_panel_types
 							parentanchor = vcenter
 							position = { 30 0 }
 							margin_left = 3
-							raw_text = "#v [DiplomaticPlay.GetNumberOfPossibleSwayCountriesFormatted( GetPlayer.Self )]#!"
+							raw_text = "#v [DiplomaticPlay.GetNumberOfSwayableUndecidedCountriesFormatted( GetPlayer.Self )]#!"
 						}
 					}
 				}

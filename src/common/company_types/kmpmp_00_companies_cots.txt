@@ -122,6 +122,8 @@ REPLACE:company_estanifera_llallagua = {
 	building_types = {
 		building_lead_mine
 		building_iron_mine # kmpmp
+
+		building_copper_mine
 	}
 
 	extension_building_types = {

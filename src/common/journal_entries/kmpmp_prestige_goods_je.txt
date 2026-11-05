@@ -1,4 +1,6 @@
 ﻿REPLACE_OR_CREATE:je_prestige_good_generic_kmpmp_premium_engines = {
+    activation_description = { always = yes }
+
     icon = "gfx/interface/icons/goods_icons/prestige_goods/schichau_engines_prestige.dds"
 
     group = je_group_technology
@@ -48,31 +50,51 @@
         }
     }
 
-    complete = {
-        trigger_if = {
-            limit = {
-                has_variable = prestige_good_generic_kmpmp_premium_engines_timer_var
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            trigger_if = {
+                limit = {
+                    has_variable = prestige_good_generic_kmpmp_premium_engines_timer_var
+                }
+                scope:journal_entry = {
+                    is_goal_complete = yes
+                }
             }
-            scope:journal_entry = {
-                is_goal_complete = yes
+            trigger_if = {
+                limit = {
+                    exists = scope:relevant_company
+                }
+                scope:relevant_company ?= {
+                    company_is_prosperous = yes
+                }
+            }
+            trigger_if = {
+                limit = {
+                    exists = scope:relevant_goods
+                }
+                custom_tooltip = {
+                    text = relevant_goods_production_rank_tt
+                    "goods_production_rank(scope:relevant_goods)" <= 3
+                }
             }
         }
-        trigger_if = {
-            limit = {
-                exists = scope:relevant_company
+        effect = {
+            if = {
+                limit = {
+                    exists = scope:relevant_company
+                }
+                custom_tooltip = {
+                    text = je_prestige_good_generic_kmpmp_premium_engines_reward_tt
+                    scope:relevant_company ?= {
+                        set_variable = prestige_good_generic_kmpmp_premium_engines_var
+                    }
+                }
             }
-            scope:relevant_company ?= {
-                company_is_prosperous = yes
-            }
-        }
-        trigger_if = {
-            limit = {
-                exists = scope:relevant_goods
-            }
-            custom_tooltip = {
-                text = relevant_goods_production_rank_tt
-                "goods_production_rank(scope:relevant_goods)" <= 3
-            }
+            post_notification = prestige_good_generic_kmpmp_premium_engines_unlocked
         }
     }
 
@@ -95,21 +117,6 @@
         }
     }
 
-    on_complete = {
-        if = {
-            limit = {
-                exists = scope:relevant_company
-            }
-            custom_tooltip = {
-                text = je_prestige_good_generic_kmpmp_premium_engines_reward_tt
-                scope:relevant_company ?= {
-                    set_variable = prestige_good_generic_kmpmp_premium_engines_var
-                }
-            }
-        }
-        post_notification = prestige_good_generic_kmpmp_premium_engines_unlocked
-    }
-
     can_deactivate = yes
 
     current_value = {
@@ -128,6 +135,8 @@
 }
 
 REPLACE_OR_CREATE:je_prestige_good_generic_kmpmp_premium_silk = {
+    activation_description = { always = yes }
+
     icon = "gfx/interface/icons/goods_icons/prestige_goods/schichau_engines_prestige.dds"
 
     group = je_group_technology
@@ -177,31 +186,51 @@ REPLACE_OR_CREATE:je_prestige_good_generic_kmpmp_premium_silk = {
         }
     }
 
-    complete = {
-        trigger_if = {
-            limit = {
-                has_variable = prestige_good_generic_kmpmp_premium_silk_timer_var
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            trigger_if = {
+                limit = {
+                    has_variable = prestige_good_generic_kmpmp_premium_silk_timer_var
+                }
+                scope:journal_entry = {
+                    is_goal_complete = yes
+                }
             }
-            scope:journal_entry = {
-                is_goal_complete = yes
+            trigger_if = {
+                limit = {
+                    exists = scope:relevant_company
+                }
+                scope:relevant_company ?= {
+                    company_is_prosperous = yes
+                }
+            }
+            trigger_if = {
+                limit = {
+                    exists = scope:relevant_goods
+                }
+                custom_tooltip = {
+                    text = relevant_goods_production_rank_tt
+                    "goods_production_rank(scope:relevant_goods)" <= 3
+                }
             }
         }
-        trigger_if = {
-            limit = {
-                exists = scope:relevant_company
+        effect = {
+            if = {
+                limit = {
+                    exists = scope:relevant_company
+                }
+                custom_tooltip = {
+                    text = je_prestige_good_generic_kmpmp_premium_silk_reward_tt
+                    scope:relevant_company ?= {
+                        set_variable = prestige_good_generic_kmpmp_premium_silk_var
+                    }
+                }
             }
-            scope:relevant_company ?= {
-                company_is_prosperous = yes
-            }
-        }
-        trigger_if = {
-            limit = {
-                exists = scope:relevant_goods
-            }
-            custom_tooltip = {
-                text = relevant_goods_production_rank_tt
-                "goods_production_rank(scope:relevant_goods)" <= 3
-            }
+            post_notification = prestige_good_generic_kmpmp_premium_silk_unlocked
         }
     }
 
@@ -224,21 +253,6 @@ REPLACE_OR_CREATE:je_prestige_good_generic_kmpmp_premium_silk = {
         }
     }
 
-    on_complete = {
-        if = {
-            limit = {
-                exists = scope:relevant_company
-            }
-            custom_tooltip = {
-                text = je_prestige_good_generic_kmpmp_premium_silk_reward_tt
-                scope:relevant_company ?= {
-                    set_variable = prestige_good_generic_kmpmp_premium_silk_var
-                }
-            }
-        }
-        post_notification = prestige_good_generic_kmpmp_premium_silk_unlocked
-    }
-
     can_deactivate = yes
 
     current_value = {
@@ -257,6 +271,8 @@ REPLACE_OR_CREATE:je_prestige_good_generic_kmpmp_premium_silk = {
 }
 
 REPLACE_OR_CREATE:je_prestige_good_generic_kmpmp_premium_oil = {
+    activation_description = { always = yes }
+
     icon = "gfx/interface/icons/goods_icons/prestige_goods/schichau_engines_prestige.dds"
 
     group = je_group_technology
@@ -306,31 +322,51 @@ REPLACE_OR_CREATE:je_prestige_good_generic_kmpmp_premium_oil = {
         }
     }
 
-    complete = {
-        trigger_if = {
-            limit = {
-                has_variable = prestige_good_generic_kmpmp_premium_oil_timer_var
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            trigger_if = {
+                limit = {
+                    has_variable = prestige_good_generic_kmpmp_premium_oil_timer_var
+                }
+                scope:journal_entry = {
+                    is_goal_complete = yes
+                }
             }
-            scope:journal_entry = {
-                is_goal_complete = yes
+            trigger_if = {
+                limit = {
+                    exists = scope:relevant_company
+                }
+                scope:relevant_company ?= {
+                    company_is_prosperous = yes
+                }
+            }
+            trigger_if = {
+                limit = {
+                    exists = scope:relevant_goods
+                }
+                custom_tooltip = {
+                    text = relevant_goods_production_rank_tt
+                    "goods_production_rank(scope:relevant_goods)" <= 3
+                }
             }
         }
-        trigger_if = {
-            limit = {
-                exists = scope:relevant_company
+        effect = {
+            if = {
+                limit = {
+                    exists = scope:relevant_company
+                }
+                custom_tooltip = {
+                    text = je_prestige_good_generic_kmpmp_premium_oil_reward_tt
+                    scope:relevant_company ?= {
+                        set_variable = prestige_good_generic_kmpmp_premium_oil_var
+                    }
+                }
             }
-            scope:relevant_company ?= {
-                company_is_prosperous = yes
-            }
-        }
-        trigger_if = {
-            limit = {
-                exists = scope:relevant_goods
-            }
-            custom_tooltip = {
-                text = relevant_goods_production_rank_tt
-                "goods_production_rank(scope:relevant_goods)" <= 3
-            }
+            post_notification = prestige_good_generic_kmpmp_premium_oil_unlocked
         }
     }
 
@@ -353,21 +389,6 @@ REPLACE_OR_CREATE:je_prestige_good_generic_kmpmp_premium_oil = {
         }
     }
 
-    on_complete = {
-        if = {
-            limit = {
-                exists = scope:relevant_company
-            }
-            custom_tooltip = {
-                text = je_prestige_good_generic_kmpmp_premium_oil_reward_tt
-                scope:relevant_company ?= {
-                    set_variable = prestige_good_generic_kmpmp_premium_oil_var
-                }
-            }
-        }
-        post_notification = prestige_good_generic_kmpmp_premium_oil_unlocked
-    }
-
     can_deactivate = yes
 
     current_value = {
@@ -386,6 +407,8 @@ REPLACE_OR_CREATE:je_prestige_good_generic_kmpmp_premium_oil = {
 }
 
 REPLACE_OR_CREATE:je_prestige_good_generic_kmpmp_premium_wine = {
+    activation_description = { always = yes }
+
     icon = "gfx/interface/icons/goods_icons/prestige_goods/schichau_engines_prestige.dds"
 
     group = je_group_technology
@@ -435,31 +458,51 @@ REPLACE_OR_CREATE:je_prestige_good_generic_kmpmp_premium_wine = {
         }
     }
 
-    complete = {
-        trigger_if = {
-            limit = {
-                has_variable = prestige_good_generic_kmpmp_premium_wine_timer_var
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            trigger_if = {
+                limit = {
+                    has_variable = prestige_good_generic_kmpmp_premium_wine_timer_var
+                }
+                scope:journal_entry = {
+                    is_goal_complete = yes
+                }
             }
-            scope:journal_entry = {
-                is_goal_complete = yes
+            trigger_if = {
+                limit = {
+                    exists = scope:relevant_company
+                }
+                scope:relevant_company ?= {
+                    company_is_prosperous = yes
+                }
+            }
+            trigger_if = {
+                limit = {
+                    exists = scope:relevant_goods
+                }
+                custom_tooltip = {
+                    text = relevant_goods_production_rank_tt
+                    "goods_production_rank(scope:relevant_goods)" <= 3
+                }
             }
         }
-        trigger_if = {
-            limit = {
-                exists = scope:relevant_company
+        effect = {
+            if = {
+                limit = {
+                    exists = scope:relevant_company
+                }
+                custom_tooltip = {
+                    text = je_prestige_good_generic_kmpmp_premium_wine_reward_tt
+                    scope:relevant_company ?= {
+                        set_variable = prestige_good_generic_kmpmp_premium_wine_var
+                    }
+                }
             }
-            scope:relevant_company ?= {
-                company_is_prosperous = yes
-            }
-        }
-        trigger_if = {
-            limit = {
-                exists = scope:relevant_goods
-            }
-            custom_tooltip = {
-                text = relevant_goods_production_rank_tt
-                "goods_production_rank(scope:relevant_goods)" <= 3
-            }
+            post_notification = prestige_good_generic_kmpmp_premium_wine_unlocked
         }
     }
 
@@ -480,21 +523,6 @@ REPLACE_OR_CREATE:je_prestige_good_generic_kmpmp_premium_wine = {
                 change_variable = { name = prestige_good_generic_kmpmp_premium_wine_timer_var add = 1 }
             }
         }
-    }
-
-    on_complete = {
-        if = {
-            limit = {
-                exists = scope:relevant_company
-            }
-            custom_tooltip = {
-                text = je_prestige_good_generic_kmpmp_premium_wine_reward_tt
-                scope:relevant_company ?= {
-                    set_variable = prestige_good_generic_kmpmp_premium_wine_var
-                }
-            }
-        }
-        post_notification = prestige_good_generic_kmpmp_premium_wine_unlocked
     }
 
     can_deactivate = yes

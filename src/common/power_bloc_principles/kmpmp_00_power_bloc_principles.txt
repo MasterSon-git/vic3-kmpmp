@@ -116,7 +116,7 @@ INJECT:principle_aggressive_coordination_1 = {
 
 INJECT:principle_aggressive_coordination_2 = {
 	member_modifier = {
-		country_war_exhaustion_casualties_mult = -0.2 # = -0.35
+		country_war_support_casualties_mult = -0.2 # = -0.35
 
 		# kmpmp
 		country_kmpmp_war_support_from_power_bloc_principles_add = 1.0
@@ -130,7 +130,7 @@ INJECT:principle_aggressive_coordination_3 = {
 
 	member_modifier = {
 		# Modifiers from previous level(s)
-		country_war_exhaustion_casualties_mult = -0.2 # = -0.35
+		country_war_support_casualties_mult = -0.2 # = -0.35
 		# kmpmp
 		country_kmpmp_war_support_from_power_bloc_principles_add = 1.0
 	

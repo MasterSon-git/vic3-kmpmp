@@ -1,4 +1,4 @@
 ﻿l_german:
- KMPMP_ENEMY_OCCUPATION_INCORPORATED_STATES: "Feindliche Besetzung in [Concept('concept_incorporated_state', '$concept_incorporated_states$')]"
- KMPMP_TURMOIL_INCORPORATED_STATES: "[concept_turmoil] in [Concept('concept_incorporated_state', '$concept_incorporated_states$')]"
+ KMPMP_ENEMY_OCCUPATION_INCORPORATED_STATES: "Feindliche Besetzung in [Concept('concept_incorporated_state', '$concept_incorporated_states|q$')]"
+ KMPMP_TURMOIL_INCORPORATED_STATES: "[concept_turmoil] in [Concept('concept_incorporated_state', '$concept_incorporated_states|q$')]"
  KMPMP_POWER_BLOC_MANDATE_PROGRESS_FROM_COUNTRY_MODIFIER: "Von Landesmodifikatoren"

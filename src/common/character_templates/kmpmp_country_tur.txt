@@ -2,7 +2,7 @@
     first_name = Abdulmecid
     last_name = Osmanoglu
     historical = yes
-    culture = primary_culture
+    culture = cu:turkish
     heir = yes
     noble = yes
     birth_date = 1823.4.25
@@ -14,6 +14,8 @@
         # aesthete
         imperious
     }
+
+    religion = rel:sunni
 }
 
 REPLACE:tur_abdulhamid_ii_osmanoglu_template = {

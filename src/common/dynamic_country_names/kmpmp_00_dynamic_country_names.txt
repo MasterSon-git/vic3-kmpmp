@@ -33,6 +33,14 @@ INJECT:AUS = { # Austria
                 country_has_primary_culture = cu:bosniak
                 country_has_primary_culture = cu:croat
                 country_has_primary_culture = cu:romanian
+
+                country_has_monarchy_law = yes
+                NOT = {
+                    is_in_geographic_region = geographic_region_austria
+                }
+                ruler = {
+                    var:dynasty_var ?= flag:house_habsburg
+                }
             }
         }
     }

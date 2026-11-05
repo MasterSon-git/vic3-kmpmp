@@ -1,0 +1,5 @@
+﻿# Preserve KMPMP's restriction on farming recognition through war goals.
+# The remaining narrative and diplomatic effects run once through vanilla's
+# on_wargoal_enforced and on_wargoal_enforced_by_timer hooks.
+REPLACE:on_wargoal_enforced_earn_recognition_defeat_effect = { }
+REPLACE:on_wargoal_enforced_earn_recognition_victory_effect = { }

@@ -129,6 +129,7 @@ meiji.2 = {
 			custom_tooltip = abolish_edo_system_available_later_tt
 			set_variable = meiji_reforms_complete_var
 		}
+		je_meiji_main_cleanup = yes
 	}
 }
 
@@ -211,6 +212,7 @@ meiji.4 = {
 					is_busy = no
 				}
 				save_scope_as = military_consultant_general
+				set_temporary_event_immortality = { DURATION = 3 }
 			}
 		}
 	}
@@ -261,6 +263,11 @@ meiji.4 = {
 				name = ending_isolation
 			}
 		}
+	}
+
+	cooldown = { days = normal_modifier_time }
+	after = {
+		revoke_temporary_event_immortality = { CHARACTER = scope:military_consultant_general }
 	}
 }
 
@@ -331,6 +338,7 @@ meiji.5 = {
 				}
 				leader = {
 					save_scope_as = japan_embassy_politician
+					set_temporary_event_immortality = { DURATION = 3 }
 				}
 			}
 		}
@@ -413,6 +421,10 @@ meiji.5 = {
 			}
 		}
 	}
+
+	after = {
+		revoke_temporary_event_immortality = { CHARACTER = scope:japan_embassy_politician }
+	}
 }
 
 # Foreign Investment
@@ -488,6 +500,7 @@ meiji.6 = {
 			ig:ig_industrialists ?= {
 				leader = {
 					save_scope_as = western_investor_ig_leader
+					set_temporary_event_immortality = { DURATION = 3 }
 				}
 			}
 		}
@@ -539,5 +552,10 @@ meiji.6 = {
 				name = ending_isolation
 			}
 		}
+	}
+
+	cooldown = { days = normal_modifier_time }
+	after = {
+		revoke_temporary_event_immortality = { CHARACTER = scope:western_investor_ig_leader }
 	}
 }

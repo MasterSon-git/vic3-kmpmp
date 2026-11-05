@@ -1,4 +1,6 @@
 ﻿REPLACE_OR_CREATE:je_master_of_mediterranean_sea = {
+    activation_description = { always = yes }
+
     group = je_group_foreign_affairs
     icon = "gfx/interface/icons/event_icons/event_advantage.dds"
 
@@ -116,40 +118,46 @@
         }
     }
 
-    invalid = {
-        country_is_valid_for_je_master_of_mediterranean_sea = no
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            country_is_valid_for_je_master_of_mediterranean_sea = no
+        }
+        effect = {
+            remove_list_global_variable = {
+                name = countries_je_master_of_mediterranean_sea
+                target = ROOT
+            }
+            remove_variable = var_count_states_master_of_mediterranean_sea
+
+            # we are no longer part of the game, so remove all modifiers
+            if = {
+                limit = {
+                    has_modifier = kmpmp_mediterranean_sea_hegemony
+                }
+                remove_modifier = kmpmp_mediterranean_sea_hegemony
+            }
+            if = {
+                limit = {
+                    has_modifier = kmpmp_mediterranean_sea_domination
+                }
+                remove_modifier = kmpmp_mediterranean_sea_domination
+            }
+            if = {
+                limit = {
+                    has_modifier = kmpmp_mediterranean_sea_domination_negative
+                }
+                remove_modifier = kmpmp_mediterranean_sea_domination_negative
+            }
+        }
     }
 
-    on_invalid = {
-        remove_list_global_variable = {
-            name = countries_je_master_of_mediterranean_sea
-            target = ROOT
-        }
-        remove_variable = var_count_states_master_of_mediterranean_sea
-
-        # we are no longer part of the game, so remove all modifiers
-        if = {
-            limit = {
-                has_modifier = kmpmp_mediterranean_sea_hegemony
-            }
-            remove_modifier = kmpmp_mediterranean_sea_hegemony
-        }
-        if = {
-            limit = {
-                has_modifier = kmpmp_mediterranean_sea_domination
-            }
-            remove_modifier = kmpmp_mediterranean_sea_domination
-        }
-        if = {
-            limit = {
-                has_modifier = kmpmp_mediterranean_sea_domination_negative
-            }
-            remove_modifier = kmpmp_mediterranean_sea_domination_negative
-        }
-    }
 }
 
 REPLACE_OR_CREATE:je_leader_of_latin_america = {
+    activation_description = { always = yes }
+
     group = je_group_foreign_affairs
     icon = "gfx/interface/icons/event_icons/event_advantage.dds"
 
@@ -209,28 +217,34 @@ REPLACE_OR_CREATE:je_leader_of_latin_america = {
         }
     }
 
-    invalid = {
-        country_is_valid_for_je_leader_of_latin_america = no
-    }
-
-    on_invalid = {
-        remove_list_global_variable = {
-            name = countries_je_leader_of_latin_america
-            target = ROOT
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            country_is_valid_for_je_leader_of_latin_america = no
         }
-        remove_variable = var_count_states_leader_of_latin_america
-
-        # we are no longer part of the game, so remove all modifiers
-        if = {
-            limit = {
-                has_modifier = kmpmp_leader_of_latin_america_hegemony
+        effect = {
+            remove_list_global_variable = {
+                name = countries_je_leader_of_latin_america
+                target = ROOT
             }
-            remove_modifier = kmpmp_leader_of_latin_america_hegemony
+            remove_variable = var_count_states_leader_of_latin_america
+
+            # we are no longer part of the game, so remove all modifiers
+            if = {
+                limit = {
+                    has_modifier = kmpmp_leader_of_latin_america_hegemony
+                }
+                remove_modifier = kmpmp_leader_of_latin_america_hegemony
+            }
         }
     }
+
 }
 
 REPLACE_OR_CREATE:je_ruler_of_the_east = {
+    activation_description = { always = yes }
+
     group = je_group_foreign_affairs
     icon = "gfx/interface/icons/event_icons/event_advantage.dds"
 
@@ -376,6 +390,8 @@ REPLACE_OR_CREATE:je_ruler_of_the_east = {
 }
 
 REPLACE_OR_CREATE:je_the_sugar_monopoly = {
+    activation_description = { always = yes }
+
     group = je_group_foreign_affairs
     icon = "gfx/interface/icons/event_icons/event_advantage.dds"
 

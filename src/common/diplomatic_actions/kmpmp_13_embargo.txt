@@ -191,6 +191,8 @@
 				FACTOR = appeasement_embargo_ended
 			}
 		}
+
+		show_in_outliner = yes
 	}
 
 	ai = {
@@ -232,7 +234,6 @@
 							has_radical_leftist_government = yes
 						}
 					}
-
 				}
 				multiply = 2
 			}
@@ -266,6 +267,12 @@
 					has_diplomatic_pact = {
 						who = root
 						type = embargo
+					}
+				}
+				scope:target_country = {
+					OR = {
+						has_radical_leftist_economy = yes
+						has_radical_leftist_government = yes
 					}
 				}
 			}

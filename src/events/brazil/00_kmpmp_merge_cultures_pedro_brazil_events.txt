@@ -29,6 +29,7 @@ pedro.7 = {
 	immediate = {
 		ruler = {
 			save_scope_as = new_brz_monarch_scope
+			set_temporary_event_immortality = { DURATION = 3 }
 		}
 		ROOT = {
 			save_scope_as = brazil_scope
@@ -82,5 +83,10 @@ pedro.7 = {
 				culture = cu:afro_american #cu:afro_brazilian
 			}
 		}
+	}
+
+	after = {
+		revoke_temporary_event_immortality = { CHARACTER = scope:new_brz_monarch_scope }
+		je_pedro_brazil_cleanup = yes
 	}
 }

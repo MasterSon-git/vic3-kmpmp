@@ -3,81 +3,112 @@
 
 	group = je_group_foreign_affairs
 
-	complete = {
-		OR = {
-			scope:target ?= {
-				has_law_or_variant = law_type:law_free_trade
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			OR = {
+				scope:target ?= {
+					has_law_or_variant = law_type:law_free_trade
+				}
+				has_treaty_foreign_investment_rights_with = { TARGET = scope:target }
+				any_scope_state = {
+					is_treaty_port = yes
+					state_region = {
+						any_scope_state = {
+							owner = scope:target
+						}
+					}
+				}
 			}
-			has_treaty_foreign_investment_rights_with = { TARGET = scope:target }
-			any_scope_state = {
-				is_treaty_port = yes
-				state_region = {
-					any_scope_state = {
-						owner = scope:target
+			hidden_trigger = {
+				scope:target = {
+					has_modifier = opium_wars_lost
+				}
+			}
+		}
+		effect = {
+			trigger_event = {
+				id = opium_wars.5
+				days = 5
+			}
+		}
+	}
+
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = opium_wars_fail_tt
+				scope:target = {
+					NOT = {
+						any_primary_culture = {
+							has_cultural_obsession = opium
+						}
 					}
 				}
 			}
 		}
-		hidden_trigger = {
-			scope:target = {
-				has_modifier = opium_wars_lost
+		effect = {
+			custom_tooltip = {
+				text = opium_wars_fail_invalid_tt
+				remove_variable = opium_wars_aggressor
 			}
+
+			# kmpmp
+			custom_tooltip = {
+				text = kmpmp_opium_wars_lost_effect_tt
+				kmpmp_opium_wars_lost_effect = yes
+			}
+
+			je_opium_wars_cleanup = yes
 		}
 	}
 
-	on_complete = {
-		trigger_event = {
-			id = opium_wars.5
-			days = 5
+	outcome = {
+		header = JOURNAL_ENTRY_TIMEOUT
+		effect_header = JOURNAL_ENTRY_ON_TIMEOUT
+
+		flags = { timeout }
+		conclusion_desc = JOURNAL_ENTRY_TIMEOUT_CONCLUSION_DESC
+		effect = {
+			custom_tooltip = {
+				text = opium_wars_fail_invalid_tt
+				remove_variable = opium_wars_aggressor
+			}
+
+			# kmpmp
+			custom_tooltip = {
+				text = kmpmp_opium_wars_lost_effect_tt
+				kmpmp_opium_wars_lost_effect = yes
+			}
+
+			je_opium_wars_cleanup = yes
 		}
 	}
 
-	fail = {
-		custom_tooltip = {
-			text = opium_wars_fail_tt
-			scope:target = {
-				NOT = {
-					any_primary_culture = {
-						has_cultural_obsession = opium
-					}
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			NOT = {
+				exists = scope:target
+			}
+			NOT = { has_war_with = scope:target }
+			hidden_trigger = {
+				scope:target = {
+					has_modifier = opium_wars_lost
 				}
 			}
 		}
-	}
-
-	invalid = {
-		NOT = {
-			exists = scope:target
-		}
-	}
-
-	on_invalid = {
-		remove_variable = opium_wars_aggressor
-	}
-
-	on_fail = {
-		custom_tooltip = {
-			text = opium_wars_fail_invalid_tt
+		effect = {
 			remove_variable = opium_wars_aggressor
-		}
-
-		# kmpmp
-		custom_tooltip = {
-			text = kmpmp_opium_wars_lost_effect_tt
-			kmpmp_opium_wars_lost_effect = yes
-		}
-	}
-
-	on_timeout = {
-		custom_tooltip = {
-			text = opium_wars_fail_invalid_tt
-			remove_variable = opium_wars_aggressor
-		}
-
-		# kmpmp
-		custom_tooltip = {
-			text = kmpmp_opium_wars_lost_effect_tt
-			kmpmp_opium_wars_lost_effect = yes
+			je_opium_wars_cleanup = yes
 		}
 	}
 
@@ -86,4 +117,8 @@
 	should_be_pinned_by_default_uninvolved_or_context = yes
 
 	timeout = 3650
+
+	activation_description = {
+		always = yes
+	}
 }

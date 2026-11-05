@@ -100,4 +100,8 @@ natural_borders.2 = {
         # kmpmp
         add_primary_culture = cu:alemannic
 	}
+
+	after = {
+		je_french_natural_borders_cleanup = yes
+	}
 }

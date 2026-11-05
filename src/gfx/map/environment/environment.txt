@@ -66,25 +66,25 @@ tree_sway_world_direction = { -1 0 -1 }
 
 ######## Graphics ########
 # Bloom
-bloom_strength = 0.25 # papermap 0.113
-bloom_steepness = 1.0 # Not used # papermap 1.49
-bloom_threshold = 1.0 # papermap 0.15
+bloom_strength = 0.25
+bloom_steepness = 1.0	# Not used
+bloom_threshold = 1.0
 
 # Map global SSAO settings
 ssao = {
 	enabled = yes
 
 	# Settings
-	samples = 4 #8					# Sample iterations
-	radius = 0.11				# Radius for sample point, less means tighter samples and crisper edges
-	max_radius = 1.0			# Culling distance
-	depth_distance = 0.01		# Depth distance for sample point
-	max_depth = 0.8				# Culling distance, should be based on scale of the world
+	samples = 4 # KMPMP performance					# Sample iterations
+	radius = 0.06				# Radius for sample point, less means tighter samples and crisper edges
+	max_radius = 0.003			# Culling distance
+	depth_distance = 0.5		# Depth distance for sample point
+	max_depth = 1.2				# Culling distance, should be based on scale of the world
 
-	apply_scale = 1.00			# Shifts the final results towards less overall occlusion
-	apply_bias = 0.63			# Bias to adjust occlusion errors on final result
-	apply_power = 50.0			# Strength/Hardness of the occlusion
-	blend_factor = 0.9			# Final Blend amount (practically opacity)
+	apply_scale = 1.0			# Shifts the final results towards less overall occlusion
+	apply_bias = 0.51			# Bias to adjust occlusion errors on final result
+	apply_power = 20.0			# Strength/Hardness of the occlusion
+	blend_factor = 2.0			# Final Blend amount (practically opacity)
 
 	# Blur
 	blur_enabled = yes
@@ -97,7 +97,7 @@ ssao = {
 # WARNING - Can impact performance
 depthoffield = {
 	enabled = yes
-	dof_samplecount = 8 #16 		# Can have large performance impact
+	dof_samplecount = 16 		# Can have large performance impact
 	dof_baseradius = 0.1 		# Blur radius
 	dof_blurblendmin = 0.1		# Blur blend, used to blend between the downsampled dof image and the focused full resolution image
 	dof_blurblendmax = 2.0		# Blur blend, used to blend between the downsampled dof image and the focused full resolution image

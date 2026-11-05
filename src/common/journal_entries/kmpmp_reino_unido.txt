@@ -1,4 +1,6 @@
 ﻿REPLACE_OR_CREATE:je_reino_unido = {
+	activation_description = { always = yes }
+
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 	group = je_group_historical_content
 	transferable = no
@@ -12,113 +14,124 @@
 		}
 	}
 
-	complete = {
-		trigger_if = { # BRZ view
-			limit = {
-				c:BRZ ?= ROOT
-			}
-			OR = {
-				AND = {
-					c:POR ?= {
-						is_direct_subject_of = c:BRZ
-						OR = {
-							is_subject_type = subject_type_puppet
-							is_subject_type = subject_type_dominion
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			trigger_if = { # BRZ view
+				limit = {
+					c:BRZ ?= ROOT
+				}
+				OR = {
+					AND = {
+						c:POR ?= {
+							is_direct_subject_of = c:BRZ
+							OR = {
+								is_subject_type = subject_type_puppet
+								is_subject_type = subject_type_dominion
+							}
+						}
+					}
+					AND = { # fall back for BRZ if IBE was formed
+						NOT = {
+							exists = c:POR
+						}
+						NOT = {
+							c:IBE ?= { # BRZ not subject of IBE
+								ROOT = {
+									is_direct_subject_of = c:IBE
+								}
+								# any_subject_or_below = {
+								#     c:BRZ ?= THIS
+								# }
+							}
+						}
+						custom_tooltip = { # just to show the player this is possible if Iberia was formed - checks are above
+							has_global_variable = has_formed_ibe
+							text = je_reino_unido_fail_trigger_desc
+						}
+						custom_tooltip = {
+							has_global_variable = je_reino_unido_protectorate_completed
+							text = je_reino_unido_protectorate_completed_trigger_desc
 						}
 					}
 				}
-				AND = { # fall back for BRZ if IBE was formed
-					NOT = {
+			}
+			trigger_else_if = { # POR view
+				limit = {
+					c:POR ?= ROOT
+				}
+				c:BRZ ?= {
+					is_direct_subject_of = c:POR
+					OR = {
+						is_subject_type = subject_type_puppet
+						is_subject_type = subject_type_dominion
+					}
+				}
+			}
+			trigger_else = {
+				always = no
+			}
+			has_technology_researched = nationalism
+			has_technology_researched = egalitarianism
+		}
+		effect = {
+			set_variable = reino_unido_won
+			if = {
+				limit = { # BRZ view
+					c:BRZ ?= ROOT
+				}
+				add_modifier = {
+					name = kmpmp_reino_unido
+				}
+				if = { # IBE not formed
+					limit = {
 						exists = c:POR
 					}
-					NOT = {
-						c:IBE ?= { # BRZ not subject of IBE
-							ROOT = {
-								is_direct_subject_of = c:IBE
-							}
-							# any_subject_or_below = {
-							# 	c:BRZ ?= THIS
-							# }
-						}
-					}
-					custom_tooltip = { # just to show the player this is possible if Iberia was formed - checks are above
-						has_global_variable = has_formed_ibe
-						text = je_reino_unido_fail_trigger_desc
-					}
-					custom_tooltip = {
-						has_global_variable = je_reino_unido_protectorate_completed
-						text = je_reino_unido_protectorate_completed_trigger_desc
-					}
+					annex = c:POR
+					add_primary_culture = cu:portuguese
+					add_primary_culture = cu:afro_brazilian
+					add_primary_culture = cu:paulista
 				}
 			}
-		}
-		trigger_else_if = { # POR view
-			limit = {
-				c:POR ?= ROOT
-			}
-			c:BRZ ?= {
-				is_direct_subject_of = c:POR 
-				OR = {
-					is_subject_type = subject_type_puppet
-					is_subject_type = subject_type_dominion
+			else_if = {
+				limit = { # POR view
+					c:POR ?= ROOT
 				}
-			}
-		}
-		trigger_else = {
-			always = no
-		}
-		has_technology_researched = nationalism
-		has_technology_researched = egalitarianism
-	}
-
-	on_complete = {
-		set_variable = reino_unido_won
-		if = {
-			limit = { # BRZ view
-				c:BRZ ?= ROOT
-			}
-			add_modifier = {
-				name = kmpmp_reino_unido
-			}
-			if = { # IBE not formed
-				limit = {
-					exists = c:POR
+				annex = c:BRZ
+				add_modifier = {
+					name = kmpmp_reino_unido
 				}
-				annex = c:POR
-				add_primary_culture = cu:portuguese
+				add_primary_culture = cu:brazilian
 				add_primary_culture = cu:afro_brazilian
 				add_primary_culture = cu:paulista
 			}
 		}
-		else_if = {
-			limit = { # POR view
-				c:POR ?= ROOT
-			}
-			annex = c:BRZ
-			add_modifier = {
-				name = kmpmp_reino_unido
-			}
-			add_primary_culture = cu:brazilian
-			add_primary_culture = cu:afro_brazilian
-			add_primary_culture = cu:paulista
-		}
 	}
 
-	fail = {
-		trigger_if = { # fail for POR if IBE was formed
-			limit = {
-				OR = {
-					c:POR ?= ROOT
-					c:IBE ?= ROOT
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			trigger_if = { # fail for POR if IBE was formed
+				limit = {
+					OR = {
+						c:POR ?= ROOT
+						c:IBE ?= ROOT
+					}
+				}
+				custom_tooltip = {
+					has_global_variable = has_formed_ibe
+					text = je_reino_unido_fail_trigger_desc
 				}
 			}
-			custom_tooltip = {
-				has_global_variable = has_formed_ibe
-				text = je_reino_unido_fail_trigger_desc
+			trigger_else = {
+				always = no
 			}
-		}
-		trigger_else = {
-			always = no
 		}
 	}
 
@@ -166,6 +179,8 @@
 }
 
 REPLACE_OR_CREATE:je_reino_unido_protectorate = {
+	activation_description = { always = yes }
+
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 	group = je_group_historical_content
 	transferable = no
@@ -173,99 +188,115 @@ REPLACE_OR_CREATE:je_reino_unido_protectorate = {
 	possible = { # added through main je je_reino_unido
 	}
 
-	complete = {
-		trigger_if = { # BRZ view
-			limit = {
-				c:BRZ ?= ROOT
-			}
-			NOR = {
-				c:POR ?= {
-					ROOT = {
-						is_direct_subject_of = c:POR
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			trigger_if = { # BRZ view
+				limit = {
+					c:BRZ ?= ROOT
+				}
+				NOR = {
+					c:POR ?= {
+						ROOT = {
+							is_direct_subject_of = c:POR
+						}
+						# any_subject_or_below = {
+						#     c:BRZ ?= THIS
+						# }
 					}
-					# any_subject_or_below = {
-					# 	c:BRZ ?= THIS
-					# }
-				}
-				c:IBE ?= {
-					ROOT = {
-						is_direct_subject_of = c:IBE
+					c:IBE ?= {
+						ROOT = {
+							is_direct_subject_of = c:IBE
+						}
+						# any_subject_or_below = {
+						#     c:BRZ ?= THIS
+						# }
 					}
-					# any_subject_or_below = {
-					# 	c:BRZ ?= THIS
-					# }
 				}
+				owns_entire_state_region = STATE_BEIRA
+				owns_entire_state_region = STATE_ESTREMADURA
+				owns_entire_state_region = STATE_ALENTEJO
 			}
-			owns_entire_state_region = STATE_BEIRA
-			owns_entire_state_region = STATE_ESTREMADURA
-			owns_entire_state_region = STATE_ALENTEJO
-		}
-		trigger_else_if = { # POR view
-			limit = {
-				c:POR ?= ROOT
-			}
-			NOT = {
-				is_direct_subject_of = c:BRZ
-			}
-			owns_entire_state_region = STATE_MINAS_GERAIS
-			owns_entire_state_region = STATE_RIO_DE_JANEIRO
-			owns_entire_state_region = STATE_BAHIA
-		}
-		trigger_else = {
-			always = no
-		}
-	}
-
-	on_complete = {
-		set_global_variable = je_reino_unido_protectorate_completed
-		if = {
-			limit = { # BRZ view
-				c:BRZ ?= ROOT
-				exists = c:POR
-			}
-			c:BRZ ?= {
-				create_diplomatic_pact = {
-					country = c:POR
-					type = protectorate
-				}
-			}
-		}
-		else_if = {
-			limit = { # POR view
-				c:POR ?= ROOT
-			}
-			c:POR ?= {
-				create_diplomatic_pact = {
-					country = c:BRZ
-					type = protectorate
-				}
-			}
-		}
-	}
-
-	invalid = {
-		hidden_trigger = {
-			has_global_variable = je_reino_unido_protectorate_completed
-		}
-	}
-
-	fail = {
-		trigger_if = { # fail for POR if IBE was formed
-			limit = {
-				OR = {
+			trigger_else_if = { # POR view
+				limit = {
 					c:POR ?= ROOT
-					c:IBE ?= ROOT
+				}
+				NOT = {
+					is_direct_subject_of = c:BRZ
+				}
+				owns_entire_state_region = STATE_MINAS_GERAIS
+				owns_entire_state_region = STATE_RIO_DE_JANEIRO
+				owns_entire_state_region = STATE_BAHIA
+			}
+			trigger_else = {
+				always = no
+			}
+		}
+		effect = {
+			set_global_variable = je_reino_unido_protectorate_completed
+			if = {
+				limit = { # BRZ view
+					c:BRZ ?= ROOT
+					exists = c:POR
+				}
+				c:BRZ ?= {
+					create_diplomatic_pact = {
+						country = c:POR
+						type = protectorate
+					}
 				}
 			}
-			custom_tooltip = {
-				has_global_variable = has_formed_ibe
-				text = je_reino_unido_fail_trigger_desc
+			else_if = {
+				limit = { # POR view
+					c:POR ?= ROOT
+				}
+				c:POR ?= {
+					create_diplomatic_pact = {
+						country = c:BRZ
+						type = protectorate
+					}
+				}
 			}
 		}
-		trigger_else = {
-			always = no
+	}
+
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			trigger_if = { # fail for POR if IBE was formed
+				limit = {
+					OR = {
+						c:POR ?= ROOT
+						c:IBE ?= ROOT
+					}
+				}
+				custom_tooltip = {
+					has_global_variable = has_formed_ibe
+					text = je_reino_unido_fail_trigger_desc
+				}
+			}
+			trigger_else = {
+				always = no
+			}
 		}
 	}
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			hidden_trigger = {
+				has_global_variable = je_reino_unido_protectorate_completed
+			}
+		}
+	}
+
 }
 
 # je_reino_unido_por = {

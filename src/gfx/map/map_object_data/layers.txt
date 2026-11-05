@@ -23,9 +23,25 @@ layer={
 	visibility_tags=""
 }
 layer={
+	name="environment_vfx_mountain_snow"
+	fade_in=0
+	fade_out=10
+	category=""
+	masks=""
+	visibility_tags=""
+}
+layer={
 	name="environmental_effects"
 	fade_in=0
 	fade_out=1
+	category=""
+	masks=""
+	visibility_tags=""
+}
+layer={
+	name="seasonal_vfx"
+	fade_in=0
+	fade_out=10
 	category=""
 	masks=""
 	visibility_tags=""
@@ -194,6 +210,14 @@ layer={
 	name="revolution_dynamic_trade_unions"
 	fade_in=0
 	fade_out=1
+	category=""
+	masks=""
+	visibility_tags=""
+}
+layer={
+	name="seasonal_camera_vfx"
+	fade_in=0
+	fade_out=10
 	category=""
 	masks=""
 	visibility_tags=""

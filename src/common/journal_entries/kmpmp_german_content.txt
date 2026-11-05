@@ -1,4 +1,6 @@
 ﻿REPLACE_OR_CREATE:je_german_fate_in_the_east = {
+    activation_description = { always = yes }
+
     group = je_group_foreign_affairs
     icon = "gfx/interface/icons/event_icons/event_map.dds"
 
@@ -17,103 +19,111 @@
         always = yes
     }
 
-    complete = {
-        # owns Warsaw, Lublin, Minsk or Riga + at least 8 other states Estland Dorpat Kurland Pskov vitebsk mogilev volhynia plock ingria kiev chernigov
-        # add states Kovno, Wilno, Grodno
-        # (when holding all 4 in first part then 7 other states)
-        owns_entire_state_region = STATE_GREATER_POLAND # Warsaw
-        owns_entire_state_region = STATE_LESSER_POLAND # Lublin
-        OR = {
-            owns_entire_state_region = STATE_MINSK
-            owns_entire_state_region = STATE_RIGA
-        }
-        
-        trigger_if = {
-            limit = {
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            # owns Warsaw, Lublin, Minsk or Riga + at least 8 other states Estland Dorpat Kurland Pskov vitebsk mogilev volhynia plock ingria kiev chernigov
+            # add states Kovno, Wilno, Grodno
+            # (when holding all 4 in first part then 7 other states)
+            owns_entire_state_region = STATE_GREATER_POLAND # Warsaw
+            owns_entire_state_region = STATE_LESSER_POLAND # Lublin
+            OR = {
                 owns_entire_state_region = STATE_MINSK
                 owns_entire_state_region = STATE_RIGA
             }
 
-            calc_true_if = {
-                amount >= 7
+            trigger_if = {
+                limit = {
+                    owns_entire_state_region = STATE_MINSK
+                    owns_entire_state_region = STATE_RIGA
+                }
 
-                owns_entire_state_region = STATE_VILNIUS # Wilno
-                owns_entire_state_region = STATE_KAUNAS # Kovno
-                owns_entire_state_region = STATE_TALINN # Estland
-                owns_entire_state_region = STATE_TARTU # Dorpat
-                owns_entire_state_region = STATE_COURLAND
-                owns_entire_state_region = STATE_BREST # Grodno
-                owns_entire_state_region = STATE_PSKOV
-                owns_entire_state_region = STATE_VITEBSK
-                owns_entire_state_region = STATE_MOGILEV
-                owns_entire_state_region = STATE_VOLHYNIA
-                owns_entire_state_region = STATE_MAZOVIA # Plock
-                owns_entire_state_region = STATE_INGRIA
-                owns_entire_state_region = STATE_KIEV
-                owns_entire_state_region = STATE_CHERNIHIV # Chernigov
+                calc_true_if = {
+                    amount >= 7
+
+                    owns_entire_state_region = STATE_VILNIUS # Wilno
+                    owns_entire_state_region = STATE_LITHUANIA # Kovno
+                    owns_entire_state_region = STATE_TALINN # Estland
+                    owns_entire_state_region = STATE_TARTU # Dorpat
+                    owns_entire_state_region = STATE_COURLAND
+                    owns_entire_state_region = STATE_BREST # Grodno
+                    owns_entire_state_region = STATE_PSKOV
+                    owns_entire_state_region = STATE_VITEBSK
+                    owns_entire_state_region = STATE_MOGILEV
+                    owns_entire_state_region = STATE_VOLHYNIA
+                    owns_entire_state_region = STATE_MAZOVIA # Plock
+                    owns_entire_state_region = STATE_INGRIA
+                    owns_entire_state_region = STATE_KIEV
+                    owns_entire_state_region = STATE_CHERNIHIV # Chernigov
+                }
+            }
+            trigger_else = {
+                calc_true_if = {
+                    amount >= 8
+
+                    owns_entire_state_region = STATE_VILNIUS # Wilno
+                    owns_entire_state_region = STATE_LITHUANIA # Kovno
+                    owns_entire_state_region = STATE_TALINN # Estland
+                    owns_entire_state_region = STATE_TARTU # Dorpat
+                    owns_entire_state_region = STATE_COURLAND
+                    owns_entire_state_region = STATE_BREST # Grodno
+                    owns_entire_state_region = STATE_PSKOV
+                    owns_entire_state_region = STATE_VITEBSK
+                    owns_entire_state_region = STATE_MOGILEV
+                    owns_entire_state_region = STATE_VOLHYNIA
+                    owns_entire_state_region = STATE_MAZOVIA # Plock
+                    owns_entire_state_region = STATE_INGRIA
+                    owns_entire_state_region = STATE_KIEV
+                    owns_entire_state_region = STATE_CHERNIHIV # Chernigov
+                }
             }
         }
-        trigger_else = {
-            calc_true_if = {
-                amount >= 8
+        effect = {
+            if = {
+                limit = {
+                    NOT = {
+                        has_global_variable = je_german_fate_in_the_east_completed_once
+                    }
+                }
+                set_global_variable = je_german_fate_in_the_east_completed_once
+                add_loyalists = {
+                    value = 0.1
+                }
+            }
 
-                owns_entire_state_region = STATE_VILNIUS # Wilno
-                owns_entire_state_region = STATE_KAUNAS # Kovno
-                owns_entire_state_region = STATE_TALINN # Estland
-                owns_entire_state_region = STATE_TARTU # Dorpat
-                owns_entire_state_region = STATE_COURLAND
-                owns_entire_state_region = STATE_BREST # Grodno
-                owns_entire_state_region = STATE_PSKOV
-                owns_entire_state_region = STATE_VITEBSK
-                owns_entire_state_region = STATE_MOGILEV
-                owns_entire_state_region = STATE_VOLHYNIA
-                owns_entire_state_region = STATE_MAZOVIA # Plock
-                owns_entire_state_region = STATE_INGRIA
-                owns_entire_state_region = STATE_KIEV
-                owns_entire_state_region = STATE_CHERNIHIV # Chernigov
+            set_global_variable = je_german_fate_in_the_east_completed
+            if = {
+                limit = {
+                    NOT = {
+                        has_modifier = kmpmp_german_fate_in_the_east_modifier
+                    }
+                }
+                add_modifier = {
+                    name = kmpmp_german_fate_in_the_east_modifier
+                }
+            }
+
+            if = {
+                limit = {
+                    NOT = {
+                        has_journal_entry = je_german_fate_in_the_east_expand
+                    }
+                }
+                add_journal_entry = {
+                    type = je_german_fate_in_the_east_expand
+                }
             }
         }
     }
 
-    on_complete = {
-        if = {
-            limit = {
-                NOT = {
-                    has_global_variable = je_german_fate_in_the_east_completed_once
-                }
-            }
-            set_global_variable = je_german_fate_in_the_east_completed_once
-            add_loyalists = {
-                value = 0.1
-            }
-        }
-
-        set_global_variable = je_german_fate_in_the_east_completed
-        if = {
-            limit = {
-                NOT = {
-                    has_modifier = kmpmp_german_fate_in_the_east_modifier
-                }
-            }
-            add_modifier = {
-                name = kmpmp_german_fate_in_the_east_modifier
-            }
-        }
-
-        if = {
-            limit = {
-                NOT = {
-                    has_journal_entry = je_german_fate_in_the_east_expand
-                }
-            }
-            add_journal_entry = {
-                type = je_german_fate_in_the_east_expand
-            }
-        }
-    }
 }
 
 REPLACE_OR_CREATE:je_german_fate_in_the_east_expand = {
+    activation_description = { always = yes }
+
     group = je_group_foreign_affairs
     icon = "gfx/interface/icons/event_icons/event_map.dds"
 
@@ -133,114 +143,127 @@ REPLACE_OR_CREATE:je_german_fate_in_the_east_expand = {
         always = yes
     }
 
-    complete = {
-        # holding all requested states doubles the buff
-        owns_entire_state_region = STATE_GREATER_POLAND # Warsaw
-        owns_entire_state_region = STATE_LESSER_POLAND # Lublin
-        owns_entire_state_region = STATE_MINSK
-        owns_entire_state_region = STATE_RIGA
-        owns_entire_state_region = STATE_VILNIUS # Wilno
-        owns_entire_state_region = STATE_KAUNAS # Kovno
-        owns_entire_state_region = STATE_TALINN # Estland
-        owns_entire_state_region = STATE_TARTU # Dorpat
-        owns_entire_state_region = STATE_COURLAND
-        owns_entire_state_region = STATE_BREST # Grodno
-        owns_entire_state_region = STATE_PSKOV
-        owns_entire_state_region = STATE_VITEBSK
-        owns_entire_state_region = STATE_MOGILEV
-        owns_entire_state_region = STATE_VOLHYNIA
-        owns_entire_state_region = STATE_MAZOVIA # Plock
-        owns_entire_state_region = STATE_INGRIA
-        owns_entire_state_region = STATE_KIEV
-        owns_entire_state_region = STATE_CHERNIHIV # Chernigov
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            # holding all requested states doubles the buff
+            owns_entire_state_region = STATE_GREATER_POLAND # Warsaw
+            owns_entire_state_region = STATE_LESSER_POLAND # Lublin
+            owns_entire_state_region = STATE_MINSK
+            owns_entire_state_region = STATE_RIGA
+            owns_entire_state_region = STATE_VILNIUS # Wilno
+            owns_entire_state_region = STATE_LITHUANIA # Kovno
+            owns_entire_state_region = STATE_TALINN # Estland
+            owns_entire_state_region = STATE_TARTU # Dorpat
+            owns_entire_state_region = STATE_COURLAND
+            owns_entire_state_region = STATE_BREST # Grodno
+            owns_entire_state_region = STATE_PSKOV
+            owns_entire_state_region = STATE_VITEBSK
+            owns_entire_state_region = STATE_MOGILEV
+            owns_entire_state_region = STATE_VOLHYNIA
+            owns_entire_state_region = STATE_MAZOVIA # Plock
+            owns_entire_state_region = STATE_INGRIA
+            owns_entire_state_region = STATE_KIEV
+            owns_entire_state_region = STATE_CHERNIHIV # Chernigov
+        }
+        effect = {
+            set_global_variable = je_german_fate_in_the_east_expand_completed
+
+            hidden_effect = {
+                if = {
+                    limit = {
+                        has_modifier = kmpmp_german_fate_in_the_east_modifier
+                    }
+                    remove_modifier = kmpmp_german_fate_in_the_east_modifier
+                }
+            }
+
+            add_modifier = {
+                name = kmpmp_german_fate_in_the_east_modifier
+                multiplier = 2
+            }
+
+            if = {
+                limit = {
+                    NOT = {
+                        has_journal_entry = je_german_fate_in_the_east_maintain
+                    }
+                }
+                add_journal_entry = {
+                    type = je_german_fate_in_the_east_maintain
+                }
+            }
+        }
     }
 
-    on_complete = {
-        set_global_variable = je_german_fate_in_the_east_expand_completed
+    outcome = {
+        header = je_standard_failure_header
+        effect_header = je_standard_on_failure_header
+        color = "blue_negative"
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            OR = {
+                # holding the first part and at least 5 other states
+                NAND = {
+                    owns_entire_state_region = STATE_GREATER_POLAND # Warsaw
+                    owns_entire_state_region = STATE_LESSER_POLAND # Lublin
+                    OR = {
+                        owns_entire_state_region = STATE_MINSK
+                        owns_entire_state_region = STATE_RIGA
+                    }
+                }
 
-        hidden_effect = {
+                calc_true_if = {
+                    amount < 5
+
+                    owns_entire_state_region = STATE_VILNIUS # Wilno
+                    owns_entire_state_region = STATE_LITHUANIA # Kovno
+                    owns_entire_state_region = STATE_TALINN # Estland
+                    owns_entire_state_region = STATE_TARTU # Dorpat
+                    owns_entire_state_region = STATE_COURLAND
+                    owns_entire_state_region = STATE_BREST # Grodno
+                    owns_entire_state_region = STATE_PSKOV
+                    owns_entire_state_region = STATE_VITEBSK
+                    owns_entire_state_region = STATE_MOGILEV
+                    owns_entire_state_region = STATE_VOLHYNIA
+                    owns_entire_state_region = STATE_MAZOVIA # Plock
+                    owns_entire_state_region = STATE_INGRIA
+                    owns_entire_state_region = STATE_KIEV
+                    owns_entire_state_region = STATE_CHERNIHIV # Chernigov
+                }
+            }
+        }
+        effect = {
+            remove_global_variable = je_german_fate_in_the_east_completed
+
             if = {
                 limit = {
                     has_modifier = kmpmp_german_fate_in_the_east_modifier
                 }
                 remove_modifier = kmpmp_german_fate_in_the_east_modifier
             }
-        }
 
-        add_modifier = {
-            name = kmpmp_german_fate_in_the_east_modifier
-            multiplier = 2
-        }
-
-        if = {
-            limit = {
-                NOT = {
-                    has_journal_entry = je_german_fate_in_the_east_maintain
+            if = {
+                limit = {
+                    NOT = {
+                        has_journal_entry = je_german_fate_in_the_east
+                    }
                 }
-            }
-            add_journal_entry = {
-                type = je_german_fate_in_the_east_maintain
+                add_journal_entry = {
+                    type = je_german_fate_in_the_east
+                }
             }
         }
     }
 
-    fail = {
-        OR = {
-            # holding the first part and at least 5 other states
-            NAND = {
-                owns_entire_state_region = STATE_GREATER_POLAND # Warsaw
-                owns_entire_state_region = STATE_LESSER_POLAND # Lublin
-                OR = {
-                    owns_entire_state_region = STATE_MINSK
-                    owns_entire_state_region = STATE_RIGA
-                }
-            }
-
-            calc_true_if = {
-                amount < 5
-
-                owns_entire_state_region = STATE_VILNIUS # Wilno
-                owns_entire_state_region = STATE_KAUNAS # Kovno
-                owns_entire_state_region = STATE_TALINN # Estland
-                owns_entire_state_region = STATE_TARTU # Dorpat
-                owns_entire_state_region = STATE_COURLAND
-                owns_entire_state_region = STATE_BREST # Grodno
-                owns_entire_state_region = STATE_PSKOV
-                owns_entire_state_region = STATE_VITEBSK
-                owns_entire_state_region = STATE_MOGILEV
-                owns_entire_state_region = STATE_VOLHYNIA
-                owns_entire_state_region = STATE_MAZOVIA # Plock
-                owns_entire_state_region = STATE_INGRIA
-                owns_entire_state_region = STATE_KIEV
-                owns_entire_state_region = STATE_CHERNIHIV # Chernigov
-            }
-        }
-    }
-
-    on_fail = {
-        remove_global_variable = je_german_fate_in_the_east_completed
-
-        if = {
-            limit = {
-                has_modifier = kmpmp_german_fate_in_the_east_modifier
-            }
-            remove_modifier = kmpmp_german_fate_in_the_east_modifier
-        }
-
-        if = {
-            limit = {
-                NOT = {
-                    has_journal_entry = je_german_fate_in_the_east
-                }
-            }
-            add_journal_entry = {
-                type = je_german_fate_in_the_east
-            }
-        }
-    }
 }
 
 REPLACE_OR_CREATE:je_german_fate_in_the_east_maintain = {
+    activation_description = { always = yes }
+
     group = je_group_foreign_affairs
     icon = "gfx/interface/icons/event_icons/event_map.dds"
 
@@ -257,53 +280,59 @@ REPLACE_OR_CREATE:je_german_fate_in_the_east_maintain = {
         always = yes
     }
 
-    fail = {
-        NAND = {
-            owns_entire_state_region = STATE_GREATER_POLAND # Warsaw
-            owns_entire_state_region = STATE_LESSER_POLAND # Lublin
-            owns_entire_state_region = STATE_MINSK
-            owns_entire_state_region = STATE_RIGA
-            owns_entire_state_region = STATE_VILNIUS # Wilno
-            owns_entire_state_region = STATE_KAUNAS # Kovno
-            owns_entire_state_region = STATE_TALINN # Estland
-            owns_entire_state_region = STATE_TARTU # Dorpat
-            owns_entire_state_region = STATE_COURLAND
-            owns_entire_state_region = STATE_BREST # Grodno
-            owns_entire_state_region = STATE_PSKOV
-            owns_entire_state_region = STATE_VITEBSK
-            owns_entire_state_region = STATE_MOGILEV
-            owns_entire_state_region = STATE_VOLHYNIA
-            owns_entire_state_region = STATE_MAZOVIA # Plock
-            owns_entire_state_region = STATE_INGRIA
-            owns_entire_state_region = STATE_KIEV
-            owns_entire_state_region = STATE_CHERNIHIV # Chernigov
+    outcome = {
+        header = je_standard_failure_header
+        effect_header = je_standard_on_failure_header
+        color = "blue_negative"
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            NAND = {
+                owns_entire_state_region = STATE_GREATER_POLAND # Warsaw
+                owns_entire_state_region = STATE_LESSER_POLAND # Lublin
+                owns_entire_state_region = STATE_MINSK
+                owns_entire_state_region = STATE_RIGA
+                owns_entire_state_region = STATE_VILNIUS # Wilno
+                owns_entire_state_region = STATE_LITHUANIA # Kovno
+                owns_entire_state_region = STATE_TALINN # Estland
+                owns_entire_state_region = STATE_TARTU # Dorpat
+                owns_entire_state_region = STATE_COURLAND
+                owns_entire_state_region = STATE_BREST # Grodno
+                owns_entire_state_region = STATE_PSKOV
+                owns_entire_state_region = STATE_VITEBSK
+                owns_entire_state_region = STATE_MOGILEV
+                owns_entire_state_region = STATE_VOLHYNIA
+                owns_entire_state_region = STATE_MAZOVIA # Plock
+                owns_entire_state_region = STATE_INGRIA
+                owns_entire_state_region = STATE_KIEV
+                owns_entire_state_region = STATE_CHERNIHIV # Chernigov
+            }
         }
-    }
+        effect = {
+            remove_global_variable = je_german_fate_in_the_east_expand_completed
+            hidden_effect = {
+                if = {
+                    limit = {
+                        has_modifier = kmpmp_german_fate_in_the_east_modifier
+                    }
+                    remove_modifier = kmpmp_german_fate_in_the_east_modifier
+                }
+            }
 
-    on_fail = {
-        remove_global_variable = je_german_fate_in_the_east_expand_completed
-        hidden_effect = {
+            add_modifier = {
+                name = kmpmp_german_fate_in_the_east_modifier
+            }
+
             if = {
                 limit = {
-                    has_modifier = kmpmp_german_fate_in_the_east_modifier
+                    NOT = {
+                        has_journal_entry = je_german_fate_in_the_east_expand
+                    }
                 }
-                remove_modifier = kmpmp_german_fate_in_the_east_modifier
-            }
-        }
-
-        add_modifier = {
-            name = kmpmp_german_fate_in_the_east_modifier
-        }
-
-        if = {
-            limit = {
-                NOT = {
-                    has_journal_entry = je_german_fate_in_the_east_expand
+                add_journal_entry = {
+                    type = je_german_fate_in_the_east_expand
                 }
-            }
-            add_journal_entry = {
-                type = je_german_fate_in_the_east_expand
             }
         }
     }
+
 }

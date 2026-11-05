@@ -2,7 +2,7 @@
 	first_name = "Ferdinand_Philippe"
 	last_name = d_Orleans
 	historical = yes
-	culture = primary_culture
+	culture = cu:french
 	role = heir
 	birth_date = 1810.9.3
 	interest_group = ig_industrialists #ig_armed_forces
@@ -16,7 +16,9 @@
         imperious
 	}
 	on_created = {
-		set_variable = house_orleans
+		set_variable = { name = dynasty_var value = flag:house_orleans }
 	}
 	trait_generation = { }
+
+	religion = rel:catholic
 }

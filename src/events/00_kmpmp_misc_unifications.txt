@@ -34,8 +34,10 @@ formation.5 = {
 	duration = 3
 
 	trigger = {
+		# triggered by on_action - on_country_formed
 		c:IBE ?= THIS
 		NOT = { has_global_variable = has_formed_ibe }
+		NOT = { is_involved_in_journal_entry = je_iberia } # No double events
 	}
 
 	immediate = {
@@ -329,6 +331,13 @@ formation.17 = {
 			c:FND ?= THIS
 			c:P01 ?= THIS #kmpmp
 			c:LTN ?= THIS #kmpmp
+
+			c:USA ?= THIS
+			c:SAF ?= THIS
+			c:CLI ?= THIS
+			c:AFG ?= THIS
+			c:FSA ?= THIS
+			c:GAL ?= THIS
 		}
 	}
 

@@ -31,7 +31,7 @@ object={
 	render_under_water=no
 	generated_content=yes
 	layer="semidynamic"
-	pdxmesh="oak_tree_04_mesh"
+	pdxmesh="oak_tree_03_mesh"
 	count=0
 }
 object={

@@ -30,7 +30,7 @@ l_german:
 
 	zw_auto_invest_disallow_building_button: "Beschränkte Gebäudearten "
 	zw_auto_invest_disallow_building_button_desc: ""
-	zw_auto_invest_disallow_building_button_effect: "[ROOT.GetCountry.GetNameNoFlag]s $zw_text_domestic_private_investment$ dürfen nur erlaubten Gebäudearten bauen\n\nDie [Concept('concept_privatize', '$concept_privatizations$')] unerlaubter Gebäudearten werden #v nicht#! beschränkt."
+	zw_auto_invest_disallow_building_button_effect: "[ROOT.GetCountry.GetNameNoFlag]s $zw_text_domestic_private_investment$ dürfen nur erlaubten Gebäudearten bauen\n\nDie [Concept('concept_privatize', '$concept_privatizations|q$')] unerlaubter Gebäudearten werden #v nicht#! beschränkt."
 
 	zw_auto_invest_disallow_building_undo_button: "Alle Gebäudearten"
 	zw_auto_invest_disallow_building_undo_button_desc: ""

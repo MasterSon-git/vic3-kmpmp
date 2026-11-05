@@ -1,8 +1,8 @@
 ﻿l_english:
  KMPMP_PRESTIGE_HEADER: "[concept_prestige]"
  KMPMP_ZERO_BASED: "Zero based"
- KMPMP_WAR_SUPPORT_FROM_POWER_BLOC_PRINCIPLES:0 "Support from [Concept('concept_power_bloc_principle', '$concept_power_bloc_principles$')]"
- KMPMP_WAR_SUPPORT_FROM_TEC:0 "Support from [Concept('concept_technology', '$concept_technologies$')]"
+ KMPMP_WAR_SUPPORT_FROM_POWER_BLOC_PRINCIPLES:0 "Support from [Concept('concept_power_bloc_principle', '$concept_power_bloc_principles|q$')]"
+ KMPMP_WAR_SUPPORT_FROM_TEC:0 "Support from [Concept('concept_technology', '$concept_technologies|q$')]"
 
  combat_unit_type_interwar_mechanized_infantry: "Panzergrenadiers"
  combat_unit_type_interwar_mechanized_infantry_desc: "Infantry transported in lightly armored vehicles, combining mobility with coordinated support from tanks."

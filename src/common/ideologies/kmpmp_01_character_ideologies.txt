@@ -8,6 +8,7 @@
 		law_no_home_affairs = neutral
 		law_national_guard = approve
 		law_secret_police = strongly_approve
+		law_extraordinary_commission = strongly_disapprove
 	}
 
 	lawgroup_distribution_of_power = {
@@ -20,6 +21,7 @@
 		law_census_voting = disapprove
 		law_wealth_voting = disapprove
 		law_landed_voting = disapprove
+		law_labour_suffrage = strongly_disapprove
 	}
 
 	lawgroup_citizenship = {
@@ -35,7 +37,8 @@
 		law_mass_conscription = strongly_approve
 		law_professional_army = approve
 		law_national_militia = disapprove
-		law_peasant_levies = disapprove
+		law_peasant_levies = strongly_disapprove
+		law_revolutionary_guard = strongly_disapprove
 	}
 
 	lawgroup_free_speech = {
@@ -79,7 +82,7 @@
 		# Agitator ideologies should disapprove of a current law
 		NAND = {
 			has_role_of_type = agitator
-			owner = {
+			owner ?= {
 				has_law_or_variant = law_type:law_autocracy
 				has_law_or_variant = law_type:law_ethnostate
 				has_law_or_variant = law_type:law_outlawed_dissent
@@ -110,7 +113,7 @@
 			}
 			add = {
 				value = owner.ideology_fascist_disfavoured_laws
-				multiply = 8
+				multiply = 7
 				desc = "DISFAVORED_LAWS"
 			}
 		}
@@ -122,7 +125,7 @@
 			}
 			subtract = {
 				value = owner.ideology_fascist_favoured_laws
-				multiply = 8
+				multiply = 7
 				desc = "FAVORED_LAWS"
 			}
 		}
@@ -131,13 +134,11 @@
 		if = {
 			limit = {
 				owner ?= {
-					any_diplomatically_relevant_country = {
-						any_scope_treaty = {
-							is_enforced = yes
-							any_scope_article = {
-								has_type = money_transfer
-								source_country = root.owner
-							}
+					any_scope_treaty = {
+						is_enforced = yes
+						any_scope_article = {
+							has_type = money_transfer
+							source_country = root.owner
 						}
 					}
 				}
@@ -150,7 +151,7 @@
 		# More likely with a convenient scapegoat
 		if = {
 			limit = {
-				owner = {
+				owner ?= {
 					any_scope_state = {
 						is_incorporated = yes
 						any_scope_pop = {
@@ -169,7 +170,7 @@
 		# more likely if bankrupt
 		if = {
 			limit = {
-				owner = {
+				owner ?= {
 					OR = {
 						in_default = yes
 						has_modifier = declared_bankruptcy
@@ -184,7 +185,7 @@
 		# Less likely in council republic
 		if = {
 			limit = {
-				owner = {
+				owner ?= {
 					has_law_or_variant = law_type:law_council_republic
 				}
 			}
@@ -208,7 +209,7 @@
 		# less likely if content without ethnostate or Corporate State
 		if = {
 			limit = {
-				owner = {
+				owner ?= {
 					NOR = {
 						has_law_or_variant = law_type:law_ethnostate
 						has_law_or_variant = law_type:law_corporate_state
@@ -251,7 +252,7 @@
 		# more likely if in government with ethnostate or Corporate State
 		if = {
 			limit = {
-				owner = {
+				owner ?= {
 					OR = {
 						has_law_or_variant = law_type:law_ethnostate
 						has_law_or_variant = law_type:law_corporate_state
@@ -304,7 +305,7 @@
 		# Fascism JE causes an uptick in fascism
 		if = {
 			limit = {
-				owner = {
+				owner ?= {
 					OR = {
 						has_journal_entry = je_fascism_1
 						has_variable = completed_fascism_1_var
@@ -331,6 +332,11 @@
 				desc = "CHOSE_A_DIFFERENT_PATH"
 			}
 		}
+		multiply = {
+			value = 1
+			add = modifier:interest_group_ideology_fascist_leader_chance_mult
+			desc = "EVENTS_AND_OTHER_EFFECTS"
+		}
 	}
 
 	non_interest_group_leader_weight = {
@@ -349,7 +355,7 @@
 			}
 			add = {
 				value = owner.ideology_fascist_disfavoured_laws
-				multiply = 8
+				multiply = 7
 			}
 		}
 
@@ -360,7 +366,7 @@
 			}
 			subtract = {
 				value = owner.ideology_fascist_favoured_laws
-				multiply = 8
+				multiply = 7
 			}
 		}
 
@@ -368,11 +374,11 @@
 		if = {
 			limit = {
 				owner ?= {
-					any_diplomatically_relevant_country = {
-						has_diplomatic_pact = {
-							who = root.owner
-							type = war_reparations
-							is_initiator = yes
+					any_scope_treaty = {
+						is_enforced = yes
+						any_scope_article = {
+							has_type = money_transfer
+							source_country = root.owner
 						}
 					}
 				}
@@ -382,7 +388,7 @@
 		# More likely with a convenient scapegoat
 		if = {
 			limit = {
-				owner = {
+				owner ?= {
 					any_scope_state = {
 						is_incorporated = yes
 						any_scope_pop = {
@@ -398,7 +404,7 @@
 		# more likely if bankrupt
 		if = {
 			limit = {
-				owner = {
+				owner ?= {
 					OR = {
 						in_default = yes
 						has_modifier = declared_bankruptcy
@@ -410,7 +416,7 @@
 		# Less likely in council republic
 		if = {
 			limit = {
-				owner = {
+				owner ?= {
 					has_law_or_variant = law_type:law_council_republic
 				}
 			}
@@ -430,7 +436,7 @@
 		# less likely if content without ethnostate or Corporate State
 		if = {
 			limit = {
-				owner = {
+				owner ?= {
 					NOR = {
 						has_law_or_variant = law_type:law_ethnostate
 						has_law_or_variant = law_type:law_corporate_state
@@ -466,7 +472,7 @@
 		# more likely if in government with ethnostate or Corporate State
 		if = {
 			limit = {
-				owner = {
+				owner ?= {
 					OR = {
 						has_law_or_variant = law_type:law_ethnostate
 						has_law_or_variant = law_type:law_corporate_state
@@ -509,7 +515,7 @@
 		# Fascism JE causes an uptick in fascism
 		if = {
 			limit = {
-				owner = {
+				owner ?= {
 					OR = {
 						has_journal_entry = je_fascism_1
 						has_variable = completed_fascism_1_var
@@ -520,7 +526,7 @@
 		}
 		if = { #Brazil has Integralists instead
 			limit = {
-				owner = {
+				owner ?= {
 					c:BRZ ?= this
 				}
 			}
@@ -537,6 +543,11 @@
 				}
 			}
 			multiply = 0.1
+		}
+		multiply = {
+			value = 1
+			add = interest_group.modifier:interest_group_ideology_fascist_leader_chance_mult
+			desc = "EVENTS_AND_OTHER_EFFECTS"
 		}
 	}
 }

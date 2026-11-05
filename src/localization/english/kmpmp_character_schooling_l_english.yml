@@ -1,6 +1,6 @@
 ﻿l_english:
  kmpmp_schooling_heir_ig:0 "Change $concept_interest_group$"
- kmpmp_schooling_heir_ig_info:0 "Will start heir schooling to change his [Concept('concept_interest_group', '$concept_interest_group$')]"
+ kmpmp_schooling_heir_ig_info:0 "Will start heir schooling to change his [Concept('concept_interest_group', '$concept_interest_group|q$')]"
 
  kmpmp_je_character_schooling_heir_ig:0 "Heir schooling"
  kmpmp_je_character_schooling_heir_ig_reason:0 "Since we are not satisfied with our heir`s attitude, we are doing everything we can to change it"
@@ -12,7 +12,7 @@
  kmpmp_ev_character_schooling.1.b:0 "We have had good experiences with [SCOPE.gsInterestGroup('schooling_heir_ig_target_b').GetName]"
  kmpmp_ev_character_schooling.1.c:0 "The [SCOPE.gsInterestGroup('schooling_heir_ig_target_c').GetName] may worth it"
 
- kmpmp_character_schooling_heir_ig_completed:0 "[SCOPE.sCharacter('schooling_heir').GetFullName] will change his [Concept('concept_interest_group', '$concept_interest_group$')]"
+ kmpmp_character_schooling_heir_ig_completed:0 "[SCOPE.sCharacter('schooling_heir').GetFullName] will change his [Concept('concept_interest_group', '$concept_interest_group|q$')]"
  kmpmp_character_schooling_heir_ig_completed_trigger:0 "[SCOPE.sCharacter('schooling_heir').GetFullName] has finished school"
 
  kmpmp_character_schooling_heir_ig_approval_negative:0 "Changing heir`s $concept_interest_group$"

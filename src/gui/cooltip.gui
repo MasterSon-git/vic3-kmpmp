@@ -98,6 +98,10 @@ FancyTooltip_GameConceptType = {
 	name = "GameConceptTypeTooltip"
 }
 
+FancyTooltip_GlossaryType = {
+	name = "GlossaryTypeTooltip"
+}
+
 FancyTooltip_LawGroup = {
 	name = "LawGroupTooltip"
 }
@@ -152,6 +156,14 @@ FancyTooltip_CompanyCharterType = {
 
 FancyTooltip_AIStrategicRegionStanceType = {
 	name = "AIStrategicRegionStanceTypeTooltip"
+}
+
+FancyTooltip_AIRegionalObjective = {
+	name = "AIRegionalObjectiveTooltip"
+}
+
+FancyTooltip_AIRegionalObjectiveType = {
+	name = "AIRegionalObjectiveTypeTooltip"
 }
 
 FancyTooltip_Country = {
@@ -665,4 +677,8 @@ TableTooltip_StateTaxationRevenue = {
 # kmpmp
 FancyTooltip_ListOf_StateRegion = {
     name = "ListOfStateRegionTooltip"
+}
+
+RegularTooltip_ShipTypeSupersededBy = {
+	name = "ShipTypeSupersededByTooltip"
 }
