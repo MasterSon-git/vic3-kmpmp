@@ -2,7 +2,8 @@
 
 Thank you to the mod authors, artists and translators whose work has contributed
 to KMPMP. We appreciate the time and creativity shared by these projects and
-contributors.
+contributors. The project list follows
+[Machiavelli MP Mod on Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=3009203637).
 
 ## Projects
 
@@ -13,26 +14,18 @@ contributors.
 | Anbeeld's Stockpile Economy | Anbeeld | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3249228964) |
 | Power Blocs Expanded | Kate the Sibyl | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3387651487) |
 | Break Truce | Kate the Sibyl | [Workshop](https://steamcommunity.com/workshop/filedetails/?id=3168188451) |
-| More Navy Illustrations | 1230james | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2984644281) |
-| More General Orders | crust (credited author) | [Workshop](https://steamcommunity.com/workshop/filedetails/?id=2888703922) |
-| Guns of Glory | lucachenchen | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2892827486) |
-| All Quiet On The Western Front | sharpforever | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2887104190) |
 | Victoria Tweaks Mod | John Doodlez IV.; OPB | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2935989855) |
 | Better Canals | SkyRipper | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2882752079) |
 | Paper Map all the way! | xor | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2951575694) |
 | Lump Sum Transfer / Imperia Roleplay | Danarca; kikker; Imperia Development | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3245710931), [organization](https://github.com/Imperia-Development-Victoria-3) |
 | Make My Railway Profitable Again! | Starry Inori | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3110785319) |
 | Controllable Private Construction | zzzwww | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3278770055) |
-| Controllable Private Construction Addons | zzzwww | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3503737491) |
 | More Icons For Different Orders | zzzwww | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3306581818) |
 | GDP Plotline Plus | obamnastan | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3190466673) |
-| GDP Ownership Display | dragon-archer | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3290552216) |
 | Visible Shortage Fix / Visible Goods Shortage | Craveirusko; Apprehensive-Tank213; xDreamZ | [Workshop](https://steamcommunity.com/workshop/filedetails/?id=3273620528) |
 | Improved Topbar Info | Tosun Paşa | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2965180680) |
 | Palm Oil on Millet Farm | Halcyon | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2896406216) |
 | Useful Malaria Icons | Draagyn | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3005297540) |
-| State Transfer Tool | TrueRoyalist; Anbeeld | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2880446671) |
-| Transfer Cash | TrueRoyalist | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2881548032) |
 | Clean Map | Salo | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2880218271) |
 | Victoria 2 style map | linwajun | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2912060491) |
 | shaded relief map Ver 2 | linwajun | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3051232603) |
@@ -45,7 +38,6 @@ contributors.
 | Forts & Engineers translations | Rammstein20; WarpWhistle79; Blessing | [Project](https://steamcommunity.com/sharedfiles/filedetails/?id=3005432154) |
 | Gas, Guns, Garb, and Grub text and translations | Asayano_Tangke; CrazyZombie | [Project](https://steamcommunity.com/sharedfiles/filedetails/?id=2968644620) |
 | Fort McHenry photograph | Tom Darden | [Photograph](https://www.nps.gov/media/photo/gallery-item.htm?pg=912388&id=1C29B72C-155D-451F-679236F35346FD7E&gid=1C27E1E2-155D-451F-6739965D63726B10) |
-| More Navy Illustrations artwork | Oswald Brierly; Thomas Dutton; Hugo Graf; Roger H. Middlebrook GAvA; an unidentified artist | [Project](https://steamcommunity.com/sharedfiles/filedetails/?id=2984644281) |
 
 Attribution corrections are welcome through
 [repository issues](https://github.com/MasterSon-git/vic3-kmpmp/issues).
