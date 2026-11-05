@@ -15,7 +15,7 @@ NCharacters = {
 	# kmpmp - lower min age of generals
 	AGE_GENERATION_STARTVAL = 11 #20
 	RECRUIT_COMMANDER_NUM_OPTIONS = 5 #3
-	RECRUIT_COMMANDER_REMOVE_AGE = 50 #55			# removed from the recruit pool when they reach 55 years
+	RECRUIT_COMMANDER_REMOVE_AGE = 50 #55			# Remove commanders from the recruitment pool at age 50
 
 	# kmpmp - try to reroll chars after months
 	VOIDED_CHARACTER_DEFAULT_DURATION = 6 #12 # Default months a character will be in the void before being deleted
