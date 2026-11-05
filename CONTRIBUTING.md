@@ -47,10 +47,10 @@ migration notes belong in the PR.
 Original KMPMP contributions are licensed as described in [LICENSE.md](LICENSE.md).
 Only present work as original KMPMP material if you hold the rights to
 license it under those terms. When importing or adapting upstream work,
-identify its project, author, source and known reuse terms in the PR. Add voluntary thanks to
-[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md); keep license obligations in
-`LICENSE.md` and preserve the full upstream license texts. Required notices must
-also ship in mod packages, including test builds.
+identify its project, author, source and known reuse terms in the PR.
+Add voluntary thanks to [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+Keep license obligations in `LICENSE.md` and preserve the full upstream license
+texts. Required notices must also ship in mod packages, including test builds.
 
 Do not present third-party material as original KMPMP work or assume public
 availability is permission. Follow the third-party policy in `LICENSE.md`;
