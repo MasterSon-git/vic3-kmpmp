@@ -1,0 +1,32 @@
+name: Game-version compatibility
+description: Report a failure after a Victoria 3 version change.
+title: "[Compatibility]: "
+body:
+  - type: markdown
+    attributes:
+      value: "Check existing compatibility issues and PRs first, including the ongoing 1.15 work in #647. Add evidence to the existing report when appropriate."
+  - type: input
+    id: game
+    attributes:
+      label: Affected Victoria 3 version and checksum
+    validations:
+      required: true
+  - type: textarea
+    id: setup
+    attributes:
+      label: KMPMP build and playset
+      description: "Commit/Workshop update, production/test/single-player variant, DLC and other mods/load order."
+    validations:
+      required: true
+  - type: textarea
+    id: failure
+    attributes:
+      label: Failure and reproduction
+      description: "Expected/actual behaviour, country/date, fresh or older save, steps, and last working version if known."
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence (optional)
+      description: "Relevant logs, save, changed vanilla paths or script-doc references. Report only checks actually performed; remove private information."

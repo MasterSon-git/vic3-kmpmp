@@ -1,4 +1,12 @@
-robocopy "..\src" "$env:UserProfile\Documents\Paradox Interactive\Victoria 3\mod\vic3-kmpmp" /MIR /XF thumbnail* /XD .metadata
-New-Item "$env:UserProfile\Documents\Paradox Interactive\Victoria 3\mod\vic3-kmpmp\.metadata" -Type directory -Force
-Copy-Item "..\src\.metadata\metadata_kmpmp.json" -Destination "$env:UserProfile\Documents\Paradox Interactive\Victoria 3\mod\vic3-kmpmp\.metadata\metadata.json" -Force
-Copy-Item "..\src\thumbnail_kmpmp.png" -Destination "$env:UserProfile\Documents\Paradox Interactive\Victoria 3\mod\vic3-kmpmp\thumbnail.png" -Force
+param(
+    [string]$Destination = "$env:UserProfile\Documents\Paradox Interactive\Victoria 3\mod\vic3-kmpmp"
+)
+
+$ErrorActionPreference = 'Stop'
+$source = Join-Path $PSScriptRoot '..\src'
+robocopy $source $Destination /MIR /XF thumbnail* /XD .metadata
+if ($LASTEXITCODE -ge 8) { throw "Mod copy failed (robocopy $LASTEXITCODE)." }
+New-Item (Join-Path $Destination '.metadata') -Type directory -Force | Out-Null
+Copy-Item (Join-Path $source '.metadata\metadata_kmpmp.json') -Destination (Join-Path $Destination '.metadata\metadata.json') -Force
+Copy-Item (Join-Path $source 'thumbnail_kmpmp.png') -Destination (Join-Path $Destination 'thumbnail.png') -Force
+& (Join-Path $PSScriptRoot 'copy-legal-notices.ps1') -Destination $Destination

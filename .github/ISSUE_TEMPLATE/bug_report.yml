@@ -1,0 +1,32 @@
+name: Bug report
+description: Report a reproducible KMPMP problem.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: "Search existing reports first. Add what you know; logs and a save can follow later."
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: "Include country/date and how long to simulate. Say if it only occurs in multiplayer."
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Game and mod setup
+      description: "Game version/checksum, KMPMP commit or Workshop update, variant, DLC, other mods/load order and OS. Unknown details are OK."
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Save, logs or screenshots (optional)
+      description: "A save just before the problem helps. Copy relevant error.log/game.log before relaunching and remove private information."

@@ -1,0 +1,23 @@
+name: Feature request
+description: Propose a focused improvement for multiplayer games.
+title: "[Feature]: "
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: What problem would this solve?
+      description: "Describe a concrete situation in a multiplayer campaign."
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behaviour
+      description: "Explain the desired outcome; implementation details are optional."
+    validations:
+      required: true
+  - type: textarea
+    id: tradeoffs
+    attributes:
+      label: Balance, compatibility or alternatives (optional)
+      description: "Mention save/DLC effects or upstream inspiration. If proposing an import, link its author/source and any known reuse terms."

@@ -1,3 +1,10 @@
+# Historical integration notes
+
+This document records early integration work and credits. It is not a current
+feature, compatibility or licensing matrix. Some systems have since changed or
+been removed. See [README.md](README.md) for an overview and
+[the provenance audit](docs/PROVENANCE.md) for verified sources and permissions.
+
 All Quiet On The Western Front
   - **new** Battle Conditions
     - Surrounded, Cut of Supply Lines, Hold Fort, Artillery Fire Support, Ship Advantages
