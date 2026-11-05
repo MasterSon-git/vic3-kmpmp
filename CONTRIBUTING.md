@@ -39,9 +39,24 @@ the change, inspect relevant logs and run `git diff --check`. Test gameplay
 changes in a fresh or reproducible saved campaign; test multiplayer-affecting
 changes with matching builds when possible.
 
-Report what you actually tested and what remains untested. Update affected
-documentation when behaviour or workflow changes; detailed test results and
-migration notes belong in the PR.
+Report meaningful test results and any important gaps. Update documentation
+when behaviour or workflow changes.
+
+## Issues, pull requests and documentation
+
+**Describe the current state, not the history of getting there.** Write issues
+and pull requests for someone reading them later: explain the goal, what changed
+or is proposed, relevant validation and remaining blockers or decisions.
+Update the opening description as work progresses instead of appending a running
+log of commits, attempts, investigations or repeated test results.
+
+Keep validation concise: state the relevant checks, their outcomes and what has
+not been verified. Add technical detail only when needed to understand a decision
+or reproduce a problem. Avoid exhaustive logs, generated reports, lengthy
+chronologies and self-congratulatory progress summaries in issues, PRs, comments
+and permanent documentation. Use discussion comments for substantial findings
+or decisions, not routine status reports. Keep historical implementation details
+in Git history; document current behaviour and lasting constraints.
 
 ## Upstream work and licensing
 
