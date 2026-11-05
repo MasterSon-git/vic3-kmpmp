@@ -12,12 +12,15 @@
 
 ## Compatibility implications
 
-<!-- Game build, DLC, saves, multiplayer/checksum and affected variants. Say "none" when appropriate. -->
+<!-- State the game version, affected DLC and variants, save compatibility,
+and any multiplayer or checksum effects. Write "none" if not applicable. -->
 
 ## Validation performed
 
-<!-- Commands, gameplay/multiplayer scenarios, results and skipped checks. Include git diff --check. -->
+<!-- List the checks performed, their results, and any skipped gameplay or
+multiplayer tests. Include `git diff --check`. -->
 
 ## Known limitations
 
-<!-- Remaining tests, permissions or other follow-up. Do not claim unperformed validation. -->
+<!-- Note outstanding tests, licensing questions or follow-up work.
+Do not claim tests you haven't run. -->

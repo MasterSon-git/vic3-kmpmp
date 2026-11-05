@@ -24,7 +24,8 @@ Keep changes focused and practical for a community-maintained multiplayer modpac
 - Keep overrides small. Avoid broad cleanup or restructuring in an unrelated fix.
   Review all affected variants before changing compatibility declarations.
 - Preserve file encoding, including UTF-8 BOMs and language headers in localization.
-  Add English/German strings for new visible keys, or note missing translations.
+  Provide English and German localization for new player-facing text, or note
+  any missing translations.
 
 **Commented-out code is not a historical archive.** Remove obsolete implementations.
 Use Git history for old code, PRs for completed migration decisions, issues for
@@ -53,11 +54,9 @@ Acknowledge the original authors and projects in
 Keep license obligations in `LICENSE.md` and preserve the full upstream license
 texts. Required notices must also ship in mod packages, including test builds.
 
-Do not present third-party material as original KMPMP work or assume public
-availability is permission. Follow the third-party policy in `LICENSE.md`;
-routine maintenance does not require an author-contact campaign or a file-level
-ownership inventory. Do not open additional licensing issues without
-explicit maintainer authorization.
+Do not present third-party material as original KMPMP work or assume that
+publicly available content is free to reuse. See [LICENSE.md](LICENSE.md) for
+the license scope and required notices.
 
 Keep discussions respectful and focused on the mod. Avoid personal attacks and
 posting private information.

@@ -7,14 +7,16 @@ policy. These safeguards apply to automated work:
   tracked/untracked changes; do not reset, clean, stash or overwrite others' work.
 - Follow the task's branch and PR instructions. Keep unrelated tasks separate;
   do not push to another branch or merge without authorization.
-- Use actual target-build files and generated docs for compatibility evidence.
-  Do not invent engine APIs or change gameplay/balance beyond the task's scope.
-- Treat external vanilla and Workshop references as read-only, including their
-  Git state. Run Git commands in an explicit working directory and keep
-  experiments out of those repositories.
+- Check compatibility against the target game's files and generated script
+  documentation. Do not invent engine APIs or change gameplay or balance
+  beyond the task's scope.
+- Treat external vanilla and Workshop sources as read-only. Do not modify their
+  files or Git repositories. Run Git commands from an explicitly selected
+  working directory, and keep experimental files outside those repositories.
 - Avoid unsolicited restructuring or broad refactoring. A `kmpmp_` filename
   does not establish ownership of everything it contains.
-- Deployment mirrors folders: verify absolute destinations and use disposable
-  folders for checks. Do not run the branch-deletion utility as routine setup.
+- Deployment scripts mirror directories and may delete existing destination
+  files. Verify the destination path and use disposable folders for testing.
+  Do not run the branch-deletion utility as part of routine setup.
 - Review the final diff and report checks honestly. Parsing or headless loading
   is not campaign or multiplayer validation.

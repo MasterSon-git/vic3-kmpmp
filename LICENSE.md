@@ -19,15 +19,15 @@ modified upstream files and protected material within mixed files. Original
 KMPMP changes do not relicense the underlying work; a filename or namespace does
 not establish ownership.
 
-Some third-party permissions have not been established; those components are
-not claimed to be licensed or legally cleared. Attribution alone does not
-establish redistribution rights. Third-party authors and projects are credited
-in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+We have not verified redistribution permissions for every third-party component.
+Attribution alone does not grant reuse or redistribution rights. Upstream
+authors and projects are credited in
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 ## Required upstream notices
 
-Keep the complete MIT license texts, including copyright and permission notices,
-with distributed copies or substantial portions of these components:
+When distributing these components, preserve their full MIT license texts,
+including copyright and permission notices:
 
 | Project | Included license | Original license source |
 | --- | --- | --- |
@@ -40,7 +40,7 @@ KMPMP includes work based on [Anbeeld's Stockpile Economy (ASE)](https://github.
 Distributed packages must include this file, the third-party notices and
 `LICENSES/`. The deployment scripts copy them into each mod folder.
 
-We welcome attribution corrections and requests from original rights holders
-through [repository issues](https://github.com/MasterSon-git/vic3-kmpmp/issues).
-Requests will be reviewed and addressed appropriately, including removing
-affected material where necessary. This policy does not substitute for permission.
+If you are a rights holder with concerns about included material, or if you
+notice an attribution error, please [open an issue](https://github.com/MasterSon-git/vic3-kmpmp/issues).
+We will review these reports and remove affected material where appropriate.
+This contact process does not replace any required permission.
