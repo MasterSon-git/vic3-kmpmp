@@ -42,6 +42,15 @@ changes with matching builds when possible.
 Report meaningful test results and any important gaps. Update documentation
 when behaviour or workflow changes.
 
+**Documentation scope:** Keep general documentation (such as
+`docs/DEVELOPMENT.md`) focused on reusable development procedures,
+architecture, conventions and operational constraints. Do not add
+issue-specific test matrices, acceptance criteria, implementation summaries
+or feature-specific validation instructions there; keep those in the
+relevant GitHub issue or pull request. Add to general documentation only
+when the guidance remains useful across independent development tasks.
+Review documentation changes for this distinction before opening a PR.
+
 ## Issues, pull requests and documentation
 
 **Describe the current state, not the history of getting there.** Write issues
