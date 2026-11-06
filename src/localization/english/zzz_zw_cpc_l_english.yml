@@ -30,7 +30,7 @@ l_english:
 
 	zw_auto_invest_disallow_building_button: "Restricted Building Types"
 	zw_auto_invest_disallow_building_button_desc: ""
-	zw_auto_invest_disallow_building_button_effect: "[ROOT.GetCountry.GetNameNoFlag]'s $zw_text_domestic_private_investment$ is not allowed to construct certain building types.\n\nIt does #v not#! affect [Concept('concept_privatize', '$concept_privatizations$')] of the disallowed building types."
+	zw_auto_invest_disallow_building_button_effect: "[ROOT.GetCountry.GetNameNoFlag]'s $zw_text_domestic_private_investment$ is not allowed to construct certain building types.\n\nIt does #v not#! affect [Concept('concept_privatize', '$concept_privatizations|q$')] of the disallowed building types."
 
 	zw_auto_invest_disallow_building_undo_button: "All Building Types"
 	zw_auto_invest_disallow_building_undo_button_desc: ""

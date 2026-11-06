@@ -1,0 +1,46 @@
+﻿# 1.15 DEI independence setup, preserving KMPMP's merged Javan culture.
+kmpmp_dei_become_indonesia_effect = {
+	if = {
+		limit = {
+			is_subject = yes
+		}
+		make_independent = yes
+	}
+	change_tag = IDN
+	ig:ig_industrialists ?= {
+		remove_ideology = ideology_colonialist
+		add_ideology = ideology_laissez_faire
+	}
+	ig:ig_devout ?= {
+		set_interest_group_name = ig_sunni_madrasahs
+		set_ig_trait = ig_trait:ig_trait_pious_fiction
+		set_ig_trait = ig_trait:ig_trait_sharia
+		set_ig_trait = ig_trait:ig_trait_da_wat
+	}
+	hidden_effect = {
+		every_primary_culture = {
+			save_temporary_scope_as = primary_culture_to_remove
+			PREV ?= { # scope:target
+				remove_primary_culture = scope:primary_culture_to_remove
+			}
+		}
+
+		add_primary_culture = cu:javan
+
+		every_scope_character = {
+			limit = {
+				culture = {
+					has_discrimination_trait_group = heritage_group_european
+				}
+				is_immortal = no
+			}
+			retire_character = yes
+		}
+		set_state_religion = rel:sunni
+		state_religion_switch_effect = yes
+		owning_company ?= {
+			remove_owned_country = PREV
+		}
+	}
+	set_country_type = recognized
+}

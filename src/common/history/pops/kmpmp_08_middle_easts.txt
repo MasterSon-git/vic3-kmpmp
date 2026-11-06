@@ -38,7 +38,7 @@
             }
             create_pop = {
                 pop_type = slaves
-                culture = north_caucasian
+                culture = dagestani
                 size = 1200 #1200
             }
             create_pop = {

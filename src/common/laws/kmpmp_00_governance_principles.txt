@@ -42,6 +42,8 @@ INJECT:law_council_republic = {
 		country_authority_add = 100
 		tax_dividends_add = 0.05
 		state_decree_cost_mult = -0.05
+
+		country_other_country_socialist_government_hostility_impact_add = 50
 	}
 }
 

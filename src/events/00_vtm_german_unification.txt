@@ -195,6 +195,11 @@ german_unification.1 = {
 			change_tag = SGF
 		}
 	}
+
+	after = {
+		je_north_german_unification_cleanup = yes
+		je_south_german_unification_cleanup = yes
+	}
 }
 
 # Annex a German country after forming NGF/SGF
@@ -294,7 +299,7 @@ german_unification.3 = {
 
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 
-	cooldown = { days = never_fire_again_modifier_time }
+
 
 	duration = 3
 
@@ -307,6 +312,7 @@ german_unification.3 = {
 			save_scope_as = junkers
 			leader = {
 				save_scope_as = bismarck_scope
+				set_temporary_event_immortality = { DURATION = 3 }
 			}
 		}
 	}
@@ -358,6 +364,11 @@ german_unification.3 = {
 			base = 5
 		}
 	}
+
+	fire_only_once = yes
+	after = {
+		revoke_temporary_event_immortality = { CHARACTER = scope:bismarck_scope }
+	}
 }
 
 # German Unification
@@ -396,6 +407,8 @@ german_unification.4 = {
 	}
 
 	trigger = {
+		# triggered by on_action - on_country_formed
+		c:GER ?= this
 	}
 
 	option = {
@@ -517,6 +530,10 @@ german_unification.5 = {
 				}
 			}
 		}		
+	}
+
+	after = {
+		je_german_unification_idea_cleanup = yes
 	}
 }
 

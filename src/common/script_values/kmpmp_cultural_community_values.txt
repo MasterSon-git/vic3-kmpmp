@@ -32,7 +32,7 @@ REPLACE:cultural_community_creation_weight = {
 
 		if = {
 			limit = {
-				has_decree = decree_greener_grass_campaign
+				state_has_decree_variant = { DECREE = decree_greener_grass_campaign }
 			}
 			add = 0.015 #0.005
 		}

@@ -19,6 +19,7 @@ kmpmp_add_je_military_goods_shortage = {
     effect = {
         every_scope_play_involved = {
             limit = {
+                NOT = { is_country_type = decentralized }
                 is_diplomatic_play_committed_participant = yes
                 NOT = {
                     has_journal_entry = kmpmp_je_military_goods_shortage

@@ -31,68 +31,84 @@
 		}
 	}
 
-	complete = {
-		trigger_if = {
-			limit = {
-				OR = {
-					c:HOL ?= this
-					c:SCH ?= this
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			trigger_if = {
+				limit = {
+					OR = {
+						c:HOL ?= this
+						c:SCH ?= this
+					}
 				}
+				is_subject = no
 			}
-			is_subject = no
-		}
-		trigger_if = {
-			limit = {
-				NOT = { c:HOL ?= this }
-				NOT = { c:SCH ?= this }
-				exists = c:DEN
-			}
-			custom_tooltip = {
-				text = je_schleswig_holstein_question_state_ownership_desc
-				any_scope_state = { state_region = s:STATE_SCHLESWIG_HOLSTEIN }
-				s:STATE_SCHLESWIG_HOLSTEIN = {
-					NOT = {
-						any_scope_state = {
-							OR = {
-								NOT = {
-									owner = {
-										OR = {
-											country_has_primary_culture = cu:north_german
-											country_has_primary_culture = cu:south_german
+			trigger_if = {
+				limit = {
+					NOT = { c:HOL ?= this }
+					NOT = { c:SCH ?= this }
+					exists = c:DEN
+				}
+				NOT = { has_war_with = c:DEN }
+				custom_tooltip = {
+					text = je_schleswig_holstein_question_state_ownership_desc
+					any_scope_state = { state_region = s:STATE_SCHLESWIG_HOLSTEIN }
+					s:STATE_SCHLESWIG_HOLSTEIN = {
+						NOT = {
+							any_scope_state = {
+								OR = {
+									NOT = {
+										owner = {
+											OR = {
+												country_has_primary_culture = cu:north_german
+												country_has_primary_culture = cu:south_german
+											}
 										}
 									}
-								}
-								owner = {
-									is_subject_of = c:DEN
+									owner = {
+										is_subject_of = c:DEN
+									}
 								}
 							}
 						}
 					}
 				}
 			}
-		}
-		trigger_if = {
-			limit = {
-				c:LUB ?= this
+			trigger_if = {
+				limit = {
+					c:LUB ?= this
+				}
+				country_or_subject_owns_entire_state_region = STATE_SCHLESWIG_HOLSTEIN
 			}
-			country_or_subject_owns_entire_state_region = STATE_SCHLESWIG_HOLSTEIN
+		}
+		effect = {
+			add_modifier = {
+				name = schleswig_holstein_question_solver
+				days = long_modifier_time
+			}
+			hidden_effect = { set_global_variable = schleswig_holstein_question_solved }
+			je_schleswig_holstein_question_cleanup = yes
 		}
 	}
 
-	fail = {
-		custom_tooltip = {
-			has_global_variable = schleswig_holstein_question_solved
-			text = je_schleswig_holstein_question_solved_fail_trigger_desc
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				has_global_variable = schleswig_holstein_question_solved
+				text = je_schleswig_holstein_question_solved_fail_trigger_desc
+			}
+			NOT = { has_modifier = schleswig_holstein_question_solver }
 		}
-		NOT = { has_modifier = schleswig_holstein_question_solver }
-	}
-
-	on_complete = {
-		add_modifier = {
-			name = schleswig_holstein_question_solver
-			days = long_modifier_time
+		effect = {
+			je_schleswig_holstein_question_cleanup = yes
 		}
-		hidden_effect = { set_global_variable = schleswig_holstein_question_solved }
 	}
 
 	status_desc = {
@@ -106,13 +122,16 @@
 	weight = 1000
 		
 	should_be_pinned_by_default_uninvolved_or_context = yes
+
+	activation_description = {
+		always = yes
+	}
 }
 
 REPLACE:je_german_unification_idea = {
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
 	group = je_group_german_unification
-
 
 	is_shown_in_lobby = {
 		AND = {
@@ -141,129 +160,134 @@ REPLACE:je_german_unification_idea = {
 		}
 	}
 
-	complete = {
-		cu:north_german ?= {
-			culture_current_fervor >= 40
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			cu:north_german ?= {
+				culture_current_fervor >= 40
+			}
+			cu:south_german ?= {
+				culture_current_fervor >= 30
+			}
 		}
-		cu:south_german ?= {
-			culture_current_fervor >= 30
-		}
-	}
+		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						any_country_in_german_confederation = {
+							country_rank >= rank_value:great_power
+							OR = {
+								AND = {
+									country_has_primary_culture = cu:north_german
+									root = { country_has_primary_culture = cu:north_german }
+								}
+								AND = {
+									country_has_primary_culture = cu:south_german
+									root = { country_has_primary_culture = cu:south_german }
+								}
+							}
+						}
+					}
+					random_country_in_german_confederation = {
+						limit = {
+							country_rank >= rank_value:great_power
+							OR = {
+								AND = {
+									country_has_primary_culture = cu:north_german
+									root = { country_has_primary_culture = cu:north_german }
+								}
+								AND = {
+									country_has_primary_culture = cu:south_german
+									root = { country_has_primary_culture = cu:south_german }
+								}
+							}
+						}
+						save_scope_as = german_unifier_candidate
+					}
+				}
+				else_if = {
+					limit = {
+						any_country_in_german_confederation = {
+							country_rank >= rank_value:great_power
+							OR = {
+								country_has_primary_culture = cu:north_german
+								country_has_primary_culture = cu:south_german
+							}
+						}
+					}
+					random_country_in_german_confederation = {
+						limit = {
+							country_rank >= rank_value:great_power
+							OR = {
+								country_has_primary_culture = cu:north_german
+								country_has_primary_culture = cu:south_german
+							}
+						}
+						save_scope_as = german_unifier_candidate
+					}
+				}
+				else_if = {
+					limit = {
+						any_country_in_german_confederation = {
+							country_rank >= rank_value:major_power
+							OR = {
+								AND = {
+									country_has_primary_culture = cu:north_german
+									root = { country_has_primary_culture = cu:north_german }
+								}
+								AND = {
+									country_has_primary_culture = cu:south_german
+									root = { country_has_primary_culture = cu:south_german }
+								}
+							}
+						}
+					}
+					random_country_in_german_confederation = {
+						limit = {
+							country_rank >= rank_value:major_power
+							OR = {
+								AND = {
+									country_has_primary_culture = cu:north_german
+									root = { country_has_primary_culture = cu:north_german }
+								}
+								AND = {
+									country_has_primary_culture = cu:south_german
+									root = { country_has_primary_culture = cu:south_german }
+								}
+							}
+						}
+						save_scope_as = german_unifier_candidate
+					}
+				}
+				else_if = {
+					limit = {
+						any_country_in_german_confederation = {
+							country_rank >= rank_value:major_power
+							OR = {
+								country_has_primary_culture = cu:north_german
+								country_has_primary_culture = cu:south_german
+							}
+						}
+					}
+					random_country_in_german_confederation = {
+						limit = {
+							country_rank >= rank_value:major_power
+							OR = {
+								country_has_primary_culture = cu:north_german
+								country_has_primary_culture = cu:south_german
+							}
+						}
+						save_scope_as = german_unifier_candidate
+					}
+				}
+			}
 
-	on_complete = {
-		hidden_effect = {
-			if = {
-				limit = {
-					any_country_in_german_confederation = {
-						country_rank >= rank_value:great_power
-						OR = {
-							AND = {
-								country_has_primary_culture = cu:north_german
-								root = { country_has_primary_culture = cu:north_german }
-							}
-							AND = {
-								country_has_primary_culture = cu:south_german
-								root = { country_has_primary_culture = cu:south_german }
-							}
-						}
-					}
-				}
-				random_country_in_german_confederation = {
-					limit = {
-						country_rank >= rank_value:great_power
-						OR = {
-							AND = {
-								country_has_primary_culture = cu:north_german
-								root = { country_has_primary_culture = cu:north_german }
-							}
-							AND = {
-								country_has_primary_culture = cu:south_german
-								root = { country_has_primary_culture = cu:south_german }
-							}
-						}
-					}
-					save_scope_as = german_unifier_candidate
-				}
-			}
-			else_if = {
-				limit = {
-					any_country_in_german_confederation = {
-						country_rank >= rank_value:great_power
-						OR = {
-							country_has_primary_culture = cu:north_german
-							country_has_primary_culture = cu:south_german
-						}
-					}
-				}
-				random_country_in_german_confederation = {
-					limit = {
-						country_rank >= rank_value:great_power
-						OR = {
-							country_has_primary_culture = cu:north_german
-							country_has_primary_culture = cu:south_german
-						}
-					}
-					save_scope_as = german_unifier_candidate
-				}
-			}
-			else_if = {
-				limit = {
-					any_country_in_german_confederation = {
-						country_rank >= rank_value:major_power
-						OR = {
-							AND = {
-								country_has_primary_culture = cu:north_german
-								root = { country_has_primary_culture = cu:north_german }
-							}
-							AND = {
-								country_has_primary_culture = cu:south_german
-								root = { country_has_primary_culture = cu:south_german }
-							}
-						}
-					}
-				}
-				random_country_in_german_confederation = {
-					limit = {
-						country_rank >= rank_value:major_power
-						OR = {
-							AND = {
-								country_has_primary_culture = cu:north_german
-								root = { country_has_primary_culture = cu:north_german }
-							}
-							AND = {
-								country_has_primary_culture = cu:south_german
-								root = { country_has_primary_culture = cu:south_german }
-							}
-						}
-					}
-					save_scope_as = german_unifier_candidate
-				}
-			}
-			else_if = {
-				limit = {
-					any_country_in_german_confederation = {
-						country_rank >= rank_value:major_power
-						OR = {
-							country_has_primary_culture = cu:north_german
-							country_has_primary_culture = cu:south_german
-						}
-					}
-				}
-				random_country_in_german_confederation = {
-					limit = {
-						country_rank >= rank_value:major_power
-						OR = {
-							country_has_primary_culture = cu:north_german
-							country_has_primary_culture = cu:south_german
-						}
-					}
-					save_scope_as = german_unifier_candidate
-				}
-			}
+			hidden_effect = { set_variable = je_german_unification_idea }
+			trigger_event = { id = german_unification.5 } # German National Identity
 		}
-
-		hidden_effect = { set_variable = je_german_unification_idea }
-		trigger_event = { id = german_unification.5 } # German National Identity
 	}
 
 	status_desc = {
@@ -277,6 +301,10 @@ REPLACE:je_german_unification_idea = {
 	weight = 1000
 		
 	should_be_pinned_by_default_uninvolved_or_context = yes
+
+	activation_description = {
+		always = yes
+	}
 }
 
 REPLACE:je_north_german_unification = {
@@ -284,35 +312,67 @@ REPLACE:je_north_german_unification = {
 
 	group = je_group_german_unification
 
-	complete = {
-		custom_tooltip = {
-			has_global_variable = schleswig_holstein_question_solved
-			text = je_schleswig_holstein_question_solved_trigger_desc
-		}
-		hidden_trigger = {
-			has_variable = je_unification_progress
-		}
-		has_technology_researched = nationalism
-		is_unification_candidate = GER
-		custom_tooltip = {
-			text = je_german_unification_sole_candidate_trigger_desc
-			NOT = {
-				any_country_in_german_confederation = {
-					NOT = { this = root }
-					is_unification_candidate = GER
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				has_global_variable = schleswig_holstein_question_solved
+				text = je_schleswig_holstein_question_solved_trigger_desc
+			}
+			hidden_trigger = {
+				has_variable = je_unification_progress
+			}
+			has_technology_researched = nationalism
+			is_unification_candidate = GER
+			custom_tooltip = {
+				text = je_german_unification_sole_candidate_trigger_desc
+				NOT = {
+					any_country_in_german_confederation = {
+						NOT = { this = root }
+						is_unification_candidate = GER
+					}
 				}
 			}
 		}
+		effect = {
+			trigger_event = { id = german_unification.1 } # North German Confederation
+			remove_variable = je_unification_progress
+		}
 	}
 
-	fail = {
-		# NOT = {
-		# 	is_unification_candidate = GER
-		# }
-		custom_tooltip = {
-			text = je_german_unification_german_hegemony_has_been_decided
-			any_country = {
-				has_variable = je_german_confederate_unifier
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			# NOT = {
+			#     is_unification_candidate = GER
+			# }
+			custom_tooltip = {
+				text = je_german_unification_german_hegemony_has_been_decided
+				any_country = {
+					has_variable = je_german_confederate_unifier
+				}
+			}
+		}
+
+		effect = {
+			je_north_german_unification_cleanup = yes
+		}
+	}
+
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			OR = {
+				exists = c:GER
+				exists = c:SGF
+				exists = c:NGF
 			}
 		}
 	}
@@ -325,19 +385,6 @@ REPLACE:je_north_german_unification = {
 			}
 		}
 	}
-
-	on_complete = {
-		trigger_event = { id = german_unification.1 } # North German Confederation
-		remove_variable = je_unification_progress
-	}
-
-	invalid = {
-		OR = {
-			exists = c:GER
-			exists = c:SGF
-			exists = c:NGF
-		}
-    }
 
 	status_desc = {
 		first_valid = {
@@ -350,6 +397,10 @@ REPLACE:je_north_german_unification = {
 	weight = 1000
 		
 	should_be_pinned_by_default_uninvolved_or_context = yes
+
+	activation_description = {
+		always = yes
+	}
 }
 
 REPLACE:je_south_german_unification = {
@@ -357,36 +408,70 @@ REPLACE:je_south_german_unification = {
 
 	group = je_group_german_unification
 
-	complete = {
-		custom_tooltip = {
-			has_global_variable = schleswig_holstein_question_solved
-			text = je_schleswig_holstein_question_solved_trigger_desc
-		}
-		hidden_trigger = {
-			has_variable = je_unification_progress
-		}
-		has_technology_researched = nationalism
-		is_unification_candidate = GER
-		custom_tooltip = {
-			text = je_german_unification_sole_candidate_trigger_desc
-			NOT = {
-				any_country_in_german_confederation = {
-					NOT = { this = root }
-					is_unification_candidate = GER
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				has_global_variable = schleswig_holstein_question_solved
+				text = je_schleswig_holstein_question_solved_trigger_desc
+			}
+			hidden_trigger = {
+				has_variable = je_unification_progress
+			}
+			has_technology_researched = nationalism
+			is_unification_candidate = GER
+			custom_tooltip = {
+				text = je_german_unification_sole_candidate_trigger_desc
+				NOT = {
+					any_country_in_german_confederation = {
+						NOT = { this = root }
+						is_unification_candidate = GER
+					}
 				}
 			}
 		}
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						country_tier = empire
+					}
+				}
+				trigger_event = { id = german_unification.1 } # South German Confederation for German minors
+
+			}
+			if = {
+				limit = {
+					country_tier = empire
+				}
+				trigger_event = { id = german_unification.100 } # South German Confederation for Austria
+			}
+			remove_variable = je_unification_progress
+		}
 	}
 
-	fail = {
-		# NOT = {
-		# 	is_unification_candidate = GER
-		# }
-		custom_tooltip = {
-			text = je_german_unification_german_hegemony_has_been_decided
-			any_country = {
-				has_variable = je_german_confederate_unifier
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			# NOT = {
+			#     is_unification_candidate = GER
+			# }
+			custom_tooltip = {
+				text = je_german_unification_german_hegemony_has_been_decided
+				any_country = {
+					has_variable = je_german_confederate_unifier
+				}
 			}
+		}
+
+		effect = {
+			je_south_german_unification_cleanup = yes
 		}
 	}
 
@@ -397,25 +482,6 @@ REPLACE:je_south_german_unification = {
 				set_variable = je_unification_progress
 			}
 		}
-	}
-
-	on_complete = {
-		if = {
-			limit = {
-				NOT = {
-					country_tier = empire
-				}
-			}
-			trigger_event = { id = german_unification.1 } # South German Confederation for German minors
-
-		}
-		if = {
-			limit = {
-					country_tier = empire
-			}
-			trigger_event = { id = german_unification.100 } # South German Confederation for Austria
-		}
-		remove_variable = je_unification_progress
 	}
 
 	status_desc = {
@@ -432,6 +498,10 @@ REPLACE:je_south_german_unification = {
 	weight = 1000
 		
 	should_be_pinned_by_default_uninvolved_or_context = yes
+
+	activation_description = {
+		always = yes
+	}
 }
 
 REPLACE:je_german_unification = {
@@ -454,35 +524,56 @@ REPLACE:je_german_unification = {
 		is_subject = no
 	}
 
-	complete = {
-		custom_tooltip = {
-			c:GER ?= this
-			text = je_german_unification_complete_trigger_desc
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				c:GER ?= this
+				text = je_german_unification_complete_trigger_desc
+			}
+		}
+		effect = {
+			show_as_tooltip = {
+				trigger_event = { id = german_unification.4 popup = yes } # German Unification
+			}
+			remove_variable = je_unification_progress
+
+			every_state = {
+				limit = {
+					state_region = {
+						OR = {
+							is_homeland = cu:north_german
+							is_homeland = cu:south_german
+						}
+					}
+					NOR = {
+						owner = ROOT
+						owner = { c:AUS ?= this }
+					}
+				}
+				state_region = {
+					add_claim = ROOT
+				}
+			}
+
+			je_german_unification_cleanup = yes
 		}
 	}
 
-	on_complete = {
-		show_as_tooltip = {
-			trigger_event = { id = german_unification.4 popup = yes } # German Unification
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			OR = {
+				country_has_primary_culture = cu:hungarian
+				c:HRE ?= THIS
+			}
 		}
-		remove_variable = je_unification_progress
-		
-		every_state = {
-			limit = {
-				state_region = {
-					OR = {
-						is_homeland = cu:north_german
-						is_homeland = cu:south_german
-					}
-				}
-				NOR = {
-					owner = ROOT
-					owner = { c:AUS ?= this }
-				}
-			}
-			state_region = {
-				add_claim = ROOT
-			}
+		effect = {
+			je_german_unification_cleanup = yes
 		}
 	}
 
@@ -494,14 +585,11 @@ REPLACE:je_german_unification = {
 		}
 	}
 
-	invalid = {
-		OR = {
-			country_has_primary_culture = cu:hungarian
-			c:HRE ?= THIS
-		}
-	}
-
 	weight = 1000
 		
 	should_be_pinned_by_default_uninvolved_or_context = yes
+
+	activation_description = {
+		always = yes
+	}
 }

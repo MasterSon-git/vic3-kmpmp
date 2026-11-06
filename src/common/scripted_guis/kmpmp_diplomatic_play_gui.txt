@@ -85,7 +85,7 @@ kmpmp_sgui_diplomatic_play_can_give_in = {
 
 # enable "Capitulate" button
 # diplomatic plays open_market, regime_change are not allowed to captitulate,
-# unless 80 war exhaustion on target is reached
+# unless the target reaches 10 war support (old range: -80)
 kmpmp_sgui_diplomatic_play_can_capitulate = {
     scope = war
     saved_scopes = { country }
@@ -111,7 +111,7 @@ kmpmp_sgui_diplomatic_play_can_capitulate = {
             }
 
             kmpmp_war_support_lower_or_equal_than = {
-                TARGET_VALUE = -80
+                TARGET_VALUE = 10
             }
         }
         trigger_else = {
@@ -137,7 +137,7 @@ kmpmp_sgui_diplomatic_play_can_propose_peace = {
             }
 
             kmpmp_war_support_lower_or_equal_than = {
-                TARGET_VALUE = -80
+                TARGET_VALUE = 10
             }
 
             # didn't work - war_goal is not a valid event_target

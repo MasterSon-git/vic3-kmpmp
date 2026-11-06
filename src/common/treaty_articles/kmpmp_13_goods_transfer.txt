@@ -786,6 +786,25 @@
 					max = 15
 				}
 			}
-		}
+
+            else_if = {
+                limit = {
+                    scope:market_goods ?= {
+                        goods ?= {
+                            OR = {
+                                g:fish ?= this
+                                g:meat ?= this
+                                g:fruit ?= this
+                                g:groceries ?= this
+                            }
+                        }
+                    }
+                }
+                multiply = {
+                    desc = "INFAMY_GOODS_TRANSFER_FOOD"
+                    value = define:NDiplomacy|WAR_GOAL_INFAMY_GOODS_TRANSFER_STAPLE_FOOD_MULT
+                }
+            }
+        }
 	}
 }

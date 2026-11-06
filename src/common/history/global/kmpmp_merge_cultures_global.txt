@@ -289,7 +289,12 @@
     add_to_global_variable_list = { name = cultures_caucasian target = cu:armenian } # relevant in event caucasuswar_end.4
     add_to_global_variable_list = { name = cultures_caucasian target = cu:chechen }
     # add_to_global_variable_list = { name = cultures_caucasian target = cu:circassian } # relevant in jes je_circassian_expulsions and in event caucasuswar.1, caucasuswar.5, caucasus_expulsions.1, caucasus_expulsions.2, caucasus_expulsions.3
-    add_to_global_variable_list = { name = cultures_caucasian target = cu:north_caucasian } # relevant in event caucasuswar.6, caucasuswar.7, caucasuswar.9, caucasuswar_end.3
+    # 1.15 splits the former North Caucasian culture; preserve the existing
+    # Caucasian merge for its successor cultures. Circassian remains excluded.
+    add_to_global_variable_list = { name = cultures_caucasian target = cu:ossetian }
+    add_to_global_variable_list = { name = cultures_caucasian target = cu:abkhazian }
+    add_to_global_variable_list = { name = cultures_caucasian target = cu:caucasian_turk }
+    add_to_global_variable_list = { name = cultures_caucasian target = cu:dagestani } # relevant in event caucasuswar.6, caucasuswar.7, caucasuswar.9, caucasuswar_end.3
 
     # replace primary cultures in countries
     every_country = {

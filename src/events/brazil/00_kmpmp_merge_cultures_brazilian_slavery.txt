@@ -85,4 +85,8 @@ brazilian_slavery.13 = {
         	change_relations = { country = root value = -30 }
         }
 	}
+
+	after = {
+		je_matter_of_slavery_cleanup = yes
+	}
 }

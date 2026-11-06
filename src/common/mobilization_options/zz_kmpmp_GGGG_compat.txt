@@ -16,14 +16,14 @@ INJECT:GGGG_mo_refrigerated_rations = {
 }
 
 # disable tea - kmpmp we need to remove it in GGGG otherwise it's either displayed or claims item area
-INJECT:GGGG_mo_tea = {
+TRY_INJECT:GGGG_mo_tea = {
     is_shown = {
         always = no
     }
 }
 
 # disable coffee - kmpmp we need to remove it in GGGG otherwise it's either displayed or claims item area
-INJECT:GGGG_mo_coffee = {
+TRY_INJECT:GGGG_mo_coffee = {
     is_shown = {
         always = no
     }

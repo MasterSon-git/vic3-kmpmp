@@ -1,4 +1,6 @@
 ﻿REPLACE_OR_CREATE:je_spain_aragons_legacy = {
+    activation_description = { always = yes }
+
     icon = "gfx/interface/icons/event_icons/event_map.dds"
 	group = je_group_historical_content
 
@@ -12,38 +14,44 @@
         }
     }
 
-    complete = {
-        state_region_owned_and_incorporated = { STATE_REGION = STATE_SARDINIA }
-        state_region_owned_and_incorporated = { STATE_REGION = STATE_SICILY }
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            state_region_owned_and_incorporated = { STATE_REGION = STATE_SARDINIA }
+            state_region_owned_and_incorporated = { STATE_REGION = STATE_SICILY }
+        }
+        effect = {
+            set_global_variable = je_spain_aragons_legacy_completed
+
+            # claims on Campania, Abruzzo, Apulia, Calabria
+            if = {
+                limit = { NOT = { has_claim = s:STATE_CAMPANIA } }
+                s:STATE_CAMPANIA = {
+                    add_claim = ROOT
+                }
+            }
+            if = {
+                limit = { NOT = { has_claim = s:STATE_ABRUZZO } }
+                s:STATE_ABRUZZO = {
+                    add_claim = ROOT
+                }
+            }
+            if = {
+                limit = { NOT = { has_claim = s:STATE_APULIA } }
+                s:STATE_APULIA = {
+                    add_claim = ROOT
+                }
+            }
+            if = {
+                limit = { NOT = { has_claim = s:STATE_CALABRIA } }
+                s:STATE_CALABRIA = {
+                    add_claim = ROOT
+                }
+            }
+        }
     }
 
-    on_complete = {
-        set_global_variable = je_spain_aragons_legacy_completed
-
-        # claims on Campania, Abruzzo, Apulia, Calabria
-        if = {
-            limit = { NOT = { has_claim = s:STATE_CAMPANIA } }
-            s:STATE_CAMPANIA = {
-                add_claim = ROOT
-            }
-        }
-        if = {
-            limit = { NOT = { has_claim = s:STATE_ABRUZZO } }
-            s:STATE_ABRUZZO = {
-                add_claim = ROOT
-            }
-        }
-        if = {
-            limit = { NOT = { has_claim = s:STATE_APULIA } }
-            s:STATE_APULIA = {
-                add_claim = ROOT
-            }
-        }
-        if = {
-            limit = { NOT = { has_claim = s:STATE_CALABRIA } }
-            s:STATE_CALABRIA = {
-                add_claim = ROOT
-            }
-        }
-    }
 }

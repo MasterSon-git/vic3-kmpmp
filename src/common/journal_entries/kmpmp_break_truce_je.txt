@@ -1,4 +1,6 @@
 ﻿REPLACE_OR_CREATE:kmpmp_je_break_truce_with_country = {
+    activation_description = { always = yes }
+
     group = je_group_foreign_affairs
     icon = "gfx/interface/icons/lens_toolbar_icons/break_truce.dds"
 
@@ -9,22 +11,27 @@
         }
     }
 
-    complete = {
-        NOT = { # completes if target country is removed from list
-            kmpmp_has_broken_truce_with_country = {
-                COUNTRY_SCOPE = scope:target
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            NOT = { # completes if target country is removed from list
+                kmpmp_has_broken_truce_with_country = {
+                    COUNTRY_SCOPE = scope:target
+                }
             }
         }
-    }
+        effect = {
+            custom_tooltip = {
+                text = kmpmp_break_truce_possible_again_tooltip
 
-    on_complete = {
-        custom_tooltip = {
-            text = kmpmp_break_truce_possible_again_tooltip
-
-            # this can be moved to monthly_pulse but we want to have an effect here
-            remove_list_variable = { # remove target country from list where you respected the truce
-                name = unbreakable_truce_with_country_list
-                target = scope:target
+                # this can be moved to monthly_pulse but we want to have an effect here
+                remove_list_variable = { # remove target country from list where you respected the truce
+                    name = unbreakable_truce_with_country_list
+                    target = scope:target
+                }
             }
         }
     }

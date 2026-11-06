@@ -1,4 +1,6 @@
 ﻿REPLACE_OR_CREATE:kmpmp_je_subject_demobilization = {
+    activation_description = { always = yes }
+
     icon = "gfx/interface/icons/event_icons/event_military.dds"
 	group = je_group_foreign_affairs
 
@@ -13,80 +15,81 @@
         }
     }
 
-    complete = {
-        OR = {
-            NOT = {
-                exists = scope:target
-            }
-            NOT = {
-                scope:target.war = {
-                    is_war_participant = ROOT
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            OR = {
+                NOT = {
+                    exists = scope:target
+                }
+                NOT = {
+                    scope:target.war = {
+                        is_war_participant = ROOT
+                    }
                 }
             }
         }
-    }
-
-    on_complete = {
-        # remove je from list
-        remove_list_variable = {
-            name = je_subject_demobilization_list
-            target = scope:journal_entry
-        }
-
-        # remove mobilization blocker
-        if = {
-            limit = {
-                has_variable = kmpmp_block_mobilization
+        effect = {
+            # remove je from list
+            remove_list_variable = {
+                name = je_subject_demobilization_list
+                target = scope:journal_entry
             }
-            remove_variable = kmpmp_block_mobilization
+
+            # remove mobilization blocker
+            if = {
+                limit = {
+                    has_variable = kmpmp_block_mobilization
+                }
+                remove_variable = kmpmp_block_mobilization
+            }
         }
     }
 
     current_value = {
         value = 0
         scope:target.war = {
-            # if = {
-            #     limit = { has_war_support = { target = ROOT value < 0 } }
-            #     add = 1
-            # }
             if = {
-                limit = { has_war_support = { target = ROOT value <= -10 } }
+                limit = { has_war_support = { target = ROOT value <= 45 } }
                 add = 1
             }
             if = {
-                limit = { has_war_support = { target = ROOT value <= -20 } }
+                limit = { has_war_support = { target = ROOT value <= 40 } }
                 add = 1
             }
             if = {
-                limit = { has_war_support = { target = ROOT value <= -30 } }
+                limit = { has_war_support = { target = ROOT value <= 35 } }
                 add = 1
             }
             if = {
-                limit = { has_war_support = { target = ROOT value <= -40 } }
+                limit = { has_war_support = { target = ROOT value <= 30 } }
                 add = 1
             }
             if = {
-                limit = { has_war_support = { target = ROOT value <= -50 } }
+                limit = { has_war_support = { target = ROOT value <= 25 } }
                 add = 1
             }
             if = {
-                limit = { has_war_support = { target = ROOT value <= -60 } }
+                limit = { has_war_support = { target = ROOT value <= 20 } }
                 add = 1
             }
             if = {
-                limit = { has_war_support = { target = ROOT value <= -70 } }
+                limit = { has_war_support = { target = ROOT value <= 15 } }
                 add = 1
             }
             if = {
-                limit = { has_war_support = { target = ROOT value <= -80 } }
+                limit = { has_war_support = { target = ROOT value <= 10 } }
                 add = 1
             }
             if = {
-                limit = { has_war_support = { target = ROOT value <= -90 } }
+                limit = { has_war_support = { target = ROOT value <= 5 } }
                 add = 1
             }
             if = {
-                limit = { has_war_support = { target = ROOT value <= -100 } }
+                limit = { has_war_support = { target = ROOT value <= 0 } }
                 add = 1
             }
         }

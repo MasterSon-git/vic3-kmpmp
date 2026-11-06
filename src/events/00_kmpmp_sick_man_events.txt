@@ -182,6 +182,10 @@ sick_man.2 = {
 			days = normal_modifier_time
 		}
 	}
+
+	after = {
+		je_sick_man_main_cleanup = yes
+	}
 }
 
 # Fail event
@@ -209,6 +213,7 @@ sick_man.3 = {
 		remove_modifier = outmoded_bureaucracy
 		ruler = {
 			save_scope_as = ottoman_sultan
+			set_temporary_event_immortality = { DURATION = 3 }
 		}
 		if = {
 			limit = {
@@ -279,6 +284,8 @@ sick_man.3 = {
 				multiplier = var:sick_man_var
 			}
 		}
+
+		revoke_temporary_event_immortality = { CHARACTER = scope:ottoman_sultan }
 	}
 	# kmpmp
 	option = {
@@ -342,6 +349,11 @@ sick_man.3 = {
 				divide = 4
 			}
 		}
+	}
+
+	after = {
+		revoke_temporary_event_immortality = { CHARACTER = scope:ottoman_sultan }
+		je_sick_man_main_cleanup = yes
 	}
 }
 

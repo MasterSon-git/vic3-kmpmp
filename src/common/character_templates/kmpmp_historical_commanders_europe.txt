@@ -32,4 +32,6 @@
 		latest_usage_date = 1850.1.1
 		#guaranteed to spawn if possible
 	}
+
+	religion = rel:catholic
 }

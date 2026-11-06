@@ -188,6 +188,8 @@
 				}
 			}
 		}
+
+		show_in_outliner = yes
 	}
 
 	ai = {

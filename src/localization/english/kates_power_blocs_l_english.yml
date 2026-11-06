@@ -187,11 +187,11 @@
     # country_can_declare_holy_wars_bool: "Can Declare Holy Wars"
     # country_can_declare_holy_wars_bool_desc: "The [concept_power_bloc_leader] gains access to the Declare Holy War [concept_diplomatic_action]"
     # country_can_impose_same_lawgroup_economy_in_power_bloc_bool: "#b Impose#! same [GetLawGroup('lawgroup_economic_system').GetName] [concept_law] on $concept_power_bloc_members_short$"
-    # country_can_impose_same_lawgroup_economy_in_power_bloc_bool_desc: "Allowed to #b Impose#! the same [concept_law] as their own in the [GetLawGroup('lawgroup_economic_system').GetName] group on other [Concept('concept_power_bloc_member','$concept_power_bloc_members_short$')]"
+    # country_can_impose_same_lawgroup_economy_in_power_bloc_bool_desc: "Allowed to #b Impose#! the same [concept_law] as their own in the [GetLawGroup('lawgroup_economic_system').GetName] group on other [Concept('concept_power_bloc_member','$concept_power_bloc_members_short|q$')]"
     # country_can_impose_same_lawgroup_home_affairs_in_power_bloc_bool: "#b Impose#! same [GetLawGroup('lawgroup_internal_security').GetName] [concept_law] on $concept_power_bloc_members_short$"
-    # country_can_impose_same_lawgroup_home_affairs_in_power_bloc_bool_desc: "Allowed to #b Impose#! the same [concept_law] as their own in the [GetLawGroup('lawgroup_internal_security').GetName] group on other [Concept('concept_power_bloc_member','$concept_power_bloc_members_short$')]"
+    # country_can_impose_same_lawgroup_home_affairs_in_power_bloc_bool_desc: "Allowed to #b Impose#! the same [concept_law] as their own in the [GetLawGroup('lawgroup_internal_security').GetName] group on other [Concept('concept_power_bloc_member','$concept_power_bloc_members_short|q$')]"
     # country_can_impose_same_lawgroup_welfare_in_power_bloc_bool: "#b Impose#! same [GetLawGroup('lawgroup_welfare').GetName] [concept_law] on $concept_power_bloc_members_short$"
-    # country_can_impose_same_lawgroup_welfare_in_power_bloc_bool_desc: "Allowed to #b Impose#! the same [concept_law] as their own in the [GetLawGroup('lawgroup_welfare').GetName] group on other [Concept('concept_power_bloc_member','$concept_power_bloc_members_short$')]"
+    # country_can_impose_same_lawgroup_welfare_in_power_bloc_bool_desc: "Allowed to #b Impose#! the same [concept_law] as their own in the [GetLawGroup('lawgroup_welfare').GetName] group on other [Concept('concept_power_bloc_member','$concept_power_bloc_members_short|q$')]"
     # mandate_progress_from_cohesion_mult: "Mandate Progress From Cohesion"
     # mandate_progress_from_cohesion_mult_desc: "An increase or reduction to Mandate Progress From Cohesion."
     # mandate_progress_from_members_mult: "Mandate Progress From Members"
@@ -205,19 +205,19 @@
     # country_institution_size_change_speed_institution_social_security_mult: "Institution Size Change Speed for [GetInstitutionType('institution_social_security').GetName]"
     # country_institution_size_change_speed_institution_social_security_mult_desc: "How fast you change the size of [GetInstitutionType('institution_social_security').GetName]"
     # country_influence_per_subject_add: "@inf![Nbsp][concept_influence] per [concept_subject]"
-    # country_influence_per_subject_add_desc: "The amount of @inf![Nbsp][concept_influence] which is scaled by the number of [Concept('concept_subject', '$concept_subjects$')]"
+    # country_influence_per_subject_add_desc: "The amount of @inf![Nbsp][concept_influence] which is scaled by the number of [Concept('concept_subject', '$concept_subjects|q$')]"
     # country_influence_per_subject: "$country_influence_per_subject_add$"
     # country_influence_per_subject_desc: "$country_influence_per_subject_add_desc$"
     # country_minting_from_bloc_members_mult_max: "Maximum $country_minting_from_bloc_members_mult$"
     # country_minting_from_bloc_members_mult_max_desc: "An increase or decrease maximum effect of $country_minting_from_bloc_members_mult$."
     # country_minting_from_bloc_members_mult: "[concept_budget_minting] per independent [concept_power_bloc_member]"
-    # country_minting_from_bloc_members_mult_desc: "An increase or decrease to [concept_budget_minting] which is scaled by the number of [Concept('concept_power_bloc_member', 'Power Bloc Members')] which are not [Concept('concept_subject', '$concept_subjects$')]."
+    # country_minting_from_bloc_members_mult_desc: "An increase or decrease to [concept_budget_minting] which is scaled by the number of [Concept('concept_power_bloc_member', 'Power Bloc Members')] which are not [Concept('concept_subject', '$concept_subjects|q$')]."
     # building_training_rate_per_subject_mult: "[concept_training_rate] per [concept_subject]"
-    # building_training_rate_per_subject_mult_desc: "An increase or decrease to [concept_training_rate] which is scaled by the number of [Concept('concept_subject', '$concept_subjects$')]."
+    # building_training_rate_per_subject_mult_desc: "An increase or decrease to [concept_training_rate] which is scaled by the number of [Concept('concept_subject', '$concept_subjects|q$')]."
     # country_legitimacy_per_power_bloc_member_add: "@legitimacy_icon![Nbsp][concept_legitimacy] per independent [concept_power_bloc_member]"
-    # country_legitimacy_per_power_bloc_member_add_desc: "The amount of @legitimacy_icon![Nbsp][concept_legitimacy] which is scaled by the number of [Concept('concept_power_bloc_member', 'Power Bloc Members')] which are not [Concept('concept_subject', '$concept_subjects$')]."
+    # country_legitimacy_per_power_bloc_member_add_desc: "The amount of @legitimacy_icon![Nbsp][concept_legitimacy] which is scaled by the number of [Concept('concept_power_bloc_member', 'Power Bloc Members')] which are not [Concept('concept_subject', '$concept_subjects|q$')]."
     # country_influence_from_bloc_members_add: "@inf![Nbsp][concept_influence] per independent [concept_power_bloc_member]"
-    # country_influence_from_bloc_members_add_desc: "The amount of @inf![Nbsp][concept_influence] which is scaled by the number of [Concept('concept_power_bloc_member', 'Power Bloc Members')] which are not [Concept('concept_subject', '$concept_subjects$')]."
+    # country_influence_from_bloc_members_add_desc: "The amount of @inf![Nbsp][concept_influence] which is scaled by the number of [Concept('concept_power_bloc_member', 'Power Bloc Members')] which are not [Concept('concept_subject', '$concept_subjects|q$')]."
     power_bloc_free_mandates_from_reform: "Free Mandates"
     power_bloc_free_mandates_from_reform_desc: "Free mandates afforded after reforming a [concept_power_bloc]"
     # power_bloc_allow_foreign_investment_all_rank_bool: "[concept_foreign_investment_rights] among all [Concept('concept_power_bloc_member', 'Power Bloc Members')]"
@@ -238,7 +238,7 @@
     # country_interest_rate_from_bloc_members_mult_max: "Maximum loan [concept_budget_interest] rate from independent [Concept('concept_power_bloc_member', 'Power Bloc Members')]"
     # country_interest_rate_from_bloc_members_mult_max_desc: "An increase or decrease to the maximum effect of $country_interest_rate_from_bloc_members_mult$."
     # country_interest_rate_from_bloc_members_mult: "Loan [concept_budget_interest] rate per independent [concept_power_bloc_member]"
-    # country_interest_rate_from_bloc_members_mult_desc: "An increase or decrease to loan [concept_budget_interest] rate which is scaled by the number of [Concept('concept_power_bloc_member', 'Power Bloc Members')] which are not [Concept('concept_subject', '$concept_subjects$')]."
+    # country_interest_rate_from_bloc_members_mult_desc: "An increase or decrease to loan [concept_budget_interest] rate which is scaled by the number of [Concept('concept_power_bloc_member', 'Power Bloc Members')] which are not [Concept('concept_subject', '$concept_subjects|q$')]."
     # country_convoys_per_leader_subject_mult_max: "Maximum @convoys! [concept_convoys] from [concept_power_bloc_leader] subjects"
     # country_convoys_per_leader_subject_mult_max_desc: "An increase or decrease to the maximum effect of $country_convoys_per_leader_subject_mult$."
     # country_convoys_per_leader_subject_mult: "@convoys! [concept_convoys] per [concept_power_bloc_leader] subject"
@@ -265,12 +265,12 @@
     # force_privatization_action_notification_break_name: "[INITIATOR_COUNTRY.GetName] stopped forcing [Concept('concept_privatize', 'Privatization')]"
     # force_privatization_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] have stopped forcing [Concept('concept_privatize', 'Privatization')]."
     # country_trade_from_bloc_members_mult: "Trade Quantity per independent [concept_power_bloc_member]"
-    # country_trade_from_bloc_members_mult_desc: "An increase or decrease to #tooltippable;tooltip:[GetPlayer.GetTooltipTag],state_trade_quantity_mult_desc Trade Quantity#! which is scaled by the number of [Concept('concept_power_bloc_member', 'Power Bloc Members')] which are not [Concept('concept_subject', '$concept_subjects$')]."
+    # country_trade_from_bloc_members_mult_desc: "An increase or decrease to #tooltippable;tooltip:[GetPlayer.GetTooltipTag],state_trade_quantity_mult_desc Trade Quantity#! which is scaled by the number of [Concept('concept_power_bloc_member', 'Power Bloc Members')] which are not [Concept('concept_subject', '$concept_subjects|q$')]."
     # country_trade_from_bloc_members_mult_max: "Maximum loan Trade Quantity from independent [Concept('concept_power_bloc_member', 'Power Bloc Members')]"
     # country_trade_from_bloc_members_mult_max_desc: "An increase or decrease to the maximum effect of $country_trade_from_bloc_members_mult$."
 
     # country_bureaucracy_from_bloc_members_mult: "@bur![Nbsp][concept_bureaucracy] per independent [concept_power_bloc_member]"
-    # country_bureaucracy_from_bloc_members_mult_desc: "An increase or decrease to @bur![Nbsp][concept_bureaucracy] which is scaled by the number of [Concept('concept_power_bloc_member', 'Power Bloc Members')] which are not [Concept('concept_subject', '$concept_subjects$')]."
+    # country_bureaucracy_from_bloc_members_mult_desc: "An increase or decrease to @bur![Nbsp][concept_bureaucracy] which is scaled by the number of [Concept('concept_power_bloc_member', 'Power Bloc Members')] which are not [Concept('concept_subject', '$concept_subjects|q$')]."
     # kates_bureaucracy_per_member_modifier: "Member Council"
     # country_mapi_per_leader_subject_mult: "$state_market_access_price_impact$ per [concept_power_bloc_leader] subject"
     # country_mapi_per_leader_subject_mult_desc: "An increase or decrease to $state_market_access_price_impact$ which is scaled by the number of subjects of the [concept_power_bloc_leader]."
@@ -283,97 +283,97 @@
 
     # principle_group_deregulation: "Deregulation"
     # principle_group_deregulation_desc: "The [GetInterestGroupVariant('ig_industrialists',GetPlayer).GetName] coordinate their efforts to ensure [Concept('concept_privatize', 'Privatisation')] and [concept_foreign_investment_rights]."
-    
+
     # principle_group_unified_bond_market: "Unified Bond Market"
     # principle_group_unified_bond_market_desc: "Extensive treasury coordination allows for lower [Concept('concept_budget_interest', 'Interest Rates')] and encourages market flexibility."
-    
+
     # principle_group_collective_bargaining_power: "Collective Bargaining Power"
     # principle_group_collective_bargaining_power_desc: "The combined economic might of the [concept_power_bloc] negotiates favourable [Concept('concept_trade', 'Trade Agreements')] as a collective."
-    
+
     # principle_group_development_fund: "Development Fund"
     # principle_group_development_fund_desc: "The [concept_power_bloc_leader] sponsors [Concept('concept_construction', 'Construction Projects')] across the [Concept('concept_power_bloc_member', 'Power Bloc Members')]."
-    
+
     # principle_group_antitrust_commission: "Antitrust Commission"
     # principle_group_antitrust_commission_desc: "Legislation designed to break up monopolies curtails the power of the [GetInterestGroupVariant('ig_industrialists',GetPlayer).GetName] and encourages more competitive [Concept('concept_company', 'Enterprises')]."
-    
+
     # principle_group_currency_union: "Currency Union"
     # principle_group_currency_union_desc: "Adoption of the [Concept('concept_power_bloc_leader', 'Bloc Leader’s')] currency empowers their [Concept('concept_budget_minting', 'Central Bank')] at the cost of diminishing the available economic controls of the [Concept('concept_power_bloc_member', 'Power Bloc Members')]."
-    
+
     # principle_group_economic_imperialism: "Economic Imperialism"
     # principle_group_economic_imperialism_desc: "Extractive economic policies ensure the [Concept('concept_power_bloc_leader', 'Bloc Leader’s')] control over their [Concept('concept_subject', 'Subject’s')] economies."
-    
+
     # principle_group_leviathan: "Leviathan"
     # principle_group_leviathan_desc: "The [Concept('concept_power_bloc_leader', 'Bloc Leader’s')] influence over its [Concept('concept_power_bloc_member', 'Power Bloc Members')] is so pervasive as to erode their sovereignty over time."
-    
+
     # principle_group_imperial_prerogative: "Imperial Prerogative"
     # principle_group_imperial_prerogative_desc: "The right of the strong to rule over the weak is codified and enforced."
-    
+
     # principle_group_colonial_manpower: "Colonial Manpower"
     # principle_group_colonial_manpower_desc: "The [concept_power_bloc_leader] enjoys the ability to deploy soldiers hailing from a vast empire."
-    
+
     # principle_group_settlement_drive: "Settlement Drive"
     # principle_group_settlement_drive_desc: "[Concept('concept_colonial_growth', 'Colonisation')] efforts are encouraged and expanded under an international framework."
-    
+
     # principle_group_pax_imperia: "Pax Imperia"
     # principle_group_pax_imperia_desc: "The power of empire, when leveraged to enforce peace and cooperation, is a stabilising force on the world stage."
-    
+
     # principle_group_entrenched_elite: "Entrenched Elite"
     # principle_group_entrenched_elite_desc: "The power of the [GetInterestGroupVariant('ig_landowners',GetPlayer).GetName] is solidified and expanded in the interest of stability."
-    
+
     # principle_group_status_quo: "Status Quo"
     # principle_group_status_quo_desc: "The [Concept('concept_power_bloc_member', 'Power Bloc Members')] agree to coordinate efforts to stand against the dangerous radicalism of [Concept('concept_revolution', 'Revolutions')]."
-    
+
     # principle_group_economic_consensus: "Economic Consensus"
     # principle_group_economic_consensus_desc: "Cooperation of states is dependent not only on ideological principles, but also on a coordinated system of economic dependencies."
-    
+
     # principle_group_direct_oversight: "Direct Oversight"
     # principle_group_direct_oversight_desc: "The [Concept('concept_power_bloc_leader', 'Bloc Leader’s')] authority over matters of law is absolute."
-    
+
     # principle_group_international_criminal_court: "International Criminal Court"
     # principle_group_international_criminal_court_desc: "A central international court oversees matters of rights, liberties and legality, lending great legitimacy to the institution."
-    
+
     # principle_group_righteous_cause: "Righteous Cause"
     # principle_group_righteous_cause_desc: "The [concept_power_bloc] champions the cause of stability and ideological purity, a righteous cause for which to fight righteous, just wars."
-    
+
     # principle_group_conventions_of_war: "Conventions of War"
     # principle_group_conventions_of_war_desc: "International conventions on the humanitarian concerns inherent in war serve to limit civilian casualties."
-    
+
     # principle_group_logistics_network: "Logistics Network"
     # principle_group_logistics_network_desc: "A vast [Concept('concept_supply', 'Supply Network')] coordinated by the [Concept('concept_power_bloc_member', 'Power Bloc Members')] ensures logistical needs are met."
-    
+
     # principle_group_your_country_needs_you: "Your Country Needs You!"
     # principle_group_your_country_needs_you_desc: "Striking imagery impresses upon the populace of the [Concept('concept_power_bloc_member', 'Power Bloc Members')] the need to [Concept('concept_training_rate', 'Enlist')] and serve their countries."
-    
+
     # principle_group_chivalrous_pursuit: "Chivalrous Pursuit"
     # principle_group_chivalrous_pursuit_desc: "War is inherently a gentlemanly pursuit, and the [GetInterestGroupVariant('ig_armed_forces',GetPlayer).GetName] are the greatest gentlemen of all."
-    
+
     # principle_group_wonder_weapons: "Wonder Weapons"
     # principle_group_wonder_weapons_desc: "Wars are won in the laboratory, and the next generation of weapons must be conceived of through a coordinated research effort."
-    
+
     # principle_group_joint_training_exercises: "Joint Training Exercises"
     # principle_group_joint_training_exercises_desc: "International training exercises ensure the readiness of the [Concept('concept_power_bloc_member', 'Power Bloc Members’')] armies in times of war."
-    
+
     # principle_group_holy_wars: "Holy Wars"
     # principle_group_holy_wars_desc: "The [concept_power_bloc_leader], as a religious authority, declares war for the sake of converting heathens and infidels."
-    
+
     # principle_group_propaganda: "Propaganda"
     # principle_group_propaganda_desc: "The [Concept('concept_power_bloc_cohesion', 'Power Bloc’s Cohesion')] is bolstered by the coordinated portrayal of the supranational structure as inherently justified."
-    
+
     # principle_group_unity: "Unity"
     # principle_group_unity_desc: "The [Concept('concept_power_bloc_cohesion', 'Power Bloc’s Cohesion')] is bolstered by an effort to coordinate and compromise between the competing needs of its [Concept('concept_power_bloc_member', 'Members')]."
-    
+
     # principle_group_champion_the_true_faith: "Champion the True Faith"
     # principle_group_champion_the_true_faith_desc: "The world ought to be [GetPlayer.GetStateReligion.GetName], and the [GetInterestGroupVariant('ig_devout',GetPlayer).GetName] must be heard."
-    
+
     # principle_group_henotheism: "Henotheism"
     # principle_group_henotheism_desc: "Practicioners of other faiths are allowed a degree of freedom of faith."
-        
+
     # principle_group_organised_religion: "Organised Religion"
     # principle_group_organised_religion_desc: "The [concept_bureaucracy] of the [GetInterestGroupVariant('ig_devout',GetPlayer).GetName] is second to none in efficiency."
-    
+
     # principle_group_alms_for_the_poor: "Alms for the Poor"
     # principle_group_alms_for_the_poor_desc: "Charitable donations ease the suffering of the needy, and are the duty of every faithful citizen."
-      
+
     # principle_group_ummah: "Ummah"
     # principle_group_ummah_desc: "Through alignment with the global religious community, all [GetPlayer.GetStateReligion.GetName] nations will flourish."
 
@@ -406,126 +406,126 @@
     # principle_deregulation_2_desc: "$principle_group_deregulation_desc$"
     # principle_deregulation_3_desc: "$principle_group_deregulation_desc$"
 
-    # principle_unified_bond_market_1_desc: "$principle_group_unified_bond_market_desc$" 
+    # principle_unified_bond_market_1_desc: "$principle_group_unified_bond_market_desc$"
     # principle_unified_bond_market_2_desc: "$principle_group_unified_bond_market_desc$"
     # principle_unified_bond_market_3_desc: "$principle_group_unified_bond_market_desc$"
 
-    # principle_collective_bargaining_power_1_desc: "$principle_group_collective_bargaining_power_desc$" 
+    # principle_collective_bargaining_power_1_desc: "$principle_group_collective_bargaining_power_desc$"
     # principle_collective_bargaining_power_2_desc: "$principle_group_collective_bargaining_power_desc$"
     # principle_collective_bargaining_power_3_desc: "$principle_group_collective_bargaining_power_desc$"
 
-    # principle_development_fund_1_desc: "$principle_group_development_fund_desc$" 
+    # principle_development_fund_1_desc: "$principle_group_development_fund_desc$"
     # principle_development_fund_2_desc: "$principle_group_development_fund_desc$"
     # principle_development_fund_3_desc: "$principle_group_development_fund_desc$"
 
-    # principle_antitrust_commission_1_desc: "$principle_group_antitrust_commission_desc$" 
+    # principle_antitrust_commission_1_desc: "$principle_group_antitrust_commission_desc$"
     # principle_antitrust_commission_2_desc: "$principle_group_antitrust_commission_desc$"
     # principle_antitrust_commission_3_desc: "$principle_group_antitrust_commission_desc$"
 
-    # principle_currency_union_1_desc: "$principle_group_currency_union_desc$" 
+    # principle_currency_union_1_desc: "$principle_group_currency_union_desc$"
     # principle_currency_union_2_desc: "$principle_group_currency_union_desc$"
     # principle_currency_union_3_desc: "$principle_group_currency_union_desc$"
 
-    # principle_economic_imperialism_1_desc: "$principle_group_economic_imperialism_desc$" 
+    # principle_economic_imperialism_1_desc: "$principle_group_economic_imperialism_desc$"
     # principle_economic_imperialism_2_desc: "$principle_group_economic_imperialism_desc$"
     # principle_economic_imperialism_3_desc: "$principle_group_economic_imperialism_desc$"
 
-    # principle_leviathan_1_desc: "$principle_group_leviathan_desc$" 
+    # principle_leviathan_1_desc: "$principle_group_leviathan_desc$"
     # principle_leviathan_2_desc: "$principle_group_leviathan_desc$"
     # principle_leviathan_3_desc: "$principle_group_leviathan_desc$"
 
-    # principle_imperial_prerogative_1_desc: "$principle_group_imperial_prerogative_desc$" 
+    # principle_imperial_prerogative_1_desc: "$principle_group_imperial_prerogative_desc$"
     # principle_imperial_prerogative_2_desc: "$principle_group_imperial_prerogative_desc$"
     # principle_imperial_prerogative_3_desc: "$principle_group_imperial_prerogative_desc$"
 
-    # principle_colonial_manpower_1_desc: "$principle_group_colonial_manpower_desc$" 
+    # principle_colonial_manpower_1_desc: "$principle_group_colonial_manpower_desc$"
     # principle_colonial_manpower_2_desc: "$principle_group_colonial_manpower_desc$"
     # principle_colonial_manpower_3_desc: "$principle_group_colonial_manpower_desc$"
 
-    # principle_settlement_drive_1_desc: "$principle_group_settlement_drive_desc$" 
+    # principle_settlement_drive_1_desc: "$principle_group_settlement_drive_desc$"
     # principle_settlement_drive_2_desc: "$principle_group_settlement_drive_desc$"
     # principle_settlement_drive_3_desc: "$principle_group_settlement_drive_desc$"
 
-    # principle_pax_imperia_1_desc: "$principle_group_pax_imperia_desc$" 
+    # principle_pax_imperia_1_desc: "$principle_group_pax_imperia_desc$"
     # principle_pax_imperia_2_desc: "$principle_group_pax_imperia_desc$"
     # principle_pax_imperia_3_desc: "$principle_group_pax_imperia_desc$"
 
-    # principle_entrenched_elite_1_desc: "$principle_group_entrenched_elite_desc$" 
+    # principle_entrenched_elite_1_desc: "$principle_group_entrenched_elite_desc$"
     # principle_entrenched_elite_2_desc: "$principle_group_entrenched_elite_desc$"
     # principle_entrenched_elite_3_desc: "$principle_group_entrenched_elite_desc$"
 
-    # principle_status_quo_1_desc: "$principle_group_status_quo_desc$" 
+    # principle_status_quo_1_desc: "$principle_group_status_quo_desc$"
     # principle_status_quo_2_desc: "$principle_group_status_quo_desc$"
     # principle_status_quo_3_desc: "$principle_group_status_quo_desc$"
 
-    # principle_economic_consensus_1_desc: "$principle_group_economic_consensus_desc$" 
+    # principle_economic_consensus_1_desc: "$principle_group_economic_consensus_desc$"
     # principle_economic_consensus_2_desc: "$principle_group_economic_consensus_desc$"
     # principle_economic_consensus_3_desc: "$principle_group_economic_consensus_desc$"
 
-    # principle_direct_oversight_1_desc: "$principle_group_direct_oversight_desc$" 
+    # principle_direct_oversight_1_desc: "$principle_group_direct_oversight_desc$"
     # principle_direct_oversight_2_desc: "$principle_group_direct_oversight_desc$"
     # principle_direct_oversight_3_desc: "$principle_group_direct_oversight_desc$"
 
-    # principle_international_criminal_court_1_desc: "$principle_group_international_criminal_court_desc$" 
+    # principle_international_criminal_court_1_desc: "$principle_group_international_criminal_court_desc$"
     # principle_international_criminal_court_2_desc: "$principle_group_international_criminal_court_desc$"
     # principle_international_criminal_court_3_desc: "$principle_group_international_criminal_court_desc$"
 
-    # principle_righteous_cause_1_desc: "$principle_group_righteous_cause_desc$" 
+    # principle_righteous_cause_1_desc: "$principle_group_righteous_cause_desc$"
     # principle_righteous_cause_2_desc: "$principle_group_righteous_cause_desc$"
     # principle_righteous_cause_3_desc: "$principle_group_righteous_cause_desc$"
 
-    # principle_conventions_of_war_1_desc: "$principle_group_conventions_of_war_desc$" 
+    # principle_conventions_of_war_1_desc: "$principle_group_conventions_of_war_desc$"
     # principle_conventions_of_war_2_desc: "$principle_group_conventions_of_war_desc$"
     # principle_conventions_of_war_3_desc: "$principle_group_conventions_of_war_desc$"
 
-    # principle_logistics_network_1_desc: "$principle_group_logistics_network_desc$" 
+    # principle_logistics_network_1_desc: "$principle_group_logistics_network_desc$"
     # principle_logistics_network_2_desc: "$principle_group_logistics_network_desc$"
     # principle_logistics_network_3_desc: "$principle_group_logistics_network_desc$"
 
-    # principle_your_country_needs_you_1_desc: "$principle_group_your_country_needs_you_desc$" 
+    # principle_your_country_needs_you_1_desc: "$principle_group_your_country_needs_you_desc$"
     # principle_your_country_needs_you_2_desc: "$principle_group_your_country_needs_you_desc$"
     # principle_your_country_needs_you_3_desc: "$principle_group_your_country_needs_you_desc$"
 
-    # principle_chivalrous_pursuit_1_desc: "$principle_group_chivalrous_pursuit_desc$" 
+    # principle_chivalrous_pursuit_1_desc: "$principle_group_chivalrous_pursuit_desc$"
     # principle_chivalrous_pursuit_2_desc: "$principle_group_chivalrous_pursuit_desc$"
     # principle_chivalrous_pursuit_3_desc: "$principle_group_chivalrous_pursuit_desc$"
 
-    # principle_wonder_weapons_1_desc: "$principle_group_wonder_weapons_desc$" 
+    # principle_wonder_weapons_1_desc: "$principle_group_wonder_weapons_desc$"
     # principle_wonder_weapons_2_desc: "$principle_group_wonder_weapons_desc$"
     # principle_wonder_weapons_3_desc: "$principle_group_wonder_weapons_desc$"
 
-    # principle_joint_training_exercises_1_desc: "$principle_group_joint_training_exercises_desc$" 
+    # principle_joint_training_exercises_1_desc: "$principle_group_joint_training_exercises_desc$"
     # principle_joint_training_exercises_2_desc: "$principle_group_joint_training_exercises_desc$"
     # principle_joint_training_exercises_3_desc: "$principle_group_joint_training_exercises_desc$"
 
-    # principle_holy_wars_1_desc: "$principle_group_holy_wars_desc$" 
+    # principle_holy_wars_1_desc: "$principle_group_holy_wars_desc$"
     # principle_holy_wars_2_desc: "$principle_group_holy_wars_desc$"
     # principle_holy_wars_3_desc: "$principle_group_holy_wars_desc$"
 
-    # principle_champion_the_true_faith_1_desc: "$principle_group_champion_the_true_faith_desc$" 
+    # principle_champion_the_true_faith_1_desc: "$principle_group_champion_the_true_faith_desc$"
     # principle_champion_the_true_faith_2_desc: "$principle_group_champion_the_true_faith_desc$"
     # principle_champion_the_true_faith_3_desc: "$principle_group_champion_the_true_faith_desc$"
 
-    # principle_henotheism_1_desc: "$principle_group_henotheism_desc$" 
+    # principle_henotheism_1_desc: "$principle_group_henotheism_desc$"
     # principle_henotheism_2_desc: "$principle_group_henotheism_desc$"
     # principle_henotheism_3_desc: "$principle_group_henotheism_desc$"
 
-    # principle_organised_religion_1_desc: "$principle_group_organised_religion_desc$" 
+    # principle_organised_religion_1_desc: "$principle_group_organised_religion_desc$"
     # principle_organised_religion_2_desc: "$principle_group_organised_religion_desc$"
     # principle_organised_religion_3_desc: "$principle_group_organised_religion_desc$"
 
-    # principle_alms_for_the_poor_1_desc: "$principle_group_alms_for_the_poor_desc$" 
+    # principle_alms_for_the_poor_1_desc: "$principle_group_alms_for_the_poor_desc$"
     # principle_alms_for_the_poor_2_desc: "$principle_group_alms_for_the_poor_desc$"
     # principle_alms_for_the_poor_3_desc: "$principle_group_alms_for_the_poor_desc$"
 
-    # principle_ummah_1_desc: "$principle_group_ummah_desc$" 
+    # principle_ummah_1_desc: "$principle_group_ummah_desc$"
     # principle_ummah_2_desc: "$principle_group_ummah_desc$"
     # principle_ummah_3_desc: "$principle_group_ummah_desc$"
 
-    # principle_propaganda_1_desc: "$principle_group_propaganda_desc$" 
+    # principle_propaganda_1_desc: "$principle_group_propaganda_desc$"
     # principle_propaganda_2_desc: "$principle_group_propaganda_desc$"
     # principle_propaganda_3_desc: "$principle_group_propaganda_desc$"
 
-    # principle_unity_1_desc: "$principle_group_unity_desc$" 
+    # principle_unity_1_desc: "$principle_group_unity_desc$"
     # principle_unity_2_desc: "$principle_group_unity_desc$"
     # principle_unity_3_desc: "$principle_group_unity_desc$"

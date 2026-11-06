@@ -1,4 +1,6 @@
 ﻿REPLACE_OR_CREATE:kmpmp_je_baby_boom = {
+    activation_description = { always = yes }
+
     # Sweden, Portugal, Netherlands, Bolivia, Brazil, Mexico add babyboom JE
     # req: has invented pharmaceuticals, has SOL of 10 avg on nation
     # grants: 10% birthrate for 10 years
@@ -29,23 +31,28 @@
         has_technology_researched = pharmaceuticals
     }
 
-    complete = {
-        hidden_trigger = { # workaround to fix je not triggering on_complete if it's already completable when activated
-            scope:journal_entry = {
-                journal_entry_age > 0
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            hidden_trigger = { # workaround to fix je not triggering on_complete if it's already completable when activated
+                scope:journal_entry = {
+                    journal_entry_age > 0
+                }
             }
+
+            has_technology_researched = pharmaceuticals
+            average_sol >= 10
         }
-        
-        has_technology_researched = pharmaceuticals
-        average_sol >= 10
-    }
+        effect = {
+            set_variable = kmpmp_je_baby_boom_completed
 
-    on_complete = {
-        set_variable = kmpmp_je_baby_boom_completed
-
-        add_modifier = {
-            name = kmpmp_baby_boom_modifier
-            years = 5 #10
+            add_modifier = {
+                name = kmpmp_baby_boom_modifier
+                years = 5 #10
+            }
         }
     }
 

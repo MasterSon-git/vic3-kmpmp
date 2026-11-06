@@ -12,6 +12,8 @@ INJECT:psychiatry = {
 	modifier = {
 		# kmpmp
         country_infamy_decay_mult = 0.05
+
+		country_infamy_generation_mult = -0.05
 	}
 }
 
@@ -26,6 +28,8 @@ INJECT:nationalism = {
 	modifier = {
 		# kmpmp
         country_infamy_generation_mult = -0.03
+
+		country_homeland_infamy_reduction_bool = yes
 	}
 }
 
@@ -72,6 +76,8 @@ INJECT:pan-nationalism = {
 	modifier = {
 		# kmpmp
         country_infamy_generation_mult = -0.05
+
+		country_shared_language_infamy_reduction_bool = yes
 	}
 }
 
@@ -87,6 +93,8 @@ INJECT:philosophical_pragmatism = {
 	modifier = {
 		# kmpmp
         country_infamy_decay_mult = 0.05
+
+		country_infamy_generation_mult = -0.05
 	}
 }
 
@@ -118,6 +126,8 @@ INJECT:psychoanalysis = {
 		# kmpmp
         country_infamy_decay_mult = 0.05
 		country_radicals_from_conquest_mult = -0.05
+
+		country_infamy_generation_mult = -0.05
 	}
 }
 
@@ -151,6 +161,8 @@ INJECT:behaviorism = {
 	modifier = {
 		# kmpmp
         country_infamy_decay_mult = 0.05
+
+		country_infamy_generation_mult = -0.05
 	}
 }
 

@@ -11,30 +11,22 @@ NEconomy = {
 	CREDIT_RATIO_MAX_OVERRUN = 0.1 #0.01 			# Countries can accumulate this percentage more of a debt "hole" than their credit limit when in default
 }
 
-NDiplomacy = {
-	WAR_GOAL_INFAMY_CONQUER_STATE = 4.0 #5.0
-	WAR_GOAL_INFAMY_FORCE_NATIONALIZATION = 0.15 #5.0
-
-	# kmpmp TEST
-	# DEFAULT_TRUCE_MONTHS = 2
-}
-
-NCharacter = {
+NCharacters = {
 	# kmpmp - lower min age of generals
 	AGE_GENERATION_STARTVAL = 11 #20
 	RECRUIT_COMMANDER_NUM_OPTIONS = 5 #3
-	RECRUIT_COMMANDER_REMOVE_AGE = 50 #55			# removed from the recruit pool when they reach 55 years
+	RECRUIT_COMMANDER_REMOVE_AGE = 50 #55			# Remove commanders from the recruitment pool at age 50
 
 	# kmpmp - try to reroll chars after months
 	VOIDED_CHARACTER_DEFAULT_DURATION = 6 #12 # Default months a character will be in the void before being deleted
+	RECRUIT_COMMANDER_POOL_SIZE = 5 #3
 }
 
 NWar = {
 	DEVASTATION_MAX = 100.0
-	DEVASTATION_INCREASE_RATE = 0.05 #0.1 Per day, scales with level of occupation
 	DEVASTATION_DECAY_RATE = -0.025 # Per day, when there are no occupations
 	DEVASTATION_FROM_BATTLES = 0.1 # For each battle
-	WAR_EXHAUSTION_KIA_FACTOR =  1.65 #kmpmp #4.0 # Scaled by casualties compared to total manpower
+	WAR_SUPPORT_CHANGE_KIA_FACTOR = -0.825 # KMPMP: vanilla 1.15 -2.0 * (old KMPMP 1.65 / old vanilla 4.0)
 
 	NAVAL_INVASION_PREPARATION_DURATION_DAYS = 30 #14 						# How many days should pass since the first army arrived to the naval invasion front to start advancing it without the sea node being blocked by enemy fleet
 	LAND_INVASION_PREPARATION_DURATION_DAYS = 30 #14 						# How many days should pass since the first army arrived to the invasion front to start advancing it
@@ -47,7 +39,6 @@ NWar = {
 NMilitary = {
 	MANPOWER_LOST_DUE_TO_ATTRITION_PER_WEEK_MIN = 0.024 #0.04 	# The minimum percentage of manpower a unit can lose each week due to attrition
 	MANPOWER_LOST_DUE_TO_ATTRITION_PER_WEEK_MAX = 0.072 #0.12 	# The maximum percentage of manpower a unit can lose each week due to attrition
-	CONVOY_RAIDING_COOLDOWN_DAYS_MIN = 20 #10
 	CONVOY_RAIDING_DEFENSE_MULT = 0.25 #0.15
 	MILITARY_FORMATION_WEEKLY_MAX_UNIT_UPGRADES_FLEET = 0.025 #0.05
 }
@@ -65,9 +56,4 @@ NPowerBlocs = {
 NPops = {
 	ASSIMILATION_RATE = 0.004 #0.002					# Percentage of pops who will Assimilate into a different Culture each month, if eligible
 	CONVERSION_RATE = 0.004 #0.002						# Percentage of pops who will Convert into a different Religion each month, if eligible
-}
-
-NCharacters = {
-    RECRUIT_COMMANDER_NUM_OPTIONS = 5    # default: 3
-    RECRUIT_COMMANDER_POOL_SIZE = 5    # default: 3
 }

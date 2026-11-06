@@ -1,4 +1,6 @@
 ﻿REPLACE_OR_CREATE:kmpmp_china_buff_je = {
+    activation_description = { always = yes }
+
     icon = "gfx/interface/icons/event_icons/event_advantage.dds"
     group = je_group_historical_content
 
@@ -38,20 +40,29 @@
         }
     }
 
-    complete = {
-        always = no
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            always = no
+        }
     }
 
-    invalid = {
-        global_var:kmpmp_china_is_player ?= yes
-    }
-
-    on_invalid = {
-        if = {
-            limit = {
-                has_modifier = kmpmp_china_buff_modifier
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            global_var:kmpmp_china_is_player ?= yes
+        }
+        effect = {
+            if = {
+                limit = {
+                    has_modifier = kmpmp_china_buff_modifier
+                }
+                remove_modifier = kmpmp_china_buff_modifier
             }
-            remove_modifier = kmpmp_china_buff_modifier
         }
     }
 

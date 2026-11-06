@@ -10,8 +10,8 @@ kmpmp_player_protectorate_own_market = {
     effect = {
         if = {
             limit = {
-                market.owner != ROOT
                 kmpmp_player_protectorate_is_own_market_forced = yes
+                kmpmp_player_protectorate_has_foreign_market = yes
             }
 
             every_scope_diplomatic_pact = {
@@ -43,7 +43,8 @@ kmpmp_player_protectorate_own_market = {
 # Root = Diplomatic Play
 on_diplo_play_war_start = {
 	on_actions = {
-        # disabled since it's not working
+        # Disabled: the existing subject-demobilization flow is not working.
+        # Re-enable only after lifecycle and mobilization-block cleanup tests (#646).
 		# kmpmp_add_je_subject_demobilization
 	}
 }

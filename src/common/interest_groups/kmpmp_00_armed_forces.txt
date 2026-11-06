@@ -7,7 +7,7 @@
 	ideologies = {
 		ideology_jingoist
 		ideology_loyalist
-		ideology_patriotic
+		ideology_militarist
 	}
 
 	character_ideologies = {
@@ -145,7 +145,7 @@
 			}
 		}
 		# Samurai
-		else_if = {
+		else_if = { # Samurai
 			limit = {
 				country_has_primary_culture = cu:japanese
 				NOT = { has_global_variable = fall_of_the_samurai_global_var }
@@ -155,8 +155,7 @@
 				set_interest_group_name = ig_samurai
 			}
 		}
-		# India
-		else_if = {
+		else_if = { # British India
 			limit = {
 				c:BIC ?= this
 			}
@@ -164,8 +163,7 @@
 				set_interest_group_name = ig_presidency_armies
 			}
 		}
-		# Sikh Empire
-		else_if = {
+		else_if = { # Sikh Empire
 			limit = {
 				c:PAN ?= this
 			}
@@ -173,6 +171,14 @@
 				set_interest_group_name = ig_khalsaji
 				remove_ideology = ideology_jingoist
 				add_ideology = ideology_sikh_militancy
+			}
+		}
+		else_if = {
+			limit = {
+				c:RUS ?= this
+			}
+			ig:ig_armed_forces ?= {
+				add_ideology = ideology_tsarist
 			}
 		}
 	}
@@ -261,6 +267,7 @@
 							OR = {
 								has_law_or_variant = law_type:law_colonial_resettlement
 								has_law_or_variant = law_type:law_frontier_colonization
+								has_law_or_variant = law_type:law_internal_colonization
 							}
 						}
 						state = {
@@ -373,6 +380,14 @@
 					}
 					add = 50
 				}
+				if = {
+					limit = {
+						owner = {
+							has_law = law_type:law_military_bureaucrats
+						}
+					}
+					add = 50
+				}
 			}
 		}
 
@@ -429,16 +444,15 @@
 			}
 		}
 
-		add = {
-			desc = "POP_MILITARY_BUREAUCRACY"
-			if = {
-				limit = {
-					is_pop_type = bureaucrats
-					owner = {
-						c:ALK ?= this
-						has_government_type = gov_chartered_company
-					}
+		if = {
+			limit = {
+				is_pop_type = bureaucrats
+				owner = {
+					has_law = law_type:law_military_bureaucrats
 				}
+			}
+			add = {
+				desc = "POP_MILITARY_BUREAUCRACY"
 				value = 100
 			}
 		}

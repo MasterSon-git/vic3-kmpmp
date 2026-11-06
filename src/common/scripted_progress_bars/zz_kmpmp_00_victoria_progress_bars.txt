@@ -7,7 +7,7 @@
 	default = yes
 
 	monthly_progress = {
-		if = {
+		progress_condition = {
 			limit = {
 				# Your absolute GDP is relatively high
 				gdp_ranking <= 10 # Lower = better
@@ -17,7 +17,7 @@
 				value = 1
 			}
 		}	
-		if = {
+		progress_condition = {
 			limit = {
 				# Your GDP per Capita is relatively high
 				# gdp_per_capita_ranking <= 20 # Lower = better
@@ -28,7 +28,7 @@
 				value = 1
 			}
 		}
-		if = {
+		progress_condition = {
 			limit = {
 				country_has_voting_franchise = yes
 			}
@@ -37,7 +37,7 @@
 				value = 1
 			}
 		}
-		if = {
+		progress_condition = {
 			limit = {
 				# Literacy rating is high-isch
 				literacy_rate >= 0.4
@@ -47,7 +47,7 @@
 				value = 1
 			}
 		}
-		if = {
+		progress_condition = {
 			limit = {
 				# Your Standard of Living is relatively high
 				# sol_ranking <= 20
@@ -58,7 +58,7 @@
 				value = 1
 			}
 		}
-		if = {
+		progress_condition = {
 			limit = {
 				any_scope_treaty = {
 					any_scope_article = {
@@ -82,7 +82,7 @@
 				}
 			}
 		}
-		if = {
+		progress_condition = {
 			limit = {
 				# Slavery is legal
 				NOT = {
@@ -94,7 +94,7 @@
 				value = 1
 			}
 		}
-		if = {
+		progress_condition = {
 			limit = {
 				# Isolationist
 				has_law_or_variant = law_type:law_isolationism
@@ -104,7 +104,7 @@
 				value = 1
 			}
 		}		
-		if = {
+		progress_condition = {
 			limit = {
 				# Serfdom is legal
 				has_law_or_variant = law_type:law_serfdom
@@ -114,7 +114,7 @@
 				value = 1
 			}
 		}
-		if = {
+		progress_condition = {
 			limit = {
 				# Traditional economic system
 				has_law_or_variant = law_type:law_traditionalism
@@ -124,7 +124,7 @@
 				value = 1
 			}
 		}
-		if = {
+		progress_condition = {
 			limit = {
 				# 'Draconic' law
 				has_law_or_variant = law_type:law_outlawed_dissent
@@ -134,7 +134,7 @@
 				value = 1
 			}
 		}
-		if = {
+		progress_condition = {
 			limit = {
 				# Literacy rating is low
 				literacy_rate < 0.2
@@ -144,7 +144,7 @@
 				value = 1
 			}
 		}
-		if = {
+		progress_condition = {
 			limit = {
 				# Absolute GDP ranking is low
 				# gdp_ranking > 30
@@ -157,7 +157,7 @@
 			}
 		}
 		# kmpmp removed in vanilla since 1.9.6 - but we like this
-		if = {
+		progress_condition = {
 			limit = {
 				# Your Standard of Living is relatively low
 				# sol_ranking >= 50

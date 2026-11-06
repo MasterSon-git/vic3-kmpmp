@@ -1,0 +1,5 @@
+﻿# Preserve KMPMP's restriction on farming recognition through war goals.
+# Narrative and diplomatic effects run through vanilla's on_wargoal_enforced.
+# The occupation-timer hook only posts its native notification.
+REPLACE:on_wargoal_enforced_earn_recognition_defeat_effect = { }
+REPLACE:on_wargoal_enforced_earn_recognition_victory_effect = { }

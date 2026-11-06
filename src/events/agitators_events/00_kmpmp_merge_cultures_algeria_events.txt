@@ -46,13 +46,20 @@ algeria_events.1 = {
 				character_is_valid_for_events = yes
 			}
 			save_scope_as = algerian_parade_general_scope
+			set_temporary_event_immortality = { DURATION = 3 }
 		}
 	}
 
 	option = { # Focus on partying with the lads
 		name = algeria_events.1.a
 		ai_chance = {
-			base = 0
+			base = 1
+			modifier = {
+				trigger = {
+					divided_monarchists_ai_backs_bonapartist = yes
+				}
+				add = 10
+			}
 		}
 		if = {
 			limit = {
@@ -94,6 +101,12 @@ algeria_events.1 = {
 		default_option = yes
 		ai_chance = {
 			base = 1
+			modifier = {
+				trigger = {
+					divided_monarchists_ai_backs_legitimist = yes
+				}
+				add = 10
+			}
 		}
 		if = {
 			limit = {
@@ -146,7 +159,13 @@ algeria_events.1 = {
 	option = {  # Focus on appeasement
 		name = algeria_events.1.c
 		ai_chance = {
-			base = 0
+			base = 1
+			modifier = {
+				trigger = {
+					divided_monarchists_ai_backs_orleanist = yes
+				}
+				add = 10
+			}
 		}
 		if = {
 			limit = {
@@ -208,6 +227,11 @@ algeria_events.1 = {
 			add_claim = c:FRA
 		}
 	}
+
+	after = {
+		revoke_temporary_event_immortality = { CHARACTER = scope:algerian_parade_general_scope }
+		je_conquest_of_algeria_cleanup = yes
+	}
 }
 
 # Crémieux Decree
@@ -258,7 +282,7 @@ algeria_events.2 = {
 					has_ideology = ideology:ideology_republican_leader
 					has_ideology = ideology:ideology_reformer
 					has_ideology = ideology:ideology_radical
-					has_ideology = ideology:ideology_social_democrat
+					has_ideology = ideology:ideology_state_socialist
 					has_ideology = ideology:ideology_market_liberal
 					has_ideology = ideology:ideology_humanitarian
 					has_ideology = ideology:ideology_humanitarian_royalist
@@ -308,7 +332,7 @@ algeria_events.2 = {
 						has_ideology = ideology:ideology_republican_leader
 						has_ideology = ideology:ideology_reformer
 						has_ideology = ideology:ideology_radical
-						has_ideology = ideology:ideology_social_democrat
+						has_ideology = ideology:ideology_state_socialist
 						has_ideology = ideology:ideology_market_liberal
 						has_ideology = ideology:ideology_humanitarian
 						has_ideology = ideology:ideology_humanitarian_royalist
@@ -318,6 +342,7 @@ algeria_events.2 = {
 			}
 			leader = {
 				save_scope_as = cremieux_decree_leader_scope
+				set_temporary_event_immortality = { DURATION = 3 }
 			}
 			save_scope_as = cremieux_decree_ig_scope
 		}
@@ -418,6 +443,10 @@ algeria_events.2 = {
 			# }
 		}
 	}
+
+	after = {
+		revoke_temporary_event_immortality = { CHARACTER = scope:cremieux_decree_leader_scope }
+	}
 }
 
 # Algerian Reunification Event
@@ -430,7 +459,7 @@ algeria_events.8 = {
 
 	duration = 3
 
-	dlc = dlc004
+
 
 	event_image = {
 		video = "africa_city_center"
@@ -646,5 +675,9 @@ algeria_events.8 = {
 		s:STATE_SAHARA = {
 			add_claim = c:ALD
 		}
+	}
+
+	after = {
+		je_reconquest_of_algeria_cleanup = yes
 	}
 }

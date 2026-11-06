@@ -1,4 +1,6 @@
 ﻿REPLACE_OR_CREATE:je_united_scandinavia = {
+    activation_description = { always = yes }
+
     icon = "gfx/interface/icons/event_icons/event_map.dds"
     group = je_group_historical_content
 
@@ -19,37 +21,49 @@
         }
     }
 
-    complete = {
-        kmpmp_owns_all_sca_states = yes
-    }
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            kmpmp_owns_all_sca_states = yes
+        }
+        effect = {
+            set_global_variable = je_united_scandinavia_completed
 
-    on_complete = {
-        set_global_variable = je_united_scandinavia_completed
-
-        if = {
-            limit = {
-                NOT = {
-                    has_modifier = kmpmp_greater_scandinavia
+            if = {
+                limit = {
+                    NOT = {
+                        has_modifier = kmpmp_greater_scandinavia
+                    }
+                }
+                add_modifier = {
+                    name = kmpmp_greater_scandinavia
                 }
             }
-            add_modifier = {
-                name = kmpmp_greater_scandinavia
+        }
+    }
+
+    outcome = {
+        flags = { hidden invalid_outcome }
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            custom_tooltip = {
+                text = je_united_scandinavia_invalid_tt
+                NOT = {
+                    c:SCA ?= ROOT
+                }
+                has_global_variable = has_formed_sca
             }
         }
     }
 
-    invalid = {
-        custom_tooltip = {
-            text = je_united_scandinavia_invalid_tt
-            NOT = {
-                c:SCA ?= ROOT
-            }
-            has_global_variable = has_formed_sca
-        }
-    }
 }
 
 REPLACE_OR_CREATE:je_baltic_empire = {
+    activation_description = { always = yes }
+
     icon = "gfx/interface/icons/event_icons/event_map.dds"
     group = je_group_historical_content
 
@@ -64,62 +78,76 @@ REPLACE_OR_CREATE:je_baltic_empire = {
         }
     }
 
-    complete = {
-        owns_entire_state_region = STATE_INGRIA
-        owns_entire_state_region = STATE_KOLA
-        owns_entire_state_region = STATE_POMERANIA
-        owns_entire_state_region = STATE_KAUNAS
-        owns_entire_state_region = STATE_RIGA # South Livonia
-        owns_entire_state_region = STATE_TARTU # North Livonia
-        owns_entire_state_region = STATE_TALINN # Revel
-        owns_entire_state_region = STATE_WEST_PRUSSIA
-    }
-
-    on_complete = {
-        if = {
-            limit = {
-                NOT = {
-                    has_modifier = kmpmp_baltic_empire
-                }
-            }
-            add_modifier = {
-                name = kmpmp_baltic_empire
-            }
-        }
-
-        add_journal_entry = {
-            type = je_baltic_empire_maintain
-        }
-    }
-}
-
-REPLACE_OR_CREATE:je_baltic_empire_maintain = {
-    icon = "gfx/interface/icons/event_icons/event_map.dds"
-    group = je_group_historical_content
-
-    fail = {
-        NOT = {
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
             owns_entire_state_region = STATE_INGRIA
             owns_entire_state_region = STATE_KOLA
             owns_entire_state_region = STATE_POMERANIA
-            owns_entire_state_region = STATE_KAUNAS
+            owns_entire_state_region = STATE_LITHUANIA
             owns_entire_state_region = STATE_RIGA # South Livonia
             owns_entire_state_region = STATE_TARTU # North Livonia
             owns_entire_state_region = STATE_TALINN # Revel
             owns_entire_state_region = STATE_WEST_PRUSSIA
         }
-    }
-
-    on_fail = {
-        if = {
-            limit = {
-                has_modifier = kmpmp_baltic_empire
+        effect = {
+            if = {
+                limit = {
+                    NOT = {
+                        has_modifier = kmpmp_baltic_empire
+                    }
+                }
+                add_modifier = {
+                    name = kmpmp_baltic_empire
+                }
             }
-            remove_modifier = kmpmp_baltic_empire
-        }
 
-        add_journal_entry = {
-            type = je_baltic_empire
+            add_journal_entry = {
+                type = je_baltic_empire_maintain
+            }
         }
     }
+
+}
+
+REPLACE_OR_CREATE:je_baltic_empire_maintain = {
+    activation_description = { always = yes }
+
+    icon = "gfx/interface/icons/event_icons/event_map.dds"
+    group = je_group_historical_content
+
+    outcome = {
+        header = je_standard_failure_header
+        effect_header = je_standard_on_failure_header
+        color = "blue_negative"
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            NOT = {
+                owns_entire_state_region = STATE_INGRIA
+                owns_entire_state_region = STATE_KOLA
+                owns_entire_state_region = STATE_POMERANIA
+                owns_entire_state_region = STATE_LITHUANIA
+                owns_entire_state_region = STATE_RIGA # South Livonia
+                owns_entire_state_region = STATE_TARTU # North Livonia
+                owns_entire_state_region = STATE_TALINN # Revel
+                owns_entire_state_region = STATE_WEST_PRUSSIA
+            }
+        }
+        effect = {
+            if = {
+                limit = {
+                    has_modifier = kmpmp_baltic_empire
+                }
+                remove_modifier = kmpmp_baltic_empire
+            }
+
+            add_journal_entry = {
+                type = je_baltic_empire
+            }
+        }
+    }
+
 }

@@ -1,9 +1,15 @@
-﻿kmpmp_sv_infamy_war_goal_annex_country = {
+﻿# 1.15 removed these defines. Retain the 1.13.11 values for KMPMP's
+# existing custom diplomatic-action calculation; no infamy redesign here.
+kmpmp_legacy_annex_country_infamy = 5.0
+kmpmp_legacy_reduce_autonomy_infamy = 2.0
+kmpmp_legacy_infamy_population_cap = 50
+
+kmpmp_sv_infamy_war_goal_annex_country = {
     if = {
         limit = {
             save_temporary_scope_value_as = {
                 name = BASE_VALUE
-                value = define:NDiplomacy|WAR_GOAL_INFAMY_ANNEX_COUNTRY
+                value = kmpmp_legacy_annex_country_infamy
             }
         }
     }
@@ -15,7 +21,7 @@ kmpmp_sv_infamy_war_goal_reduce_autonomy = {
         limit = {
             save_temporary_scope_value_as = {
                 name = BASE_VALUE
-                value = define:NDiplomacy|WAR_GOAL_INFAMY_REDUCE_AUTONOMY
+                value = kmpmp_legacy_reduce_autonomy_infamy
             }
         }
     }
@@ -36,7 +42,7 @@ kmpmp_sv_infamy_war_goal = {
                 }
             }
         }
-        max = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_TOTAL
+        max = kmpmp_legacy_infamy_population_cap
         min = 1
     }
 

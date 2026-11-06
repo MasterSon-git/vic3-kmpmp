@@ -59,4 +59,8 @@ native_resettlement.7 = {
 			}
 		}
 	}
+
+	after = {
+		je_seminole_wars_cleanup = yes
+	}
 }

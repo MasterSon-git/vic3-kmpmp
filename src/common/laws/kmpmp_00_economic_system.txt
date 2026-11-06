@@ -42,6 +42,8 @@ INJECT:law_cooperative_ownership = {
 		# kmpmp
 		building_group_bg_manufacturing_throughput_add = 0.1
 		building_group_bg_mining_throughput_add = 0.1
+
+		country_other_country_socialist_economy_hostility_impact_add = 50
 	}
 }
 
@@ -52,5 +54,7 @@ INJECT:law_command_economy = {
 		state_tax_capacity_mult = 0.25
 		building_throughput_add = -0.25
 		country_bureaucracy_mult = -0.1
+
+		country_other_country_socialist_economy_hostility_impact_add = 50
 	}
 }

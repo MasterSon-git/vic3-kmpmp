@@ -10,77 +10,95 @@
 		set_variable = { name = meiji_var value = 0 }
 	}
 
-	complete = {
-		OR = {
-			AND = {
-				scope:journal_entry = {
-					is_goal_complete = yes
-				}
-				hidden_trigger = {
-					has_variable = completed_je_meiji_army
-					has_variable = completed_je_meiji_economy
-					OR = {
-						AND = {
-							has_dlc_feature = ep2_content
-							has_variable = iwakura_mission_finished
-						}
-						AND = {
-							NOT = { has_dlc_feature = ep2_content }
-							has_variable = completed_je_meiji_diplomacy
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			OR = {
+				AND = {
+					scope:journal_entry = {
+						is_goal_complete = yes
+					}
+					hidden_trigger = {
+						has_variable = completed_je_meiji_army
+						has_variable = completed_je_meiji_economy
+						OR = {
+							AND = {
+								has_dlc_feature = ep2_content
+								has_variable = iwakura_mission_finished
+							}
+							AND = {
+								NOT = { has_dlc_feature = ep2_content }
+								has_variable = completed_je_meiji_diplomacy
+							}
 						}
 					}
 				}
+				custom_tooltip = {
+					text = meiji_timeout_some_progress
+					always = no
+				}
 			}
+		}
+		effect = {
+			trigger_event = {
+				id = meiji.2
+			}
+			# kmpmp - show that it needs to be completed before year 1885 otherwise you don't get the buff "Empire of the rising Sun"
+			show_as_tooltip = {
+				custom_tooltip = kmpmp_japan_buff_meiji_complete_condition_tt
+				add_modifier = {
+					name = kmpmp_japan_buff_meiji_complete
+					years = 15
+				}
+			}
+		}
+	}
+
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
 			custom_tooltip = {
-				text = meiji_timeout_some_progress
+				text = meiji_timeout_no_progress
 				always = no
 			}
 		}
-	}
-
-	on_complete = {
-		trigger_event = {
-			id = meiji.2
-		}
-		# kmpmp - show that it needs to be completed before year 1885 otherwise you don't get the buff "Empire of the rising Sun"
-        show_as_tooltip = {
-            custom_tooltip = kmpmp_japan_buff_meiji_complete_condition_tt
-            add_modifier = {
-                name = kmpmp_japan_buff_meiji_complete
-                years = 15
-            }
-        }
-	}
-
-	on_timeout = {
-		hidden_effect = {
-			if = {
-				limit = {
-					OR = {
-						has_variable = completed_je_meiji_army
-						has_variable = completed_je_meiji_economy
-						has_variable = iwakura_mission_finished
-						has_variable = completed_je_meiji_diplomacy
-					}
-				}
-				trigger_event = { id = meiji.2 }
-			}
-			else = {
+		effect = {
+			show_as_tooltip = {
 				trigger_event = { id = meiji.14 }
 			}
+			je_meiji_main_cleanup = yes
 		}
 	}
 
-	fail = {
-		custom_tooltip = {
-			text = meiji_timeout_no_progress
-			always = no
-		}
-	}
-
-	on_fail = {
-		show_as_tooltip = {
-			trigger_event = { id = meiji.14 }
+	outcome = {
+		header = JOURNAL_ENTRY_TIMEOUT
+		effect_header = JOURNAL_ENTRY_ON_TIMEOUT
+		flags = { timeout }
+		conclusion_desc = JOURNAL_ENTRY_TIMEOUT_CONCLUSION_DESC
+		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						OR = {
+							has_variable = completed_je_meiji_army
+							has_variable = completed_je_meiji_economy
+							has_variable = iwakura_mission_finished
+							has_variable = completed_je_meiji_diplomacy
+						}
+					}
+					trigger_event = { id = meiji.2 }
+				}
+				else = {
+					trigger_event = { id = meiji.14 }
+				}
+			}
+			je_meiji_main_cleanup = yes
 		}
 	}
 
@@ -108,4 +126,8 @@
 	weight = 10000
 
 	should_be_pinned_by_default_uninvolved_or_context = yes
+
+	activation_description = {
+		always = yes
+	}
 }
