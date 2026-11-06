@@ -25,6 +25,19 @@
         }
     }
 
+    # Status reads applied modifiers; the reason shows live prices separately.
+    status_desc = {
+        first_valid = {
+            triggered_desc = {
+                trigger = {
+                    scope:journal_entry = { kmpmp_shortage_has_applied_modifier = yes }
+                }
+                desc = kmpmp_shortage_status_active
+            }
+            desc = kmpmp_shortage_status_none
+        }
+    }
+
     weight = 200
     should_be_pinned_by_default_uninvolved_or_context = yes
 }

@@ -1,0 +1,294 @@
+﻿# Read-only presentation: applied tiers belong to the JE, price tests to its country.
+# No effects, variables or cached copies of gameplay state are used here.
+
+kmpmp_shortage_applied_small_arms = {
+    type = journal_entry
+    random_valid = no
+    text = {
+        trigger = { has_modifier = kmpmp_shortage_of_small_arms_low }
+        localization_key = kmpmp_shortage_row_small_arms_low
+    }
+    text = {
+        trigger = { has_modifier = kmpmp_shortage_of_small_arms_medium }
+        localization_key = kmpmp_shortage_row_small_arms_medium
+    }
+    text = {
+        trigger = { has_modifier = kmpmp_shortage_of_small_arms_high }
+        localization_key = kmpmp_shortage_row_small_arms_high
+    }
+    text = {
+        localization_key = EMPTY_STRING
+    }
+}
+
+kmpmp_shortage_price_small_arms = {
+    type = country
+    random_valid = no
+    text = {
+        trigger = {
+            NOT = { kmpmp_shortage_price_available = { MARKET_GOOD = small_arms } }
+        }
+        localization_key = kmpmp_shortage_price_unavailable
+    }
+    text = {
+        trigger = {
+            kmpmp_has_goods_shortage_low = { MARKET_GOOD = small_arms }
+        }
+        localization_key = kmpmp_shortage_price_low
+    }
+    text = {
+        trigger = {
+            kmpmp_has_goods_shortage_medium = { MARKET_GOOD = small_arms }
+        }
+        localization_key = kmpmp_shortage_price_medium
+    }
+    text = {
+        trigger = {
+            kmpmp_has_goods_shortage_high = { MARKET_GOOD = small_arms }
+        }
+        localization_key = kmpmp_shortage_price_high
+    }
+    text = {
+        localization_key = kmpmp_shortage_price_below_low
+    }
+}
+
+kmpmp_shortage_applied_ammunition = {
+    type = journal_entry
+    random_valid = no
+    text = {
+        trigger = { has_modifier = kmpmp_shortage_of_ammo_low }
+        localization_key = kmpmp_shortage_row_ammo_low
+    }
+    text = {
+        trigger = { has_modifier = kmpmp_shortage_of_ammo_medium }
+        localization_key = kmpmp_shortage_row_ammo_medium
+    }
+    text = {
+        trigger = { has_modifier = kmpmp_shortage_of_ammo_high }
+        localization_key = kmpmp_shortage_row_ammo_high
+    }
+    text = {
+        localization_key = EMPTY_STRING
+    }
+}
+
+kmpmp_shortage_price_ammunition = {
+    type = country
+    random_valid = no
+    text = {
+        trigger = {
+            NOT = { kmpmp_shortage_price_available = { MARKET_GOOD = ammunition } }
+        }
+        localization_key = kmpmp_shortage_price_unavailable
+    }
+    text = {
+        trigger = {
+            kmpmp_has_goods_shortage_low = { MARKET_GOOD = ammunition }
+        }
+        localization_key = kmpmp_shortage_price_low
+    }
+    text = {
+        trigger = {
+            kmpmp_has_goods_shortage_medium = { MARKET_GOOD = ammunition }
+        }
+        localization_key = kmpmp_shortage_price_medium
+    }
+    text = {
+        trigger = {
+            kmpmp_has_goods_shortage_high = { MARKET_GOOD = ammunition }
+        }
+        localization_key = kmpmp_shortage_price_high
+    }
+    text = {
+        localization_key = kmpmp_shortage_price_below_low
+    }
+}
+
+kmpmp_shortage_applied_artillery = {
+    type = journal_entry
+    random_valid = no
+    text = {
+        trigger = { has_modifier = kmpmp_shortage_of_artillery_low }
+        localization_key = kmpmp_shortage_row_artillery_low
+    }
+    text = {
+        trigger = { has_modifier = kmpmp_shortage_of_artillery_medium }
+        localization_key = kmpmp_shortage_row_artillery_medium
+    }
+    text = {
+        trigger = { has_modifier = kmpmp_shortage_of_artillery_high }
+        localization_key = kmpmp_shortage_row_artillery_high
+    }
+    text = {
+        localization_key = EMPTY_STRING
+    }
+}
+
+kmpmp_shortage_price_artillery = {
+    type = country
+    random_valid = no
+    text = {
+        trigger = {
+            NOT = { kmpmp_shortage_price_available = { MARKET_GOOD = artillery } }
+        }
+        localization_key = kmpmp_shortage_price_unavailable
+    }
+    text = {
+        trigger = {
+            kmpmp_has_goods_shortage_low = { MARKET_GOOD = artillery }
+        }
+        localization_key = kmpmp_shortage_price_low
+    }
+    text = {
+        trigger = {
+            kmpmp_has_goods_shortage_medium = { MARKET_GOOD = artillery }
+        }
+        localization_key = kmpmp_shortage_price_medium
+    }
+    text = {
+        trigger = {
+            kmpmp_has_goods_shortage_high = { MARKET_GOOD = artillery }
+        }
+        localization_key = kmpmp_shortage_price_high
+    }
+    text = {
+        localization_key = kmpmp_shortage_price_below_low
+    }
+}
+
+kmpmp_shortage_applied_radios = {
+    type = journal_entry
+    random_valid = no
+    text = {
+        trigger = { has_modifier = kmpmp_shortage_of_radios_medium }
+        localization_key = kmpmp_shortage_row_radios_medium
+    }
+    text = {
+        trigger = { has_modifier = kmpmp_shortage_of_radios_high }
+        localization_key = kmpmp_shortage_row_radios_high
+    }
+    text = {
+        localization_key = EMPTY_STRING
+    }
+}
+
+kmpmp_shortage_price_radios = {
+    type = country
+    random_valid = no
+    text = {
+        trigger = {
+            NOT = { kmpmp_shortage_price_available = { MARKET_GOOD = radios } }
+        }
+        localization_key = kmpmp_shortage_price_unavailable
+    }
+    text = {
+        trigger = {
+            kmpmp_has_goods_shortage_medium = { MARKET_GOOD = radios }
+        }
+        localization_key = kmpmp_shortage_price_medium
+    }
+    text = {
+        trigger = {
+            kmpmp_has_goods_shortage_high = { MARKET_GOOD = radios }
+        }
+        localization_key = kmpmp_shortage_price_high
+    }
+    text = {
+        localization_key = kmpmp_shortage_price_below_medium
+    }
+}
+
+kmpmp_shortage_applied_tanks = {
+    type = journal_entry
+    random_valid = no
+    text = {
+        trigger = { has_modifier = kmpmp_shortage_of_tanks_low }
+        localization_key = kmpmp_shortage_row_tanks_low
+    }
+    text = {
+        trigger = { has_modifier = kmpmp_shortage_of_tanks_medium }
+        localization_key = kmpmp_shortage_row_tanks_medium
+    }
+    text = {
+        trigger = { has_modifier = kmpmp_shortage_of_tanks_high }
+        localization_key = kmpmp_shortage_row_tanks_high
+    }
+    text = {
+        localization_key = EMPTY_STRING
+    }
+}
+
+kmpmp_shortage_price_tanks = {
+    type = country
+    random_valid = no
+    text = {
+        trigger = {
+            NOT = { kmpmp_shortage_price_available = { MARKET_GOOD = tanks } }
+        }
+        localization_key = kmpmp_shortage_price_unavailable
+    }
+    text = {
+        trigger = {
+            kmpmp_has_goods_shortage_low = { MARKET_GOOD = tanks }
+        }
+        localization_key = kmpmp_shortage_price_low
+    }
+    text = {
+        trigger = {
+            kmpmp_has_goods_shortage_medium = { MARKET_GOOD = tanks }
+        }
+        localization_key = kmpmp_shortage_price_medium
+    }
+    text = {
+        trigger = {
+            kmpmp_has_goods_shortage_high = { MARKET_GOOD = tanks }
+        }
+        localization_key = kmpmp_shortage_price_high
+    }
+    text = {
+        localization_key = kmpmp_shortage_price_below_low
+    }
+}
+
+kmpmp_shortage_applied_aeroplanes = {
+    type = journal_entry
+    random_valid = no
+    text = {
+        trigger = { has_modifier = kmpmp_shortage_of_airplanes_medium }
+        localization_key = kmpmp_shortage_row_airplanes_medium
+    }
+    text = {
+        trigger = { has_modifier = kmpmp_shortage_of_airplanes_high }
+        localization_key = kmpmp_shortage_row_airplanes_high
+    }
+    text = {
+        localization_key = EMPTY_STRING
+    }
+}
+
+kmpmp_shortage_price_aeroplanes = {
+    type = country
+    random_valid = no
+    text = {
+        trigger = {
+            NOT = { kmpmp_shortage_price_available = { MARKET_GOOD = aeroplanes } }
+        }
+        localization_key = kmpmp_shortage_price_unavailable
+    }
+    text = {
+        trigger = {
+            kmpmp_has_goods_shortage_medium = { MARKET_GOOD = aeroplanes }
+        }
+        localization_key = kmpmp_shortage_price_medium
+    }
+    text = {
+        trigger = {
+            kmpmp_has_goods_shortage_high = { MARKET_GOOD = aeroplanes }
+        }
+        localization_key = kmpmp_shortage_price_high
+    }
+    text = {
+        localization_key = kmpmp_shortage_price_below_medium
+    }
+}

@@ -60,6 +60,9 @@ is not needed for normal development.
   relaunching. For a bug report, include expected/actual behaviour, country/date,
   exact steps, relevant DLC, a pre-problem save and useful log excerpts.
   Remove private information before sharing.
+- Run unattended engine probes with an isolated user profile and mute its
+  `Audio` settings: set `volume.bus:/` and every `volume.vca:/...` category to
+  zero before launch. A null renderer does not disable audio.
 - Run `git diff --check` and appropriate checks for changed scripts,
   localization or packaging. State skipped game/multiplayer tests in the PR.
 
