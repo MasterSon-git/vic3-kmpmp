@@ -16673,8 +16673,6 @@ right_click_menu = {
 
 				### UNASSIGNED HEADER
 				widget = {
-					margin_top = 5
-					margin_left = 5
 					size = { 370 24 }
 
 					textbox = {
