@@ -180,6 +180,139 @@ check('shortage interface deactivates without an outcome and excludes decentrali
     assert.equal(value(field(limit, 'NOT'), 'is_country_type'), 'decentralized');
     assert(!JSON.stringify(limit).match(/"(?:is_player|is_ai)"/), 'Shortage mechanics must remain available to regular AI and players');
 });
+const shortageGoods = [
+    ['small_arms', 'small_arms', true], ['ammunition', 'ammo', true],
+    ['artillery', 'artillery', true], ['radios', 'radios', false],
+    ['tanks', 'tanks', true], ['aeroplanes', 'airplanes', false],
+];
+const shortageLoc = index(path.join(root, 'src/common/customizable_localization'));
+const shortageTriggers = index(path.join(root, 'src/common/scripted_triggers'));
+const shortageValues = new Map(parse(read(path.join(root, 'src/common/script_values/kmpmp_military_goods_shortage_values.txt'))).map(node => [node.key, node]));
+// This deliberately small evaluator checks our read-only selectors against
+// fixtures, not game execution. Unknown syntax fails rather than silently passing.
+function shortageTest(nodes, state, parameters = {}) {
+    const expanded = text => text.replace(/\$(\w+)\$/g, (_, name) => {
+        assert(parameters[name], `Missing parameter ${name}`);
+        return parameters[name];
+    });
+    return nodes.every(node => {
+        const name = expanded(node.key);
+        const operand = expanded(node.value || '');
+        if (name === 'OR') return node.children.some(child => shortageTest([child], state, parameters));
+        if (name === 'NOT') return !shortageTest(node.children, state, parameters);
+        if (name === 'exists') return operand === 'market' ? state.market : state.goods.has(operand.slice(3));
+        if (name === 'market' || name.startsWith('mg:')) {
+            const exists = name === 'market' ? state.market : state.goods.has(name.slice(3));
+            return exists ? shortageTest(node.children, state, parameters) : node.operator === '?=';
+        }
+        if (name === 'has_modifier') return state.modifiers.has(operand);
+        if (name === 'market_goods_pricier') {
+            const threshold = Number(shortageValues.get(operand)?.value);
+            assert(Number.isFinite(threshold), `Unknown price value ${operand}`);
+            if (node.operator === '>=') return state.price >= threshold;
+            if (node.operator === '<') return state.price < threshold;
+        }
+        if (shortageTriggers.has(name)) {
+            const args = Object.fromEntries((node.children || []).map(child => [child.key, expanded(child.value)]));
+            return shortageTest(shortageTriggers.get(name).children, state, args);
+        }
+        throw new Error(`Unsupported shortage test syntax ${name} ${node.operator || ''}`);
+    });
+}
+function shortageSelect(name, state) {
+    const selector = shortageLoc.get(name);
+    assert(selector, `Missing selector ${name}`);
+    assert.equal(value(selector, 'random_valid'), 'no', name);
+    const choice = selector.children.filter(node => node.key === 'text')
+        .find(node => !field(node, 'trigger') || shortageTest(field(node, 'trigger').children, state));
+    assert(choice, `No fallback in ${name}`);
+    return value(choice, 'localization_key');
+}
+const shortageFixture = (price, modifiers = [], market = true, goods = shortageGoods.map(([good]) => good)) =>
+    ({ price, modifiers: new Set(modifiers), market, goods: new Set(goods) });
+check('shortage UI price boundaries and radio/aeroplane exceptions (54 cases)', () => {
+    const boundaries = [0.49999, 0.5, 0.50001, 0.59999, 0.6, 0.60001, 0.74999, 0.75, 0.75001];
+    for (const [good, , low] of shortageGoods) {
+        const selector = `kmpmp_shortage_price_${good}`;
+        assert.equal(value(shortageLoc.get(selector), 'type'), 'country');
+        for (const price of boundaries) {
+            const expected = price >= 0.75 ? 'high' : price >= 0.6 ? 'medium' : low && price >= 0.5 ? 'low' : `below_${low ? 'low' : 'medium'}`;
+            assert.equal(shortageSelect(selector, shortageFixture(price)), `kmpmp_shortage_price_${expected}`, `${good} at ${price}`);
+        }
+        for (const fixture of [shortageFixture(0.75, [], false), shortageFixture(0.75, [], true, [])]) {
+            assert.equal(shortageSelect(selector, fixture), 'kmpmp_shortage_price_unavailable', good);
+        }
+    }
+});
+check('shortage status reads applied JE modifiers independently of live prices (16 tiers)', () => {
+    const active = shortageTriggers.get('kmpmp_shortage_has_applied_modifier').children;
+    assert(!shortageTest(active, shortageFixture(0.75)), 'High prices must not imply an applied penalty');
+    const all = [];
+    for (const [good, suffix, low] of shortageGoods) {
+        const selector = `kmpmp_shortage_applied_${good}`;
+        assert.equal(value(shortageLoc.get(selector), 'type'), 'journal_entry');
+        assert.equal(shortageSelect(selector, shortageFixture(0.75)), 'EMPTY_STRING');
+        for (const tier of low ? ['low', 'medium', 'high'] : ['medium', 'high']) {
+            const modifier = `kmpmp_shortage_of_${suffix}_${tier}`;
+            all.push(modifier);
+            const fixture = shortageFixture(0, [modifier]);
+            assert(shortageTest(active, fixture), modifier);
+            assert.equal(shortageSelect(selector, fixture), `kmpmp_shortage_row_${suffix}_${tier}`);
+            assert.equal(shortageSelect(selector, shortageFixture(0.75, [modifier])), shortageSelect(selector, fixture));
+        }
+    }
+    const multiple = shortageFixture(0, all.filter(name => name.endsWith('_medium')));
+    assert(shortageTest(active, multiple));
+    for (const [good, suffix] of shortageGoods) assert.equal(shortageSelect(`kmpmp_shortage_applied_${good}`, multiple), `kmpmp_shortage_row_${suffix}_medium`);
+    assert.deepEqual(field(shortageTriggers.get('kmpmp_shortage_has_applied_modifier'), 'OR').children.map(node => node.value), all);
+});
+check('shortage UI is read-only and English/German tooltips describe actual modifiers', () => {
+    assert(!fs.existsSync(path.join(root, 'src/common/scripted_guis/kmpmp_military_goods_shortage_gui.txt')), 'Unsafe unfinished SGUI restored');
+    const uiFiles = [
+        'src/common/customizable_localization/kmpmp_military_goods_shortage.txt',
+        'src/common/scripted_triggers/kmpmp_military_goods_shortage_ui_triggers.txt',
+    ];
+    for (const relative of uiFiles) {
+        const source = read(path.join(root, relative));
+        assert(source.startsWith('\uFEFF'), `${relative}: missing UTF-8 BOM`);
+        for (const token of tokens(source)) {
+            assert(!/^(effect|add_modifier|remove_modifier|set_variable|post_notification|kmpmp_apply_.*)$/.test(token.value), `${relative}: UI mutation ${token.value}`);
+        }
+    }
+    const dictionaries = ['english', 'german'].map(language => {
+        const source = read(path.join(root, `src/localization/${language}/kmpmp_military_goods_shortage_l_${language}.yml`));
+        assert(source.startsWith(`\uFEFFl_${language}:`), `${language}: missing BOM/header`);
+        const entries = [...source.matchAll(/^\s+([\w.]+):(?:\d+)?\s+"(.*)"\s*$/gm)].map(match => [match[1], match[2]]);
+        const dictionary = new Map(entries);
+        assert.equal(entries.length, dictionary.size, `${language}: duplicate keys`);
+        for (const [key, text] of dictionary) {
+            assert(!/Execute|IsShownTooltip|\.IsValid\(/.test(text), `${key}: UI must not invoke an SGUI`);
+            for (const match of text.matchAll(/\$(kmpmp_[\w.]+)\$/g)) assert(dictionary.has(match[1]), `${language}: missing ${match[1]}`);
+        }
+        for (const [good, suffix, low] of shortageGoods) for (const tier of low ? ['low', 'medium', 'high'] : ['medium', 'high']) {
+            const modifier = `kmpmp_shortage_of_${suffix}_${tier}`;
+            const tooltip = dictionary.get(`${modifier}_tooltip`);
+            assert(tooltip?.includes(`kmpmp_shortage_price_${good}`), `${modifier}: missing live market comparison`);
+            assert(tooltip.includes(`$kmpmp_shortage_price_${tier}$`), `${modifier}: missing price condition`);
+            assert(tooltip.includes('$kmpmp_shortage_weekly$'), `${modifier}: missing refresh explanation`);
+            assert(tooltip.includes(good === 'aeroplanes' ? '$kmpmp_shortage_aeroplanes_no_effect$' : `[GetStaticModifier('${modifier}').GetDesc]`), `${modifier}: missing actual effects`);
+            const change = tier === 'low' ? 'low' : `${tier}_${low ? 'low' : 'no_low'}`;
+            assert(tooltip.includes(`$kmpmp_shortage_change_${change}$`), `${modifier}: incorrect removal boundary`);
+            assert(dictionary.get(`kmpmp_shortage_row_${suffix}_${tier}`)?.includes(`${modifier}_tooltip`));
+        }
+        for (const [name, selector] of shortageLoc) if (name.startsWith('kmpmp_shortage_')) {
+            for (const node of selector.children.filter(node => node.key === 'text')) {
+                const key = value(node, 'localization_key');
+                assert(key === 'EMPTY_STRING' || dictionary.has(key), `${language}: missing selector text ${key}`);
+            }
+        }
+        return dictionary;
+    });
+    assert.deepEqual([...dictionaries[0].keys()].sort(), [...dictionaries[1].keys()].sort());
+    const status = field(journals.get('kmpmp_je_military_goods_shortage'), 'status_desc');
+    assert(JSON.stringify(status).includes('kmpmp_shortage_has_applied_modifier'));
+    assert(!JSON.stringify(status).includes('kmpmp_has_goods_shortage'), 'Status must not infer applied tiers from prices');
+});
 check('protectorate market links are guarded before dereferencing', () => {
     const trigger = index(path.join(root, 'src/common/scripted_triggers')).get('kmpmp_player_protectorate_has_foreign_market');
     const marketBranch = field(trigger, 'trigger_if');

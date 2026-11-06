@@ -60,11 +60,47 @@ is not needed for normal development.
   relaunching. For a bug report, include expected/actual behaviour, country/date,
   exact steps, relevant DLC, a pre-problem save and useful log excerpts.
   Remove private information before sharing.
+- Run unattended engine probes with an isolated user profile and mute its
+  `Audio` settings: set `volume.bus:/` and every `volume.vca:/...` category to
+  zero before launch. A null renderer does not disable audio.
 - Run `git diff --check` and appropriate checks for changed scripts,
   localization or packaging. State skipped game/multiplayer tests in the PR.
 
 Use [GitHub issues](https://github.com/MasterSon-git/vic3-kmpmp/issues/new/choose)
 for reports and proposals.
+
+### Military Goods Shortage presentation
+
+Run `node scripts/validate-1.15.cjs` for static compatibility checks, including
+price boundaries, all 16 supported modifier tiers, applied-versus-current-price
+fixtures, read-only selectors and English/German tooltip coverage. These fixtures
+evaluate script conditions outside the game; they do not validate engine or UI
+behaviour.
+
+The native JE status reads modifiers on the active JE instance. Hover a tier for
+the actual static-modifier breakdown and its change thresholds. The description
+lists current market-price bands separately, because the weekly pulse may not
+have applied them yet. Aeroplane tiers currently have no gameplay effects; the UI
+reports that existing limitation without introducing new effects.
+
+For changes to this presentation, check the following in a disposable campaign
+with English and German, both without State & Revolution and with it enabled:
+
+| Scenario | Expected result |
+| --- | --- |
+| No modifiers, including high prices before the first pulse | Explicit no-applied-penalty status; current price conditions remain separate. |
+| Each supported tier, then several goods together | Correct good/tier; hover shows native effects, current price band and downgrade/removal thresholds. |
+| Prices immediately below, at and above +50%, +60%, +75% | Low/medium/high boundaries match the existing predicates; radios/aeroplanes never show low. |
+| Price changes between weekly pulses | Applied tier stays unchanged until the pulse; current price band changes independently. |
+| Enter, leave and reenter committed diplomatic-play participation | Temporary JE appears, is removed with its modifiers, and can return; no concluded entry or completion message. |
+| Save/reload before and after a weekly pulse | Applied modifiers and status survive; subsequent weekly evaluation still works. |
+| Open the JE and hover every tier while paused | No modifier, variable or other game-state changes; no tooltip errors, raw keys or clipped text. |
+
+Retain screenshots of no penalties, several applied tiers and a tier tooltip,
+and inspect fresh logs. Multiplayer verification additionally requires matching
+host/client builds and a save/rehost or hotjoin check. Transition notifications
+remain separate work under #432: validate weekly changes and JE-removal timing,
+notify only the affected player, and avoid repeated weekly notices.
 
 ## Notices and Workshop publishing
 

@@ -1,0 +1,27 @@
+﻿# Read-only UI guards. Do not use these to change the existing application rules.
+kmpmp_shortage_price_available = {
+    exists = market
+    market ?= { exists = mg:$MARKET_GOOD$ }
+}
+
+# Scope: journal_entry. Read the modifiers on this instance, never current prices.
+kmpmp_shortage_has_applied_modifier = {
+    OR = {
+        has_modifier = kmpmp_shortage_of_small_arms_low
+        has_modifier = kmpmp_shortage_of_small_arms_medium
+        has_modifier = kmpmp_shortage_of_small_arms_high
+        has_modifier = kmpmp_shortage_of_ammo_low
+        has_modifier = kmpmp_shortage_of_ammo_medium
+        has_modifier = kmpmp_shortage_of_ammo_high
+        has_modifier = kmpmp_shortage_of_artillery_low
+        has_modifier = kmpmp_shortage_of_artillery_medium
+        has_modifier = kmpmp_shortage_of_artillery_high
+        has_modifier = kmpmp_shortage_of_radios_medium
+        has_modifier = kmpmp_shortage_of_radios_high
+        has_modifier = kmpmp_shortage_of_tanks_low
+        has_modifier = kmpmp_shortage_of_tanks_medium
+        has_modifier = kmpmp_shortage_of_tanks_high
+        has_modifier = kmpmp_shortage_of_airplanes_medium
+        has_modifier = kmpmp_shortage_of_airplanes_high
+    }
+}
