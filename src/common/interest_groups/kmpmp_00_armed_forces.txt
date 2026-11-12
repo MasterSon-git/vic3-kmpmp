@@ -108,7 +108,7 @@
 				set_ig_trait = ig_trait:ig_trait_veteran_consultation
 				set_ig_trait = ig_trait:ig_trait_patriotic_fervor
 			}
-			# kmpmp Germany
+			# KMPMP: restrict the custom military-goods-cost trait to German tags (#460, #461).
 			else_if = {
 				limit = {
 					OR = {
@@ -442,6 +442,19 @@
 					value = 150
 				}
 			}
+		}
+
+		add = {
+			desc = "MILITARY_INDUSTRY_OWNERSHIP"
+			if = {
+				limit = {
+					strata = upper
+					is_employed = yes
+				}
+				value = "workplace.num_building_assets_of_group(bg_military_industry)"
+				multiply = 2
+			}
+			max = 150
 		}
 
 		if = {

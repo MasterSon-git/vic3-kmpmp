@@ -17,7 +17,7 @@
         building_logging_camp = 45
         building_fishing_wharf = 11
 
-        building_copper_mine = 6
+        building_copper_mine = 9
     }
     naval_exit_id = 3000
 
@@ -213,7 +213,7 @@ STATE_NORTHERN_NORWAY = {
         building_whaling_station = 15 #10
         building_fishing_wharf = 10
 
-        building_copper_mine = 6
+        building_copper_mine = 9
     }
     naval_exit_id = 3020
 
@@ -337,7 +337,7 @@ STATE_LANCASHIRE = {
         building_coal_mine = 100
         building_iron_mine = 60
         building_lead_mine = 45
-        building_copper_mine = 4
+        building_copper_mine = 5
         building_logging_camp = 9
         building_fishing_wharf = 15
     }
@@ -1647,7 +1647,7 @@ STATE_HESSE = {
         building_sulfur_mine = 40
         building_logging_camp = 13 #8
 
-        building_copper_mine = 4
+        building_copper_mine = 5
     }
 
     min_cold_effect = 0.00

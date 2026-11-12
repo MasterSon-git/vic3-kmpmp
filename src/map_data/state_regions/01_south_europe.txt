@@ -291,7 +291,7 @@ STATE_TUSCANY = {
     capped_resources = {
         building_iron_mine = 60
         building_sulfur_mine = 40
-        building_copper_mine = 6
+        building_copper_mine = 9
         building_logging_camp = 11
         building_fishing_wharf = 5
     }
@@ -603,7 +603,7 @@ STATE_LOWER_ANDALUSIA = {
         building_logging_camp = 12 #4
         building_fishing_wharf = 9
 
-        building_copper_mine = 6
+        building_copper_mine = 9
     }
     naval_exit_id = 3089
 
@@ -959,7 +959,7 @@ STATE_NORTHERN_THRACE = {
         building_logging_camp = 17
         building_fishing_wharf = 12 #6
 
-        building_copper_mine = 4
+        building_copper_mine = 6
     }
     naval_exit_id = 3036
 
@@ -980,7 +980,7 @@ STATE_BULGARIA = {
     arable_land = 35
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_vineyard" }
     capped_resources = {
-        building_copper_mine = 4
+        building_copper_mine = 6
         building_logging_camp = 14
         building_fishing_wharf = 2
     }

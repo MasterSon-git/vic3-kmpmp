@@ -76,9 +76,9 @@ function check(name, action) {
     }
 }
 assert(fs.existsSync(path.join(game, 'common')), `Game directory does not exist: ${game}`);
-check('all variants target 1.15.0', () => {
+check('all variants target 1.15.1', () => {
     for (const name of ['metadata_kmpmp', 'metadata_kmpmp_test', 'metadata_kspmp']) {
-        assert.equal(JSON.parse(read(path.join(root, 'src/.metadata', name + '.json'))).supported_game_version, '1.15.0');
+        assert.equal(JSON.parse(read(path.join(root, 'src/.metadata', name + '.json'))).supported_game_version, '1.15.1');
     }
 });
 const scriptFiles = ['src', 'src_test'].flatMap(variant => ['common', 'events', 'map_data'].flatMap(directory =>

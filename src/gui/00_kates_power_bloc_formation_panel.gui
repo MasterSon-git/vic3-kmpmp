@@ -1,4 +1,4 @@
-# COPY-PASTED FOR NOW
+# Power Blocs Expanded: add reform controls to the vanilla formation panel.
 @panel_width_minus_10 = 530			# used to be 450
 @panel_width_minus_20 = 520
 @panel_width = 540  				# used to be 460
@@ -541,13 +541,6 @@ types power_bloc_formation
 							autoresize = yes
 							align = nobaseline
 							text = "AVAILABLE_MANDATES_TITLE_FORMATION"
-						}
-
-						icon = {
-							visible = "[GreaterThan_int32(PowerBlocFormation.GetMandatesLostToCap, '(int32)0')]"
-							size = { 30 30 }
-							parentanchor = vcenter
-							texture = "gfx/interface/icons/generic_icons/warning.dds"
 						}
 					}
 

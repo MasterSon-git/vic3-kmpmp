@@ -19,6 +19,12 @@ use discussion comments for relevant interim findings or progress, in moderation
 <!-- State the game version, affected DLC and variants, save compatibility,
 and any multiplayer or checksum effects. Write "none" if not applicable. -->
 
+<!-- For game-version updates, account for relevant vanilla changes in a compact
+table or grouped list: upstream definition/area | inherited, ported, excluded or
+unresolved | evidence/reason. For every exclusion, identify the KMPMP goal and
+concrete conflict or balance impact, with a source/issue/PR. Follow CONTRIBUTING.md;
+do not classify copied vanilla behavior or uncertainty as intentional mod balance. -->
+
 ## Validation performed
 
 <!-- Summarize meaningful checks, results and important gaps; no test logs or

@@ -9,7 +9,7 @@ caucasuswar.6 = {
 	desc = caucasuswar.6.d
 	flavor = caucasuswar.6.f
 
-	dlc = dlc010
+	dlc = { dlc010 dlc019 }
 
 	event_image = {
 		video = "ep1_ca_mountain_pass_military"
@@ -117,7 +117,7 @@ caucasuswar.7 = { #Parliament of Independence
 	desc = caucasuswar.7.d
 	flavor = caucasuswar.7.f
 
-	dlc = dlc010
+	dlc = { dlc010 dlc019 }
 
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
@@ -262,7 +262,7 @@ caucasuswar.9 = { #Muhammad Amin's arrival
 	desc = caucasuswar.9.d
 	flavor = caucasuswar.9.f
 
-	dlc = dlc010
+	dlc = { dlc010 dlc019 }
 
 	event_image = {
 		video = "middleeast_islam"
@@ -349,7 +349,7 @@ caucasuswar_end.3 = {
 	desc = caucasuswar_end.3.d
 	flavor = caucasuswar_end.3.f
 
-	dlc = dlc010
+	dlc = { dlc010 dlc019 }
 
 	event_image = {
 		video = "ep1_ca_mountain_pass_military"
