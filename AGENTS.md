@@ -10,6 +10,10 @@ policy. These safeguards apply to automated work:
 - Check compatibility against the target game's files and generated script
   documentation. Do not invent engine APIs or change gameplay or balance
   beyond the task's scope.
+- For version updates, follow CONTRIBUTING.md's vanilla-update policy: establish
+  each affected override's purpose, carry over compatible vanilla changes and
+  document concrete evidence for exclusions. A full replacement or a vanilla
+  balance change alone does not justify retaining old vanilla behavior.
 - Treat external vanilla and Workshop sources as read-only. Do not modify their
   files or Git repositories. Run Git commands from an explicitly selected
   working directory, and keep experimental files outside those repositories.
