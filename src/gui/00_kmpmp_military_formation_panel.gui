@@ -1027,12 +1027,16 @@ types military_formation_panel_types
 			}
 
 			textbox = {
-				parentanchor = center
+				size = { 100% 100% }
+				elide = right
+				fontsize_min = 12
+				align = hcenter|nobaseline
 				text = "MOBILIZE_ARMY"
-				autoresize = yes
-				align = nobaseline
 
-				block "text_position" {}
+				block "text_margin" {
+					margin_left = 32
+					margin_right = 8
+				}
 
 				block "fontsize" {
 					using = fontsize_large
@@ -1041,12 +1045,7 @@ types military_formation_panel_types
 		}
 
 		### IS MOBILIZING
-		is_mobilizing_progressbar = {
-
-			blockoverride "text_position" {
-				position = { 8 0 }
-			}
-		}
+		is_mobilizing_progressbar = {}
 
 		### IS MOBILIZED
 		widget = {
@@ -1064,16 +1063,16 @@ types military_formation_panel_types
 			}
 
 			textbox = {
-				parentanchor = center
-				text = "MILITARY_FORMATION_IS_FULLY_MOBILIZED"
-				autoresize = yes
-				align = nobaseline
-				fontsize_min = 12
+				size = { 100% 100% }
 				elide = right
-				max_width = 140
-				position = { 10 -1 }
+				fontsize_min = 12
+				align = hcenter|nobaseline
+				text = "MILITARY_FORMATION_IS_FULLY_MOBILIZED"
 
-				block "text_position" {}
+				block "text_margin" {
+					margin_left = 32
+					margin_right = 8
+				}
 
 				block "fontsize" {
 					using = fontsize_large

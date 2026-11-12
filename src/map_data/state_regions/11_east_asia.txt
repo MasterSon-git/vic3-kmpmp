@@ -53,6 +53,7 @@ STATE_SICHUAN = {
         building_coal_mine = 60
         building_sulfur_mine = 40
         building_logging_camp = 23
+        building_copper_mine = 5
     }
 
     min_cold_effect = 0.00
@@ -73,7 +74,7 @@ STATE_YUNNAN = {
     capped_resources = {
         building_coal_mine = 40
         building_iron_mine = 60
-        building_copper_mine = 6
+        building_copper_mine = 10
         building_logging_camp = 17
     }
 
@@ -620,6 +621,7 @@ STATE_JIANGXI = {
     capped_resources = {
         building_coal_mine = 52
         building_logging_camp = 15
+        building_copper_mine = 5
     }
 
     min_cold_effect = 0.00
@@ -640,6 +642,7 @@ STATE_SOUTHERN_ANHUI = {
     capped_resources = {
         building_coal_mine = 40
         building_logging_camp = 14
+        building_copper_mine = 5
     }
 
     min_cold_effect = 0.00
@@ -1079,7 +1082,7 @@ STATE_HOKKAIDO = {
         building_whaling_station = 8
         building_fishing_wharf = 15
 
-        building_copper_mine = 4
+        building_copper_mine = 5
     }
     resource = {
         type = "building_gold_field"
@@ -1237,7 +1240,7 @@ STATE_KANSAI = {
     capped_resources = {
         building_gold_mine = 1
         building_lead_mine = 13
-        building_copper_mine = 4
+        building_copper_mine = 5
         building_logging_camp = 9
         building_fishing_wharf = 10
         building_whaling_station = 6
@@ -1295,7 +1298,7 @@ STATE_KYUSHU = {
         building_coal_mine = 52
         building_logging_camp = 7
         building_lead_mine = 6
-        building_copper_mine = 4
+        building_copper_mine = 5
         building_sulfur_mine = 31
         building_fishing_wharf = 18
         building_gold_mine = 1

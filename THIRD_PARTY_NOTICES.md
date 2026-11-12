@@ -4,6 +4,13 @@ Thanks to the authors, artists and translators behind the projects listed below.
 This list reflects the credits maintained on
 [Machiavelli MP Mod on Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=3009203637).
 
+## Victoria 3
+
+Game-data and GUI overrides adapt material from
+[Victoria 3](https://www.paradoxinteractive.com/games/victoria-3/about),
+by Paradox Development Studio / Paradox Interactive. This material is outside
+the original KMPMP license grants; see [LICENSE.md](LICENSE.md).
+
 ## Projects
 
 | Project | Credited author(s) | Source |
