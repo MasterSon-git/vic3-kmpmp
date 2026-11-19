@@ -93,6 +93,14 @@ or is proposed, relevant validation and remaining blockers or decisions.
 Update the opening description as work progresses instead of appending a running
 log of commits, attempts, investigations or repeated test results.
 
+Keep issue-specific validation requirements proportional to the proposed change.
+For straightforward changes using established script mechanics, such as adjusting
+modifier values, source inspection and relevant static checks are generally
+sufficient. Require runtime tests only to resolve concrete uncertainties or
+material risks. Clearly distinguish mandatory acceptance criteria from optional
+testing suggestions. Do not require save/reload, multiplayer testing or extensive
+gameplay simulations by default.
+
 Keep validation in the issue or PR description concise: state relevant checks,
 outcomes and important gaps. Discussion comments may record useful intermediate
 findings, decisions, progress updates or focused test details in reasonable
