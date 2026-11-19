@@ -122,13 +122,6 @@ REPLACE:mobilization_option_truck_transport = {
     group = transport
 }
 
-INJECT:mobilization_option_chemical_weapons = {
-	unit_modifier = {
-		# KMPMP: keep the original 20% discount to vanilla kill rate under 1.15.2 casualty rules.
-		unit_kill_rate_add = -0.04
-	}
-}
-
 REPLACE:mobilization_option_flamethrowers = {
 	texture = "gfx/interface/icons/mobilization_options/flamethrowers.dds"
 
