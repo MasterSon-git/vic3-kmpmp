@@ -36,8 +36,13 @@ REPLACE:decree_promote_national_values = {
 		custom_tooltip = {
 			text = tsarpoints_decree_not_upgraded_tt
 			NOT = { has_variable = tsarpoints_upgraded_promote_national_values }
+			NOT = { overlord ?= { has_variable = tsarpoints_upgraded_promote_national_values } }
 		}
 		NOT = { has_law_or_variant = law_type:law_multicultural }
+	}
+
+	state_trigger = {
+		NOT = { has_decree = decree_promote_national_values_tsarpoints }
 	}
 
 	modifier = {
@@ -476,7 +481,7 @@ INJECT:decree_encourage_manufacturing_industry = {
 REPLACE:decree_greener_grass_campaign = {
 	texture = "gfx/interface/icons/decree/decree_greener_grass_campaign.dds"
 	state_trigger = {
-		# is_isolated_from_market = no
+		NOT = { has_decree = decree_greener_grass_campaign_tsarpoints }
 		# kmpmp
 		NOR = {
 			is_isolated_from_market = yes
@@ -639,6 +644,7 @@ REPLACE:decree_greener_grass_campaign = {
 		custom_tooltip = {
 			text = tsarpoints_decree_not_upgraded_tt
 			NOT = { has_variable = tsarpoints_upgraded_greener_grass_campaign }
+			NOT = { overlord ?= { has_variable = tsarpoints_upgraded_greener_grass_campaign } }
 		}
 	}
 }

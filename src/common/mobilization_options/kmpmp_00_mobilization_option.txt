@@ -124,7 +124,8 @@ REPLACE:mobilization_option_truck_transport = {
 
 INJECT:mobilization_option_chemical_weapons = {
 	unit_modifier = {
-		unit_kill_rate_add = -0.1 # =0.4
+		# KMPMP: keep the original 20% discount to vanilla kill rate under 1.15.2 casualty rules.
+		unit_kill_rate_add = -0.04
 	}
 }
 

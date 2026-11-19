@@ -1567,7 +1567,7 @@ types war_panel
 									size = { 250 50 }
 									using = default_button_action
 									onclick = "[Execute( War.ToggleAcceptPeace( GetPlayer.Self ) )]"
-									using = tooltip_above
+									using = tooltip_ne
 									tooltip = "REJECTING_PEACE_DEAL_TOOLTIP"
 
 									flowcontainer = {
@@ -1594,7 +1594,7 @@ types war_panel
 								widget = {
 									visible = "[Not(War.WouldAcceptActivePeaceDeal( GetPlayer.Self ))]"
 									size = { 250 50 }
-									using = tooltip_above
+									using = tooltip_ne
 									tooltip = "CURRENTLY_REJECTING_PEACE_DEAL_TOOLTIP"
 
 									background = {
