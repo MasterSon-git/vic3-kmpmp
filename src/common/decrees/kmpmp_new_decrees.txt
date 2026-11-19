@@ -3,7 +3,7 @@
 	state_trigger = {
 		NOR = {
 			is_isolated_from_market = yes
-			has_decree = decree_greener_grass_campaign
+			state_has_decree_variant = { DECREE = decree_greener_grass_campaign }
 		}
 	}
 	modifier = {
