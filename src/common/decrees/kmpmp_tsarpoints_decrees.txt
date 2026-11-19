@@ -29,9 +29,9 @@ REPLACE:decree_promote_national_values_tsarpoints = {
 	}
 
 	modifier = {
-		# Keep the KMPMP base of 2.0 and the vanilla upgrade of 0.15.
-		state_assimilation_mult = 2.15
-		state_conversion_mult = 2.15
+		# Scale the assimilation and conversion bonuses with the Authority premium (#677).
+		state_assimilation_mult = 2.50
+		state_conversion_mult = 2.50
 		state_allow_assimilation_in_homeland_bool = yes
 		state_allow_assimilation_without_presence_bool = yes
 		state_allow_conversion_without_presence_bool = yes

@@ -1,6 +1,7 @@
-﻿INJECT:GGGG_mo_canned_rations = {
+﻿# Rations provide a smaller Recovery Rate bonus than medical support (#677).
+INJECT:GGGG_mo_canned_rations = {
     unit_modifier = {
-        unit_recovery_rate_add = 0.1
+        unit_recovery_rate_add = 0.05
     }
 }
 
@@ -11,7 +12,7 @@ INJECT:GGGG_mo_refrigerated_rations = {
 
     unit_modifier = {
         unit_morale_recovery_mult = -0.1 # = 0.0
-        unit_recovery_rate_add = 0.1
+        unit_recovery_rate_add = 0.05
     }
 }
 
@@ -148,7 +149,8 @@ REPLACE:GGGG_mo_modern_uniform = {
 
     unit_modifier = {
         unit_defense_add       = 10
-        unit_recovery_rate_add = 0.10
+        # Keep Recovery Rate secondary to the uniform's Defense bonus (#677).
+        unit_recovery_rate_add = 0.05
     }
 
     ai_weight = {

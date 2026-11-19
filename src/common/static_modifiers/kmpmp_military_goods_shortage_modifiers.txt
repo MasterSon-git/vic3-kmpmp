@@ -18,22 +18,23 @@ kmpmp_shortage_of_small_arms_high = {
 }
 
 # Ammo
+# Only the highest shortage tier exceeds the Field Hospitals bonus (#677).
 kmpmp_shortage_of_ammo_low = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
 
-    unit_recovery_rate_add = -0.1
+    unit_recovery_rate_add = -0.05
 }
 
 kmpmp_shortage_of_ammo_medium = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
 
-    unit_recovery_rate_add = -0.2
+    unit_recovery_rate_add = -0.15
 }
 
 kmpmp_shortage_of_ammo_high = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
 
-    unit_recovery_rate_add = -0.35
+    unit_recovery_rate_add = -0.25
 }
 
 # Cannons
