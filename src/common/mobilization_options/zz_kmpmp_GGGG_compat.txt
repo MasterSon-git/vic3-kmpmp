@@ -109,9 +109,10 @@ REPLACE:GGGG_mo_modern_uniform = {
 
     possible = {
         scope:military_formation = {
-            # has_mobilization_option = mobilization_option:GGGG_mo_full_dress
-            NOT = {
+            # Both earlier uniform options already exclude Modern Uniform (#61).
+            NOR = {
                 has_mobilization_option = mobilization_option:GGGG_mo_full_dress
+                has_mobilization_option = mobilization_option:kmpmp_mo_utility_gear
             }
         }
         market ?= {
