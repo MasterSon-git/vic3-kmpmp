@@ -64,12 +64,12 @@
  je_empire_of_the_three_crowns_reason:0 "Take the balkan back!"
 
  kmpmp_reino_unido_begin:0 "Start $kmpmp_reino_unido$"
- kmpmp_reino_unido_begin_desc:0 "Starts unification '$kmpmp_reino_unido$' between $BRZ$ and $POR$"
+ kmpmp_reino_unido_begin_desc:0 "Begin the union of the Brazilian and Portuguese crowns. $BRZ$ gains claims on all four regions of mainland $POR$. $POR$ gains claims on $STATE_MINAS_GERAIS$, $STATE_RIO_DE_JANEIRO$, and $STATE_BAHIA$."
  je_reino_unido:0 "$kmpmp_reino_unido$"
- je_reino_unido_reason:0 "Unify the crowns"
+ je_reino_unido_reason:0 "With $nationalism$ and $egalitarianism$ researched, either country can unite the crowns by making the other its $subject_type_puppet_no_icon$ or $subject_type_dominion_no_icon$."
  je_reino_unido_fail_trigger_desc:0 "$IBE$ [concept_country] was formed"
  je_reino_unido_protectorate:0 "Make them to our protectorate"
- je_reino_unido_protectorate_reason:0 "Force protectorate status"
+ je_reino_unido_protectorate_reason:0 "For this territorial objective, $BRZ$ must own all four regions of mainland $POR$ ($STATE_ENTRE_DOURO_E_MINHO$, $STATE_BEIRA$, $STATE_ESTREMADURA$, and $STATE_ALENTEJO$). $POR$ must own $STATE_MINAS_GERAIS$, $STATE_RIO_DE_JANEIRO$, and $STATE_BAHIA$."
  je_reino_unido_protectorate_completed_trigger_desc:0 "[concept_journal_entry] '$je_reino_unido_protectorate$' completed"
 
  #  je_reino_unido_por:0 "$kmpmp_reino_unido$"
