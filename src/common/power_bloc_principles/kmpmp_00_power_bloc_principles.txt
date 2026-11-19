@@ -137,7 +137,8 @@ INJECT:principle_aggressive_coordination_3 = {
 		country_infamy_generation_mult = -0.25 # = -0.1
 
 		# kmpmp
-		unit_recovery_rate_add = 0.1
+		# Supplement the bloc identity while keeping their combined bonus below Field Hospitals (#677).
+		unit_recovery_rate_add = 0.05
 		country_military_goods_cost_mult = -0.1
 	}
 }

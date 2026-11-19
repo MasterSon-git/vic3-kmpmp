@@ -80,6 +80,7 @@
 						levels = 2
 					}
 				}
+				subsidized = yes
 				reserves = 1
 				activate_production_methods = { "pm_basic_port" }
 			}
@@ -610,6 +611,7 @@
                         levels = 3 #1
                     }
                 }
+                subsidized = yes
                 reserves = 1
                 activate_production_methods = { "pm_basic_port" }
             }

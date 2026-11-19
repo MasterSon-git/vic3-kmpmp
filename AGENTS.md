@@ -22,8 +22,8 @@ policy. These safeguards apply to automated work:
 - Deployment scripts mirror directories and may delete existing destination
   files. Verify the destination path and use disposable folders for testing.
   Do not run the branch-deletion utility as part of routine setup.
-- Review the final diff and report checks honestly. Parsing or headless loading
-  is not campaign or multiplayer validation.
+- Follow CONTRIBUTING.md's validation policy and review the final diff. Report
+  what each check established and any material gaps.
 - Keep issue and PR descriptions focused on the current outcome. Update the
   summary rather than appending work logs. Useful intermediate findings and
   progress may be discussed in comments, in moderation. Follow the writing

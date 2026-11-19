@@ -48,6 +48,10 @@ INJECT:mobilization_option_tobacco = {
 }
 
 INJECT:mobilization_option_liquor = {
+	upkeep_modifier = {
+		# Restore the original KMPMP price for the supplement bonuses (#61).
+		goods_input_liquor_add = 0.5 # Total 1.0 with vanilla upkeep.
+	}
 	unit_modifier = {
 		# kmpmp
 		unit_morale_damage_mult = 0.05
@@ -120,12 +124,6 @@ REPLACE:mobilization_option_truck_transport = {
 	}
 
     group = transport
-}
-
-INJECT:mobilization_option_chemical_weapons = {
-	unit_modifier = {
-		unit_kill_rate_add = -0.1 # =0.4
-	}
 }
 
 REPLACE:mobilization_option_flamethrowers = {

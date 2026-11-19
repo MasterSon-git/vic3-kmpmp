@@ -772,6 +772,7 @@ types military_formation_panel_types
 								blockoverride "mission_button_with_round_icon" {
 									size = { 300 60 }
 								}
+
 								blockoverride "long_mission_button_size" {
 									size = { 280 50 }
 								}
@@ -971,6 +972,8 @@ types military_formation_panel_types
 								blockoverride "formation_onclick" {
 									onclick = "[FormationPanel.SelectFormation(MilitaryFormation.Self)]"
 								}
+
+								blockoverride "formation_checkbox" {}
 
 								blockoverride "extra_action" {
 									military_formation_cancel_invasion_button = {
