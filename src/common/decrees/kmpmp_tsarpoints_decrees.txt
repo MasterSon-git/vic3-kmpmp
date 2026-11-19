@@ -1,4 +1,4 @@
-# Keep the KMPMP education-building bonuses through the upgrade.
+﻿# Keep the KMPMP education-building bonuses through the upgrade.
 INJECT:decree_promote_social_mobility_tsarpoints = {
 	modifier = {
 		building_university_throughput_add = 0.1
