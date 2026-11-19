@@ -27,10 +27,10 @@ do not classify copied vanilla behavior or uncertainty as intentional mod balanc
 
 ## Validation performed
 
-<!-- Summarize meaningful checks, results and important gaps; no test logs or
-chronological reports. Include `git diff --check` when applicable. -->
+<!-- Summarize checks performed and their results. Follow CONTRIBUTING.md for
+validation scope. Include `git diff --check` when applicable. -->
 
 ## Known limitations
 
-<!-- Note outstanding tests, licensing questions or follow-up work.
-Do not claim tests you haven't run. -->
+<!-- Note material validation gaps, unresolved decisions or other limits
+that affect review. -->

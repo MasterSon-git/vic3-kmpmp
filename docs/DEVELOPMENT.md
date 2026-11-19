@@ -49,10 +49,10 @@ is not needed for normal development.
 
 - Record game version/checksum, KMPMP build/variant, enabled DLC and playset order.
   Keep a copy of valued saves before testing.
-- Start a fresh campaign or a save just before the problem, exercise the affected
-  feature across relevant daily/weekly/monthly pulses, then save and reload.
-  Compare behaviour with the previous build to catch unintended balance changes.
-- For multiplayer changes, use matching builds, playset order and game rules on
+- For in-game checks, use a fresh campaign or a reproducible save just before
+  the affected action. Check pulses, save/reload and behavior across builds as
+  relevant to the question.
+- When testing multiplayer, use matching builds, playset order and game rules on
   host and clients. Check the affected actions and save/rehost or hotjoin where
   relevant; retain host/client evidence if a desync occurs.
 - Inspect `logs/error.log` and `logs/game.log` under the Victoria 3 user-data
@@ -60,8 +60,7 @@ is not needed for normal development.
   relaunching. For a bug report, include expected/actual behaviour, country/date,
   exact steps, relevant DLC, a pre-problem save and useful log excerpts.
   Remove private information before sharing.
-- Run `git diff --check` and appropriate checks for changed scripts,
-  localization or packaging. State skipped game/multiplayer tests in the PR.
+- Record the checks performed and material gaps in the PR.
 
 Use [GitHub issues](https://github.com/MasterSon-git/vic3-kmpmp/issues/new/choose)
 for reports and proposals.

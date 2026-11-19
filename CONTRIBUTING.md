@@ -11,6 +11,8 @@ Keep changes focused and practical for a community-maintained multiplayer modpac
   PR focused, link related issues and use Draft while work is incomplete.
 - Explain the purpose, gameplay/compatibility effects and testing in the PR.
   Leave merging to maintainer review.
+- Resolve in-scope corrections in the current PR. Use separate issues for concrete
+  defects or meaningful, actionable improvements outside its scope.
 - Preserve unrelated local changes. Keep generated installations, logs, saves,
   personal settings and vanilla reference copies out of commits.
 
@@ -35,10 +37,10 @@ Explain any necessary disabled workaround briefly.
 ## Vanilla updates
 
 Follow updated vanilla behavior wherever it is compatible with the purpose of
-our mod changes. Preserve intentional KMPMP differences, not a frozen copy of
-older vanilla behavior. Upstream gameplay and balance changes are part of a
-version update unless they conflict with a mod goal or demonstrably undermine
-its balance.
+our mod changes. Preserve KMPMP's design intent when vanilla mechanics change.
+Historical values and exact gameplay outcomes may change in support of that
+intent. Include focused balance adjustments needed for compatibility in the
+version update and seek maintainer approval for substantial balance changes.
 
 - Compare old vanilla, the existing mod and new vanilla at the definition and
   field level. Include full replacements, injections and inherited helpers;
@@ -48,8 +50,8 @@ its balance.
   issues or PRs. Copied vanilla fields are not intentional custom balance merely
   because they appear in a mod file.
 - Carry over relevant upstream changes that do not conflict with that purpose,
-  including new fields inside full replacements. Keep the custom change intact.
-  "This changes balance" is not sufficient reason to omit a vanilla update.
+  including new fields inside full replacements. Assess custom values against
+  current vanilla strengths, costs, alternatives and plausible stacking.
 - Account for relevant upstream changes in the PR as inherited, ported, excluded
   or unresolved. Group related inherited changes to keep the summary concise.
   For each exclusion, name the affected definition, the mod goal being protected,
@@ -63,13 +65,16 @@ its balance.
 
 ## Testing and documentation
 
-Follow [Development and testing](docs/DEVELOPMENT.md). Run checks appropriate to
-the change, inspect relevant logs and run `git diff --check`. Test gameplay
-changes in a fresh or reproducible saved campaign; test multiplayer-affecting
-changes with matching builds when possible.
+Follow [Development and testing](docs/DEVELOPMENT.md). Run relevant static checks
+and `git diff --check`. Source inspection, established engine semantics, static
+checks and balance judgment grounded in current vanilla can provide sufficient
+confidence. Use runtime tests to address material uncertainties or concrete
+risks, at a scale the project can sustain. The need for campaign or multiplayer
+testing depends on the change.
 
-Report meaningful test results and any important gaps. Update documentation
-when behaviour or workflow changes.
+Report the checks performed, what they establish and any material gaps. Describe
+parsing, headless loading and in-game tests at their actual scope. Update
+documentation when behaviour or workflow changes.
 
 **Documentation scope:** Keep general documentation (such as
 `docs/DEVELOPMENT.md`) focused on reusable development procedures,
