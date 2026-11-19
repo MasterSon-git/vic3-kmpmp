@@ -216,6 +216,8 @@ REPLACE_OR_CREATE:je_reino_unido_protectorate = {
 						# }
 					}
 				}
+				# Restore full mainland coverage after the Beira split (#660).
+				owns_entire_state_region = STATE_ENTRE_DOURO_E_MINHO
 				owns_entire_state_region = STATE_BEIRA
 				owns_entire_state_region = STATE_ESTREMADURA
 				owns_entire_state_region = STATE_ALENTEJO

@@ -269,7 +269,10 @@ kmpmp_reino_unido_begin = {
 			}
 		}
 
-		# claims for BRZ in POR
+		# Mainland Portugal claims for BRZ
+		s:STATE_ENTRE_DOURO_E_MINHO = {
+			add_claim = c:BRZ
+		}
 		s:STATE_BEIRA = {
 			add_claim = c:BRZ
 		}
