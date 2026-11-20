@@ -39,22 +39,18 @@ INJECT:law_laissez_faire = {
 
 INJECT:law_cooperative_ownership = {
 	modifier = {
-		# kmpmp
+		# Boost manufacturing and mining throughput under Cooperative Ownership (#398, #545).
 		building_group_bg_manufacturing_throughput_add = 0.1
 		building_group_bg_mining_throughput_add = 0.1
-
-		country_other_country_socialist_economy_hostility_impact_add = 50
 	}
 }
 
 INJECT:law_command_economy = {
 	modifier = {
+		# Raise tax capacity while reducing dividends efficiency, throughput and bureaucracy (#398, #545).
 		country_government_dividends_efficiency_add = -0.05
-		# kmpmp
 		state_tax_capacity_mult = 0.25
 		building_throughput_add = -0.25
 		country_bureaucracy_mult = -0.1
-
-		country_other_country_socialist_economy_hostility_impact_add = 50
 	}
 }
