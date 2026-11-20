@@ -57,3 +57,13 @@ prestige_good_generic_kmpmp_premium_wine = {
     prestige_bonus = 0.1
     texture = "gfx/interface/icons/goods_icons/wine.dds"
 }
+
+# Sir W G Armstrong Whitworth & Co Ltd
+REPLACE:prestige_good_armstrong_ships = {
+	possible = {
+		has_dlc_feature = mp1_content
+	}
+	base_good = steamers
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/armstrong_ships_prestige.dds"
+}

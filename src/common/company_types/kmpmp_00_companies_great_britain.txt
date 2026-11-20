@@ -1,5 +1,9 @@
 ﻿# Sir W G Armstrong Whitworth & Co Ltd
 INJECT:company_armstrong_whitworth = {
+	possible_prestige_goods = {
+		prestige_good_armstrong_ships
+	}
+
 	prosperity_modifier = {
 		ship_hull_damage_mult = 0.05 # kmpmp
 	}
