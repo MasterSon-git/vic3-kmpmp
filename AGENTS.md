@@ -25,7 +25,8 @@ policy. These safeguards apply to automated work:
 - Follow CONTRIBUTING.md's validation policy and review the final diff. Report
   what each check established and any material gaps.
 - Run the [effective-modifier validator](docs/DEVELOPMENT.md#effective-modifier-validation)
-  for changes to modifier contributions, entry-mode conversions and vanilla updates.
+  for changes to modifier contributions, injected character trait weights,
+  entry-mode conversions and vanilla updates.
   Investigate every new or changed `ERROR` and `REVIEW`. Correct the cause or
   document in the PR why the result is acceptable. Exit code 0 can still leave
   `REVIEW` findings open. Unchanged, pre-existing findings do not block independent work.

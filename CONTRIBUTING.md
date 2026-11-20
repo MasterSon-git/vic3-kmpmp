@@ -44,6 +44,10 @@ Explain any necessary disabled workaround briefly.
 - During a vanilla update, let existing injections inherit new vanilla modifiers.
   Copying an inherited numeric modifier into the injection counts it twice.
   Recheck intentional KMPMP deltas when their vanilla base changes.
+- In character traits, `INJECT` replaces the entire `weight` script value.
+  To extend it, copy the inherited starting value and all operations in order
+  before appending new factors. Recheck the formula against each vanilla update.
+  The same trait's `command_modifier` still receives additive contributions.
 
 ## Vanilla updates
 

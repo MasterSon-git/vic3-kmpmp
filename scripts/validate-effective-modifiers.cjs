@@ -1,6 +1,6 @@
 // Node.js 18.15+. See docs/DEVELOPMENT.md for snapshot inputs and exit codes.
 const path = require('node:path');
-const { parseArgs } = require('node:util');
+const { isDeepStrictEqual, parseArgs } = require('node:util');
 const { build, databases, display, fixed, numericPath, rawFields, readEntries, union, view } = require('./effective-modifiers.cjs');
 const { snapshot } = require('./modifier-sources.cjs');
 
@@ -40,6 +40,47 @@ function maskedFields(oldGame, game, full) {
         }
     }
     return result;
+}
+
+// A trait weight is one script value. Compare its ordered operations before
+// any appended mod factors, including every nested limit and comparison.
+function weightDifference(inherited, injected) {
+    if ([inherited, injected].some(nodes => nodes.length !== 1 || nodes[0].operator !== '=')) {
+        return { level: 'REVIEW', reason: 'inspect repeated weight declarations or unexpected assignment operators' };
+    }
+    const operations = ([node]) => node.children ?? [{ key: 'value', operator: '=', value: node.value }];
+    const base = operations(inherited), patch = operations(injected);
+    if (base[0]?.key === 'value' && !patch.some(node => node.key === 'value')) {
+        return { level: 'ERROR', reason: 'restore the missing inherited starting value before the weight factors' };
+    }
+    const index = base.findIndex((node, i) => !isDeepStrictEqual(node, patch[i]));
+    if (index !== -1) {
+        return { level: 'REVIEW',
+            reason: `restore or account for inherited weight clause ${index + 1} (${base[index].key}) at its original position` };
+    }
+}
+
+function traitWeightFindings(layers) {
+    const findings = new Map();
+    // character_traits.md specifies a default weight of 1 when the base omits it.
+    let inherited = [{ key: 'weight', operator: '=', value: '1' }];
+    let baseFile = layers[0]?.file;
+    for (const layer of layers) {
+        const weights = layer.node.children.filter(node => node.key === 'weight');
+        if (!weights.length) continue;
+        // The resolver starts the active layers with the full definition (also
+        // for INJECT_OR_CREATE on a missing target). Later layers are injections.
+        if (layer !== layers[0] && layer.mod) {
+            const difference = weightDifference(inherited, weights);
+            if (difference) {
+                const signature = JSON.stringify([baseFile, inherited, layer.file, weights]);
+                findings.set(signature, { ...difference, file: layer.file, baseFile });
+            }
+        }
+        inherited = weights;
+        baseFile = layer.file;
+    }
+    return findings;
 }
 
 function inspectPath(p, context, oldTarget, target) {
@@ -134,6 +175,13 @@ function compare(before, after, oldIntents = {}, newIntents = {}, only) {
         const context = { id, old, now, oldGame, game, shadowChanged, types: after.loaded.types };
         for (const p of union(now.paths, old.paths, targets.keys())) {
             if (now.invalidBooleans.has(p) && !targets.has(p)) continue;
+            if (id.startsWith('character_traits/') && p === 'weight') {
+                const prior = traitWeightFindings(old.layers);
+                for (const [signature, row] of traitWeightFindings(now.layers)) {
+                    findings.push({ ...row, id, path: p, kind: 'trait-weight', existing: prior.has(signature) });
+                }
+                if (!targets.has(p)) continue;
+            }
             const row = inspectPath(p, context, previous.get(id)?.get(p), targets.get(p));
             if (row) findings.push({ ...row, id });
         }
@@ -158,9 +206,9 @@ function details(row) {
 
 const ascii = value => String(value).replace(/[^\x20-\x7e]/g, c => '\\u' + c.charCodeAt(0).toString(16).padStart(4, '0'));
 function print(findings, all) {
-    console.log('Scope: shared src/common, supported databases and literal modifier paths (see docs/DEVELOPMENT.md).');
+    console.log('Scope: shared src/common, supported modifier paths and injected character trait weights (see docs/DEVELOPMENT.md).');
     // Put actionable arithmetic ahead of opaque fields in the bounded preview.
-    const priority = ['entry', 'invalid-boolean', 'conversion', 'duplicate', 'flag', 'requirement', 'change', 'masked', 'unsupported'];
+    const priority = ['entry', 'invalid-boolean', 'trait-weight', 'conversion', 'duplicate', 'flag', 'requirement', 'change', 'masked', 'unsupported'];
     for (const existing of [false, true]) for (const level of ['ERROR', 'REVIEW', 'ACCEPTED']) {
         const rows = findings.filter(row => row.existing === existing && row.level === level)
             .sort((a, b) => priority.indexOf(a.kind) - priority.indexOf(b.kind));

@@ -106,6 +106,13 @@ mod contributions, the effective value, and its previous value.
   revision's `scripts/modifier-intent.json` records selected effective values
   and their reasons, keyed by database/definition/complete field path.
 
+For character traits, the same command checks each injected `weight` against
+the formula it replaces. It reports an `ERROR` for an omitted inherited starting
+value and a `REVIEW` when the parsed inherited clauses differ or appear out of
+order. Compare the named files, including nested limits and multipliers. The
+check accepts additional operations after the inherited formula. It compares
+script structure and does not evaluate selection probabilities.
+
 Exit code `1` indicates a new or changed `ERROR`. Code `2` indicates an input
 error. Other completed comparisons return `0`, including those with `REVIEW` findings.
 
