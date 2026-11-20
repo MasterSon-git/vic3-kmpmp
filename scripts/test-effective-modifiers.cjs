@@ -15,6 +15,62 @@ function one(db, game, mod) {
 const field = (rows, path) => rows.find(row => row.path === path);
 const values = row => [row.vanilla, row.injected, row.effective, row.previous].map(display);
 
+test('trait weight injections retain the starting value and ordered inherited conditions', () => {
+    const first = 'if = { limit = { share >= 0.20 } multiply = 5 }';
+    const second = 'if = { limit = { is_general = yes } multiply = 10 }';
+    const extra = 'if = { limit = { has_trait = engineer } multiply = 20 }';
+    const base = 'value = 2 ' + first + ' ' + second;
+    const state = (inherited, injected) => one('character_traits',
+        `gunner = { weight = { ${inherited} } }`, `INJECT:gunner = { weight = { ${injected} } }`);
+    const correct = state(base, base + ' ' + extra);
+    const broken = state(base, extra);
+    const [error] = compare(correct, broken);
+    assert.equal(error.id, 'character_traits/gunner');
+    assert.equal(error.path, 'weight');
+    assert.equal(error.file, 'common/character_traits/zz_patch.txt');
+    assert.equal(error.level, 'ERROR');
+    assert.match(error.reason, /missing inherited starting value/);
+    assert.equal(compare(broken, broken)[0].existing, true);
+    assert.deepEqual(compare(broken, correct), []);
+
+    for (const incomplete of ['value = 2', 'value = 2 ' + second + ' ' + first, base.replace('>=', '>')]) {
+        const [finding] = compare(correct, state(base, incomplete + ' ' + extra));
+        assert.equal(finding.level, 'REVIEW');
+        assert.match(finding.reason, /inherited weight clause/);
+        assert.equal(finding.existing, false);
+    }
+    for (const updated of [base + ' ' + first, base.replace('multiply = 10', 'multiply = 12')]) {
+        const [drift] = compare(correct, state(updated, base + ' ' + extra));
+        assert.equal(drift.kind, 'trait-weight');
+        assert.equal(drift.baseFile, 'common/character_traits/00_game.txt');
+        assert.equal(drift.existing, false);
+        assert.deepEqual(compare(correct, state(updated, updated + ' ' + extra)), []);
+    }
+});
+
+test('trait weight checks follow active layers and compare scalar and implicit bases', () => {
+    const game = { 'character_traits/00_game': 'gunner = { weight = 5 } other = {}' };
+    const mod = { 'character_traits/aa_first':
+        'TRY_INJECT:gunner = { weight = { value = 5 multiply = 2 } } INJECT:other = { weight = { value = 1 } }' };
+    const clean = snapshot(game, mod);
+    assert.deepEqual(compare(clean, clean), []);
+    const broken = snapshot(game, { ...mod, 'character_traits/zz_last':
+        'INJECT_OR_CREATE:gunner = { weight = 5 } INJECT_OR_CREATE:new_trait = { weight = 2 }' });
+    const rows = compare(clean, broken);
+    assert.equal(rows.length, 1);
+    const [row] = rows;
+    assert.equal(row.file, 'common/character_traits/zz_last.txt');
+    assert.equal(row.baseFile, 'common/character_traits/aa_first.txt');
+    assert.match(row.reason, /clause 2 \(multiply\)/);
+    const replaced = snapshot(game, { ...mod, 'character_traits/zz_last':
+        'INJECT:gunner = { weight = 2 } REPLACE:gunner = { weight = 3 }' });
+    assert.deepEqual(compare(broken, replaced), []);
+    const patch = 'INJECT_OR_CREATE:gunner = { weight = { multiply = 2 } }';
+    const [newTarget] = compare(one('character_traits', '', patch), one('character_traits', 'gunner = {}', patch));
+    assert.equal(newTarget.level, 'ERROR');
+    assert.equal(newTarget.existing, false);
+});
+
 test('#666: duplicate socialist hostility; removing the injected 50 restores the required total', () => {
     const p = 'modifier/hostility';
     const game = 'law = { modifier = { hostility = 50 } }';
