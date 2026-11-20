@@ -44,10 +44,15 @@ Explain any necessary disabled workaround briefly.
 - During a vanilla update, let existing injections inherit new vanilla modifiers.
   Copying an inherited numeric modifier into the injection counts it twice.
   Recheck intentional KMPMP deltas when their vanilla base changes.
+- `INJECT` does not guarantee a recursive merge of nested script structures.
+  The game adds numeric contributions in supported modifier blocks. Other
+  fields can replace inherited content. Check how the game reads each field
+  before relying on a merge. When an injection replaces a whole vanilla block,
+  keep the vanilla content the mod still needs and compare it with the updated
+  block at each vanilla version update.
 - In character traits, `INJECT` replaces the entire `weight` script value.
-  To extend it, copy the inherited starting value and all operations in order
-  before appending new factors. Recheck the formula against each vanilla update.
-  The same trait's `command_modifier` still receives additive contributions.
+  Keep the inherited starting value and operations in order before appending
+  new factors. The same trait's `command_modifier` accepts additive bonuses.
 
 ## Vanilla updates
 

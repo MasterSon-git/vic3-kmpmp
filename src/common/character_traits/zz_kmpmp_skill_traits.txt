@@ -96,6 +96,7 @@
 			}
 			multiply = 50
 		}
+		#kmpmp
 		if = {
 			limit = {
 				owner = {
@@ -113,6 +114,7 @@
 			}
 			multiply = 20
 		}
+		#kmpmp
 		if = {
 			limit = {
 				owner = {
@@ -213,6 +215,7 @@ INJECT:experienced_artillery_commander = {
 			}
 			multiply = 50
 		}
+		#kmpmp
 		if = {
 			limit = {
 				owner = {
@@ -230,6 +233,7 @@ INJECT:experienced_artillery_commander = {
 			}
 			multiply = 20
 		}
+		#kmpmp
 		if = {
 			limit = {
 				owner = {
@@ -313,6 +317,7 @@ INJECT:expert_artillery_commander = {
 			}
 			multiply = 50
 		}
+		#kmpmp
 		if = {
 			limit = {
 				owner = {
@@ -330,6 +335,7 @@ INJECT:expert_artillery_commander = {
 			}
 			multiply = 20
 		}
+		#kmpmp
 		if = {
 			limit = {
 				owner = {
