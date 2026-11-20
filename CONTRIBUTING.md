@@ -34,6 +34,17 @@ Use Git history for old code, PRs for completed migration decisions, issues for
 unresolved work, and comments to explain current behaviour or technical constraints.
 Explain any necessary disabled workaround briefly.
 
+## Database entry modes and modifiers
+
+- When converting `REPLACE` to `INJECT`, preserve the effective modifier unless
+  a balance change is approved. For each recipient and scaling path, the
+  additive delta is the intended total minus the inherited value, including
+  contributions from bundled mods. If the merge behavior is unclear, check
+  the game's schema before using this calculation.
+- During a vanilla update, let existing injections inherit new vanilla modifiers.
+  Copying an inherited numeric modifier into the injection counts it twice.
+  Recheck intentional KMPMP deltas when their vanilla base changes.
+
 ## Vanilla updates
 
 Follow updated vanilla behavior wherever it is compatible with the purpose of

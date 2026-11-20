@@ -65,6 +65,65 @@ is not needed for normal development.
 Use [GitHub issues](https://github.com/MasterSon-git/vic3-kmpmp/issues/new/choose)
 for reports and proposals.
 
+## Effective-modifier validation
+
+Use Node.js 18.15+ from the mod repository root. For an ordinary PR, compare the
+merge base and proposed mod against the same installed game directory.
+
+```powershell
+$base = git merge-base origin/main HEAD
+node scripts/validate-effective-modifiers.cjs --vanilla $gameDir --mod-base $base --mod-head HEAD
+```
+
+For compatibility updates, identify the previous and target vanilla snapshots
+and the corresponding mod revisions. For a vanilla reference Git repository
+with `src/game/common`, `game/common` or `common` at its root, run
+
+```powershell
+node scripts/validate-effective-modifiers.cjs --vanilla $vanillaRepo --old-vanilla-ref $oldGameRef --vanilla-ref $newGameRef --mod-base $oldModRef --mod-head $newModRef
+```
+
+Omit `--vanilla-ref` to read the current game files, including untracked files.
+Use `--old-vanilla $oldGameDir` for a separate previous installation. Omit both
+old-vanilla options to reuse the current game snapshot. Omit `--mod-head`
+to check local edits under `src/`. For historical pre-entry-mode mod bases
+only, `--legacy-base` enables the former implicit full-replacement behavior.
+The commands read Git objects directly and leave reference checkouts intact.
+
+The report groups new/changed and existing findings and previews five per
+severity. Use `--definition ID` or `--all` for details. Each numeric result
+shows the inherited vanilla value, any bundled mod base, the sum of injected
+mod contributions, the effective value, and its previous value.
+
+- **ERROR** means a conversion broke the prior total on an unchanged vanilla
+  field, or the effective value differs from a documented requirement.
+- **REVIEW** identifies duplicate contributions or flags, effective-value
+  changes, uncertain merges, and changed vanilla paths masked by replacements.
+- **ACCEPTED** means the total matches a documented requirement. Each mod
+  revision's `scripts/modifier-intent.json` records selected effective values
+  and their reasons, keyed by database/definition/complete field path.
+
+Exit code `1` indicates a new or changed `ERROR`. Code `2` indicates an input
+error. Other completed comparisons return `0`, including those with `REVIEW` findings.
+
+The checker applies same-path file shadowing and entry modes to the shared
+payload. `INJECT` adds to an existing modifier list and `REPLACE` discards the
+earlier entry. A missing target is reported for either strict mode, skipped
+for `TRY_*`, and created for `*_OR_CREATE`. The supported databases and
+recipient paths are listed in [the schema table](../scripts/effective-modifiers.cjs).
+The table follows the installed `common/` schemas, including
+`production_methods/production_methods.md`. Generated `docs/modifiers.log`
+can help verify modifier identities for the build in question.
+[Paradox documents the entry modes and additive arithmetic in Dev Diary 164.](https://forum.paradoxplaza.com/forum/developer-diary/victoria-3-dev-diary-164-marvelous-modding-monday.1868975/)
+
+Arithmetic covers direct numeric literals up to six decimal places in these
+containers and registered keys at the root of static modifiers. Boolean flags,
+expressions, repeated blocks and ordinary fields require source review.
+Totals describe isolated script contributions. External playsets, DLC gates,
+test overlays, runtime scaling and databases outside the table require
+separate inspection. Run the deterministic fixtures with
+`node --test --test-reporter=tap scripts/test-effective-modifiers.cjs`.
+
 ## Notices and Workshop publishing
 
 Each deployment calls `scripts/copy-legal-notices.ps1` after copying the payload.

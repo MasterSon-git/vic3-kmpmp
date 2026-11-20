@@ -1,0 +1,14 @@
+{
+  "company_types/company_csfa/prosperity_modifier/state_infrastructure_mult": {
+    "effective": 0.1,
+    "reason": "CSFA prosperity grants 10% infrastructure (#545, #606)"
+  },
+  "ship_types/ship_type_supply_ship/modifier/ship_supply_capacity_add": {
+    "effective": 1000,
+    "reason": "KMPMP doubles supply ship capacity (#627)"
+  },
+  "static_modifiers/in_default/building_throughput_add": {
+    "effective": -0.4,
+    "reason": "Ease the full-strength Default throughput penalty to 40% (#387, #684)"
+  }
+}
