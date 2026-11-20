@@ -34,7 +34,6 @@ Use Git history for old code, PRs for completed migration decisions, issues for
 unresolved work, and comments to explain current behaviour or technical constraints.
 Explain any necessary disabled workaround briefly.
 
-
 ## Source annotations for KMPMP changes
 
 - Use the exact, searchable marker `# kmpmp` (lowercase, one space after `#`)
@@ -64,7 +63,6 @@ Explain any necessary disabled workaround briefly.
   normalize legacy markers such as `#kmpmp`, `# 0.10` and `# = 0.15` only
   after verifying the actual meaning of each comment. Unclear cases require
   investigation rather than invented documentation.
-
 
 ## Database entry modes and modifiers
 
