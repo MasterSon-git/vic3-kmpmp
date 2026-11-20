@@ -157,6 +157,27 @@ function fieldAt(fields, path) {
     }
 }
 
+// A literal no is invalid even when other entries make the effective total opaque.
+function invalidBooleanModifiers(layers, types) {
+    const invalid = new Map();
+    for (const { db, node, file, mod } of layers) {
+        if (!mod) continue;
+        for (const container of containers[db].split(' ')) {
+            let entries = node.children;
+            for (const key of container.split('/').filter(Boolean)) {
+                entries = entries.filter(n => n.key === key && n.operator === '=').flatMap(n => n.children || []);
+            }
+            for (const entry of entries) {
+                if (entry.operator !== '=' || entry.value !== 'no' || !types.get(entry.key)) continue;
+                const path = container ? container + '/' + entry.key : entry.key;
+                if (!invalid.has(path)) invalid.set(path, new Set());
+                invalid.get(path).add(file);
+            }
+        }
+    }
+    return invalid;
+}
+
 function view(definition, types) {
     const layers = (definition?.layers || []).map(entry => ({ ...entry, fields: project(entry, types) }));
     const modEntries = (definition?.modEntries || []).map(entry => ({ ...entry, fields: project(entry, types) }));
@@ -193,7 +214,7 @@ function view(definition, types) {
         });
         return { vanilla, base, delta, total, inherited, added, modParts: modParts.join('|'), vanillaParts: vanillaParts.join('|') };
     }
-    return { layers, paths, full, injections, issues, at };
+    return { layers, paths, full, injections, issues, at, invalidBooleans: invalidBooleanModifiers(layers, types) };
 }
 
 // Compare structural paths, including opaque lists and repeated clauses. No

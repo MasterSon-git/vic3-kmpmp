@@ -112,6 +112,13 @@ function compare(before, after, oldIntents = {}, newIntents = {}, only) {
         for (const issue of now.issues) {
             findings.push({ id, kind: 'entry', level: 'REVIEW', existing: old.issues.includes(issue), reason: issue });
         }
+        for (const [path, files] of now.invalidBooleans) {
+            for (const file of files) {
+                findings.push({ id, path, file, kind: 'invalid-boolean', level: 'ERROR',
+                    existing: old.invalidBooleans.get(path)?.has(file) === true,
+                    reason: 'Boolean modifier only accepts yes (found no)' });
+            }
+        }
         if (now.issues.length) continue;
         for (const row of maskedFields(oldGame, game, now.full)) {
             findings.push({ ...row, id, level: 'REVIEW', existing: false, file: now.full.file });
@@ -126,6 +133,7 @@ function compare(before, after, oldIntents = {}, newIntents = {}, only) {
             before.modFiles.has(layer.file) !== after.modFiles.has(layer.file));
         const context = { id, old, now, oldGame, game, shadowChanged, types: after.loaded.types };
         for (const p of union(now.paths, old.paths, targets.keys())) {
+            if (now.invalidBooleans.has(p) && !targets.has(p)) continue;
             const row = inspectPath(p, context, previous.get(id)?.get(p), targets.get(p));
             if (row) findings.push({ ...row, id });
         }
@@ -152,7 +160,7 @@ const ascii = value => String(value).replace(/[^\x20-\x7e]/g, c => '\\u' + c.cha
 function print(findings, all) {
     console.log('Scope: shared src/common, supported databases and literal modifier paths (see docs/DEVELOPMENT.md).');
     // Put actionable arithmetic ahead of opaque fields in the bounded preview.
-    const priority = ['entry', 'conversion', 'duplicate', 'flag', 'requirement', 'change', 'masked', 'unsupported'];
+    const priority = ['entry', 'invalid-boolean', 'conversion', 'duplicate', 'flag', 'requirement', 'change', 'masked', 'unsupported'];
     for (const existing of [false, true]) for (const level of ['ERROR', 'REVIEW', 'ACCEPTED']) {
         const rows = findings.filter(row => row.existing === existing && row.level === level)
             .sort((a, b) => priority.indexOf(a.kind) - priority.indexOf(b.kind));
