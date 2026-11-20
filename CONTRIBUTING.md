@@ -36,19 +36,14 @@ Explain any necessary disabled workaround briefly.
 
 ## Database entry modes and modifiers
 
-- When converting a full replacement to an injection, preserve the former
-  effective contribution at each recipient and scaling path unless a balance
-  change has been approved. Calculate each additive delta as the intended
-  total minus the base that will actually load, including bundled definitions.
-- During a vanilla update, leave new vanilla modifiers to inheritance in
-  existing injections. Add a delta only for an intentional KMPMP difference.
-  Recalculate totals even for untouched injections when their base changes.
-- For changes to modifier overrides and for vanilla updates, run the
-  [effective-modifier check](docs/DEVELOPMENT.md#effective-modifier-validation).
-  Review new findings, including upstream fields masked by full replacements.
-  Verify uncertain merge behavior against the game schema or other evidence
-  before relying on a calculated value. Document intentional additions and
-  their effective values in the PR.
+- When converting `REPLACE` to `INJECT`, preserve the effective modifier unless
+  a balance change is approved. For each recipient and scaling path, the
+  additive delta is the intended total minus the inherited value, including
+  contributions from bundled mods. If the merge behavior is unclear, check
+  the game's schema before using this calculation.
+- During a vanilla update, let existing injections inherit new vanilla modifiers.
+  Copying an inherited numeric modifier into the injection counts it twice.
+  Recheck intentional KMPMP deltas when their vanilla base changes.
 
 ## Vanilla updates
 

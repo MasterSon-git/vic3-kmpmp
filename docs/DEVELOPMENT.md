@@ -96,15 +96,15 @@ shows the inherited vanilla value, any bundled mod base, the sum of injected
 mod contributions, the effective value, and its previous value.
 
 - **ERROR** means a conversion broke the prior total on an unchanged vanilla
-  field, or a documented effective value failed. A new/changed error exits 1.
+  field, or the effective value differs from a documented requirement.
 - **REVIEW** identifies duplicate contributions or flags, effective-value
   changes, uncertain merges, and changed vanilla paths masked by replacements.
-  Inspect the indicated sources and resolve intent in the PR. Existing findings
-  remain visible. Exit 0 allows review findings. Exit 2 indicates an input error.
-- **ACCEPTED** means the total matches a reviewed requirement. Record a durable
-  numeric requirement sparingly in `scripts/modifier-intent.json`, keyed by
-  database/definition/complete field path, with its effective value and reason.
-  Each mod revision supplies its own requirements.
+- **ACCEPTED** means the total matches a documented requirement. Each mod
+  revision's `scripts/modifier-intent.json` records selected effective values
+  and their reasons, keyed by database/definition/complete field path.
+
+Exit code `1` indicates a new or changed `ERROR`. Code `2` indicates an input
+error. Other completed comparisons return `0`, including those with `REVIEW` findings.
 
 The checker applies same-path file shadowing and entry modes to the shared
 payload. `INJECT` adds to an existing modifier list and `REPLACE` discards the

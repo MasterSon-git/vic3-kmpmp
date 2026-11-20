@@ -24,6 +24,11 @@ policy. These safeguards apply to automated work:
   Do not run the branch-deletion utility as part of routine setup.
 - Follow CONTRIBUTING.md's validation policy and review the final diff. Report
   what each check established and any material gaps.
+- Run the [effective-modifier validator](docs/DEVELOPMENT.md#effective-modifier-validation)
+  for changes to modifier contributions, entry-mode conversions and vanilla updates.
+  Investigate every new or changed `ERROR` and `REVIEW`. Correct the cause or
+  document in the PR why the result is acceptable. Exit code 0 can still leave
+  `REVIEW` findings open. Unchanged, pre-existing findings do not block independent work.
 - Keep issue and PR descriptions focused on the current outcome. Update the
   summary rather than appending work logs. Useful intermediate findings and
   progress may be discussed in comments, in moderation. Follow the writing
