@@ -2,10 +2,8 @@
 
 INJECT:electric_telegraph = {
 	modifier = {
-		# kmpmp
+		# KMPMP reduces radicalism from conquest (#233).
 		country_radicals_from_conquest_mult = -0.05
-
-		country_war_support_casualties_mult = -0.25
 	}
 }
 
@@ -22,11 +20,8 @@ INJECT:military_statistics = {
 
 INJECT:war_propaganda = {
 	modifier = {
-		# kmpmp
+		# KMPMP reduces radicalism from conquest (#233).
 		country_radicals_from_conquest_mult = -0.05
-
-		country_war_support_battles_increase_mult = 0.25
-		country_war_support_battles_decrease_mult = -0.2
 	}
 }
 

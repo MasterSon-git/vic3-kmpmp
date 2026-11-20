@@ -169,18 +169,6 @@ REPLACE:pm_brine_electrolysis = {
 	# required_input_goods = electricity
 }
 
-INJECT:pm_rayon = {
-	building_modifiers = {
-		workforce_scaled = {
-			# input goods
-			goods_input_wood_add = -20
-
-			# output goods
-			goods_output_dye_add = 10
-		}
-	}
-}
-
 REPLACE:pm_electric_arc_process = {
 	texture = "gfx/interface/icons/production_method_icons/electric_arc_process.dds"
 	
