@@ -24,7 +24,6 @@ policy. These safeguards apply to automated work:
   Do not run the branch-deletion utility as part of routine setup.
 - Follow CONTRIBUTING.md's validation policy and review the final diff. Report
   what each check established and any material gaps.
-
 - Follow CONTRIBUTING.md's source-comment convention: use `# kmpmp` for
   verified custom deviations, preserve inherited comments and distinguish
   `vanilla =` from `total =` when numerical context is known. Never guess
