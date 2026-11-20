@@ -34,6 +34,38 @@ Use Git history for old code, PRs for completed migration decisions, issues for
 unresolved work, and comments to explain current behaviour or technical constraints.
 Explain any necessary disabled workaround briefly.
 
+
+## Source annotations for KMPMP changes
+
+- Use the exact, searchable marker `# kmpmp` (lowercase, one space after `#`)
+  for intentional KMPMP deviations within inherited Vanilla or bundled-mod
+  definitions. Put it inline for an individual changed field or immediately
+  before a changed/added block. Do not label unchanged inherited lines or
+  duplicate the marker on every line of a marked block. Entirely original KMPMP
+  definitions do not need a marker on each field; keep upstream attribution
+  and existing source comments intact.
+- For a value changed in a full replacement, optionally record the verified
+  Vanilla reference value: `building_example_mult = 0.15 # kmpmp: vanilla = 0.10`.
+  For a numeric modifier added by an injection, optionally record its verified
+  effective contribution including applicable inherited modifiers:
+  `building_example_mult = 0.05 # kmpmp: total = 0.15`.
+  The code before `#` is always the actual assigned value. These annotations
+  describe the checked source version; they are not immutable balance targets.
+- For a non-obvious change use a short explanation, e.g.
+  `# kmpmp: Keep this modifier when replacing the Vanilla weight formula.`
+  Add a relevant issue or PR reference when useful. Numeric annotations are
+  optional and must be supported by the actual source and proven merge behavior.
+  Do not guess a Vanilla value or total, or present a context-dependent result
+  as unconditional. Prefer a qualitative comment or leave the number absent
+  when it cannot be verified.
+- During Vanilla updates, reassess whether the intended balance change remains
+  useful and refresh or remove stale numeric comments. Do not preserve a
+  historical total merely to satisfy a comment. When editing existing code,
+  normalize legacy markers such as `#kmpmp`, `# 0.10` and `# = 0.15` only
+  after verifying the actual meaning of each comment. Unclear cases require
+  investigation rather than invented documentation.
+
+
 ## Database entry modes and modifiers
 
 - When converting `REPLACE` to `INJECT`, preserve the effective modifier unless
