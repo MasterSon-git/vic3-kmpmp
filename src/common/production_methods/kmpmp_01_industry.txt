@@ -37,6 +37,7 @@ REPLACE:pm_electric_sewing_machines = {
 		}
 	}
 
+	# required_input_goods = electricity
 }
 
 # kmpmp: Electricity can be supplied through the national market.
@@ -65,6 +66,7 @@ REPLACE:pm_automatic_power_looms = {
 		}
 	}
 
+	# required_input_goods = electricity
 }
 
 # kmpmp: Electricity can be supplied through the national market.
@@ -99,6 +101,7 @@ REPLACE:pm_assembly_lines_building_furniture_manufactory = {
 		}
 	}
 
+	# required_input_goods = electricity
 }
 
 # kmpmp: Electricity can be supplied through the national market.
@@ -131,6 +134,7 @@ REPLACE:pm_assembly_lines_building_tooling_workshop = {
 		}
 	}
 
+	# required_input_goods = electricity
 }
 
 # kmpmp: Electricity can be supplied through the national market.
@@ -167,6 +171,7 @@ REPLACE:pm_brine_electrolysis = {
 		}
 	}
 
+	# required_input_goods = electricity
 }
 
 # kmpmp: Electricity can be supplied through the national market.
@@ -203,6 +208,7 @@ REPLACE:pm_electric_arc_process = {
 		}
 	}
 
+	# required_input_goods = electricity
 }
 
 # kmpmp: Electricity can be supplied through the national market.
@@ -238,6 +244,7 @@ REPLACE:pm_electric_engines = {
 		}
 	}
 
+	# required_input_goods = electricity
 }
 
 # kmpmp: Electricity can be supplied through the national market.
@@ -268,6 +275,7 @@ REPLACE:pm_assembly_lines_building_motor_industry = {
 		}
 	}
 
+	# required_input_goods = electricity
 }
 
 # kmpmp: Electricity can be supplied through the national market.
@@ -297,6 +305,7 @@ REPLACE:pm_assembly_lines_building_automotive_industry = {
 		}
 	}
 
+	# required_input_goods = electricity
 }
 
 # kmpmp: Electricity can be supplied through the national market.
@@ -339,6 +348,7 @@ REPLACE:pm_arc_welding_shipbuilding = {
 		}
 	}
 
+	# required_input_goods = electricity
 }
 
 # kmpmp: Electricity can be supplied through the national market.
@@ -359,6 +369,7 @@ REPLACE:pm_radios = {
 		}
 	}
 
+	# required_input_goods = electricity
 }
 
 INJECT:pm_bolt_action_rifles = {	
@@ -401,6 +412,7 @@ REPLACE:pm_assembly_lines_building_arms_industry = {
 		}
 	}
 
+	# required_input_goods = electricity
 }
 
 # kmpmp: Electricity can be supplied through the national market.
@@ -430,4 +442,5 @@ REPLACE:pm_assembly_lines_building_munition_plant = {
 		}
 	}
 
+	# required_input_goods = electricity
 }

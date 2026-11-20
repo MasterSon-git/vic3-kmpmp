@@ -18,4 +18,5 @@ REPLACE:electric_rollers = {
 		}
 	}
 
+	# required_input_goods = electricity
 }

@@ -1,13 +1,13 @@
 ﻿INJECT:state_birth_rate_mult={
-	decimals=2 # kmpmp
+	decimals=2 # kmpmp: vanilla = 0
 }
 
 INJECT:state_mortality_wealth_mult = {
-	decimals = 2 # kmpmp
+	decimals = 2 # kmpmp: vanilla = 1
 }
 
 INJECT:state_pollution_reduction_health_mult = {
-	decimals = 1 # kmpmp
+	decimals = 1 # kmpmp: vanilla = 0
 }
 
 unit_combat_unit_type_squad_infantry_offense_mult = {

@@ -9,7 +9,7 @@
         unit_combat_unit_type_interwar_heavy_tank_defense_mult = 0.05
 	}
 
-	# kmpmp: INJECT replaces this formula. Keep the inherited weights in order (#693).
+	# kmpmp: INJECT replaces the entire weight. Keep the Vanilla operations in order before the two KMPMP unit factors (#693).
 	weight = {
 		value = 2
 		if = {

@@ -432,9 +432,9 @@ STATE_GALICIA = {
     arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_vineyard" }
     capped_resources = {
         building_gold_mine = 2
-        building_iron_mine = 36 # kmpmp: vanilla = 4
+        building_iron_mine = 36 # kmpmp: vanilla = 4. Vanilla 1.11.1 used 14.
         building_logging_camp = 5
-        building_fishing_wharf = 12 # kmpmp: vanilla = 8
+        building_fishing_wharf = 12 # kmpmp: vanilla = 8. Vanilla 1.12.2 used 4.
         building_whaling_station = 1
     }
     naval_exit_id = 3029
@@ -453,12 +453,12 @@ STATE_ASTURIAS = {
     farm = "x525202"
     mine = "x0F84B8"
     wood = "x5060C0"
-    arable_land = 42 # kmpmp: vanilla = 21
+    arable_land = 42 # kmpmp: vanilla = 21. Vanilla 1.11.1 used 30.
     arable_resources = { "building_maize_farm" "building_livestock_ranch" }
     capped_resources = {
         building_gold_mine = 2
         building_coal_mine = 72
-        building_iron_mine = 40 # kmpmp: vanilla = 5
+        building_iron_mine = 40 # kmpmp: vanilla = 5. Vanilla 1.11.1 used 14.
         building_logging_camp = 5
         building_fishing_wharf = 7
     }
@@ -506,7 +506,7 @@ STATE_BASQUE_COUNTRY = {
     arable_land = 42
     arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_vineyard" }
     capped_resources = {
-        building_coal_mine = 60 # kmpmp: vanilla = 4
+        building_coal_mine = 60 # kmpmp: vanilla = 4. Vanilla 1.11.1 used 17.
         building_lead_mine = 3
         building_iron_mine = 65
         building_logging_camp = 11
@@ -553,7 +553,7 @@ STATE_CATALONIA = {
     # kmpmp
     capped_resources = {
         building_coal_mine = 24 # kmpmp: vanilla = 14
-        building_lead_mine = 37 # kmpmp: vanilla = 6
+        building_lead_mine = 37 # kmpmp: vanilla = 6. Vanilla 1.11.1 used 24.
         building_iron_mine = 22 # kmpmp: vanilla = 5
         building_logging_camp = 9 # kmpmp: vanilla = 6
         building_fishing_wharf = 12
@@ -596,7 +596,7 @@ STATE_LOWER_ANDALUSIA = {
     farm = "x3C4E5B"
     mine = "xD06000"
     wood = "x801020"
-    arable_land = 95 # kmpmp: vanilla = 67
+    arable_land = 95 # kmpmp: vanilla = 67. Vanilla 1.11.1 used 40.
     arable_resources = { "building_wheat_farm" "building_silk_plantation" "building_livestock_ranch" "building_cotton_plantation" "building_tobacco_plantation" "building_sugar_plantation" "building_vineyard" }
     capped_resources = {
         building_iron_mine = 4
@@ -748,8 +748,8 @@ STATE_ALENTEJO = {
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_banana_plantation" "building_vineyard" }
     # kmpmp
     capped_resources = {
-        building_coal_mine = 30 # kmpmp: vanilla = 4
-        building_iron_mine = 30 # kmpmp: vanilla = 16
+        building_coal_mine = 30 # kmpmp: vanilla = 4. Vanilla 1.11.1 used 28.
+        building_iron_mine = 30 # kmpmp: vanilla = 16. Vanilla 1.11.1 used 24.
         building_sulfur_mine = 22
         building_logging_camp = 10 # kmpmp: vanilla = 2
         building_fishing_wharf = 4

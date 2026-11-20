@@ -1,5 +1,5 @@
 ﻿# kmpmp
 INJECT:electricity = {
-	local = no #yes
+	local = no # kmpmp: vanilla = yes
 	tradeable = no
 }

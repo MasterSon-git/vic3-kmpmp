@@ -375,12 +375,12 @@ alk_breakup.1 = {
 				annex = c:ATB
 			}
 			change_tag = ATB
-			add_primary_culture = cu:cherokee # kmpmp
+			add_primary_culture = cu:cherokee # kmpmp: vanilla = cu:athabaskan
 			set_country_type = recognized
 		}
 		else = {
 			change_tag = ATB
-			add_primary_culture = cu:cherokee # kmpmp
+			add_primary_culture = cu:cherokee # kmpmp: vanilla = cu:athabaskan
 		}
 		trigger_event = { id = independence.2 days = 1 }
 		custom_tooltip = {

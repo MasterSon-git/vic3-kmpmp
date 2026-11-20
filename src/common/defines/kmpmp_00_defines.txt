@@ -1,4 +1,5 @@
 ﻿NPolitics = {
+	# The treaty bonus currently uses Vanilla’s rank scaling.
 	LAW_ENACTMENT_LAW_COMMITMENT_EFFECT = 0.05 # Committing to enacting a law via treaty adds this much to pass chance, scaled by the number of ranks the country the comittee has on the committer
 }
 
@@ -21,7 +22,7 @@ NCharacters = {
 
 NWar = {
 	DEVASTATION_MAX = 100.0
-	WAR_SUPPORT_CHANGE_KIA_FACTOR = -0.825 # kmpmp: vanilla = -2.0. Retain the reduced casualty penalty after the change to signed war support.
+	WAR_SUPPORT_CHANGE_KIA_FACTOR = -0.825 # kmpmp: vanilla = -2.0. Scale the signed 1.15 casualty penalty by the previous KMPMP/Vanilla ratio (1.65 / 4.0).
 
 	NAVAL_INVASION_PREPARATION_DURATION_DAYS = 30 # kmpmp: vanilla = 14 # How many days should pass since the first army arrived to the naval invasion front to start advancing it without the sea node being blocked by enemy fleet
 	LAND_INVASION_PREPARATION_DURATION_DAYS = 30 # kmpmp: vanilla = 14 # How many days should pass since the first army arrived to the invasion front to start advancing it

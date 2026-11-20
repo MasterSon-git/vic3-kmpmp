@@ -640,8 +640,8 @@ REPLACE_OR_CREATE:combat_unit_type_fort_buster_artillery = {
     battle_modifier = {
         unit_offense_add = 55
         unit_defense_add = 30
-        unit_morale_loss_add = 5
-        unit_kill_rate_add = 0.35
+        unit_morale_loss_add = 5 # Vanilla siege artillery = 6 (source unit for Fort Buster, #439).
+        unit_kill_rate_add = 0.35 # Vanilla siege artillery = 0.25 (source unit for Fort Buster, #439).
         unit_devastation_mult = 0.2
         unit_occupation_mult = 0.1
         unit_naval_invasion_efficiency_mult = -0.25
@@ -952,7 +952,7 @@ REPLACE:combat_unit_type_cuirassiers = {
     supply_capacity = 40
 
     upkeep_modifier = {
-        goods_input_grain_add = 2
+        goods_input_grain_add = 2 #1
         goods_input_small_arms_add = 0.5 # kmpmp: vanilla = 2
         goods_input_iron_add = 1
     }
@@ -1016,7 +1016,7 @@ REPLACE:combat_unit_type_lancers = {
     upkeep_modifier = {
         goods_input_grain_add = 2
         goods_input_small_arms_add = 1 # kmpmp: vanilla = 2
-		goods_input_iron_add = 3 # kmpmp: vanilla = 2
+		goods_input_iron_add = 3 # kmpmp: vanilla = 2. KMPMP already used 3 before #545.
     }
 
     # kmpmp

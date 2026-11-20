@@ -3,7 +3,7 @@
 
 	speed = 1.5
 	min_caravan_distance = 35.0
-	max_count = 0
+	max_count = 0 #50
 	max_path_length = 10
 	side_offset = 1
 	path_generation_mode = naval

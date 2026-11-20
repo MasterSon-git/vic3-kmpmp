@@ -35,6 +35,7 @@ REPLACE:pm_electric_fencing = {
 		}
 	}
 
+	# required_input_goods = electricity
 }
 
 # kmpmp: Electricity can be supplied through the national market.
@@ -55,6 +56,7 @@ REPLACE:pm_refrigerated_storage_building_livestock_ranch = {
 		}
 	}
 
+	# required_input_goods = electricity
 }
 
 # kmpmp: Electricity can be supplied through the national market.
@@ -76,4 +78,5 @@ REPLACE:pm_refrigerated_rail_cars_building_livestock_ranch = {
 		}
 	}
 
+	# required_input_goods = electricity
 }

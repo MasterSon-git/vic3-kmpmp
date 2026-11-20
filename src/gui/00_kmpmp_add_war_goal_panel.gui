@@ -26,6 +26,7 @@ types wargoal_types
 
 			button = {
 				enabled = "[WarGoal.IsValid]"
+				# Use the native toggle here. The KMPMP scripted GUI could not track which war goals were pressed.
 				onclick = "[Execute( WarGoal.ToggleIsPressedInPotentialPeaceDeal( GetPlayer.Self ) )]"
 				visible = "[IsValid( WarGoal.ToggleIsPressedInPotentialPeaceDeal( GetPlayer.Self ) )]"
 				using = default_button
@@ -102,6 +103,7 @@ types wargoal_types
 
 			button = {
 				enabled = "[WarGoal.IsValid]"
+				# Use the native toggle here. The KMPMP scripted GUI could not track which war goals were pressed.
 				onclick = "[Execute( WarGoal.ToggleIsPressedInPotentialPeaceDeal( GetPlayer.Self ) )]"
 				visible = "[IsValid( WarGoal.ToggleIsPressedInPotentialPeaceDeal( GetPlayer.Self ) )]"
 				using = default_button

@@ -94,7 +94,7 @@ REPLACE:company_allatini_mills = {
 		country_loyalism_increases_open_prejudice_mult = 0.1
 		country_loyalism_increases_cultural_erasure_mult = 0.1
 		country_loyalism_increases_violent_hostility_mult = 0.1
-		state_birth_rate_mult = 0.02 # kmpmp: Raise the company’s birth rate bonus.
+		state_birth_rate_mult = 0.02 # kmpmp: KMPMP used 0.018 before #545.
 	}
 
 	ai_will_do = {
@@ -178,7 +178,7 @@ REPLACE:company_sunhwaguk = {
 	}
 
 	possible = {
-		has_technology_researched = mutual_funds # kmpmp
+		has_technology_researched = mutual_funds # kmpmp: vanilla = central_planning
 		any_scope_state = {
 			state_region = {
 				is_homeland = cu:korean
@@ -357,7 +357,7 @@ REPLACE:company_san_miguel = {
 
 	# kmpmp
 	possible = {
-		has_technology_researched = mutual_funds #corporate_charters
+		has_technology_researched = mutual_funds # kmpmp: vanilla = corporate_charters
 		owns_or_has_subject_entire_state_region_and_is_incorporated = { STATE_REGION = s:STATE_LUZON }
 		owns_or_has_subject_entire_state_region_and_is_incorporated = { STATE_REGION = s:STATE_VISAYAS }
 		owns_or_has_subject_entire_state_region_and_is_incorporated = { STATE_REGION = s:STATE_MINDANAO }	
@@ -371,7 +371,7 @@ REPLACE:company_san_miguel = {
 	}
 
 	ai_will_do = {
-		has_technology_researched = mutual_funds # kmpmp
+		has_technology_researched = mutual_funds # kmpmp: vanilla = corporate_charters
 		any_scope_state = {
 			region = sr:region_indonesia
 			is_incorporated = yes

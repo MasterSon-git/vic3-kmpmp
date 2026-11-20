@@ -15,7 +15,7 @@
 
 # kmpmp
 INJECT:great_power = {
-	prestige_relative_threshold = 0.65
+	prestige_relative_threshold = 0.65 # kmpmp: vanilla = 0.75
 
 	modifier = {
 		country_kmpmp_power_bloc_mandate_progress_mult = 0.15
@@ -24,7 +24,7 @@ INJECT:great_power = {
 
 # kmpmp
 INJECT:major_power = {
-	prestige_relative_threshold = 0.4
+	prestige_relative_threshold = 0.4 # kmpmp: vanilla = 0.5
 
 	modifier = {
 		country_influence_mult = -0.15
@@ -33,7 +33,7 @@ INJECT:major_power = {
 
 # kmpmp
 INJECT:minor_power = {
-	prestige_relative_threshold = 0.14
+	prestige_relative_threshold = 0.14 # kmpmp: vanilla = 0.15
 
 	modifier = {
 		country_influence_mult = -0.25

@@ -230,10 +230,11 @@ REPLACE:company_argentinian_wine = {
 	# kmpmp: Allow other countries in La Plata to establish the company.
 	potential = {
 		has_dlc_feature = rp1_content
+		# c:ARG ?= this
 	}
 
 	possible = {
-		has_technology_researched = mutual_funds # kmpmp
+		has_technology_researched = mutual_funds # kmpmp: vanilla = central_planning
 		any_scope_state = {
 			region = sr:region_la_plata
 			is_incorporated = yes

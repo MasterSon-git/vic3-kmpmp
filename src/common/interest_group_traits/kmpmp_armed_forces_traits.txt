@@ -1,4 +1,4 @@
-﻿
+﻿# kmpmp: Japan’s national bonus event assigns Battotai with set_ig_trait.
 REPLACE_OR_CREATE:kmpmp_ig_trait_battotai = {
 	icon = "gfx/interface/icons/ig_trait_icons/patriotic_fervor.dds"
 	min_approval = loyal

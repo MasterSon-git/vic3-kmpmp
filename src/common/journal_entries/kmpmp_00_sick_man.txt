@@ -92,7 +92,7 @@
 		}
 	}
 
-	timeout = 10950 # kmpmp: vanilla = 10950
+	timeout = 10950 # Vanilla now also uses 10950 days. KMPMP extended the previous 7300 days in #265.
 
 	current_value = {
 		value = var:sick_man_var

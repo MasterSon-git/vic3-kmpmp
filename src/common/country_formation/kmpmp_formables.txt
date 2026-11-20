@@ -111,7 +111,7 @@ REPLACE_OR_CREATE:LTN = {
 		STATE_CRETE
 	}
 
-	required_states_fraction = 0.604
+	required_states_fraction = 0.604 # kmpmp: Use a fraction for the 32-of-53 state calculation. The earlier KMPMP fraction was 0.63.
 	
 
 	ai_will_do = { has_technology_researched = pan-nationalism }

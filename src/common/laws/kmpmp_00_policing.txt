@@ -18,7 +18,7 @@ REPLACE:law_militarized_police = {
 	progressiveness = -100
 
 	unlocking_technologies = {
-		identification_documents # kmpmp
+		identification_documents # kmpmp: vanilla = mass_surveillance
 	}
 
 	modifier = {

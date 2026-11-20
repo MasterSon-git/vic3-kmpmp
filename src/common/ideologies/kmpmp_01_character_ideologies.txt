@@ -68,7 +68,7 @@
 	}
 
 	country_trigger = {
-		has_technology_researched = nationalism # kmpmp
+		has_technology_researched = nationalism # kmpmp: vanilla = political_agitation
 		NOT = {
 			c:BRZ ?= this
 		}

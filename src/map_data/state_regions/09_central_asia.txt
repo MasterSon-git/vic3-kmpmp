@@ -417,6 +417,7 @@ STATE_KANDAHAR = {
     capped_resources = {
         building_logging_camp = 2
         building_coal_mine = 4
+        # building_iron_mine = 5
     }
 
     min_cold_effect = 0.00

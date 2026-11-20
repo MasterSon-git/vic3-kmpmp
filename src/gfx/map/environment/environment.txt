@@ -75,7 +75,7 @@ ssao = {
 	enabled = yes
 
 	# Settings
-	samples = 4 # Sample iterations
+	samples = 4 # Performance setting in the KMPMP import					# Sample iterations
 	radius = 0.06				# Radius for sample point, less means tighter samples and crisper edges
 	max_radius = 0.003			# Culling distance
 	depth_distance = 0.5		# Depth distance for sample point

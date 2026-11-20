@@ -161,7 +161,7 @@ kmpmp_mexico_integrate_the_mesoamericans = {
 			value = 0.05
 		}
 
-		# kmpmp: Apply the loyalist bonus once to the merged culture.
+		# kmpmp: Apply the loyalist bonus once after merging Nahua and Tarascan into mayan.
 		add_loyalists = {
 			value = 0.05
 			culture = cu:mayan
@@ -207,7 +207,7 @@ kmpmp_integrate_the_mesoamericans = {
 			culture = cu:south_andean
 		}
 
-		# kmpmp: Apply the loyalist bonus once to the merged culture.
+		# kmpmp: Apply the loyalist bonus once after merging Quechua and Aimara into amazonian.
 		add_loyalists = {
 			value = 0.05
 			culture = cu:amazonian

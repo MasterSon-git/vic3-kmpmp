@@ -8,9 +8,8 @@
     }
     
     building_modifiers = {
-        # kmpmp: Increase the input cost of the fort upgrade.
         workforce_scaled = {
-            goods_input_small_arms_add = 0.275
+            goods_input_small_arms_add = 0.275 # kmpmp: upstream = 0.25
         }
     }
     
@@ -31,12 +30,11 @@ FAE_pm_gatling_guns = {
     }
     
     building_modifiers = {
-        # kmpmp: Increase the fort’s input costs and reduce its defense bonus.
         workforce_scaled = {
-            goods_input_small_arms_add = 0.55
-            goods_input_ammunition_add = 0.55
+            goods_input_small_arms_add = 0.55 # kmpmp: upstream = 0.5
+            goods_input_ammunition_add = 0.55 # kmpmp: upstream = 0.5
             
-            unit_defense_add   = 0.9
+            unit_defense_add   = 0.9 # kmpmp: upstream = 1
             unit_kill_rate_add = 0.01
         }
     }
@@ -58,12 +56,11 @@ FAE_pm_auto_machine_guns = {
     }
     
     building_modifiers = {
-        # kmpmp: Increase the fort’s input costs and reduce its defense bonus.
         workforce_scaled = {
-            goods_input_small_arms_add = 1.1
-            goods_input_ammunition_add = 1.1
+            goods_input_small_arms_add = 1.1 # kmpmp: upstream = 1
+            goods_input_ammunition_add = 1.1 # kmpmp: upstream = 1
             
-            unit_defense_add   = 1.8
+            unit_defense_add   = 1.8 # kmpmp: upstream = 2
             unit_kill_rate_add = 0.02
         }
     }

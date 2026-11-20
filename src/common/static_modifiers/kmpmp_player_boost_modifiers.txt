@@ -39,7 +39,7 @@ kmpmp_player_boost_imperialism_oversea_empire = {
     state_trade_advantage_mult = 0.2
     # +20% colonial growth
     state_colony_growth_speed_mult = 0.2
-    # Ship armor and hull damage
+    # +10% ship armor and hull damage
     ship_armor_mult = 0.1
     ship_hull_damage_mult = 0.1
     # -20% supply consumption 
@@ -116,7 +116,8 @@ kmpmp_player_boost_state_capitalism = {
     country_society_tech_research_speed_mult = -0.05
     # +10% dividends tax
     tax_dividends_add = 0.1
-    country_government_dividends_efficiency_add = 0.0
+    country_government_dividends_efficiency_add = 0.0 # The original #545 note recorded +5% alongside this zero bonus.
+    # Reduce decree costs by 15.5%.
     state_decree_cost_mult = -0.155
     # +10% building sector throughput
     building_construction_sector_throughput_add = 0.1
@@ -376,7 +377,7 @@ kmpmp_player_boost_arsenal_of_democrazy = {
     # +10% Army Off / Def
     unit_army_defense_mult = 0.1
     unit_army_offense_mult = 0.1
-    # Ship armor and hull damage
+    # +2.5% ship armor and hull damage
     ship_armor_mult = 0.025
     ship_hull_damage_mult = 0.025
     # +50 Authority

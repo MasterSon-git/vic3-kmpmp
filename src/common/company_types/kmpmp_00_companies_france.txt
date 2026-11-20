@@ -55,7 +55,7 @@ REPLACE:company_cgv = {
 	}
 
 	possible = {
-		has_technology_researched = mutual_funds # kmpmp
+		has_technology_researched = mutual_funds # kmpmp: vanilla = joint_stock_companies
 		any_scope_state = {
 			state_region = s:STATE_CHAMPAGNE
 			is_incorporated = yes
@@ -69,7 +69,7 @@ REPLACE:company_cgv = {
 	prosperity_modifier = {
 		country_prestige_mult = 0.15
 		building_vineyard_throughput_add = 0.1
-		state_birth_rate_mult = 0.02 # kmpmp
+		state_birth_rate_mult = 0.02 # kmpmp: KMPMP used 0.006 before #545.
 	}
 
 	ai_will_do = {
@@ -146,7 +146,7 @@ REPLACE:company_mines_anzin = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_coal_mine
-				level >= 10 # kmpmp
+				level >= 10 # kmpmp: Vanilla 1.13.11 used 5.
 			}
 		}
 	}

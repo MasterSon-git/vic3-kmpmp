@@ -5,7 +5,7 @@ INJECT:base_values = {
 
 # kmpmp
 INJECT:in_default = {
-	building_throughput_add = 0.1 # kmpmp: total = -0.4 at full Default strength (#387).
+	building_throughput_add = 0.1 # kmpmp: total = -0.4 at full Default strength, eased from Vanilla’s -50% (#387).
 	# -200% training rate
 	building_training_rate_mult = -2.0
 }

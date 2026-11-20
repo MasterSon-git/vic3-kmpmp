@@ -1,5 +1,6 @@
 ﻿REPLACE:AMZ = {
     # kmpmp: List the original states explicitly because their cultures have been merged.
+    # use_culture_states = yes
     states = {
         STATE_MATO_GROSSO
         STATE_AMAZONAS
@@ -16,6 +17,7 @@
 
 REPLACE:CHE = {
     # kmpmp: List the original states explicitly because their cultures have been merged.
+    # use_culture_states = yes
     states = {
         STATE_ARKANSAS
         STATE_OKLAHOMA
@@ -26,6 +28,7 @@ REPLACE:CHE = {
 
 REPLACE:EGY = {
     # kmpmp: List the original states explicitly because their cultures have been merged.
+    # use_culture_states = yes
     states = {
         STATE_SINAI
         STATE_EGYPTIAN_DESERT
@@ -42,6 +45,7 @@ REPLACE:EGY = {
 
 REPLACE:OCC = {
     # kmpmp: Exclude Rhône from releasable Occitania.
+	# use_culture_states = yes
     states = {
         STATE_PROVENCE
         STATE_LANGUEDOC

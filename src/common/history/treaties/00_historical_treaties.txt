@@ -8,7 +8,8 @@
 
 		is_draft = no
 		entered_into_force_on = 1815.10.26
-		# kmpmp: Shorten the remaining Holy Alliance commitment at game start.
+		# kmpmp: Leave about seven years of the Holy Alliance commitment at game start.
+		# binding_period = { years = 35 } # 14 years to cover the Revolutions of 1848
 		binding_period = { years = 28 }
 
 		articles_to_create = {
@@ -25,7 +26,8 @@
 
 		is_draft = no
 		entered_into_force_on = 1815.10.26
-		# kmpmp: Shorten the remaining Holy Alliance commitment at game start.
+		# kmpmp: Leave about seven years of the Holy Alliance commitment at game start.
+		# binding_period = { years = 35 } # 14 years to cover the Revolutions of 1848
 		binding_period = { years = 28 }
 
 		articles_to_create = {
@@ -42,7 +44,8 @@
 
 		is_draft = no
 		entered_into_force_on = 1815.10.26
-		# kmpmp: Shorten the remaining Holy Alliance commitment at game start.
+		# kmpmp: Leave about seven years of the Holy Alliance commitment at game start.
+		# binding_period = { years = 35 } # 14 years to cover the Revolutions of 1848
 		binding_period = { years = 28 }
 
 		articles_to_create = {
@@ -68,6 +71,7 @@
 			is_draft = no
 			entered_into_force_on = 1834.4.22
 			# kmpmp: Allow the treaty to end at game start.
+			# binding_period = { years = 10 } # 8 years
 			binding_period = { years = 1 }
 
 			articles_to_create = {
@@ -115,6 +119,7 @@
 			is_draft = no
 			entered_into_force_on = 1834.4.22
 			# kmpmp: Allow the treaty to end at game start.
+			# binding_period = { years = 10 } # 8 years
 			binding_period = { years = 1 }
 
 			articles_to_create = {

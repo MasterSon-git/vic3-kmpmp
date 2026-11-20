@@ -13,7 +13,8 @@ kmpmp_war_support_from_occupation = {
     else = { value = -10.0 }
 }
 
-# kmpmp: Combine the incorporated-state occupation penalty with vanilla war support and enemy pressure.
+# kmpmp: Add the incorporated-state occupation penalty to the Vanilla 1.15 war_support_change formula.
+# Keep engine enemy pressure, war-goal progress, signed event changes, economics, lobbies and DLC checks.
 REPLACE:war_support_change = {
 	# save all values that make up the war support change calculation since we frequently refer to them numerous times below
 	value = enemy_occupation

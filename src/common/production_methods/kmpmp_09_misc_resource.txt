@@ -24,6 +24,7 @@ REPLACE:pm_electric_saw_mills = {
 		}
 	}
 
+	# required_input_goods = electricity
 }
 
 # kmpmp: Electricity can be supplied through the national market.
@@ -47,6 +48,7 @@ REPLACE:pm_refrigerated_storage_building_fishing_wharf = {
 		}
 	}
 
+	# required_input_goods = electricity
 }
 
 # kmpmp: Electricity can be supplied through the national market.
@@ -77,6 +79,7 @@ REPLACE:pm_refrigerated_rail_cars_building_fishing_wharf = {
 		}
 	}
 
+	# required_input_goods = electricity
 }
 
 # kmpmp: Electricity can be supplied through the national market.
@@ -101,6 +104,7 @@ REPLACE:pm_flash_freezing_building_fishing_wharf = {
 		}
 	}
 
+	# required_input_goods = electricity
 }
 
 # kmpmp: Electricity can be supplied through the national market.
@@ -124,6 +128,7 @@ REPLACE:pm_refrigerated_storage_building_whaling_station = {
 		}
 	}
 
+	# required_input_goods = electricity
 }
 
 # kmpmp: Electricity can be supplied through the national market.
@@ -154,6 +159,7 @@ REPLACE:pm_refrigerated_rail_cars_building_whaling_station = {
 		}
 	}
 
+	# required_input_goods = electricity
 }
 
 # kmpmp: Electricity can be supplied through the national market.
@@ -178,6 +184,7 @@ REPLACE:pm_flash_freezing_building_whaling_station = {
 		}
 	}
 
+	# required_input_goods = electricity
 }
 
 INJECT:pm_steam_derricks = {

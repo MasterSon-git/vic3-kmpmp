@@ -156,7 +156,7 @@
 				value = 1
 			}
 		}
-		# kmpmp: Low average standard of living reduces recognition progress.
+		# kmpmp: Keep the low standard-of-living penalty to recognition progress removed in Vanilla 1.9.6.
 		progress_condition = {
 			limit = {
 				# Your Standard of Living is relatively low

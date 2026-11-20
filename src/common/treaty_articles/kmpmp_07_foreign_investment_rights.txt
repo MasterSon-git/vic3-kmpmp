@@ -78,6 +78,7 @@
 		}
 
 
+		# kmpmp: Either side can offer investment rights, so the offer does not require the other country to have 25 influence.
 		# kmpmp: Restrict player investment agreements with Chinese countries while China is AI-controlled.
 		trigger_if = {
 			limit = {

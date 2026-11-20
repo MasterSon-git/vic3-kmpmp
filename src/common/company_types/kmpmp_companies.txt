@@ -354,7 +354,7 @@ REPLACE_OR_CREATE:company_shell = {
 
 	prosperity_modifier = {
 		country_ship_group_supply_ships_construction_efficiency_add = 0.15
-		building_power_plant_throughput_add = 0.10
+		building_power_plant_throughput_add = 0.10 # kmpmp: KMPMP used 0.05 before #545.
 		building_textile_mill_throughput_add = 0.1
 	}
 

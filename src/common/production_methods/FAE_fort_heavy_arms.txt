@@ -8,12 +8,11 @@
     }
     
     building_modifiers = {
-        # kmpmp: Increase the fort’s input costs and reduce its defense bonus.
         workforce_scaled = {
-            goods_input_artillery_add = 1.1
-            goods_input_tools_add     = 1.1
+            goods_input_artillery_add = 1.1 # kmpmp: upstream = 1
+            goods_input_tools_add     = 1.1 # kmpmp: upstream = 1
             
-            unit_defense_add   = 0.9
+            unit_defense_add   = 0.9 # kmpmp: upstream = 1
             unit_kill_rate_add = 0.01
         }
     }
@@ -35,13 +34,12 @@ FAE_pm_casemates = {
     }
     
     building_modifiers = {
-        # kmpmp: Increase the fort’s input costs and reduce its defense bonus.
         workforce_scaled = {
-            goods_input_artillery_add  = 1.1
-            goods_input_ammunition_add = 1.1
-            goods_input_tools_add      = 1.1
+            goods_input_artillery_add  = 1.1 # kmpmp: upstream = 1
+            goods_input_ammunition_add = 1.1 # kmpmp: upstream = 1
+            goods_input_tools_add      = 1.1 # kmpmp: upstream = 1
             
-            unit_defense_add   = 1.8
+            unit_defense_add   = 1.8 # kmpmp: upstream = 2
             unit_kill_rate_add = 0.02
         }
     }
@@ -63,14 +61,13 @@ FAE_pm_turrets = {
     }
     
     building_modifiers = {
-        # kmpmp: Increase the fort’s input costs and reduce its defense bonus.
         workforce_scaled = {
-            goods_input_artillery_add  = 2.2
-            goods_input_ammunition_add = 2.2
-            goods_input_tools_add      = 2.2
-            goods_input_engines_add    = 1.1
+            goods_input_artillery_add  = 2.2 # kmpmp: upstream = 2
+            goods_input_ammunition_add = 2.2 # kmpmp: upstream = 2
+            goods_input_tools_add      = 2.2 # kmpmp: upstream = 2
+            goods_input_engines_add    = 1.1 # kmpmp: upstream = 1
             
-            unit_defense_add   = 2.7
+            unit_defense_add   = 2.7 # kmpmp: upstream = 3
             unit_kill_rate_add = 0.03
         }
         

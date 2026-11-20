@@ -7,6 +7,7 @@
 kmpmp_integrate_mesoamericans_positive = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 
+    # The integration decision grants this 3% birth-rate bonus for five years.
     state_birth_rate_mult = 0.03
 }
 kmpmp_manifest_mexico = {

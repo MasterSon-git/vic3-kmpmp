@@ -81,7 +81,7 @@ sick_man.1 = {
 }
 
 # Success event
-# kmpmp: Use sick_man.4 for the Tanzimat success outcome.
+# kmpmp: Use sick_man.4 in place of sick_man.2 for the Tanzimat success outcome.
 sick_man.2 = {
 	type = country_event
 	placement = root
@@ -362,7 +362,7 @@ sick_man.3 = {
 	}
 }
 
-# kmpmp: Use sick_man.4 for the Tanzimat success outcome.
+# kmpmp: Use sick_man.4 in place of sick_man.2 for the Tanzimat success outcome.
 sick_man.4 = {
 	type = country_event
 	placement = root

@@ -88,7 +88,7 @@ REPLACE:company_basic_colonial_plantations_2 = {
 			any_scope_building = {
 				OR = {
 					is_building_type = building_coffee_plantation
-					is_building_type = building_tea_plantation # kmpmp
+					is_building_type = building_tea_plantation # kmpmp: Vanilla 1.13.11 used building_sugar_plantation.
 					#is_building_type = building_tobacco_plantation
 				}
 				level >= 5

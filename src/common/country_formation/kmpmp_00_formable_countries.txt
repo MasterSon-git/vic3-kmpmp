@@ -6,7 +6,7 @@
 	ai_will_do = { always = yes }
 
 	possible = {
-		has_technology_researched = nationalism # kmpmp
+		has_technology_researched = nationalism # kmpmp: vanilla = pan-nationalism
 		trigger_if = {
 			limit = {
 				capital ?= {
@@ -64,7 +64,7 @@ REPLACE:ARA = {
 	ai_will_do = { always = yes }
 
 	possible = {
-		has_technology_researched = nationalism # kmpmp
+		has_technology_researched = nationalism # kmpmp: vanilla = pan-nationalism
 	}
 }
 

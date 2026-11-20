@@ -296,7 +296,7 @@ caucasuswar.9 = { #Muhammad Amin's arrival
 		create_character = {
 			template = CIR_Muhammad_Amin_Asiyalav
 		}
-		add_primary_culture = cu:georgian # kmpmp
+		add_primary_culture = cu:georgian # kmpmp: Vanilla 1.13.11 used cu:north_caucasian.
 		ig:ig_devout ?= {
 			add_modifier = {
 				name = modifier_accepted_muhammad_amin
@@ -443,13 +443,13 @@ caucasuswar_end.3 = {
 		scope:dagestan_state = {
 			add_radicals_in_state = {
 				value = very_large_radicals
-				culture = cu:georgian # kmpmp
+				culture = cu:georgian # kmpmp: Vanilla 1.13.11 used cu:north_caucasian.
 			}
 		}
 		scope:north_caucasus_state = {
 			add_radicals_in_state = {
 				value = very_large_radicals
-				culture = cu:georgian # kmpmp
+				culture = cu:georgian # kmpmp: Vanilla 1.13.11 used cu:north_caucasian.
 			}
 		}
 		hidden_effect = {

@@ -21,6 +21,7 @@ REPLACE:pm_arcades = {
 		}
 	}
 
+	# required_input_goods = electricity
 }
 
 # kmpmp: Electricity can be supplied through the national market.
@@ -51,6 +52,7 @@ REPLACE:pm_electric_streetlights = {
 		}
 	}
 
+	# required_input_goods = electricity
 }
 
 # kmpmp: Electricity can be supplied through the national market.
@@ -72,6 +74,7 @@ REPLACE:pm_film_art = {
 		}
 	}
 
+	# required_input_goods = electricity
 }
 
 INJECT:pm_principle_freedom_of_movement_3 = {

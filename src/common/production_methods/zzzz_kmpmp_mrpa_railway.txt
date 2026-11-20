@@ -46,6 +46,7 @@ REPLACE:pm_electric_trains = {
 		}
 	}
 
+	# required_input_goods = electricity
 }
 
 # kmpmp: Electricity can be supplied through the national market.
@@ -84,6 +85,7 @@ REPLACE:pm_electric_trains_principle_transport_3 = {
 		}
 	}
 
+	# required_input_goods = electricity
 }
 
 INJECT:pm_diesel_trains = {
@@ -113,6 +115,7 @@ REPLACE:pm_electric_passenger_carriages = {
 			building_employment_machinists_add = 100
 		}
 	}	
+	# required_input_goods = electricity
 }
 
 # kmpmp: Electricity can be supplied through the national market.
@@ -138,4 +141,5 @@ REPLACE:pm_electrified_railway = {
 			state_infrastructure_add = 10
 		}
 	}
+	# required_input_goods = electricity
 }

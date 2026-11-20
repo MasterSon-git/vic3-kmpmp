@@ -5,7 +5,7 @@
 	culture = cu:french
 	role = heir
 	birth_date = 1810.9.3
-	interest_group = ig_industrialists # kmpmp
+	interest_group = ig_industrialists # kmpmp: vanilla = ig_armed_forces
 	ideology = ideology_orleanist
 	home_region = STATE_ILE_DE_FRANCE
 	traits = {

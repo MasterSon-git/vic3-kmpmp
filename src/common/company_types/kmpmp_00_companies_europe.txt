@@ -81,7 +81,7 @@ REPLACE:company_basileiades = {
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
-				state_region = s:STATE_PELOPONNESE # kmpmp
+				state_region = s:STATE_PELOPONNESE # kmpmp: vanilla = s:STATE_ATTICA
 			}
 		}
 	}
@@ -89,7 +89,7 @@ REPLACE:company_basileiades = {
 	possible = {
 		has_technology_researched = railways
 		any_scope_state = {
-			state_region = s:STATE_PELOPONNESE # kmpmp
+			state_region = s:STATE_PELOPONNESE # kmpmp: vanilla = s:STATE_ATTICA
 			is_incorporated = yes
 			any_scope_building = {
 				OR = {
@@ -211,7 +211,7 @@ REPLACE:company_ursus = {
 	}
 
 	possible = {
-		has_technology_researched = pumpjacks # kmpmp
+		has_technology_researched = pumpjacks # kmpmp: vanilla = combustion_engine
 		any_scope_state = {
 			state_region = s:STATE_GREATER_POLAND
 			is_incorporated = yes
@@ -386,7 +386,7 @@ REPLACE:company_mozambique_company = {
 	}
 
 	possible = {
-		has_technology_researched = corporate_charters # kmpmp
+		has_technology_researched = corporate_charters # kmpmp: vanilla = mutual_funds
 		any_scope_state = {
 			OR = {
 				state_region = s:STATE_MOCAMBIQUE
@@ -596,8 +596,8 @@ REPLACE:company_espana_industrial = {
 	prosperity_modifier = {
 		country_weekly_innovation_mult = 0.15
 		building_silk_plantation_throughput_add = 0.15
-		building_dye_plantation_throughput_add = 0.10
-		building_synthetics_plant_throughput_add = 0.10
+		building_dye_plantation_throughput_add = 0.10 # kmpmp: KMPMP used 0.05 before #545.
+		building_synthetics_plant_throughput_add = 0.10 # kmpmp: KMPMP used 0.05 before #545.
 	}
 
 	ai_will_do = {
@@ -719,7 +719,7 @@ REPLACE:company_zastava = {
 	prosperity_modifier = {
 		unit_defense_mult = 0.1 # kmpmp: vanilla = 0.05
 		unit_recovery_rate_add = 0.1 # kmpmp: vanilla = 0.05
-		building_iron_mine_throughput_add = 0.10
+		building_iron_mine_throughput_add = 0.10 # kmpmp: KMPMP used 0.05 before #545.
 		building_coal_mine_throughput_add = 0.1
 		country_military_goods_cost_mult = -0.05
 	}
