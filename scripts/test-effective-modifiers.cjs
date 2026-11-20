@@ -54,6 +54,38 @@ test('#688: copying newly inherited law and technology fields, including a Boole
     }
 });
 
+test('#691: reject literal no only for registered Boolean types in active modifier lists', () => {
+    const game = {
+        'modifier_type_definitions/00_types': 'customs_union = { boolean = yes } numeric_bool = {}',
+        'power_bloc_principles/00_game': 'market = { power_bloc_modifier = { customs_union = yes } }',
+    };
+    const patch = 'power_bloc_principles/zz_patch';
+    const state = script => snapshot(game, { [patch]: script });
+    const clean = state('');
+    const bad = state(`INJECT:market = {
+        power_bloc_modifier = { customs_union = no numeric_bool = no unknown_bool = no }
+        member_modifier = { customs_union = yes }
+        ai_weight = { customs_union = no }
+    }`);
+    const errors = (before, after) => compare(before, after).filter(row => row.level === 'ERROR');
+    const introduced = errors(clean, bad);
+    assert.equal(introduced.length, 1);
+    const [error] = introduced;
+    assert.equal(error.path, 'power_bloc_modifier/customs_union');
+    assert.equal(error.file, 'common/' + patch + '.txt');
+    assert.match(error.reason, /only accepts yes/);
+    assert.equal(error.existing, false);
+    assert.equal(errors(bad, bad)[0].existing, true);
+
+    const full = state(`REPLACE:market = {
+        member_modifier = { customs_union = no }
+        member_modifier = { bonus = 0.5 }
+    }`);
+    assert.equal(errors(clean, full)[0].path, 'member_modifier/customs_union');
+    const fixed = state('INJECT:market = { power_bloc_modifier = { customs_union = no } } REPLACE:market = {}');
+    assert.deepEqual(errors(bad, fixed), []);
+});
+
 test('#667: convert a full replacement to a delta; preserve the former total', () => {
     const game = { 'static_modifiers/00_game': 'in_default = { building_throughput_add = -0.50 }',
         'modifier_type_definitions/00_types': 'building_throughput_add = {}' };

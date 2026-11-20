@@ -96,7 +96,10 @@ shows the inherited vanilla value, any bundled mod base, the sum of injected
 mod contributions, the effective value, and its previous value.
 
 - **ERROR** means a conversion broke the prior total on an unchanged vanilla
-  field, or the effective value differs from a documented requirement.
+  field, the effective value differs from a documented requirement, or an active
+  mod entry assigns `no` to a registered Boolean modifier in a supported
+  modifier list. These modifier types only accept `yes`. To remove an inherited
+  flag, omit it from a full replacement.
 - **REVIEW** identifies duplicate contributions or flags, effective-value
   changes, uncertain merges, and changed vanilla paths masked by replacements.
 - **ACCEPTED** means the total matches a documented requirement. Each mod

@@ -100,10 +100,6 @@ INJECT:company_imperial_ethiopian_railways = {
 
 # Lanfang Kongsi
 INJECT:company_lanfang_kongsi = {
-	extension_building_types = {
-		building_port #kmpmp
-	}
-
 	prosperity_modifier = {
 		building_group_bg_agriculture_throughput_add = 0.05
 		battle_offense_owned_province_mult = 0.1 #kmpmp
