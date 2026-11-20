@@ -1,5 +1,5 @@
 ﻿INJECT:GER = {
-	required_states_fraction = 0.78 #0.73 # kmpmp add one more state 23 -> 24
+	required_states_fraction = 0.78 # kmpmp: Raise the state share required for German unification.
 }
 
 REPLACE:SCA = {
@@ -43,7 +43,7 @@ REPLACE:SCA = {
 	can_be_formation_candidate = {
 		country_rank >= rank_value:minor_power
 		any_country_in_scandinavia = {
-			has_technology_researched = nationalism #pan-nationalism
+			has_technology_researched = nationalism # kmpmp
 			percent = 1
 		}
 	}

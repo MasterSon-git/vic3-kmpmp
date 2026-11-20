@@ -45,8 +45,7 @@ FAE_battle_condition_attacker_fort_breached = {
             }
         }
 
-        # kmpmp: F&E forts do not participate in a naval landing when a Vanilla
-        # naval fortification exists in the same state.
+        # kmpmp: Leave naval landings to the vanilla naval fortification in the same state.
         NOT = {
             province.state = {
                 has_building = building_naval_fortification
@@ -151,8 +150,7 @@ FAE_battle_condition_defender_fort_breached = {
             }
         }
 
-        # kmpmp: F&E forts do not participate in a naval landing when a Vanilla
-        # naval fortification exists in the same state.
+        # kmpmp: Leave naval landings to the vanilla naval fortification in the same state.
         NOT = {
             province.state = {
                 has_building = building_naval_fortification

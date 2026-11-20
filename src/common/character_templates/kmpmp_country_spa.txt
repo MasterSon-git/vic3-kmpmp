@@ -1,5 +1,5 @@
 ﻿INJECT:spa_isabel_de_borbon_template = {
     traits = {
-        innovative
+        innovative # kmpmp
     }
 }

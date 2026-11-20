@@ -5,15 +5,14 @@
 	culture = cu:french
 	role = heir
 	birth_date = 1810.9.3
-	interest_group = ig_industrialists #ig_armed_forces
+	interest_group = ig_industrialists # kmpmp
 	ideology = ideology_orleanist
 	home_region = STATE_ILE_DE_FRANCE
 	traits = {
 		popular_commander
 		wrathful
 		expensive_tastes
-        # kmpmp
-        imperious
+        imperious # kmpmp
 	}
 	on_created = {
 		set_variable = { name = dynasty_var value = flag:house_orleans }

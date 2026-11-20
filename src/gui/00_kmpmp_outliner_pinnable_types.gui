@@ -14,7 +14,7 @@ types pinnable_outliner_types {
 
 		blockoverride "fixedgridbox_cell_size" {
 			addcolumn = @entry_width
-			addrow = 120 # 60
+			addrow = 120
 		}
 
 		blockoverride "item" {

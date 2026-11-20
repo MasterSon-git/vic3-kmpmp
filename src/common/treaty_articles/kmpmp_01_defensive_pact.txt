@@ -1,6 +1,6 @@
 ﻿REPLACE:defensive_pact = {
 	kind = mutual
-	cost = 200 #100
+	cost = 200 # kmpmp: vanilla = 100
 
 	relations_progress_per_day = 1
 	relations_improvement_max = 80
@@ -46,7 +46,7 @@
 		}
 		highest_overlapping_interest_tier = { target = scope:target_country value >= interest_tier_effect_can_sign_defensive_pact_min_tier }
 
-		# kmpmp - defensive pact with chinese countries is not allowed for players
+		# kmpmp: Restrict player defensive pacts with Chinese countries while China is AI-controlled.
 		trigger_if = {
 			limit = {
 				global_var:kmpmp_china_is_player ?= no

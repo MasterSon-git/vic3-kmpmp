@@ -1,35 +1,35 @@
 ﻿INJECT:standing_army = {
 	modifier = {
-		state_fae_building_forts_max_level_add = 1
+		state_fae_building_forts_max_level_add = 1 # kmpmp
 	}
 }
 
 INJECT:napoleonic_warfare = {
 	modifier = {
-		state_fae_building_forts_max_level_add = 1
+		state_fae_building_forts_max_level_add = 1 # kmpmp
 	}
 }
 
 INJECT:field_works = {
 	modifier = {
-		state_fae_building_forts_max_level_add = 1
+		state_fae_building_forts_max_level_add = 1 # kmpmp
 	}
 }
 
 INJECT:breech_loading_artillery = {
 	modifier = {
-		state_fae_building_forts_max_level_add = 2
+		state_fae_building_forts_max_level_add = 2 # kmpmp
 	}
 }
 
 INJECT:defense_in_depth = {
 	modifier = {
-		state_fae_building_forts_max_level_add = 2
+		state_fae_building_forts_max_level_add = 2 # kmpmp
 	}
 }
 
 INJECT:concrete_fortifications = {
 	modifier = {
-		state_fae_building_forts_max_level_add = 3
+		state_fae_building_forts_max_level_add = 3 # kmpmp
 	}
 }

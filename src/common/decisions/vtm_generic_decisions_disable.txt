@@ -116,6 +116,7 @@ prussia_form_ngf = {
 		root = {
 			change_tag = NGF
 		}
+		# kmpmp
 		if = {
 			limit = {
 				NOT = {

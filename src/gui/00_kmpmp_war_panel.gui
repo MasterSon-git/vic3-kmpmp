@@ -1822,10 +1822,9 @@ types war_panel
 				widget = {
 					size = { 535 60 }
 					visible = "[WarPanel.GetWar.IsWarLeader( GetPlayer.Self )]"
-					# kmpmp enabled
-					enabled = "[GetScriptedGui('kmpmp_sgui_diplomatic_play_can_propose_peace').IsValid(GuiScope.SetRoot(WarPanel.GetWar.MakeScope).End)]"
+					enabled = "[GetScriptedGui('kmpmp_sgui_diplomatic_play_can_propose_peace').IsValid(GuiScope.SetRoot(WarPanel.GetWar.MakeScope).End)]" # kmpmp: Use the multiplayer eligibility check.
 					# tooltip = "WAR_PANEL_PROPOSE_PEACE_TOOLTIP"
-					tooltip = "[SelectLocalization(GetScriptedGui('kmpmp_sgui_diplomatic_play_can_propose_peace').IsValid(GuiScope.SetRoot(WarPanel.GetWar.MakeScope).End), 'WAR_PANEL_PROPOSE_PEACE_TOOLTIP', GetScriptedGui('kmpmp_sgui_diplomatic_play_can_propose_peace').IsValidTooltip(GuiScope.SetRoot(WarPanel.GetWar.MakeScope).End))]"
+					tooltip = "[SelectLocalization(GetScriptedGui('kmpmp_sgui_diplomatic_play_can_propose_peace').IsValid(GuiScope.SetRoot(WarPanel.GetWar.MakeScope).End), 'WAR_PANEL_PROPOSE_PEACE_TOOLTIP', GetScriptedGui('kmpmp_sgui_diplomatic_play_can_propose_peace').IsValidTooltip(GuiScope.SetRoot(WarPanel.GetWar.MakeScope).End))]" # kmpmp
 					
 					button = {
 						using = default_button
@@ -1875,10 +1874,9 @@ types war_panel
 				widget = {
 					size = { 535 60 }
 					visible = "[WarPanel.GetWar.IsParticipant( GetPlayer.Self )]"
-                    # kmpmp enabled
-                    enabled = "[GetScriptedGui('kmpmp_sgui_diplomatic_play_can_capitulate').IsValid(GuiScope.SetRoot(WarPanel.GetWar.MakeScope).AddScope('country', GetPlayer.MakeScope).End)]"
+                    enabled = "[GetScriptedGui('kmpmp_sgui_diplomatic_play_can_capitulate').IsValid(GuiScope.SetRoot(WarPanel.GetWar.MakeScope).AddScope('country', GetPlayer.MakeScope).End)]" # kmpmp: Use the multiplayer eligibility check.
                     # tooltip =  "WAR_PANEL_CAPITULATE_TOOLTIP"
-					tooltip = "[SelectLocalization(GetScriptedGui('kmpmp_sgui_diplomatic_play_can_capitulate').IsValid(GuiScope.SetRoot(WarPanel.GetWar.MakeScope).AddScope('country', GetPlayer.MakeScope).End), 'WAR_PANEL_CAPITULATE_TOOLTIP', GetScriptedGui('kmpmp_sgui_diplomatic_play_can_capitulate').IsValidTooltip(GuiScope.SetRoot(WarPanel.GetWar.MakeScope).AddScope('country', GetPlayer.MakeScope).End))]"
+					tooltip = "[SelectLocalization(GetScriptedGui('kmpmp_sgui_diplomatic_play_can_capitulate').IsValid(GuiScope.SetRoot(WarPanel.GetWar.MakeScope).AddScope('country', GetPlayer.MakeScope).End), 'WAR_PANEL_CAPITULATE_TOOLTIP', GetScriptedGui('kmpmp_sgui_diplomatic_play_can_capitulate').IsValidTooltip(GuiScope.SetRoot(WarPanel.GetWar.MakeScope).AddScope('country', GetPlayer.MakeScope).End))]" # kmpmp
 					
 					button = {
 						using = default_button

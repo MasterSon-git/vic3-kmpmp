@@ -24,6 +24,7 @@ natural_borders.2 = {
 		# triggered by je_french_natural_borders
 	}
 
+	# kmpmp
 	option = { # assimilate the new states
 		name = natural_borders.2.a
 		default_option = yes
@@ -32,7 +33,6 @@ natural_borders.2 = {
 			# days = very_long_modifier_time
 			# state_assimilation_mult
 		}
-		# kmpmp
 		custom_tooltip = kmpmp_natural_borders_buff_tt
 		# used to de-/activate the buff
 		set_variable = natural_borders_2_a_taken
@@ -85,6 +85,7 @@ natural_borders.2 = {
 		add_loyalists = {
 			value = 0.15
 		}
+		# kmpmp
 		add_modifier = {
 			name = kmpmp_victory_for_the_masses_buff
 		}
@@ -97,8 +98,7 @@ natural_borders.2 = {
 		add_primary_culture = cu:occitan
 		add_primary_culture = cu:francoprovencal
 
-        # kmpmp
-        add_primary_culture = cu:alemannic
+        add_primary_culture = cu:alemannic # kmpmp
 	}
 
 	after = {

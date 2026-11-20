@@ -51,7 +51,7 @@
 
             add_modifier = {
                 name = kmpmp_baby_boom_modifier
-                years = 5 #10
+                years = 5
             }
         }
     }

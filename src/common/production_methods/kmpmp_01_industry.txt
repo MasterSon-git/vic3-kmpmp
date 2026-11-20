@@ -2,11 +2,12 @@
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_meat_add = 5
+			goods_input_meat_add = 5 # kmpmp
 		}
 	}
 }
 
+# kmpmp: Electricity can be supplied through the national market.
 REPLACE:pm_electric_sewing_machines = {
 	texture = "gfx/interface/icons/production_method_icons/electric_sewing_machines.dds"
 	
@@ -36,9 +37,9 @@ REPLACE:pm_electric_sewing_machines = {
 		}
 	}
 
-	# required_input_goods = electricity
 }
 
+# kmpmp: Electricity can be supplied through the national market.
 REPLACE:pm_automatic_power_looms = {
 	texture = "gfx/interface/icons/production_method_icons/automatic_power_looms.dds"
 	
@@ -64,9 +65,9 @@ REPLACE:pm_automatic_power_looms = {
 		}
 	}
 
-	# required_input_goods = electricity
 }
 
+# kmpmp: Electricity can be supplied through the national market.
 REPLACE:pm_assembly_lines_building_furniture_manufactory = {
 	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
 	
@@ -98,9 +99,9 @@ REPLACE:pm_assembly_lines_building_furniture_manufactory = {
 		}
 	}
 
-	# required_input_goods = electricity
 }
 
+# kmpmp: Electricity can be supplied through the national market.
 REPLACE:pm_assembly_lines_building_tooling_workshop = {
 	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
 	
@@ -130,9 +131,9 @@ REPLACE:pm_assembly_lines_building_tooling_workshop = {
 		}
 	}
 
-	# required_input_goods = electricity
 }
 
+# kmpmp: Electricity can be supplied through the national market.
 REPLACE:pm_brine_electrolysis = {
 	texture = "gfx/interface/icons/production_method_icons/vaccum_brine_electrolysis.dds"
 	state_modifiers = {
@@ -166,9 +167,9 @@ REPLACE:pm_brine_electrolysis = {
 		}
 	}
 
-	# required_input_goods = electricity
 }
 
+# kmpmp: Electricity can be supplied through the national market.
 REPLACE:pm_electric_arc_process = {
 	texture = "gfx/interface/icons/production_method_icons/electric_arc_process.dds"
 	
@@ -202,9 +203,9 @@ REPLACE:pm_electric_arc_process = {
 		}
 	}
 
-	# required_input_goods = electricity
 }
 
+# kmpmp: Electricity can be supplied through the national market.
 REPLACE:pm_electric_engines = {
 	texture = "gfx/interface/icons/production_method_icons/electric_engines.dds"
 	
@@ -237,9 +238,9 @@ REPLACE:pm_electric_engines = {
 		}
 	}
 
-	# required_input_goods = electricity
 }
 
+# kmpmp: Electricity can be supplied through the national market.
 REPLACE:pm_assembly_lines_building_motor_industry = {
 	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
 	state_modifiers = {
@@ -267,9 +268,9 @@ REPLACE:pm_assembly_lines_building_motor_industry = {
 		}
 	}
 
-	# required_input_goods = electricity
 }
 
+# kmpmp: Electricity can be supplied through the national market.
 REPLACE:pm_assembly_lines_building_automotive_industry = {
 	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
 	state_modifiers = {
@@ -296,9 +297,9 @@ REPLACE:pm_assembly_lines_building_automotive_industry = {
 		}
 	}
 
-	# required_input_goods = electricity
 }
 
+# kmpmp: Electricity can be supplied through the national market.
 REPLACE:pm_arc_welding_shipbuilding = {
 	texture = "gfx/interface/icons/production_method_icons/arc_welded_steam_ships.dds"
 	
@@ -338,9 +339,9 @@ REPLACE:pm_arc_welding_shipbuilding = {
 		}
 	}
 
-	# required_input_goods = electricity
 }
 
+# kmpmp: Electricity can be supplied through the national market.
 REPLACE:pm_radios = {
 	texture = "gfx/interface/icons/production_method_icons/radios.dds"
 	unlocking_technologies = {
@@ -349,8 +350,8 @@ REPLACE:pm_radios = {
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_electricity_add = 50
-			goods_output_telephones_add = -30 #-20
-			goods_output_radios_add = 50 #40
+			goods_output_telephones_add = -30 # kmpmp: vanilla = -20
+			goods_output_radios_add = 50 # kmpmp: vanilla = 40
 		}
 		
 		level_scaled = {
@@ -358,11 +359,11 @@ REPLACE:pm_radios = {
 		}
 	}
 
-	# required_input_goods = electricity
 }
 
 INJECT:pm_bolt_action_rifles = {	
 	building_modifiers = {
+		# kmpmp
 		workforce_scaled = {
 			# input goods
 			goods_input_oil_add = -5
@@ -373,6 +374,7 @@ INJECT:pm_bolt_action_rifles = {
 	}
 }
 
+# kmpmp: Electricity can be supplied through the national market.
 REPLACE:pm_assembly_lines_building_arms_industry = {
 	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
 	
@@ -399,9 +401,9 @@ REPLACE:pm_assembly_lines_building_arms_industry = {
 		}
 	}
 
-	# required_input_goods = electricity
 }
 
+# kmpmp: Electricity can be supplied through the national market.
 REPLACE:pm_assembly_lines_building_munition_plant = {
 	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
 	
@@ -428,5 +430,4 @@ REPLACE:pm_assembly_lines_building_munition_plant = {
 		}
 	}
 
-	# required_input_goods = electricity
 }

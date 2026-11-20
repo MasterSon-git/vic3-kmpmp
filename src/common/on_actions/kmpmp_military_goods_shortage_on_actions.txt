@@ -4,12 +4,13 @@
 # scope:target = Target of the play
 on_diplomatic_play_started = {
     on_actions = {
-        kmpmp_add_je_military_goods_shortage
+        kmpmp_add_je_military_goods_shortage # kmpmp
     }
 }
 
 # Root = Diplomatic Play
 on_diplo_play_join_side = {
+	# kmpmp
 	on_actions = {
 		kmpmp_add_je_military_goods_shortage
 	}

@@ -11,7 +11,7 @@ passenger_train = {
 	speed = 1.0
 	min_caravan_distance = 15.0
 	routes_to_caravans_ratio = 0.2
-	max_count = 0 #30
+	max_count = 0
 	max_path_length = 5
 
 	possible = {
@@ -164,7 +164,7 @@ mining_train = {
 	speed = 1.0
 	min_caravan_distance = 15.0
 	routes_to_caravans_ratio = 0.2
-	max_count = 0 #30
+	max_count = 0
 	max_path_length = 5
 
 	possible = {
@@ -572,7 +572,7 @@ forestry_train = {
 	speed = 1.0
 	min_caravan_distance = 15.0
 	routes_to_caravans_ratio = 0.2
-	max_count = 0 #30
+	max_count = 0
 	max_path_length = 5
 
 	possible = {
@@ -867,7 +867,7 @@ military_mobilization_railroad = {
 	speed = 1.0
 	min_caravan_distance = 15.0
 	routes_to_caravans_ratio = 0.2
-	max_count = 0 #30
+	max_count = 0
 	max_path_length = 5
 
 	possible = {

@@ -12,7 +12,7 @@ horse_cart_dirtroad_route_graphics = {
 
 	speed = 0.5
 	min_caravan_distance = 10.0
-	max_count = 0 #400
+	max_count = 0
 	max_path_length = 2
 
 	possible = {
@@ -55,7 +55,7 @@ motor_dirt_road_route_graphics = {
 
 	speed = 0.5
 	min_caravan_distance = 10.0
-	max_count = 0 #400
+	max_count = 0
 	max_path_length = 4
 
 	tags = {
@@ -114,7 +114,7 @@ military_mobilization_dirtroad = {
 
 	speed = 0.5
 	min_caravan_distance = 10.0
-	max_count = 0 #400
+	max_count = 0
 	max_path_length = 2
 
 	possible = {

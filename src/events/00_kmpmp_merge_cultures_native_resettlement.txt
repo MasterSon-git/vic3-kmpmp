@@ -1,6 +1,6 @@
-﻿# kmpmp - merge cultures fixes
-namespace = native_resettlement
+﻿namespace = native_resettlement
 
+# kmpmp: Use the merged cultures in the affected event scopes.
 native_resettlement.7 = {
 	type = country_event
 

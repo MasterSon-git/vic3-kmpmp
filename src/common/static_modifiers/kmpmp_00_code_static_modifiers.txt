@@ -1,61 +1,60 @@
 ﻿# Global Static Modifiers
 INJECT:base_values = {
-	state_market_access_price_impact = -0.1 # = 0.65
+	state_market_access_price_impact = -0.1 # kmpmp: total = 0.65
 }
 
+# kmpmp
 INJECT:in_default = {
-	# Ease the full-strength Default throughput penalty from -50% to -40% (#387).
-	building_throughput_add = 0.1
-	# kmpmp
+	building_throughput_add = 0.1 # kmpmp: total = -0.4 at full Default strength (#387).
 	# -200% training rate
 	building_training_rate_mult = -2.0
 }
 
 INJECT:declared_bankruptcy = {
-	country_prestige_mult = 0.25 # = -0.5
+	country_prestige_mult = 0.25 # kmpmp: total = -0.5
 }
 
 INJECT:unincorporated_state = {
-	state_market_access_price_impact = 0.05 # = -0.05
+	state_market_access_price_impact = 0.05 # kmpmp: total = -0.05
 }
 
 # Excess AUT reduces enactment time by -25% at 2x production to usage
+# kmpmp
 INJECT:legislative_efficiency = {
-	# kmpmp
 	building_training_rate_mult = 0.35
 	country_military_goods_cost_mult = -0.1
 }
 
 # Insufficent AUT reduces opposition Interest Groups' Approval by -10 at 2x usage to production
+# kmpmp
 INJECT:political_dysfunction = {
-	country_opposition_ig_approval_add = 10 # = 0.0
-	state_radicals_from_political_movements_mult = -0.20 # = 0.0
-	# kmpmp
+	country_opposition_ig_approval_add = 10 # kmpmp: total = 0
+	state_radicals_from_political_movements_mult = -0.20 # kmpmp: total = 0
 	building_training_rate_mult = -0.4
 	country_military_goods_cost_mult = 0.2
 	state_tax_waste_add = 0.1
 }
 
 # Insufficient DIP reduces prestige by up to 50% at 2x usage to production
+# kmpmp
 INJECT:diplomatic_overreach = {
-	# kmpmp
 	country_infamy_decay_mult = -0.5
 	country_weekly_innovation_mult = -0.3
 	country_kmpmp_power_bloc_mandate_progress_mult = -0.3
 }
 
 # Infamy modifiers, applied from current infamy level
+# kmpmp
 INJECT:infamy_reputable = {
-	# kmpmp
 	country_authority_mult = 0.1
 	country_influence_add = 100
 	country_radicals_from_conquest_mult = -0.15
 }
 
+# kmpmp
 INJECT:infamy_notorious = {
-	# kmpmp
-	country_authority_mult = -0.1 #0.05
-	country_influence_add = -100 #-50
+	country_authority_mult = -0.1 # kmpmp: total = -0.1
+	country_influence_add = -100 # kmpmp: total = -100
 	state_trade_advantage_mult = -0.15
 	country_weekly_innovation_mult = -0.05
 	country_government_dividends_efficiency_add = -0.05
@@ -64,12 +63,12 @@ INJECT:infamy_notorious = {
 }
 
 
+# kmpmp
 INJECT:infamy_pariah = {
-	# kmpmp
 	state_trade_advantage_mult = -0.5
 	country_tech_spread_mult = -0.25
 	country_influence_add = -100
-	country_authority_mult = -0.2 #-0.1
+	country_authority_mult = -0.2 # kmpmp: total = -0.2
 	country_weekly_innovation_mult = -0.15
 	country_government_dividends_efficiency_add = -0.10
 	country_military_goods_cost_mult = 0.10
@@ -77,21 +76,19 @@ INJECT:infamy_pariah = {
 
 # Scales by the amount of debt owed to government owned buildings (ie; government self owned debt)
 INJECT:government_owned_debt = {
-	country_government_dividends_waste_add = -0.5 # = 0.5
+	country_government_dividends_waste_add = -0.5 # kmpmp: total = 0.5
 }
 
 # Scales with total army power projection of a country
 INJECT:country_army_power_projection = {
-	# kmpmp - we are trying to reduce the prestige bump from army projection if armies gets mobilized
 	# this value seems to work quite well
-	country_prestige_from_army_power_projection_mult = -0.0002
+	country_prestige_from_army_power_projection_mult = -0.0002 # kmpmp: Limit the prestige gain from mobilizing the army.
 }
 
 INJECT:country_humiliated = {
-	# kmpmp
-	country_influence_mult = -0.25
+	country_influence_mult = -0.25 # kmpmp
 }
 
 INJECT:weak_power_bloc = {
-	power_bloc_cohesion_mult = 0.25 # = -0.25
+	power_bloc_cohesion_mult = 0.25 # kmpmp: total = -0.25
 }

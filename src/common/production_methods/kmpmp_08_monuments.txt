@@ -1,11 +1,12 @@
 ﻿INJECT:pm_default_building_mosque_of_djenne = {
 	state_modifiers = {
 		workforce_scaled = {
-            state_education_access_add = -0.12
+            state_education_access_add = -0.12 # kmpmp
 		}
 	}
 }
 
+# kmpmp
 INJECT:pm_power_bloc_statue_sovereign_empire = {
 	country_modifiers = {
 		workforce_scaled = {
@@ -20,6 +21,7 @@ INJECT:pm_power_bloc_statue_sovereign_empire = {
 	}
 }
 
+# kmpmp
 INJECT:pm_power_bloc_statue_ideological_union = {
 	country_modifiers = {
 		workforce_scaled = {
@@ -30,7 +32,6 @@ INJECT:pm_power_bloc_statue_ideological_union = {
 	state_modifiers = {
 		workforce_scaled = {
 			state_pop_pol_str_mult = -0.25
-			# kmpmp
 			state_tax_capacity_mult = 0.15
 			state_tax_collection_mult = 0.05
 			building_government_administration_throughput_add = 0.1
@@ -38,10 +39,10 @@ INJECT:pm_power_bloc_statue_ideological_union = {
 	}
 }
 
+# kmpmp
 INJECT:pm_power_bloc_statue_military_treaty = {
 	state_modifiers = {
 		workforce_scaled = {
-			# kmpmp
 			state_birth_rate_mult = 0.01
 		}
 	}
@@ -49,7 +50,6 @@ INJECT:pm_power_bloc_statue_military_treaty = {
 	country_modifiers = {
 		workforce_scaled = {
 			country_prestige_add = -3
-			# kmpmp
 			country_diplomatic_play_maneuvers_add = 3
 		}
 	}
@@ -57,9 +57,9 @@ INJECT:pm_power_bloc_statue_military_treaty = {
 
 INJECT:pm_power_bloc_statue_trade_league = {
 	state_modifiers = {
+		# kmpmp
 		workforce_scaled = {
 			state_infrastructure_from_population_mult = -0.1
-			# kmpmp
 			state_infrastructure_mult = 0.1
 		}
 	}
@@ -67,9 +67,9 @@ INJECT:pm_power_bloc_statue_trade_league = {
 
 INJECT:pm_power_bloc_statue_religious = {
 	state_modifiers = {
+		# kmpmp
 		workforce_scaled = {
 			state_conversion_mult = 0.75
-			# kmpmp
 			state_education_access_add = 0.01
 		}
 	}

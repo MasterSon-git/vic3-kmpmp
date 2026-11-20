@@ -35,7 +35,7 @@ has_send_money_cooldown = {
 	}
 }
 
-# kmpmp - can't send money to target at war
+# kmpmp: Can't send money to target at war
 can_send_money_to_recipient_in_war = {
 	OR = {
 		AND = {

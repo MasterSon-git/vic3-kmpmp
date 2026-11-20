@@ -1,13 +1,12 @@
 ﻿INJECT:decree_road_maintenance = {
 	modifier = {
-		# kmpmp
-		building_construction_sector_throughput_add = 0.1
+		building_construction_sector_throughput_add = 0.1 # kmpmp
 	}
 }
 
 INJECT:decree_emergency_relief = {
+	# kmpmp
 	modifier = {
-		# kmpmp
 		state_radicalism_increases_full_acceptance_mult = -0.35
 		state_radicalism_increases_second_rate_citizen_mult = -0.35
 		state_radicalism_increases_open_prejudice_mult = -0.35
@@ -19,8 +18,8 @@ INJECT:decree_emergency_relief = {
 }
 
 INJECT:decree_promote_social_mobility = {
+	# kmpmp
 	modifier = {
-		# kmpmp
 		building_university_throughput_add = 0.1
 		building_art_academy_throughput_add = 0.1
 	}
@@ -29,7 +28,7 @@ INJECT:decree_promote_social_mobility = {
 REPLACE:decree_promote_national_values = {
 	texture = "gfx/interface/icons/decree/decree_promote_national_values.dds"
 	unlocking_technologies = {
-		centralization #nationalism
+		centralization # kmpmp
 	}
 
 	country_trigger = {
@@ -46,21 +45,16 @@ REPLACE:decree_promote_national_values = {
 	}
 
 	modifier = {
-		state_assimilation_mult = 2 #0.5
-		state_conversion_mult = 2 #0.5
+		state_assimilation_mult = 2 # kmpmp: vanilla = 0.5
+		state_conversion_mult = 2 # kmpmp: vanilla = 0.5
 		state_allow_assimilation_in_homeland_bool = yes
 		state_allow_assimilation_without_presence_bool = yes
 		state_allow_conversion_without_presence_bool = yes
 		state_radicalism_increases_violent_hostility_mult = 0.5
 		state_radicalism_increases_cultural_erasure_mult = 0.4
 		state_radicalism_increases_open_prejudice_mult = 0.3
-		# kmpmp
-		state_loyalism_increases_full_acceptance_mult = 0.25
-		state_loyalism_increases_second_rate_citizen_mult = 0.25
-		# kmpmp removed due to new radicalism mofidiers from vanilla
-		# state_loyalism_increases_open_prejudice_mult = 0.25
-		# state_loyalism_increases_cultural_erasure_mult = 0.25
-		# state_loyalism_increases_violent_hostility_mult = 0.25
+		state_loyalism_increases_full_acceptance_mult = 0.25 # kmpmp: Limit loyalism bonuses to the two highest acceptance levels.
+		state_loyalism_increases_second_rate_citizen_mult = 0.25 # kmpmp
 	}
 	cost = 100
 
@@ -473,8 +467,7 @@ REPLACE:decree_promote_national_values = {
 
 INJECT:decree_encourage_manufacturing_industry = {
 	modifier = {
-		# kmpmp
-		state_construction_mult = 0.05
+		state_construction_mult = 0.05 # kmpmp
 	}
 }
 
@@ -485,7 +478,6 @@ REPLACE:decree_greener_grass_campaign = {
 		# kmpmp
 		NOR = {
 			is_isolated_from_market = yes
-			# kmpmp
 			has_decree = kmpmp_decree_emmigration_edict
 		}
 	}
@@ -651,6 +643,6 @@ REPLACE:decree_greener_grass_campaign = {
 
 INJECT:decree_enlistment_efforts = {
 	modifier = {
-		building_training_rate_mult = 0.1
+		building_training_rate_mult = 0.1 # kmpmp
 	}
 }

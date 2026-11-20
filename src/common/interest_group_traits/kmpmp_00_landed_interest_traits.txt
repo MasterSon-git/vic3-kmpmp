@@ -1,5 +1,5 @@
 ﻿INJECT:ig_trait_wiener_walzer = {
 	modifier = {
-		state_aristocrats_investment_pool_efficiency_mult = 0.15 #kmpmp
+		state_aristocrats_investment_pool_efficiency_mult = 0.15 # kmpmp
 	}
 }

@@ -12,7 +12,7 @@
     traits = {
         trait_child
         # aesthete
-        imperious
+        imperious # kmpmp
     }
 
     religion = rel:sunni
@@ -26,16 +26,16 @@ REPLACE:tur_abdulhamid_ii_osmanoglu_template = {
     female = no
     dna = dna_abdul_hamid_ii
     ideology = ideology_authoritarian
-    interest_group = ig_intelligentsia #ig_landowners
+    interest_group = ig_intelligentsia # kmpmp
     birth_date = 1842.9.21
     home_region = STATE_EASTERN_THRACE
 	heir = yes
     traits = {
         pious
-        imperious #persistent
+        imperious # kmpmp
         basic_diplomat
     }
-    # kmpmp - no longer in vanilla
+    # kmpmp: Allow Abdulhamid to lead the Intelligentsia under the Ottoman monarchy.
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:TUR

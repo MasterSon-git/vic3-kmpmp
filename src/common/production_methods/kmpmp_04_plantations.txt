@@ -1,4 +1,5 @@
-﻿REPLACE:electric_rollers = {
+﻿# kmpmp: Electricity can be supplied through the national market.
+REPLACE:electric_rollers = {
 	texture = "gfx/interface/icons/production_method_icons/electric_rollers.dds"
 
 	unlocking_technologies = {
@@ -17,5 +18,4 @@
 		}
 	}
 
-	# required_input_goods = electricity
 }

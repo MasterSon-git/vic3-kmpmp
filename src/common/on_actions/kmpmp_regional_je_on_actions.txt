@@ -1,7 +1,7 @@
 ﻿# Root = Country
 on_monthly_pulse_country = {
     on_actions = {
-        kmpmp_update_regional_je_action
+        kmpmp_update_regional_je_action # kmpmp
     }
 }
 

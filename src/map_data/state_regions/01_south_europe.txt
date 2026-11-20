@@ -7,11 +7,11 @@
     farm = "x867A90"
     mine = "x3F1E38"
     wood = "x4713EE"
-    arable_land = 130 #110
+    arable_land = 130 # kmpmp: vanilla = 110
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_silk_plantation" "building_vineyard" }
     capped_resources = {
-        building_iron_mine = 40 #27
-        building_lead_mine = 30 #19
+        building_iron_mine = 40 # kmpmp: vanilla = 27
+        building_lead_mine = 30 # kmpmp: vanilla = 19
         building_logging_camp = 7
     }
     resource = {
@@ -170,8 +170,8 @@ STATE_CALABRIA = {
     arable_land = 30
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_sugar_plantation" "building_vineyard" }
     capped_resources = {
-        building_coal_mine = 30 #16
-        building_iron_mine = 30 #24
+        building_coal_mine = 30 # kmpmp: vanilla = 16
+        building_iron_mine = 30 # kmpmp: vanilla = 24
         building_logging_camp = 7
         building_fishing_wharf = 12
     }
@@ -381,7 +381,7 @@ STATE_SICILY = {
     arable_land = 60
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_silk_plantation" "building_sugar_plantation" "building_vineyard" }
     capped_resources = {
-        building_iron_mine = 20 #kmpmp
+        building_iron_mine = 20 # kmpmp
         building_sulfur_mine = 100
         building_logging_camp = 6
         building_fishing_wharf = 10
@@ -432,9 +432,9 @@ STATE_GALICIA = {
     arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_vineyard" }
     capped_resources = {
         building_gold_mine = 2
-        building_iron_mine = 36 #14
+        building_iron_mine = 36 # kmpmp: vanilla = 4
         building_logging_camp = 5
-        building_fishing_wharf = 12 #4
+        building_fishing_wharf = 12 # kmpmp: vanilla = 8
         building_whaling_station = 1
     }
     naval_exit_id = 3029
@@ -453,12 +453,12 @@ STATE_ASTURIAS = {
     farm = "x525202"
     mine = "x0F84B8"
     wood = "x5060C0"
-    arable_land = 42 #21 #30
+    arable_land = 42 # kmpmp: vanilla = 21
     arable_resources = { "building_maize_farm" "building_livestock_ranch" }
     capped_resources = {
         building_gold_mine = 2
         building_coal_mine = 72
-        building_iron_mine = 40 #5 #14
+        building_iron_mine = 40 # kmpmp: vanilla = 5
         building_logging_camp = 5
         building_fishing_wharf = 7
     }
@@ -506,7 +506,7 @@ STATE_BASQUE_COUNTRY = {
     arable_land = 42
     arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_vineyard" }
     capped_resources = {
-        building_coal_mine = 60 #4 #17
+        building_coal_mine = 60 # kmpmp: vanilla = 4
         building_lead_mine = 3
         building_iron_mine = 65
         building_logging_camp = 11
@@ -530,8 +530,8 @@ STATE_ARAGON = {
     arable_land = 34
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_vineyard" }
     capped_resources = {
-        building_coal_mine = 28 #18
-        building_iron_mine = 22 #5
+        building_coal_mine = 28 # kmpmp: vanilla = 18
+        building_iron_mine = 22 # kmpmp: vanilla = 5
         building_logging_camp = 8
     }
 
@@ -550,11 +550,12 @@ STATE_CATALONIA = {
     wood = "x906040"
     arable_land = 56
     arable_resources = { "building_wheat_farm" "building_silk_plantation" "building_livestock_ranch" "building_cotton_plantation" "building_tobacco_plantation" "building_vineyard" }
+    # kmpmp
     capped_resources = {
-        building_coal_mine = 24 #14
-        building_lead_mine = 37 #6 #24
-        building_iron_mine = 22 #5
-        building_logging_camp = 9 #6
+        building_coal_mine = 24 # kmpmp: vanilla = 14
+        building_lead_mine = 37 # kmpmp: vanilla = 6
+        building_iron_mine = 22 # kmpmp: vanilla = 5
+        building_logging_camp = 9 # kmpmp: vanilla = 6
         building_fishing_wharf = 12
     }
     naval_exit_id = 3098
@@ -595,12 +596,12 @@ STATE_LOWER_ANDALUSIA = {
     farm = "x3C4E5B"
     mine = "xD06000"
     wood = "x801020"
-    arable_land = 95 #67 #40
+    arable_land = 95 # kmpmp: vanilla = 67
     arable_resources = { "building_wheat_farm" "building_silk_plantation" "building_livestock_ranch" "building_cotton_plantation" "building_tobacco_plantation" "building_sugar_plantation" "building_vineyard" }
     capped_resources = {
         building_iron_mine = 4
         building_sulfur_mine = 44
-        building_logging_camp = 12 #4
+        building_logging_camp = 12 # kmpmp: vanilla = 4
         building_fishing_wharf = 9
 
         building_copper_mine = 9
@@ -671,12 +672,13 @@ STATE_VALENCIA = {
     wood = "x721583"
     arable_land = 56
     arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_cotton_plantation" "building_silk_plantation" "building_tobacco_plantation" "building_vineyard" }
+    # kmpmp
     capped_resources = {
-        building_coal_mine = 22 #12
+        building_coal_mine = 22 # kmpmp: vanilla = 12
         building_iron_mine = 8
         building_lead_mine = 5
-        building_sulfur_mine = 20 #kmpmp
-        building_logging_camp = 10 #5
+        building_sulfur_mine = 20
+        building_logging_camp = 10 # kmpmp: vanilla = 5
         building_fishing_wharf = 10
     }
     naval_exit_id = 3032
@@ -744,11 +746,12 @@ STATE_ALENTEJO = {
     wood = "xC3BFC4"
     arable_land = 25
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_banana_plantation" "building_vineyard" }
+    # kmpmp
     capped_resources = {
-        building_coal_mine = 30 #4 #28
-        building_iron_mine = 30 #16 #24
+        building_coal_mine = 30 # kmpmp: vanilla = 4
+        building_iron_mine = 30 # kmpmp: vanilla = 16
         building_sulfur_mine = 22
-        building_logging_camp = 10 #2
+        building_logging_camp = 10 # kmpmp: vanilla = 2
         building_fishing_wharf = 4
 
         building_copper_mine = 6
@@ -769,7 +772,7 @@ STATE_CAPE_VERDE = {
     farm = "x4B7FA5"
     mine = "xA2C3E8"
     wood = "xA2C3E8"
-    arable_land = 6 #4
+    arable_land = 6 # kmpmp: vanilla = 4
     arable_resources = { "building_wheat_farm" "building_coffee_plantation" "building_cotton_plantation" "building_sugar_plantation" }
     capped_resources = {
         building_logging_camp = 2
@@ -954,10 +957,10 @@ STATE_NORTHERN_THRACE = {
     arable_land = 30
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_tobacco_plantation" "building_vineyard" }
     capped_resources = {
-        building_coal_mine = 30 #kmpmp
+        building_coal_mine = 30 # kmpmp
         building_iron_mine = 33
         building_logging_camp = 17
-        building_fishing_wharf = 12 #6
+        building_fishing_wharf = 12 # kmpmp: vanilla = 6
 
         building_copper_mine = 6
     }
@@ -1016,7 +1019,7 @@ STATE_DALMATIA = {
     provinces = { "x11A0E0" "xEFA0C0" "xF9421B" }
     traits = { 
         "state_trait_krka_falls" 
-        "state_trait_natural_harbors" #kmpmp
+        "state_trait_natural_harbors" # kmpmp
         "state_trait_terra_rossa" 
     }
     city = "xF9421B"
@@ -1028,7 +1031,7 @@ STATE_DALMATIA = {
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_vineyard" }
     capped_resources = {
         building_logging_camp = 4
-        building_fishing_wharf = 15 #13
+        building_fishing_wharf = 15 # kmpmp: vanilla = 13
     }
     naval_exit_id = 3093
 
@@ -1046,7 +1049,7 @@ STATE_CROATIA = {
     provinces = { "x458E4C" "x6D8BC6" "x70DF00" "x71A041" "x71A0C0" "xB339EC" "xB39050" "xF021C0" }
     traits = { 
         "state_trait_drava_river" 
-        "state_trait_natural_harbors" #kmpmp
+        "state_trait_natural_harbors" # kmpmp
         "state_trait_terra_rossa" 
     }
     city = "x71A041"
@@ -1059,7 +1062,7 @@ STATE_CROATIA = {
     capped_resources = {
         building_coal_mine = 60
         building_logging_camp = 11
-        building_fishing_wharf = 15 #5
+        building_fishing_wharf = 15 # kmpmp: vanilla = 5
     }
     naval_exit_id = 3093
 
@@ -1095,7 +1098,7 @@ STATE_ISTRIA = {
     subsistence_building = "building_subsistence_farm"
     provinces = { "x108021" "x3060BF" "x36B2E3" "x56C78A" "xB061C0" "xF0A040" }
     traits = { 
-        "state_trait_natural_harbors" #kmpmp
+        "state_trait_natural_harbors" # kmpmp
         "state_trait_terra_rossa"
         "state_trait_gulf_of_trieste"
     }
@@ -1123,7 +1126,7 @@ STATE_MONTENEGRO = {
     provinces = { "x446E84" "x8C6292" "x90A0E0" "xA12F82" "xF5F6C2" }
     prime_land = { "xA12F82" }
     traits = { 
-        "state_trait_natural_harbors" #kmpmp
+        "state_trait_natural_harbors" # kmpmp
         "state_trait_terra_rossa" 
     }
     city = "x446E84"

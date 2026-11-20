@@ -1,4 +1,5 @@
 ﻿l_german:
+ # kmpmp: German translation for the bundled Stockpile Economy mod (#481).
  modifier_goods_input_aeroplanes_mult: "@aeroplanes![Nbsp]$aeroplanes$-Zufuhr"
  modifier_goods_input_aeroplanes_mult_desc: "Die Menge an @aeroplanes![Nbsp]$aeroplanes$, die das Gebäude verbraucht."
  ase_stockpile_input_mult_aeroplanes:0 "$ASE_STOCKPILE_WORD$ $aeroplanes$ $ASE_INPUT_WORD$"

@@ -1,4 +1,4 @@
-﻿# Keep the KMPMP education-building bonuses through the upgrade.
+﻿# kmpmp: Keep the KMPMP education-building bonuses through the upgrade.
 INJECT:decree_promote_social_mobility_tsarpoints = {
 	modifier = {
 		building_university_throughput_add = 0.1
@@ -9,8 +9,7 @@ INJECT:decree_promote_social_mobility_tsarpoints = {
 REPLACE:decree_promote_national_values_tsarpoints = {
 	texture = "gfx/interface/icons/decree/decree_promote_national_values.dds"
 	unlocking_technologies = {
-		# KMPMP unlocks the base decree with Centralization.
-		centralization
+		centralization # kmpmp: Unlocks the base decree with Centralization.
 	}
 
 	country_trigger = {
@@ -29,18 +28,16 @@ REPLACE:decree_promote_national_values_tsarpoints = {
 	}
 
 	modifier = {
-		# Scale the assimilation and conversion bonuses with the Authority premium (#677).
-		state_assimilation_mult = 2.50
-		state_conversion_mult = 2.50
+		state_assimilation_mult = 2.50 # kmpmp: Scale the assimilation and conversion bonuses with the Authority premium (#677).
+		state_conversion_mult = 2.50 # kmpmp
 		state_allow_assimilation_in_homeland_bool = yes
 		state_allow_assimilation_without_presence_bool = yes
 		state_allow_conversion_without_presence_bool = yes
 		state_radicalism_increases_violent_hostility_mult = 0.65
 		state_radicalism_increases_cultural_erasure_mult = 0.5
 		state_radicalism_increases_open_prejudice_mult = 0.375
-		# Retain the base decree's loyalism bonuses when it is upgraded.
-		state_loyalism_increases_full_acceptance_mult = 0.25
-		state_loyalism_increases_second_rate_citizen_mult = 0.25
+		state_loyalism_increases_full_acceptance_mult = 0.25 # kmpmp: Retain the base decree's loyalism bonuses when it is upgraded.
+		state_loyalism_increases_second_rate_citizen_mult = 0.25 # kmpmp
 	}
 	cost = 125
 
@@ -402,7 +399,7 @@ REPLACE:decree_promote_national_values_tsarpoints = {
 	}
 }
 
-# Keep the KMPMP construction bonus through the upgrade.
+# kmpmp: Keep the KMPMP construction bonus through the upgrade.
 INJECT:decree_encourage_manufacturing_industry_tsarpoints = {
 	modifier = {
 		state_construction_mult = 0.05
@@ -424,7 +421,7 @@ REPLACE:decree_greener_grass_campaign_tsarpoints = {
 	state_trigger = {
 		NOT = { has_decree = decree_greener_grass_campaign }
 		is_isolated_from_market = no
-		# Both Greener Grass variants exclude the KMPMP Emmigration Edict.
+		# kmpmp: Keep both versions of Greener Grass mutually exclusive with the Emigration Edict.
 		NOT = { has_decree = kmpmp_decree_emmigration_edict }
 	}
 	modifier = {
@@ -523,7 +520,7 @@ REPLACE:decree_greener_grass_campaign_tsarpoints = {
 	}
 }
 
-# Keep the KMPMP training bonus alongside the higher vanilla training rate.
+# kmpmp: Keep the KMPMP training bonus alongside the higher vanilla training rate.
 INJECT:decree_enlistment_efforts_tsarpoints = {
 	modifier = {
 		building_training_rate_mult = 0.1

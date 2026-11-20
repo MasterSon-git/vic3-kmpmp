@@ -1,5 +1,6 @@
 ﻿# Root = Country
 on_monthly_pulse_country = {
+    # kmpmp
     on_actions = {
         kmpmp_check_state_alsace_lorraine
         kmpmp_check_states_rhine

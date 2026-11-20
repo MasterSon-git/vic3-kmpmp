@@ -1,20 +1,21 @@
 ﻿INJECT:ig_trait_zaibatsu_cooperation = {
+	# kmpmp
 	modifier = {
 		building_group_bg_manufacturing_tax_mult = -0.1
-		tax_dividends_add = 0.1 #kmpmp
-		state_construction_mult = 0.05 #kmpmp
-		country_authority_mult = 0.05 #kmpmp
+		tax_dividends_add = 0.1
+		state_construction_mult = 0.05
+		country_authority_mult = 0.05
 	}
 }
 
 INJECT:ig_trait_kommerskollegium = {
 	modifier = {
-		tax_dividends_add = 0.05 #kmpmp
+		tax_dividends_add = 0.05 # kmpmp
 	}
 }
 
 INJECT:ig_trait_the_goods_must_flow = {
 	modifier = {
-		country_production_tech_research_speed_mult = 0.1 #kmpmp
+		country_production_tech_research_speed_mult = 0.1 # kmpmp
 	}
 }

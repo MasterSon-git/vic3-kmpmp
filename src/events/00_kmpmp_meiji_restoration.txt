@@ -26,10 +26,10 @@ meiji.2 = {
 			save_scope_as = meiji_ruler
 		}
 
-		# kmpmp - we still need this - removed in vanilla
-		set_global_variable = meiji_restoration_complete
+		set_global_variable = meiji_restoration_complete # kmpmp: Japan’s restoration decisions and country bonuses read this flag.
 
-		trigger_event = { # kmpmp
+		# kmpmp
+		trigger_event = {
 			id = kmpmp_ev_japan_buff.2
 			days = 7
 			popup = yes
@@ -241,8 +241,7 @@ meiji.4 = {
 				name = ending_isolation
 			}
 		}
-		# kmpmp
-		set_variable = kmpmp_japan_used_western_military_consultant
+		set_variable = kmpmp_japan_used_western_military_consultant # kmpmp
 	}
 	option = {
 		name = meiji.4.b
@@ -398,8 +397,7 @@ meiji.5 = {
 				name = ending_isolation
 			}
 		}
-		# kmpmp
-		set_variable = kmpmp_japan_used_japan_society_tech_modifier
+		set_variable = kmpmp_japan_used_japan_society_tech_modifier # kmpmp
 	}
 	option = { # we don't want anything from them
 		name = meiji.5.c
@@ -530,8 +528,7 @@ meiji.6 = {
 				name = ending_isolation
 			}
 		}
-		# kmpmp
-		set_variable = kmpmp_japan_used_japan_production_tech_modifier
+		set_variable = kmpmp_japan_used_japan_production_tech_modifier # kmpmp
 	}
 	option = { # no thanks
 		name = meiji.6.b

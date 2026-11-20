@@ -1,5 +1,6 @@
 ﻿INJECT:pm_slaughterhouses = {
 	building_modifiers = {
+		# kmpmp
 		level_scaled = {
 			building_employment_laborers_add = 200
 			building_employment_machinists_add = -200
@@ -9,6 +10,7 @@
 
 INJECT:pm_mechanized_slaughtering = {
 	building_modifiers = {
+		# kmpmp
 		level_scaled = {
 			building_employment_laborers_add = 350
 			building_employment_machinists_add = -350
@@ -16,6 +18,7 @@ INJECT:pm_mechanized_slaughtering = {
 	}
 }
 
+# kmpmp: Electricity can be supplied through the national market.
 REPLACE:pm_electric_fencing = {
 	texture = "gfx/interface/icons/production_method_icons/electric_fencing.dds"	
 	unlocking_technologies = {
@@ -32,9 +35,9 @@ REPLACE:pm_electric_fencing = {
 		}
 	}
 
-	# required_input_goods = electricity
 }
 
+# kmpmp: Electricity can be supplied through the national market.
 REPLACE:pm_refrigerated_storage_building_livestock_ranch = {
 	texture = "gfx/interface/icons/production_method_icons/refrigerated_storage.dds"
 
@@ -52,9 +55,9 @@ REPLACE:pm_refrigerated_storage_building_livestock_ranch = {
 		}
 	}
 
-	# required_input_goods = electricity
 }
 
+# kmpmp: Electricity can be supplied through the national market.
 REPLACE:pm_refrigerated_rail_cars_building_livestock_ranch = {
 	texture = "gfx/interface/icons/production_method_icons/refrigerated_rail_cars.dds"
 	
@@ -73,5 +76,4 @@ REPLACE:pm_refrigerated_rail_cars_building_livestock_ranch = {
 		}
 	}
 
-	# required_input_goods = electricity
 }

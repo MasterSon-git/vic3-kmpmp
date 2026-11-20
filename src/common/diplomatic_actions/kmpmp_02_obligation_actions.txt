@@ -16,7 +16,7 @@
 	}
 
 	possible = {
-		# kmpmp - check target country is not in cooldown list
+		# kmpmp: Check target country is not in cooldown list
 		custom_tooltip = {
 			text = kmpmp_redeem_obligation_possbile_tt
 			OR = {
@@ -38,9 +38,10 @@
 		}
 	}
 
+	# kmpmp
 	accept_effect = {
-		# kmpmp - add countries in cooldown list on both sides
 		# so they can't redeem obligations from each other to improve relations quickly
+		# kmpmp: Add countries in cooldown list on both sides
 		add_to_variable_list = {
 			name = kmpmp_redeem_obligation_cooldown_list
 			target = scope:target_country
@@ -51,8 +52,7 @@
 				target = ROOT
 			}
 		}
-		# kmpmp - remove from cooldown list after 6 months
-		save_scope_as = redeem_obligation_initiator
+		save_scope_as = redeem_obligation_initiator # kmpmp: Remove from cooldown list after 6 months
 		scope:target_country = {
 			save_scope_as = redeem_obligation_target
 		}

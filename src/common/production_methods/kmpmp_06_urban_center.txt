@@ -1,4 +1,5 @@
-﻿REPLACE:pm_arcades = {
+﻿# kmpmp: Electricity can be supplied through the national market.
+REPLACE:pm_arcades = {
 	texture = "gfx/interface/icons/production_method_icons/arcades.dds"
 	unlocking_technologies = {
 		elevator
@@ -20,9 +21,9 @@
 		}
 	}
 
-	# required_input_goods = electricity
 }
 
+# kmpmp: Electricity can be supplied through the national market.
 REPLACE:pm_electric_streetlights = {
 	texture = "gfx/interface/icons/production_method_icons/electric_streetlights.dds"
 
@@ -50,9 +51,9 @@ REPLACE:pm_electric_streetlights = {
 		}
 	}
 
-	# required_input_goods = electricity
 }
 
+# kmpmp: Electricity can be supplied through the national market.
 REPLACE:pm_film_art = {
 	texture = "gfx/interface/icons/production_method_icons/film_art.dds"
 
@@ -71,13 +72,12 @@ REPLACE:pm_film_art = {
 		}
 	}
 
-	# required_input_goods = electricity
 }
 
 INJECT:pm_principle_freedom_of_movement_3 = {
 	state_modifiers = {
 		unscaled = {
-			state_migration_pull_mult = -0.1
+			state_migration_pull_mult = -0.1 # kmpmp
 		}
 	}
 }

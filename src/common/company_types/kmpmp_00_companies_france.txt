@@ -1,23 +1,23 @@
 ﻿# Société Mokta El Hadid
+# kmpmp
 INJECT:company_societe_mokta_el_hadid = {
 	extension_building_types = {
 		building_coal_mine
 	}
 
 	prosperity_modifier = {
-		# kmpmp
-		building_unincorporated_throughput_add = 0.10 #0.05
+		building_unincorporated_throughput_add = 0.10 # kmpmp: total = 0.1
 	}
 }
 
 # Dollfus-Mieg et Compagnie
+# kmpmp
 INJECT:company_dmc = {
 	extension_building_types = {
 		building_synthetics_plant
 	}
 
 	prosperity_modifier = {
-		# kmpmp
 		building_silk_plantation_throughput_add = 0.1
 		building_synthetics_plant_throughput_add = 0.1
 	}
@@ -40,7 +40,7 @@ REPLACE:company_cgv = {
 
 	extension_building_types = {
 		building_food_industry
-		building_motor_industry
+		building_motor_industry # kmpmp
 	}
 
 	possible_prestige_goods = {
@@ -55,7 +55,7 @@ REPLACE:company_cgv = {
 	}
 
 	possible = {
-		has_technology_researched = mutual_funds #joint_stock_companies
+		has_technology_researched = mutual_funds # kmpmp
 		any_scope_state = {
 			state_region = s:STATE_CHAMPAGNE
 			is_incorporated = yes
@@ -69,8 +69,7 @@ REPLACE:company_cgv = {
 	prosperity_modifier = {
 		country_prestige_mult = 0.15
 		building_vineyard_throughput_add = 0.1
-		# kmpmp
-		state_birth_rate_mult = 0.02 #0.006
+		state_birth_rate_mult = 0.02 # kmpmp
 	}
 
 	ai_will_do = {
@@ -97,9 +96,10 @@ REPLACE:company_cgv = {
 
 # Société Nouvelle des Forges et Chantiers de la Méditerranée
 INJECT:company_fcm = {
+	# kmpmp
 	prosperity_modifier = {
-		ship_armor_mult = 0.025 # kmpmp
-		unit_combat_unit_type_interwar_heavy_tank_offense_mult = 0.1 # kmpmp
+		ship_armor_mult = 0.025
+		unit_combat_unit_type_interwar_heavy_tank_offense_mult = 0.1
 	}
 }
 
@@ -118,9 +118,8 @@ REPLACE:company_mines_anzin = {
 
 	extension_building_types = {
 		building_iron_mine
-		# kmpmp
-		building_lead_mine
-		building_sulfur_mine
+		building_lead_mine # kmpmp
+		building_sulfur_mine # kmpmp
 	}
 
 	# kmpmp
@@ -147,7 +146,7 @@ REPLACE:company_mines_anzin = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_coal_mine
-				level >= 10 #5
+				level >= 10 # kmpmp
 			}
 		}
 	}

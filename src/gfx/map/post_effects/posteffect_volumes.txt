@@ -77,7 +77,7 @@ posteffect_values = {
 
 #old (before 1.5)
 	# Settings
-	fog_begin = 50 #100
+	fog_begin = 50
 	fog_end = 4500
 #	value_scale = 0.92
 #	fog_max = 0							# Disable fog

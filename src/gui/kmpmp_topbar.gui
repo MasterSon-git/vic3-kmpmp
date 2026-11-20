@@ -8,6 +8,7 @@
 types topbar_components
 {
 	### SECONDARY ICONS
+	# kmpmp: Use the compact secondary row for the alternate topbar.
 	type kmpmp_topbar_secondary_icons = container {
 		position = { 120 40 }
 		
@@ -543,6 +544,7 @@ types topbar_components
 	}
 		
 
+	# kmpmp
 	type kmpmp_topbar = widget {
 		widget = {
 			name = "topbar"
@@ -577,7 +579,7 @@ types topbar_components
 			onmousehierarchyleave = "[PdxGuiInterruptThenTriggerAllAnimations('show_topbar_secondary_stats','hide_topbar_secondary_stats')]"
 
 			widget = {
-				# kmpmp can be used to move the situation and alert icons if topbar grows
+				# kmpmp: Can be used to move the situation and alert icons if topbar grows
 				# resizeparent = yes
 
 				### background

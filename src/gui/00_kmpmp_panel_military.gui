@@ -14,10 +14,12 @@ types mobilization_options {
 		alpha = "[TransparentIfFalse(Or(MobilizationOption.IsActivated(MilitaryFormation.AccessSelf),IsValid(MobilizationOption.Toggle(MilitaryFormation.AccessSelf))))]"
 		#visible = "[Or(MobilizationOption.IsActivated(MilitaryFormation.AccessSelf),IsValid(MobilizationOption.Toggle(MilitaryFormation.AccessSelf)))]"
 		# size = { 50 50 }
+		# kmpmp
 		size = { 36 36 }
 
 		widget = {
 			#size = { 50 50 }
+			# kmpmp
 			size = { 36 36 }
 
 			# Activate
@@ -79,6 +81,7 @@ types mobilization_options {
 
 		icon = {
 			# size = { 38 38 }
+			# kmpmp
 			size = { 24 24 }
 			texture = "[MobilizationOption.GetTexture]"
 			parentanchor = center
@@ -125,6 +128,7 @@ types mobilization_options {
 			
 			flowcontainer = {
 				# position = { 12 0 }
+				# kmpmp
 				position = { 24 0 }
 				parentanchor = vcenter
 				spacing = 2
@@ -177,8 +181,7 @@ types mobilization_options {
 			flipdirection = yes
 			parentanchor = hcenter
 
-			# kmpmp
-			visible = "[Not(GetVariableSystem.Exists( Concatenate('panel_military_mobilization_', MilitaryFormation.GetIDString) ))]"
+			visible = "[Not(GetVariableSystem.Exists( Concatenate('panel_military_mobilization_', MilitaryFormation.GetIDString) ))]" # kmpmp
 
 			item = {
 				flowcontainer = {
@@ -201,6 +204,7 @@ types mobilization_options {
 					# 		mobilization_option_small = {}
 					# 	}
 					# }
+					# kmpmp
 					dynamicgridbox = {
 						datamodel = "[MobilizationOptionGroup.GetMobilizationOptions]"
 						# margin_right = 5

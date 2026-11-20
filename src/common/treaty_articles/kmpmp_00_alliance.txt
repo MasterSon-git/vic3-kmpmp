@@ -47,7 +47,7 @@
 		}
 		highest_overlapping_interest_tier = { target = scope:target_country value >= interest_tier_effect_can_sign_alliance_min_tier }
 
-		# kmpmp - alliance with chinese countries is not allowed for players
+		# kmpmp: Restrict player alliances with Chinese countries while China is AI-controlled.
 		trigger_if = {
 			limit = {
 				global_var:kmpmp_china_is_player ?= no

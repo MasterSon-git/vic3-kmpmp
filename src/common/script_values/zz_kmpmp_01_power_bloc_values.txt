@@ -26,7 +26,7 @@ REPLACE:power_bloc_leverage_gain = {
 	}
 
 	add = {
-		value = 300	#200
+		value = 300 # kmpmp: vanilla = 200
 		multiply = "scope:target.economic_dependence(ROOT)"
 
 		if = {
@@ -35,7 +35,7 @@ REPLACE:power_bloc_leverage_gain = {
 					has_principle_group = principle_group:principle_group_foreign_investment
 				}
 			}
-			multiply = 2 #1.5
+			multiply = 2 # kmpmp: vanilla = 1.5
 		}
 
 		desc = POWER_BLOC_LEVERAGE_GAIN_FROM_ECONOMIC_DEPENDENCE
@@ -190,7 +190,7 @@ REPLACE:power_bloc_leverage_gain = {
 			}
 		}
 		multiply = {
-			value = 0.8	#0.6
+			value = 0.8 # kmpmp: vanilla = 0.6
 			desc = POWER_BLOC_LEVERAGE_PENALTY_FROM_DISCRIMINATED_PRIMARY_CULTURE
 		}
 	}
@@ -205,7 +205,7 @@ REPLACE:power_bloc_leverage_gain = {
 			}
 		}
 		multiply = {
-			value = 0.85 #0.7
+			value = 0.85 # kmpmp: vanilla = 0.7
 			desc = POWER_BLOC_LEVERAGE_PENALTY_FROM_DISCRIMINATED_PRIMARY_CULTURE
 		}
 	}
@@ -220,7 +220,7 @@ REPLACE:power_bloc_leverage_gain = {
 			}
 		}
 		multiply = {
-			value = 0.9	#0.8
+			value = 0.9 # kmpmp: vanilla = 0.8
 			desc = POWER_BLOC_LEVERAGE_PENALTY_FROM_DISCRIMINATED_PRIMARY_CULTURE
 		}
 	}
@@ -235,7 +235,7 @@ REPLACE:power_bloc_leverage_gain = {
 			}
 		}
 		multiply = {
-			value = 0.95 #0.9
+			value = 0.95 # kmpmp: vanilla = 0.9
 			desc = POWER_BLOC_LEVERAGE_PENALTY_FROM_DISCRIMINATED_PRIMARY_CULTURE
 		}
 	}
@@ -258,14 +258,14 @@ REPLACE:power_bloc_leverage_gain = {
 			}
 		}
 		multiply = {
-			value = 0.85 #0.7
+			value = 0.85 # kmpmp: vanilla = 0.7
 			if = {
 				limit = {
 					root.power_bloc = {
 						has_identity = identity:identity_religious
 					}
 				}
-				add = -0.1 #-0.2
+				add = -0.1 # kmpmp: vanilla = -0.2
 			}
 			desc = POWER_BLOC_LEVERAGE_PENALTY_FROM_DISCRIMINATED_RELIGION
 		}

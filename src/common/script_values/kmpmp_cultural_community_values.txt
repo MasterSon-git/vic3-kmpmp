@@ -34,7 +34,7 @@ REPLACE:cultural_community_creation_weight = {
 			limit = {
 				state_has_decree_variant = { DECREE = decree_greener_grass_campaign }
 			}
-			add = 0.015 # KMPMP: stronger Greener Grass community creation bonus (vanilla 0.005).
+			add = 0.015 # kmpmp: vanilla = 0.005
 		}
 
 		if = {

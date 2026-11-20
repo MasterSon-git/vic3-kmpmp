@@ -1,7 +1,7 @@
 ﻿INJECT:pm_early_trains = {
 	state_modifiers = {
 		unscaled = {
-			state_market_access_price_impact = 0.025
+			state_market_access_price_impact = 0.025 # kmpmp: total = 0.025
 		}
 	}
 }
@@ -9,11 +9,12 @@
 INJECT:pm_steam_trains = {
 	state_modifiers = {
 		unscaled = {
-			state_market_access_price_impact = 0.025
+			state_market_access_price_impact = 0.025 # kmpmp: total = 0.05
 		}
 	}
 }
 
+# kmpmp: Electricity can be supplied through the national market.
 REPLACE:pm_electric_trains = {
 	texture = "gfx/interface/icons/production_method_icons/trains_electric.dds"
 	replacement_if_valid = pm_electric_trains_principle_transport_3
@@ -45,9 +46,9 @@ REPLACE:pm_electric_trains = {
 		}
 	}
 
-	# required_input_goods = electricity
 }
 
+# kmpmp: Electricity can be supplied through the national market.
 REPLACE:pm_electric_trains_principle_transport_3 = {
 	texture = "gfx/interface/icons/production_method_icons/trains_electric.dds"
 	is_hidden_when_unavailable = yes
@@ -83,17 +84,17 @@ REPLACE:pm_electric_trains_principle_transport_3 = {
 		}
 	}
 
-	# required_input_goods = electricity
 }
 
 INJECT:pm_diesel_trains = {
 	state_modifiers = {
 		unscaled = {
-			state_market_access_price_impact = 0.05
+			state_market_access_price_impact = 0.05 # kmpmp
 		}
 	}
 }
 
+# kmpmp: Electricity can be supplied through the national market.
 REPLACE:pm_electric_passenger_carriages = {
 	texture = "gfx/interface/icons/production_method_icons/electric_carriages.dds"
 
@@ -112,9 +113,9 @@ REPLACE:pm_electric_passenger_carriages = {
 			building_employment_machinists_add = 100
 		}
 	}	
-	# required_input_goods = electricity
 }
 
+# kmpmp: Electricity can be supplied through the national market.
 REPLACE:pm_electrified_railway = {
 	texture = "gfx/interface/icons/production_method_icons/gauges_electric.dds"
 	
@@ -137,5 +138,4 @@ REPLACE:pm_electrified_railway = {
 			state_infrastructure_add = 10
 		}
 	}
-	# required_input_goods = electricity
 }

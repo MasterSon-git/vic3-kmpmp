@@ -1,13 +1,13 @@
 ﻿INJECT:law_no_migration_controls = {
+	# kmpmp
 	modifier = {
 		country_leverage_resistance_mult = 0.25
-		# kmpmp
 		country_migration_restrictiveness_add = 20
 	}
 }
 
 INJECT:law_migration_controls = {
 	modifier = {
-		country_migration_restrictiveness_add = -10
+		country_migration_restrictiveness_add = -10 # kmpmp
 	}
 }

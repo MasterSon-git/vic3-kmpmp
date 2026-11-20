@@ -674,7 +674,6 @@ TableTooltip_StateTaxationRevenue = {
 	name = "StateTaxationRevenueTooltip"
 }
 
-# kmpmp
 FancyTooltip_ListOf_StateRegion = {
     name = "ListOfStateRegionTooltip"
 }

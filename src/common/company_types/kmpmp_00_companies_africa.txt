@@ -1,5 +1,6 @@
 ﻿# Misr Spinning and Weaving Company
 INJECT:company_misr = {
+	# kmpmp
 	prosperity_modifier = {
 		country_loyalism_increases_full_acceptance_mult = 0.1
 		country_loyalism_increases_second_rate_citizen_mult = 0.1
@@ -12,6 +13,7 @@ INJECT:company_misr = {
 }
 
 # Egyptian National Railways
+# kmpmp: Allow the company outside Egypt when its establishment conditions are met.
 REPLACE:company_egyptian_rail = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/egyptian_rail.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
@@ -22,11 +24,11 @@ REPLACE:company_egyptian_rail = {
 
 	building_types = {
 		building_railway
-		building_opium_plantation # kmpmp
+		building_opium_plantation
 	}
 
 	extension_building_types = {
-		building_motor_industry #kmpmp
+		building_motor_industry
 	}
 
 	#potential = {
@@ -35,7 +37,7 @@ REPLACE:company_egyptian_rail = {
 
 	possible = {
 		has_technology_researched = corporate_charters
-		any_primary_culture = { # kmpmp
+		any_primary_culture = {
 			has_culture_graphics = arabic
 		}
 		any_scope_state = {
@@ -52,7 +54,6 @@ REPLACE:company_egyptian_rail = {
 	prosperity_modifier = {
 		state_infrastructure_from_population_max_add = 20
 		state_trade_capacity_mult = 0.1
-        # kmpmp
 		# market_land_trade_capacity_add = 150 # no longer supported - use state_trade_capacity_add ?
 		building_group_bg_plantations_throughput_add = 0.1
 	}
@@ -124,7 +125,8 @@ REPLACE:company_suez_company = {
 	}
 
 	possible = {
-		NOT = { # kmpmp company can only be established by one country
+		# kmpmp: Only one country can establish this company.
+		NOT = {
 			any_country = {
 				exists = owning_company
 				owning_company = {

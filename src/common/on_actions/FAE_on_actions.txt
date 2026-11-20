@@ -371,7 +371,7 @@ FAE_on_battle_ended = {
                     }
                 }
                 
-                # kmpmp - variable FAE_num_battles is only set if battle started with defending generals
+                # kmpmp: Read FAE_num_battles only for battles that started with defending generals.
                 if = {
                     limit = {
                         has_variable = FAE_num_battles

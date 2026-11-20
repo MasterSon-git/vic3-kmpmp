@@ -17,12 +17,12 @@
 				is_goal_complete = yes
 			}
 		}
+		# kmpmp
 		effect = {
 			remove_modifier = sick_man_of_europe
 			trigger_event = {
 				id = sick_man.4 #sick_man.2
 			}
-			#kmpmp
 			add_loyalists = {
 				value = 0.07
 			}
@@ -92,7 +92,7 @@
 		}
 	}
 
-	timeout = 10950 #kmpmp 7300
+	timeout = 10950 # kmpmp: vanilla = 10950
 
 	current_value = {
 		value = var:sick_man_var
@@ -161,12 +161,12 @@ REPLACE:je_sick_man_education = {
 
 	current_value = {
 		value = root.literacy_rate
-		multiply = 100 #kmpmp for better progress optics
+		multiply = 100 # kmpmp: Display literacy progress in percentage points.
 	}
 
 	goal_add_value = {
 		add = 0.2
-		multiply = 100 #kmpmp for better progress optics
+		multiply = 100 # kmpmp: Display literacy progress in percentage points.
 	}
 
 	transferable = no

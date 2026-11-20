@@ -1,8 +1,8 @@
 ﻿### ERA 2
 
 INJECT:organized_sports = {
+	# kmpmp
 	modifier = {
-		# kmpmp
 		country_radicals_from_conquest_mult = -0.05
 		country_infamy_decay_mult = 0.1
 	}
@@ -10,58 +10,54 @@ INJECT:organized_sports = {
 
 INJECT:psychiatry = {
 	modifier = {
-		# KMPMP increases infamy decay (#400).
-        country_infamy_decay_mult = 0.05
+        country_infamy_decay_mult = 0.05 # kmpmp: Increases infamy decay (#400).
 	}
 }
 
 INJECT:realism = {
 	modifier = {
-		# kmpmp
-		country_infamy_generation_mult = -0.05
+		country_infamy_generation_mult = -0.05 # kmpmp
 	}
 }
 
 INJECT:nationalism = {
 	modifier = {
-		# KMPMP reduces general infamy generation.
-        country_infamy_generation_mult = -0.03
+        country_infamy_generation_mult = -0.03 # kmpmp: Reduces general infamy generation.
 	}
 }
 
 INJECT:postal_savings = {
 	modifier = {
-		building_cash_reserves_mult = 0.1 # = 0.3
+		building_cash_reserves_mult = 0.1 # kmpmp: total = 0.3
 	}
 }
 
 ### ERA 3
 
 INJECT:civilizing_mission = {
+	# kmpmp
 	modifier = {
-		# kmpmp
 		country_radicals_from_conquest_mult = -0.05
 		country_infamy_generation_mult = -0.05
 	}
 }
 
 INJECT:anarchism = {
+	# kmpmp
 	modifier = {
-		# kmpmp
 		country_radicals_from_conquest_mult = -0.05
 	}
 }
 
 INJECT:socialism = {
 	modifier = {
-		# kmpmp
-		country_government_dividends_efficiency_add = 0.05
+		country_government_dividends_efficiency_add = 0.05 # kmpmp
 	}
 }
 
 INJECT:corporatism = {
+	# kmpmp
 	modifier = {
-		# kmpmp
 		country_radicalism_increases_full_acceptance_mult = -0.1
 		country_radicalism_increases_second_rate_citizen_mult = -0.05
 		state_market_access_price_impact = 0.05
@@ -70,14 +66,13 @@ INJECT:corporatism = {
 
 INJECT:pan-nationalism = {
 	modifier = {
-		# KMPMP reduces general infamy generation (#400).
-        country_infamy_generation_mult = -0.05
+        country_infamy_generation_mult = -0.05 # kmpmp: Reduces general infamy generation (#400).
 	}
 }
 
 INJECT:camera = {
+	# kmpmp
 	modifier = {
-		# kmpmp
 		country_infamy_generation_mult = -0.05
 		country_leverage_resistance_mult = -0.25
 	}
@@ -85,15 +80,13 @@ INJECT:camera = {
 
 INJECT:philosophical_pragmatism = {
 	modifier = {
-		# KMPMP increases infamy decay (#400).
-        country_infamy_decay_mult = 0.05
+        country_infamy_decay_mult = 0.05 # kmpmp: Increases infamy decay (#400).
 	}
 }
 
 INJECT:identification_documents = {
 	modifier = {
-		# kmpmp
-		state_market_access_price_impact = 0.05
+		state_market_access_price_impact = 0.05 # kmpmp
 	}
 }
 
@@ -101,29 +94,29 @@ INJECT:identification_documents = {
 
 INJECT:zeppelins = {
 	modifier = {
-		state_market_access_price_impact = -0.05 # = 0
+		state_market_access_price_impact = -0.05 # kmpmp: total = 0
 	}
 }
 
 INJECT:central_planning = {
+	# kmpmp
 	modifier = {
-		country_government_dividends_efficiency_add = -0.05 # = 0
-		# kmpmp
+		country_government_dividends_efficiency_add = -0.05 # kmpmp: total = 0
 		country_max_companies_add = 1
 	}
 }
 
 INJECT:psychoanalysis = {
+	# kmpmp
 	modifier = {
-		# KMPMP increases infamy decay (#400) and reduces radicalism from conquest (#233).
-        country_infamy_decay_mult = 0.05
+        country_infamy_decay_mult = 0.05 # kmpmp: Increases infamy decay (#400) and reduces radicalism from conquest (#233).
 		country_radicals_from_conquest_mult = -0.05
 	}
 }
 
 INJECT:film = {
+	# kmpmp
 	modifier = {
-		# kmpmp
 		country_infamy_generation_mult = -0.05
 		country_leverage_resistance_mult = -0.25
 	}
@@ -131,32 +124,30 @@ INJECT:film = {
 
 INJECT:multilateral_alliances = {
 	modifier = {
-		# kmpmp
-		country_radicals_from_conquest_mult = -0.05
+		country_radicals_from_conquest_mult = -0.05 # kmpmp
 	}
 }
 
 ### ERA 5
 
 INJECT:macroeconomics = {
+	# kmpmp
 	modifier = {
-		country_max_companies_add = -1 # = 0
-		state_market_access_price_impact = -0.05 # = 0
-		# kmpmp
+		country_max_companies_add = -1 # kmpmp: total = 0
+		state_market_access_price_impact = -0.05 # kmpmp: total = 0
 		building_cash_reserves_mult = 0.25
 	}
 }
 
 INJECT:behaviorism = {
 	modifier = {
-		# KMPMP increases infamy decay (#400).
-        country_infamy_decay_mult = 0.05
+        country_infamy_decay_mult = 0.05 # kmpmp: Increases infamy decay (#400).
 	}
 }
 
 INJECT:paved_roads = {
+	# kmpmp
 	modifier = {
-		# kmpmp
 		state_trade_capacity_add = 20
 		state_market_access_price_impact = 0.05
 	}

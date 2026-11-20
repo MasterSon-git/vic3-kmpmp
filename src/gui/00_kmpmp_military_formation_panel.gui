@@ -832,7 +832,7 @@ types military_formation_panel_types
 						datamodel = "[GetMobilizationOptionGroups]"
 						datamodel_wrap = 3
 						flipdirection = yes
-						parentanchor = hcenter # kmpmp
+						parentanchor = hcenter
 
 						item = {
 							flowcontainer = {
@@ -855,10 +855,12 @@ types military_formation_panel_types
 										widget = {
 											alpha = "[TransparentIfFalse(Or(MobilizationOption.IsActivatedForSelected,IsValid(MobilizationOption.ToggleForSelected)))]"
 											# size = { 50 50 }
+											# kmpmp
 											size = { 36 36 }
 
 											widget = {
 												# size = { 50 50 }
+												# kmpmp
 												size = { 36 36 }
 
 												# Activate
@@ -920,6 +922,7 @@ types military_formation_panel_types
 
 											icon = {
 												# size = { 38 38 }
+												# kmpmp
 												size = { 24 24 }
 												texture = "[MobilizationOption.GetTexture]"
 												parentanchor = center
@@ -1020,7 +1023,7 @@ types military_formation_panel_types
 			parentanchor = right|vcenter
 			# this didn't work Not(GetVariableSystem.Exists('kmpmp_block_mobilization'))
 			# maybe we have the wrong context and need to get player
-			enabled = "[And(IsValid( MilitaryFormation.Mobilize ), Not(GetVariableSystem.Exists('kmpmp_block_mobilization')) )]"
+			enabled = "[And(IsValid( MilitaryFormation.Mobilize ), Not(GetVariableSystem.Exists('kmpmp_block_mobilization')) )]" # kmpmp
 			onclick = "[Execute( MilitaryFormation.Mobilize )]"
 			tooltip = "MOBILIZE_ARMY_TOOLTIP"
 			using = tooltip_ne

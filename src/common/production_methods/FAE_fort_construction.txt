@@ -8,9 +8,10 @@
     }
     
     building_modifiers = {
+        # kmpmp: Increase the input cost of the fort upgrade.
         workforce_scaled = {
-            goods_input_wood_add  = 55 #50
-            goods_input_tools_add = 1.1 #1
+            goods_input_wood_add  = 55
+            goods_input_tools_add = 1.1
             
             unit_fae_entrenchment_add = 1
         }
@@ -33,11 +34,12 @@ FAE_pm_stone_iron = {
     }
     
     building_modifiers = {
+        # kmpmp: Increase the fort’s input costs and reduce its defense bonus.
         workforce_scaled = {
-            goods_input_iron_add  = 55 #50
-            goods_input_tools_add = 2.2 #2
+            goods_input_iron_add  = 55
+            goods_input_tools_add = 2.2
             
-            unit_defense_add = 0.9 #1
+            unit_defense_add = 0.9
             
             unit_fae_entrenchment_add = 2
         }
@@ -64,11 +66,12 @@ FAE_pm_steel_concrete = {
     }
     
     building_modifiers = {
+        # kmpmp: Increase the fort’s input costs and reduce its defense bonus.
         workforce_scaled = {
-            goods_input_steel_add = 55 #50
-            goods_input_tools_add = 5.5 #5
+            goods_input_steel_add = 55
+            goods_input_tools_add = 5.5
             
-            unit_defense_add = 1.8 #2
+            unit_defense_add = 1.8
             
             unit_fae_entrenchment_add = 3
         }

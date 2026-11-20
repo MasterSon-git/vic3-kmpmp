@@ -13,37 +13,36 @@
 ## RECOGNIZED ##
 ################
 
+# kmpmp
 INJECT:great_power = {
-	prestige_relative_threshold = 0.65 #0.75
+	prestige_relative_threshold = 0.65
 
 	modifier = {
-		# kmpmp
 		country_kmpmp_power_bloc_mandate_progress_mult = 0.15
 	}
 }
 
+# kmpmp
 INJECT:major_power = {
-	prestige_relative_threshold = 0.4 #0.5
+	prestige_relative_threshold = 0.4
 
 	modifier = {
-		# kmpmp
 		country_influence_mult = -0.15
 	}
 }
 
+# kmpmp
 INJECT:minor_power = {
-	prestige_relative_threshold = 0.14 #0.15
+	prestige_relative_threshold = 0.14
 
 	modifier = {
-		# kmpmp
 		country_influence_mult = -0.25
 	}
 }
 
 INJECT:insignificant_power = {
 	modifier = {
-		# kmpmp
-		country_influence_mult = -0.25
+		country_influence_mult = -0.25 # kmpmp
 	}
 }
 
@@ -53,20 +52,20 @@ INJECT:insignificant_power = {
 
 INJECT:unrecognized_major_power = {
 	modifier = {
-		country_tech_spread_mult = 0.05
+		country_tech_spread_mult = 0.05 # kmpmp
 	}
 }
 
 INJECT:unrecognized_regional_power = {
 	modifier = {
-		country_tech_spread_mult = 0.05
+		country_tech_spread_mult = 0.05 # kmpmp
 	}
 }
 
 
 INJECT:unrecognized_power = {
 	modifier = {
-		country_tech_spread_mult = 0.125
+		country_tech_spread_mult = 0.125 # kmpmp
 	}
 
 }
@@ -76,6 +75,6 @@ INJECT:unrecognized_power = {
 
 INJECT:decentralized_power = {
 	modifier = {
-		building_throughput_add = 0.40
+		building_throughput_add = 0.40 # kmpmp
 	}
 }

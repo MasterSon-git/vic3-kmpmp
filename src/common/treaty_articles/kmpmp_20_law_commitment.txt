@@ -1,3 +1,3 @@
 ﻿INJECT:law_commitment = {
-    cost = 150 #25
+    cost = 150 # kmpmp
 }

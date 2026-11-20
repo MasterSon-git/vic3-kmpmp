@@ -1,4 +1,5 @@
 ﻿l_english:
+ # kmpmp: Show the goods icon and input per building level.
  goods_input_coffee_add:0 "@coffee! Coffee input per level"
  goods_input_coffee_add_desc:0 "The amount of @coffee! Coffee consumed by buildings"
  goods_input_tea_add:0 "@tea! Tea input per level"

@@ -235,7 +235,7 @@ STATE_SHENGJING = {
     }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 25 #20
+        undiscovered_amount = 25 # kmpmp: vanilla = 20
     }
     naval_exit_id = 3138
 
@@ -269,7 +269,7 @@ STATE_OUTER_MANCHURIA = {
     }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 25 #20
+        undiscovered_amount = 25 # kmpmp: vanilla = 20
     }
     naval_exit_id = 3059
 
@@ -1073,12 +1073,13 @@ STATE_HOKKAIDO = {
     wood = "x9E56C2"
     arable_land = 25
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" }
+    # kmpmp
     capped_resources = {
-        building_coal_mine = 56 #59
-        building_iron_mine = 43 #4
-        building_lead_mine = 50 #7
-        building_sulfur_mine = 47 #22
-        building_logging_camp = 21 #9
+        building_coal_mine = 56 # kmpmp: vanilla = 59
+        building_iron_mine = 43 # kmpmp: vanilla = 4
+        building_lead_mine = 50 # kmpmp: vanilla = 5
+        building_sulfur_mine = 47 # kmpmp: vanilla = 22
+        building_logging_camp = 21 # kmpmp: vanilla = 9
         building_whaling_station = 8
         building_fishing_wharf = 15
 
@@ -1104,11 +1105,11 @@ STATE_TOHOKU = {
     farm = "x1BAF33"
     mine = "xF01040"
     wood = "x3190C0"
-    arable_land = 100 #80
+    arable_land = 100 # kmpmp: vanilla = 80
     arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_cotton_plantation" "building_silk_plantation" "building_tobacco_plantation" "building_vineyard" }
     capped_resources = {
         building_iron_mine = 53
-        building_coal_mine = 30 #6
+        building_coal_mine = 30 # kmpmp: vanilla = 6
         building_gold_mine = 2
         building_sulfur_mine = 51
         building_lead_mine = 20
@@ -1143,7 +1144,7 @@ STATE_KANTO = {
     arable_land = 117
     arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_cotton_plantation" "building_silk_plantation" "building_tea_plantation" "building_tobacco_plantation" "building_dye_plantation" }
     capped_resources = {
-        building_iron_mine = 9 #3
+        building_iron_mine = 9 # kmpmp: vanilla = 3
         building_lead_mine = 4
         building_sulfur_mine = 21
         building_logging_camp = 9
@@ -1152,7 +1153,7 @@ STATE_KANTO = {
 
         building_copper_mine = 10
     }
-    #kmpmp
+    # kmpmp
     resource = {
         type = "building_oil_rig"
         undiscovered_amount = 15
@@ -1376,8 +1377,8 @@ STATE_SHIKOKU = {
     arable_land = 56
     arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_cotton_plantation" "building_silk_plantation" "building_dye_plantation" "building_tea_plantation" "building_tobacco_plantation" }
     capped_resources = {
-        building_coal_mine = 25 #kmpmp
-        building_iron_mine = 30 #4 #24
+        building_coal_mine = 25 # kmpmp
+        building_iron_mine = 30 # kmpmp: vanilla = 4
         building_lead_mine = 4
         building_logging_camp = 11
         building_fishing_wharf = 9

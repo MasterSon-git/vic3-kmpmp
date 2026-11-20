@@ -33,7 +33,7 @@
 	}
 
 	pact = {
-		cost = 10 #0
+		cost = 10 # kmpmp: vanilla = 0
 		forced_duration = 12
 
 		# is_two_sided_pact = no

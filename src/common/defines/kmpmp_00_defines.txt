@@ -1,57 +1,54 @@
 ﻿NPolitics = {
-	# kmpmp - for the moment vanilla - check if we can do something with the ranks
 	LAW_ENACTMENT_LAW_COMMITMENT_EFFECT = 0.05 # Committing to enacting a law via treaty adds this much to pass chance, scaled by the number of ranks the country the comittee has on the committer
 }
 
 NEconomy = {
-	ECONOMY_OF_SCALE_NATIONALIZED_FRACTION_MULT = 0.25 #0.5	# Non-government building economy of scale modifier if multiplied by (1 - the fraction of nationalized levels * this)
+	ECONOMY_OF_SCALE_NATIONALIZED_FRACTION_MULT = 0.25 # kmpmp: vanilla = 0.5 # Non-government building economy of scale modifier if multiplied by (1 - the fraction of nationalized levels * this)
 
-	DECLARE_BANKRUPTCY_PENALTY_DURATION_YEARS = 4 #10		# How many years does it take for penalties from declaring bankruptcy to fully decay
+	DECLARE_BANKRUPTCY_PENALTY_DURATION_YEARS = 4 # kmpmp: vanilla = 10 # How many years does it take for penalties from declaring bankruptcy to fully decay
 
-	CREDIT_RATIO_MAX_OVERRUN = 0.1 #0.01 			# Countries can accumulate this percentage more of a debt "hole" than their credit limit when in default
+	CREDIT_RATIO_MAX_OVERRUN = 0.1 # kmpmp: vanilla = 0.01 # Countries can accumulate this percentage more of a debt "hole" than their credit limit when in default
 }
 
 NCharacters = {
-	# kmpmp - lower min age of generals
-	AGE_GENERATION_STARTVAL = 11 #20
-	RECRUIT_COMMANDER_NUM_OPTIONS = 5 #3
-	RECRUIT_COMMANDER_REMOVE_AGE = 50 #55			# Remove commanders from the recruitment pool at age 50
+	AGE_GENERATION_STARTVAL = 11 # kmpmp: vanilla = 20. Allow younger generals.
+	RECRUIT_COMMANDER_NUM_OPTIONS = 5 # kmpmp: vanilla = 3
+	RECRUIT_COMMANDER_REMOVE_AGE = 50 # kmpmp: vanilla = 55 # Remove commanders from the recruitment pool at age 50
 
-	# kmpmp - try to reroll chars after months
-	VOIDED_CHARACTER_DEFAULT_DURATION = 6 #12 # Default months a character will be in the void before being deleted
-	RECRUIT_COMMANDER_POOL_SIZE = 5 #3
+	VOIDED_CHARACTER_DEFAULT_DURATION = 6 # kmpmp: vanilla = 12. Shorten the time discarded commanders spend in the void. # Default months a character will be in the void before being deleted
+	RECRUIT_COMMANDER_POOL_SIZE = 5 # kmpmp: vanilla = 3
 }
 
 NWar = {
 	DEVASTATION_MAX = 100.0
-	WAR_SUPPORT_CHANGE_KIA_FACTOR = -0.825 # KMPMP: vanilla 1.15 -2.0 * (old KMPMP 1.65 / old vanilla 4.0)
+	WAR_SUPPORT_CHANGE_KIA_FACTOR = -0.825 # kmpmp: vanilla = -2.0. Retain the reduced casualty penalty after the change to signed war support.
 
-	NAVAL_INVASION_PREPARATION_DURATION_DAYS = 30 #14 						# How many days should pass since the first army arrived to the naval invasion front to start advancing it without the sea node being blocked by enemy fleet
-	LAND_INVASION_PREPARATION_DURATION_DAYS = 30 #14 						# How many days should pass since the first army arrived to the invasion front to start advancing it
-	STATE_CONQUEST_HOMELAND_AND_CLAIM_RADICALIZATION = 0.0 #0.1
-	STATE_CONQUEST_HOMELAND_OR_CLAIM_RADICALIZATION = 0.0 #0.3
+	NAVAL_INVASION_PREPARATION_DURATION_DAYS = 30 # kmpmp: vanilla = 14 # How many days should pass since the first army arrived to the naval invasion front to start advancing it without the sea node being blocked by enemy fleet
+	LAND_INVASION_PREPARATION_DURATION_DAYS = 30 # kmpmp: vanilla = 14 # How many days should pass since the first army arrived to the invasion front to start advancing it
+	STATE_CONQUEST_HOMELAND_AND_CLAIM_RADICALIZATION = 0.0 # kmpmp: vanilla = 0.1
+	STATE_CONQUEST_HOMELAND_OR_CLAIM_RADICALIZATION = 0.0 # kmpmp: vanilla = 0.3
 
-	STATE_PARTIAL_OCCUPATION_THRESHOLD = 0.9999 #0.5 # If a state is at least this % partially occupied, it's considered occupied for purposes of contesting wargoals
+	STATE_PARTIAL_OCCUPATION_THRESHOLD = 0.9999 # kmpmp: vanilla = 0.5 # If a state is at least this % partially occupied, it's considered occupied for purposes of contesting wargoals
 }
 
 NMilitary = {
-	MANPOWER_LOST_DUE_TO_ATTRITION_PER_WEEK_MIN = 0.024 #0.04 	# The minimum percentage of manpower a unit can lose each week due to attrition
-	MANPOWER_LOST_DUE_TO_ATTRITION_PER_WEEK_MAX = 0.072 #0.12 	# The maximum percentage of manpower a unit can lose each week due to attrition
-	CONVOY_RAIDING_DEFENSE_MULT = 0.25 #0.15
-	MILITARY_FORMATION_WEEKLY_MAX_UNIT_UPGRADES_FLEET = 0.025 #0.05
+	MANPOWER_LOST_DUE_TO_ATTRITION_PER_WEEK_MIN = 0.024 # kmpmp: vanilla = 0.04 # The minimum percentage of manpower a unit can lose each week due to attrition
+	MANPOWER_LOST_DUE_TO_ATTRITION_PER_WEEK_MAX = 0.072 # kmpmp: vanilla = 0.12 # The maximum percentage of manpower a unit can lose each week due to attrition
+	CONVOY_RAIDING_DEFENSE_MULT = 0.25 # kmpmp: vanilla = 0.15
+	MILITARY_FORMATION_WEEKLY_MAX_UNIT_UPGRADES_FLEET = 0.025 # kmpmp: vanilla = 0.05
 }
 
 NCountry = {
-	INCORPORATION_TIME_NO_MATCH = 10	#25			# Years if the state's Homeland cultures have nothing in common with the country's primary cultures
+	INCORPORATION_TIME_NO_MATCH = 10 # kmpmp: vanilla = 25 # Years if the state's Homeland cultures have nothing in common with the country's primary cultures
 }
 
 NPowerBlocs = {
-	POWER_STRUGGLE_DURATION_SUCCESS_MONTHS = 36 #12 	# Power struggle succeeds after this months
-	COUNTRY_POPULATION_LEVERAGE_RESISTANCE_MODIFIER_DIVISOR = 1200000 	#1000000 	# Population divided by this is multiplied by country_leverage_resistance_per_population to give a certain amount of leverage per million people
+	POWER_STRUGGLE_DURATION_SUCCESS_MONTHS = 36 # kmpmp: vanilla = 12 # Power struggle succeeds after this months
+	COUNTRY_POPULATION_LEVERAGE_RESISTANCE_MODIFIER_DIVISOR = 1200000 # kmpmp: vanilla = 1000000 # Population divided by this is multiplied by country_leverage_resistance_per_population to give a certain amount of leverage per million people
 	COUNTRY_POPULATION_LEVERAGE_RESISTANCE_MODIFIER_MAX_MULTIPLIER = 100	# Max multiplier given by population. With the value above at 1 000 000, this means the cap for leverage resistance is at 100 000 000.
 }
 
 NPops = {
-	ASSIMILATION_RATE = 0.004 #0.002					# Percentage of pops who will Assimilate into a different Culture each month, if eligible
-	CONVERSION_RATE = 0.004 #0.002						# Percentage of pops who will Convert into a different Religion each month, if eligible
+	ASSIMILATION_RATE = 0.004 # kmpmp: vanilla = 0.002 # Percentage of pops who will Assimilate into a different Culture each month, if eligible
+	CONVERSION_RATE = 0.004 # kmpmp: vanilla = 0.002 # Percentage of pops who will Convert into a different Religion each month, if eligible
 }

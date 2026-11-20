@@ -12,8 +12,7 @@
 
 	leader_modifier = {
 		state_trade_capacity_mult = 0.25
-		# kmpmp
-		building_group_bg_manufacturing_throughput_add = 0.05
+		building_group_bg_manufacturing_throughput_add = 0.05 # kmpmp
 	}
 
 	# kmpmp
@@ -27,7 +26,7 @@
 			power_bloc = {
 				leverage_advantage = {
 					target = root
-					value <= 60 #30
+					value <= 60 # kmpmp: vanilla = 30
 				}
 			}
 		}
@@ -178,6 +177,7 @@ REPLACE:identity_sovereign_empire = {
 		power_bloc_cohesion_per_member_add = -3
 	}
 
+	# kmpmp
 	leader_modifier = {
 		# country_liberty_desire_of_subjects_add = -0.05
 	}
@@ -186,8 +186,7 @@ REPLACE:identity_sovereign_empire = {
 	}
 
 	member_modifier = {
-		# kmpmp
-		country_liberty_desire_of_subjects_add = -0.05
+		country_liberty_desire_of_subjects_add = -0.05 # kmpmp
 	}
 
 	possible = {
@@ -200,7 +199,7 @@ REPLACE:identity_sovereign_empire = {
 			power_bloc = {
 				leverage_advantage = {
 					target = root
-					value <= 60 #30
+					value <= 60 # kmpmp: vanilla = 30
 				}
 			}
 		}
@@ -316,7 +315,7 @@ REPLACE:identity_ideological_union = {
 	}
 
 	leader_modifier = {
-		country_law_enactment_speed_mult = 0.1
+		country_law_enactment_speed_mult = 0.1 # kmpmp
 		country_can_impose_same_lawgroup_governance_principles_in_power_bloc_bool = yes
 		country_can_impose_same_lawgroup_distribution_of_power_in_power_bloc_bool = yes
 	}
@@ -326,8 +325,7 @@ REPLACE:identity_ideological_union = {
 	}
 
 	member_modifier = {
-		# kmpmp
-		country_loyalists_from_legitimacy_mult = 0.1
+		country_loyalists_from_legitimacy_mult = 0.1 # kmpmp
 	}
 
 	can_leave = {
@@ -336,7 +334,7 @@ REPLACE:identity_ideological_union = {
 			power_bloc = {
 				leverage_advantage = {
 					target = root
-					value <= 60 #30
+					value <= 60 # kmpmp: vanilla = 30
 				}
 			}
 		}
@@ -443,7 +441,7 @@ REPLACE:identity_ideological_union = {
 
 		if = { # The forces of reaction
 			limit = {
-				country_has_monarchy_law = yes
+				country_has_monarchy_law = yes # kmpmp
 				OR = {
 					has_law_or_variant = law_type:law_autocracy
 					has_law_or_variant = law_type:law_oligarchy
@@ -487,16 +485,15 @@ REPLACE:identity_military_treaty_organization = {
 	leader_modifier = {
 		country_prestige_from_army_power_projection_mult = 0.1
 		country_prestige_from_navy_power_projection_mult = 0.1
-		# kmpmp
-		unit_experience_gain_mult = 0.1
+		unit_experience_gain_mult = 0.1 # kmpmp
 	}
 
 	non_leader_modifier = {
 	}
 
+	# kmpmp
 	member_modifier = {
 		building_training_rate_mult = 0.2
-		# kmpmp
 		country_loan_interest_rate_mult = -0.05
 		# Match First Aid for the identity-wide bonus before coordination bonuses (#677).
 		unit_recovery_rate_add = 0.10
@@ -513,7 +510,7 @@ REPLACE:identity_military_treaty_organization = {
 			power_bloc = {
 				leverage_advantage = {
 					target = root
-					value <= 60 #30
+					value <= 60 # kmpmp: vanilla = 30
 				}
 			}
 		}
@@ -532,7 +529,7 @@ REPLACE:identity_military_treaty_organization = {
 
 	cohesion = {
 		add = {
-			add = 0.4 #0.3
+			add = 0.4 # kmpmp: vanilla = 0.3
 			multiply = define:NPowerBlocs|COHESION_TARGET_MAX
 			desc = POWER_BLOC_COHESION_BASE
 		}
@@ -673,11 +670,10 @@ REPLACE:identity_religious = {
 	}
 
 	member_modifier = {
-		state_conversion_mult = 0.50 #0.33
+		state_conversion_mult = 0.50 # kmpmp: vanilla = 0.33
 		interest_group_ig_devout_pol_str_mult = 0.25
 		state_birth_rate_mult = 0.05
-		# kmpmp
-		country_military_goods_cost_mult = -0.025
+		country_military_goods_cost_mult = -0.025 # kmpmp
 	}
 
 	can_leave = {
@@ -686,7 +682,7 @@ REPLACE:identity_religious = {
 			power_bloc = {
 				leverage_advantage = {
 					target = root
-					value <= 60 #30
+					value <= 60 # kmpmp: vanilla = 30
 				}
 			}
 		}
@@ -888,7 +884,7 @@ REPLACE:identity_cultural = {
 			power_bloc = {
 				leverage_advantage = {
 					target = root
-					value <= 60 #30
+					value <= 60 # kmpmp: vanilla = 30
 				}
 			}
 		}

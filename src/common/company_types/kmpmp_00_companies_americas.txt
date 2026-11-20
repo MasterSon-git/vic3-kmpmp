@@ -1,4 +1,5 @@
 ﻿# Fundidora de Fierro y Acero de Monterrey, S.A.
+# kmpmp
 INJECT:company_fundidora_monterrey = {
 	extension_building_types = {
 		building_railway
@@ -11,6 +12,7 @@ INJECT:company_fundidora_monterrey = {
 }
 
 # Compañía Mexicana de Petróleo El Águila SA
+# kmpmp
 INJECT:company_el_aguila = {
 	extension_building_types = {
 		building_motor_industry
@@ -23,6 +25,7 @@ INJECT:company_el_aguila = {
 }
 
 # Compañía de Salitres y Ferrocarril de Antofagasta
+# kmpmp
 INJECT:company_csfa = {
 	extension_building_types = {
 		building_coal_mine
@@ -36,6 +39,7 @@ INJECT:company_csfa = {
 }
 
 # Caribbean Petroleum Company
+# kmpmp
 INJECT:company_caribbean_petroleum = {
 	extension_building_types = {
 		building_motor_industry
@@ -48,6 +52,7 @@ INJECT:company_caribbean_petroleum = {
 }
 
 # Bunge & Born
+# kmpmp
 INJECT:company_bunge_born = {
 	extension_building_types = {
 		building_livestock_ranch
@@ -75,11 +80,12 @@ REPLACE:company_la_rosada = {
 		building_artillery_foundry
 	}
 
+	# kmpmp
 	extension_building_types = {
 		building_iron_mine
-		building_lead_mine #kmpmp
-		building_coal_mine #kmpmp
-		building_logging_camp #kmpmp
+		building_lead_mine
+		building_coal_mine
+		building_logging_camp
 	}
 
 #	possible_prestige_goods = {
@@ -119,8 +125,8 @@ REPLACE:company_la_rosada = {
 
 	prosperity_modifier = {
 		unit_defense_mult = 0.05
-		building_iron_mine_throughput_add = 0.15 #0.1
-		unit_offense_mult = 0.05 #kmpmp
+		building_iron_mine_throughput_add = 0.15 # kmpmp: vanilla = 0.1
+		unit_offense_mult = 0.05 # kmpmp
 	}
 
 	ai_will_do = {
@@ -147,6 +153,7 @@ REPLACE:company_la_rosada = {
 
 # Peruvian Amazon Company
 INJECT:company_peruvian_amazon = {
+	# kmpmp
 	prosperity_modifier = {
 		building_rubber_plantation_throughput_add = 0.1
 		building_group_bg_plantations_throughput_add = 0.1
@@ -154,6 +161,7 @@ INJECT:company_peruvian_amazon = {
 }
 
 # Kablin Irmãos & Cia.
+# kmpmp
 INJECT:company_kablin = {
 	extension_building_types = {
 		building_dye_plantation
@@ -209,7 +217,8 @@ REPLACE:company_panama_company = {
 	}
 
 	possible = {
-		NOT = { # kmpmp company can only be established by one country
+		# kmpmp: Only one country can establish this company.
+		NOT = {
 			any_country = {
 				exists = owning_company
 				owning_company = {

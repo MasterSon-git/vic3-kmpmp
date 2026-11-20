@@ -19,7 +19,7 @@ FAE_se_calculate_siege = {
         }
         
         # Add siege from combat engineers
-        # kmpmp add siege from kmpmp_mobilization_option_rocket_artillery
+        # kmpmp: Add siege from kmpmp_mobilization_option_rocket_artillery
         if = {
             limit = {
                 owner = {
@@ -64,7 +64,7 @@ FAE_se_calculate_siege = {
                         }
                         add  = kmpmp_FAE_siege_rocket_artillery
 
-                        # kmpmp add siege from tech
+                        # kmpmp: Include siege strength from researched technology.
                         if = {
                             limit = {
                                 owner = {
@@ -135,7 +135,7 @@ FAE_se_calculate_siege = {
                 add  = FAE_siege_cannon_arty
             }
         }
-        # kmpmp new unit types
+        # kmpmp: New unit types
         else_if = {
             limit = {
                 has_unit_type = unit_type:combat_unit_type_fort_buster_artillery

@@ -1,4 +1,5 @@
-﻿INJECT:electricity = {
+﻿# kmpmp
+INJECT:electricity = {
 	local = no #yes
-	tradeable = no #kmpmp
+	tradeable = no
 }

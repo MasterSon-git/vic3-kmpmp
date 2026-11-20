@@ -32,7 +32,8 @@
 	possible = {
 		is_diplomatic_play_committed_participant = no
 		scope:target_country = { is_diplomatic_play_committed_participant = no }
-		trigger_if = { # kmpmp
+		# kmpmp
+		trigger_if = {
 			limit = {
 				NOT = {
 					has_game_rule = kmpmp_trade_states_relations_ignore
@@ -91,12 +92,12 @@
 		}
 	}
 
+	# kmpmp
 	accept_effect = {
 		if = {
 			limit = { exists = scope:first_state }
 			scope:first_state = { 
 				set_state_owner = scope:target_country
-				# kmpmp
 				every_neighbouring_state = {
 					limit = {
 						owner != root
@@ -127,7 +128,6 @@
 			limit = { exists = scope:second_state }
 			scope:second_state = {
 				set_state_owner = root
-				# kmpmp
 				every_neighbouring_state = {
 					limit = {
 						owner != root

@@ -135,8 +135,7 @@
 					years = 20
 					is_decaying = yes
 				}
-				# kmpmp
-				trigger_event = kmpmp_ev_spain.1
+				trigger_event = kmpmp_ev_spain.1 # kmpmp
 			}
 			trigger_event = carlist_war.2
 			hidden_effect = {

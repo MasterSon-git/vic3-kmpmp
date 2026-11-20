@@ -93,7 +93,6 @@
         add_technology_researched = academia
     }
 
-    #kmpmp
 
     c:TUR ?= {
         add_technology_researched = paddle_steamer

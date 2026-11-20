@@ -1,5 +1,5 @@
-﻿# kmpmp - custom traits
-
+﻿
+# kmpmp: Custom traits
 REPLACE_OR_CREATE:state_trait_caribbean_sea = {
     icon = "gfx/interface/icons/state_trait_icons/tropical_climate.dds"
 

@@ -7,18 +7,18 @@ INJECT:company_armstrong_whitworth = {
 
 # John Brown & Company
 INJECT:company_john_brown = {
+	# kmpmp
 	prosperity_modifier = {
 		country_ship_group_supply_ships_construction_efficiency_add = 0.05
-		# kmpmp
 		building_port_throughput_add = 0.1
 	}
 }
 
 # Great Western Railway
 INJECT:company_gwr = {
+	# kmpmp
 	prosperity_modifier = {
 		state_radicals_from_political_movements_mult = 0.05
-		#kmpmp
 		building_iron_mine_throughput_add = 0.1
 		building_lead_mine_throughput_add = 0.1
 		building_motor_industry_throughput_add = 0.05

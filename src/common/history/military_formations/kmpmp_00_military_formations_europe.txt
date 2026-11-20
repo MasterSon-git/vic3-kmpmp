@@ -1,5 +1,6 @@
-﻿MILITARY_FORMATIONS = {
-	c:PRU ?= { # total 10 ships
+﻿# kmpmp: Add frigates to each country’s largest starting fleet.
+MILITARY_FORMATIONS = {
+	c:PRU ?= {
 		ordered_military_formation = {
 			order_by = num_ships
 			max = 1
@@ -13,7 +14,7 @@
 			}
 		}
 	}
-	c:AUS ?= { # total 10 ships
+	c:AUS ?= {
 		ordered_military_formation = {
 			order_by = num_ships
 			max = 1
@@ -27,7 +28,7 @@
 			}
 		}
 	}
-	c:SWE ?= { # total 20 ships
+	c:SWE ?= {
 		ordered_military_formation = {
 			order_by = num_ships
 			max = 1
@@ -41,7 +42,7 @@
 			}
 		}
 	}
-	c:SIC ?= { # total 10 ships
+	c:SIC ?= {
 		ordered_military_formation = {
 			order_by = num_ships
 			max = 1
@@ -55,7 +56,7 @@
 			}
 		}
 	}
-	c:SAR ?= { # total 10 ships
+	c:SAR ?= {
 		ordered_military_formation = {
 			order_by = num_ships
 			max = 1
@@ -69,7 +70,7 @@
 			}
 		}
 	}
-	c:POR ?= { # total 10 ships
+	c:POR ?= {
 		ordered_military_formation = {
 			order_by = num_ships
 			max = 1
@@ -83,7 +84,7 @@
 			}
 		}
 	}
-	c:SPA ?= { # total 20 ships
+	c:SPA ?= {
 		ordered_military_formation = {
 			order_by = num_ships
 			max = 1
@@ -97,7 +98,7 @@
 			}
 		}
 	}
-	c:USA ?= { # total 21 ships
+	c:USA ?= {
 		ordered_military_formation = {
 			order_by = num_ships
 			max = 1

@@ -1,4 +1,5 @@
 ﻿l_german:
+ # kmpmp: German translation for the bundled Stockpile Economy mod (#481).
  ASE_STOCKPILE_WORD:0 "Warenlager"
  ASE_INPUT_WORD:0 "Eingang"
  ASE_OUTPUT_WORD:0 "Ausgang"

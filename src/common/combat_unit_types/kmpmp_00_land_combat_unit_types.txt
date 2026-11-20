@@ -387,12 +387,12 @@ REPLACE:combat_unit_type_mechanized_infantry = {
         texture = "gfx/unit_illustrations/infantry_eu_mechanized.dds"
     }
 
+    # kmpmp
     upgrades = {
-        combat_unit_type_interwar_mechanized_infantry # kmpmp
+        combat_unit_type_interwar_mechanized_infantry
     }
 }
 
-# kmpmp
 REPLACE_OR_CREATE:combat_unit_type_interwar_mechanized_infantry = {
     group = combat_unit_group_infantry
     max_manpower = 1000
@@ -437,7 +437,7 @@ REPLACE:combat_unit_type_cannon_artillery = {
         unit_offense_add = 25
         unit_defense_add = 15
         unit_morale_loss_add = 10
-        unit_kill_rate_add = 0.2 #0.1
+        unit_kill_rate_add = 0.2 # kmpmp: vanilla = 0.1
         unit_devastation_mult = 0.1
         unit_naval_invasion_efficiency_mult = -0.25
 
@@ -504,8 +504,8 @@ REPLACE:combat_unit_type_mobile_artillery = {
     battle_modifier = {
         unit_offense_add = 30
         unit_defense_add = 15
-        unit_morale_loss_add = 7 #8
-        unit_kill_rate_add = 0.3 #0.2
+        unit_morale_loss_add = 7 # kmpmp: vanilla = 8
+        unit_kill_rate_add = 0.3 # kmpmp: vanilla = 0.2
         unit_devastation_mult = 0.15
         unit_naval_invasion_efficiency_mult = -0.25
 
@@ -573,7 +573,7 @@ REPLACE:combat_unit_type_shrapnel_artillery = {
         unit_offense_add = 45
         unit_defense_add = 25
         unit_morale_loss_add = 6
-        unit_kill_rate_add = 0.4 #0.3
+        unit_kill_rate_add = 0.4 # kmpmp: vanilla = 0.3
         unit_devastation_mult = 0.15
         unit_naval_invasion_efficiency_mult = -0.25
 
@@ -626,7 +626,6 @@ REPLACE:combat_unit_type_shrapnel_artillery = {
     }
 }
 
-# kmpmp
 REPLACE_OR_CREATE:combat_unit_type_fort_buster_artillery = {
     group = combat_unit_group_artillery
     max_manpower = 1000
@@ -641,8 +640,8 @@ REPLACE_OR_CREATE:combat_unit_type_fort_buster_artillery = {
     battle_modifier = {
         unit_offense_add = 55
         unit_defense_add = 30
-        unit_morale_loss_add = 5 #6
-        unit_kill_rate_add = 0.35 #0.25
+        unit_morale_loss_add = 5
+        unit_kill_rate_add = 0.35
         unit_devastation_mult = 0.2
         unit_occupation_mult = 0.1
         unit_naval_invasion_efficiency_mult = -0.25
@@ -681,8 +680,8 @@ REPLACE:combat_unit_type_siege_artillery = {
     battle_modifier = {
         unit_offense_add = 55
         unit_defense_add = 30
-        unit_morale_loss_add = 5 #6
-        unit_kill_rate_add = 0.35 #0.25
+        unit_morale_loss_add = 5 # kmpmp: vanilla = 6
+        unit_kill_rate_add = 0.35 # kmpmp: vanilla = 0.25
         unit_devastation_mult = 0.2
         unit_naval_invasion_efficiency_mult = -0.25
 
@@ -752,7 +751,7 @@ REPLACE:combat_unit_type_heavy_tank = {
         unit_offense_add = 70
         unit_defense_add = 35
         unit_morale_loss_add = 4
-        unit_kill_rate_add = 0.35 #0.25
+        unit_kill_rate_add = 0.35 # kmpmp: vanilla = 0.25
         unit_morale_damage_mult = 0.15
         unit_devastation_mult = 0.2
         unit_naval_invasion_efficiency_mult = -0.25
@@ -771,12 +770,12 @@ REPLACE:combat_unit_type_heavy_tank = {
         texture = "gfx/unit_illustrations/artillery_heavy_tank.dds"
     }
 
+    # kmpmp
     upgrades = {
         combat_unit_type_interwar_heavy_tank
     }
 }
 
-# kmpmp
 REPLACE_OR_CREATE:combat_unit_type_interwar_heavy_tank = {
     group = combat_unit_group_artillery
     max_manpower = 1000
@@ -889,19 +888,20 @@ REPLACE:combat_unit_type_dragoons = {
     supply_capacity = 40
 
     upkeep_modifier = {
-        goods_input_grain_add = 2 #1
+        goods_input_grain_add = 2 # kmpmp: vanilla = 1
         goods_input_small_arms_add = 2
-        goods_input_iron_add = 2 #kmpmp
+        goods_input_iron_add = 2 # kmpmp
     }
 
+    # kmpmp
     battle_modifier = {
-        unit_offense_add = 30 #20
-        unit_defense_add = 20 #25
-        unit_morale_loss_add = 12 #8
+        unit_offense_add = 30 # kmpmp: vanilla = 20
+        unit_defense_add = 20 # kmpmp: vanilla = 25
+        unit_morale_loss_add = 12 # kmpmp: vanilla = 8
         unit_occupation_mult = 0.3
         unit_naval_invasion_efficiency_mult = -0.25
-        unit_recovery_rate_add = -0.15 # kmpmp
-        unit_kill_rate_add = 0.05 # kmpmp
+        unit_recovery_rate_add = -0.15
+        unit_kill_rate_add = 0.05
         #should get modifiers to mobile/surprise battle conditions appearing
     }
 
@@ -952,16 +952,17 @@ REPLACE:combat_unit_type_cuirassiers = {
     supply_capacity = 40
 
     upkeep_modifier = {
-        goods_input_grain_add = 2 #1
-        goods_input_small_arms_add = 0.5 #2
-        goods_input_iron_add = 1 #kmpmp
+        goods_input_grain_add = 2
+        goods_input_small_arms_add = 0.5 # kmpmp: vanilla = 2
+        goods_input_iron_add = 1
     }
 
+    # kmpmp
     battle_modifier = {
         unit_offense_add = 25
-        unit_defense_add = 25 #20
-        unit_morale_loss_add = 10 #8
-        unit_recovery_rate_add = -0.1 # kmpmp
+        unit_defense_add = 25 # kmpmp: vanilla = 20
+        unit_morale_loss_add = 10 # kmpmp: vanilla = 8
+        unit_recovery_rate_add = -0.1
         unit_occupation_mult = 0.3
         unit_naval_invasion_efficiency_mult = -0.25
     }
@@ -1014,18 +1015,19 @@ REPLACE:combat_unit_type_lancers = {
 
     upkeep_modifier = {
         goods_input_grain_add = 2
-        goods_input_small_arms_add = 1 #2
-		goods_input_iron_add = 3 #3
+        goods_input_small_arms_add = 1 # kmpmp: vanilla = 2
+		goods_input_iron_add = 3 # kmpmp: vanilla = 2
     }
 
+    # kmpmp
     battle_modifier = {
-        unit_offense_add = 25 #30
-        unit_defense_add = 25 #20
-        unit_morale_loss_add = 12 #6
-        unit_kill_rate_add = 0.1 #0.05
+        unit_offense_add = 25 # kmpmp: vanilla = 30
+        unit_defense_add = 25 # kmpmp: vanilla = 20
+        unit_morale_loss_add = 12 # kmpmp: vanilla = 6
+        unit_kill_rate_add = 0.1 # kmpmp: vanilla = 0.05
         # unit_morale_loss_mult = 0.05
         unit_occupation_mult = 0.3
-        unit_recovery_rate_add = -0.1 # kmpmp
+        unit_recovery_rate_add = -0.1
         unit_naval_invasion_efficiency_mult = -0.25
     }
 
@@ -1084,11 +1086,11 @@ REPLACE:combat_unit_type_light_tanks = {
     }
 
     battle_modifier = {
-        unit_offense_add = 60 #45
+        unit_offense_add = 60 # kmpmp: vanilla = 45
         unit_defense_add = 45
-        unit_morale_loss_add = 6 #4
+        unit_morale_loss_add = 6 # kmpmp: vanilla = 4
         unit_devastation_mult = 0.1
-        unit_recovery_rate_add = -0.1 #kmpmp
+        unit_recovery_rate_add = -0.1 # kmpmp
         unit_occupation_mult = 0.3
         unit_naval_invasion_efficiency_mult = -0.25
 
@@ -1105,13 +1107,12 @@ REPLACE:combat_unit_type_light_tanks = {
         texture = "gfx/unit_illustrations/cavalry_light_tank.dds"
     }
 
-     # kmpmp
+    # kmpmp
     upgrades = {
         combat_unit_type_interwar_light_tanks
     }
 }
 
-# kmpmp
 REPLACE_OR_CREATE:combat_unit_type_interwar_light_tanks = {
     group = combat_unit_group_cavalry
     max_manpower = 1000
@@ -1130,7 +1131,7 @@ REPLACE_OR_CREATE:combat_unit_type_interwar_light_tanks = {
         unit_defense_add = 60
         unit_morale_loss_add = 5
         unit_devastation_mult = 0.15
-        unit_recovery_rate_add = -0.10 #kmpmp
+        unit_recovery_rate_add = -0.10
         unit_occupation_mult = 0.35
         unit_naval_invasion_efficiency_mult = -0.25
 

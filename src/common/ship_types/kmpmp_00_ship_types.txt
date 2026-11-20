@@ -1,5 +1,5 @@
 ﻿INJECT:ship_type_supply_ship = {
     modifier = {
-        ship_supply_capacity_add = 500 # = 1000
+        ship_supply_capacity_add = 500 # kmpmp: total = 1000
     }
 }

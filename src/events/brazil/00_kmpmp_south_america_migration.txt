@@ -29,7 +29,7 @@ sa_migration.1 = {
 		random_country = {
 			limit = {
 				# country_rank <= rank_value:major_power
-				country_rank >= rank_value:major_power
+				country_rank >= rank_value:major_power # kmpmp
 				custom_tooltip = {
 					text = is_in_europe_tt
 					is_in_geographic_region = geographic_region_europe
@@ -39,7 +39,7 @@ sa_migration.1 = {
 					religion = root.religion
 				}
 				# average_sol <= root.average_sol
-				kmpmp_average_sol_add_one <= root.average_sol
+				kmpmp_average_sol_add_one <= root.average_sol # kmpmp
 				any_primary_culture = {
 					culture_can_have_mass_migration_to_country = ROOT
 				}
@@ -51,10 +51,12 @@ sa_migration.1 = {
 					}
 					count >= 3
 				}
+				# kmpmp
 				NOT = {
 					has_variable = was_target_of_mass_migration
 				}
 			}
+			# kmpmp
 			weight = {
 				base = 1
 				modifier = { trigger = { country_turmoil < 0.05 } add = -0.5 }
@@ -87,6 +89,7 @@ sa_migration.1 = {
 					save_scope_as = migration_culture
 				}
 			}
+			# kmpmp
 			set_variable = {
 				name = was_target_of_mass_migration
 				years = 10

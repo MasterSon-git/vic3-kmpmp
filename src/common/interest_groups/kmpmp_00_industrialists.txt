@@ -112,7 +112,7 @@
 				set_ig_trait = ig_trait:ig_trait_engines_of_progress
 				set_ig_trait = ig_trait:ig_trait_job_creators
 			}
-			# kmpmp Germany
+			# kmpmp: Germany
 			else_if = {
 				limit = {
 					OR = {

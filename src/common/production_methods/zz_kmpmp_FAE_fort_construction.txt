@@ -1,5 +1,6 @@
 ﻿INJECT:FAE_pm_wood_palisades = {
     building_modifiers = {
+        # kmpmp
         workforce_scaled = {
             goods_input_wood_add  = 5
             goods_input_tools_add = 0.1
@@ -9,6 +10,7 @@
 
 INJECT:FAE_pm_stone_iron = {
     building_modifiers = {
+        # kmpmp
         workforce_scaled = {
             goods_input_iron_add  = 5
             goods_input_tools_add = 0.2
@@ -20,6 +22,7 @@ INJECT:FAE_pm_stone_iron = {
 
 INJECT:FAE_pm_steel_concrete = {
     building_modifiers = {
+        # kmpmp
         workforce_scaled = {
             goods_input_steel_add = 5
             goods_input_tools_add = 0.5

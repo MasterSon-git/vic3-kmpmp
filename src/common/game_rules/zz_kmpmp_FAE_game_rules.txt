@@ -1,5 +1,5 @@
 ﻿REPLACE:FAE_gr_ai_siege_mult = {
-    default = FAE_grs_ai_siege_nil #FAE_grs_ai_siege_low
+    default = FAE_grs_ai_siege_nil # kmpmp
     
     FAE_grs_ai_siege_nil = {}
     FAE_grs_ai_siege_low = {}

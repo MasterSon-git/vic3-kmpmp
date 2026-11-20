@@ -1,7 +1,7 @@
 ﻿INJECT:FAE_pm_bastion_forts = {
     building_modifiers = {
         workforce_scaled = {
-            unit_defense_add = -0.2
+            unit_defense_add = -0.2 # kmpmp
         }
     }
 }
@@ -9,7 +9,7 @@
 INJECT:FAE_pm_polygonal_forts = {
     building_modifiers = {
         workforce_scaled = {
-            unit_defense_add = -0.3
+            unit_defense_add = -0.3 # kmpmp
         }
     }
 }
@@ -17,7 +17,7 @@ INJECT:FAE_pm_polygonal_forts = {
 INJECT:FAE_pm_bunkers = {
     building_modifiers = {
         workforce_scaled = {
-            unit_defense_add = -0.4
+            unit_defense_add = -0.4 # kmpmp
         }
     }
 }

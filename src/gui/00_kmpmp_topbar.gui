@@ -12,6 +12,7 @@ template hud_visibility {
 types topbar_components
 {
 	### SECONDARY ICONS
+	# kmpmp: Fit the extra population, infamy and navy statistics in the secondary row of Improved Topbar Info.
 	type topbar_secondary_icons = container {
 		position = { 120 40 }
 		

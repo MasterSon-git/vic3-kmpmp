@@ -1,6 +1,6 @@
 ﻿REPLACE:state_transfer = {
 	kind = directed
-	cost = 150 #0
+	cost = 150 # kmpmp: vanilla = 0
 
 	icon = "gfx/interface/icons/diplomatic_treaties_articles_icons/transfer_state.dds"
 
@@ -20,16 +20,16 @@
 		state
     }
 
+	# kmpmp
 	target_modifier = {
-		# kmpmp
 		country_influence_add = -150
 	}
 
-	# kmpmp - possible block from diplomatic_action
+	# kmpmp: Apply the state-transfer restrictions when negotiating a treaty.
 	possible = {
 		is_diplomatic_play_committed_participant = no
 		scope:other_country = { is_diplomatic_play_committed_participant = no }
-		trigger_if = { # kmpmp
+		trigger_if = {
 			limit = {
 				NOT = {
 					has_game_rule = kmpmp_trade_states_relations_ignore
@@ -106,7 +106,7 @@
 				limit = { exists = input_state }
 				input_state = { set_state_owner = scope:state_taker }
 
-				# kmpmp - from diplomatic action
+				# kmpmp: Carry the diplomatic action’s restrictions into the treaty article.
 				input_state = {
 					every_neighbouring_state = {
 						limit = {

@@ -1,7 +1,7 @@
-﻿# kmpmp - merge cultures fixes
-namespace = dei_breakup
+﻿namespace = dei_breakup
 
 # Independent Dutch East Indies
+# kmpmp: Use the merged cultures in the affected event scopes.
 dei_breakup.1 = {
 	type = country_event
 	placement = root
@@ -375,12 +375,12 @@ alk_breakup.1 = {
 				annex = c:ATB
 			}
 			change_tag = ATB
-			add_primary_culture = cu:cherokee #cu:athabaskan
+			add_primary_culture = cu:cherokee # kmpmp
 			set_country_type = recognized
 		}
 		else = {
 			change_tag = ATB
-			add_primary_culture = cu:cherokee #cu:athabaskan
+			add_primary_culture = cu:cherokee # kmpmp
 		}
 		trigger_event = { id = independence.2 days = 1 }
 		custom_tooltip = {

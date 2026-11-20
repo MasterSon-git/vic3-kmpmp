@@ -2,7 +2,7 @@
 kmpmp_mediterranean_sea_hegemony = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_leadership_positive.dds
 
-    # +10% Naval OFF / DEF
+    # Ship armor and hull damage
     ship_armor_mult = 0.05
     ship_hull_damage_mult = 0.05
     # +10% Tradecenter TP
@@ -13,7 +13,7 @@ kmpmp_mediterranean_sea_hegemony = {
 kmpmp_mediterranean_sea_domination = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_leadership_positive.dds
 
-    # +20% Naval OFF / DEF
+    # Ship armor and hull damage
     ship_armor_mult = 0.1
     ship_hull_damage_mult = 0.1
     # +20% Tradecenter TP

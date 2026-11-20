@@ -1,7 +1,7 @@
-﻿# kmpmp - merge cultures fixes
-namespace = algeria_events
+﻿namespace = algeria_events
 
 # Conquest of Algeira - Success event
+# kmpmp: Use the merged cultures in the affected event scopes.
 algeria_events.1 = {
 	type = country_event
 	placement = scope:algeria_algiers_state_scope
@@ -373,6 +373,7 @@ algeria_events.2 = {
 					value = 0.20
 				}
 			}
+			# kmpmp
 			if = {
 				limit = {
 					any_scope_pop = {
@@ -419,6 +420,7 @@ algeria_events.2 = {
 					value = 0.05
 				}
 			}
+			# kmpmp
 			if = {
 				limit = {
 					any_scope_pop = {
@@ -490,7 +492,7 @@ algeria_events.8 = {
 			custom_tooltip = {
 				text = algeria_events.8.tt.1
 				has_variable = algeria_constantine_var
-				country_has_monarchy_law = yes
+				country_has_monarchy_law = yes # kmpmp
 			}
 		}
 		set_variable = algeria_deylik_restored
@@ -521,10 +523,10 @@ algeria_events.8 = {
 			custom_tooltip = {
 				text = algeria_events.8.tt.1
 				has_variable = algeria_constantine_var
-				country_has_monarchy_law = yes
+				country_has_monarchy_law = yes # kmpmp
 				exists = c:TUR
 				c:TUR ?= {
-					country_has_monarchy_law = yes
+					country_has_monarchy_law = yes # kmpmp
 				}
 			}
 		}
@@ -661,6 +663,7 @@ algeria_events.8 = {
 				days = long_modifier_time
 			}
 		}
+		# kmpmp
 		add_loyalists = {
 			value = 0.1
 			culture = cu:misri #cu:berber
