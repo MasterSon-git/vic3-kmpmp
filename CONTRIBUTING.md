@@ -34,6 +34,22 @@ Use Git history for old code, PRs for completed migration decisions, issues for
 unresolved work, and comments to explain current behaviour or technical constraints.
 Explain any necessary disabled workaround briefly.
 
+## Database entry modes and modifiers
+
+- When converting a full replacement to an injection, preserve the former
+  effective contribution at each recipient and scaling path unless a balance
+  change has been approved. Calculate each additive delta as the intended
+  total minus the base that will actually load, including bundled definitions.
+- During a vanilla update, leave new vanilla modifiers to inheritance in
+  existing injections. Add a delta only for an intentional KMPMP difference.
+  Recalculate totals even for untouched injections when their base changes.
+- For changes to modifier overrides and for vanilla updates, run the
+  [effective-modifier check](docs/DEVELOPMENT.md#effective-modifier-validation).
+  Review new findings, including upstream fields masked by full replacements.
+  Verify uncertain merge behavior against the game schema or other evidence
+  before relying on a calculated value. Document intentional additions and
+  their effective values in the PR.
+
 ## Vanilla updates
 
 Follow updated vanilla behavior wherever it is compatible with the purpose of
