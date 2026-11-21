@@ -9,13 +9,6 @@ Features include fortifications and engineers, military supplies and stockpiling
 private-construction controls, canal and railway changes, selected Power Bloc
 functionality, diplomatic tools, country content and paper-map themes.
 
-## Country documentation
-
-The community-maintained [country-by-country overview](docs/COUNTRY_CHANGES_BY_COUNTRY.md)
-summarizes changes affecting individual countries. See the
-[detailed country content reference](docs/COUNTRY_CONTENT.md) for numerical
-values, laws, companies, journal entries, decisions, events and state changes.
-
 ## Installation and development
 
 Subscribe to KMPMP on Steam Workshop and enable it in a dedicated launcher
