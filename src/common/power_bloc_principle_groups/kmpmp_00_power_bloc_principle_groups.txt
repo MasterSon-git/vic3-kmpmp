@@ -1,7 +1,6 @@
 ﻿REPLACE:principle_group_creative_legislature = {
 	primary_for_identity = identity_ideological_union
-	# kmpmp
-	unlocking_identity = identity_ideological_union
+	unlocking_identity = identity_ideological_union # kmpmp: Reserve Creative Legislature for Ideological Unions (#297, #359).
 
 	levels = {
 		principle_creative_legislature_1
@@ -10,11 +9,11 @@
 	}
 }
 
+# kmpmp: Allow blocs outside the Ideological Union to select Ideological Truth.
 REPLACE:principle_group_ideological_truth = {
 	primary_for_identity = identity_ideological_union
-	# kmpmp
-	#unlocking_identity = identity_ideological_union
 
+	# unlocking_identity = identity_ideological_union
 	levels = {
 		principle_ideological_truth_1
 		principle_ideological_truth_2

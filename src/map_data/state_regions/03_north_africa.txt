@@ -10,10 +10,11 @@
     wood = "x5011E0"
     arable_land = 80
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_opium_plantation" "building_tobacco_plantation" "building_sugar_plantation" "building_banana_plantation" "building_vineyard" }
+    # kmpmp
     capped_resources = {
-        building_sulfur_mine = 30 #20
-        building_logging_camp = 7 #2
-        building_fishing_wharf = 10 #6
+        building_sulfur_mine = 30 # kmpmp: vanilla = 20
+        building_logging_camp = 7 # kmpmp: vanilla = 2
+        building_fishing_wharf = 10 # kmpmp: vanilla = 6
     }
     naval_exit_id = 3034
 
@@ -31,10 +32,10 @@ STATE_UPPER_EGYPT = {
     farm = "xB002FE"
     mine = "xD0D060"
     wood = "xEDE183"
-    arable_land = 60 #40
+    arable_land = 60 # kmpmp: vanilla = 40
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_dye_plantation" "building_opium_plantation" "building_tobacco_plantation" "building_sugar_plantation" }
     capped_resources = {
-        building_logging_camp = 5 #2
+        building_logging_camp = 5 # kmpmp: vanilla = 2
         building_fishing_wharf = 13
     }
     naval_exit_id = 3047
@@ -53,10 +54,10 @@ STATE_MIDDLE_EGYPT = {
     farm = "x50D060"
     mine = "xA41CF4"
     wood = "x50D060"
-    arable_land = 60 #50
+    arable_land = 60 # kmpmp: vanilla = 50
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_opium_plantation" "building_tobacco_plantation" "building_sugar_plantation" "building_banana_plantation" }
     capped_resources = {
-        building_logging_camp = 5 #2
+        building_logging_camp = 5 # kmpmp: vanilla = 2
         building_fishing_wharf = 4
     }
     naval_exit_id = 3047

@@ -1,13 +1,12 @@
 ﻿INJECT:law_debt_slavery = {
 	modifier = {
-		# kmpmp
-		state_capitalists_investment_pool_efficiency_mult = 0.1
+		state_capitalists_investment_pool_efficiency_mult = 0.1 # kmpmp
 	}
 }
 
 INJECT:law_slave_trade = {
+	# kmpmp
 	modifier = {
-		# kmpmp
 		state_birth_rate_mult = 0.01
 		building_group_bg_plantations_throughput_add = 0.05
 		state_aristocrats_investment_pool_efficiency_mult = 0.25
@@ -16,8 +15,8 @@ INJECT:law_slave_trade = {
 }
 
 INJECT:law_legacy_slavery = {
+	# kmpmp
 	modifier = {
-		# kmpmp
 		state_birth_rate_mult = 0.02
 		building_group_bg_plantations_throughput_add = 0.1
 		state_aristocrats_investment_pool_efficiency_mult = 0.1

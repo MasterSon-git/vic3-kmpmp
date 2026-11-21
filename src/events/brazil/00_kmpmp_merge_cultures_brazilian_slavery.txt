@@ -1,7 +1,7 @@
-﻿# kmpmp - merge cultures fixes
-namespace = brazilian_slavery
+﻿namespace = brazilian_slavery
 
 # Slavery Fail Event
+# kmpmp: Use the merged cultures in the affected event scopes.
 brazilian_slavery.13 = {
 	type = country_event
 	placement = root
@@ -73,6 +73,7 @@ brazilian_slavery.13 = {
         	pop_type = aristocrats
         	value = medium_radicals
         }
+        # kmpmp: Apply radicals to the merged Afro-American culture.
         add_radicals = {
         	culture = cu:afro_american #cu:afro_brazilian
         	value = large_radicals

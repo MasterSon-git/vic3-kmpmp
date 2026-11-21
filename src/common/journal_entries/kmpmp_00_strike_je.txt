@@ -118,8 +118,7 @@
 			change_variable = {
 				name = strike_timer_var
 				add = 1
-				# kmpmp
-				max = 60
+				max = 60 # kmpmp
 			}
 		}
 		events = {

@@ -1,6 +1,7 @@
 ﻿# this is used to make changes to the game state if we add new features while loading old saves
 
 on_monthly_pulse_country = {
+    # kmpmp
     on_actions = {
         # kmpmp_add_ig_trait_army_with_a_state_action
     }

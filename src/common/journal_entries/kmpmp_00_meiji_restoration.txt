@@ -46,7 +46,7 @@
 			trigger_event = {
 				id = meiji.2
 			}
-			# kmpmp - show that it needs to be completed before year 1885 otherwise you don't get the buff "Empire of the rising Sun"
+			# kmpmp: Show the 1885 deadline for the Empire of the Rising Sun bonus.
 			show_as_tooltip = {
 				custom_tooltip = kmpmp_japan_buff_meiji_complete_condition_tt
 				add_modifier = {

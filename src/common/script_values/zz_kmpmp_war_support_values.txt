@@ -13,8 +13,8 @@ kmpmp_war_support_from_occupation = {
     else = { value = -10.0 }
 }
 
-# Based on vanilla 1.15.0 war_support_change. Keep engine enemy-pressure inputs,
-# new war-goal progress, signed event changes, economics, lobbies and DLC checks.
+# kmpmp: Add the incorporated-state occupation penalty to the Vanilla 1.15 war_support_change formula.
+# Keep engine enemy pressure, war-goal progress, signed event changes, economics, lobbies and DLC checks.
 REPLACE:war_support_change = {
 	# save all values that make up the war support change calculation since we frequently refer to them numerous times below
 	value = enemy_occupation
@@ -88,6 +88,7 @@ REPLACE:war_support_change = {
 		}
 	}
 
+	# kmpmp
 	add = {
         add = kmpmp_war_support_from_occupation
         desc = "KMPMP_ENEMY_OCCUPATION_INCORPORATED_STATES"
@@ -369,7 +370,7 @@ REPLACE:war_support_change = {
 	# Special, needs to support different loc keys so doesn't use the temp method
 	add = war_support_from_journal_entries
 
-    # KMPMP bonuses offset signed support loss; 1.15 may also allow support to rise.
+    # kmpmp: Bonuses can offset war support losses or raise support.
     if = {
         limit = { modifier:country_kmpmp_war_support_from_power_bloc_principles_add >= 0.01 }
         add = {
@@ -377,6 +378,7 @@ REPLACE:war_support_change = {
             desc = "KMPMP_WAR_SUPPORT_FROM_POWER_BLOC_PRINCIPLES"
         }
     }
+    # kmpmp
     if = {
         limit = { modifier:country_kmpmp_war_support_from_tec_add >= 0.01 }
         add = {

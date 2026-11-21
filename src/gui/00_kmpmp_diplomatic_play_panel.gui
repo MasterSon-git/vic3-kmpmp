@@ -989,9 +989,9 @@ types diplomatic_play_panel_types
 						text = "DIPLO_PLAY_GIVE_IN"
 						using = fontsize_large
 						# enabled = "[DiplomaticPlay.CanYield(GetPlayer)]"
-						enabled = "[And(DiplomaticPlay.CanYield(GetPlayer), GetScriptedGui('kmpmp_sgui_diplomatic_play_can_give_in').IsValid(GuiScope.SetRoot(DiplomaticPlay.MakeScope).AddScope('country', GetPlayer.MakeScope).End))]"
+						enabled = "[And(DiplomaticPlay.CanYield(GetPlayer), GetScriptedGui('kmpmp_sgui_diplomatic_play_can_give_in').IsValid(GuiScope.SetRoot(DiplomaticPlay.MakeScope).AddScope('country', GetPlayer.MakeScope).End))]" # kmpmp
 						# tooltip = "YIELD_DIPLOMATIC_PLAY_TOOLTIP"
-						tooltip = "[SelectLocalization(Not(DiplomaticPlay.CanYield(GetPlayer)), 'YIELD_DIPLOMATIC_PLAY_TOOLTIP', GetScriptedGui('kmpmp_sgui_diplomatic_play_can_give_in').IsValidTooltip(GuiScope.SetRoot(DiplomaticPlay.MakeScope).AddScope('country', GetPlayer.MakeScope).End))]"
+						tooltip = "[SelectLocalization(Not(DiplomaticPlay.CanYield(GetPlayer)), 'YIELD_DIPLOMATIC_PLAY_TOOLTIP', GetScriptedGui('kmpmp_sgui_diplomatic_play_can_give_in').IsValidTooltip(GuiScope.SetRoot(DiplomaticPlay.MakeScope).AddScope('country', GetPlayer.MakeScope).End))]" # kmpmp
 						onclick = "[PopupManager.AskConfirmation(DiplomaticPlay.Yield(GetPlayer))]"
 					}
 					button = {

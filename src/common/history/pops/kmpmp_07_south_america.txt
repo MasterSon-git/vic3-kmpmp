@@ -1,75 +1,75 @@
 ﻿# REGARDING BRAZIL: There are several varying estimates for Brazil's population overall in the 1830s. There's no good censuses for 1836 specifically, and provincial censuses are all over the place in terms of quality and distance in time from 1836. Everything will be drawn from estimates of estimates and probably have some issues with accuracy. I can do nothing but apologize, and encourage students of history to go forth and write a book I can steal data from in the future.
 
 POPS = {
-	# kmpmp add more pops *10
+	# kmpmp: Add nine times each Vanilla starting pop for a tenfold population.
 	s:STATE_ANTOFAGASTA = {
 		region_state:BOL = {
 			create_pop = {
 				culture = south_andean
-				size = 395964 #43996
+				size = 395964 # Vanilla starting pop: 43996
 			}
 			create_pop = {
 				culture = aimara
-				size = 577800 #64200
+				size = 577800 # Vanilla starting pop: 64200
 			}
 			create_pop = {
 				culture = afro_caribeno
-				size = 5400 #600
+				size = 5400 # Vanilla starting pop: 600
 			}
 			create_pop = {
 				culture = quechua
-				size = 30600 #3400
+				size = 30600 # Vanilla starting pop: 3400
 			}
 		}
 	}
-	# kmpmp add more pops *1.5
+	# kmpmp: Add half of each Vanilla starting pop for a 50% increase.
 	s:STATE_LA_PAZ = {
 		region_state:BOL = {
 			create_pop = {
 				culture = south_andean
-				size = 110396  #220792
+				size = 110396 # Vanilla starting pop: 220792
 			}
 			create_pop = {
 				culture = quechua
-				size = 159000 #318000
+				size = 159000 # Vanilla starting pop: 318000
 			}
 			create_pop = {
 				culture = aimara
-				size = 134002 #268004
+				size = 134002 # Vanilla starting pop: 268004
 			}
 			create_pop = {
 				culture = amazonian
-				size = 23500 #47000
+				size = 23500 # Vanilla starting pop: 47000
 			}
 			create_pop = {
 				culture = afro_caribeno	# Yungas Afro-Bolivians
-				size = 1600 #3200
+				size = 1600 # Vanilla starting pop: 3200
 			}
 		}
 	}
-	# kmpmp double the pops
+	# kmpmp: Add 10% of each listed Vanilla starting pop in Lima.
 	s:STATE_LIMA = {
 		region_state:NPU = {
 			create_pop = {
 				culture = south_andean
-				size = 24800 #248000
+				size = 24800 # Vanilla starting pop: 248000
 			}
 			create_pop = {
 				culture = quechua
-				size = 21200 #212000
+				size = 21200 # Vanilla starting pop: 212000
 			}
 			create_pop = {
 				culture = afro_caribeno
-				size = 2190 #21900
+				size = 2190 # Vanilla starting pop: 21900
 			}
 			create_pop = {
 				pop_type = slaves
 				culture = afro_caribeno
-				size = 620 #6200
+				size = 620 # Vanilla starting pop: 6200
 			}
 			create_pop = {
 				culture = amazonian
-				size = 1600 #16000
+				size = 1600 # Vanilla starting pop: 16000
 			}
 		}
 	}

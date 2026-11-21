@@ -1,4 +1,4 @@
-﻿# COPY-PASTED FOR NOW
+﻿# kmpmp: Use local widget and size names for the GDP Plotline Plus graphs.
 @kmpmp_plotline_large_height = 200
 @kmpmp_plotline_small_height = 100
 @kmpmp_plotline_large_width = 840

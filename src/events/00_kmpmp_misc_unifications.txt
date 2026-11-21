@@ -12,7 +12,7 @@ formation.5 = {
 			triggered_desc = {
 				desc = formation.5.f
 				trigger = {
-					country_has_monarchy_law = yes
+					country_has_monarchy_law = yes # kmpmp
 				}
 			}
 			triggered_desc = {
@@ -62,8 +62,7 @@ formation.5 = {
 		ai_chance = {
 			factor = 1
 		}
-		# kmpmp
-		kmpmp_iberia_unification_effect = yes
+		kmpmp_iberia_unification_effect = yes # kmpmp
 	}
 }
 
@@ -112,10 +111,10 @@ formation.8 = {
 			}
 			post_notification = unification_notification_four_culture
 		}
-		# kmpmp
-		kmpmp_arabia_unification_modifier = yes
+		kmpmp_arabia_unification_modifier = yes # kmpmp
 	}
 
+	# kmpmp
 	option = {
 		name = formation.5.a
 		default_option = yes
@@ -124,7 +123,6 @@ formation.8 = {
 			days = very_long_modifier_time
 		}
 
-		# kmpmp
 		add_primary_culture = cu:persian
 		add_primary_culture = cu:turkish
 		add_primary_culture = cu:kurdish
@@ -135,7 +133,6 @@ formation.8 = {
 			factor = 1
 		}
 
-		# kmpmp
 		every_state_region = {
 			limit = {
 				region = sr:region_north_africa
@@ -175,8 +172,8 @@ formation.8 = {
 		ai_chance = {
 			factor = 1
 		}
+		kmpmp_arabia_unification_effect = yes # kmpmp
 		# kmpmp
-		kmpmp_arabia_unification_effect = yes
 		trigger = {
 			ROOT = {
 				NOT = { has_modifier = kmpmp_ottoman_leader_of_islam }
@@ -209,6 +206,7 @@ formation.10 = {
 		NOT = { has_global_variable = has_formed_sca }
 	}
 
+	# kmpmp
 	immediate = {
 		set_global_variable = has_formed_sca
 		save_scope_as = formation_country
@@ -233,7 +231,6 @@ formation.10 = {
 			}
 			post_notification = unification_notification_three_culture #unification_notification_four_culture
 		}
-		# kmpmp
 		add_primary_culture = cu:estonian
 		add_primary_culture = cu:finnish
 		add_primary_culture = cu:latvian
@@ -251,16 +248,15 @@ formation.10 = {
 		ai_chance = {
 			factor = 1
 		}
-		# kmpmp
-		kmpmp_scandinavia_unification_effect = yes
+		kmpmp_scandinavia_unification_effect = yes # kmpmp
 	}
 
+	# kmpmp
 	option = {
 		name = formation.10.a
 		trigger = {
 			# owns_entire_state_region = STATE_OSTROBOTHNIA
 			# owns_entire_state_region = STATE_UUSIMAA
-			# kmpmp
 			exists = c:SCA
 			c:FIN = {
 				is_direct_subject_of = c:SCA
@@ -275,7 +271,6 @@ formation.10 = {
 		ai_chance = {
 			factor = 1
 		}
-		# kmpmp
 		annex = c:FIN
 		unification_claims_effect = yes
 		kmpmp_scandinavia_unification_effect = yes
@@ -329,8 +324,8 @@ formation.17 = {
 			c:GCO ?= THIS
 			c:PBC ?= THIS
 			c:FND ?= THIS
-			c:P01 ?= THIS #kmpmp
-			c:LTN ?= THIS #kmpmp
+			c:P01 ?= THIS # kmpmp
+			c:LTN ?= THIS # kmpmp
 
 			c:USA ?= THIS
 			c:SAF ?= THIS
@@ -425,7 +420,6 @@ formation.19 = {
 		ai_chance = {
 			factor = 1
 		}
-		# kmpmp
-		kmpmp_netherlands_unification_effect = yes
+		kmpmp_netherlands_unification_effect = yes # kmpmp
 	}
 }

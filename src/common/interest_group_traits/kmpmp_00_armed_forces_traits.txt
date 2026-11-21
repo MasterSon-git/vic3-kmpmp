@@ -1,12 +1,13 @@
 ﻿INJECT:ig_trait_elan_vital = {
 	modifier = {
-		unit_defense_mult = 0.05 #kmpmp
+		unit_defense_mult = 0.05 # kmpmp
 	}
 }
 
 INJECT:ig_trait_el_buen_jefe = {
+	# kmpmp
 	modifier = {
-		unit_offense_mult = 0.1 #kmpmp
-		unit_defense_mult = 0.1 #kmpmp
+		unit_offense_mult = 0.1
+		unit_defense_mult = 0.1
 	}
 }

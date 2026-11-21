@@ -102,7 +102,7 @@ types map_list_panel_types {
 				}
 			}
 
-			### kmpmp SETTING - JOBSEEKERS
+			# kmpmp: Show jobseekers on the map.
 			container = {
 				datacontext = "[MapListOption.GetBuildingData.GetState]"
 				visible = "[GetVariableSystem.HasValue('show_jobseekers', 'true')]"
@@ -143,7 +143,7 @@ types map_list_panel_types {
 				}
 			}
 
-			### kmpmp SETTING - PEASANTS
+			# kmpmp: Show peasants on the map.
 			container = {
 				datacontext = "[MapListOption.GetBuildingData.GetState]"
 				visible = "[Not(GetVariableSystem.HasValue('hide_peasants', 'true'))]"
@@ -189,6 +189,7 @@ types map_list_panel_types {
 				datacontext = "[MapListOption.GetBuildingData.GetState]"
 				margin = { 5 0 }
 				# size = { 85 25 }
+				# kmpmp
 				size = { 100 25 }
 				align = right|nobaseline
 				raw_text = "#variable [State.GetNumUnemployedWorkingAdults|D]#! [SelectLocalization(State.HasInsufficientQualificationsForAvailablePositions, '@red_cross!', '@green_checkmark!')]"
@@ -213,12 +214,14 @@ types map_list_panel_types {
 
 			widget = {
 				# size = { 105 25 }
+				# kmpmp
 				size = { 90 25 }
 				visible = "[MapListOption.GetBuildingData.GetBuilding.GetBuildingType.GeneratesCombatUnits]"
 				parentanchor = vcenter
 				textbox = {
 					margin = { 5 0 }
 					# size = { 105 25 }
+					# kmpmp
 					size = { 90 25 }
 					align = right|nobaseline
 					datacontext = "[MapListOption.AccessBuildingData.AccessBuilding]"
@@ -234,6 +237,7 @@ types map_list_panel_types {
 				textbox = {
 					margin = { 5 0 }
 					# size = { 105 25 }
+					# kmpmp
 					size = { 90 25 }
 					align = right|nobaseline
 					datacontext = "[MapListOption.AccessBuildingData.AccessBuilding]"
@@ -276,6 +280,7 @@ types map_list_panel_types {
 
 					blockoverride "productivity_info_text_style" {
 						# size = { 70 25 }
+						# kmpmp
 						size = { 65 25 }
 						margin = { 5 0 }
 						margin_right = 10
@@ -290,6 +295,7 @@ types map_list_panel_types {
 					margin = { 5 0 }
 					margin_right = 10
 					# size = { 80 25 }
+					# kmpmp
 					size = { 70 25 }
 					align = right|nobaseline
 					datacontext = "[MapListOption.GetBuildingData.GetBuilding]"
@@ -305,6 +311,7 @@ types map_list_panel_types {
 					margin = { 5 0 }
 					margin_right = 10
 					# size = { 80 25 }
+					# kmpmp
 					size = { 70 25 }
 					align = right|nobaseline
 					datacontext = "[MapListOption.GetBuildingData.GetBuilding]"
@@ -360,6 +367,7 @@ types map_list_panel_types {
 			text = "BUILDING_MAP_LIST_PANEL_AVAILABLE_LABOR_HEADER"
 			tooltip = "BUILDING_MAP_LIST_PANEL_AVAILABLE_LABOR_HEADER_TOOLTIP"
 			# size = { 85 20 }
+			# kmpmp
 			size = { 100 20 }
 			onclick = "[MapListPanel.Sort('jobseekers')]"
 			visible = "[GetVariableSystem.HasValue('show_jobseekers', 'true')]"
@@ -370,6 +378,7 @@ types map_list_panel_types {
 			align = hcenter|nobaseline
 			text = "peasants_no_icon"
 			# size = { 85 20 }
+			# kmpmp
 			size = { 100 20 }
 			onclick = "[MapListPanel.Sort('peasants')]"
 			visible = "[Not(GetVariableSystem.HasValue('hide_peasants', 'true'))]"
@@ -380,6 +389,7 @@ types map_list_panel_types {
 			align = hcenter|nobaseline
 			text = "concept_unemployed"
 			# size = { 85 20 }
+			# kmpmp
 			size = { 100 20 }
 			onclick = "[MapListPanel.Sort('unemployed')]"
 			visible = "[GetVariableSystem.HasValue('show_unemployed', 'true')]"
@@ -404,6 +414,7 @@ types map_list_panel_types {
 			align = hcenter|nobaseline
 			text = "concept_units_short"
 			# size = { 105 20 }
+			# kmpmp
 			size = { 90 20 }
 			visible = "[MapListBuildingPanel.GetBuildingType.GeneratesCombatUnits]"
 			onclick = "[MapListPanel.Sort('units')]"
@@ -427,6 +438,7 @@ types map_list_panel_types {
 				align = hcenter|nobaseline
 				tooltip = "BUILDING_PROFITABILITY_HEADER_TOOLTIP"
 				# size = { 70 20 }
+				# kmpmp
 				size = { 65 20 }
 				onclick = "[MapListPanel.Sort('profitability')]"
 				
@@ -443,6 +455,7 @@ types map_list_panel_types {
 				text = "concept_tax"
 				tooltip = "BUILDING_TAXATION_CAPACITY_HEADER_TOOLTIP"
 				# size = { 70 20 }
+				# kmpmp
 				size = { 65 20 }
 				onclick = "[MapListPanel.Sort('tax_capacity_balance')]"
 				visible = "[ObjectsEqual(MapListBuildingPanel.GetBuildingType, GetBuildingType('building_government_administration').Self)]"
@@ -460,11 +473,13 @@ types map_list_panel_types {
 
 				tooltip = "TRADE_CAPACITY_EXPLAINER"
 				# size = { 70 20 }
+				# kmpmp
 				size = { 65 20 }
 				onclick = "[MapListPanel.Sort('trade_capacity_balance')]"
 				visible = "[ObjectsEqual(MapListBuildingPanel.GetBuildingType, GetBuildingType('building_trade_center').Self)]"
 			}
 
+			# kmpmp
 			sort_button = {
 				visible = "[Not(ObjectsEqual(MapListBuildingPanel.GetBuildingType, GetBuildingType('building_trade_center').Self))]"
 				align = hcenter|nobaseline
@@ -473,7 +488,6 @@ types map_list_panel_types {
 				# size = { 80 20 }
 				size = { 70 20 }
 				onclick = "[MapListPanel.Sort('profit_impact')]"
-				# kmpmp
 				icon = {
 					texture = "gfx/interface/buttons/sort_button_icons/sort_icon_progress.dds"
 					size = { 25 25 }
@@ -495,6 +509,7 @@ types map_list_panel_types {
 
 				tooltip = "TRADE_POTENTIAL_EXPLAINER"
 				# size = { 80 20 }
+				# kmpmp
 				size = { 70 20 }
 				onclick = "[MapListPanel.Sort('trade_potential')]"
 			}
@@ -529,6 +544,7 @@ types map_list_panel_types {
 		blockoverride "headers" {
 			sort_button = {
 				# size = { 415 30 }
+				# kmpmp
 				size = { 345 30 }
 				align = hcenter|nobaseline
 				text = "DECREE_LIST_PANEL_STATE_HEADER"
@@ -540,8 +556,8 @@ types map_list_panel_types {
 				visible = yes
 				size = { 70 30 }
 				align = hcenter|nobaseline
-				text = "POPULATION"
-				# kmpmp didn't work in context of decree
+				text = "POPULATION" # kmpmp
+				# kmpmp: Population sorting is unavailable in the decree panel.
 				# onclick = "[MapListPanel.Sort('population')]" 
 			}
 
@@ -576,6 +592,7 @@ types map_list_panel_types {
 
 					blockoverride "name_button_size" {
 						# size = { 215 40 }
+						# kmpmp
 						size = { 345 40 }
 					}
 
@@ -597,6 +614,7 @@ types map_list_panel_types {
 							visible = "[Not(And(State.IsUnincorporated, Not(State.IsIncorporating)))]"
 							margin = { 10 0 }
 							# size = { 210 25 }
+							# kmpmp
 							size = { 340 25 }
 							align = nobaseline
 							text = "[State.GetNameNoFormatting]"
@@ -609,6 +627,7 @@ types map_list_panel_types {
 							visible = "[And(State.IsUnincorporated, Not(State.IsIncorporating))]"
 							margin = { 10 0 }
 							# size = { 190 25 }
+							# kmpmp
 							size = { 320 25 }
 							align = nobaseline
 							text = "[State.GetNameNoFormatting]"
@@ -645,6 +664,7 @@ types map_list_panel_types {
 							#"[ObjectsEqual(MapListDecreePanel.GetDecreeType, GetDecreeType('decree_road_maintenance'))]"
 							text = "MAP_LIST_DECREE_COST"
 							# size = { 270 30 }
+							# kmpmp
 							size = { 70 30 }
 							align = right|nobaseline
 							margin_right = 10

@@ -26,10 +26,8 @@ types wargoal_types
 
 			button = {
 				enabled = "[WarGoal.IsValid]"
+				# Use the native toggle here. The KMPMP scripted GUI could not track which war goals were pressed.
 				onclick = "[Execute( WarGoal.ToggleIsPressedInPotentialPeaceDeal( GetPlayer.Self ) )]"
-                # kmpmp onclick
-				# actually we don't know how to track pressed/unpressed war goals
-                # onclick = "[GetScriptedGui('kmpmp_sgui_diplomatic_play_toggle_pressed_war_goal_in_list').Execute(GuiScope.SetRoot(WarGoal.GetWar.GetDiplomaticPlay.MakeScope).AddScope('war_goal', MakeScopeValue(WarGoal.GetType.GetName)).End)]"
 				visible = "[IsValid( WarGoal.ToggleIsPressedInPotentialPeaceDeal( GetPlayer.Self ) )]"
 				using = default_button
 				size = { 100% 100% }
@@ -105,10 +103,8 @@ types wargoal_types
 
 			button = {
 				enabled = "[WarGoal.IsValid]"
+				# Use the native toggle here. The KMPMP scripted GUI could not track which war goals were pressed.
 				onclick = "[Execute( WarGoal.ToggleIsPressedInPotentialPeaceDeal( GetPlayer.Self ) )]"
-                # kmpmp onclick
-				# actually we don't know how to track pressed/unpressed war goals
-                # onclick = "[GetScriptedGui('kmpmp_sgui_diplomatic_play_toggle_pressed_war_goal_in_list').Execute(GuiScope.SetRoot(WarGoal.GetWar.GetDiplomaticPlay.MakeScope).AddScope('war_goal', MakeScopeValue(WarGoal.GetType.GetName)).End)]"
 				visible = "[IsValid( WarGoal.ToggleIsPressedInPotentialPeaceDeal( GetPlayer.Self ) )]"
 				using = default_button
 				size = { 100% 100% }

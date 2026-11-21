@@ -1,24 +1,25 @@
 ﻿INJECT:company_basic_agriculture_1 = {
 	prosperity_modifier = {
-		building_livestock_ranch_throughput_add = 0.1
+		building_livestock_ranch_throughput_add = 0.1 # kmpmp
 	}
 }
 
+# kmpmp
 INJECT:company_basic_agriculture_2 = {
 	extension_building_types = {
-		building_livestock_ranch #kmpmp
+		building_livestock_ranch
 	}
 
 	prosperity_modifier = {
 		building_livestock_ranch_throughput_add = -0.1
 		building_food_industry_throughput_add = -0.1
-		building_millet_farm_throughput_add = 0.15 #kmpmp
+		building_millet_farm_throughput_add = 0.15
 	}
 }
 
+# kmpmp
 INJECT:company_basic_colonial_plantations_1 = {
 	extension_building_types = {
-		#kmpmp
 		building_coffee_plantation
 		building_cotton_plantation
 		building_sugar_plantation
@@ -26,7 +27,6 @@ INJECT:company_basic_colonial_plantations_1 = {
 	}
 
 	prosperity_modifier = {
-		# kmpmp
 		country_radicalism_increases_full_acceptance_mult = -0.05
 		country_radicalism_increases_second_rate_citizen_mult = -0.05
 		country_radicalism_increases_open_prejudice_mult = -0.05
@@ -54,6 +54,7 @@ REPLACE:company_basic_colonial_plantations_2 = {
 		"dynamic_company_type_fellowship"
 	}
 
+	# kmpmp: Exclude sugar plantation and tobacco plantation from the company’s core industries.
 	building_types = {
 		building_coffee_plantation
 		#building_sugar_plantation
@@ -61,9 +62,9 @@ REPLACE:company_basic_colonial_plantations_2 = {
 		building_tea_plantation # kmpmp
 	}
 
+	# kmpmp: Exclude tea plantation from the expansion list.
 	extension_building_types = {
 		#building_tea_plantation
-		#kmpmp
 		building_tobacco_plantation
 		building_vineyard
 		building_cotton_plantation
@@ -87,7 +88,7 @@ REPLACE:company_basic_colonial_plantations_2 = {
 			any_scope_building = {
 				OR = {
 					is_building_type = building_coffee_plantation
-					is_building_type = building_tea_plantation #building_sugar_plantation
+					is_building_type = building_tea_plantation # kmpmp: Vanilla 1.13.11 used building_sugar_plantation.
 					#is_building_type = building_tobacco_plantation
 				}
 				level >= 5
@@ -97,8 +98,7 @@ REPLACE:company_basic_colonial_plantations_2 = {
 
 	prosperity_modifier = {
 		state_colony_growth_speed_mult = 0.1
-		# kmpmp
-		building_railway_throughput_add = 0.1
+		building_railway_throughput_add = 0.1 # kmpmp
 	}
 
 	ai_will_do = {
@@ -107,17 +107,17 @@ REPLACE:company_basic_colonial_plantations_2 = {
 }
 
 INJECT:company_basic_silk_and_dye = {
+	# kmpmp
 	prosperity_modifier = {
 		country_influence_mult = 0.05
 		building_textile_mill_throughput_add = -0.1
-		# kmpmp
 		country_infamy_decay_mult = 0.1
 	}
 }
 
 INJECT:company_basic_fishing = {
 	prosperity_modifier = {
-		building_shipyard_throughput_add = 0.1 # = 0.15
+		building_shipyard_throughput_add = 0.1 # kmpmp: total = 0.15
 	}
 }
 
@@ -144,7 +144,6 @@ REPLACE_OR_CREATE:company_basic_fishing_2 = {
 		building_livestock_ranch
 	}
 
-	# kmpmp
 	extension_building_types = {
 		building_food_industry
 		building_cotton_plantation
@@ -196,8 +195,8 @@ REPLACE_OR_CREATE:company_basic_fishing_2 = {
 }
 
 INJECT:company_basic_forestry = {
+	# kmpmp
 	extension_building_types = {
-		#kmpmp
 		building_textile_mill
 		building_electrics_industry
 		building_paper_mill
@@ -205,9 +204,9 @@ INJECT:company_basic_forestry = {
 	}
 }
 
+# kmpmp
 INJECT:company_basic_oil = {
 	extension_building_types = {
-		#kmpmp
 		building_motor_industry
 		building_iron_mine
 		building_opium_plantation
@@ -217,15 +216,14 @@ INJECT:company_basic_oil = {
 
 	prosperity_modifier = {
 		state_migration_pull_mult = -0.1
-		#kmpmp
    		building_group_bg_mining_throughput_add = 0.1
     	building_group_bg_oil_extraction_throughput_add = 0.1
 	}
 }
 
+# kmpmp
 INJECT:company_basic_gold_mining = {
 	extension_building_types = {
-		#kmpmp
 		building_coal_mine
 		building_sulfur_mine
 		building_iron_mine
@@ -233,7 +231,6 @@ INJECT:company_basic_gold_mining = {
 
 	prosperity_modifier = {
 		country_minting_mult = 0.05
-		# kmpmp
 		country_loyalism_increases_full_acceptance_mult = 0.05
 		country_loyalism_increases_second_rate_citizen_mult = 0.05
 		country_loyalism_increases_open_prejudice_mult = 0.05
@@ -244,28 +241,27 @@ INJECT:company_basic_gold_mining = {
 
 INJECT:company_basic_metal_mining = {
 	prosperity_modifier = {
-		building_steel_mill_throughput_add = 0.05
+		building_steel_mill_throughput_add = 0.05 # kmpmp
 	}
 }
 
 INJECT:company_basic_mineral_mining = {
+	# kmpmp
 	prosperity_modifier = {
 		building_chemical_plant_throughput_add = 0.05
-		# kmpmp
 		building_synthetics_plant_throughput_add = 0.15
 	}
 }
 
+# kmpmp
 INJECT:company_basic_food = {
 	extension_building_types = {
-		#kmpmp
 		building_rice_farm
 		building_rye_farm
 		building_millet_farm
 	}
 
 	prosperity_modifier = {
-		# kmpmp
 		building_rye_farm_throughput_add = 0.1
 		building_wheat_farm_throughput_add = 0.1
 	}
@@ -293,6 +289,7 @@ REPLACE:company_basic_paper = {
 		building_logging_camp # kmpmp
 	}
 
+	# kmpmp: Exclude logging camp from the expansion list.
 	extension_building_types = {
 		#building_logging_camp
 		building_dye_plantation
@@ -331,16 +328,15 @@ REPLACE:company_basic_paper = {
 	}
 }
 
+# kmpmp
 INJECT:company_basic_home_goods = {
 	extension_building_types = {
-		#kmpmp
 		building_oil_rig
 		building_arms_industry
 		building_artillery_foundry
 	}
 
 	prosperity_modifier = {
-		# kmpmp
 		country_loyalism_increases_full_acceptance_mult = 0.1
 		country_loyalism_increases_second_rate_citizen_mult = 0.1
 		country_loyalism_increases_open_prejudice_mult = 0.1
@@ -349,15 +345,14 @@ INJECT:company_basic_home_goods = {
 	}
 }
 
+# kmpmp
 INJECT:company_basic_textiles = {
 	extension_building_types = {
-		#kmpmp
 		building_dye_plantation
 		building_synthetics_plant
 	}
 
 	prosperity_modifier = {
-		# kmpmp
 		country_radicalism_increases_full_acceptance_mult = -0.1
 		country_radicalism_increases_second_rate_citizen_mult = -0.1
 		country_radicalism_increases_open_prejudice_mult = -0.1
@@ -368,9 +363,9 @@ INJECT:company_basic_textiles = {
 	}
 }
 
+# kmpmp
 INJECT:company_basic_steel = {
 	extension_building_types = {
-		# kmpmp
 		building_motor_industry
 		building_artillery_foundry
 		building_arms_industry
@@ -378,14 +373,13 @@ INJECT:company_basic_steel = {
 
 	prosperity_modifier = {
 		state_construction_mult = 0.05
-		# kmpmp
 		building_steel_mill_throughput_add = 0.05
 	}
 }
 
+# kmpmp
 INJECT:company_basic_metalworks = {
 	extension_building_types = {
-		#kmpmp
 		building_iron_mine
 		building_arms_industry
 		building_artillery_foundry
@@ -397,16 +391,16 @@ INJECT:company_basic_metalworks = {
 }
 
 INJECT:company_basic_shipyards = {
+	# kmpmp
 	prosperity_modifier = {
-		ship_hull_damage_mult = -0.025 # = 0.025
-		# kmpmp
+		ship_hull_damage_mult = -0.025 # kmpmp: total = 0.025
 		ship_armor_mult = 0.025
 	}
 }
 
+# kmpmp
 INJECT:company_basic_chemicals = {
 	extension_building_types = {
-		#kmpmp
 		building_iron_mine
 		building_oil_rig
 		building_paper_mill
@@ -418,16 +412,16 @@ INJECT:company_basic_chemicals = {
 }
 
 INJECT:company_basic_motors = {
+	# kmpmp
 	prosperity_modifier = {
-		military_formation_army_movement_speed_mult = 0.1 # = 0.2
-		# kmpmp
+		military_formation_army_movement_speed_mult = 0.1 # kmpmp: total = 0.2
 		building_rubber_plantation_throughput_add = 0.1
 	}
 }
 
 INJECT:company_basic_electrics = {
 	prosperity_modifier = {
-		building_power_plant_throughput_add = 0.05
+		building_power_plant_throughput_add = 0.05 # kmpmp
 	}
 }
 
@@ -443,9 +437,10 @@ REPLACE:company_construction_power_bloc = {
 		building_glassworks
 	}
 
+	# kmpmp: Exclude lead mine from the expansion list.
 	extension_building_types = {
 		# building_lead_mine
-		building_explosives_factory
+		building_explosives_factory # kmpmp
 	}
 
 	potential = {
@@ -471,7 +466,7 @@ REPLACE:company_construction_power_bloc = {
 
 	prosperity_modifier = {
 		building_construction_sector_throughput_add = 0.2
-		state_construction_mult = 0.05 #kmpmp
+		state_construction_mult = 0.05 # kmpmp
 	}
 
 	ai_will_do = {

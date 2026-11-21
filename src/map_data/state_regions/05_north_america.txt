@@ -1740,11 +1740,12 @@ STATE_MEXICO = {
     wood = "x10B080"
     arable_land = 160
     arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation" "building_dye_plantation" "building_tobacco_plantation" "building_sugar_plantation" "building_banana_plantation" "building_vineyard" }
+    # kmpmp
     capped_resources = {
-        building_iron_mine = 20 #9
-        building_lead_mine = 25 #12
-        building_logging_camp = 15 #7
-        building_coal_mine = 30 #kmpmp
+        building_iron_mine = 20 # kmpmp: vanilla = 9
+        building_lead_mine = 25 # kmpmp: vanilla = 12
+        building_logging_camp = 15 # kmpmp: vanilla = 7
+        building_coal_mine = 30
     }
     resource = {
         type = "building_rubber_plantation"
@@ -1767,7 +1768,7 @@ STATE_VERACRUZ = {
     capped_resources = {
         building_iron_mine = 9
         building_lead_mine = 12
-        building_logging_camp = 13 #6
+        building_logging_camp = 13 # kmpmp: vanilla = 6
         building_fishing_wharf = 7
     }
     resource = {
@@ -1854,7 +1855,7 @@ STATE_JALISCO = {
     arable_land = 80
     arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation" "building_dye_plantation" "building_tobacco_plantation" "building_sugar_plantation" "building_banana_plantation" }
     capped_resources = {
-        building_coal_mine = 25 #kmpmp
+        building_coal_mine = 25 # kmpmp
         building_iron_mine = 33
         building_logging_camp = 18
         building_fishing_wharf = 8

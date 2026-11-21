@@ -7,7 +7,7 @@
     farm = "x25CC83"
     mine = "x5C8F48"
     wood = "x80A021"
-    arable_land = 50 #22
+    arable_land = 50 # kmpmp: vanilla = 22
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
         building_logging_camp = 9
@@ -28,7 +28,7 @@ STATE_TARTU = {
     farm = "xB9FF4E"
     mine = "x297D54"
     wood = "xBF6060"
-    arable_land = 45 #18
+    arable_land = 45 # kmpmp: vanilla = 18
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
         building_logging_camp = 7
@@ -54,7 +54,7 @@ STATE_RIGA = {
     farm = "xE7C9B1"
     mine = "x521396"
     wood = "xBF2060"
-    arable_land = 63 #38
+    arable_land = 63 # kmpmp: vanilla = 38
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
         building_logging_camp = 11
@@ -75,11 +75,11 @@ STATE_COURLAND = {
     farm = "xFD1424"
     mine = "xFA8436"
     wood = "x74042F"
-    arable_land = 47 #22
+    arable_land = 47 # kmpmp: vanilla = 22
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
         building_logging_camp = 7
-        building_fishing_wharf = 8 #6
+        building_fishing_wharf = 8 # kmpmp: vanilla = 6
     }
     naval_exit_id = 3000
 
@@ -96,7 +96,7 @@ STATE_LITHUANIA = {
     farm = "xE0B943"
     mine = "x0980C8"
     wood = "xC0A0A0"
-    arable_land = 66 #56
+    arable_land = 66 # kmpmp: vanilla = 56
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
         building_logging_camp = 8
@@ -134,7 +134,7 @@ STATE_KUOPIO = {
     farm = "xB81268"
     mine = "x51CC44"
     wood = "xED8DC6"
-    arable_land = 35 #25
+    arable_land = 35 # kmpmp: vanilla = 25
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     traits = { "state_trait_scandinavian_forests" }
     capped_resources = {
@@ -156,7 +156,7 @@ STATE_UUSIMAA = {
     farm = "x22CBD6"
     mine = "xAFE141"
     wood = "x61C0E0"
-    arable_land = 42 #32
+    arable_land = 42 # kmpmp: vanilla = 32
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
         building_iron_mine = 5
@@ -180,7 +180,7 @@ STATE_WEST_KARELIA = {
     farm = "x3CFB81"
     mine = "xAD3FF9"
     wood = "x934610"
-    arable_land = 32 #22
+    arable_land = 32 # kmpmp: vanilla = 22
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
         building_iron_mine = 18
@@ -224,7 +224,7 @@ STATE_OSTROBOTHNIA = {
     farm = "xC4EB7D"
     mine = "x993955"
     wood = "x3DBB6E"
-    arable_land = 25 #15
+    arable_land = 25 # kmpmp: vanilla = 15
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
         building_lead_mine = 5
@@ -248,7 +248,7 @@ STATE_OULU = {
     farm = "x0193AC"
     mine = "x73B911"
     wood = "x9AB681"
-    arable_land = 18 #8
+    arable_land = 18 # kmpmp: vanilla = 8
     arable_resources = { "building_livestock_ranch" }
     capped_resources = {
         building_iron_mine = 45
@@ -271,7 +271,7 @@ STATE_EAST_KARELIA = {
     farm = "xC16D56"
     mine = "xA857F6"
     wood = "xB7363A"
-    arable_land = 20 #10
+    arable_land = 20 # kmpmp: vanilla = 10
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
         building_iron_mine = 25
@@ -295,7 +295,7 @@ STATE_KOLA = {
     farm = "x57190F"
     mine = "xE229D5"
     wood = "xA09A15"
-    arable_land = 12 #2
+    arable_land = 12 # kmpmp: vanilla = 2
     arable_resources = { "building_livestock_ranch" }
     capped_resources = {
         building_iron_mine = 85
@@ -365,7 +365,7 @@ STATE_BREST = {
     farm = "xAB3AC5"
     mine = "x157352"
     wood = "xA6BED3"
-    arable_land = 100 #75
+    arable_land = 100 # kmpmp: vanilla = 75
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
         building_logging_camp = 14
@@ -384,7 +384,7 @@ STATE_VOLHYNIA = {
     farm = "x5A26AE"
     mine = "x8201CF"
     wood = "xAC3079"
-    arable_land = 70 #40
+    arable_land = 70 # kmpmp: vanilla = 40
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" }
     capped_resources = {
         building_coal_mine = 42
@@ -897,7 +897,7 @@ STATE_MERZ = {
     arable_land = 38
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_tea_plantation" }
     capped_resources = {
-        building_iron_mine = 6 #21
+        building_iron_mine = 6 # kmpmp: vanilla = 21
         building_logging_camp = 5
     }
 
@@ -1393,9 +1393,10 @@ STATE_ELIZAVETPOL = {
         building_iron_mine = 10
         building_logging_camp = 12
     }
+    # kmpmp
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 30 #kmpmp
+        undiscovered_amount = 30
     }
 
     min_cold_effect = 0.00

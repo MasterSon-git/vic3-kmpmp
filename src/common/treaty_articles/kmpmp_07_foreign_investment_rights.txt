@@ -1,6 +1,6 @@
 ﻿REPLACE:foreign_investment_rights = {
 	kind = directed
-	cost = 100 #25
+	cost = 100 # kmpmp: vanilla = 25
 
 	relations_progress_per_day = 0.5
 	relations_improvement_max = 50
@@ -29,8 +29,7 @@
 
 	source_modifier = {
 		country_treaty_leverage_generation_add = 300
-		# kmpmp
-		country_influence_add = -100
+		country_influence_add = -100 # kmpmp
 	}
 
 	visible = {
@@ -78,16 +77,9 @@
 			}
 		}
 
-		# kmpmp - check other country has influence to maintain
-		# commented since you can offer 
-		# trigger_if = {
-		# 	limit = {
-		# 		influence < 25
-		# 	}
-		# 	influence >= 25
-		# }
 
-		# kmpmp - investment rights with chinese countries is not allowed for players
+		# kmpmp: Either side can offer investment rights, so the offer does not require the other country to have 25 influence.
+		# kmpmp: Restrict player investment agreements with Chinese countries while China is AI-controlled.
 		trigger_if = {
 			limit = {
 				global_var:kmpmp_china_is_player ?= no

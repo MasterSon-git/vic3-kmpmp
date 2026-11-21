@@ -1,6 +1,6 @@
 ﻿REPLACE:goods_transfer = {
     kind = directed
-    cost = 75 #10
+    cost = 75 # kmpmp: vanilla = 10
 
 	icon = "gfx/interface/icons/diplomatic_treaties_articles_icons/goods_transfer_treaties.dds"
 
@@ -740,9 +740,9 @@
                 #     }
 				# }
 
-                # kmpmp - reduce max infamy to 15, scale infamy cost over full range of requested goods
                 # first 50% of goods from sell orders generate just 30% of max infamy
                 # next 50% of goods takes the rest up to max infamy
+                # kmpmp: Reduce max infamy to 15, scale infamy cost over full range of requested goods
                 add = {
                     value = 15
                     multiply = 0.3
@@ -751,17 +751,16 @@
 					value = scope:quantity
 					divide = {
 						value = scope:market_goods.market_goods_sell_orders
-                        multiply = 2 # kmpmp
+                        multiply = 2
 						min = 10
 					}
                     save_temporary_value_as = request_good_to_market_relation
 
-                    # kmpmp recalc to add one good
                     value = scope:quantity
-                    add = 1 # kmpmp always add one to max the infamy
+                    add = 1 # kmpmp: Always add one to max the infamy
                     divide = {
 						value = scope:market_goods.market_goods_sell_orders
-                        multiply = 2 # kmpmp
+                        multiply = 2
 						min = 10
 					}
                     

@@ -1,4 +1,5 @@
 ﻿INJECT:basic_artillery_commander = {    
+	# kmpmp
 	command_modifier = {
 		unit_combat_unit_type_fort_buster_artillery_offense_mult = 0.05
 
@@ -8,7 +9,7 @@
         unit_combat_unit_type_interwar_heavy_tank_defense_mult = 0.05
 	}
 
-	# Trait INJECT replaces the entire weight. Keep each vanilla formula before the two KMPMP unit factors (#693).
+	# kmpmp: INJECT replaces the entire weight. Keep the Vanilla operations in order before the two KMPMP unit factors (#693).
 	weight = {
 		value = 2
 		if = {
@@ -96,7 +97,7 @@
 			}
 			multiply = 50
 		}
-		#kmpmp
+		# kmpmp: Include fort busters and interwar heavy tanks when weighting artillery commanders.
 		if = {
 			limit = {
 				owner = {
@@ -114,7 +115,6 @@
 			}
 			multiply = 20
 		}
-		#kmpmp
 		if = {
 			limit = {
 				owner = {
@@ -136,6 +136,7 @@
 }
 
 INJECT:experienced_artillery_commander = {
+	# kmpmp
 	command_modifier = {
 		unit_combat_unit_type_fort_buster_artillery_offense_mult = 0.1
 
@@ -215,7 +216,7 @@ INJECT:experienced_artillery_commander = {
 			}
 			multiply = 50
 		}
-		#kmpmp
+		# kmpmp: Include fort busters and interwar heavy tanks when weighting artillery commanders.
 		if = {
 			limit = {
 				owner = {
@@ -233,7 +234,6 @@ INJECT:experienced_artillery_commander = {
 			}
 			multiply = 20
 		}
-		#kmpmp
 		if = {
 			limit = {
 				owner = {
@@ -255,6 +255,7 @@ INJECT:experienced_artillery_commander = {
 }
 
 INJECT:expert_artillery_commander = {
+	# kmpmp
 	command_modifier = {
 		unit_combat_unit_type_fort_buster_artillery_offense_mult = 0.15
 
@@ -317,7 +318,7 @@ INJECT:expert_artillery_commander = {
 			}
 			multiply = 50
 		}
-		#kmpmp
+		# kmpmp: Include fort busters and interwar heavy tanks when weighting artillery commanders.
 		if = {
 			limit = {
 				owner = {
@@ -335,7 +336,6 @@ INJECT:expert_artillery_commander = {
 			}
 			multiply = 20
 		}
-		#kmpmp
 		if = {
 			limit = {
 				owner = {

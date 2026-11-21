@@ -1,14 +1,14 @@
 ﻿GGGG_mog_guns = {
-    background = "gfx/interface/illustrations/mobilization_options/mobilisation_supplies.dds"
+    background = "gfx/interface/illustrations/mobilization_options/mobilisation_supplies.dds" # kmpmp: Use the base-game supplies illustration for this GGGG group.
     weight = 102
 }
 
 GGGG_mog_rations = {
-    background = "gfx/interface/illustrations/mobilization_options/mobilisation_supplies.dds"
+    background = "gfx/interface/illustrations/mobilization_options/mobilisation_supplies.dds" # kmpmp: Use the base-game supplies illustration for this GGGG group.
     weight = 101
 }
 
 GGGG_mog_uniforms = {
-    background = "gfx/interface/illustrations/mobilization_options/mobilisation_supplies.dds"
+    background = "gfx/interface/illustrations/mobilization_options/mobilisation_supplies.dds" # kmpmp: Use the base-game supplies illustration for this GGGG group.
     weight = 100
 }

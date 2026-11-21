@@ -5,7 +5,7 @@
 
 REPLACE:supplements = {
     background = "gfx/interface/illustrations/mobilization_options/mobilisation_supplements.dds"
-    weight = 2 #5
+    weight = 2 # kmpmp: vanilla = 5
 }
 
 REPLACE:transport = {
@@ -20,7 +20,7 @@ REPLACE:reconnaissance = {
 
 REPLACE:special_weapons = {
     background = "gfx/interface/illustrations/mobilization_options/mobilisation_support_equipment.dds"
-    weight = 6 #2
+    weight = 6 # kmpmp: vanilla = 2
 }
 
 REPLACE:medic_support = {

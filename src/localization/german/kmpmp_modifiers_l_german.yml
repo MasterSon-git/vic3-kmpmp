@@ -1,4 +1,5 @@
 ﻿l_german:
+ # kmpmp: Show the goods icon and input per building level.
  goods_input_coffee_add:0 "@coffee! Kaffee-Zufuhr pro Stufe"
  goods_input_coffee_add_desc:0 "Die Menge an @coffee! Kaffee, die das Gebäude verbraucht."
  goods_input_tea_add:0 "@tea! Tee-Zufuhr pro Stufe"
@@ -88,6 +89,7 @@
  country_institution_cost_institution_qwf_conscription_mult:0 "@bur![concept_bureaucracy]-Kosten durch „[GetInstitutionType('institution_qwf_conscription').GetName]“"
  country_institution_cost_institution_qwf_conscription_mult_desc:0 "Eine Erhöhung oder Verringerung der @bur![Nbsp][concept_bureaucracy]-Kosten, um den Bürgern „[GetInstitutionType('institution_qwf_conscription').GetName]“ zur Verfügung zu stellen"
 
+ # kmpmp: Name the Home Affairs institution explicitly.
  country_institution_size_change_speed_institution_home_affairs_mult:0 "Tempo der Institutionsgrößenänderung für „[GetInstitutionType('institution_home_affairs').GetName]“"
  country_institution_size_change_speed_institution_home_affairs_mult_desc:0 "Wie schnell man die Größe von „[GetInstitutionType('institution_home_affairs').GetName]“ ändern kann"
 

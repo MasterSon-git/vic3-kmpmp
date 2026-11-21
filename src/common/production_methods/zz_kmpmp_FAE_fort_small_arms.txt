@@ -1,13 +1,14 @@
 ﻿INJECT:FAE_pm_small_arms = {
     building_modifiers = {
         workforce_scaled = {
-            goods_input_small_arms_add = 0.025
+            goods_input_small_arms_add = 0.025 # kmpmp
         }
     }
 }
 
 INJECT:FAE_pm_gatling_guns = {
     building_modifiers = {
+        # kmpmp
         workforce_scaled = {
             goods_input_small_arms_add = 0.05
             goods_input_ammunition_add = 0.05
@@ -19,6 +20,7 @@ INJECT:FAE_pm_gatling_guns = {
 
 INJECT:FAE_pm_auto_machine_guns = {
     building_modifiers = {
+        # kmpmp
         workforce_scaled = {
             goods_input_small_arms_add = 0.1
             goods_input_ammunition_add = 0.1

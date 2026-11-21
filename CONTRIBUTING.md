@@ -29,10 +29,59 @@ Keep changes focused and practical for a community-maintained multiplayer modpac
   Provide English and German localization for new player-facing text, or note
   any missing translations.
 
-**Commented-out code is not a historical archive.** Remove obsolete implementations.
-Use Git history for old code, PRs for completed migration decisions, issues for
-unresolved work, and comments to explain current behaviour or technical constraints.
-Explain any necessary disabled workaround briefly.
+**Commented-out code is not a historical archive.** Remove obsolete KMPMP
+implementations; Git history preserves them. However, a deliberately disabled
+Vanilla or bundled upstream block may remain commented out in a `REPLACE`
+definition to make the current deviation and upstream diff understandable.
+First verify the block's origin and relevant upstream version; never classify
+an old local implementation as upstream merely because it resembles one.
+Keep such a block faithful to its source, explain its deliberate suppression
+with `# kmpmp`, and treat it as a maintained reference: compare and update it
+when upstream changes, or remove it when that upstream behavior disappears.
+Do not comment out every omitted upstream line by default. Use Git history for
+old implementations, PRs for completed migration decisions, issues for
+unresolved work, and comments to explain current behaviour or constraints.
+
+## Source annotations for KMPMP changes
+
+- Use the exact, searchable marker `# kmpmp` (lowercase, one space after `#`)
+  for intentional KMPMP deviations within inherited Vanilla or bundled-mod
+  definitions. Put it inline for an individual changed field or immediately
+  before a changed/added block. Do not label unchanged inherited lines or
+  duplicate the marker on every line of a marked block. Entirely original KMPMP
+  definitions do not need a marker on each field; keep upstream attribution
+  and existing source comments intact.
+- For a value changed in a full replacement, optionally record the verified
+  Vanilla reference value: `building_example_mult = 0.15 # kmpmp: vanilla = 0.10`.
+  When the source is a bundled third-party mod instead, use
+  `# kmpmp: upstream = X` with a verified value from that mod, not `vanilla`.
+  These reference annotations also apply to nonnumeric fields such as dates,
+  identifiers and booleans. For a numeric modifier added by an injection,
+  optionally record its verified effective contribution including applicable
+  inherited modifiers:
+  `building_example_mult = 0.05 # kmpmp: total = 0.15`.
+  The code before `#` is always the actual assigned value. These annotations
+  describe the checked source version; they are not immutable balance targets.
+- For a non-obvious change use a short explanation, e.g.
+  `# kmpmp: Keep this modifier when replacing the Vanilla weight formula.`
+  Add a relevant issue or PR reference when useful. Numeric annotations are
+  optional and must be supported by the actual source and proven merge behavior.
+  Do not guess a Vanilla value or total, or present a context-dependent result
+  as unconditional. Prefer a qualitative comment or leave the number absent
+  when it cannot be verified.
+- Preserve original upstream comments, technical explanations and verified
+  reference values when normalizing. Keep unchanged third-party source files
+  untouched where practical for later upstream diffs; annotate only actual
+  KMPMP deviations in adapted files. Do not replace meaningful comments with
+  bare `# kmpmp`, rewrite them merely for style, or silently delete disabled
+  upstream reference code in a comment-only cleanup.
+- During Vanilla or bundled-mod updates, reassess whether the intended balance
+  change remains useful and refresh or remove stale reference comments. Do not
+  preserve a historical total merely to satisfy a comment. When editing existing
+  code, normalize legacy markers such as `#kmpmp`, `# 0.10` and `# = 0.15`
+  only after verifying the actual meaning and provenance of each comment.
+  If provenance cannot be established, preserve the existing information and
+  report the uncertainty instead of inventing or deleting context.
 
 ## Database entry modes and modifiers
 

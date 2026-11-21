@@ -17,7 +17,6 @@
 kmpmp_break_truce_penalties_decaying_modifier = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
 
-    # kmpmp ??? add something here??
 }
 
 # kmpmp_break_truce_penalties_modifier = {

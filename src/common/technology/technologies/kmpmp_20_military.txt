@@ -2,16 +2,15 @@
 
 INJECT:electric_telegraph = {
 	modifier = {
-		# KMPMP reduces radicalism from conquest (#233).
-		country_radicals_from_conquest_mult = -0.05
+		country_radicals_from_conquest_mult = -0.05 # kmpmp: Reduces radicalism from conquest (#233).
 	}
 }
 
 INJECT:military_statistics = {
+	# kmpmp
 	modifier = {
 		# qwf
 		country_institution_qwf_conscription_max_investment_add = 1
-		# kmpmp
 		country_radicals_from_conquest_mult = -0.05
 	}
 }
@@ -20,14 +19,13 @@ INJECT:military_statistics = {
 
 INJECT:war_propaganda = {
 	modifier = {
-		# KMPMP reduces radicalism from conquest (#233).
-		country_radicals_from_conquest_mult = -0.05
+		country_radicals_from_conquest_mult = -0.05 # kmpmp: Reduces radicalism from conquest (#233).
 	}
 }
 
 INJECT:wargaming = {
 	modifier = {
 		# qwf
-		country_institution_qwf_conscription_max_investment_add = 1
+		country_institution_qwf_conscription_max_investment_add = 1 # kmpmp
     }
 }

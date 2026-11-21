@@ -1,6 +1,5 @@
 ﻿INJECT:law_free_trade = {
 	modifier = {
-		# kmpmp
-		state_trade_capacity_mult = 0.25
+		state_trade_capacity_mult = 0.25 # kmpmp
 	}
 }

@@ -1,4 +1,5 @@
-﻿REPLACE:pm_electric_saw_mills = {
+﻿# kmpmp: Electricity can be supplied through the national market.
+REPLACE:pm_electric_saw_mills = {
 	texture = "gfx/interface/icons/production_method_icons/electric_saw_mills.dds"
 	unlocking_technologies = {
 		electrical_generation
@@ -26,6 +27,7 @@
 	# required_input_goods = electricity
 }
 
+# kmpmp: Electricity can be supplied through the national market.
 REPLACE:pm_refrigerated_storage_building_fishing_wharf = {
 	texture = "gfx/interface/icons/production_method_icons/refrigerated_storage.dds"
 	
@@ -49,6 +51,7 @@ REPLACE:pm_refrigerated_storage_building_fishing_wharf = {
 	# required_input_goods = electricity
 }
 
+# kmpmp: Electricity can be supplied through the national market.
 REPLACE:pm_refrigerated_rail_cars_building_fishing_wharf = {
 	texture = "gfx/interface/icons/production_method_icons/refrigerated_rail_cars.dds"
 
@@ -79,6 +82,7 @@ REPLACE:pm_refrigerated_rail_cars_building_fishing_wharf = {
 	# required_input_goods = electricity
 }
 
+# kmpmp: Electricity can be supplied through the national market.
 REPLACE:pm_flash_freezing_building_fishing_wharf = {
 	texture = "gfx/interface/icons/production_method_icons/flash_refrigerated.dds"
 	
@@ -103,6 +107,7 @@ REPLACE:pm_flash_freezing_building_fishing_wharf = {
 	# required_input_goods = electricity
 }
 
+# kmpmp: Electricity can be supplied through the national market.
 REPLACE:pm_refrigerated_storage_building_whaling_station = {
 	texture = "gfx/interface/icons/production_method_icons/refrigerated_storage.dds"
 	
@@ -126,6 +131,7 @@ REPLACE:pm_refrigerated_storage_building_whaling_station = {
 	# required_input_goods = electricity
 }
 
+# kmpmp: Electricity can be supplied through the national market.
 REPLACE:pm_refrigerated_rail_cars_building_whaling_station = {
 	texture = "gfx/interface/icons/production_method_icons/refrigerated_rail_cars.dds"
 
@@ -156,6 +162,7 @@ REPLACE:pm_refrigerated_rail_cars_building_whaling_station = {
 	# required_input_goods = electricity
 }
 
+# kmpmp: Electricity can be supplied through the national market.
 REPLACE:pm_flash_freezing_building_whaling_station = {
 	texture = "gfx/interface/icons/production_method_icons/flash_refrigerated.dds"
 	
@@ -184,7 +191,7 @@ INJECT:pm_steam_derricks = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_output_oil_add = 5
+			goods_output_oil_add = 5 # kmpmp
 		}
 	}
 }
@@ -193,7 +200,7 @@ INJECT:pm_combustion_derricks = {
 	building_modifiers = {
 		workforce_scaled = {
 			# output goods
-			goods_output_oil_add = 10
+			goods_output_oil_add = 10 # kmpmp
 		}
 	}
 }

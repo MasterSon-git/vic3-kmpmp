@@ -1,4 +1,4 @@
-﻿# kmpmp - merge cultures fixes
+﻿# kmpmp: Use the merged culture for this event.
 REPLACE:je_the_algerian_departements = {
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
@@ -102,7 +102,6 @@ REPLACE:je_the_algerian_departements = {
 					country_average_religious_acceptance = { target = rel:sunni value >= religious_acceptance_medium }
 					# country_average_culture_pop_acceptance = { culture = cu:maghrebi value >= acceptance_status_3 }
 					# country_average_culture_pop_acceptance = { culture = cu:berber value >= acceptance_status_3 }
-					# kmpmp
 					cultural_acceptance_base = { target = cu:misri value >= acceptance_status_3 }
 				}
 			}

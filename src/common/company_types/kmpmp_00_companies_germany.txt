@@ -1,30 +1,32 @@
 ﻿# Rheinische Metallwaaren- und Maschinenfabrik Aktiengesellschaft
+# kmpmp
 INJECT:company_rheinmetall = {
 	extension_building_types = {
-		building_coal_mine #kmpmp
+		building_coal_mine
 	}
 
 	prosperity_modifier = {
-		unit_combat_unit_type_heavy_tank_offense_mult = 0.05 # kmpmp
-		unit_combat_unit_type_interwar_heavy_tank_offense_mult = 0.05 # kmpmp
+		unit_combat_unit_type_heavy_tank_offense_mult = 0.05
+		unit_combat_unit_type_interwar_heavy_tank_offense_mult = 0.05
 	}
 }
 
 # F. Schichau, Maschinen- und Lokomotivfabrik, Schiffswerft und Eisengießerei GmbH
+# kmpmp
 INJECT:company_schichau = {
 	extension_building_types = {
-		building_power_plant #kmpmp
+		building_power_plant
 	}
 
 	prosperity_modifier = {
-		ship_armor_mult = 0.025 # kmpmp
+		ship_armor_mult = 0.025
 	}
 }
 
 # Siemens & Halske AG
 INJECT:company_siemens_and_halske = {
+	# kmpmp
 	prosperity_modifier = {
-		# kmpmp
 		building_motor_industry_throughput_add = 0.1
 		building_steel_mill_throughput_add = 0.05
 	}
@@ -32,11 +34,11 @@ INJECT:company_siemens_and_halske = {
 
 # Preußische Staatseisenbahnen
 INJECT:company_prussian_state_railways = {
+	# kmpmp
 	prosperity_modifier = {
 		military_formation_army_movement_speed_mult = 0.1
-		# kmpmp
-		building_coal_mine_throughput_add = 0.10 #0.05
-		building_iron_mine_throughput_add = 0.10 #0.05
+		building_coal_mine_throughput_add = 0.10 # kmpmp: total = 0.1
+		building_iron_mine_throughput_add = 0.10 # kmpmp: total = 0.1
 		building_sulfur_mine_throughput_add = 0.05
 	}
 }
@@ -44,8 +46,9 @@ INJECT:company_prussian_state_railways = {
 
 # BASF
 INJECT:company_basf = {
+	# kmpmp
 	prosperity_modifier = {
 		building_group_bg_oil_extraction_throughput_add = 0.05
-		building_sulfur_mine_throughput_add = 0.05 # kmpmp
+		building_sulfur_mine_throughput_add = 0.05
 	}
 }

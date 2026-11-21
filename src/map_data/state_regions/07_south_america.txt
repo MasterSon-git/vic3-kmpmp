@@ -302,14 +302,15 @@ STATE_ANTOFAGASTA = {
     farm = "x694D06"
     mine = "xE96CF4"
     wood = "x8F918A"
-    arable_land = 60 #10
+    arable_land = 60 # kmpmp: vanilla = 10
     arable_resources = { "building_livestock_ranch" }
+    # kmpmp
     capped_resources = {
         building_iron_mine = 30
-        building_coal_mine = 30 #kmpmp
+        building_coal_mine = 30
         building_sulfur_mine = 48
-        building_logging_camp = 9 #kmpmp
-        building_fishing_wharf = 10 #5
+        building_logging_camp = 9
+        building_fishing_wharf = 10 # kmpmp: vanilla = 5
 
         building_copper_mine = 36
     }
@@ -442,14 +443,14 @@ STATE_LIMA = {
     farm = "x9E0F14"
     mine = "xC64601"
     wood = "xA3F17B"
-    arable_land = 77 #40
+    arable_land = 77 # kmpmp: vanilla = 40
     arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation" "building_cotton_plantation" "building_dye_plantation" "building_tobacco_plantation" "building_sugar_plantation" "building_banana_plantation" "building_vineyard" }
     capped_resources = {
         building_gold_mine = 6
-        building_iron_mine = 30 #21
+        building_iron_mine = 30 # kmpmp: vanilla = 21
         building_lead_mine = 30
-        building_sulfur_mine = 40 #28
-        building_logging_camp = 20 #11
+        building_sulfur_mine = 40 # kmpmp: vanilla = 28
+        building_logging_camp = 20 # kmpmp: vanilla = 11
         building_whaling_station = 5
         building_fishing_wharf = 7
     }
@@ -717,6 +718,7 @@ STATE_CORRIENTES = {
     id = 379
     subsistence_building = "building_subsistence_farm"
     provinces = { "x06F100" "x092C5E" "x0EF9D4" "x238A1A" "x4AC29E" "x55BC51" "x64BE0D" "x759354" "x778AFC" "x7D7684" "x7EB6F0" "x84FBF5" "x910C5C" "x92BEE9" "x988988" "x9A6092" "x9C2131" "xA5787E" "xAAAE72" "xAAE517" "xB196C3" "xBCA186" "xCD9FE6" "xD099E7" "xDDA329" "xE6CEFA" "xF07AA3" "xF3F73C" "xFB9D5C" }
+    # kmpmp: Apply only one river bonus in this state.
     traits = {
         #"state_trait_parana_river"
         "state_trait_paraguay_river"
@@ -1216,8 +1218,8 @@ STATE_BAHIA = {
     arable_land = 80
     arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation" "building_tobacco_plantation" "building_sugar_plantation" "building_banana_plantation" }
     capped_resources = {
-        building_coal_mine = 20 #kmpmp
-        building_iron_mine = 20 #15
+        building_coal_mine = 20 # kmpmp
+        building_iron_mine = 20 # kmpmp: vanilla = 15
         building_logging_camp = 18
         building_fishing_wharf = 8
     }
@@ -1264,8 +1266,8 @@ STATE_CEARA = {
     arable_land = 30
     arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_cotton_plantation" "building_tobacco_plantation" "building_sugar_plantation" "building_banana_plantation" }
     capped_resources = {
-        building_coal_mine = 15 #kmpmp
-        building_iron_mine = 20 #18
+        building_coal_mine = 15 # kmpmp
+        building_iron_mine = 20 # kmpmp: vanilla = 18
         building_logging_camp = 7
         building_fishing_wharf = 3
     }

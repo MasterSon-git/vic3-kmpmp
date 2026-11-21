@@ -8,7 +8,7 @@
     farm = "x8B56F5"
     mine = "x24AEFA"
     wood = "x799B34"
-    arable_land = 70 #40
+    arable_land = 70 # kmpmp: vanilla = 40
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_tea_plantation" "building_sugar_plantation" "building_vineyard" }
     capped_resources = {
         building_coal_mine = 80
@@ -73,7 +73,7 @@ STATE_TASMANIA = {
     farm = "xEC439A"
     mine = "x05B74C"
     wood = "xBB312B"
-    arable_land = 25 #15
+    arable_land = 25 # kmpmp: vanilla = 15
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_tea_plantation" "building_sugar_plantation" "building_opium_plantation" }
     capped_resources = {
         building_iron_mine = 15
@@ -106,7 +106,7 @@ STATE_QUEENSLAND = {
     farm = "x0E58D6"
     mine = "x57456E"
     wood = "xA70E88"
-    arable_land = 90 #20
+    arable_land = 90 # kmpmp: vanilla = 20
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_tea_plantation" "building_sugar_plantation" }
     capped_resources = {
         building_iron_mine = 45
@@ -134,7 +134,7 @@ STATE_SOUTH_AUSTRALIA = {
     farm = "xC53983"
     mine = "x6F472E"
     wood = "xD471D4"
-    arable_land = 40 #30
+    arable_land = 40 # Vanilla 1.12.2 used 30.
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_vineyard" }
     capped_resources = {
         building_iron_mine = 30
@@ -164,7 +164,7 @@ STATE_WESTERN_AUSTRALIA = {
     farm = "x98FA26"
     mine = "x8D829F"
     wood = "x74551C"
-    arable_land = 110 #36 #30
+    arable_land = 110 # kmpmp: vanilla = 36. Vanilla 1.12.2 used 30.
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_vineyard" }
     capped_resources = {
         building_coal_mine = 40
@@ -196,7 +196,7 @@ STATE_NORTHERN_TERRITORY = {
     farm = "xF943B8"
     mine = "x3F7FA7"
     wood = "xA4B8B3"
-    arable_land = 30 #10
+    arable_land = 30 # kmpmp: vanilla = 10
     arable_resources = { "building_livestock_ranch" "building_cotton_plantation" }
     capped_resources = {
         building_logging_camp = 5
@@ -216,7 +216,7 @@ STATE_NORTH_ISLAND = {
     farm = "xEBB583"
     mine = "x59DF28"
     wood = "x0AA01A"
-    arable_land = 40 #30
+    arable_land = 40 # kmpmp: vanilla = 30
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" }
     capped_resources = {
         building_coal_mine = 28
@@ -243,7 +243,7 @@ STATE_SOUTH_ISLAND = {
     farm = "x6A5DDE"
     mine = "xD040B0"
     wood = "x50F19B"
-    arable_land = 50 #30
+    arable_land = 50 # kmpmp: vanilla = 30
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" }
     capped_resources = {
         building_logging_camp = 7

@@ -1,7 +1,7 @@
 ﻿# Root = Country
 on_monthly_pulse_country = {
     on_actions = {
-        kmpmp_player_protectorate_own_market
+        kmpmp_player_protectorate_own_market # kmpmp
     }
 }
 
@@ -42,6 +42,7 @@ kmpmp_player_protectorate_own_market = {
 
 # Root = Diplomatic Play
 on_diplo_play_war_start = {
+	# kmpmp
 	on_actions = {
         # Disabled: the existing subject-demobilization flow is not working.
         # Re-enable only after lifecycle and mobilization-block cleanup tests (#646).

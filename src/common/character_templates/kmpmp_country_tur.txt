@@ -8,11 +8,10 @@
     birth_date = 1823.4.25
     home_region = STATE_EASTERN_THRACE
     interest_group = ig_intelligentsia
-    ideology = ideology_modernizer_leader #ideology_moderate
+    ideology = ideology_modernizer_leader # Vanilla 1.8.6 used ideology_moderate for Abdulmecid.
     traits = {
         trait_child
-        # aesthete
-        imperious
+        imperious # kmpmp: vanilla = aesthete
     }
 
     religion = rel:sunni
@@ -26,16 +25,16 @@ REPLACE:tur_abdulhamid_ii_osmanoglu_template = {
     female = no
     dna = dna_abdul_hamid_ii
     ideology = ideology_authoritarian
-    interest_group = ig_intelligentsia #ig_landowners
+    interest_group = ig_intelligentsia # kmpmp: vanilla = ig_landowners
     birth_date = 1842.9.21
     home_region = STATE_EASTERN_THRACE
 	heir = yes
     traits = {
         pious
-        imperious #persistent
+        imperious # kmpmp: vanilla = persistent
         basic_diplomat
     }
-    # kmpmp - no longer in vanilla
+    # kmpmp: Retain Abdulhamid’s former Vanilla leader role for the Intelligentsia under the Ottoman monarchy.
     interest_group_leader_usage = {
         country_trigger = {
             exists = c:TUR
@@ -44,7 +43,7 @@ REPLACE:tur_abdulhamid_ii_osmanoglu_template = {
         }
         interest_group_trigger = {
             is_marginal = no
-            is_interest_group_type = ig_intelligentsia #ig_landowners
+            is_interest_group_type = ig_intelligentsia # kmpmp: Vanilla 1.8.6 used ig_landowners in this leader trigger.
         }
         earliest_usage_date = 1870.1.1
         latest_usage_date = 1900.1.1

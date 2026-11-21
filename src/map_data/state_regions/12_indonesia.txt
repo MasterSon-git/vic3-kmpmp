@@ -254,7 +254,7 @@ STATE_SOUTH_SUMATRA = {
     }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 25 #20
+        undiscovered_amount = 25 # kmpmp: vanilla = 20
     }
     naval_exit_id = 3158
 }

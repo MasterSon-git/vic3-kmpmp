@@ -1,5 +1,5 @@
 texticon = {
-	icon = prestige_good_kmpmp_calais_coal
+	icon = prestige_good_kmpmp_calais_coal # kmpmp
 	iconsize = {
 		texture = "gfx/interface/icons/goods_icons/coal.dds"
 		size = { 25 25 }
@@ -9,7 +9,7 @@ texticon = {
 }
 
 texticon = {
-	icon = prestige_good_generic_kmpmp_premium_engines
+	icon = prestige_good_generic_kmpmp_premium_engines # kmpmp
 	iconsize = {
 		texture = "gfx/interface/icons/goods_icons/prestige_goods/schichau_engines_prestige.dds"
 		size = { 25 25 }
@@ -19,7 +19,7 @@ texticon = {
 }
 
 texticon = {
-	icon = prestige_good_generic_kmpmp_premium_silk
+	icon = prestige_good_generic_kmpmp_premium_silk # kmpmp
 	iconsize = {
 		texture = "gfx/interface/icons/goods_icons/silk.dds"
 		size = { 25 25 }
@@ -29,7 +29,7 @@ texticon = {
 }
 
 texticon = {
-	icon = prestige_good_generic_kmpmp_premium_oil
+	icon = prestige_good_generic_kmpmp_premium_oil # kmpmp
 	iconsize = {
 		texture = "gfx/interface/icons/goods_icons/prestige_goods/baku_oil_prestige.dds"
 		size = { 25 25 }
@@ -39,7 +39,7 @@ texticon = {
 }
 
 texticon = {
-	icon = prestige_good_generic_kmpmp_premium_wine
+	icon = prestige_good_generic_kmpmp_premium_wine # kmpmp
 	iconsize = {
 		texture = "gfx/interface/icons/goods_icons/wine.dds"
 		size = { 25 25 }

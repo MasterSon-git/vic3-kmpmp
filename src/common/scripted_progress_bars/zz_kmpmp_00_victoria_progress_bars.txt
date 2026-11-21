@@ -21,7 +21,7 @@
 			limit = {
 				# Your GDP per Capita is relatively high
 				# gdp_per_capita_ranking <= 20 # Lower = better
-				kmpmp_gdp_per_capita >= 1
+				kmpmp_gdp_per_capita >= 1 # kmpmp
 			}
 			add = {
 				desc = "earning_recognition_progress_gdpc_tt"
@@ -51,7 +51,7 @@
 			limit = {
 				# Your Standard of Living is relatively high
 				# sol_ranking <= 20
-				average_sol > 12
+				average_sol > 12 # kmpmp
 			}
 			add = {
 				desc = "AVG_STANDARD_OF_LIVING"
@@ -148,15 +148,15 @@
 			limit = {
 				# Absolute GDP ranking is low
 				# gdp_ranking > 30
-				kmpmp_gdp_per_capita <= 0.8
+				kmpmp_gdp_per_capita <= 0.8 # kmpmp
 			}
 			subtract = {
 				# desc = "earning_recognition_low_gdp_tt"
-				desc = "earning_recognition_low_gdpc_tt"
+				desc = "earning_recognition_low_gdpc_tt" # kmpmp
 				value = 1
 			}
 		}
-		# kmpmp removed in vanilla since 1.9.6 - but we like this
+		# kmpmp: Keep the low standard-of-living penalty to recognition progress removed in Vanilla 1.9.6.
 		progress_condition = {
 			limit = {
 				# Your Standard of Living is relatively low

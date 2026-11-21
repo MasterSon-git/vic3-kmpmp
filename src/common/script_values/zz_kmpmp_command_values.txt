@@ -96,7 +96,7 @@ REPLACE:land_battle_size = {
 		}
     }
 
-	# kmpmp - technology lessons_from_the_great_war halfs battlesize
+	# kmpmp: Lessons from the Great War halves combat width.
 	if = {
 		limit = {
 			OR = {

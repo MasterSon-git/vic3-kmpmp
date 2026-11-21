@@ -1,12 +1,13 @@
 ﻿# Estaleiro Mauá
+# kmpmp
 INJECT:company_estaleiro_maua = {
 	extension_building_types = {
-		building_port #kmpmp
+		building_port
 	}
 
 	prosperity_modifier = {
-		building_iron_mine_throughput_add = 0.05 #kmpmp
-		state_infrastructure_mult = 0.2 #kmpmp
+		building_iron_mine_throughput_add = 0.05
+		state_infrastructure_mult = 0.2
 	}
 }
 
@@ -19,18 +20,20 @@ REPLACE:company_pernambuco_textiles = {
 
 	preferred_headquarters = { STATE_PERNAMBUCO }
 
+	# kmpmp: Exclude textile mill from the company’s core industries.
 	building_types = {
-		building_cotton_plantation #kmpmp
-		building_sugar_plantation #kmpmp
+		building_cotton_plantation
+		building_sugar_plantation
 		# building_textile_mill
 	}
 
+	# kmpmp: Exclude cotton plantation from the expansion list.
 	extension_building_types = {
 		# building_cotton_plantation
-		building_textile_mill #kmpmp
+		building_textile_mill
 		building_livestock_ranch
-		building_dye_plantation #kmpmp
-		building_rubber_plantation #kmpmp
+		building_dye_plantation
+		building_rubber_plantation
 	}
 
 	#possible_prestige_goods = {
@@ -62,6 +65,7 @@ REPLACE:company_pernambuco_textiles = {
 			state_region = s:STATE_PERNAMBUCO
 			is_incorporated = yes
 			any_scope_building = {
+				# kmpmp
 				OR = {
 					is_building_type = building_sugar_plantation
 					is_building_type = building_cotton_plantation
@@ -73,7 +77,7 @@ REPLACE:company_pernambuco_textiles = {
 
 	prosperity_modifier = {
 		building_cotton_plantation_throughput_add = 0.1
-		building_rubber_plantation_throughput_add = 0.10 #0.05
+		building_rubber_plantation_throughput_add = 0.10 # kmpmp: vanilla = 0.05
 	}
 
 	ai_will_do = {
@@ -83,6 +87,7 @@ REPLACE:company_pernambuco_textiles = {
 		}
 	}
 
+	# kmpmp
 	ai_construction_targets = {
 		building_sugar_plantation = {
 			level = 5
@@ -126,15 +131,17 @@ REPLACE:company_estanifera_llallagua = {
 		building_copper_mine
 	}
 
+	# kmpmp: Exclude iron mine from the expansion list.
 	extension_building_types = {
 		# building_iron_mine
 		building_sulfur_mine
-		building_glassworks #kmpmp
-		building_munition_plant #kmpmp
+		building_glassworks # kmpmp
+		building_munition_plant # kmpmp
 	}
 
+	# kmpmp
 	possible_prestige_goods = {
-		prestige_good_kmpmp_potosi_lead #kmpmp
+		prestige_good_kmpmp_potosi_lead
 	}
 
 	potential = {
@@ -198,6 +205,7 @@ REPLACE:company_argentinian_wine = {
 		building_vineyard
 	}
 
+	# kmpmp
 	extension_building_types = {
 		building_livestock_ranch
 		building_coffee_plantation
@@ -206,10 +214,12 @@ REPLACE:company_argentinian_wine = {
 		building_motor_industry
 	}
 
+	# kmpmp
 	possible_prestige_goods = {
-		prestige_good_generic_kmpmp_premium_wine #kmpmp
+		prestige_good_generic_kmpmp_premium_wine
 	}
 
+	# kmpmp
 	prestige_goods_trigger = {
 		custom_tooltip = {
 			text = je_prestige_good_generic_kmpmp_premium_wine_complete_tt
@@ -217,13 +227,14 @@ REPLACE:company_argentinian_wine = {
 		}
 	}
 
+	# kmpmp: Allow other countries in La Plata to establish the company.
 	potential = {
 		has_dlc_feature = rp1_content
-		#c:ARG ?= this
+		# c:ARG ?= this
 	}
 
 	possible = {
-		has_technology_researched = mutual_funds #central_planning #kmpmp
+		has_technology_researched = mutual_funds # kmpmp: vanilla = central_planning
 		any_scope_state = {
 			region = sr:region_la_plata
 			is_incorporated = yes
@@ -237,7 +248,7 @@ REPLACE:company_argentinian_wine = {
 
 	prosperity_modifier = {
 		country_prestige_mult = 0.2
-		country_company_construction_efficiency_bonus_add = 0.1
+		country_company_construction_efficiency_bonus_add = 0.1 # kmpmp
 	}
 
 	ai_will_do = {
@@ -265,6 +276,7 @@ REPLACE:company_argentinian_wine = {
 
 # Córdoba Central Railway
 INJECT:company_cordoba_railway = {
+	# kmpmp
 	prosperity_modifier = {
 		building_livestock_ranch_throughput_add = 0.05
 		building_motor_industry_throughput_add = 0.1
@@ -273,8 +285,9 @@ INJECT:company_cordoba_railway = {
 
 # Empresas Eléctricas Asociadas
 INJECT:company_eea = {
+	# kmpmp
 	prosperity_modifier = {
 		state_infrastructure_from_population_mult = 0.05
-		state_infrastructure_mult = 0.05 # kmpmp
+		state_infrastructure_mult = 0.05
 	}
 }

@@ -2856,8 +2856,7 @@ default_popup =  {
 		#alpha = 1
 		#duration = 0
 		
-		# kmpmp
-		next = show_2
+		next = show_2 # kmpmp
 	}
 
 	# kmpmp
@@ -3186,8 +3185,7 @@ default_popup =  {
 					size = { 25 25 }
 					frame = 2
 					using = check_button_sound
-					# kmpmp
-					enabled = "[Not(Or(ObjectsEqual(DiplomaticPlayConfirmation.GetType, GetDiplomaticPlayType('dp_open_market')), ObjectsEqual(DiplomaticPlayConfirmation.GetType, GetDiplomaticPlayType('dp_regime_change'))))]"
+					enabled = "[Not(Or(ObjectsEqual(DiplomaticPlayConfirmation.GetType, GetDiplomaticPlayType('dp_open_market')), ObjectsEqual(DiplomaticPlayConfirmation.GetType, GetDiplomaticPlayType('dp_regime_change'))))]" # kmpmp
 				}
 
 				textbox = {

@@ -1,13 +1,15 @@
 ﻿# Compagnie du Congo pour le Commerce et l'Industrie
 INJECT:company_ccci = {
+	# kmpmp
 	prosperity_modifier = {
 		building_furniture_manufactory_throughput_add = -0.05
 		building_group_bg_rubber_mortality_mult = -0.1
-		building_textile_mill_throughput_add = 0.1 #kmpmp
+		building_textile_mill_throughput_add = 0.1
 	}
 }
 
 # Société Franco-Belge
+# kmpmp
 INJECT:company_franco_belge = {
 	extension_building_types = {
 		building_coal_mine
@@ -15,19 +17,19 @@ INJECT:company_franco_belge = {
 
 	prosperity_modifier = {
 		state_infrastructure_mult = 0.05
-		building_iron_mine_throughput_add = 0.1 # kmpmp
+		building_iron_mine_throughput_add = 0.1
 	}
 }
 
 # Koninklijke Nederlandse Petroleum Maatschappij
+# kmpmp
 INJECT:company_nederlandse_petroleum = {
 	building_types = {
-		building_rubber_plantation # kmpmp
+		building_rubber_plantation
 	}
 
 	prosperity_modifier = {
 		state_colony_growth_speed_mult = 0.1
-		# kmpmp
 		building_oil_rig_throughput_add = 0.1
 		building_railway_throughput_add = 0.1
 		building_sulfur_mine_throughput_add = 0.1
@@ -37,7 +39,7 @@ INJECT:company_nederlandse_petroleum = {
 # Koninklijke Philips N.V.
 INJECT:company_philips = {
 	prosperity_modifier = {
-		building_power_plant_throughput_add = 0.05 #kmpmp
+		building_power_plant_throughput_add = 0.05 # kmpmp
 	}
 }
 
@@ -79,7 +81,7 @@ REPLACE:company_basileiades = {
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
-				state_region = s:STATE_PELOPONNESE #s:STATE_ATTICA
+				state_region = s:STATE_PELOPONNESE # kmpmp: vanilla = s:STATE_ATTICA
 			}
 		}
 	}
@@ -87,7 +89,7 @@ REPLACE:company_basileiades = {
 	possible = {
 		has_technology_researched = railways
 		any_scope_state = {
-			state_region = s:STATE_PELOPONNESE #s:STATE_ATTICA
+			state_region = s:STATE_PELOPONNESE # kmpmp: vanilla = s:STATE_ATTICA
 			is_incorporated = yes
 			any_scope_building = {
 				OR = {
@@ -135,12 +137,13 @@ REPLACE:company_basileiades = {
 # Achilleas Kouppas Machine Manufacturing A.E.
 INJECT:company_kouppas = {
 	prosperity_modifier = {
-		building_steel_mill_throughput_add = 0.05
+		building_steel_mill_throughput_add = 0.05 # kmpmp
 	}
 }
 
 # Aktiebolaget L. M. Ericsson & Co
 INJECT:company_ericsson = {
+	# kmpmp
 	prosperity_modifier = {
 		country_weekly_innovation_mult = 0.05
 		state_education_access_wealth_add = 0.005
@@ -155,22 +158,23 @@ INJECT:company_lkab = {
 }
 
 # Aker Mek
+# kmpmp
 INJECT:company_aker_mek = {
 	extension_building_types = {
-		building_explosives_factory #kmpmp
+		building_explosives_factory
 	}
 
 	prosperity_modifier = {
 		building_fishing_wharf_throughput_add = 0.1
-		building_iron_mine_throughput_add = 0.1 #kmpmp
+		building_iron_mine_throughput_add = 0.1
 	}
 }
 
 # Nokia AB
 INJECT:company_nokia = {
+	# kmpmp
 	prosperity_modifier = {
 		building_synthetics_plant_throughput_add = -0.05
-		# kmpmp
 		building_furniture_manufactory_throughput_add = 0.05
 		building_university_throughput_add = 0.05
 	}
@@ -207,7 +211,7 @@ REPLACE:company_ursus = {
 	}
 
 	possible = {
-		has_technology_researched = pumpjacks #combustion_engine
+		has_technology_researched = pumpjacks # kmpmp: vanilla = combustion_engine
 		any_scope_state = {
 			state_region = s:STATE_GREATER_POLAND
 			is_incorporated = yes
@@ -221,8 +225,7 @@ REPLACE:company_ursus = {
 	prosperity_modifier = {
 		building_wheat_farm_throughput_add = 0.2
 		building_rye_farm_throughput_add = 0.2
-		# kmpmp
-		building_food_industry_throughput_add = 0.1
+		building_food_industry_throughput_add = 0.1 # kmpmp
 	}
 
 	ai_will_do = {
@@ -353,6 +356,7 @@ REPLACE:company_mozambique_company = {
 
 	preferred_headquarters = { STATE_MOCAMBIQUE STATE_ZAMBEZIA STATE_LOURENCO_MARQUES }
 
+	# kmpmp: Exclude millet farm from the company’s core industries.
 	building_types = {
 		building_cotton_plantation
 		building_tea_plantation
@@ -382,7 +386,7 @@ REPLACE:company_mozambique_company = {
 	}
 
 	possible = {
-		has_technology_researched = corporate_charters #mutual_funds
+		has_technology_researched = corporate_charters # kmpmp: vanilla = mutual_funds
 		any_scope_state = {
 			OR = {
 				state_region = s:STATE_MOCAMBIQUE
@@ -455,15 +459,16 @@ REPLACE:company_altos_hornos_de_vizcaya = {
 
 	preferred_headquarters = { STATE_BASQUE_COUNTRY }
 
+	# kmpmp: Exclude iron mine from the company’s core industries.
 	building_types = {
 		building_steel_mill
 		# building_iron_mine
-		building_tooling_workshop
+		building_tooling_workshop # kmpmp
 	}
 
+	# kmpmp
 	extension_building_types = {
 		building_coal_mine
-		#kmpmp
 		building_iron_mine
 		building_motor_industry
 		building_arms_industry
@@ -494,7 +499,7 @@ REPLACE:company_altos_hornos_de_vizcaya = {
 
 	possible = {
 		has_technology_researched = steelworking
-		has_technology_researched = mechanical_tools
+		has_technology_researched = mechanical_tools # kmpmp
 		any_scope_state = {
 			state_region = s:STATE_BASQUE_COUNTRY
 			is_incorporated = yes
@@ -512,7 +517,7 @@ REPLACE:company_altos_hornos_de_vizcaya = {
 
 	ai_will_do = {
 		has_technology_researched = steelworking
-		has_technology_researched = mechanical_tools
+		has_technology_researched = mechanical_tools # kmpmp
 		any_scope_state = {
 			state_region = s:STATE_BASQUE_COUNTRY
 			is_incorporated = yes
@@ -587,12 +592,12 @@ REPLACE:company_espana_industrial = {
 		}
 	}
 
+	# kmpmp
 	prosperity_modifier = {
 		country_weekly_innovation_mult = 0.15
-		# kmpmp
 		building_silk_plantation_throughput_add = 0.15
-		building_dye_plantation_throughput_add = 0.10 #0.05
-		building_synthetics_plant_throughput_add = 0.10 #0.05
+		building_dye_plantation_throughput_add = 0.10 # kmpmp: KMPMP used 0.05 before #545.
+		building_synthetics_plant_throughput_add = 0.10 # kmpmp: KMPMP used 0.05 before #545.
 	}
 
 	ai_will_do = {
@@ -618,13 +623,14 @@ REPLACE:company_espana_industrial = {
 }
 
 # Fábrica de Armas de Trubia
+# kmpmp
 INJECT:company_trubia = {
 	extension_building_types = {
 		building_chemical_plant
 	}
 
 	prosperity_modifier = {
-		unit_defense_mult = 0.05 # kmpmp
+		unit_defense_mult = 0.05
 		country_military_goods_cost_mult = -0.05
 	}
 }
@@ -645,7 +651,7 @@ REPLACE:company_zastava = {
 
 	extension_building_types = {
 		building_artillery_foundry
-		building_explosives_factory #kmpmp
+		building_explosives_factory # kmpmp
 	}
 
 	possible_prestige_goods = {
@@ -668,12 +674,13 @@ REPLACE:company_zastava = {
 			any_scope_state = {
 				# state_region = s:STATE_WESTERN_SERBIA
 				state_region = {
-					is_homeland = cu:serb
+					is_homeland = cu:serb # kmpmp
 				}
 			}
 		}
 	}
 
+	# kmpmp
 	possible = {
 		has_technology_researched = rifling #gunsmithing
 		# any_scope_state = {
@@ -685,7 +692,6 @@ REPLACE:company_zastava = {
 		# 	}
 		# }
 
-		# kmpmp
 		trigger_if = {
 			limit = {
 				country_has_primary_culture = cu:turkish
@@ -709,15 +715,16 @@ REPLACE:company_zastava = {
 		}
 	}
 
+	# kmpmp
 	prosperity_modifier = {
-		unit_defense_mult = 0.1 #0.05
-		unit_recovery_rate_add = 0.1 #0.05
-		# kmpmp
-		building_iron_mine_throughput_add = 0.10 #0.05
+		unit_defense_mult = 0.1 # kmpmp: vanilla = 0.05
+		unit_recovery_rate_add = 0.1 # kmpmp: vanilla = 0.05
+		building_iron_mine_throughput_add = 0.10 # kmpmp: KMPMP used 0.05 before #545.
 		building_coal_mine_throughput_add = 0.1
 		country_military_goods_cost_mult = -0.05
 	}
 
+	# kmpmp
 	ai_will_do = {
 		has_technology_researched = rifling #gunsmithing
 		# any_scope_state = {
@@ -725,7 +732,6 @@ REPLACE:company_zastava = {
 		# 	is_incorporated = yes
 		# }
 
-		# kmpmp
 		trigger_if = {
 			limit = {
 				country_has_primary_culture = cu:turkish
@@ -749,6 +755,7 @@ REPLACE:company_zastava = {
 		}
 	}
 
+	# kmpmp
 	ai_construction_targets = {
 		# building_arms_industry = {
 		# 	level = 5
@@ -764,6 +771,7 @@ REPLACE:company_zastava = {
 }
 
 # Chr. Hansens teknisk-kemiske Laboratorium A/S
+# kmpmp
 INJECT:company_chr_hansens = {
 	extension_building_types = {
 		building_sulfur_mine
@@ -772,15 +780,14 @@ INJECT:company_chr_hansens = {
 	}
 
 	prosperity_modifier = {
-		# kmpmp
 		building_group_bg_agriculture_throughput_add = 0.15
 	}
 }
 
 # A.P. Møller (later Mærsk)
 INJECT:company_ap_moller = {
+	# kmpmp
 	prosperity_modifier = {
-		# kmpmp
 		ship_hull_damage_mult = 0.025
 		ship_armor_mult = 0.025
 	}
@@ -806,10 +813,12 @@ REPLACE:company_cfr = {
 		building_synthetics_plant # kmpmp
 	}
 
+	# kmpmp
 	possible_prestige_goods = {
 		prestige_good_generic_kmpmp_premium_silk
 	}
 
+	# kmpmp
 	prestige_goods_trigger = {
 		custom_tooltip = {
 			text = je_prestige_good_generic_kmpmp_premium_silk_complete_tt
@@ -817,6 +826,7 @@ REPLACE:company_cfr = {
 		}
 	}
 
+	# kmpmp: Use the company’s regional requirements for eligibility.
 	potential = {
 		# country_has_primary_culture = cu:romanian
 	}
@@ -832,12 +842,12 @@ REPLACE:company_cfr = {
 				is_building_type = building_railway
 				level >= 5
 			}
-			count >= 4 #2
+			count >= 4 # kmpmp: vanilla = 2
 		}
 	}
 
 	prosperity_modifier = {
-		state_infrastructure_mult = 0.1 #0.05
+		state_infrastructure_mult = 0.1 # kmpmp: vanilla = 0.05
 		state_trade_capacity_mult = 0.15
 	}
 
@@ -885,10 +895,12 @@ REPLACE:company_romanian_star = {
 		building_power_plant
 	}
 
+	# kmpmp
 	possible_prestige_goods = {
 		prestige_good_generic_kmpmp_premium_oil
 	}
 
+	# kmpmp
 	prestige_goods_trigger = {
 		custom_tooltip = {
 			text = je_prestige_good_generic_kmpmp_premium_oil_complete_tt
@@ -953,6 +965,7 @@ REPLACE:company_romanian_star = {
 	}
 
 	ai_construction_targets = {
+		# kmpmp
 		building_oil_rig = { #building_railway = {
 			level = 5
 			state_trigger = {
