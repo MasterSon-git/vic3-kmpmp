@@ -1,13 +1,15 @@
 ﻿# Glasfabrik Ludwig Moser & Söhne / Sklárny Ludwig Moser a synové
 INJECT:company_ludwig_moser_and_sons = {
+	# kmpmp
 	prosperity_modifier = {
 		country_influence_mult = 0.05
-		building_steel_mill_throughput_add = 0.1 #kmpmp
+		building_steel_mill_throughput_add = 0.1
 	}
 }
 
 # Compañía Sansinena de Carnes Congeladas / La Negra
 INJECT:company_compania_sansinena_de_carnes_congeladas = {
+	# kmpmp
 	extension_building_types = {
         building_wheat_farm
         building_maize_farm
@@ -17,17 +19,19 @@ INJECT:company_compania_sansinena_de_carnes_congeladas = {
 
 # Königliche Porzellan-Manufaktur Meissen
 INJECT:company_konigliche_porzellan_manufaktur_meissen = {
+	# kmpmp
 	prosperity_modifier = {
 		building_art_academy_throughput_add = -0.05
 		building_synthetics_plant_throughput_add = 0.05
-		state_construction_mult = 0.05 #kmpmp
+		state_construction_mult = 0.05
 	}
 }
 
 # Russian-American Company Under the High Patronage of His Imperial Majesty
+# kmpmp
 INJECT:company_russian_american_company = {
 	extension_building_types = {
-		building_iron_mine #kmpmp
+		building_iron_mine
 	}
 
 	prosperity_modifier = {
@@ -40,68 +44,74 @@ INJECT:company_russian_american_company = {
 # Gebrüder Thonet
 INJECT:company_gebruder_thonet = {
 	prosperity_modifier = {
-		building_tooling_workshop_throughput_add = 0.1 #kmpmp
+		building_tooling_workshop_throughput_add = 0.1 # kmpmp
 	}
 }
 
 # Kinkozan Sobei
 INJECT:company_kinkozan_sobei = {
 	prosperity_modifier = {
-		country_leverage_generation_mult = 0.05
+		country_leverage_generation_mult = 0.05 # kmpmp
 	}
 }
 
 # Maple & Co.
 INJECT:company_maple_and_co = {
+	# kmpmp
 	prosperity_modifier = {
-		building_furniture_manufactory_throughput_add = 0.1 #kmpmp
-		building_rubber_plantation_throughput_add = 0.1 #kmpmp
+		building_furniture_manufactory_throughput_add = 0.1
+		building_rubber_plantation_throughput_add = 0.1
 	}
 }
 
 # Anglo-Sicilian Sulphur Company
+# kmpmp
 INJECT:company_anglo_sicilian_sulphur_company = {
 	extension_building_types = {
-		building_iron_mine #kmpmp
-		building_lead_mine #kmpmp
+		building_iron_mine
+		building_lead_mine
 	}
 
 	prosperity_modifier = {
-		building_explosives_factory_throughput_add = 0.05 #kmpmp
+		building_explosives_factory_throughput_add = 0.05
 	}
 }
 
 # Norsk Hydroelektrisk Kvælstofaktieselskap
+# kmpmp
 INJECT:company_norsk_hydro = {
 	extension_building_types = {
-		building_coal_mine #kmpmp
+		building_coal_mine
 	}
 
 	prosperity_modifier = {
-		building_food_industry_throughput_add = 0.1 #kmpmp
+		building_food_industry_throughput_add = 0.1
 	}
 }
 
 # John Holt and Company
 INJECT:company_john_holt = {
+	# kmpmp: total = 0.15 for plantations throughput, -0.1 for bureaucracy investment cost factor.
 	prosperity_modifier = {
-		building_group_bg_plantations_throughput_add = 0.05 # = 0.15
-		country_bureaucracy_investment_cost_factor_mult = -0.05 # = -0.1
+		building_group_bg_plantations_throughput_add = 0.05
+		country_bureaucracy_investment_cost_factor_mult = -0.05
 	}
 }
 
 # Imperial Ethiopian Railway Company
 INJECT:company_imperial_ethiopian_railways = {
+	# kmpmp
 	prosperity_modifier = {
 		building_livestock_ranch_throughput_add = 0.05
-		building_tobacco_plantation_throughput_add = 0.1 #kmpmp
+		building_tobacco_plantation_throughput_add = 0.1
 	}
 }
 
 # Lanfang Kongsi
 INJECT:company_lanfang_kongsi = {
+	# kmpmp
 	prosperity_modifier = {
 		building_group_bg_agriculture_throughput_add = 0.05
-		battle_offense_owned_province_mult = 0.1 #kmpmp
+		battle_offense_owned_province_mult = 0.1
 	}
 }

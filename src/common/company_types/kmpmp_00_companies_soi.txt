@@ -1,19 +1,21 @@
 ﻿# Də Afḡān Nasājī Šerkat
 INJECT:company_da_afghan_nassaji_sherkat = {
 	prosperity_modifier = {
-		building_textile_mill_throughput_add = 0.1 #kmpmp
+		building_textile_mill_throughput_add = 0.1 # kmpmp
 	}
 }
 
 # MM. Nicolas Portalis et Cie.
 INJECT:company_nicolas_portalis = {
+	# kmpmp
 	prosperity_modifier = {
-		building_oil_rig_throughput_add = 0.1 #kmpmp
-		country_legitimacy_base_add = 10 #kmpmp
+		building_oil_rig_throughput_add = 0.1
+		country_legitimacy_base_add = 10
 	}
 }
 
 # Hanseong Jeongi Hoesa
+# kmpmp
 INJECT:company_hanseong_jeongi_hoesa = {
 	extension_building_types = {
 		building_oil_rig
@@ -29,39 +31,42 @@ INJECT:company_hanseong_jeongi_hoesa = {
 
 # Kirgizian Mining Joint Stock Company
 INJECT:company_kirgizian_mining_company= {
+	# kmpmp
 	prosperity_modifier = {
-		building_steel_mill_throughput_add = 0.1 #kmpmp
-		building_tooling_workshop_throughput_add = 0.1 #kmpmp
+		building_steel_mill_throughput_add = 0.1
+		building_tooling_workshop_throughput_add = 0.1
 	}
 }
 
 # Arthur Guinness Son & Co. Ltd
 INJECT:company_guinness = {
 	prosperity_modifier = {
-		state_birth_rate_mult = 0.06 #kmpmp
+		state_birth_rate_mult = 0.06 # kmpmp
 	}
 }
 
 # Oriental Development Company
+# kmpmp
 INJECT:company_oriental_development_company = {
 	extension_building_types = {
-		building_rye_farm #kmpmp
-		building_coffee_plantation #kmpmp
-		building_tea_plantation #kmpmp
-		building_livestock_ranch #kmpmp
-		building_tobacco_plantation #kmpmp
-		building_opium_plantation #kmpmp
-		building_cotton_plantation #kmpmp
+		building_rye_farm
+		building_coffee_plantation
+		building_tea_plantation
+		building_livestock_ranch
+		building_tobacco_plantation
+		building_opium_plantation
+		building_cotton_plantation
 	}
 
 	prosperity_modifier = {
 		state_migration_pull_mult = 0.15
-		state_mortality_mult = -0.01 #kmpmp
+		state_mortality_mult = -0.01
 	}
 }
 
 # Turkish Petroleum Company
 INJECT:company_turkish_petroleum = {
+	# kmpmp
 	prosperity_modifier = {
 		state_trade_capacity_mult = 0.2
 		building_railway_throughput_add = 0.1

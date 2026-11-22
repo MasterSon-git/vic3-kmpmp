@@ -18,7 +18,7 @@
 	ai_value = {
 		value = 1000
 
-        # kmpmp - electricity isn't a local good
+		# kmpmp: Electricity trades nationally, so the AI can supply multiple states from one plant.
 		# Need 1 level of Power Plants everywhere as its a local good and a prerequisite to enabling electricity PMs to begin with
 		# if = {
 		# 	limit = {

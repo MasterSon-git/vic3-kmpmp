@@ -47,8 +47,9 @@
 			}
 		}
 
+		# kmpmp
 		actor_can_break = {
-			trigger_if = { # kmpmp
+			trigger_if = {
 				limit = {
 					has_game_rule = kmpmp_player_protectorate_own_market_force
 				}

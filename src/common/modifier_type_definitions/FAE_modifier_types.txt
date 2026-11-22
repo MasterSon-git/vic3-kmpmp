@@ -3,6 +3,7 @@ state_fae_building_forts_max_level_add = {
     color = good
     percent = no
     decimals = 0
+    # kmpmp
     game_data = {
         ai_value = 0
     }

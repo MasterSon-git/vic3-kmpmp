@@ -1,4 +1,5 @@
 ﻿INJECT:law_monarchy = {
+	# kmpmp
 	modifier = {
 		country_aristocrats_pol_str_mult = -0.1
 		# kmppmp
@@ -7,28 +8,27 @@
 }
 
 INJECT:law_presidential_republic = {
+	# kmpmp
 	modifier = {
 		country_legitimacy_headofstate_add = 5
 		country_legitimacy_ideological_incoherence_mult = -0.05
 		country_authority_add = 50
-		# kmpmp
 		state_migration_pull_mult = 0.05
 	}
 }
 
 INJECT:law_parliamentary_republic = {
 	modifier = {
-		# kmpmp
-		state_migration_pull_mult = 0.1
+		state_migration_pull_mult = 0.1 # kmpmp
 	}
 }
 
 INJECT:law_theocracy = {
+	# kmpmp
 	modifier = {
 		country_legitimacy_headofstate_add = 5
 		country_legitimacy_ideological_incoherence_mult = -0.1
 		country_authority_add = 50
-		# kmpmp
 		country_radicalism_increases_full_acceptance_mult = -0.1
 		country_radicalism_increases_second_rate_citizen_mult = -0.2
 		country_loyalism_increases_full_acceptance_mult = 0.1
@@ -37,17 +37,17 @@ INJECT:law_theocracy = {
 }
 
 INJECT:law_council_republic = {
+	# kmpmp
 	modifier = {
-		# KMPMP authority, dividend tax and cheaper decrees (#521).
-		country_authority_add = 100
+		country_authority_add = 100 # kmpmp: Authority, dividend tax and cheaper decrees (#521).
 		tax_dividends_add = 0.05
 		state_decree_cost_mult = -0.05
 	}
 }
 
 INJECT:law_corporate_state = {
+	# kmpmp
 	modifier = {
-		# kmpmp
 		country_max_companies_add = 1
 		country_free_charters_add = 1
 	}

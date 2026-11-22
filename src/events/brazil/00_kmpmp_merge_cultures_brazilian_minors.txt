@@ -1,7 +1,7 @@
-﻿# kmpmp - merge cultures fixes
-namespace = brazilian_minors
+﻿namespace = brazilian_minors
 
 # Cabanagem Defeat Event
+# kmpmp: Use the merged cultures in the affected event scopes.
 brazilian_minors.2 = {
 	type = country_event
 	placement = scope:para_state_scope

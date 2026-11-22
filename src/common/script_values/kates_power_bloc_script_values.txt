@@ -1,4 +1,5 @@
-﻿# power_bloc_mandate_progress_by_rank = {
+﻿# kmpmp: Keep the mandate formula in zz_kmpmp_01_power_bloc_values.txt when importing Kate’s script values.
+# power_bloc_mandate_progress_by_rank = {
 
 
 # 	value = 0
@@ -926,7 +927,7 @@ power_bloc_identity_change_mandates_tt = {
 }
 
 power_bloc_preserved_principles_switch = {
-	add = 4 #power_bloc_max_principles_rule_value
+	add = 4 # kmpmp: upstream = power_bloc_max_principles_rule_value
 	multiply = 3
 	divide = 2
 	add = power_bloc_max_mandates_rule_value
@@ -935,7 +936,7 @@ power_bloc_preserved_principles_switch = {
 }
 
 power_bloc_preserved_principles_switch_tt = {
-	add = 4 #power_bloc_max_principles_rule_value
+	add = 4 # kmpmp: upstream = power_bloc_max_principles_rule_value
 	multiply = 3
 	divide = 2
 	add = power_bloc_max_mandates_rule_value

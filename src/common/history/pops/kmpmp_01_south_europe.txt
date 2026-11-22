@@ -1,5 +1,5 @@
-﻿POPS = {
-    # kmpmp double the pops
+﻿# kmpmp: Create additional starting pops in the listed states.
+POPS = {
     s:STATE_ALENTEJO = {
 		region_state:POR = {
 			create_pop = {

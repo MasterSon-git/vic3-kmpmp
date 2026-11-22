@@ -24,6 +24,13 @@ policy. These safeguards apply to automated work:
   Do not run the branch-deletion utility as part of routine setup.
 - Follow CONTRIBUTING.md's validation policy and review the final diff. Report
   what each check established and any material gaps.
+- Follow CONTRIBUTING.md's source-comment convention: use `# kmpmp` for
+  verified custom deviations, preserve inherited comments, and distinguish
+  verified `vanilla =`, third-party `upstream =`, and effective `total =`
+  references. Never guess provenance or values or erase unverified context.
+  Before treating commented-out code as a maintained upstream reference, verify
+  its source and version. In a comment-only cleanup, preserve deliberately
+  disabled upstream blocks; reevaluate them against upstream on version updates.
 - Run the [effective-modifier validator](docs/DEVELOPMENT.md#effective-modifier-validation)
   for changes to modifier contributions, injected character trait weights,
   entry-mode conversions and vanilla updates.

@@ -88,7 +88,7 @@ STATE_AZERBAIJAN = {
     }
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 150 #100
+        undiscovered_amount = 150 # kmpmp: vanilla = 100
     }
 
     min_cold_effect = 0.00
@@ -115,9 +115,10 @@ STATE_GREATER_CAUCASUS = {
         building_logging_camp = 19
         building_fishing_wharf = 5
     }
+    # kmpmp
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 60 #kmpmp
+        undiscovered_amount = 60
     }
     naval_exit_id = 3094
 
@@ -351,7 +352,7 @@ STATE_HERAT = {
     arable_land = 50
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_silk_plantation" "building_opium_plantation" "building_tea_plantation" "building_vineyard" }
     capped_resources = {
-        building_iron_mine = 41 #6
+        building_iron_mine = 41 # kmpmp: vanilla = 6
         building_lead_mine = 8
 
         building_copper_mine = 5
@@ -412,6 +413,7 @@ STATE_KANDAHAR = {
     wood = "x3991B0"
     arable_land = 50
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_opium_plantation" "building_tea_plantation" "building_vineyard" }
+    # kmpmp: Exclude iron deposits from this state.
     capped_resources = {
         building_logging_camp = 2
         building_coal_mine = 4
@@ -435,7 +437,7 @@ STATE_KABUL = {
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_opium_plantation" "building_tea_plantation" "building_vineyard" }
     capped_resources = {
         building_coal_mine = 6
-        building_iron_mine = 1 #10
+        building_iron_mine = 1 # kmpmp: vanilla = 10
         building_logging_camp = 4
 
         building_copper_mine = 5
@@ -458,7 +460,7 @@ STATE_BALUCHISTAN = {
     arable_land = 63
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_dye_plantation" "building_opium_plantation" "building_tea_plantation" }
     capped_resources = {
-        building_iron_mine = 10 #20
+        building_iron_mine = 10 # kmpmp: vanilla = 20
         building_lead_mine = 10
         building_logging_camp = 1
         building_fishing_wharf = 5

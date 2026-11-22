@@ -32,16 +32,15 @@ INJECT:law_national_militia = {
 	institution_modifier = {
 		state_conscription_rate_add = 0.005
 		unit_army_offense_mult = 0.01
-		unit_army_defense_mult = 0.04
+		unit_army_defense_mult = 0.04 # kmpmp
 		building_mobilization_cost_mult = -0.02
 	}
 	
 	modifier = {
 		unit_morale_loss_mult = 0.05
 		state_building_barrack_max_level_add = 30
-		# kmpmp
-		country_military_goods_cost_mult = -0.1
-		unit_experience_gain_mult = 0.05
+		country_military_goods_cost_mult = -0.1 # kmpmp
+		unit_experience_gain_mult = 0.05 # kmpmp
 		# qwf
 		country_institution_qwf_conscription_max_investment_add = 3
 	}
@@ -51,7 +50,7 @@ INJECT:law_mass_conscription = {
 	# qwf
 	institution = institution_qwf_conscription
 	institution_modifier = {
-		state_conscription_rate_add = 0.01
+		state_conscription_rate_add = 0.01 # kmpmp
 		unit_army_offense_mult = 0.02
 		unit_army_defense_mult = 0.02
 		building_mobilization_cost_mult = -0.01
@@ -61,8 +60,7 @@ INJECT:law_mass_conscription = {
 		state_conscription_rate_add = 0.01
 		building_training_rate_mult = -0.15
 		state_building_barrack_max_level_add = 25
-		# kmpmp
-		unit_experience_gain_mult = -0.1
+		unit_experience_gain_mult = -0.1 # kmpmp
 		# qwf
 		country_institution_qwf_conscription_max_investment_add = 3
 	}

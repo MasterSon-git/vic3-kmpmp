@@ -22,7 +22,7 @@
 
 	activate_law = scope:revolutionaries_law
 
-	# kmpmp - add legitimacy debuff
+    # kmpmp: Apply the legitimacy penalty.
     if = { # resign from office
         limit = {
             exists = scope:resigning_politician
@@ -33,6 +33,7 @@
             years = 10
         }
     }
+    # kmpmp
     else_if = { # abdication
         limit = {
             exists = scope:abdicating_monarch
@@ -68,7 +69,7 @@
 	if = {
 		limit = {
 			NOT = {
-				country_has_monarchy_law = yes
+				country_has_monarchy_law = yes # kmpmp
 			}
 		}
 		hidden_effect = {

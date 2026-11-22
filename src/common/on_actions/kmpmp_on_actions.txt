@@ -1,7 +1,7 @@
 ﻿# Root = Country
 on_country_formed = {
     on_actions = {
-        kmpmp_new_formables
+        kmpmp_new_formables # kmpmp
     }
 }
 
@@ -86,6 +86,7 @@ kmpmp_new_formables = {
 
 # Root = Country
 on_monthly_pulse_country = {
+    # kmpmp
     on_actions = {
         kmpmp_update_nation_buffs_action
         kmpmp_update_united_country_buff_action
@@ -122,7 +123,7 @@ kmpmp_update_global_lists_action = {
 # scope:target = Target country
 on_war_end = {
     on_actions = {
-        kmpmp_remove_war_modifiers
+        kmpmp_remove_war_modifiers # kmpmp
     }
 }
 

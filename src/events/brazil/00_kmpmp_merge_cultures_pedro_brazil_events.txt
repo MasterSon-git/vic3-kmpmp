@@ -1,7 +1,7 @@
-﻿# kmpmp - merge cultures fixes
-namespace = pedro
+﻿namespace = pedro
 
 # The Monarchy survives, ending event
+# kmpmp: Use the merged cultures in the affected event scopes.
 pedro.7 = {
 	type = country_event
 	placement = ROOT

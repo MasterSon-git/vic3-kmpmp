@@ -1,5 +1,5 @@
 ﻿INJECT:law_women_in_the_workplace = {
 	modifier = {
-		state_birth_rate_mult = 0.01
+		state_birth_rate_mult = 0.01 # kmpmp
 	}
 }

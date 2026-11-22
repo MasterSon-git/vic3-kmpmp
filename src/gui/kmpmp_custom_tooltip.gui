@@ -1,5 +1,6 @@
 types TooltipTypes
 {
+    # kmpmp
     type FancyTooltip_ListOf_StateRegion = FancyTooltipWidgetType {
 		blockoverride "text" {
 			#text = "DATA_STATE_REGION_NAME_TOOLTIP"

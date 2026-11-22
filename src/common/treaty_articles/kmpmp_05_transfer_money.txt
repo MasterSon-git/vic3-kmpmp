@@ -1,6 +1,6 @@
 ﻿REPLACE:money_transfer = {
 	kind = directed
-	cost = 100 #25
+	cost = 100 # kmpmp: vanilla = 25
 
 	icon = "gfx/interface/icons/diplomatic_treaties_articles_icons/bankroll_treaties.dds"
 
@@ -432,7 +432,7 @@
 		infamy = {
 			value = 0
 
-			# kmpmp - change infamy scale to quantity by target income
+			# kmpmp: Change infamy scale to quantity by target income
 			if = {
 				limit = {
 					exists = scope:quantity
@@ -441,7 +441,6 @@
 					desc = "INFAMY_QUANTITY_FACTOR"
 					value = scope:quantity
 					# divide = 1000
-					# kmpmp
 					divide = {
 						value = scope:target_country.fixed_income
 						divide = 4
@@ -486,6 +485,7 @@
 								target_country = root
 							}
 						}
+						# kmpmp
 						every_scope_article = {
 							limit = {
 								has_type = money_transfer
@@ -495,7 +495,6 @@
 							desc = "INFAMY_MONEY_TRANSFER_QUANTITY_ROOT_HAS_ALREADY_ESTABLISHED_FACTOR"
 							add = input_quantity
 							# divide = 2000
-							# kmpmp
 							divide = {
 								value = target_country.fixed_income
 								divide = 4

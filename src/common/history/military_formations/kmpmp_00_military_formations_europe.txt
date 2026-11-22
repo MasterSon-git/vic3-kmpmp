@@ -1,5 +1,6 @@
-﻿MILITARY_FORMATIONS = {
-	c:PRU ?= { # total 10 ships
+﻿# kmpmp: Add frigates to each country’s largest starting fleet.
+MILITARY_FORMATIONS = {
+	c:PRU ?= { # 10 ships across the starting fleets (1 in Vanilla 1.15.2 + 9 frigates).
 		ordered_military_formation = {
 			order_by = num_ships
 			max = 1
@@ -13,7 +14,7 @@
 			}
 		}
 	}
-	c:AUS ?= { # total 10 ships
+	c:AUS ?= { # 10 ships across the starting fleets (5 in Vanilla 1.15.2 + 5 frigates).
 		ordered_military_formation = {
 			order_by = num_ships
 			max = 1
@@ -27,7 +28,7 @@
 			}
 		}
 	}
-	c:SWE ?= { # total 20 ships
+	c:SWE ?= { # 23 ships across the starting fleets (18 in Vanilla 1.15.2 + 5 frigates). Earlier note: 20.
 		ordered_military_formation = {
 			order_by = num_ships
 			max = 1
@@ -41,7 +42,7 @@
 			}
 		}
 	}
-	c:SIC ?= { # total 10 ships
+	c:SIC ?= { # 13 ships across the starting fleets (11 in Vanilla 1.15.2 + 2 frigates). Earlier note: 10.
 		ordered_military_formation = {
 			order_by = num_ships
 			max = 1
@@ -55,7 +56,7 @@
 			}
 		}
 	}
-	c:SAR ?= { # total 10 ships
+	c:SAR ?= { # 10 ships across the starting fleets (5 in Vanilla 1.15.2 + 5 frigates).
 		ordered_military_formation = {
 			order_by = num_ships
 			max = 1
@@ -69,7 +70,7 @@
 			}
 		}
 	}
-	c:POR ?= { # total 10 ships
+	c:POR ?= { # 13 ships across the starting fleets (9 in Vanilla 1.15.2 + 4 frigates). Earlier note: 10.
 		ordered_military_formation = {
 			order_by = num_ships
 			max = 1
@@ -83,7 +84,7 @@
 			}
 		}
 	}
-	c:SPA ?= { # total 20 ships
+	c:SPA ?= { # 23 ships across the starting fleets (9 in Vanilla 1.15.2 + 14 frigates). Earlier note: 20.
 		ordered_military_formation = {
 			order_by = num_ships
 			max = 1
@@ -97,7 +98,7 @@
 			}
 		}
 	}
-	c:USA ?= { # total 21 ships
+	c:USA ?= { # 27 ships across the starting fleets (21 in Vanilla 1.15.2 + 6 frigates). Earlier note: 21.
 		ordered_military_formation = {
 			order_by = num_ships
 			max = 1

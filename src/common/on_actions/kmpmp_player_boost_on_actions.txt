@@ -1,5 +1,6 @@
 ﻿# Root = Country
 on_monthly_pulse_country = {
+    # kmpmp
     on_actions = {
         kmpmp_player_boost_remove_invalid
         kmpmp_player_boost_effect_state_unincorporated_education_access

@@ -1,13 +1,12 @@
 ﻿INJECT:law_local_police = {
 	institution_modifier = {
-		state_turmoil_effects_mult = -0.15
+		state_turmoil_effects_mult = -0.15 # kmpmp
 	}
 }
 
 INJECT:law_dedicated_police = {
 	institution_modifier = {
-		# kmpmp
-		state_turmoil_effects_mult = -0.08
+		state_turmoil_effects_mult = -0.08 # kmpmp
 	}
 }
 
@@ -19,7 +18,7 @@ REPLACE:law_militarized_police = {
 	progressiveness = -100
 
 	unlocking_technologies = {
-		identification_documents #mass_surveillance
+		identification_documents # kmpmp: vanilla = mass_surveillance
 	}
 
 	modifier = {
@@ -33,9 +32,8 @@ REPLACE:law_militarized_police = {
 		state_radicalism_increases_cultural_erasure_mult = -0.05
 		state_radicalism_increases_open_prejudice_mult = -0.05
 		interest_group_ig_armed_forces_pol_str_mult = 0.10
-		state_mortality_turmoil_mult = 0.005 #0.004
-		# kmpmp
-		state_turmoil_effects_mult = -0.1
+		state_mortality_turmoil_mult = 0.005 # kmpmp: vanilla = 0.004
+		state_turmoil_effects_mult = -0.1 # kmpmp
 	}
 
 	can_impose = {

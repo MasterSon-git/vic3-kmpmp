@@ -1,16 +1,17 @@
 ﻿INJECT:law_traditionalism = {
 	modifier = {
-		state_market_access_price_impact = 0.05
+		state_market_access_price_impact = 0.05 # kmpmp
 	}
 }
 
 INJECT:law_interventionism = {
 	modifier = {
-		country_government_dividends_efficiency_add = 0.05
+		country_government_dividends_efficiency_add = 0.05 # kmpmp
 	}
 }
 
 INJECT:law_agrarianism = {
+	# kmpmp
 	modifier = {
 		state_aristocrats_investment_pool_efficiency_mult = 0.3
 		state_clergymen_investment_pool_efficiency_mult = 0.3
@@ -19,6 +20,7 @@ INJECT:law_agrarianism = {
 }
 
 INJECT:law_industry_banned = {
+	# kmpmp
 	modifier = {
 		building_group_bg_agriculture_throughput_add = 0.1
 		building_group_bg_plantations_throughput_add = 0.1
@@ -30,14 +32,15 @@ INJECT:law_industry_banned = {
 }
 
 INJECT:law_laissez_faire = {
+	# kmpmp
 	modifier = {
 		country_loan_interest_rate_mult = 0.05
-		#kmpmp
 		building_throughput_add = 0.1
 	}
 }
 
 INJECT:law_cooperative_ownership = {
+	# kmpmp
 	modifier = {
 		# Boost manufacturing and mining throughput under Cooperative Ownership (#398, #545).
 		building_group_bg_manufacturing_throughput_add = 0.1
@@ -46,6 +49,7 @@ INJECT:law_cooperative_ownership = {
 }
 
 INJECT:law_command_economy = {
+	# kmpmp
 	modifier = {
 		# Raise tax capacity while reducing dividends efficiency, throughput and bureaucracy (#398, #545).
 		country_government_dividends_efficiency_add = -0.05

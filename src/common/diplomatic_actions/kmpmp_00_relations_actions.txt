@@ -21,7 +21,7 @@
 	}
 
 	pact = {
-		cost = 50 #150
+		cost = 50 # kmpmp: vanilla = 150
 		is_two_sided_pact = no
 		show_in_outliner = yes
 
@@ -244,7 +244,7 @@ REPLACE:damage_relations = {
 	}
 
 	pact = {
-		cost = 50 #100
+		cost = 50 # kmpmp: vanilla = 100
 		is_hostile = yes
 		is_two_sided_pact = no
 		infamy_affects_maintenance = no

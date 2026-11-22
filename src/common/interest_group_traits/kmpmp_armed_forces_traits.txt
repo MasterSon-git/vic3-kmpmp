@@ -1,5 +1,4 @@
-﻿# kmpmp TODO: check if we need to add them in interest_groups, like it's done for kmpmp_ig_trait_made_in_germany
-
+﻿# kmpmp: Japan’s national bonus event assigns Battotai with set_ig_trait.
 REPLACE_OR_CREATE:kmpmp_ig_trait_battotai = {
 	icon = "gfx/interface/icons/ig_trait_icons/patriotic_fervor.dds"
 	min_approval = loyal

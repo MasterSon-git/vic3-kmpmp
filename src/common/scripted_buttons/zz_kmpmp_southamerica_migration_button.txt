@@ -14,7 +14,8 @@
 		average_sol >= 10
 		any_country = {
 			# country_rank <= rank_value:major_power
-			country_rank >= rank_value:major_power
+			country_rank >= rank_value:major_power # kmpmp
+			# kmpmp
 			NOT = {
 				custom_tooltip = {
 					text = was_target_of_mass_migration_tt
@@ -29,6 +30,7 @@
 				text = same_state_religion
 				religion = root.religion
 			}
+			# kmpmp
 			custom_tooltip = {
 				# text = average_sol_below_root_tt
 				text = kmpmp_average_sol_one_below_root_tt

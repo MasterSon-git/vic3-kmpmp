@@ -34,11 +34,12 @@ sick_man.1 = {
 			type = je_sick_man_main
 		}
 
-		#kmpmp
+		# kmpmp
 		add_modifier = {
 			name = kmpmp_sick_man_of_europe_buff_1
 			years = 20
 		}
+		# kmpmp
 		add_modifier = {
 			name = kmpmp_sick_man_of_europe_buff_2
 			years = 20
@@ -80,7 +81,7 @@ sick_man.1 = {
 }
 
 # Success event
-# kmpmp replaced with sick_man.4
+# kmpmp: Use sick_man.4 in place of sick_man.2 for the Tanzimat success outcome.
 sick_man.2 = {
 	type = country_event
 	placement = root
@@ -215,12 +216,14 @@ sick_man.3 = {
 			save_scope_as = ottoman_sultan
 			set_temporary_event_immortality = { DURATION = 3 }
 		}
+		# kmpmp
 		if = {
 			limit = {
 				has_modifier = kmpmp_sick_man_of_europe_buff_1
 			}
 			remove_modifier = kmpmp_sick_man_of_europe_buff_1
 		}
+		# kmpmp
 		if = {
 			limit = {
 				has_modifier = kmpmp_sick_man_of_europe_buff_2
@@ -231,7 +234,8 @@ sick_man.3 = {
 
 	option = {
 		name = sick_man.3.a
-		default_option = yes
+		default_option = yes # kmpmp
+		# kmpmp
 		trigger = {
 			var:sick_man_var <= 1
 		}
@@ -336,6 +340,7 @@ sick_man.3 = {
 			}
 		}
 	}
+	# kmpmp
 	option = {
 		name = sick_man.4.c
 		trigger = {
@@ -357,7 +362,7 @@ sick_man.3 = {
 	}
 }
 
-# kmpmp new success event sick_man.2 no longer used
+# kmpmp: Use sick_man.4 in place of sick_man.2 for the Tanzimat success outcome.
 sick_man.4 = {
 	type = country_event
 	placement = root

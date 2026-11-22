@@ -8,10 +8,10 @@
     farm = "xF48646"
     mine = "x6F40EC"
     wood = "x4C9918"
-    arable_land = 45 #30
+    arable_land = 45 # kmpmp: vanilla = 30
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_coal_mine = 15 #kmpmp
+        building_coal_mine = 15 # kmpmp
         building_iron_mine = 60
         building_lead_mine = 18
         building_logging_camp = 45
@@ -35,10 +35,10 @@ STATE_GOTALAND = {
     farm = "x0212F4"
     mine = "xA67CC8"
     wood = "xEA7E80"
-    arable_land = 50 #35
+    arable_land = 50 # kmpmp: vanilla = 35
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_iron_mine = 25 #15
+        building_iron_mine = 25 # kmpmp: vanilla = 15
         building_logging_camp = 25
         building_fishing_wharf = 15
     }
@@ -58,11 +58,11 @@ STATE_SCANIA = {
     farm = "xD4DC3C"
     mine = "xFBA406"
     wood = "xD19738"
-    arable_land = 30 #20
+    arable_land = 30 # kmpmp: vanilla = 20
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
         building_coal_mine = 8
-        building_iron_mine = 5 #kmpmp
+        building_iron_mine = 5 # kmpmp
         building_logging_camp = 10
         building_fishing_wharf = 10
     }
@@ -176,16 +176,17 @@ STATE_WESTERN_NORWAY = {
     farm = "x0E3D86"
     mine = "x608020"
     wood = "x608020"
-    arable_land = 40 #20
+    arable_land = 40 # kmpmp: vanilla = 20
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_sulfur_mine = 30 #20
+        building_sulfur_mine = 30 # kmpmp: vanilla = 20
         building_logging_camp = 22
         building_fishing_wharf = 15
     }
+    # kmpmp
     resource = {
         type = "building_oil_rig"
-        undiscovered_amount = 25 #kmpmp
+        undiscovered_amount = 25
     }
     naval_exit_id = 3027
 
@@ -204,13 +205,14 @@ STATE_NORTHERN_NORWAY = {
     farm = "x38427D"
     mine = "xB50EB0"
     wood = "x042C26"
-    arable_land = 30 #20
+    arable_land = 30 # kmpmp: vanilla = 20
     arable_resources = { "building_livestock_ranch" }
+    # kmpmp
     capped_resources = {
-        building_iron_mine = 25 #18
-        building_sulfur_mine = 30 #20
+        building_iron_mine = 25 # kmpmp: vanilla = 18
+        building_sulfur_mine = 30 # kmpmp: vanilla = 20
         building_logging_camp = 24
-        building_whaling_station = 15 #10
+        building_whaling_station = 15 # kmpmp: vanilla = 10
         building_fishing_wharf = 10
 
         building_copper_mine = 9
@@ -235,10 +237,10 @@ STATE_EASTERN_NORWAY = {
     farm = "x95A154"
     mine = "x49B529"
     wood = "x1255CC"
-    arable_land = 40 #20
+    arable_land = 40 # kmpmp: vanilla = 20
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_iron_mine = 30 #18
+        building_iron_mine = 30 # kmpmp: vanilla = 18
         building_logging_camp = 22
         building_fishing_wharf = 5
     }
@@ -673,7 +675,7 @@ STATE_NORMANDY = {
     arable_land = 120
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_vineyard" }
     capped_resources = {
-        building_coal_mine = 20 #kmpmp
+        building_coal_mine = 20 # kmpmp
         building_iron_mine = 30
         building_logging_camp = 8
         building_whaling_station = 5
@@ -849,7 +851,7 @@ STATE_AUVERGNE_LIMOUSIN = {
     capped_resources = {
         building_coal_mine = 56
         building_iron_mine = 15
-        building_sulfur_mine = 25 #kmpmp
+        building_sulfur_mine = 25 # kmpmp
         building_logging_camp = 8
     }
 
@@ -895,7 +897,7 @@ STATE_BURGUNDY = {
     arable_land = 80
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_vineyard" }
     capped_resources = {
-        building_coal_mine = 20 #kmpmp
+        building_coal_mine = 20 # kmpmp
         building_iron_mine = 33
         building_logging_camp = 9
     }
@@ -954,7 +956,7 @@ STATE_LORRAINE = {
     arable_land = 55
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_vineyard" }
     capped_resources = {
-        building_coal_mine = 20 #kmpmp
+        building_coal_mine = 20 # kmpmp
         building_lead_mine = 45
         building_sulfur_mine = 40
         building_iron_mine = 60
@@ -1067,7 +1069,7 @@ STATE_GELRE = {
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
         building_coal_mine = 40
-        building_iron_mine = 20 #kmpmp
+        building_iron_mine = 20 # kmpmp
         building_logging_camp = 9
     }
 
@@ -1197,7 +1199,7 @@ STATE_STYRIA = {
         building_coal_mine = 40
         building_iron_mine = 24
         building_lead_mine = 24
-        building_sulfur_mine = 15 #kmpmp
+        building_sulfur_mine = 15 # kmpmp
         building_logging_camp = 8
     }
 
@@ -1255,11 +1257,11 @@ STATE_POMERANIA = {
     farm = "xA0C020"
     mine = "x19AE19"
     wood = "xA0C020"
-    arable_land = 75 #55
+    arable_land = 75 # kmpmp: vanilla = 55
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
         building_logging_camp = 11
-        building_fishing_wharf = 12 #10
+        building_fishing_wharf = 12 # kmpmp: vanilla = 10
     }
     naval_exit_id = 3074
 
@@ -1282,11 +1284,12 @@ STATE_ELBE = {
     farm = "xC08061"
     mine = "x587297"
     wood = "xA5E2E8"
-    arable_land = 65 #30
+    arable_land = 65 # kmpmp: vanilla = 30
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
+    # kmpmp
     capped_resources = {
-        building_logging_camp = 15 #9
-        building_fishing_wharf = 10 #5
+        building_logging_camp = 15 # kmpmp: vanilla = 9
+        building_fishing_wharf = 10 # kmpmp: vanilla = 5
     }
     resource = {
         type = "building_oil_rig"
@@ -1374,10 +1377,10 @@ STATE_ANHALT = {
     farm = "x8A448C"
     mine = "xCF5D8E"
     wood = "xA51232"
-    arable_land = 100 #75
+    arable_land = 100 # kmpmp: vanilla = 75
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_coal_mine = 57 #44
+        building_coal_mine = 57 # kmpmp: vanilla = 44
         building_logging_camp = 20
 
         building_copper_mine = 6
@@ -1396,13 +1399,13 @@ STATE_RHINELAND = {
     farm = "x707505"
     mine = "x11C021"
     wood = "xD080A0"
-    arable_land = 70 #55
+    arable_land = 70 # kmpmp: vanilla = 55
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_vineyard" }
     capped_resources = {
         building_coal_mine = 60
-        building_iron_mine = 20 #kmpmp
+        building_iron_mine = 20 # kmpmp
         building_lead_mine = 30
-        building_logging_camp = 14 #11
+        building_logging_camp = 14 # kmpmp: vanilla = 11
     }
 
     min_cold_effect = 0.00
@@ -1418,12 +1421,13 @@ STATE_NORTH_RHINE = {
     farm = "x518021"
     mine = "x834B66"
     wood = "x486F6A"
-    arable_land = 90 #77
+    arable_land = 90 # kmpmp: vanilla = 77
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_vineyard" }
+    # kmpmp
     capped_resources = {
-        building_coal_mine = 35 #25
-        building_iron_mine = 30 #20
-        building_logging_camp = 15 #7
+        building_coal_mine = 35 # kmpmp: vanilla = 25
+        building_iron_mine = 30 # kmpmp: vanilla = 20
+        building_logging_camp = 15 # kmpmp: vanilla = 7
     }
 }
 
@@ -1436,11 +1440,11 @@ STATE_BRANDENBURG = {
     farm = "x83B1A8"
     mine = "xDF4020"
     wood = "x514C51"
-    arable_land = 85 #50
+    arable_land = 85 # kmpmp: vanilla = 50
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
-        building_coal_mine = 60 #44
-        building_logging_camp = 14 #6
+        building_coal_mine = 60 # kmpmp: vanilla = 44
+        building_logging_camp = 14 # kmpmp: vanilla = 6
 
         building_copper_mine = 6
     }
@@ -1458,11 +1462,12 @@ STATE_SCHLESWIG_HOLSTEIN = {
     farm = "x00C060"
     mine = "x00C060"
     wood = "x804160"
-    arable_land = 55 #40
+    arable_land = 55 # kmpmp: vanilla = 40
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
+    # kmpmp: vanilla = 6 for each listed modifier.
     capped_resources = {
-        building_logging_camp = 10 #6
-        building_fishing_wharf = 10 #6
+        building_logging_camp = 10
+        building_fishing_wharf = 10
     }
     naval_exit_id = 3074
 
@@ -1503,12 +1508,12 @@ STATE_BADEN = {
     farm = "xB08061"
     mine = "xAEBA2A"
     wood = "x318061"
-    arable_land = 70 #50
+    arable_land = 70 # kmpmp: vanilla = 50
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_vineyard" }
     capped_resources = {
         building_coal_mine = 20
-        building_iron_mine = 25 #15
-        building_logging_camp = 17 #11
+        building_iron_mine = 25 # kmpmp: vanilla = 15
+        building_logging_camp = 17 # kmpmp: vanilla = 11
     }
 
     min_cold_effect = 0.00
@@ -1524,12 +1529,12 @@ STATE_HANNOVER = {
     farm = "x4D62A0"
     mine = "x165E05"
     wood = "xBBA504"
-    arable_land = 90 #60
+    arable_land = 90 # kmpmp: vanilla = 60
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
         building_iron_mine = 24
-        building_logging_camp = 15 #9
-        building_fishing_wharf = 10 #4
+        building_logging_camp = 15 # kmpmp: vanilla = 9
+        building_fishing_wharf = 10 # kmpmp: vanilla = 4
     }
     resource = {
         type = "building_oil_rig"
@@ -1550,7 +1555,7 @@ STATE_BRUNSWICK = {
     farm = "x4C16EA"
     mine = "xA61E6E"
     wood = "xA61E6E"
-    arable_land = 70 #30
+    arable_land = 70 # kmpmp: vanilla = 30
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
         building_coal_mine = 40
@@ -1573,7 +1578,7 @@ STATE_BAVARIA = {
     farm = "xFE59E7"
     mine = "xE75868"
     wood = "xC347B1"
-    arable_land = 95 #65
+    arable_land = 95 # kmpmp: vanilla = 65
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_vineyard" }
     capped_resources = {
         building_coal_mine = 60
@@ -1594,7 +1599,7 @@ STATE_FRANCONIA = {
     farm = "x648AD1"
     mine = "xF91154"
     wood = "x51C0A0"
-    arable_land = 110 #80
+    arable_land = 110 # kmpmp: vanilla = 80
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_vineyard" }
     capped_resources = {
         building_iron_mine = 30
@@ -1615,13 +1620,13 @@ STATE_SAXONY = {
     farm = "xD0C021"
     mine = "x917939"
     wood = "x31E0C0"
-    arable_land = 140 #100
+    arable_land = 140 # kmpmp: vanilla = 100
     arable_resources = { "building_rye_farm" "building_livestock_ranch" "building_vineyard" }
     capped_resources = {
         building_coal_mine = 80
-        building_iron_mine = 40 #30
+        building_iron_mine = 40 # kmpmp: vanilla = 30
         building_sulfur_mine = 80
-        building_logging_camp = 16 #6
+        building_logging_camp = 16 # kmpmp: vanilla = 6
 
         building_copper_mine = 6
     }
@@ -1639,13 +1644,13 @@ STATE_HESSE = {
     farm = "x1141A0"
     mine = "x8B7C67"
     wood = "xD04121"
-    arable_land = 95 #80
+    arable_land = 95 # kmpmp: vanilla = 80
     arable_resources = { "building_rye_farm" "building_livestock_ranch" "building_vineyard" }
     capped_resources = {
         building_coal_mine = 60
-        building_iron_mine = 40 #30
+        building_iron_mine = 40 # kmpmp: vanilla = 30
         building_sulfur_mine = 40
-        building_logging_camp = 13 #8
+        building_logging_camp = 13 # kmpmp: vanilla = 8
 
         building_copper_mine = 5
     }
@@ -1685,12 +1690,12 @@ STATE_RUHR = {
     farm = "x5101A0"
     mine = "xD08021"
     wood = "x0180E0"
-    arable_land = 50 #39
+    arable_land = 50 # kmpmp: vanilla = 39
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" }
     capped_resources = {
         building_coal_mine = 55
-        building_iron_mine = 35 #10
-        building_logging_camp = 15 #4
+        building_iron_mine = 35 # kmpmp: vanilla = 10
+        building_logging_camp = 15 # kmpmp: vanilla = 4
     }
 
     min_cold_effect = 0.00

@@ -1,5 +1,6 @@
 ﻿REPLACE:gfx_military_mobilization_is_mechanized = {
 
+    # kmpmp
     OR = {
         country_army_unit_type_fraction = {
             target = unit_type:combat_unit_type_mechanized_infantry
@@ -15,6 +16,7 @@
 
 REPLACE:gfx_military_unit_is_mechanized = {
 
+    # kmpmp
     OR = {
         scope:military_formation = {
             any_combat_unit = {

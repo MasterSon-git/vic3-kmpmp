@@ -1,16 +1,15 @@
 ﻿INJECT:law_autocracy = {
 	modifier = {
-		# kmpmp
-		state_migration_pull_mult = -0.1
+		state_migration_pull_mult = -0.1 # kmpmp
 	}
 }
 
 INJECT:law_technocracy = {
+	# kmpmp
 	modifier = {
 		country_max_companies_add = -1
 		country_free_charters_add = -1
 
-		# kmpmp
 		country_consumption_tax_cost_mult = -0.2
 		state_education_access_add = 0.05
 		state_migration_pull_mult = 0.05
@@ -19,52 +18,48 @@ INJECT:law_technocracy = {
 }
 
 INJECT:law_oligarchy = {
+	# kmpmp
 	modifier = {
 		country_authority_add = 50
 
-		# kmpmp
 		state_migration_pull_mult = -0.05
 	}
 }
 
 INJECT:law_landed_voting = {
 	modifier = {
-		# kmpmp
-		state_aristocrats_investment_pool_efficiency_mult = 0.15
+		state_aristocrats_investment_pool_efficiency_mult = 0.15 # kmpmp
 	}
 }
 
 INJECT:law_wealth_voting = {
 	modifier = {
-		# kmpmp
-		state_migration_pull_mult = 0.05
+		state_migration_pull_mult = 0.05 # kmpmp
 	}
 }
 
 INJECT:law_census_voting = {
 	modifier = {
-		# kmpmp
-		state_migration_pull_mult = 0.1
+		state_migration_pull_mult = 0.1 # kmpmp
 	}
 }
 
 INJECT:law_universal_suffrage = {
 	modifier = {
-		# kmpmp
-		state_migration_pull_mult = 0.15
+		state_migration_pull_mult = 0.15 # kmpmp
 	}
 }
 
 INJECT:law_anarchy = {
 	modifier = {
-		country_authority_mult = 0.25
+		country_authority_mult = 0.25 # kmpmp
 	}
 }
 
 INJECT:law_single_party_state = {
+	# kmpmp
 	modifier = {
 		country_authority_add = -50
-		# kmpmp
 		state_migration_pull_mult = -0.1
 	}
 }

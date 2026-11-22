@@ -1,4 +1,5 @@
-﻿BUILDINGS = {
+﻿# kmpmp: Set up the additional starting buildings and ownership levels for these states.
+BUILDINGS = {
     s:STATE_WEST_PRUSSIA = {
 		region_state:PRU = {
 			create_building = {
@@ -6,7 +7,7 @@
 				add_ownership = {
 					country = {
 						country = "c:PRU"
-						levels = 3 #1
+						levels = 3 # Vanilla starting ownership: 1 level.
 					}
 				}
 				reserves = 1
@@ -62,7 +63,7 @@
                 add_ownership = {
                     country = {
                         country = "c:AUS"
-                        levels = 15 #10
+                        levels = 15 # Vanilla starts with 9 levels (10 in 1.9.5).
                     }
                 }
                 reserves = 1
@@ -108,7 +109,7 @@
                 add_ownership = {
                     country = {
                         country = "c:GBR"
-                        levels = 7 #5
+                        levels = 7 # Vanilla starting ownership: 5 levels.
                     }
                 }
                 reserves = 1
@@ -123,7 +124,7 @@
                 add_ownership = {
                     country = {
                         country = "c:SAR"
-                        levels = 6 #5
+                        levels = 6 # Vanilla starting ownership: 5 levels.
                     }
                 }
                 reserves = 1
@@ -138,7 +139,7 @@
                 add_ownership = {
                     country = {
                         country = "c:SIC"
-                        levels = 8 #6
+                        levels = 8 # Vanilla starts with 4 government-owned levels. Vanilla 1.5.13 started with a level-6 building.
                     }
                 }
                 reserves = 1
@@ -153,7 +154,7 @@
                 add_ownership = {
                     country = {
                         country = "c:TUR"
-                        levels = 6 #3
+                        levels = 6 # Vanilla starting ownership: 3 levels.
                     }
                 }
                 reserves = 1
@@ -255,7 +256,7 @@
                 add_ownership = {
                     country = {
                         country = "c:MEX"
-                        levels = 6 #4
+                        levels = 6 # Vanilla starts with 2 levels (4 in 1.9.5).
                     }
                 }
                 reserves = 1
@@ -270,7 +271,7 @@
                 add_ownership = {
                     country = {
                         country = "c:BOL"
-                        levels = 4 #2
+                        levels = 4 # Vanilla starting ownership: 2 levels.
                     }
                 }
                 reserves = 1
@@ -285,7 +286,7 @@
                 add_ownership = {
                     country = {
                         country = "c:EGY"
-                        levels = 10 #7
+                        levels = 10 # Vanilla starting ownership: 7 levels.
                     }
                 }
                 reserves = 1
@@ -296,7 +297,7 @@
                 add_ownership = {
                     country = {
                         country = "c:EGY"
-                        levels = 5 #3
+                        levels = 5 # Vanilla starting ownership: 3 levels.
                     }
                 }
                 reserves = 1
@@ -306,7 +307,7 @@
                 add_ownership = {
                     country = {
                         country = "c:EGY"
-                        levels = 4 #3
+                        levels = 4 # Vanilla starts with 3 levels owned by the textile mill.
                     }
                 }
                 reserves = 1
@@ -316,7 +317,7 @@
                 add_ownership = {
                     country = {
                         country = "c:EGY"
-                        levels = 11 #8
+                        levels = 11 # Vanilla starts with 8 levels owned by the manor house.
                     }
                 }
                 reserves = 1
@@ -380,7 +381,7 @@
                 add_ownership = {
                     country = {
                         country = "c:PER"
-                        levels = 6 #3
+                        levels = 6 # Vanilla starts with 6 levels (3 in 1.9.5).
                     }
                 }
                 reserves = 1
@@ -392,7 +393,7 @@
                     building = {
                         type = "building_financial_district"
                         country = "c:PER"
-                        levels = 3 #1
+                        levels = 3 # Vanilla starting ownership: 1 level.
                         region = "STATE_TABRIZ"
                     }
                 }
@@ -454,7 +455,7 @@
                 add_ownership = {
                     country = {
                         country = "c:SIA"
-                        levels = 5 #2
+                        levels = 5 # Vanilla starting ownership: 2 levels.
                     }
                 }
                 reserves = 1
@@ -517,7 +518,7 @@
                 add_ownership = {
                     country = {
                         country = "c:JAP"
-                        levels = 5 #3
+                        levels = 5 # Vanilla starts with 1 level (3 in 1.12.2).
                     }
                 }
                 reserves = 1
@@ -608,7 +609,7 @@
                 add_ownership = {
                     country = {
                         country = "c:JAP"
-                        levels = 3 #1
+                        levels = 3 # Vanilla starting ownership: 1 level.
                     }
                 }
                 subsidized = yes
@@ -620,7 +621,7 @@
                 add_ownership = {
                     country = {
                         country = "c:JAP"
-                        levels = 4 #3
+                        levels = 4 # Vanilla starts with 6 levels (3 in 1.12.2).
                     }
                 }
                 reserves = 1
@@ -661,7 +662,7 @@
                 add_ownership = {
                     country = {
                         country = "c:JAP"
-                        levels = 6 #3
+                        levels = 6 # Vanilla starting ownership: 3 levels.
                     }
                 }
                 reserves = 1
@@ -760,7 +761,7 @@
                 add_ownership = {
                     country = {
                         country = "c:SPA"
-                        levels = 7 #5
+                        levels = 7 # Vanilla starts with 2 levels (5 in 1.11.1).
                     }
                 }
                 reserves = 1
@@ -790,7 +791,7 @@
                 add_ownership = {
                     country = {
                         country = "c:NET"
-                        levels = 4 #3
+                        levels = 4 # Vanilla starting ownership: 3 levels.
                     }
                 }
                 reserves = 1
@@ -816,7 +817,7 @@
                 add_ownership = {
                     country = {
                         country = "c:MEX"
-                        levels = 3 #1
+                        levels = 3 # Vanilla starting ownership: 1 level.
                     }
                 }
                 reserves = 1
@@ -827,7 +828,7 @@
                 add_ownership = {
                     country = {
                         country = "c:MEX"
-                        levels = 3 #1
+                        levels = 3 # Vanilla starts with 1 level owned by the financial district.
                     }
                 }
                 reserves = 1
@@ -842,7 +843,7 @@
                 add_ownership = {
                     country = {
                         country = "c:MEX"
-                        levels = 4 #3
+                        levels = 4 # Vanilla starting ownership: 3 levels.
                     }
                 }
                 reserves = 1
@@ -883,7 +884,7 @@
 			    add_ownership={
 				    country={
 						country="c:SPC"
-						levels= 4 #3
+						levels= 4 # Vanilla starting ownership: 3 levels.
 					}
 				}
 				reserves=1

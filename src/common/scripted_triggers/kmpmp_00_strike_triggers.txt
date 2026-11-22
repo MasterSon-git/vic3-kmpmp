@@ -46,7 +46,7 @@
 			has_variable = strike_breaker
 		}
 		any_scope_state = {
-			is_incorporated = yes #kmpmp
+			is_incorporated = yes # kmpmp
 			custom_tooltip = {
 				text = je_is_not_on_strike_tt
 				state_has_strike_modifier_trigger = no

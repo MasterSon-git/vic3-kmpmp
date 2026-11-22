@@ -1,8 +1,8 @@
 ﻿### ERA 5
 
 INJECT:flash_freezing = {
+	# kmpmp
 	modifier = {
-		# kmpmp
 		building_fishing_wharf_throughput_add = 0.05
 		building_group_bg_whaling_throughput_add = 0.05
 	}

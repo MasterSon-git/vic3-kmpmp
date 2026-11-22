@@ -1,5 +1,6 @@
 ﻿INJECT:FAE_pm_parapets = {
     building_modifiers = {
+        # kmpmp
         workforce_scaled = {
             goods_input_artillery_add = 0.1
             goods_input_tools_add     = 0.1
@@ -11,6 +12,7 @@
 
 INJECT:FAE_pm_casemates = {
     building_modifiers = {
+        # kmpmp
         workforce_scaled = {
             goods_input_artillery_add  = 0.1
             goods_input_ammunition_add = 0.1
@@ -23,6 +25,7 @@ INJECT:FAE_pm_casemates = {
 
 INJECT:FAE_pm_turrets = {
     building_modifiers = {
+        # kmpmp
         workforce_scaled = {
             goods_input_artillery_add  = 0.2
             goods_input_ammunition_add = 0.2

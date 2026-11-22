@@ -8,8 +8,9 @@
 
 		is_draft = no
 		entered_into_force_on = 1815.10.26
+		# kmpmp: Leave about seven years of the Holy Alliance commitment at game start.
 		# binding_period = { years = 35 } # 14 years to cover the Revolutions of 1848
-		binding_period = { years = 28 } # 7 years - kmpmp
+		binding_period = { years = 28 }
 
 		articles_to_create = {
 			{ # Defensive Pact
@@ -25,8 +26,9 @@
 
 		is_draft = no
 		entered_into_force_on = 1815.10.26
+		# kmpmp: Leave about seven years of the Holy Alliance commitment at game start.
 		# binding_period = { years = 35 } # 14 years to cover the Revolutions of 1848
-		binding_period = { years = 28 } # 7 years - kmpmp
+		binding_period = { years = 28 }
 
 		articles_to_create = {
 			{ # Defensive Pact
@@ -42,8 +44,9 @@
 
 		is_draft = no
 		entered_into_force_on = 1815.10.26
+		# kmpmp: Leave about seven years of the Holy Alliance commitment at game start.
 		# binding_period = { years = 35 } # 14 years to cover the Revolutions of 1848
-		binding_period = { years = 28 } # 7 years - kmpmp
+		binding_period = { years = 28 }
 
 		articles_to_create = {
 			{ # Defensive Pact
@@ -67,8 +70,9 @@
 
 			is_draft = no
 			entered_into_force_on = 1834.4.22
+			# kmpmp: Allow the treaty to end at game start.
 			# binding_period = { years = 10 } # 8 years
-			binding_period = { years = 1 } # 0 years - kmpmp
+			binding_period = { years = 1 }
 
 			articles_to_create = {
 				{ # Anglo-Portuguese Alliance
@@ -114,8 +118,9 @@
 
 			is_draft = no
 			entered_into_force_on = 1834.4.22
+			# kmpmp: Allow the treaty to end at game start.
 			# binding_period = { years = 10 } # 8 years
-			binding_period = { years = 1 } # 0 years - kmpmp
+			binding_period = { years = 1 }
 
 			articles_to_create = {
 				{ # Anglo-Portuguese Alliance
@@ -143,7 +148,7 @@
 			}
 		}
 	}
-	# kmpmp remove
+	# kmpmp: Omit the Quadruple Alliance treaties at game start.
 	# # Quadruple Alliance - GBR/SPA
 	# create_treaty = {
 	# 	name = treaty_name_quadruple_alliance
@@ -219,7 +224,7 @@
 	# 	}
 	# }
 
-	# kmpmp remove
+	# kmpmp: Omit the French guarantee of Belgium at game start.
 	# # French Guarantee of Belgian Independence / Not official treaty
 	# create_treaty = {
 	# 	first_country = c:FRA
@@ -427,7 +432,7 @@
 		binding_period = { years = 35 } # 14 years to cover the Revolutions of 1848
 
 		articles_to_create = {
-			# kmpmp remove
+			# kmpmp: Omit the Austrian guarantee of Tuscany.
 			# { # Austrian Guarantee of Tuscan Independence
 			# 	article = guarantee_independence
 			# 	source_country = c:AUS
@@ -446,7 +451,7 @@
 		}
 	}
 
-	# kmpmp remove
+	# kmpmp: Omit the Austrian guarantee of Parma.
 	# # Austrian Guarantee of Parmese Independence / Not official treaty
 	# create_treaty = {
 	# 	first_country = c:AUS
@@ -566,7 +571,7 @@
 		}
 	}
 
-	# kmpmp remove
+	# kmpmp: Omit the Prussian military mission to the Ottoman Empire.
 	# create_treaty = {
 	# 	name = treaty_name_prussian_military_mission_to_turkey
 	# 	first_country = c:PRU
@@ -683,7 +688,7 @@
 		}
 	}
 
-	# kmpmp remove
+	# kmpmp: Omit the Hormuz treaty port at game start.
 	# # Hormuz Treaty Port
 	# create_treaty = {
 	# 	name = treaty_name_firman_of_1793
@@ -879,7 +884,7 @@
 		is_draft = no
 		entered_into_force_on = 1828.6.15
 		binding_period = {
-			years = 18 #35
+			years = 18 # kmpmp: vanilla = 35
 		}
 
 		articles_to_create = {
@@ -900,7 +905,7 @@
 		is_draft = no
 		entered_into_force_on = 1829.9.14
 		binding_period = {
-			years = 17 #30
+			years = 17 # kmpmp: vanilla = 30
 		} # The Organic Regulation ended in 1856
 
 		articles_to_create = {
@@ -939,7 +944,7 @@
 		is_draft = no
 		entered_into_force_on = 1829.9.14
 		binding_period = {
-			years = 17 #30
+			years = 17 # kmpmp: vanilla = 30
 		} # The Organic Regulation ended in 1856
 
 		articles_to_create = {

@@ -4,6 +4,7 @@
 	tooltipwidget = {
 		TooltipWidgetType = {
 			blockoverride "tooltip_content_after" {
+				# kmpmp
 				kmpmp_v3_plotline_gdp = {}
 			}
 		}

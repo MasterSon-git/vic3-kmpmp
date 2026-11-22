@@ -1,30 +1,31 @@
 ﻿INJECT:ig_trait_asceticism = {
+	# kmpmp
 	modifier = {
-		# kmpmp
 		country_radicalism_increases_full_acceptance_mult = -0.15
 		country_radicalism_increases_second_rate_citizen_mult = -0.15
 		country_radicalism_increases_open_prejudice_mult = -0.15
 		country_radicalism_increases_cultural_erasure_mult = -0.15
 		country_radicalism_increases_violent_hostility_mult = -0.15
-		state_birth_rate_mult = 0.01 #kmpmp
+		state_birth_rate_mult = 0.01
 	}
 }
 
 INJECT:ig_trait_da_wat = {
 	modifier = {
-		state_education_access_add = 0.05 #kmpmp
+		state_education_access_add = 0.05 # kmpmp
 	}
 }
 
 INJECT:ig_trait_secular_shrine_theory = {
+	# kmpmp
 	modifier = {
-		state_birth_rate_mult = 0.025 #kmpmp
+		state_birth_rate_mult = 0.025
 		state_conversion_mult = 0.05
 	}
 }
 
 INJECT:ig_trait_work_ethic = {
 	modifier = {
-		state_mortality_mult = -0.025
+		state_mortality_mult = -0.025 # kmpmp
 	}
 }

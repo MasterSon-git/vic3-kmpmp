@@ -1,20 +1,21 @@
 ﻿# Imperial Arsenal
+# kmpmp
 INJECT:company_imperial_arsenal = {
 	building_types = {
 		building_iron_mine
 	}
 
 	prosperity_modifier = {
-		building_motor_industry_throughput_add = 0.1 # kmpmp
+		building_motor_industry_throughput_add = 0.1
 		ship_armor_mult = -0.0125
-		ship_hull_damage_mult = 0.0375 # kmpmp
+		ship_hull_damage_mult = 0.0375
 	}
 }
 
 # Ottoman Tobacco Company, later Tekel
 INJECT:company_ottoman_tobacco_regie = {
 	prosperity_modifier = {
-		country_society_tech_spread_mult = 0.15 #kmpmp
+		country_society_tech_spread_mult = 0.15 # kmpmp
 	}
 }
 
@@ -30,12 +31,12 @@ REPLACE:company_allatini_mills = {
 	building_types = {
 		building_wheat_farm
 		building_rye_farm
-		building_tea_plantation #kmpmp
+		building_tea_plantation # kmpmp
 	}
 
 	extension_building_types = {
 		building_food_industry
-		building_vineyard #kmpmp
+		building_vineyard # kmpmp
 	}
 
 	possible_prestige_goods = {
@@ -70,29 +71,30 @@ REPLACE:company_allatini_mills = {
 			state_region = s:STATE_MACEDONIA
 			is_incorporated = yes
 			any_scope_building = {
+				# kmpmp
 				OR = {
 					is_building_type = building_wheat_farm
 					# is_building_type = building_rye_farm
-					is_building_type = building_vineyard #kmpmp
-					is_building_type = building_tea_plantation #kmpmp
+					is_building_type = building_vineyard
+					is_building_type = building_tea_plantation
 				}
 				level >= 5
 			}
 		}
 	}
 
+	# kmpmp
 	prosperity_modifier = {
 		building_food_industry_throughput_add = 0.1
-		state_radicalism_increases_violent_hostility_mult = -0.1 #-0.05
-		state_radicalism_increases_cultural_erasure_mult = -0.1 #-0.05
-		state_radicalism_increases_open_prejudice_mult = -0.1 #-0.05
-		# kmpmp
+		state_radicalism_increases_violent_hostility_mult = -0.1 # kmpmp: vanilla = -0.05
+		state_radicalism_increases_cultural_erasure_mult = -0.1 # kmpmp: vanilla = -0.05
+		state_radicalism_increases_open_prejudice_mult = -0.1 # kmpmp: vanilla = -0.05
 		country_loyalism_increases_full_acceptance_mult = 0.1
 		country_loyalism_increases_second_rate_citizen_mult = 0.1
 		country_loyalism_increases_open_prejudice_mult = 0.1
 		country_loyalism_increases_cultural_erasure_mult = 0.1
 		country_loyalism_increases_violent_hostility_mult = 0.1
-		state_birth_rate_mult = 0.02 #kmpmp #0.018
+		state_birth_rate_mult = 0.02 # kmpmp: KMPMP used 0.018 before #545.
 	}
 
 	ai_will_do = {
@@ -122,9 +124,10 @@ REPLACE:company_allatini_mills = {
 
 # Chemins de fer Orientaux
 INJECT:company_orient_express = {
+	# kmpmp
 	prosperity_modifier = {
-		building_sulfur_mine_throughput_add = 0.1 # kmpmp
-		building_lead_mine_throughput_add = 0.1 # kmpmp
+		building_sulfur_mine_throughput_add = 0.1
+		building_lead_mine_throughput_add = 0.1
 	}
 }
 
@@ -140,14 +143,15 @@ REPLACE:company_sunhwaguk = {
 		building_rice_farm
 	}
 
+	# kmpmp
 	extension_building_types = {
 		building_food_industry
 		building_chemical_plant
-		building_vineyard #kmpmp
-		building_opium_plantation #kmpmp
-		building_coffee_plantation #kmpmp
-		building_tea_plantation #kmpmp
-		building_cotton_plantation #kmpmp
+		building_vineyard
+		building_opium_plantation
+		building_coffee_plantation
+		building_tea_plantation
+		building_cotton_plantation
 	}
 
 	possible_prestige_goods = {
@@ -174,7 +178,7 @@ REPLACE:company_sunhwaguk = {
 	}
 
 	possible = {
-		has_technology_researched = mutual_funds #central_planning
+		has_technology_researched = mutual_funds # kmpmp: vanilla = central_planning
 		any_scope_state = {
 			state_region = {
 				is_homeland = cu:korean
@@ -187,9 +191,10 @@ REPLACE:company_sunhwaguk = {
 		}
 	}
 
+	# kmpmp
 	prosperity_modifier = {
-		country_tech_spread_mult = 0.2 #0.1
-		building_group_bg_plantations_throughput_add = 0.1 #kmpmp
+		country_tech_spread_mult = 0.2 # kmpmp: vanilla = 0.1
+		building_group_bg_plantations_throughput_add = 0.1
 	}
 
 	ai_will_do = {
@@ -221,7 +226,7 @@ REPLACE:company_sunhwaguk = {
 # Nam Định Textile Factory
 INJECT:company_nam_dinh = {
 	prosperity_modifier = {
-		country_tech_spread_mult = -0.025
+		country_tech_spread_mult = -0.025 # kmpmp
 	}
 }
 
@@ -232,14 +237,15 @@ REPLACE:company_imperial_tobacco = {
 
 	flavored_company = yes
 
+	# kmpmp: Exclude tobacco plantation from the company’s core industries.
 	building_types = {
 		# building_tobacco_plantation
-		building_dye_plantation # kmpmp
-		building_sulfur_mine # kmpmp
+		building_dye_plantation
+		building_sulfur_mine
 	}
 
 	extension_building_types = {
-		building_synthetics_plant
+		building_synthetics_plant # kmpmp
 	}
 
 	potential = {
@@ -261,17 +267,18 @@ REPLACE:company_imperial_tobacco = {
 			is_incorporated = yes
 			any_scope_building = {
 				# is_building_type = building_tobacco_plantation
-				is_building_type = building_dye_plantation
+				is_building_type = building_dye_plantation # kmpmp
 				level >= 5
 			}
 			count >= 4
 		}
 	}
 
+	# kmpmp
 	prosperity_modifier = {
-		country_tech_spread_mult = 0.1 #0.2
+		country_tech_spread_mult = 0.1 # kmpmp: vanilla = 0.2
 		# interest_group_ig_rural_folk_approval_add = -2
-		state_infrastructure_mult = 0.15 # kmpmp
+		state_infrastructure_mult = 0.15
 	}
 
 	ai_will_do = {
@@ -334,6 +341,7 @@ REPLACE:company_san_miguel = {
 
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			# kmpmp
 			OR = {
 				any_scope_state = {
 					region = sr:region_indonesia
@@ -347,8 +355,9 @@ REPLACE:company_san_miguel = {
 		}
 	}
 
+	# kmpmp
 	possible = {
-		has_technology_researched = mutual_funds #corporate_charters
+		has_technology_researched = mutual_funds # kmpmp: vanilla = corporate_charters
 		owns_or_has_subject_entire_state_region_and_is_incorporated = { STATE_REGION = s:STATE_LUZON }
 		owns_or_has_subject_entire_state_region_and_is_incorporated = { STATE_REGION = s:STATE_VISAYAS }
 		owns_or_has_subject_entire_state_region_and_is_incorporated = { STATE_REGION = s:STATE_MINDANAO }	
@@ -357,12 +366,12 @@ REPLACE:company_san_miguel = {
 
 	prosperity_modifier = {
 		state_radicals_from_political_movements_mult = -0.1
-		state_birth_rate_mult = 0.06 #kmpmp
-		state_mortality_mult = -0.02 #kmpmp
+		state_birth_rate_mult = 0.06 # kmpmp
+		state_mortality_mult = -0.02 # kmpmp
 	}
 
 	ai_will_do = {
-		has_technology_researched = mutual_funds #corporate_charters
+		has_technology_researched = mutual_funds # kmpmp: vanilla = corporate_charters
 		any_scope_state = {
 			region = sr:region_indonesia
 			is_incorporated = yes
@@ -399,6 +408,7 @@ REPLACE:company_b_grimm = {
 		building_logging_camp # kmpmp
 	}
 
+	# kmpmp
 	extension_building_types = {
 		building_chemical_plant
 		building_wheat_farm
@@ -434,6 +444,7 @@ REPLACE:company_b_grimm = {
 			state_region = s:STATE_BANGKOK
 			is_incorporated = yes
 			any_scope_building = {
+				# kmpmp
 				OR = {
 					is_building_type = building_rice_farm
 					is_building_type = building_opium_plantation
@@ -446,8 +457,8 @@ REPLACE:company_b_grimm = {
 	prosperity_modifier = {
 		state_infrastructure_from_population_mult = 0.1
 		building_food_industry_throughput_add = 0.1
-		building_livestock_ranch_throughput_add = 0.1 #kmpmp
-		building_fishing_wharf_throughput_add = 0.1 #kmpmp
+		building_livestock_ranch_throughput_add = 0.1 # kmpmp
+		building_fishing_wharf_throughput_add = 0.1 # kmpmp
 	}
 
 	ai_will_do = {

@@ -487,7 +487,7 @@ german_unification.5 = {
 				type = je_north_german_unification
 			}
 
-			# kmpmp give claims on north germany
+			# kmpmp: Give claims on north germany
 			if = {
 				limit = {
 					c:PRU ?= ROOT
@@ -513,7 +513,7 @@ german_unification.5 = {
 				type = je_south_german_unification
 			}
 
-			# kmpmp give claims on south germany
+			# kmpmp: Give claims on south germany
 			if = {
 				limit = {
 					c:AUS ?= ROOT
@@ -761,7 +761,7 @@ german_unification.101 = {
 		scope:sgf_unifier_god = {
 			create_diplomatic_pact = {
 				country = ROOT
-				type = puppet
+				type = puppet # kmpmp
 			}
 			trigger_event = { id = sgf_aus.6 days = 7 popup = yes }
 		}

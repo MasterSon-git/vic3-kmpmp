@@ -1,10 +1,11 @@
 ﻿# Škoda Works
 INJECT:company_skoda = {
+	# kmpmp
 	prosperity_modifier = {
-		building_sulfur_mine_throughput_add = 0.1 # kmpmp
-		unit_combat_unit_type_shrapnel_artillery_offense_mult = 0.05  # kmpmp
-		unit_combat_unit_type_heavy_tank_offense_mult = 0.1  # kmpmp
-		unit_combat_unit_type_interwar_heavy_tank_offense_mult = 0.1  # kmpmp
+		building_sulfur_mine_throughput_add = 0.1
+		unit_combat_unit_type_shrapnel_artillery_offense_mult = 0.05
+		unit_combat_unit_type_heavy_tank_offense_mult = 0.1
+		unit_combat_unit_type_interwar_heavy_tank_offense_mult = 0.1
 	}
 }
 
@@ -17,26 +18,28 @@ INJECT:company_mav = {
 
 # Weiss Manfréd Acél- és Fémművek
 INJECT:company_manfred_weiss = {
+	# kmpmp
 	prosperity_modifier = {
-		unit_defense_mult = 0.05 # kmpmp
-		building_coal_mine_throughput_add = 0.1 # kmpmp
+		unit_defense_mult = 0.05
+		building_coal_mine_throughput_add = 0.1
 	}
 }
 
 # Galizisch-Karpathische Petroleum AG
 INJECT:company_galician_carpathian_oil = {
 	prosperity_modifier = {
-		building_railway_throughput_add = 0.05
+		building_railway_throughput_add = 0.05 # kmpmp
 	}
 }
 
 # Oesterreichische Waffenfabriks-Gesellschaft
+# kmpmp
 INJECT:company_oevg = {
 	building_types = {
-		building_explosives_factory # kmpmp
+		building_explosives_factory
 	}
 
 	prosperity_modifier = {
-		unit_offense_mult = 0.05 #kmpmp
+		unit_offense_mult = 0.05
 	}
 }

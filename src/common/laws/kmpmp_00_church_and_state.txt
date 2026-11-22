@@ -1,10 +1,11 @@
 ﻿INJECT:law_state_religion = {
 	modifier = {
-		country_acceptance_state_religion_add = 5
+		country_acceptance_state_religion_add = 5 # kmpmp
 	}
 }
 
 INJECT:law_total_separation = {
+	# kmpmp
 	modifier = {
 		country_acceptance_state_religion_add = 5
 		country_acceptance_shared_religious_trait_add = 5
@@ -14,6 +15,7 @@ INJECT:law_total_separation = {
 }
 
 INJECT:law_state_atheism = {
+	# kmpmp
 	modifier = {
 		country_authority_add = 100
 

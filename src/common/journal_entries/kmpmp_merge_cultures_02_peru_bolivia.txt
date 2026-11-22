@@ -1,4 +1,4 @@
-﻿# kmpmp - merge cultures fixes
+﻿# kmpmp: Use the merged culture for this event.
 REPLACE:je_peru_bolivia = {
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 

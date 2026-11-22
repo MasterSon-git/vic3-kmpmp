@@ -1,4 +1,4 @@
-﻿# kmpmp - merge cultures fixes
+﻿# kmpmp: Use the merged culture for this event.
 REPLACE:dp_annex_subject = {
 	war_goal = annex_country
 
@@ -105,17 +105,17 @@ REPLACE:dp_annex_subject = {
 	}
 }
 
-# kmpmp - allow target to set war goals on joining countries
+# kmpmp: Allow the target to set war goals against countries joining the play.
 INJECT:dp_revolution = {
-	target_can_add_war_goals = yes #no
+	target_can_add_war_goals = yes # kmpmp: vanilla = no
 }
 
-# kmpmp - allow target to set war goals on joining countries
+# kmpmp: Allow the target to set war goals against countries joining the play.
 INJECT:dp_secession = {
-	target_can_add_war_goals = yes #no
+	target_can_add_war_goals = yes # kmpmp: vanilla = no
 }
 
-# kmpmp - merge cultures fixes
+# kmpmp: Keep the Scandinavian unification play available after the culture merger.
 REPLACE:dp_unify_scandinavia = {
 	war_goal = unification
 
@@ -132,7 +132,7 @@ REPLACE:dp_unify_scandinavia = {
 	possible = {
 		NOT = { exists = c:SCA }
 		NOT = { is_country_type = decentralized }
-		has_technology_researched = nationalism #pan-nationalism
+		has_technology_researched = nationalism # kmpmp: vanilla = pan-nationalism
 	}
 
 	on_weekly_pulse = {}
@@ -157,7 +157,7 @@ REPLACE:dp_leadership_scandinavia = {
 	}
 
 	possible = {
-		has_technology_researched = nationalism #pan-nationalism
+		has_technology_researched = nationalism # kmpmp: vanilla = pan-nationalism
 	}
 
 	on_weekly_pulse = {}

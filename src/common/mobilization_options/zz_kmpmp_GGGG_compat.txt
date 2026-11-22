@@ -1,29 +1,30 @@
-﻿# Rations provide a smaller Recovery Rate bonus than medical support (#677).
+﻿# kmpmp: Rations provide a smaller Recovery Rate bonus than medical support (#677).
 INJECT:GGGG_mo_canned_rations = {
     unit_modifier = {
         unit_recovery_rate_add = 0.05
     }
 }
 
+# kmpmp
 INJECT:GGGG_mo_refrigerated_rations = {
     upkeep_modifier = {
-        goods_input_groceries_add = 0.5 # = 0.0
+        goods_input_groceries_add = 0.5 # kmpmp: total = 0
     }
 
     unit_modifier = {
-        unit_morale_recovery_mult = -0.1 # = 0.0
+        unit_morale_recovery_mult = -0.1 # kmpmp: total = 0
         unit_recovery_rate_add = 0.05
     }
 }
 
-# disable tea - kmpmp we need to remove it in GGGG otherwise it's either displayed or claims item area
+# kmpmp: Hide the GGGG tea option to free its slot in the mobilization panel.
 TRY_INJECT:GGGG_mo_tea = {
     is_shown = {
         always = no
     }
 }
 
-# disable coffee - kmpmp we need to remove it in GGGG otherwise it's either displayed or claims item area
+# kmpmp: Hide the GGGG coffee option to free its slot in the mobilization panel.
 TRY_INJECT:GGGG_mo_coffee = {
     is_shown = {
         always = no
@@ -31,19 +32,21 @@ TRY_INJECT:GGGG_mo_coffee = {
 }
 
 INJECT:GGGG_mo_wine = {
+    # kmpmp
     unit_modifier = {
         unit_morale_damage_mult = 0.05
         unit_recovery_rate_add = 0.05
     }
 }
 
+# kmpmp
 INJECT:GGGG_mo_traditional_uniforms = {
     upkeep_modifier = {
         goods_input_clothes_add = 0.5
     }
     
     unit_modifier = {
-        unit_recovery_rate_add = 0.1 # = 0.0
+        unit_recovery_rate_add = 0.1 # kmpmp: total = 0
     }
 }
 
@@ -51,13 +54,13 @@ REPLACE:GGGG_mo_full_dress = {
     texture = "gfx/interface/icons/production_method_icons/GGGG_shako.dds"
     group   = GGGG_mog_uniforms
 
+    # kmpmp
     possible = {
         market ?= {
             mg:luxury_clothes ?= { #mg:clothes ?= {
                 market_goods_sell_orders > 0
             }
         }
-        # kmpmp
         scope:military_formation = {
             NOT = {
                 has_mobilization_option = mobilization_option:GGGG_mo_modern_uniform
@@ -88,14 +91,13 @@ REPLACE:GGGG_mo_full_dress = {
 
     upkeep_modifier = {
         # goods_input_clothes_add = 0.5
-        goods_input_luxury_clothes_add = 0.5
+        goods_input_luxury_clothes_add = 0.5 # kmpmp
     }
 
     unit_modifier = {
         unit_offense_add        = 5
         unit_morale_damage_mult = 0.10
-        # kmpmp
-        unit_recovery_rate_add  = -0.10
+        unit_recovery_rate_add  = -0.10 # kmpmp
     }
 
     ai_weight = {
@@ -109,7 +111,7 @@ REPLACE:GGGG_mo_modern_uniform = {
 
     possible = {
         scope:military_formation = {
-            # Both earlier uniform options already exclude Modern Uniform (#61).
+            # kmpmp: Both earlier uniform options already exclude Modern Uniform (#61).
             NOR = {
                 has_mobilization_option = mobilization_option:GGGG_mo_full_dress
                 has_mobilization_option = mobilization_option:kmpmp_mo_utility_gear
@@ -150,8 +152,7 @@ REPLACE:GGGG_mo_modern_uniform = {
 
     unit_modifier = {
         unit_defense_add       = 10
-        # Keep Recovery Rate secondary to the uniform's Defense bonus (#677).
-        unit_recovery_rate_add = 0.05
+        unit_recovery_rate_add = 0.05 # kmpmp: Keep Recovery Rate secondary to the uniform's Defense bonus (#677).
     }
 
     ai_weight = {

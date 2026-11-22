@@ -1,8 +1,7 @@
 ﻿INJECT:pmg_tanks = {
+	# kmpmp
 	production_methods = {
-		# kmpmp - removed due to rebalance
-		# kmpmp_pm_extensive_tank_production
-		# kmpmp_pm_focus_tank_production
-		# kmpmp_pm_prioritize_tank_production
+
+		# kmpmp: Leave the tank production group without additional methods.
 	}
 }

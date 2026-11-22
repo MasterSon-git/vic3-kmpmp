@@ -1,3 +1,3 @@
 ﻿INJECT:take_on_debt = {
-	cost = 125 #0
+	cost = 125 # kmpmp: vanilla = 0
 }

@@ -1,4 +1,5 @@
 ﻿l_german:
+ # kmpmp: German translation for the bundled Stockpile Economy mod (#481).
  ase_warning_has_a_major_impact_on_performance:0 "\n@warning! Hat großen Einfluss auf die Leistung."
 
  ase_stockpile_country_price_target_default_setting_desc:0 "Wird standardmäßig auf alle Waren in Ländern angewendet, die von Spielern kontrolliert werden. Kann für jede Ware in der Oberfläche [concept_ase_market_stockpile] einzeln überschrieben werden."

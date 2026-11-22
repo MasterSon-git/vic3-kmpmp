@@ -40,8 +40,7 @@ italian_unification.1 = {
 			name = italian_unifier_prestige
 			days = long_modifier_time
 		}
-		# kmpmp
-		kmpmp_italy_unification_effect = yes
+		kmpmp_italy_unification_effect = yes # kmpmp
 	}
 	option = {
 		name = italian_unification.1.b
@@ -54,8 +53,7 @@ italian_unification.1 = {
 				days = long_modifier_time
 			}
 		}
-		# kmpmp
-		kmpmp_italy_unification_effect = yes
+		kmpmp_italy_unification_effect = yes # kmpmp
 	}
 }
 
@@ -87,7 +85,7 @@ italian_unification.10 = {
 			save_scope_as = italian_unifier_candidate
 		}
 
-		#kmpmp
+		# kmpmp
 		add_modifier = {
 			name = kmpmp_italy_risorgimento_buff
 			years = 20

@@ -1,4 +1,4 @@
-﻿# 1.15 DEI independence setup, preserving KMPMP's merged Javan culture.
+﻿# kmpmp: 1.15 DEI independence setup, preserving KMPMP's merged Javan culture.
 kmpmp_dei_become_indonesia_effect = {
 	if = {
 		limit = {

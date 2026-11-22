@@ -1,6 +1,6 @@
 ﻿INJECT:law_ethnostate = {
+	# kmpmp
 	modifier = {
-		# kmpmp
 		state_birth_rate_mult = 0.08
 		state_migration_pull_mult = -0.1
 		country_migration_restrictiveness_add = -10
@@ -9,15 +9,13 @@
 
 INJECT:law_national_supremacy = {
 	modifier = {
-		# kmpmp
-		state_migration_pull_mult = -0.05
+		state_migration_pull_mult = -0.05 # kmpmp
 	}
 }
 
 INJECT:law_cultural_exclusion = {
 	modifier = {
-		# kmpmp
-		state_migration_pull_mult = 0.05
+		state_migration_pull_mult = 0.05 # kmpmp
 	}
 }
 

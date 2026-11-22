@@ -7,7 +7,7 @@
 	ideology = ideology_moderate
 	commander_rank = default
 	interest_group = ig_armed_forces
-	birth_date = 1796.4.16 #1791.4.16
+	birth_date = 1796.4.16 # kmpmp: vanilla = 1791.4.16
 	home_region = STATE_PIEDMONT
 	traits = {
 		trench_rat

@@ -2,7 +2,7 @@
     kind = directed
     cost = 25
 
-    relations_progress_per_day = 0 # KMPMP: no relation changes
+    relations_progress_per_day = 0 # kmpmp: No relation changes
 
     icon = "gfx/interface/icons/diplomatic_treaties_articles_icons/prohibit_trade_global_market_treaties.dds"
 

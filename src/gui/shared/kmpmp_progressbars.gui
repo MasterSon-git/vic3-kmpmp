@@ -1,6 +1,7 @@
 ﻿types progressbars {
 
 	### LEVELS PROGRESSBAR
+	# kmpmp
 	type kmpmp_levels_progressbar = hbox {
 		layoutpolicy_horizontal = expanding
 		spacing = 3

@@ -1,5 +1,5 @@
-﻿# kmpmp rename cultures to reflect merged cultures
-l_english:
+﻿l_english:
+ # kmpmp: Use the merged culture names.
  bambara: "West African"
  fang: "Central African"
  beja: "East African"
