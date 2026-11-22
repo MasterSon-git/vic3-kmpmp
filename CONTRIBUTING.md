@@ -96,6 +96,20 @@ Report the checks performed, what they establish and any material gaps. Describe
 parsing, headless loading and in-game tests at their actual scope. Update
 documentation when behaviour or workflow changes.
 
+**Country documentation (strongly recommended):** When a change affects country
+content or other player-facing behavior described in
+[the country-by-country guide](docs/COUNTRY_CHANGES_BY_COUNTRY.md) or
+[the detailed country reference](docs/COUNTRY_CONTENT.md), review the relevant
+sections and update them in the same PR where practical. This includes country
+formations, releases, starts, national journal entries, decisions, events,
+modifiers, companies, state-region changes and shared mechanics covered there.
+Keep the readable country summary consistent with the detailed reference.
+Verify additions and changed claims against effective mod behavior and the
+target Vanilla/upstream sources; do not describe unchanged inherited content
+as a KMPMP change. For unrelated changes, no full documentation audit is
+expected. Note relevant documentation updates or the reason none are needed
+briefly in the PR.
+
 **Documentation scope:** Keep general documentation (such as
 `docs/DEVELOPMENT.md`) focused on reusable development procedures,
 architecture, conventions and operational constraints. Do not add

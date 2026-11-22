@@ -30,6 +30,20 @@ policy. These safeguards apply to automated work:
   Investigate every new or changed `ERROR` and `REVIEW`. Correct the cause or
   document in the PR why the result is acceptable. Exit code 0 can still leave
   `REVIEW` findings open. Unchanged, pre-existing findings do not block independent work.
+- **Country documentation is part of implementation.** Before completing any
+  change (including a Vanilla compatibility update) that affects player-facing
+  content described in `docs/COUNTRY_CHANGES_BY_COUNTRY.md` or
+  `docs/COUNTRY_CONTENT.md`, check the relevant sections and update affected
+  entries **in the same PR**. Cover new/changed country formations, starts,
+  releasables, national journal entries, decisions, events, country modifiers,
+  companies, state-region content, and shared mechanics documented there.
+  Keep overview and detailed reference consistent, with accurate paths/links.
+  Verify claims against effective mod behavior and current Vanilla/upstream;
+  never present inherited behavior as a new KMPMP change. If no update is
+  needed, state `Country docs: reviewed, no update needed` with a brief
+  reason in the PR. Scope the review to affected content; do not perform a
+  full documentation audit for unrelated changes. Research-only tasks that
+  do not change behavior are not subject to this update requirement.
 - Keep issue and PR descriptions focused on the current outcome. Update the
   summary rather than appending work logs. Useful intermediate findings and
   progress may be discussed in comments, in moderation. Follow the writing
